@@ -42,7 +42,9 @@
 \newcommand{\dR}{\mathbb{R}}
 \newcommand{\dZ}{\mathbb{Z}}
 \newcommand{\fa}{\mathfrak{a}}
+\newcommand{\fm}{\mathfrak{m}}
 \newcommand{\fr}{\mathfrak{r}}
+\newcommand{\fX}{\mathfrak{X}}
 \newcommand{\iso}{\xrightarrow\sim}
 
 \newtheorem{proposition}[subsubsection]{Proposition}
@@ -1955,6 +1957,111 @@ de cohomologie \`a support propre (\ref{4-5}).
 
 \subsection{Démonstration pour \texorpdfstring{$q=0$}{q=1} or \texorpdfstring{$1$}{1} et \texorpdfstring{$F=\dZ/n$}{F=Z/n}}\label{4-2} 
 
+Le r\'esultat pour $q=0$ et $F$ constant est \'equivalent \`a la proposition 
+suivante (théorème de connexion de Zariski):
+
+
+
+
+
+\begin{proposition}\label{4-2-1}
+Soient $A$ un anneau local hens\'elien noeth\'erien et $S=\spec(A)$. 
+Soient $f:X\to S$ un morphisme propre et $X_0$ la fibre ferm\'ee de $f$. Alors 
+les ensembles de composantes connexes $\pi_0(X)$ et $\pi_0(X_0)$ sont en 
+bijection.
+\end{proposition}
+
+Il revient au m\^eme de montrer que les ensembles de parties \`a la fois 
+ouvertes et ferm\'ees $\operatorname{Of}(X)$ et $\operatorname{Of}(X_0)$ sont 
+en bijection. On sait que l'ensemble $\operatorname{Of}(X)$ correspond 
+bijectivement \`a l'ensemble des idempotents de $\Gamma(X,\cO_X)$, de m\^eme 
+$\operatorname{Of}(X_0)$ correspond bijectivement \`a l'ensemble des 
+idempotents de $\Gamma(X_0,\cO_{X_0})$. Il s'agit donc de montrer que 
+l'application canonique 
+\[
+  \operatorname{Idem} \Gamma(X,\cO_X) \to \operatorname{Idem}\Gamma(X_0,\cO_{X_0})
+\]
+est bijective. 
+
+On notera $\fm$ l'id\'eal maximal de $A$, $\Gamma(X,\cO_X)^\wedge$ le complété 
+de $\Gamma(X,\cO_X)$ pour la topologie $\fm$-adique et, pour tout entier 
+$n\geqslant 0$, $X_n=X\otimes_A A/\fm^{n+1}$. D'apr\`es le théorème de finitude 
+pour les morphismes propres \cite[III.3.2]{8}, $\Gamma(X,\cO_X)$ est une 
+$A$-alg\`ebre finie; comme $A$ est hens\'elien, il en r\'esulte que 
+l'application canonique 
+\[
+  \operatorname{Idem} \Gamma(X,\cO_X) \to \operatorname{Idem}\Gamma(X,\cO_X)^\wedge
+\]
+est bijective. En particulier l'application canonique 
+\[
+  \operatorname{Idem} \Gamma(X,\cO_X)^\wedge \to \varprojlim \operatorname{Idem}\Gamma(X_n,\cO_{X_n})
+\]
+est bijective. Mais, puisque $X_n$ et $X_0$ on m\^eme espace topologique 
+sous-jacent, l'application canonique 
+\[
+  \operatorname{Idem}\Gamma(X_n,\cO_{X_n}) \to \operatorname{Idem} \Gamma(X_0,\cO_{X_0})
+\]
+est bijective pour tout $n$, ce qui ach\`eve la d\'emonstration. 
+
+Puisque $H^1(X,\dZ/n)$ est en bijection avec l'ensemble des classes 
+d'isomorphisme de r\^evetements \'etales galoisiens de $X$ de groupe $\dZ/n$, 
+le théorème  pour $q=1$ et $F=\dZ/n$ r\'esulte de la proposition suivante. 
+
+
+
+
+
+\begin{proposition}\label{4-2-2}
+Soient $A$ un anneau local hens\'elien noeth\'erien et $S=\spec(A)$. Soient 
+$f:X\to S$ un morphisme propre et $X_0$ la fibre ferm\'ee de $f$. Alors le 
+foncteur de restriction 
+\[
+  \operatorname{Rev.et}(X) \to \operatorname{Rev.et}(X_0)
+\]
+est une \'equivalence de cat\'egories. 
+\end{proposition}
+
+(Si $X_0$ est connexe et si l'on a choisi un point g\'eom\'etrique de $X_0$ 
+comme point base, cela revient \`a dire que l'application canonique 
+$\pi_1(X_0)\to \pi_1(X)$ sur les groupes fondamentaux (profinis) est 
+bijective). 
+
+La proposition (\ref{4-2-1}) montre que ce foncteur est pleinement fid\`ele. En 
+effet, si $X'$ et $X''$ sont deux revêtements \'etales de $X$, un 
+$X$-morphisme de $X'$ dans $X''$ est d\'etermin\'e par son graphe qui est une 
+partie ouverte et ferm\'ee de $X'\times_X X''$. 
+
+Il s'agit donc de montrer que tout revêtement \'etale $X_0'$ de $X_0$ s\'etend 
+en un revêtement \'etale de $X$. On sait que les revêtements \'etales ne 
+d\'ependent pas des \'el\'ements nilpotents \cite[chap. 1]{7}, par cons\'equent 
+$X_0'$ se rel\`eve de mani\`ere unique en un revêtement \'etale $X_n'$ de 
+$X_n$ pour tout $n\geqslant 0$, autrement dit en un revêtement \'etale 
+$\fX'$ du sch\'ema formel $\fX$ compl\'et\'e de $X$ de long de $X_0$. D'apr\`es 
+le théorème d'alg\'ebrisation des faisceaux coh\'erents formels de 
+Grothendieck (théorème d'existence, \cite[III.5]{8}), $\fX'$ est le 
+compl\'et\'e formel d'un revêtement \'etale $\bar X'$, de 
+$\bar X=X\otimes_A \hat A$. 
+
+Par passage \`a la limite, il suffit de d\'emontrer la proposition dans le cas 
+o\`u $A$ est l'hens\'elis\'e d'une $\dZ$-alg\`ebre de type fini. On peut alors 
+appliquer le théorème d'approximation d'Artin au foncteur 
+$F:(\textnormal{$A$-alg\`ebres}) \to (\textnormal{ensembles})$ qui, \`a une 
+$A$-alg\`ebre $B$, fait correspondre l'ensemble des classes d'isomorphisme de 
+revêtements \'etales de $X\otimes_A B$. En effet ce foncteur est localement de 
+pr\'esentation finie: si $B_i$ est une syst\`eeme inductif filtrant de 
+$A$-alg\`ebres et si $B=\varinjlim B_i$, on a $F(B) = \varinjlim F(B_i)$. 
+D'apr\`es le théorème d'Artin, \'etant donn\'e un \'el\'ement 
+$\xi\in F(\hat A)$, en l'occurrence la classe d'isomorphisme de $\bar X'$, il 
+existe $\xi\in F(A)$ ayant même image que $\bar\xi$ dans $F(A/\fm)$. 
+Autrement dit il existe un revêtement \'etale $X'$ de $X$ dont la restriction 
+\`a $X_0$ est isomorphe \`a $X_0'$. 
+
+
+
+
+
+
+
 \subsection{Faisceaux constructibles}\label{4-3}
 
 \subsection{Fin de la démonstration}\label{4-4}
@@ -1980,6 +2087,8 @@ de cohomologie \`a support propre (\ref{4-5}).
   \bibitem{4} M. Artin, A. Grothendieck, J.L. Verdier. \emph{Théorie des Topos et Cohomologie Étale des Schémas}, SGA 4, Springer nos.269,270 et 305, 1972/73.
 
   \bibitem{7} A. Grothendieck, \emph{Revêtements Étales et Groupe Fondamental}, SGA 1, Springer no.224, 1971.
+  
+  \bibitem{8} A. Grothendieck et J. Dieudonné, \emph{Éléments de géométrie algébrique}, Pub. Math. IHES, 1960/67. 
 
   \bibitem{11} M. Raynaud, \emph{Anneaux Locaux Henséliens}, Springer no.169, 1970. 
 
