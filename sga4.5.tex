@@ -17,6 +17,7 @@
 \DeclareMathOperator{\Div}{Div}
 \DeclareMathOperator{\gal}{Gal}
 \DeclareMathOperator{\gl}{GL}
+\DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\nrd}{Nrd}
 \DeclareMathOperator{\ob}{Ob}
 \DeclareMathOperator{\pgl}{PGL}
@@ -27,6 +28,7 @@
 \newcommand{\const}[1]{\underline{#1}}
 \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
 \newcommand{\cC}{\mathcal{C}}
+\newcommand{\cE}{\mathcal{E}}
 \newcommand{\cF}{\mathcal{F}}
 \newcommand{\cG}{\mathcal{G}}
 \newcommand{\cH}{\mathcal{H}}
@@ -62,13 +64,7 @@
 \tableofcontents
 
 % French characters
-% \`a -> à
-% \'e -> é
-% \`e -> è
-% \^e -> ê
-% \^o -> ô
-% \`u -> ù
-% \^u -> û
+% à é è ê ô ù û
 
 % other notes: there are two I.6.5's in Deligne's original - one defining sheaf 
 % cohomology, the other defining torsors    
@@ -790,7 +786,7 @@ On peut montrer que $H^1(X,\cF)$ s'interprète comme l'ensemble des classes
 
 On spécialise les définitions du chapitre précédent au cas de la 
 topologie étale d'un schéma $X$ (\S \ref{2-1}, \ref{2-2}, \ref{2-3}). La 
-cohomologie correspondante coincide dans le cas où $X$ est le spectre d'un 
+cohomologie correspondante coïncide dans le cas où $X$ est le spectre d'un 
 corps $K$ avec la cohomologie galoisienne de $K$ (\S\ref{2-4}). 
 
 
@@ -1515,7 +1511,7 @@ canoniquement -- à une algèbre de matrices $M_r$ et la norme réduite
 coïncide avec l'application déterminant. Celle-ci est bien définie, 
 indépendamment de l'isomorphisme choisi entre $D$ et $M_r$ car tout 
 automorphisme de $M_r$ est intérieur et deux matrices semblables ont 
-m\^eme déterminant. Cette application définie localement pour la 
+même déterminant. Cette application définie localement pour la 
 topologie étale se descende, à cause de son unicité locale, en une 
 application $\nrd:D\to K$). 
 
@@ -1784,10 +1780,10 @@ possède plusieurs variantes, indiquons-en quelques-unes.
 
 \subsubsection{}\label{3-4-1}
 
-Soient $A$ une $k$-alg\`ebre de type fini et $a_1,\dotsc,a_n$ des générateurs de 
+Soient $A$ une $k$-algèbre de type fini et $a_1,\dotsc,a_n$ des générateurs de 
 $A$. Si l'on pose $X_0=\spec(k)$, $X_i=\spec(k[a_1,\dotsc,a_i])$, 
 $X_n=\spec(A)$, les inclusions canoniques 
-$k[a_1,\dotsc,a_i]\to k[a_1,\dotsc,a_i,a_{i+1}]$ d\'efinissent des morphismes 
+$k[a_1,\dotsc,a_i]\to k[a_1,\dotsc,a_i,a_{i+1}]$ définissent des morphismes 
 $X_n \to X_{n-1} \to \cdots \to X_1 \to X_0$ dont les fibres sont de dimension 
 $\leqslant 1$. 
 
@@ -1797,9 +1793,9 @@ $\leqslant 1$.
 
 \subsubsection{}\label{3-4-2}
 
-Dans le cas d'un morphisme lisse, on peut être plus pr\'ecis. On appelle 
-\emph{fibration \'el\'ementaire} un morphisme de sch\'emas $f:X\to S$ qui peut 
-\^etre plong\'e dans un diagramme commutatif
+Dans le cas d'un morphisme lisse, on peut être plus précis. On appelle 
+\emph{fibration élémentaire} un morphisme de schémas $f:X\to S$ qui peut 
+être plongé dans un diagramme commutatif
 \[\xymatrix{
   X \ar@{^{(}->}[r]^-j \ar[dr]_-f
     & \bar X \ar[d]^-{\bar f}
@@ -1810,17 +1806,17 @@ satisfaisant aux conditions suivantes:
 \begin{enumerate}[\indent i)]
   \item $j$ est une immersion ouverte dense dans chaque fibre et 
     $X=\bar X \setminus Y$. 
-  \item $\bar f$ est lisse et projectif, \`a fibres g\'eom\'etriques 
-    irr\'eductibles et de dimension $1$.
-  \item $g$ est un rev\^etement \'etale et aucune fibre de $g$ n'est vide.
+  \item $\bar f$ est lisse et projectif, à fibres géométriques 
+    irréductibles et de dimension $1$.
+  \item $g$ est un revêtement étale et aucune fibre de $g$ n'est vide.
 \end{enumerate}
 
-On appelle \emph{bon voisinage} relatif \`a $S$ un $S$-sch\'ema $X$ tel qu'il 
-existe $S$-sch\'emas $X=X_n,\dotsc,X_0=S$ et des fibrations \'el\'ementaires 
+On appelle \emph{bon voisinage} relatif à $S$ un $S$-schéma $X$ tel qu'il 
+existe $S$-schémas $X=X_n,\dotsc,X_0=S$ et des fibrations élémentaires 
 $f_i:X_i\to X_{i-1}$, $i=1,\dotsc,n$. On peut montrer \cite[XI, 3.3]{4} que si 
-$X$ est un sch\'ema lisse sur un corps alg\'ebriquement clos $k$ tout point 
-rationnel de $X$ poss\`ede un voisinage ouvert qui est un bon voisinage 
-(relatif \`a $\spec(K)$). 
+$X$ est un schéma lisse sur un corps algébriquement clos $k$ tout point 
+rationnel de $X$ possède un voisinage ouvert qui est un bon voisinage 
+(relatif à $\spec(K)$). 
 
 
 
@@ -1828,26 +1824,26 @@ rationnel de $X$ poss\`ede un voisinage ouvert qui est un bon voisinage
 
 \subsubsection{}\label{3-4-3}
 
-On peut d\'evisser un morphisme propre $f:X\to S$ de la façon suivante. 
-D'apr\`es le lemme de Chow, il existe un diagramme commutatif
+On peut dévisser un morphisme propre $f:X\to S$ de la façon suivante. 
+D'après le lemme de Chow, il existe un diagramme commutatif
 \[\xymatrix{
   X \ar[dr]_-f 
     & \ar[l]_-\pi \ar[d]^-{\bar f} \bar X \\
   & S
 }\]
-o\`u $\pi$ et $\bar f$ sont des morphismes projectifs, $\pi$ \'etant de plus un 
+où $\pi$ et $\bar f$ sont des morphismes projectifs, $\pi$ étant de plus un 
 isomorphisme au-dessus d'un ouvert dense de $X$. Localement sur $S$, $\bar X$ 
-est un sous-sch\'ema ferm\'e d'un espace projectif type $\dP_S^n$. 
+est un sous-schéma fermé d'un espace projectif type $\dP_S^n$. 
 
-On d\'evisse ce dernier en consid\'erant la projection 
-$\varphi:\dP_S^n\to\dP_S^1$ qui envoie le point de coordonnées homog\`enes 
+On dévisse ce dernier en considérant la projection 
+$\varphi:\dP_S^n\to\dP_S^1$ qui envoie le point de coordonnées homogènes 
 $(x_0,x_1,\dotsc,x_n)$ sur $(x_0,x_1)$. C'est une application rationnelle 
-d\'efinie en dehors du ferm\'e $Y\simeq \dP_S^{n-2}$ de $\dP_S^n$ d'\'equations 
-homog\`enes $x_0=x_1=0$. Soit $u:P\to \dP_S^n$ l'\'eclatement \`a centre 
+définie en dehors du fermé $Y\simeq \dP_S^{n-2}$ de $\dP_S^n$ d'équations 
+homogènes $x_0=x_1=0$. Soit $u:P\to \dP_S^n$ l'éclatement à centre 
 $Y$; les fibres de $u$ soit de dimension $\leqslant 1$. De plus il existe un 
 morphisme naturel $v:P\to \dP_S^1$ qui prolonge l'application rationnelle 
-$\varphi$ et $v$ fait de $P$ un $\dP_S^1$-sch\'ema localement isomorphe \`a 
-l'espace projectif type $\dP^{n-1}$ que l'on peut \`a son tour projeter sur un 
+$\varphi$ et $v$ fait de $P$ un $\dP_S^1$-schéma localement isomorphe à 
+l'espace projectif type $\dP^{n-1}$ que l'on peut à son tour projeter sur un 
 $\dP^1$, etc. 
 
 
@@ -1856,8 +1852,8 @@ $\dP^1$, etc.
 
 \subsubsection{}\label{3-4-4}
 
-On peut balayer une vari\'et\'e projective et lisse $X$ par un \emph{pinceau de 
-Lefschetz}. L'\'eclat\'e $\widetilde X$ de l'intersection de l'axe du pinceau 
+On peut balayer une variété projective et lisse $X$ par un \emph{pinceau de 
+Lefschetz}. L'éclaté $\widetilde X$ de l'intersection de l'axe du pinceau 
 avec $X$ se projette sur $\dP^1$ et les fibres de cette projection sont les 
 sections hyperplans de $X$ par les hyperplans du pinceau.
 
@@ -1893,58 +1889,58 @@ sections hyperplans de $X$ par les hyperplans du pinceau.
 
 \subsection{Introduction}\label{4-1}
 
-Ce chapitre est consacr\'e \`a la d\'emonstration et aux applications du 
+Ce chapitre est consacré à la démonstration et aux applications du 
 
 
 
 
 
 \begin{theorem}\label{4-1-1}
-Soient $f:X\to S$ un morphisme propre de sch\'emas et $F$ un faisceau abélien 
+Soient $f:X\to S$ un morphisme propre de schémas et $F$ un faisceau abélien 
 de torsion sur $X$. Alors, quel que soit $q\geqslant 0$, la fibre de 
-$R^q f_* F$ en un point g\'eom\'etrique $s$ de $S$ est isomorphe \`a la 
+$R^q f_* F$ en un point géométrique $s$ de $S$ est isomorphe à la 
 cohomologie $H^q(X_s,F)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
 $s$. 
 \end{theorem}
 
-Pour $f:X\to S$ une application continue propre et s\'epar\'e (s\'epar\'ee 
-signifie que la diagonale de $X\times_S X$ est ferm\'ee) entre espaces 
-topologiques, et $F$ un faisceau ab\'elien sur $X$, le r\'esultat analogue est 
-bien connu, et \'el\'ementaire: comme $f$ est ferm\'ee, les $f^{-1}(V)$ pour 
-$V$ voisinage de $s$ formet un syst\`eme fondamental de voisinages de $X_s$, et 
-on v\'erifie que $H^*(X_s,F) = \varinjlim_U H^*(U,F)$, pour $U$ parcourant les 
-voisinages de $X_s$. En pratique, $X_s$ a m\^eme un syst\`eme fondamental 
-$\cU$ de voisinages $U$ dont il est r\'etracte par d\'eformation et, pour $F$ 
-constant, on a donc $H^*(X_s,F)=H^*(U,F)$. En termes imag\'es: la fibre 
-sp\'eciale avale la fibre g\'en\'erale. 
+Pour $f:X\to S$ une application continue propre et séparé (séparée 
+signifie que la diagonale de $X\times_S X$ est fermée) entre espaces 
+topologiques, et $F$ un faisceau abélien sur $X$, le résultat analogue est 
+bien connu, et élémentaire: comme $f$ est fermée, les $f^{-1}(V)$ pour 
+$V$ voisinage de $s$ forment un système fondamental de voisinages de $X_s$, et 
+on vérifie que $H^*(X_s,F) = \varinjlim_U H^*(U,F)$, pour $U$ parcourant les 
+voisinages de $X_s$. En pratique, $X_s$ a même un système fondamental 
+$\cU$ de voisinages $U$ dont il est rétracte par déformation et, pour $F$ 
+constant, on a donc $H^*(X_s,F)=H^*(U,F)$. En termes imagés: la fibre 
+spéciale avale la fibre générale. 
 
-Dans le cas des sch\'emas la d\'emonstration est plus d\'elicate et il est 
+Dans le cas des schémas la démonstration est plus délicate et il est 
 indispensable de supposer que $F$ est de torsion (\cite[XII.2]{4}). Compte 
 tenu de la description des fibres de $R^q f_* F$ (\ref{2-3-3}), le théorème 
-(\ref{4-1-1}) est essentiellement \'equivalent au 
+(\ref{4-1-1}) est essentiellement équivalent au 
 
  
   
    
     
 \begin{theorem}\label{4-1-2}
-Soient $A$ un anneau local strictement hens\'elien et $S=\spec(A)$. Soient 
-$f:X\to S$ un morphisme propre et $X_0$ la fibre ferm\'ee de $f$. Alors, pour 
-tout faisceau ab\'elien de torsion $F$ sur $X$ et pour tout $q\geqslant 0$, on 
+Soient $A$ un anneau local strictement hensélien et $S=\spec(A)$. Soient 
+$f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors, pour 
+tout faisceau abélien de torsion $F$ sur $X$ et pour tout $q\geqslant 0$, on 
 a $H^q(X,F) \iso H^q(X_0,F)$. 
 \end{theorem} 
 
-Par passage \`a la limite on voit qu'il suffit de d\'emontrer le théorème 
-lorsque $A$ est l'hens\'elis\'e strict d'une $\dZ$-alg\`ebre  de type fini en 
-un id\'eal premier. On traite d'abord le cas $q=0$ ou $1$ et $F=\dZ/n$ 
-(\ref{4-2}). Un argument bas\'e sur la notion de faisceau constructible 
-(\ref{4-3}) montre d'ailleurs qu'il suffit de consid\'erer le cas o\`u $F$ est 
-constant. D'autre part le d\'evissage (\ref{3-4-3}) permet de supposer que 
-$X_0$ est une courbe; dans ce cas il ne reste plus qu'\`a d\'emontrer le 
+Par passage à la limite on voit qu'il suffit de démontrer le théorème 
+lorsque $A$ est l'hensélisé strict d'une $\dZ$-algèbre  de type fini en 
+un idéal premier. On traite d'abord le cas $q=0$ ou $1$ et $F=\dZ/n$ 
+(\ref{4-2}). Un argument basé sur la notion de faisceau constructible 
+(\ref{4-3}) montre d'ailleurs qu'il suffit de considérer le cas où $F$ est 
+constant. D'autre part le dévissage (\ref{3-4-3}) permet de supposer que 
+$X_0$ est une courbe; dans ce cas il ne reste plus qu'à démontrer le 
 théorème pour $q=2$ (\ref{4-4}). 
 
 Entre autres applications (\ref{4-6}), le théorème permet de définir la notion 
-de cohomologie \`a support propre (\ref{4-5}). 
+de cohomologie à support propre (\ref{4-5}). 
 
 
 
@@ -1957,7 +1953,7 @@ de cohomologie \`a support propre (\ref{4-5}).
 
 \subsection{Démonstration pour \texorpdfstring{$q=0$}{q=1} or \texorpdfstring{$1$}{1} et \texorpdfstring{$F=\dZ/n$}{F=Z/n}}\label{4-2} 
 
-Le r\'esultat pour $q=0$ et $F$ constant est \'equivalent \`a la proposition 
+Le résultat pour $q=0$ et $F$ constant est équivalent à la proposition 
 suivante (théorème de connexion de Zariski):
 
 
@@ -1965,17 +1961,17 @@ suivante (théorème de connexion de Zariski):
 
 
 \begin{proposition}\label{4-2-1}
-Soient $A$ un anneau local hens\'elien noeth\'erien et $S=\spec(A)$. 
-Soient $f:X\to S$ un morphisme propre et $X_0$ la fibre ferm\'ee de $f$. Alors 
+Soient $A$ un anneau local hensélien noethérien et $S=\spec(A)$. 
+Soient $f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors 
 les ensembles de composantes connexes $\pi_0(X)$ et $\pi_0(X_0)$ sont en 
 bijection.
 \end{proposition}
 
-Il revient au m\^eme de montrer que les ensembles de parties \`a la fois 
-ouvertes et ferm\'ees $\operatorname{Of}(X)$ et $\operatorname{Of}(X_0)$ sont 
+Il revient au même de montrer que les ensembles de parties à la fois 
+ouvertes et fermées $\operatorname{Of}(X)$ et $\operatorname{Of}(X_0)$ sont 
 en bijection. On sait que l'ensemble $\operatorname{Of}(X)$ correspond 
-bijectivement \`a l'ensemble des idempotents de $\Gamma(X,\cO_X)$, de m\^eme 
-$\operatorname{Of}(X_0)$ correspond bijectivement \`a l'ensemble des 
+bijectivement à l'ensemble des idempotents de $\Gamma(X,\cO_X)$, de même 
+$\operatorname{Of}(X_0)$ correspond bijectivement à l'ensemble des 
 idempotents de $\Gamma(X_0,\cO_{X_0})$. Il s'agit donc de montrer que 
 l'application canonique 
 \[
@@ -1983,11 +1979,11 @@ l'application canonique
 \]
 est bijective. 
 
-On notera $\fm$ l'id\'eal maximal de $A$, $\Gamma(X,\cO_X)^\wedge$ le complété 
+On notera $\fm$ l'idéal maximal de $A$, $\Gamma(X,\cO_X)^\wedge$ le complété 
 de $\Gamma(X,\cO_X)$ pour la topologie $\fm$-adique et, pour tout entier 
-$n\geqslant 0$, $X_n=X\otimes_A A/\fm^{n+1}$. D'apr\`es le théorème de finitude 
+$n\geqslant 0$, $X_n=X\otimes_A A/\fm^{n+1}$. D'après le théorème de finitude 
 pour les morphismes propres \cite[III.3.2]{8}, $\Gamma(X,\cO_X)$ est une 
-$A$-alg\`ebre finie; comme $A$ est hens\'elien, il en r\'esulte que 
+$A$-algèbre finie; comme $A$ est hensélien, il en résulte que 
 l'application canonique 
 \[
   \operatorname{Idem} \Gamma(X,\cO_X) \to \operatorname{Idem}\Gamma(X,\cO_X)^\wedge
@@ -1996,65 +1992,68 @@ est bijective. En particulier l'application canonique
 \[
   \operatorname{Idem} \Gamma(X,\cO_X)^\wedge \to \varprojlim \operatorname{Idem}\Gamma(X_n,\cO_{X_n})
 \]
-est bijective. Mais, puisque $X_n$ et $X_0$ on m\^eme espace topologique 
+est bijective. Mais, puisque $X_n$ et $X_0$ on même espace topologique 
 sous-jacent, l'application canonique 
 \[
   \operatorname{Idem}\Gamma(X_n,\cO_{X_n}) \to \operatorname{Idem} \Gamma(X_0,\cO_{X_0})
 \]
-est bijective pour tout $n$, ce qui ach\`eve la d\'emonstration. 
+est bijective pour tout $n$, ce qui achève la démonstration. 
 
 Puisque $H^1(X,\dZ/n)$ est en bijection avec l'ensemble des classes 
-d'isomorphisme de r\^evetements \'etales galoisiens de $X$ de groupe $\dZ/n$, 
-le théorème  pour $q=1$ et $F=\dZ/n$ r\'esulte de la proposition suivante. 
+d'isomorphisme de revêtements étales galoisiens de $X$ de groupe $\dZ/n$, 
+le théorème  pour $q=1$ et $F=\dZ/n$ résulte de la proposition suivante. 
 
 
 
 
 
 \begin{proposition}\label{4-2-2}
-Soient $A$ un anneau local hens\'elien noeth\'erien et $S=\spec(A)$. Soient 
-$f:X\to S$ un morphisme propre et $X_0$ la fibre ferm\'ee de $f$. Alors le 
+Soient $A$ un anneau local hensélien noethérien et $S=\spec(A)$. Soient 
+$f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors le 
 foncteur de restriction 
 \[
   \operatorname{Rev.et}(X) \to \operatorname{Rev.et}(X_0)
 \]
-est une \'equivalence de cat\'egories. 
+est une équivalence de catégories. 
 \end{proposition}
 
-(Si $X_0$ est connexe et si l'on a choisi un point g\'eom\'etrique de $X_0$ 
-comme point base, cela revient \`a dire que l'application canonique 
+(Si $X_0$ est connexe et si l'on a choisi un point géométrique de $X_0$ 
+comme point base, cela revient à dire que l'application canonique 
 $\pi_1(X_0)\to \pi_1(X)$ sur les groupes fondamentaux (profinis) est 
 bijective). 
 
-La proposition (\ref{4-2-1}) montre que ce foncteur est pleinement fid\`ele. En 
-effet, si $X'$ et $X''$ sont deux revêtements \'etales de $X$, un 
-$X$-morphisme de $X'$ dans $X''$ est d\'etermin\'e par son graphe qui est une 
-partie ouverte et ferm\'ee de $X'\times_X X''$. 
+La proposition (\ref{4-2-1}) montre que ce foncteur est pleinement fidèle. En 
+effet, si $X'$ et $X''$ sont deux revêtements étales de $X$, un 
+$X$-morphisme de $X'$ dans $X''$ est déterminé par son graphe qui est une 
+partie ouverte et fermée de $X'\times_X X''$. 
 
-Il s'agit donc de montrer que tout revêtement \'etale $X_0'$ de $X_0$ s\'etend 
-en un revêtement \'etale de $X$. On sait que les revêtements \'etales ne 
-d\'ependent pas des \'el\'ements nilpotents \cite[chap. 1]{7}, par cons\'equent 
-$X_0'$ se rel\`eve de mani\`ere unique en un revêtement \'etale $X_n'$ de 
-$X_n$ pour tout $n\geqslant 0$, autrement dit en un revêtement \'etale 
-$\fX'$ du sch\'ema formel $\fX$ compl\'et\'e de $X$ de long de $X_0$. D'apr\`es 
-le théorème d'alg\'ebrisation des faisceaux coh\'erents formels de 
+Il s'agit donc de montrer que tout revêtement étale $X_0'$ de $X_0$ s'étend 
+en un revêtement étale de $X$. On sait que les revêtements étales ne 
+dépendent pas des éléments nilpotents \cite[chap. 1]{7}, par conséquent 
+$X_0'$ se relève de manière unique en un revêtement étale $X_n'$ de 
+$X_n$ pour tout $n\geqslant 0$, autrement dit en un revêtement étale 
+$\fX'$ du schéma formel $\fX$ complété de $X$ de long de $X_0$. D'après 
+le théorème d'algébrisation des faisceaux cohérents formels de 
 Grothendieck (théorème d'existence, \cite[III.5]{8}), $\fX'$ est le 
-compl\'et\'e formel d'un revêtement \'etale $\bar X'$, de 
+complété formel d'un revêtement étale $\bar X'$, de 
 $\bar X=X\otimes_A \hat A$. 
 
-Par passage \`a la limite, il suffit de d\'emontrer la proposition dans le cas 
-o\`u $A$ est l'hens\'elis\'e d'une $\dZ$-alg\`ebre de type fini. On peut alors 
+Par passage à la limite, il suffit de démontrer la proposition dans le cas 
+où $A$ est l'hensélisé d'une $\dZ$-algèbre de type fini. On peut alors 
 appliquer le théorème d'approximation d'Artin au foncteur 
-$F:(\textnormal{$A$-alg\`ebres}) \to (\textnormal{ensembles})$ qui, \`a une 
-$A$-alg\`ebre $B$, fait correspondre l'ensemble des classes d'isomorphisme de 
-revêtements \'etales de $X\otimes_A B$. En effet ce foncteur est localement de 
-pr\'esentation finie: si $B_i$ est une syst\`eeme inductif filtrant de 
-$A$-alg\`ebres et si $B=\varinjlim B_i$, on a $F(B) = \varinjlim F(B_i)$. 
-D'apr\`es le théorème d'Artin, \'etant donn\'e un \'el\'ement 
+$F:(\textnormal{$A$-algèbres}) \to (\textnormal{ensembles})$ qui, à une 
+$A$-algèbre $B$, fait correspondre l'ensemble des classes d'isomorphisme de 
+revêtements étales de $X\otimes_A B$. En effet ce foncteur est localement de 
+présentation finie: si $B_i$ est une système inductif filtrant de 
+$A$-algèbres et si $B=\varinjlim B_i$, on a $F(B) = \varinjlim F(B_i)$. 
+D'après le théorème d'Artin, étant donné un élément 
 $\xi\in F(\hat A)$, en l'occurrence la classe d'isomorphisme de $\bar X'$, il 
 existe $\xi\in F(A)$ ayant même image que $\bar\xi$ dans $F(A/\fm)$. 
-Autrement dit il existe un revêtement \'etale $X'$ de $X$ dont la restriction 
-\`a $X_0$ est isomorphe \`a $X_0'$. 
+Autrement dit il existe un revêtement étale $X'$ de $X$ dont la restriction 
+à $X_0$ est isomorphe à $X_0'$. 
+
+
+
 
 
 
@@ -2064,9 +2063,148 @@ Autrement dit il existe un revêtement \'etale $X'$ de $X$ dont la restriction
 
 \subsection{Faisceaux constructibles}\label{4-3}
 
+Dans ce paragraphe, on considère un schéma \emph{noethérien} $X$ et on 
+appelle faisceau sur $X$ un faisceau \emph{abélien} sur $\et X$. 
+
+
+
+
+
+\begin{definition}\label{4-3-1}
+On dit qu'un faisceau $F$ sur $X$ est \emph{localement constant constructible} 
+(en abrégé l.c.c.) s'il est représenté par un revêtement étale de 
+$X$. 
+\end{definition}
+
+
+
+
+
+\begin{definition}\label{4-3-2}
+On dit qu'un faisceau $F$ sur $X$ est \emph{constructible} s'il vérifie les 
+conditions équivalentes suivantes:
+\begin{enumerate}[\indent (i)]
+  \item Il existe une famille finie surjective de sous-schémas $X_i$ de $X$ 
+     tels que la restriction de $F$ à $X_i$ soit l.c.c..
+  \item Il existe une famille finie de morphismes finis $p_i:X_i'\to X$, pour 
+    chaque $i$ un faisceau constant constructible ( = défini par un groupe 
+    abélien fini) $C_i$ sur $X_i'$, et un monomorphisme 
+    $F\to \prod p_{i*} C_i$. 
+\end{enumerate}
+\end{definition}
+
+On vérifie facilement que la catégorie des faisceaux constructibles sur $X$ 
+est une catégorie abélienne. De plus, si $u:F\to G$ est un homomorphisme de 
+faisceaux et si $F$ est constructible, le faisceau $\im(u)$ est constructible.
+
+
+
+
+
+\begin{lemma}\label{4-3-3}
+Tout faisceau de torsion $F$ est limite inductive filtrante de faisceaux 
+constructibles.
+\end{lemma}
+
+En effet, si $j:U\to X$ est un schéma étale de type fini sur $X$, un 
+élément $\xi\in F(U)$ tel que $n\xi=0$ définit un homomorphisme de 
+faisceaux $j_! \const{\dZ/n}\to F$ dont l'image (le lus petit sous-faisceau de 
+$F$ dont $\xi$ soit section locale) est un sous-faisceau constructible de $F$. 
+Il est clair que $F$ est limite inductive de tels sous-faisceaux.
+
+
+
+
+
+\begin{definition}\label{4-3-4}
+Soient $\cC$ une catégorie abélienne et $T$ un foncteur défini sur $\cC$ 
+à valeurs dans la catégorie des groupes abéliens. On dira que $T$ est 
+\emph{effaçable} dans $\cC$ si, pour tout objet $A$ de $\cC$ et tout 
+$\alpha\in T(A)$, il existe un monomorphisme $u:A\to M$ dans $\cC$ tel que 
+$T(u)\alpha = 0$. 
+\end{definition}
+
+
+
+
+
+\begin{lemma}\label{4-3-5}
+Les foncteurs $H^q(X,-)$ pour $q>0$ sont effaçables dans la catégorie des 
+faisceaux constructibles sur $X$.
+\end{lemma}
+
+Il suffit de remarquer que, si $F$ est un faisceau constructible, il existe 
+nécessairement un entier $n>0$ tel que $F$ soit un faisceau de 
+$\dZ/n$-modules. Alors il existe un monomorphisme $F\hookrightarrow G$, où 
+$G$ est un faisceau de $\dZ/n$-modules et $H^q(X,G) = 0$ pour tout $q>0$. On 
+peut par exemple prendre pour $G$ la résolution de Godement 
+$\prod_{x\in X} i_{x*} F_{\bar x}$, où $x$ parcourt les points de $X$ et 
+$i_x:\bar x\to X$ est un point géométrique centré en $X$. D'après 
+(\ref{4-3-3}) $G$ est limite inductive de faisceaux constructibles, d'o`u le 
+lemme, car les foncteurs $H^q(X,-)$ commutent aux limites inductives. 
+
+
+
+
+
+\begin{lemma}\label{4-3-6}
+Soit $\varphi^\bullet:T^\bullet\to {T'}^\bullet$ un morphisme de foncteurs 
+cohomologiques définis sur une catégorie abélienne $\cC$ et à valeurs 
+dans la catégorie des groupes abéliens. Supposons que $T^q$ est effaçable 
+pour $q>0$ et soit $\cE$ un sous-ensemble d'objets de $\cC$ tel que tout objet 
+de $\cC$ soit contenu dans un objet appartenant à $\cE$. Alors les 
+conditions suivantes sont équivalentes:
+\begin{enumerate}[\indent (i)]
+  \item $\varphi^q(A)$ est bijectif pour tout $q\geqslant 0$ et tout 
+    $A\in\ob \cC$.
+  \item $\varphi^0(M)$ est bijectif et $\varphi^q(M)$ surjectif pour tout 
+    $q>0$ et tout $M\in\cE$. 
+  \item $\varphi^0(A)$ est bijectif pour tout $A\in\ob \cC$ et ${T'}^q$ est 
+    effaçable pour tout $q>0$. 
+\end{enumerate}
+\end{lemma}
+
+La démonstration se fait par récurrence sur $q$ et ne présente pas de 
+difficultés. 
+
+
+
+
+
+\begin{proposition}\label{4-3-7}
+Soit $X_0$ un sous-schéma de $X$. Supposons que, pour tout $n\geqslant 0$ et 
+pour tout schéma $X'$ fini sur $X$, l'application canonique 
+\[
+  H^q(X',\dZ/n) \to H^q(X_0',\dZ/n)\text{,}
+\]
+où $X_0' = X'\times_X X_0$, est bijective pour $q=0$ et surjective pour 
+$q>0$. Alors, pour tout faisceau de torsion $F$ sur $X$ et pour tout 
+$q\geqslant 0$, l'application canonique 
+\[
+  H^q(X,F) \to H^q(X_0,F)
+\]
+est bijective.
+\end{proposition}
+
+Par passage à la limite, il suffit de démontrer l'assertion pour $F$ 
+constructible. On applique le lemme (\ref{4-3-6}) en prenant pour $\cC$ la 
+catégorie des faisceaux constructibles sur $X$, $T^q=H^q(X,-)$, 
+${T'}^q=H^q(X_0,-)$, et $\cE$ l'ensemble des faisceaux constructibles de la 
+forme $\prod p_{i*} C_i$, où $p_i:X_i'\to X$ est un morphisme fini et $C_i$ 
+un faisceau constant fini sur $X_i'$. 
+
+
+
+
+
+
+
+
+
+
 \subsection{Fin de la démonstration}\label{4-4}
 
-\subsection{Cohomologie \`a support propre}\label{4-5}
+\subsection{Cohomologie à support propre}\label{4-5}
 
 \subsection{Applications}\label{4-6}
 
