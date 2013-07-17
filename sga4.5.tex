@@ -1,61 +1,73 @@
 \documentclass{article}
 
 
-\title{Cohomologie Etale}
+\title{Cohomologie \'Etale}
 \author{Pierre Deligne}
 \date{1977}
+
 
 \usepackage[utf8]{inputenc}
 \usepackage[all]{xy}
 \usepackage{amsmath,amssymb,amsthm,enumerate,fullpage} %,titlesec} to have inline subsubsections
 \usepackage[colorlinks,backref]{hyperref}
 
-\DeclareMathOperator{\ab}{Ab}
-\DeclareMathOperator{\aut}{Aut}
-\DeclareMathOperator{\br}{Br}
-\DeclareMathOperator{\dv}{div}
-\DeclareMathOperator{\Div}{Div}
-\DeclareMathOperator{\gal}{Gal}
-\DeclareMathOperator{\gl}{GL}
-\DeclareMathOperator{\im}{im}
-\DeclareMathOperator{\nrd}{Nrd}
-\DeclareMathOperator{\ob}{Ob}
-\DeclareMathOperator{\pgl}{PGL}
-\DeclareMathOperator{\pic}{Pic}
-\DeclareMathOperator{\sh}{Sh}
-\DeclareMathOperator{\spec}{Spec}
 
-\newcommand{\const}[1]{\underline{#1}}
-\newcommand{\et}[1]{{#1}_{\textnormal{et}}}
-\newcommand{\cC}{\mathcal{C}}
-\newcommand{\cE}{\mathcal{E}}
-\newcommand{\cF}{\mathcal{F}}
-\newcommand{\cG}{\mathcal{G}}
-\newcommand{\cH}{\mathcal{H}}
-\newcommand{\cL}{\mathcal{L}}
-\newcommand{\cO}{\mathcal{O}}
-\newcommand{\cS}{\mathcal{S}}
-\newcommand{\cU}{\mathcal{U}}
-\newcommand{\dC}{\mathbb{C}}
-\newcommand{\dG}{\mathbb{G}}
-\newcommand{\dmu}{\boldsymbol{\mu}}
-\newcommand{\dN}{\mathbb{N}}
-\newcommand{\dP}{\mathbb{P}}
-\newcommand{\dR}{\mathbb{R}}
-\newcommand{\dZ}{\mathbb{Z}}
-\newcommand{\fa}{\mathfrak{a}}
-\newcommand{\fm}{\mathfrak{m}}
-\newcommand{\fr}{\mathfrak{r}}
-\newcommand{\fX}{\mathfrak{X}}
-\newcommand{\iso}{\xrightarrow\sim}
+% operators
+  \DeclareMathOperator{\ab}{Ab}
+  \DeclareMathOperator{\aut}{Aut}
+  \DeclareMathOperator{\br}{Br}
+  \DeclareMathOperator{\dv}{div}
+  \DeclareMathOperator{\Div}{Div}
+  \DeclareMathOperator{\gal}{Gal}
+  \DeclareMathOperator{\gl}{GL}
+  \DeclareMathOperator{\h}{H}
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\nrd}{Nrd}
+  \DeclareMathOperator{\ob}{Ob}
+  \DeclareMathOperator{\pgl}{PGL}
+  \DeclareMathOperator{\pic}{Pic}
+  \DeclareMathOperator{\sh}{Sh}
+  \DeclareMathOperator{\spec}{Spec}
 
-\newtheorem{proposition}[subsubsection]{Proposition}
-\newtheorem{corollary}[subsubsection]{Corollaire}
-\newtheorem{definition}[subsubsection]{Définition}
-\newtheorem{theorem}[subsubsection]{Théorème}
-\newtheorem{lemma}[subsubsection]{Lemme}
-\setcounter{tocdepth}{2}
-% \titleformat{\subsubsection}[runin]{\normalfont\large\bfseries}{\thesubsubsection}{1em}{}
+
+% special characters
+  \newcommand{\cC}{\mathcal{C}}
+  \newcommand{\cE}{\mathcal{E}}
+  \newcommand{\cF}{\mathcal{F}}
+  \newcommand{\cG}{\mathcal{G}}
+  \newcommand{\cH}{\mathcal{H}}
+  \newcommand{\cL}{\mathcal{L}}
+  \newcommand{\cO}{\mathcal{O}}
+  \newcommand{\cS}{\mathcal{S}}
+  \newcommand{\cU}{\mathcal{U}}
+
+  \newcommand{\dC}{\mathbb{C}}
+  \newcommand{\dG}{\mathbb{G}}
+  \newcommand{\dmu}{\boldsymbol{\mu}}
+  \newcommand{\dN}{\mathbb{N}}
+  \newcommand{\dP}{\mathbb{P}}
+  \newcommand{\dR}{\mathbb{R}}
+  \newcommand{\dZ}{\mathbb{Z}}
+
+  \newcommand{\fa}{\mathfrak{a}}
+  \newcommand{\fm}{\mathfrak{m}}
+  \newcommand{\fr}{\mathfrak{r}}
+  \newcommand{\fX}{\mathfrak{X}}
+
+
+% miscelaneous
+  \newcommand{\const}[1]{\underline{#1}}
+  \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
+  \newcommand{\iso}{\xrightarrow\sim}
+
+
+% theorem types
+  \newtheorem{proposition}[subsubsection]{Proposition}
+  \newtheorem{corollary}[subsubsection]{Corollaire}
+  \newtheorem{definition}[subsubsection]{Définition}
+  \newtheorem{theorem}[subsubsection]{Théorème}
+  \newtheorem{lemma}[subsubsection]{Lemme}
+  \setcounter{tocdepth}{2}
 
 
 
@@ -602,7 +614,7 @@ Autrement dit tout $1$-cocycle de $G$ à valeurs dans ${k'}^\times$ est un
 cobord: 
 
 \begin{corollary}\label{1-5-3}
-On a $H^1(G,{k'}^\times)=0$.
+On a $\h^1(G,{k'}^\times)=0$.
 \end{corollary}
 
 
@@ -725,25 +737,25 @@ Nous en avons vu deux plus haut.
 
 On supposera toujours que la catégorie $\cS$ a un objet final $X$. Alors on 
 appelle sections globales d'un faisceaux abélien $\cF$, et on note 
-$\Gamma\cF$ ou $H^0(X,\cF)$, le groupe $\cF(X)$. Le foncteur 
+$\Gamma\cF$ ou $\h^0(X,\cF)$, le groupe $\cF(X)$. Le foncteur 
 $\cF\mapsto\Gamma\cF$ est un foncteur exact \'a gauche de la catégorie des 
 faisceaux abéliens sur $\cS$ dans la catégorie des groupes abéliens, ou 
-note $H^i(X,\bullet)$ ses dérivés (ou satellites). Ces groupes de 
+note $\h^i(X,\bullet)$ ses dérivés (ou satellites). Ces groupes de 
 cohomologie représentent les obstructions à passer du local au global. Par 
 définition, si $0\to\cF\to\cG\to\cH\to 0$ est une suite exacte de faisceaux 
 abéliens, on a une suite exacte longue de cohomologie:
 \[\xymatrix{
   0 \ar[r] 
-    & H^0(X,\cF) \ar[r] 
-    & H^0(X,\cG) \ar[r] 
-    & H^0(X,\cH) \ar[r] 
-    & H^1(X,\cF) \ar[r] 
+    & \h^0(X,\cF) \ar[r] 
+    & \h^0(X,\cG) \ar[r] 
+    & \h^0(X,\cH) \ar[r] 
+    & \h^1(X,\cF) \ar[r] 
     & \cdots \\
   \ldots \ar[r] 
-    & H^n(X,\cF) \ar[r] 
-    & H^n(X,\cG) \ar[r]
-    & H^n(X,\cH) \ar[r] 
-    & H^{n+1}(X,\cF) \ar[r] 
+    & \h^n(X,\cF) \ar[r] 
+    & \h^n(X,\cG) \ar[r]
+    & \h^n(X,\cH) \ar[r] 
+    & \h^{n+1}(X,\cF) \ar[r] 
     & \cdots
 }\]
 
@@ -760,7 +772,7 @@ crible couvrant l'objet final $X$) $\cG$ muni de l'action de $\cF$ soit
 isomorphe à $\cF$ muni de l'action canonique $\cF\times \cF\to \cF$ par 
 translations. 
 
-On peut montrer que $H^1(X,\cF)$ s'interprète comme l'ensemble des classes 
+On peut montrer que $\h^1(X,\cF)$ s'interprète comme l'ensemble des classes 
 à isomorphisme près de $\cF$-torseurs. 
 
 
@@ -894,14 +906,14 @@ défini par $U\mapsto C^{\pi_0(U)}$, où $\pi_0(U)$ est l'ensemble (fini) des
 composantes connexes de $U$. Le cas le plus important sera $C=\dZ/n$. On a donc 
 par définition 
 \[
-  H^0(X,\dZ/n)=\left(\dZ/n\right)^{\pi_0(X)}\text{.}
+  \h^0(X,\dZ/n)=\left(\dZ/n\right)^{\pi_0(X)}\text{.}
 \]
-De plus $H^1(X,\dZ/n)$ est l'ensemble des classes d'isomorphisme de 
+De plus $\h^1(X,\dZ/n)$ est l'ensemble des classes d'isomorphisme de 
 $\dZ/n$-torseurs (\ref{1-6-6}), autrement dit de revêtements étales 
 galoisiens de $X$ de groupe $\dZ/n$. En particulier, si $X$ est connexe et si 
 $\pi_1(X)$ est son groupe fondamental pour un pointe bas choisi, on a 
 \[
-  H^1(X,\dZ/n) = \hom(\pi_1(X),\dZ/n)\text{.}
+  \h^1(X,\dZ/n) = \hom(\pi_1(X),\dZ/n)\text{.}
 \]
 
 
@@ -915,18 +927,18 @@ défini par $U\mapsto \Gamma(U,\cO_U^\times)$; il s'agit bien d'un faisceau
 grâce au théorème de descente fidèlement plate (\ref{1-4-5}). On a 
 par définition 
 \[
-  H^0(X,\dG_m) = H^0(X,\cO_X)^\times\text{;}
+  \h^0(X,\dG_m) = \h^0(X,\cO_X)^\times\text{;}
 \]
 en particulier si $X$ est réduit, connexe et propre sur un corps 
 algébriquement clos $k$, on a:
 \[
-  H^0(X,\dG_m) = k^\times\text{.}
+  \h^0(X,\dG_m) = k^\times\text{.}
 \]
 
 \begin{proposition}\label{2-2-3}
 On a un isomorphisme:
 \[
-  H^1(X,\dG_m) = \pic(X)\text{,}
+  \h^1(X,\dG_m) = \pic(X)\text{,}
 \]
 où $\pic(X)$ est le groupe des classes de faisceaux inversibles sur $X$.
 \end{proposition}
@@ -1073,7 +1085,7 @@ $f_*:\ab\sh(\et X)\to \ab\sh(\et Y)$ est exact à gauche. Ses foncteurs
 dérivés à droite $R^q f_*$ s'appellent images directes supérieures. Si 
 $\bar y$ est un point géométrique de $Y$, on a 
 \[
-  (R^q f_* F)_{\bar y} = \varinjlim H^q(V\times_Y X,F)\text{,}
+  (R^q f_* F)_{\bar y} = \varinjlim \h^q(V\times_Y X,F)\text{,}
 \]
 limite inductive prise sur les voisinages étales $V$ de $\bar y$. 
 
@@ -1090,7 +1102,7 @@ que $\widetilde U=U\times_V \widetilde Y$; on posera
 le limite inductive étant prise sur les voisinages étales $V'$ de $\bar y$ qui 
 dominent $V$. Avec cette définition, on a 
 \[
-  \left(R^q f_* F\right)_{\bar y} = H^q(\widetilde X,F)\text{.}
+  \left(R^q f_* F\right)_{\bar y} = \h^q(\widetilde X,F)\text{.}
 \]
 
 Le foncteur $f_*$ a un adjoint à gauche $f^*$, le foncteur ``image 
@@ -1109,7 +1121,7 @@ Soient $F$ un faisceau abélien sur $\et X$ et $f:X\to Y$ un morphisme de
 schémas (resp. des morphismes de schémas $X\xrightarrow f Y \xrightarrow g Z$). 
 On a une suite spectrale 
 \begin{align*}
-  E_2^{pq} &= H^p(Y,R^q f_* F) \Rightarrow H^{p+q}(X,F) \\
+  E_2^{pq} &= \h^p(Y,R^q f_* F) \Rightarrow \h^{p+q}(X,F) \\
   \text{(resp.}\qquad E_2^{pq} &= R^p g_* R^q f_* F \Rightarrow R^{p+q}(gf)_* F\text{).}
 \end{align*}
 \end{theorem}
@@ -1119,7 +1131,7 @@ On a une suite spectrale
 
 
 \begin{corollary}\label{2-3-5}
-Si $R^q f_* F=0$ pour tout $q>0$, on a $H^p(Y,f_* F)=H^p(X,F)$ (resp. 
+Si $R^q f_* F=0$ pour tout $q>0$, on a $\h^p(Y,f_* F)=\h^p(X,F)$ (resp. 
 $R^p g_*(F_* F) = R^p(g f)_* F$) pour tout $p\geqslant 0$. 
 \end{corollary}
 
@@ -1138,7 +1150,7 @@ pour tout $q>0$.
 En effet soient $\bar y$ un pointe géométrique de $Y$, $\widetilde Y$ le 
 spectre du localisé strict de $Y$ en $y$ et 
 $\widetilde X=X\times_Y \widetilde Y$; d'après ce qui précède, il suffit de 
-montrer que $H^q(\widetilde X,F) = 0$ pour tout $q>0$. Or $\widetilde X$ est le 
+montrer que $\h^q(\widetilde X,F) = 0$ pour tout $q>0$. Or $\widetilde X$ est le 
 spectre d'un produit d'anneaux locaux strictement henséliens (cf. 
 \cite[I]{11}), le foncteur $\Gamma(\widetilde X,\bullet)$ est exact car tout 
 $\widetilde X$-schéma étale et surjectif admet une section, d'où l'assertion. 
@@ -1245,7 +1257,7 @@ En particulier, si $X=\spec(K)$, on a $F(X) = F_{\bar K}^G$. Si l'on se
 restreint aux faisceaux abéliens, on obtient en passant aux foncteurs 
 dérivés des isomorphismes canoniques 
 \[
-  H^q(\et X,F) = H^q(G,F_{\bar K})
+  \h^q(\et X,F) = \h^q(G,F_{\bar K})
 \]
 
 
@@ -1288,7 +1300,7 @@ dérivés des isomorphismes canoniques
 Dans le cas des espaces topologiques, des dévissages utilisant la formule de 
 K\"unneth et des décompositions simpliciales permettent de se ramener pour 
 calculer la cohomologie à l'intervalle $I=[0,1]$ pour lequel on a 
-$H^0(I,\dZ)=\dZ$ et $H^q(I,\dZ)=0$ pour $q>0$. 
+$\h^0(I,\dZ)=\dZ$ et $\h^q(I,\dZ)=0$ pour $q>0$. 
 
 Dans notre cas, les dévissages aboutiront à des objets plus compliqués, 
 à savoir les courbes sur un corps algébriquement clos; nous allons calculer 
@@ -1349,13 +1361,13 @@ carrées $n\times n$ sur $K'$. Par définition $\br(K)$ est réunion des
 sous-ensembles $\br(n,K)$ pour $n\in\dN$. Soient $\bar K$ une clôture 
 algébrique de $K$ et $G=\gal(\bar K/K)$. L'ensemble $\br(n,K)$ est 
 l'ensemble des ``formes'' de $M_n(\bar K)$, il est donc canoniquement 
-isomorphe à $H^1\left(G,\aut(M_n(\bar K))\right)$. 
+isomorphe à $\h^1\left(G,\aut(M_n(\bar K))\right)$. 
 
 On sait que tout automorphisme de $M_n(\bar K)$ est intérieur. Par 
 conséquent le groupe $\aut(M_n(\bar K))$ s'identifie au groupe linéare 
 projectif $\pgl(n,\bar K)$ et on a une bijection canonique:
 \[
-  \theta_n : \br(n,K) \iso H^1\left(G,\pgl(n,\bar K)\right)\text{.}
+  \theta_n : \br(n,K) \iso \h^1\left(G,\pgl(n,\bar K)\right)\text{.}
 \]
 
 D'autre part la suite exacte:
@@ -1364,17 +1376,17 @@ D'autre part la suite exacte:
 \end{equation}
 permet de définir un opérateur cobord:
 \[
-  \Delta_n : H^1\left(G,\pgl(n,\bar K)\right) \to H^2(G,\bar K^\times)\text{.}
+  \Delta_n : \h^1\left(G,\pgl(n,\bar K)\right) \to \h^2(G,\bar K^\times)\text{.}
 \]
 
 En composant $\theta_n$ et $\Delta_n$, on obtient une application:
 \[
-  \delta_n : \br(n,K) \to H^2(G,\bar K^\times)\text{.}
+  \delta_n : \br(n,K) \to \h^2(G,\bar K^\times)\text{.}
 \]
 On vérifie facilement que les applications $\delta_n$ sont compatibles entre 
 elles et définissent un homomorphisme de groupes:
 \[
-  \delta : \br(K) \to H^2(G,\bar K^\times)\text{.}
+  \delta : \br(K) \to \h^2(G,\bar K^\times)\text{.}
 \]
 
 
@@ -1382,7 +1394,7 @@ elles et définissent un homomorphisme de groupes:
 
 
 \begin{proposition}\label{3-1-3}
-L'homomorphisme $\delta:\br(K)\to H^2(G,\bar K^\times)$ est bijectif. 
+L'homomorphisme $\delta:\br(K)\to \h^2(G,\bar K^\times)$ est bijectif. 
 \end{proposition}
 
 Cela résulte des deux lemmes suivants:
@@ -1393,17 +1405,17 @@ Cela résulte des deux lemmes suivants:
 
 \begin{lemma}\label{3-1-4}
 L'application 
-$\Delta_n:H^1\left(G,\pgl(n,\bar K)\right)\to H^2(G,\bar K^\times)$ est 
+$\Delta_n:\h^1\left(G,\pgl(n,\bar K)\right)\to \h^2(G,\bar K^\times)$ est 
 injective.
 \end{lemma}
 
 D'après \cite{14}, cor. à la prop. I-44, il suffit de vérifier que chaque 
 fois qu'on tord la suite exacts (\ref{eq:1}) par un élément de 
-$H^1\left(G,\pgl(n,\bar K)\right)$, le $H^1$ du groupe médian est trivial. 
+$\h^1\left(G,\pgl(n,\bar K)\right)$, le $\h^1$ du groupe médian est trivial. 
 Ce groupe médian est le groupe des $\bar K$-points du groupe multiplicatif 
 d'une algèbre centrale simple $A$ de rang $n^2$ sur $K$. Pour prouver que 
-$H^1(G,A_{\bar K}^\times) = 0$, n interprète $A^\times$ comme le groupe 
-des automorphismes du $A$-module libre $L$ de rang $1$, et $H^1$ comme 
+$\h^1(G,A_{\bar K}^\times) = 0$, n interprète $A^\times$ comme le groupe 
+des automorphismes du $A$-module libre $L$ de rang $1$, et $\h^1$ comme 
 l'ensemble des ``formes'' de $L$ -- des $A$-modules de rang $n^2$ sur $K$, 
 automatiquement libres. 
 
@@ -1412,19 +1424,19 @@ automatiquement libres.
 
 
 \begin{lemma}\label{3-1-5}
-Soient $\alpha\in H^2(G,\bar K^\times)$, $K'$ un extension finie de $K$ 
+Soient $\alpha\in \h^2(G,\bar K^\times)$, $K'$ un extension finie de $K$ 
 contenue dans $\bar K$, $n=[K':K]$, et $G'=\gal(\bar K/K')$. Si l'image de 
-$\alpha$ dans $H^2(G',\bar K^\times)$ est nulle, alors, $\alpha$ appartient 
+$\alpha$ dans $\h^2(G',\bar K^\times)$ est nulle, alors, $\alpha$ appartient 
 à l'image de $\Delta_n$. 
 \end{lemma}
 
 Remarquons tout d'abord qu'on a: 
 \[
-  H^2(G',\bar K^\times) \simeq H^2\left(G,(\bar K\otimes_K K')^\times\right)\text{.}
+  \h^2(G',\bar K^\times) \simeq \h^2\left(G,(\bar K\otimes_K K')^\times\right)\text{.}
 \]
 (D'un point de vue géométrique si l'on note $x=\spec(K)$, $x'=\spec(K')$ et 
 $\pi:x'\to x$ le morphisme canonique, on a $R^q \pi_*(\dG_{m,x'}) = 0$ pour 
-$q>0$ et par suite $H^q(x',\dG_{m,X'})\simeq H^q(x,\pi_*\dG_{m,X'})$ pour 
+$q>0$ et par suite $\h^q(x',\dG_{m,X'})\simeq \h^q(x,\pi_*\dG_{m,X'})$ pour 
 $q\geqslant 0$). 
 
 Par ailleurs la choix d'une base de $K'$ en tant qu'espace vectoriel sur $K$ 
@@ -1450,11 +1462,11 @@ commutatif à lignes exactes:
 Le lemme résulte du diagramme commutatif que l'on en déduit en passant 
 à la cohomologie:
 \[\xymatrix{
-  H^1\left(G,(\bar K\otimes_K K')^\times/\bar K^\times\right) \ar[r] \ar[d] 
-    & H^2(G,\bar K^\times) \ar[r] \ar@{=}[d]
-    & H^2\left(G,(\bar K\otimes_K K')^\times\right) \\
-  H^1\left(G,\pgl(n,\bar K)\right) \ar[r]^-{\Delta_n} 
-    & H^2(G,\bar K^\times) \text{.}
+  \h^1\left(G,(\bar K\otimes_K K')^\times/\bar K^\times\right) \ar[r] \ar[d] 
+    & \h^2(G,\bar K^\times) \ar[r] \ar@{=}[d]
+    & \h^2\left(G,(\bar K\otimes_K K')^\times\right) \\
+  \h^1\left(G,\pgl(n,\bar K)\right) \ar[r]^-{\Delta_n} 
+    & \h^2(G,\bar K^\times) \text{.}
 }\]
 
 
@@ -1466,8 +1478,8 @@ Soient $K$ un corps, $\bar K$ une clôture algébrique de $K$ et
 $G=\gal(\bar K/K)$. Supposons que, pour tout extension finie $K'$ de $K$, on 
 ait $\br(K')=0$. Alors on a:
 \begin{enumerate}[\indent i)]
-  \item $H^q(G,\bar K^\times) = 0$ pour tout $q>0$.
-  \item $H^q(G,F) = 0$ pour tout $G$-module de torsion $F$ et pour tout 
+  \item $\h^q(G,\bar K^\times) = 0$ pour tout $q>0$.
+  \item $\h^q(G,F) = 0$ pour tout $G$-module de torsion $F$ et pour tout 
     $q\geqslant 2$.
 \end{enumerate}
 \end{proposition}
@@ -1568,7 +1580,7 @@ résultat.
 \begin{corollary}\label{3-2-4}
   Soient $k$ un corps algébriquement clos et $K$ une extension de degré 
 de transcendance $1$ de $k$. Alors les groupes de cohomologie étale 
-$H^q(\spec(K),\dG_m)$ sont nuls pour tout $q>0$. 
+$\h^q(\spec(K),\dG_m)$ sont nuls pour tout $q>0$. 
 \end{corollary}
 
 
@@ -1593,9 +1605,9 @@ cohomologie considérés sont les groupes des cohomologie étale.
 Soient $k$ un corps algébriquement clos et $X$ une courbe projective non 
 singulière connexe sur $k$. Alors on a:
 \begin{align*}
-  H^0(X,\dG_m) &= k^\times \text{,} \\
-  H^1(X,\dG_m) &= \pic(X) \text{,} \\
-  H^q(X,\dG_m) &= 0 \text{ pour $q\geqslant 2$.}
+  \h^0(X,\dG_m) &= k^\times \text{,} \\
+  \h^1(X,\dG_m) &= \pic(X) \text{,} \\
+  \h^q(X,\dG_m) &= 0 \text{ pour $q\geqslant 2$.}
 \end{align*}
 \end{proposition}
 
@@ -1630,7 +1642,7 @@ le corps des fractions de $\tilde\cO_{X,x}$, on a
 \[
   \spec(K) = \eta\times_X \spec(\tilde\cO_{X,x})\text{,}
 \]
-donc $(R^qj_*\dG_{m,\eta})_x = H^q(\spec(K),\dG_m)$. 
+donc $(R^qj_*\dG_{m,\eta})_x = \h^q(\spec(K),\dG_m)$. 
 
 Or $K$ est une extension algébrique de $k(X)$, donc une extension de degré 
 de transcendante $1$ de $k$: le lemme résulte de (\ref{3-2-4}). 
@@ -1640,13 +1652,13 @@ de transcendante $1$ de $k$: le lemme résulte de (\ref{3-2-4}).
 
 
 \begin{lemma}\label{3-3-3}
-On a $H^q(X, j_*\dG_{m,\eta}) = 0$ pour tout $q>0$.
+On a $\h^q(X, j_*\dG_{m,\eta}) = 0$ pour tout $q>0$.
 \end{lemma}
 
 En effet de (\ref{3-3-2}) et de la suite spectrale de Leray pour $j$, on 
 déduit:
 \[
-  H^q(X, j_* \dG_{m,\eta}) = H^q(\eta,\dG_{m,\eta})
+  \h^q(X, j_* \dG_{m,\eta}) = \h^q(\eta,\dG_{m,\eta})
 \]
 pour tout $q\geqslant 0$ et le deuxième membre est nul pour $q>0$ d'après 
 (\ref{3-2-4}). 
@@ -1656,13 +1668,13 @@ pour tout $q\geqslant 0$ et le deuxième membre est nul pour $q>0$ d'après
 
 
 \begin{lemma}\label{3-3-4}
-On a $H^q\left(X,\bigoplus_{x\in X} i_{x*} \dZ_x\right) = 0$ pour tout $q>0$. 
+On a $\h^q\left(X,\bigoplus_{x\in X} i_{x*} \dZ_x\right) = 0$ pour tout $q>0$. 
 \end{lemma}
 
 En effet pour tout point fermé de $X$, on a $R^q i_{x*}\dZ_x 0$ pour $q>0$, 
 car $i_x$ est un morphisme fini (\ref{2-3-6}), et 
 \[
-  H^q(X,i_{x*}\dZ_x) = H^q(x,\dZ_x)\text{.}
+  \h^q(X,i_{x*}\dZ_x) = \h^q(x,\dZ_x)\text{.}
 \]
 Le deuxième membre est nul pour tout $q>0$, car $x$ est la spectre d'un 
 corps algébriquement clos (On voit que le lemme est vrai plus 
@@ -1671,11 +1683,11 @@ généralement pour tout faisceau ``gratte-ciel'' sur $X$).
 On déduit des lemmes précédents et de la suite exacte (\ref{eq:2}) 
 les égalités:
 \[
-  H^q(X,\dG_m) = 0 \text{ pour $q\geqslant 2$,}
+  \h^q(X,\dG_m) = 0 \text{ pour $q\geqslant 2$,}
 \]
 et une suite exacte de cohomologie en bas degré:
 \[
-  1 \to H^0(X,\dG_m) \to H^0(X, j_*\dG_{m,\eta}) \to H^0\left(X,\bigoplus_{x\in X} i_{x*}\dZ_x\right) \to H^1(X,\dG_m) \to 1
+  1 \to \h^0(X,\dG_m) \to \h^0(X, j_*\dG_{m,\eta}) \to \h^0\left(X,\bigoplus_{x\in X} i_{x*}\dZ_x\right) \to \h^1(X,\dG_m) \to 1
 \]
 qui n'est autre que la suite exacte:
 \[
@@ -1691,13 +1703,13 @@ une valeur raisonnable:
 
 \begin{corollary}\label{3-3-5}
 Si $X$ est de genre $g$ et si $n$ est inversible dans $k$, les 
-$H^q(X,\dZ/n)$ sont nuls pour $q>2$, et libres sur $\dZ/n$ de rang $1,2 g,1$ 
+$\h^q(X,\dZ/n)$ sont nuls pour $q>2$, et libres sur $\dZ/n$ de rang $1,2 g,1$ 
 pour $q=0,1,2$. Remplaçant $\dZ/n$ par le groupe isomorphe $\dmu_n$, on a des 
 isomorphismes canoniques 
 \begin{align*}
-  H^0(X,\dmu_n) &= \dmu_n \\
-  H^1(X,\dmu_n) &= \pic^0(X)_n \\
-  H^2(X,\dmu_n) &= \dZ/n \text{.}
+  \h^0(X,\dmu_n) &= \dmu_n \\
+  \h^1(X,\dmu_n) &= \pic^0(X)_n \\
+  \h^2(X,\dmu_n) &= \dZ/n \text{.}
 \end{align*}
 \end{corollary}
 
@@ -1708,21 +1720,21 @@ canoniquement) à $\mu_n$. De la suite exacte de Kummer:
 \]
 et de la proposition (\ref{3-3-1}), on déduit les égalité:
 \[
-  H^q(X,\dZ/n) = 0 \text{ pour $q>2$,}
+  \h^q(X,\dZ/n) = 0 \text{ pour $q>2$,}
 \]
 et, en bas degré, des suites exactes:
 \[\xymatrix{
   0 \ar[r] 
-    & H^0(X,\dmu_n) \ar[r] 
+    & \h^0(X,\dmu_n) \ar[r] 
     & k^\times \ar[r]^-n 
     & k^\times \ar[r] 
     & 0
 }\]
 \[\xymatrix{
   0 \ar[r] 
-    & H^1(X,\dmu_n) \ar[r] 
+    & \h^1(X,\dmu_n) \ar[r] 
     & \pic(X) \ar[r]^-n 
-    & H^2(X,\dmu_n) \ar[r] 
+    & \h^2(X,\dmu_n) \ar[r] 
     & 0\text{.}
 }\]
 De plus on a une suite exacte:
@@ -1750,8 +1762,8 @@ d'obtenir en corollaire la
 Soient $k$ un corps algébriquement clos, $X$ une courbe algébrique sur $k$ 
 et $F$ un faisceau de torsion sur $X$. Alors:
 \begin{enumerate}[\indent i)]
-  \item On a $H^q(X,F) = 0$ pour $q>2$.
-  \item Si $X$ est affine, on a même $H^q(X,F) = 0$ pour $q>1$.
+  \item On a $\h^q(X,F) = 0$ pour $q>2$.
+  \item Si $X$ est affine, on a même $\h^q(X,F) = 0$ pour $q>1$.
 \end{enumerate}
 \end{proposition}
 
@@ -1899,7 +1911,7 @@ Ce chapitre est consacré à la démonstration et aux applications du
 Soient $f:X\to S$ un morphisme propre de schémas et $F$ un faisceau abélien 
 de torsion sur $X$. Alors, quel que soit $q\geqslant 0$, la fibre de 
 $R^q f_* F$ en un point géométrique $s$ de $S$ est isomorphe à la 
-cohomologie $H^q(X_s,F)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
+cohomologie $\h^q(X_s,F)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
 $s$. 
 \end{theorem}
 
@@ -1908,10 +1920,10 @@ signifie que la diagonale de $X\times_S X$ est fermée) entre espaces
 topologiques, et $F$ un faisceau abélien sur $X$, le résultat analogue est 
 bien connu, et élémentaire: comme $f$ est fermée, les $f^{-1}(V)$ pour 
 $V$ voisinage de $s$ forment un système fondamental de voisinages de $X_s$, et 
-on vérifie que $H^*(X_s,F) = \varinjlim_U H^*(U,F)$, pour $U$ parcourant les 
+on vérifie que $\h^*(X_s,F) = \varinjlim_U \h^*(U,F)$, pour $U$ parcourant les 
 voisinages de $X_s$. En pratique, $X_s$ a même un système fondamental 
 $\cU$ de voisinages $U$ dont il est rétracte par déformation et, pour $F$ 
-constant, on a donc $H^*(X_s,F)=H^*(U,F)$. En termes imagés: la fibre 
+constant, on a donc $\h^*(X_s,F)=\h^*(U,F)$. En termes imagés: la fibre 
 spéciale avale la fibre générale. 
 
 Dans le cas des schémas la démonstration est plus délicate et il est 
@@ -1927,7 +1939,7 @@ tenu de la description des fibres de $R^q f_* F$ (\ref{2-3-3}), le théorème
 Soient $A$ un anneau local strictement hensélien et $S=\spec(A)$. Soient 
 $f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors, pour 
 tout faisceau abélien de torsion $F$ sur $X$ et pour tout $q\geqslant 0$, on 
-a $H^q(X,F) \iso H^q(X_0,F)$. 
+a $\h^q(X,F) \iso \h^q(X_0,F)$. 
 \end{theorem} 
 
 Par passage à la limite on voit qu'il suffit de démontrer le théorème 
@@ -1999,7 +2011,7 @@ sous-jacent, l'application canonique
 \]
 est bijective pour tout $n$, ce qui achève la démonstration. 
 
-Puisque $H^1(X,\dZ/n)$ est en bijection avec l'ensemble des classes 
+Puisque $\h^1(X,\dZ/n)$ est en bijection avec l'ensemble des classes 
 d'isomorphisme de revêtements étales galoisiens de $X$ de groupe $\dZ/n$, 
 le théorème  pour $q=1$ et $F=\dZ/n$ résulte de la proposition suivante. 
 
@@ -2129,19 +2141,19 @@ $T(u)\alpha = 0$.
 
 
 \begin{lemma}\label{4-3-5}
-Les foncteurs $H^q(X,-)$ pour $q>0$ sont effaçables dans la catégorie des 
+Les foncteurs $\h^q(X,-)$ pour $q>0$ sont effaçables dans la catégorie des 
 faisceaux constructibles sur $X$.
 \end{lemma}
 
 Il suffit de remarquer que, si $F$ est un faisceau constructible, il existe 
 nécessairement un entier $n>0$ tel que $F$ soit un faisceau de 
 $\dZ/n$-modules. Alors il existe un monomorphisme $F\hookrightarrow G$, où 
-$G$ est un faisceau de $\dZ/n$-modules et $H^q(X,G) = 0$ pour tout $q>0$. On 
+$G$ est un faisceau de $\dZ/n$-modules et $\h^q(X,G) = 0$ pour tout $q>0$. On 
 peut par exemple prendre pour $G$ la résolution de Godement 
 $\prod_{x\in X} i_{x*} F_{\bar x}$, où $x$ parcourt les points de $X$ et 
 $i_x:\bar x\to X$ est un point géométrique centré en $X$. D'après 
 (\ref{4-3-3}) $G$ est limite inductive de faisceaux constructibles, d'o`u le 
-lemme, car les foncteurs $H^q(X,-)$ commutent aux limites inductives. 
+lemme, car les foncteurs $\h^q(X,-)$ commutent aux limites inductives. 
 
 
 
@@ -2175,21 +2187,21 @@ difficultés.
 Soit $X_0$ un sous-schéma de $X$. Supposons que, pour tout $n\geqslant 0$ et 
 pour tout schéma $X'$ fini sur $X$, l'application canonique 
 \[
-  H^q(X',\dZ/n) \to H^q(X_0',\dZ/n)\text{,}
+  \h^q(X',\dZ/n) \to \h^q(X_0',\dZ/n)\text{,}
 \]
 où $X_0' = X'\times_X X_0$, est bijective pour $q=0$ et surjective pour 
 $q>0$. Alors, pour tout faisceau de torsion $F$ sur $X$ et pour tout 
 $q\geqslant 0$, l'application canonique 
 \[
-  H^q(X,F) \to H^q(X_0,F)
+  \h^q(X,F) \to \h^q(X_0,F)
 \]
 est bijective.
 \end{proposition}
 
 Par passage à la limite, il suffit de démontrer l'assertion pour $F$ 
 constructible. On applique le lemme (\ref{4-3-6}) en prenant pour $\cC$ la 
-catégorie des faisceaux constructibles sur $X$, $T^q=H^q(X,-)$, 
-${T'}^q=H^q(X_0,-)$, et $\cE$ l'ensemble des faisceaux constructibles de la 
+catégorie des faisceaux constructibles sur $X$, $T^q=\h^q(X,-)$, 
+${T'}^q=\h^q(X_0,-)$, et $\cE$ l'ensemble des faisceaux constructibles de la 
 forme $\prod p_{i*} C_i$, où $p_i:X_i'\to X$ est un morphisme fini et $C_i$ 
 un faisceau constant fini sur $X_i'$. 
 
@@ -2203,6 +2215,98 @@ un faisceau constant fini sur $X_i'$.
 
 
 \subsection{Fin de la démonstration}\label{4-4}
+
+Par la méthode de fibration par des courbes (\ref{3-4-3}), on se ramène 
+à démontrer le théorème en dimension relative $\leqslant 1$. D'après 
+le paragraphe précédent, il suffira de montrer ue, si $S$ est le spectre 
+d'un anneau local noethérien strictement hensélien, $f:X\to S$ un 
+morphisme propre dont la fibre fermée $X_0$ est de dimension $\leqslant 1$ 
+et $n$ un entier $\geqslant 0$, l'homomorphisme canonique 
+\[
+  \h^q(X,\dZ/n) \to \h^q(X_0,\dZ/n)
+\]
+est bijectif pour $q=0$ et surjectif pour $q>0$. 
+
+Les cas $q=0$ et $1$ ont été vus plus haut et on a $\h^q(X_0,\dZ/n) = 0$ 
+pour $q\geqslant 3$; il suffit donc de traiter le cas $q=2$. On peut 
+évidemment supposer que $n$ est une puissance d'un nombre premier. Si 
+$n=p^r$, où $p$ est la charactéristique du corps résiduel de $S$, la 
+théorie d'Artin-Schreier montre qu'un a $\h^2(X_0,\dZ/p^r) = 0$. Si 
+$n=\ell^r$, $\ell\ne p$, on déduit de la théorie de Kummer un diagramme 
+commutatif 
+\[\xymatrix{
+  \pic(X) \ar[d] \ar[r]^-\alpha 
+    & \h^2(X,\dZ/\ell^r) \ar[d] \\
+  \pic(X_0) \ar[r]^-\beta 
+    & \h^2(X_0,\dZ/\ell^r)
+}\]
+où l'application $\beta$ est surjective (On l'a vu au chapitre \ref{3} pour 
+une courbe lisse sur un corps algébriquement clos, mais des arguments 
+similaires s'appliquent à n'importe quelle courbe sur un corps 
+séparablement clos). 
+
+Pour conclure, il suffira donc de montrer:
+
+
+
+
+
+\begin{proposition}\label{4-4-1}
+Soient $S$ le spectre d'un anneau local noethérien hensélien et $f:X\to S$ 
+un morphisme propre dont la fibre fermée $X_0$ est de dimension 
+$\leqslant 1$. Alors l'application canonique de restriction 
+\[
+  \pic(X)\to \pic(X_0)
+\]
+est surjective (Il suffit d'ailleurs que le morphisme $f$ soit 
+\emph{séparé} de type fini). 
+\end{proposition}
+
+Pour simplifier la démonstration, nous supposerons que $X$ est intègre, 
+bien que cela ne soit pas nécessaire. Tout faisceau inversible sur $X_0$ est 
+associé à un diviseur de Cartier (car $X_0$ est une courbe, donc 
+quasi-projectif), il suffit donc de montrer que l'application canonique 
+$\Div(X)\to\Div(X_0)$ est surjective. 
+
+Tout diviseur sur $X_0$ est combinaison linéaire de diviseurs dont le 
+support est concentré en un seul point fermé non isolé de $X_0$. Soient 
+$x$ un tel point, $t_0\in\cO_{X_0,x}$ un élément régulier non inversible 
+de $\cO_{X_0,x}$ et $D_0$ le diviseur concentré en $x$ d'équation locale 
+$t_0$. Soit $U$ un voisinage ouvert de $x$ dans $X$ tel u'il existe un section 
+$t\in \Gamma(U,\cO_U)$ relevant $t_0$. Soit $Y$ le fermé de $U$ d'équation 
+$t=0$; quitte à prendre $U$ assez petit, on peut supposer que $x$ est le 
+seul point de $Y\cap X_0$. Alors $Y$ est quasi-fini au-dessus de $S$ en $x$; 
+puisque $S$ est le spectre d'un anneau local hensélien, on en déduit que 
+$Y=Y_1\amalg Y_2$, où $Y_1$ est fini sur $S$ et où $Y_2$ ne rencontre pas 
+$X_0$. De plus, comme $X$ est séparé sur $S$, $Y_1$ est fermé dans $X$. 
+
+Quitte à remplacer $U$ par un voisinage ouvert plus petit de $x$, on peut 
+supposer que $Y=Y_1$, autrement dit que $Y$ est fermé dans $X$. On définit 
+alors un diviseur $D$ sur $X$ relevant $D_0$ en posant $D|X-Y=0$ et 
+$D|U=\dv(t)$ ce qui a un sens car $t$ est inversible sur $U\setminus Y$. 
+
+
+
+
+
+\subsubsection{Remarque}\label{4-4-2}
+
+Dans le cas où $f$ est propre, on pourrait aussi faire une démonstration 
+du m\^eme style que celle de la proposition (\ref{4-2-2}). En effet, comme 
+$X_0$ est une courbe, il n'y a pas d'obstruction à relever un faisceau 
+inversible sur $X_0$ aux voisinages infinitésimaux $X_n$ de $X_0$, donc au 
+complété formel $\fX$ de $X$ le long de $X_0$. On conclut alors en 
+appliquant successivement le théorème d'existence de Grothendieck et le 
+théorème dapproximation d'Artin. 
+
+
+
+
+
+
+
+
+
 
 \subsection{Cohomologie à support propre}\label{4-5}
 
