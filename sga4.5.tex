@@ -2310,7 +2310,159 @@ théorème dapproximation d'Artin.
 
 \subsection{Cohomologie à support propre}\label{4-5}
 
+
+
+
+
+\begin{definition}\label{4-5-1}
+Soit $X$ un sch\'ema s\'epar\'e de type fini sur un corps $k$. D'apr\`es un 
+th\'eor\`eme de Nagata, il existe un sch\'ema $\bar X$ propre sur $k$ et une 
+immersion ouverte $j:X\to\bar X$. Pour tout faisceau de torsion $F$ sur $X$ on 
+note $j_! F$ le prolongement par $0$ de $F$ \`a $\bar X$ et on d\'efinit les 
+groupes de \emph{cohomologie \`a support propre} 
+\[
+  \h_c^q(X,F)=\h^q(\bar X, j_! F) \text{.}
+\]
+\end{definition}
+
+Montrons que cette d\'efinition est ind\'ependante de la compactification 
+$j:X\to\bar X$ choisie. Soient $j_1:X\to \bar X_1$ et $j_2:X\to \bar X_2$ deux 
+compactifications. Alors $X$ s'envoie dans $\bar X_1\times \bar X_2$ par 
+$x\mapsto (j_1(x),j_2(x))$ et l'image ferm\'ee $\bar X_3$ de $X$ par cette 
+application est une compactification de $X$. On a ainsi un diagramme commutatif 
+\[\xymatrix{
+  & \bar X_1 \\
+  X \ar[ur]^-{j_1} \ar[rr]^-{(j_1,j_2)} \ar[dr]_-{j_2} 
+    & & \bar X_3 \ar[ul]_-{p_1} \ar[dl]^-{p_2} \\
+  & \bar X_2
+}\]
+o\`u $p_1$ et $p_2$, les restrictions des projections naturelles \`a 
+$\bar X_3$, sont des morphismes propres. Il suffit donc de traiter le cas o\`u 
+on a un diagramme commutatif 
+\[\xymatrix{
+  X \ar[r]^-{j_2} \ar[dr]_-{j_1} 
+    & \bar X_2 \ar[d]^-p \\
+  & \bar X_1
+}\]
+avec $p$ un morphisme propre. 
+
+
+
+
+
+\begin{lemma}\label{4-5-2}
+On a $p_*(j_{2!} F) = j_{1!} F$ et $R^q p_*(j_{2!} F) = 0$, pour $q>0$. 
+\end{lemma}
+
+Notons tout de suite que lemme suffit pour conclure. En utilisant la suite 
+spectrale de Leray du morphisme $p$, on en d\'eduit qu'on a, pour tout 
+$q\geqslant 0$, 
+\[
+  \h^q(\bar X_2, j_{2!} F) = \h^q(\bar X_1, j_{1!} F) \text{.}
+\]
+
+Pour d\'emontrer le lemme, on raisonne fibre par fibre en utilisant le th\'eor\`eme 
+de changement de base (\ref{4-1-1}) pour $p$. Le r\'esultat est imm\'ediat, car, 
+au-dessus d'un point de $X$, $p$ est un isomorphe et, au-dessus d'un point de 
+$\bar X_1\setminus X$, $j_{2!} F$ est nul sur la fibre de $p$. 
+
+
+
+
+
+\subsubsection{}\label{4-5-3}
+
+De m\^eme, si $f:X\to S$ est un morphisme s\'epar\'e de type fini de sch\'emas 
+noeth\'eriens, il existe un morphisme propre $\bar f:\bar X\to S$ et un 
+immersion ouverte $j:X\to \bar X$. On d\'efinit alors les images directes s
+sup\'erieures \`a support propre $R^q f_!$ en posant pour tout faisceau de 
+torsion $F$ sur $X$
+\[
+  R^q f_! F = R^q f_*(j_! F) \text{.}
+\]
+On v\'erifie comme pr\'ec\'edemment que cette d\'efinition est ind\'ependante de 
+la compactification choisie. 
+
+
+
+
+
+\begin{theorem}\label{4-5-4}
+Soient $f:X\to S$ un morphisme s\'epar\'e de type fini de sch\'emas noeth\'eriens 
+et $F$ un faisceau de torsion sur $X$. Alors la fibre de $R^q f_! F$ en un 
+point g\'eom\'etrique $s$ de $S$ est isomorphe \`a la cohomologie \`a support 
+propre $\h_c^q(X_s,F)$ de la fibre $X_s$ de $f$ en $s$. 
+\end{theorem}
+
+C'est une simple variante du th\'eor\`eme de changement de base pour un morphisme 
+propre (\ref{4-1-1}). Plus g\'en\'eralement, si 
+\[\xymatrix{
+  X \ar[d]^-f
+    & X' \ar[l]_-{g'} \ar[d]^-{f'} \\
+  S 
+    & S' \ar[l]^-g
+}\]
+est un diagramme cart\'esien, on a un isomorphe canonique 
+\begin{equation}\label{eq:3}
+  g^* (R^q f_! F) \simeq R^q f_!'({g'}^* F) \text{.}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
 \subsection{Applications}\label{4-6}
+
+
+
+
+
+\begin{theorem}[d'annulation]\label{4-6-1}
+Soient $f:X\to S$ un morphisme s\'epar\'e de type fini dont les fibres sont de 
+dimension $\leqslant n$ et $F$ un faisceau de torsion sur $X$. Alors on a 
+$R^q f_! F = 0$ pour $q>2 n$. 
+\end{theorem}
+
+D'apr\`es le th\'eor\`eme de changement de base, on peut supposer que $S$ est 
+le spectre d'un corps s\'eparablement clos. Si $\dim X = n$, il existe un 
+ouvert affine $U$ de $X$ tel que $\dim(X\setminus U) < n$; on a alors un suite 
+exacte $0\to F_U \to F \to F_{X\setminus U} \to 0$ et, par r\'ecurrence sur $n$, 
+il suffit de d\'emontrer le th\'eor\`eme pour $X=U$ affine. Puis la m\'ethode de 
+fibration par des courbes (\ref{3-4-1}) et le th\'eor\`eme de changement de 
+base permettent de se ramener \`a une courbe sur un corps s\'eparablement clos 
+pour lequelle on d\'eduit le r\'esultat voulu du th\'eor\`eme de Tsen 
+(\ref{3-3-6}). 
+
+
+
+
+
+\begin{theorem}[de finitude]\label{4-6-2}
+Soient $f:X\to S$ un morphisme s\'epar\'e de type fini et $F$ un faisceau 
+constructible sur $X$. Alors les faisceaux $R^q f_! F$ sont constructibles. 
+\end{theorem}
+
+Nous ne consid\'erons que le cas o\`u $F$ est annul\'e par un entier inversible 
+sur $X$. 
+
+Par d\'emontrer le th\'eor\`eme on s\'e ram\`ene au cas o`u $F$ est un faisceau 
+constant $\const{\dZ/n}$ et o\`u $f:X\to S$ est un morphisme propre et lisse 
+dont les fibres sont des courbes g\'eom\'etriquement connexes de genre $g$. 
+Pour $n$ inversible sur $X$, les faisceaux $R^q f_* F$ sont alors localement 
+libres de rang fini, nuls pour $q>2$ (\ref{4-6-1}). Remplacant $\dZ/n$ par le 
+faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement 
+\begin{equation}\label{eq:4}
+\begin{aligned}
+  R^0 f_* \dmu_n &= \dmu_n \\
+  R^1 f_* \dmu_n &= \const\pic(X/S)_n \\
+  R^2 f_* \dmu_n &= \dZ/n \text{.}
+\end{aligned}
+\end{equation}
 
 
 
