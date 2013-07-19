@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[all]{xy}
 \usepackage[stable]{footmisc}
-\usepackage{amsmath,amssymb,amsthm,enumerate,fullpage} %,titlesec} to have inline subsubsections
+\usepackage{amsmath,amssymb,amsthm,enumerate,fullpage,mathrsfs} %,titlesec} to have inline subsubsections
 \usepackage[colorlinks,backref=page]{hyperref}
 
 
@@ -27,15 +27,12 @@
 
 
 % special characters
-  \newcommand{\cC}{\mathcal{C}}
-  \newcommand{\cE}{\mathcal{E}}
   \newcommand{\cF}{\mathcal{F}}
   \newcommand{\cG}{\mathcal{G}}
   \newcommand{\cH}{\mathcal{H}}
   \newcommand{\cL}{\mathcal{L}}
   \newcommand{\cO}{\mathcal{O}}
-  \newcommand{\cS}{\mathcal{S}}
-  \newcommand{\cU}{\mathcal{U}}
+  \newcommand{\cT}{\mathcal{T}}
 
   \newcommand{\dC}{\mathbb{C}}
   \newcommand{\dG}{\mathbb{G}}
@@ -49,6 +46,11 @@
   \newcommand{\fm}{\mathfrak{m}}
   \newcommand{\fr}{\mathfrak{r}}
   \newcommand{\fX}{\mathfrak{X}}
+  
+  \newcommand{\sC}{\mathscr{C}}
+  \newcommand{\sE}{\mathscr{E}}
+  \newcommand{\sS}{\mathscr{S}}
+  \newcommand{\sU}{\mathscr{U}}
 
 
 % miscelaneous
@@ -73,7 +75,7 @@
 
 
 \title{Séminaire de Géométrie Algébrique du Bois-Marie SGA $4\frac 1 2$}
-\author{par P. Deligne ave la collaboration de J.F. Boutot, A. Grothendieck, L. Illusie et J.L. Verdier}
+\author{par P. Deligne ave la collaboration de J.F. Boutot, \\ A. Grothendieck, L. Illusie et J.L. Verdier}
 \date{1977}
 
 
@@ -232,8 +234,8 @@ locale; autrement dit, si $f$ est continue sur tout ouvert suffisamment petit
 de $X$, $f$ est continue sur $X$ tout entier. Pour formaliser la notion de 
 ``propriété de nature locale,'' nous introduirons quelques définitions.
 
-On dit qu'un ensemble $\cU$ d'ouverts de $X$ est un \emph{crible} si pour tout 
-$U\in\cU$ et $V\subset U$, on a $V\in\cU$. On dit qu'un crible est 
+On dit qu'un ensemble $\sU$ d'ouverts de $X$ est un \emph{crible} si pour tout 
+$U\in\sU$ et $V\subset U$, on a $V\in\sU$. On dit qu'un crible est 
 \emph{couvrant} si la réunion de tout les ouverts appartenant à ce crible est 
 égale à $X$.
 
@@ -242,8 +244,8 @@ $\{U_i\}$ est par définition l'ensemble des ouverts $U$ de $X$ tels que $U$
 soit contenu dans l'un des $U_i$. 
 
 On dit qu'une propriété $P(U)$, définie pour tout ouvert $U$ de $X$, est 
-\emph{locale} si, pour tout crible couvrant $\cU$ de tout ouvert $U$ de $X$, 
-$P(U)$ est vraie si et seulement si $P(V)$ est vraie pour tout $V\in \cU$. Par 
+\emph{locale} si, pour tout crible couvrant $\sU$ de tout ouvert $U$ de $X$, 
+$P(U)$ est vraie si et seulement si $P(V)$ est vraie pour tout $V\in \sU$. Par 
 exemple, étant donné $f:X\to \dR$, la propriété ``$f$ est continue sur $U$'' 
 est locale. 
 
@@ -261,8 +263,8 @@ Précisons la notion de fonction donnée localement sur $X$.
 
 \subsubsection{Point de vue des cribles}\label{1-2-1}
 
-Soit $\cU$ un crible d'ouverts de $X$. On appelle fonction donnée 
-$\cU$-localement sur $X$ la donnée pour tout $U\in \cU$ d'une fonction $f_U$ 
+Soit $\sU$ un crible d'ouverts de $X$. On appelle fonction donnée 
+$\sU$-localement sur $X$ la donnée pour tout $U\in \sU$ d'une fonction $f_U$ 
 sur $U$ telle que, si $V\subset U$, on ait $f_V=f_U|V$. 
 
 
@@ -271,11 +273,11 @@ sur $U$ telle que, si $V\subset U$, on ait $f_V=f_U|V$.
 
 \subsubsection{Pointe de vue de Čech}\label{1-2-2}
 
-Si le crible $\cU$ est engendré par une famille d'ouverts $U_i$ de $X$, se 
-donner une fonction $\cU$-localement revient à se donner une fonction $f_i$ 
+Si le crible $\sU$ est engendré par une famille d'ouverts $U_i$ de $X$, se 
+donner une fonction $\sU$-localement revient à se donner une fonction $f_i$ 
 sur chaque $U_i$, telle que $f_i|{U_i\cap U_j} = f_j|{U_i\cap U_j}$. 
 
-Autrement dit, si $Z=\coprod U_i$, se donner une fonction $\cU$-localement 
+Autrement dit, si $Z=\coprod U_i$, se donner une fonction $\sU$-localement 
 revient à se donner une fonction sur $Z$ qui soit constante sur les fibres de 
 la projection naturelle $Z\to X$. 
 
@@ -286,10 +288,10 @@ la projection naturelle $Z\to X$.
 \subsubsection{}\label{1-2-3}
 
 Les fonctions continues forment un faisceau; cela signifie que pour tout crible 
-couvrant $\cU$ d'un ouvert $V$ de $X$ et toute fonction donnée 
-$\cU$-localement $\{f_U\}$ telle que chaque $f_U$ soit continue sur $U$, il 
+couvrant $\sU$ d'un ouvert $V$ de $X$ et toute fonction donnée 
+$\sU$-localement $\{f_U\}$ telle que chaque $f_U$ soit continue sur $U$, il 
 existe une unique fonction continue $f$ sur $V$ telle que $f|U=f_U$ pour tout 
-$U\in \cU$.
+$U\in \sU$.
 
 
 
@@ -310,10 +312,10 @@ Précisons maintenant la notion de fibré vectoriel donné localement sur $X$.
 
 \subsubsection{Point de vue des cribles}\label{1-3-1}
 
-Soit $\cU$ un crible d'ouverts de $X$. On appelle fibré vectoriel donné 
-$\cU$-localement sur $X$ les données de 
+Soit $\sU$ un crible d'ouverts de $X$. On appelle fibré vectoriel donné 
+$\sU$-localement sur $X$ les données de 
 \begin{enumerate}[\indent a)]
-  \item un fibré vectoriel $E_U$ sur chaque $U\in \cU$, 
+  \item un fibré vectoriel $E_U$ sur chaque $U\in \sU$, 
   \item si $V\subset U$, un isomorphisme $\rho_{U,V} : E_V\iso E_U|V$, vérifiant 
   \item si $W\subset V\subset U$, le diagramme 
     \[\xymatrix{
@@ -331,8 +333,8 @@ $\cU$-localement sur $X$ les données de
 
 \subsubsection{Point de vue de Čech}\label{1-3-2}
 
-Si le crible $\cU$ est engendré par une famille d'ouverts $U_i$ de $X$, se 
-donner un fibré vectoriel $\cU$-localement revient à se donner:
+Si le crible $\sU$ est engendré par une famille d'ouverts $U_i$ de $X$, se 
+donner un fibré vectoriel $\sU$-localement revient à se donner:
 \begin{enumerate}[\indent a)]
   \item un fibré vectoriel $E_i$ sur chaque $U_i$, 
   \item si $U_{ij} = U_i\cap U_j = U_i\times_X U_j$, un isomorphisme 
@@ -348,7 +350,7 @@ donner un fibré vectoriel $\cU$-localement revient à se donner:
 \end{enumerate}
 
 Autrement dit, si $Z=\coprod U_i$ et si $\pi:Z\to X$ est la projection 
-naturelle, se donner un fibré vectoriel $\cU$-localement revient à se donner: 
+naturelle, se donner un fibré vectoriel $\sU$-localement revient à se donner: 
 \begin{enumerate}[\indent a)]
   \item un fibré vectoriel $E$ sur $Z$, 
   \item si $x$ et $y$ sont deux points de $Z$ tels que $\pi(x) = \pi(y)$, un 
@@ -365,11 +367,11 @@ naturelle, se donner un fibré vectoriel $\cU$-localement revient à se donner:
 \subsubsection{}\label{1-3-3}
 
 Une fibré vectoriel $E$ sur $X$ définit un fibré vectoriel donné 
-$\cU$-localement $E_\cU$; le système des restrictions $E_U$ de $E$ aux objets 
-de $\cU$. Le fait que la notion de fibré vectoriel est de nature locale peut 
-s'exprimer ainsi: pour tout crible couvrant $\cU$ de $X$, le foncteur 
-$E\mapsto E_\cU$, des fibrés vectoriels sur $X$ dans les fibrés vectoriels 
-donnés $\cU$-localement, est une équivalence de catégories. 
+$\sU$-localement $E_\sU$; le système des restrictions $E_U$ de $E$ aux objets 
+de $\sU$. Le fait que la notion de fibré vectoriel est de nature locale peut 
+s'exprimer ainsi: pour tout crible couvrant $\sU$ de $X$, le foncteur 
+$E\mapsto E_\sU$, des fibrés vectoriels sur $X$ dans les fibrés vectoriels 
+donnés $\sU$-localement, est une équivalence de catégories. 
 
 
 
@@ -380,9 +382,9 @@ donnés $\cU$-localement, est une équivalence de catégories.
 Si dans \ref{1} on remplace ``ouvert de $X$'' par ``partie de 
 $X$,'' on obtient la notion de crible de sous-espaces de $X$. Dans ce cadre 
 aussi on dispose de théorèmes de recollement. Par exemple: soient $X$ un 
-espace et $\cC$ un crible de sous-espaces de $X$ engendré par un recouvrement 
-fermé localement fini de $X$, alors le foncteur $E\mapsto E_\cC$, des fibrés 
-vectoriels sur $X$ dans les fibrés vectoriels donnés $\cC$-localement est une 
+espace et $\sC$ un crible de sous-espaces de $X$ engendré par un recouvrement 
+fermé localement fini de $X$, alors le foncteur $E\mapsto E_\sC$, des fibrés 
+vectoriels sur $X$ dans les fibrés vectoriels donnés $\sC$-localement est une 
 équivalence de catégories. 
 
 En géométrie algébrique, il est utile de considérer aussi des ``cribles 
@@ -453,12 +455,12 @@ et le rang se teste par extension des scalaires à des corps.
 
 \subsubsection{}\label{1-4-3}
 
-Soient $X$ un schéma et $\cS$ une classe de $X$-schémas stable par produit 
-fibré sur $X$. Une classe $\cU\subset \cS$ est un \emph{crible} sur $X$ 
-(relativement à $\cS$) si, pour tout morphisme $\varphi:V\to U$ de 
-$X$-schémas, avec $U,V\in \cS$ et $U\in\cU$, on a $V\in \cU$. Le crible 
-\emph{engendré} par une famille $\{U_i\}$ de $X$-schémas dans $\cS$ est la 
-classe des $V\in\cS$ tels qu'il existe un morphisme de $X$-schémas de $V$ dans 
+Soient $X$ un schéma et $\sS$ une classe de $X$-schémas stable par produit 
+fibré sur $X$. Une classe $\sU\subset \sS$ est un \emph{crible} sur $X$ 
+(relativement à $\sS$) si, pour tout morphisme $\varphi:V\to U$ de 
+$X$-schémas, avec $U,V\in \sS$ et $U\in\sU$, on a $V\in \sU$. Le crible 
+\emph{engendré} par une famille $\{U_i\}$ de $X$-schémas dans $\sS$ est la 
+classe des $V\in\sS$ tels qu'il existe un morphisme de $X$-schémas de $V$ dans 
 l'un des $U_i$. 
 
 
@@ -468,14 +470,14 @@ l'un des $U_i$.
 
 \subsubsection{}\label{1-4-4}
 
-Soit $\cU$ un crible sur $X$. On appelle module quasi-cohérent donné 
-$\cU$-localement sur $X$ la donnée de 
+Soit $\sU$ un crible sur $X$. On appelle module quasi-cohérent donné 
+$\sU$-localement sur $X$ la donnée de 
 \begin{enumerate}[\indent a)]
-  \item un module quasi-cohérent $E_U$ sur chaque $U\in\cU$, 
-  \item pour tout $U\in\cU$ et pour tout morphisme $\varphi:V\to U$ de 
-    $X$-schémas dans $\cS$, un isomorphisme 
+  \item un module quasi-cohérent $E_U$ sur chaque $U\in\sU$, 
+  \item pour tout $U\in\sU$ et pour tout morphisme $\varphi:V\to U$ de 
+    $X$-schémas dans $\sS$, un isomorphisme 
     $\rho_\varphi:E_V\iso \varphi^* E_U$, ceux-ci étant tels que 
-  \item si $\psi:W\to V$ est un morphisme de $X$-schémas dans $\cS$, le 
+  \item si $\psi:W\to V$ est un morphisme de $X$-schémas dans $\sS$, le 
     diagramme 
     \[\xymatrix{
       E_W \ar[r]^-{\rho_{\varphi\circ\psi}} \ar[dr]_-{\rho_\psi} 
@@ -486,29 +488,29 @@ $\cU$-localement sur $X$ la donnée de
     $\rho_{\varphi\circ\psi}=(\psi^*\rho_\varphi)\circ \rho_\psi$. 
 \end{enumerate}
 
-Si $E$ est un module quasi-cohérent sur $X$, on note $E_\cU$ le module 
-donné $\cU$-localement valant $\varphi_U^* E$ sur $\varphi:U\to X$ et tel que, 
+Si $E$ est un module quasi-cohérent sur $X$, on note $E_\sU$ le module 
+donné $\sU$-localement valant $\varphi_U^* E$ sur $\varphi:U\to X$ et tel que, 
 pour tout morphisme $\psi:V\to U$ l'isomorphisme de restriction $\rho_\psi$ 
 soit l'isomorphisme canonique 
 $E_V=(\varphi_U\circ \psi)^* E\iso \psi^* \varphi_U^* E = \psi^* E_U$. 
 
 
 \begin{theorem}\label{1-4-5}
-Soit $\{U_i\}\in\cS$ une famille finie de $X$-schémas plats sur $X$ telle que 
-$X$ soit le réunion des images des $U_i$, et soit $\cU$ le crible engendré par 
-$\{U_i\}$. Alors le foncteur $E\mapsto E_\cU$ est une équivalence de la 
+Soit $\{U_i\}\in\sS$ une famille finie de $X$-schémas plats sur $X$ telle que 
+$X$ soit le réunion des images des $U_i$, et soit $\sU$ le crible engendré par 
+$\{U_i\}$. Alors le foncteur $E\mapsto E_\sU$ est une équivalence de la 
 catégorie des modules quasi-cohérents sur $X$ avec la catégorie des modules 
-quasi-cohérents donnés $\cU$-localement.
+quasi-cohérents donnés $\sU$-localement.
 \end{theorem}
 \begin{proof}
-Nous ne traiterons que le cas où $x$ est affine et où $\cU$ est engendré par 
+Nous ne traiterons que le cas où $x$ est affine et où $\sU$ est engendré par 
 un $X$-schéma affine $U$ fidèlement plat sur $X$. La réduction à ce cas est 
 formelle. On pose $X=\spec(A)$ et $U=\spec(B)$. 
 
-Si le morphisme $U\to X$ admet une section, $X$ appartient au crible $\cU$ et 
+Si le morphisme $U\to X$ admet une section, $X$ appartient au crible $\sU$ et 
 l'assertion est évidente. Nous nous réduirons à ce cas. 
 
-Un module quasi-cohérent donné $\cU$-localement définit des modules $M'$, $M''$ 
+Un module quasi-cohérent donné $\sU$-localement définit des modules $M'$, $M''$ 
 et $M'''$ sur $U$, $U\times_X U$ et $U\times_X U\times_X U$, et des 
 isomorphismes $\rho:p^* M^\bullet\simeq M^\bullet$ pour tout morphisme de 
 projection $p$ entre ces espaces; c'est là un \emph{diagramme cartésien} 
@@ -523,13 +525,13 @@ au-dessus de
     & U\times_X U \ar@<2pt>[l] \ar@<-2pt>[l] 
     & U\times_X U\times_X U \ar[l] \ar@<4pt>[l] \ar@<-4pt>[l] \mbox{.}
 }\]
-Réciproquement $M^*$ détermine le module donné $\cU$-localement: pour 
-$V\in\cU$, il existe $\varphi:V\to U$ et on pose $M_U=\varphi^* M'$; 
+Réciproquement $M^*$ détermine le module donné $\sU$-localement: pour 
+$V\in\sU$, il existe $\varphi:V\to U$ et on pose $M_U=\varphi^* M'$; 
 pour $\varphi_1,\varphi_2:V\to U$, on a une identification naturelle 
 $\varphi_1^* M'\simeq (\varphi_1\times \varphi_2)^* M'' \simeq \varphi_2^* M'$, 
 et on voit en utilisant $M'''$ ue ces identifications sont compatibles, de 
 sorte que la définition est légitime. Bref, il revient au même de se donner un 
-module $\cU$-localement ou un diagramme $M^*$ cartésien sur $U_*$. 
+module $\sU$-localement ou un diagramme $M^*$ cartésien sur $U_*$. 
 
 Traduisons en termes algébriques: se donner $M^*$ revient à se donner un 
 diagramme cartésien de modules 
@@ -551,7 +553,7 @@ $\partial_i:M'\otimes_{B,\partial_i}(B\otimes_A B)\to M''$ et
 $M'''\otimes_{B\otimes_A B,\partial_i}(B\otimes_A B\otimes_A B)\to M'''$ sont 
 des isomorphismes). 
 
-Le foncteur $E\mapsto E_\cU$ devient le foncteur qui, à un $A$-module $M$, 
+Le foncteur $E\mapsto E_\sU$ devient le foncteur qui, à un $A$-module $M$, 
 associe 
 \[\xymatrix{
   M^* = (M\otimes_A B \ar@<2pt>[r] \ar@<-2pt>[r] 
@@ -666,19 +668,19 @@ et celui des schémas.
 
 \subsubsection{}\label{1-6-1}
 
-Soient $\cS$ une catégorie et $U$ un objet de $\cS$. On appelle \emph{crible} 
-sur $U$ un sous-ensemble $\cU$ de $\ob(\cS/U)$ tel que si $\varphi:V\to U$ 
-appartient à $\cU$ et si $\psi:W\to V$ est un morphisme dans $\cS$, alors 
-$\varphi\circ\psi:W\to U$ appartient à $\cU$. 
+Soient $\sS$ une catégorie et $U$ un objet de $\sS$. On appelle \emph{crible} 
+sur $U$ un sous-ensemble $\sU$ de $\ob(\sS/U)$ tel que si $\varphi:V\to U$ 
+appartient à $\sU$ et si $\psi:W\to V$ est un morphisme dans $\sS$, alors 
+$\varphi\circ\psi:W\to U$ appartient à $\sU$. 
 
 Si $\{\varphi_i:U_i\to U\}$ est une famille de morphismes, le crible 
 engendré par les $U_i$ est par définition l'ensemble des morphismes 
 $\varphi:V\to U$ qui se factorisent à travers l'un des $\varphi_i$. 
 
-Si $\cU$ est un crible sur $U$ et si $\varphi:V\to U$ est un morphisme, la 
-restriction $\cU_V$ de $\cU$ à $V$ est par définition le crible sur $V$ 
+Si $\sU$ est un crible sur $U$ et si $\varphi:V\to U$ est un morphisme, la 
+restriction $\sU_V$ de $\sU$ à $V$ est par définition le crible sur $V$ 
 constitué oar les morphismes $\psi:w\to V$ tels que 
-$\varphi\circ\psi:W\to U$ appartienne à $\cU$.
+$\varphi\circ\psi:W\to U$ appartienne à $\sU$.
 
 
 
@@ -686,18 +688,18 @@ $\varphi\circ\psi:W\to U$ appartienne à $\cU$.
 
 \subsubsection{}\label{1-6-2}
 
-La donnée d'une \emph{topologie de Grothendieck} sur $\cS$ consiste en la 
-donnée pour tout objet $U$ de $\cS$ d'un ensemble $C(U)$ de cribles sur $U$, 
+La donnée d'une \emph{topologie de Grothendieck} sur $\sS$ consiste en la 
+donnée pour tout objet $U$ de $\sS$ d'un ensemble $C(U)$ de cribles sur $U$, 
 dits cribles couvrants, de telle sorte que les axiomes suivants soient 
 satisfaits:
 \begin{enumerate}[\indent a)]
   \item Le crible engendré par l'identité de $U$ est couvrant.
-  \item Si $\cU$ est un crible couvrant sur $U$ et si $V\to U$ est un 
-    morphisme, le crible $\cU_V$ est couvrant.
-  \item Un crible localement couvrant est couvrant. Autrement dit, si $\cU$ est 
-    un crible couvrant sur $U$ et si $\cU'$ est un crible sur $U$ tel que, pour 
-    tout $V\to U$ appartenant à $\cU$, le crible $\cU_V'$ est couvrant, alors 
-    $\cU'$ est couvrant.
+  \item Si $\sU$ est un crible couvrant sur $U$ et si $V\to U$ est un 
+    morphisme, le crible $\sU_V$ est couvrant.
+  \item Un crible localement couvrant est couvrant. Autrement dit, si $\sU$ est 
+    un crible couvrant sur $U$ et si $\sU'$ est un crible sur $U$ tel que, pour 
+    tout $V\to U$ appartenant à $\sU$, le crible $\sU_V'$ est couvrant, alors 
+    $\sU'$ est couvrant.
 \end{enumerate}
 
 On appelle \emph{site} la donnée d'une catégorie munie d'une topologie de 
@@ -709,29 +711,29 @@ Grothendieck.
 
 \subsubsection{}\label{1-6-3}
 
-Étant donnée un site $\cS$, on appelle préfaisceau sur $\cS$ un foncteur 
-contravariant $\cF$ de $\cS$ dans la catégorie des ensembles. Pour tout 
-objet $U$ de $\cS$, on appelle section de $\cF$ au-dessus de $U$ les 
+Étant donnée un site $\sS$, on appelle préfaisceau sur $\sS$ un foncteur 
+contravariant $\cF$ de $\sS$ dans la catégorie des ensembles. Pour tout 
+objet $U$ de $\sS$, on appelle section de $\cF$ au-dessus de $U$ les 
 éléments de $\cF(U)$. Pour tout morphisme $V\to U$ et pour tout 
 $s\in \cF(U)$, on note $s|V$ ($s$ restreint à $V$) l'image de $s$ dans 
 $\cF(V)$.
 
-Si $\cU$ est un crible sur $U$, on appelle section donnée $\cU$-localement la 
-donnée, pour tout $V\to U$ appartenant à $\cU$, d'une section 
+Si $\sU$ est un crible sur $U$, on appelle section donnée $\sU$-localement la 
+donnée, pour tout $V\to U$ appartenant à $\sU$, d'une section 
 $s_V\in\cF(V)$ telle que, pour tout morphisme $W\to V$, on sit $s_V|W=s_W$. On 
-dit que $\cF$ est un \emph{faisceau} si, pour tout objet $U$ de $\cS$, pour 
-tout crible couvrant $\cU$ sur $U$ et pour tout section donnée 
-$\cU$-localement $\{s_V\}$, il existe une unique section $s\in\cF(U)$ telle que 
-$s|V=s_V$, pour tout $V\to U$ appartenant à $\cU$. 
+dit que $\cF$ est un \emph{faisceau} si, pour tout objet $U$ de $\sS$, pour 
+tout crible couvrant $\sU$ sur $U$ et pour tout section donnée 
+$\sU$-localement $\{s_V\}$, il existe une unique section $s\in\cF(U)$ telle que 
+$s|V=s_V$, pour tout $V\to U$ appartenant à $\sU$. 
 
 On définit de manière analogue les \emph{faisceaux abéliens} en 
 remplaçant la catégorie des ensembles par celle des groupes abéliens. On 
-montre que la catégorie des faisceaux abéliens sur $\cS$ est une 
+montre que la catégorie des faisceaux abéliens sur $\sS$ est une 
 catégorie abélienne possédant suffisamment d'injectifs. Une suite 
 $\cF\xrightarrow f \cG\xrightarrow g \cH$ de faisceaux est exacte si, pour 
-tout objet $U$ de $\cS$, et pour tout $s\in \cG(U)$ telle que $g(s)=0$, 
+tout objet $U$ de $\sS$, et pour tout $s\in \cG(U)$ telle que $g(s)=0$, 
 il existe localement $t$ tel que $f(t)=s$; i.e. s'il existe un crible couvrant 
-$\cU$ sur $U$ et pour tout $V\in\cU$, une section $t_V$ de $\cF$ sur $V$ telle 
+$\sU$ sur $U$ et pour tout $V\in\sU$, une section $t_V$ de $\cF$ sur $V$ telle 
 que $f(t_V)=s|V$. 
 
 
@@ -743,15 +745,15 @@ que $f(t_V)=s|V$.
 Nous en avons vu deux plus haut. 
 
 \begin{enumerate}[\indent a)]
-  \item Soient $X$ un espace topologique et $\cS$ la catégorie dont les objets 
+  \item Soient $X$ un espace topologique et $\sS$ la catégorie dont les objets 
     sont les ouverts de $X$ et les morphismes les inclusions naturelles. La 
-    topologique de Grothendieck sur $\cS$ correspondant à la topologie usuelle 
-    de $X$ est celle pour laquelle un crible $\cU$ sur un ouvert $U$ de $X$ est 
+    topologique de Grothendieck sur $\sS$ correspondant à la topologie usuelle 
+    de $X$ est celle pour laquelle un crible $\sU$ sur un ouvert $U$ de $X$ est 
     couvrant si la réunion des ouverts appartenant à ce crible est égale à 
-    $U$. Il est clair que la catégorie des faisceaux sur $\cS$ est équivalente 
+    $U$. Il est clair que la catégorie des faisceaux sur $\sS$ est équivalente 
     à la catégorie des faisceaux sur $X$ au sens usuel. 
-  \item Soient $X$ un schéma et $\cS$ la catégorie des schémas sur $X$. On 
-    appelle topologie fpqc (fidèlement plate quasi-compacte) sur $\cS$ la 
+  \item Soient $X$ un schéma et $\sS$ la catégorie des schémas sur $X$. On 
+    appelle topologie fpqc (fidèlement plate quasi-compacte) sur $\sS$ la 
     topologie de Grothendieck pour laquelle un crible sur un $X$-schéma $U$ est 
     couvrant s'il est engendré par une famille finie de morphismes plats dont  
     les images recouvrent $U$. 
@@ -763,15 +765,15 @@ Nous en avons vu deux plus haut.
 
 \subsubsection{Cohomologie}\label{1-6-5}
 
-On supposera toujours que la catégorie $\cS$ a un objet final $X$. Alors on 
+On supposera toujours que la catégorie $\sS$ a un objet final $X$. Alors on 
 appelle sections globales d'un faisceaux abélien $\cF$, et on note 
 $\Gamma\cF$ ou $\h^0(X,\cF)$, le groupe $\cF(X)$. Le foncteur 
 $\cF\mapsto\Gamma\cF$ est un foncteur exact \'a gauche de la catégorie des 
-faisceaux abéliens sur $\cS$ dans la catégorie des groupes abéliens, ou 
-note $\h^i(X,\bullet)$ ses dérivés (ou satellites). Ces groupes de 
-cohomologie représentent les obstructions à passer du local au global. Par 
-définition, si $0\to\cF\to\cG\to\cH\to 0$ est une suite exacte de faisceaux 
-abéliens, on a une suite exacte longue de cohomologie:
+faisceaux abéliens sur $\sS$ dans la catégorie des groupes abéliens, ou 
+note $\h^i(X,-)$ ses dérivés (ou satellites). Ces groupes de cohomologie 
+représentent les obstructions à passer du local au global. Par définition, si 
+$0\to\cF\to\cG\to\cH\to 0$ est une suite exacte de faisceaux abéliens, on a une 
+suite exacte longue de cohomologie:
 \[\xymatrix{
   0 \ar[r] 
     & \h^0(X,\cF) \ar[r] 
@@ -793,7 +795,7 @@ abéliens, on a une suite exacte longue de cohomologie:
 
 \subsubsection{}\label{1-6-6}
 
-Étant donné un faisceau abélien $\cF$ sur $\cS$, on appelle 
+Étant donné un faisceau abélien $\cF$ sur $\sS$, on appelle 
 \emph{$\cF$-torseur} un faisceau $\cG$ muni d'une action $\cF\times\cG\to\cG$ 
 de $\cF$ telle que localement (après restriction à tous les objets d'un 
 crible couvrant l'objet final $X$) $\cG$ muni de l'action de $\cF$ soit 
@@ -903,13 +905,13 @@ une $A$-algèbre étale.
 
 \subsubsection{}\label{2-1-4}
 
-Soit $X$ un schéma. Soit $\cS$ la catégorie des $X$-schémas étales; 
-d'après (\ref{2-1-3}.c) tout morphisme de $\cS$ est un morphisme étale. 
-On appelle \emph{topologie étale} sur $\cS$ la topologie pour laquelle un 
+Soit $X$ un schéma. Soit $\sS$ la catégorie des $X$-schémas étales; 
+d'après (\ref{2-1-3}.c) tout morphisme de $\sS$ est un morphisme étale. 
+On appelle \emph{topologie étale} sur $\sS$ la topologie pour laquelle un 
 crible sur $U$ est couvrant s'il est engendré par une famille finie de 
 morphismes $\varphi_i:U_i\to U$ tels que la réunion des images des 
 $\varphi_i$ recouvre $U$. On appelle \emph{site étale} de $X$, et note 
-$\et X$, le site défini par $\cS$ de la topologie étale. 
+$\et X$, le site défini par $\sS$ de la topologie étale. 
 
 
 
@@ -999,14 +1001,14 @@ De plus, d'après (\ref{1-4-2}.ii) et (\ref{1-4-5}),
 Il résulte formellement de a), b), c) que $*$ est une équivalence entre la 
 catégorie des faisceaux inversibles sur $X$ est celle des $\dG_m$-torseurs 
 sur $\et X$; elle induit l'isomorphisme cherché. On construit comme suit 
-l'équivalence inverse: si $T$ est un $\dG_m$-torseur, il existe un 
-recouvrement étale fini $\{U_i\}$ de $X$ tel que les torseurs $T/U_i$ soient 
-triviaux; $T$ est alors trivial sur chaque $V$ étale sur $X$ appartenant au 
-crible $\cU\subset \et X$ engendré par $\{U_i\}$. Sur chaque 
-$V\in\cU$, $T|V$ correspond à un faisceau inversible $\cL_V$ (par b)) et les 
-$\cL_V$ constituent un faisceau inversible donné $\cU$-localement $\cL_\cU$ 
-(par a)). Par c), ce dernier provient d'un faisceau inversible $\cL(T)$ sur 
-$X$, et $T\mapsto \cL(T)$ est l'inverse cherché de $*$. 
+l'équivalence inverse: si $\cT$ est un $\dG_m$-torseur, il existe un 
+recouvrement étale fini $\{U_i\}$ de $X$ tel que les torseurs $\cT/U_i$ soient 
+triviaux; $\cT$ est alors trivial sur chaque $V$ étale sur $X$ appartenant au 
+crible $\sU\subset \et X$ engendré par $\{U_i\}$. Sur chaque 
+$V\in\sU$, $\cT|V$ correspond à un faisceau inversible $\cL_V$ (par b)) et les 
+$\cL_V$ constituent un faisceau inversible donné $\sU$-localement $\cL_\sU$ 
+(par a)). Par c), ce dernier provient d'un faisceau inversible $\cL(\cT)$ sur 
+$X$, et $\cT\mapsto \cL(\cT)$ est l'inverse cherché de $*$. 
 \end{proof}
 
 
@@ -1090,15 +1092,15 @@ $x$ dans $k(\bar x)$. Il joue le rôle d'anneau local pour la topologie étale.
 
 \subsubsection{}\label{2-3-2}
 
-Étant donné un faisceau $F$ sur $\et X$, on appelle \emph{fibre} de $F$ en 
-$\bar x$ l'ensemble (resp. le groupe,\dots) $F_{\bar x}=\varprojlim F(U)$, 
+Étant donné un faisceau $\cF$ sur $\et X$, on appelle \emph{fibre} de $\cF$ en 
+$\bar x$ l'ensemble (resp. le groupe,\dots) $\cF_{\bar x}=\varprojlim \cF(U)$, 
 la limite inductive étant toujours prise sur les voisinages étales de  $X$. 
 
-Pour qu'un homomorphisme de faisceaux $F\to G$ soit un mono-/epi-/isomorphisme 
-il faut et il suffit qu'il en soit ainsi des morphismes 
-$F_{\bar x}\to G_{\bar x}$ induit sur les fibres et tout point géométrique de 
-$X$. Si $X$ est de type fini sur un corps algébriquement clos, il suffit qu'il 
-en soit ainsi en les points rationnelles de $X$. 
+Pour qu'un homomorphisme de faisceaux $\cF\to \cG$ soit un 
+mono-/epi-/isomorphisme il faut et il suffit qu'il en soit ainsi des morphismes 
+$\cF_{\bar x}\to \cG_{\bar x}$ induit sur les fibres et tout point géométrique 
+de $X$. Si $X$ est de type fini sur un corps algébriquement clos, il suffit 
+qu'il en soit ainsi en les points rationnelles de $X$. 
 
 
 
@@ -1106,36 +1108,36 @@ en soit ainsi en les points rationnelles de $X$.
 
 \subsubsection{}\label{2-3-3}
 
-Si $f:X\to Y$ est un morphisme de schémas et $F$ un faisceau sur $\et X$, 
-l'\emph{image directe} $f_* F$ de $F$ par $f$ est le faisceau sur $\et Y$ 
-défini par $f_* F(V) = F(X\times_Y V)$ pour tout $V$ étale sur $Y$. Le foncteur 
+Si $f:X\to Y$ est un morphisme de schémas et $\cF$ un faisceau sur $\et X$, 
+l'\emph{image directe} $f_* \cF$ de $\cF$ par $f$ est le faisceau sur $\et Y$ 
+défini par $f_* \cF(V) = \cF(X\times_Y V)$ pour tout $V$ étale sur $Y$. Le foncteur 
 $f_*:\ab\sh(\et X)\to \ab\sh(\et Y)$ est exact à gauche. Ses foncteurs 
 dérivés à droite $\R^q f_*$ s'appellent images directes supérieures. Si 
 $\bar y$ est un point géométrique de $Y$, on a 
 \[
-  (\R^q f_* F)_{\bar y} = \varinjlim \h^q(V\times_Y X,F)\text{,}
+  (\R^q f_* \cF)_{\bar y} = \varinjlim \h^q(V\times_Y X,\cF)\text{,}
 \]
 limite inductive prise sur les voisinages étales $V$ de $\bar y$. 
 
 Soient $\cO_{Y,\bar y}$ le localisé stricte de $Y$ en $\bar y$, 
 $\widetilde Y=\spec(\cO_{Y,\bar y})$ et $\widetilde X=X\times_Y \widetilde Y$. 
-On peut étendre $F$ à $\et{\widetilde X}$ (c'est un cas particulier de la 
+On peut étendre $\cF$ à $\et{\widetilde X}$ (c'est un cas particulier de la 
 notion générale d'image réciproque) de la manière suivante: soit 
 $\widetilde U$ un schéma étale sur $\widetilde X$, alors il existe un 
 voisinage étale $V$ de $\bar y$ et un schéma étale $U$ sur $X\times_Y V$ tel 
 que $\widetilde U=U\times_V \widetilde Y$; on posera 
 \[
-  F(\widetilde U)=\varinjlim F\left(U\times_V V'\right)\text{,}
+  \cF(\widetilde U)=\varinjlim \cF\left(U\times_V V'\right)\text{,}
 \]
 le limite inductive étant prise sur les voisinages étales $V'$ de $\bar y$ qui 
 dominent $V$. Avec cette définition, on a 
 \[
-  \left(\R^q f_* F\right)_{\bar y} = \h^q(\widetilde X,F)\text{.}
+  \left(\R^q f_* \cF\right)_{\bar y} = \h^q(\widetilde X,\cF)\text{.}
 \]
 
 Le foncteur $f_*$ a un adjoint à gauche $f^*$, le foncteur ``image 
 réciproque.'' Si $\bar x$ est un point géométrique de $X$ et $f(\bar x)$ son 
-image dans $Y$, on a $(f^* F)_{\bar x} = F_{f(\bar x)}$. Cette formule montre 
+image dans $Y$, on a $(f^* \cF)_{\bar x} = \cF_{f(\bar x)}$. Cette formule montre 
 que $f^*$ est un foncteur exact. Le foncteur $f_*$ transforme donc faisceau 
 injectif en faisceau injectif, et la suite spectrale du foncteur compose 
 $\Gamma\circ f_*$ (resp. $g_* f_*$) fournit la 
@@ -1145,12 +1147,12 @@ $\Gamma\circ f_*$ (resp. $g_* f_*$) fournit la
 
 
 \begin{theorem}[Suite spectrale de Leray]\label{2-3-4}
-Soient $F$ un faisceau abélien sur $\et X$ et $f:X\to Y$ un morphisme de 
+Soient $\cF$ un faisceau abélien sur $\et X$ et $f:X\to Y$ un morphisme de 
 schémas (resp. des morphismes de schémas $X\xrightarrow f Y \xrightarrow g Z$). 
 On a une suite spectrale 
 \begin{align*}
-  E_2^{pq} &= \h^p(Y,\R^q f_* F) \Rightarrow \h^{p+q}(X,F) \\
-  \text{(resp.}\qquad E_2^{pq} &= \R^p g_* \R^q f_* F \Rightarrow \R^{p+q}(gf)_* F\text{).}
+  E_2^{pq} &= \h^p(Y,\R^q f_* \cF) \Rightarrow \h^{p+q}(X,\cF) \\
+  \text{(resp.}\qquad E_2^{pq} &= \R^p g_* \R^q f_* \cF \Rightarrow \R^{p+q}(gf)_* \cF\text{).}
 \end{align*}
 \end{theorem}
 
@@ -1159,8 +1161,8 @@ On a une suite spectrale
 
 
 \begin{corollary}\label{2-3-5}
-Si $\R^q f_* F=0$ pour tout $q>0$, on a $\h^p(Y,f_* F)=\h^p(X,F)$ (resp. 
-$\R^p g_*(F_* F) = \R^p(g f)_* F$) pour tout $p\geqslant 0$. 
+Si $\R^q f_* \cF=0$ pour tout $q>0$, on a $\h^p(Y,f_* \cF)=\h^p(X,\cF)$ (resp. 
+$\R^p g_*(\cF_* \cF) = \R^p(g f)_* \cF$) pour tout $p\geqslant 0$. 
 \end{corollary}
 
 Cela s'applique en particulier dans le cas suivant:
@@ -1171,16 +1173,16 @@ Cela s'applique en particulier dans le cas suivant:
 
 \begin{proposition}\label{2-3-6}
 Soit $f:X\to Y$ un morphisme fini (voire, par passage à la limite, un 
-morphisme entier) et $F$ un faisceau abélien sur $X$. Alors $\R^q f_* F=0$, 
+morphisme entier) et $\cF$ un faisceau abélien sur $X$. Alors $\R^q f_* \cF=0$, 
 pour tout $q>0$.
 \end{proposition}
 
 En effet soient $\bar y$ un pointe géométrique de $Y$, $\widetilde Y$ le 
 spectre du localisé strict de $Y$ en $y$ et 
 $\widetilde X=X\times_Y \widetilde Y$; d'après ce qui précède, il suffit de 
-montrer que $\h^q(\widetilde X,F) = 0$ pour tout $q>0$. Or $\widetilde X$ est le 
+montrer que $\h^q(\widetilde X,\cF) = 0$ pour tout $q>0$. Or $\widetilde X$ est le 
 spectre d'un produit d'anneaux locaux strictement henséliens (cf. 
-\cite[I]{11}), le foncteur $\Gamma(\widetilde X,\bullet)$ est exact car tout 
+\cite[I]{11}), le foncteur $\Gamma(\widetilde X,-)$ est exact car tout 
 $\widetilde X$-schéma étale et surjectif admet une section, d'où l'assertion. 
 
 
@@ -1270,7 +1272,7 @@ Le foncteur
         \end{array}\right\}
 \]
 qui à un 
-faisceau $F$ associe sa fibre $F_{\bar K}$ au point géométrique 
+faisceau $\cF$ associe sa fibre $\cF_{\bar K}$ au point géométrique 
 $\spec(\bar K)$ est une équivalence de catégories.
 \end{proposition}
 
@@ -1279,13 +1281,13 @@ On dit que $G$ opère continûment sur un ensemble $E$ si le fixateur de tout
 inverse est décrit de la manière évidente: soient $A$ une 
 $K$-algèbre finie étale, $U=\spec(A)$ et $U(\bar K)=\hom_K(A,\bar K)$ le 
 $G$-ensemble correspondant à; alors on a 
-$F(U)= \hom_{G\text{-ens}}(U(\bar K),F_{\bar K})$. 
+$\cF(U)= \hom_{G\text{-ens}}(U(\bar K),\cF_{\bar K})$. 
 
-En particulier, si $X=\spec(K)$, on a $F(X) = F_{\bar K}^G$. Si l'on se 
+En particulier, si $X=\spec(K)$, on a $\cF(X) = \cF_{\bar K}^G$. Si l'on se 
 restreint aux faisceaux abéliens, on obtient en passant aux foncteurs 
 dérivés des isomorphismes canoniques 
 \[
-  \h^q(\et X,F) = \h^q(G,F_{\bar K})
+  \h^q(\et X,\cF) = \h^q(G,\cF_{\bar K})
 \]
 
 
@@ -1507,7 +1509,7 @@ $G=\gal(\bar K/K)$. Supposons que, pour tout extension finie $K'$ de $K$, on
 ait $\br(K')=0$. Alors on a:
 \begin{enumerate}[\indent i)]
   \item $\h^q(G,\bar K^\times) = 0$ pour tout $q>0$.
-  \item $\h^q(G,F) = 0$ pour tout $G$-module de torsion $F$ et pour tout 
+  \item $\h^q(G,\cF) = 0$ pour tout $G$-module de torsion $\cF$ et pour tout 
     $q\geqslant 2$.
 \end{enumerate}
 \end{proposition}
@@ -1543,7 +1545,7 @@ Si un corps $K$ est $C_1$, on a $\br(K)=0$.
 \end{proposition}
 
 Il s'agit de montrer que tout corps gauche $D$ de centre $K$ et fini sur $K$ 
-est égale à $K$. Soient $\R^2$ le degré de $D$ sur $K$ et $\nrd:D\to K$ la 
+est égale à $K$. Soient $r^2$ le degré de $D$ sur $K$ et $\nrd:D\to K$ la 
 norme réduite. 
 
 (Localement pour la topologie étale sur $K$, $D$ est isomorphe -- non 
@@ -1556,11 +1558,11 @@ topologie étale se descende, à cause de son unicité locale, en une
 application $\nrd:D\to K$). 
 
 Le seul zéro de $\nrd$ est l'élément nul de $D$, car, si $x\ne 0$, on a 
-$\nrd(x)\cdot \nrd(x^{-1}) = 1$. D'autre part, si $\{e_1,\dotsc,e_{\R^2}\}$ est 
+$\nrd(x)\cdot \nrd(x^{-1}) = 1$. D'autre part, si $\{e_1,\dotsc,e_{r^2}\}$ est 
 une base de $D$ sur $K$ et si $x=\sum x_i e_i$, la fonction $\nrd(x)$ s'écrit 
-comme un polynôme homogène $\nrd(x_1,\dotsc,x_{\R^2})$ de degré $r$ (c'est 
+comme un polynôme homogène $\nrd(x_1,\dotsc,x_{r^2})$ de degré $r$ (c'est 
 clair localement pour la topologie étale). Puisque $K$ est $C_1$, on a 
-$\R^2\leqslant r$, c'est-à-dire $r=1$ et $D=K$. 
+$r^2\leqslant r$, c'est-à-dire $r=1$ et $D=K$. 
 
 
 
@@ -1573,31 +1575,30 @@ transcendance $1$ de $k$. Alors $K$ est $C_1$.
 
 Supposons tout d'abord que $K=k(X)$. Soit 
 \[
-  f(\underline T) = \sum a_{i_1,\dotsc i_n} T_1^{i_1} \dotsm T_n^{i_n}
+  f(T) = \sum a_{i_1,\dotsc i_n} T_1^{i_1} \dotsm T_n^{i_n}
 \]
 un polynôme homogène de degré $d<n$ à coefficients dans $k(X)$. Quitte 
 à multiplier les coefficients par un dénominateur commun on peut supposer 
 qu'ils sont dans $k[X]$. Soit alors $\delta=\sup\deg(a_{i_1\dotsc i_n})$. On 
 cherche un zéro non trivial dans $k[X]$ par la méthode des coefficients 
 indéterminés en écrivant chaque $T_i$ ($i=1,\dotsc,n$) comme un 
-polynôme de degré $N$ en $X$. Alors l'équation 
-$f(\underline T)=0$ devient un système d'équations homogènes en les 
-$n\times (N+1)$ coefficients des polynômes $T_i(X)$ exprimant la nullité 
-des coefficients du polynôme en $X$ obtenu en remplaçant $T_i$ par 
-$T_i(X)$. Ce polynôme est de degré $\delta+N D$ au plus, il y a donc 
-$\delta+N d+1$ équations en $n\times (N+1)$ variables. Comme $k$ est 
-algébriquement clos ce système a une solution non triviale si 
+polynôme de degré $N$ en $X$. Alors l'équation $f(T)=0$ devient un système 
+d'équations homogènes en les $n\times (N+1)$ coefficients des polynômes 
+$T_i(X)$ exprimant la nullité des coefficients du polynôme en $X$ obtenu en 
+remplaçant $T_i$ par $T_i(X)$. Ce polynôme est de degré $\delta+N D$ au plus, 
+il y a donc $\delta+N d+1$ équations en $n\times (N+1)$ variables. Comme $k$ 
+est algébriquement clos ce système a une solution non triviale si 
 $n(N+1)>N d+\delta+1$, ce qui sera le cas pour $N$ assez grand si $d<n$. 
 
 Il est clair que, pour démontrer le théorème dans la cas général, il 
 suffit de le démontrer lorsque $K$ est une extension finie d'une extension 
-transcendent pure $k(X)$ de $k$. Soit $F(\underline T)=f(T_1,\dotsc,T_n)$ un 
+transcendent pure $k(X)$ de $k$. Soit $f(T)=f(T_1,\dotsc,T_n)$ un 
 polynôme homogène de degré $d<n$ à coefficients dans $K$. Soient 
 $a=[K:k(X)]$ et $e_1,\dotsc,e_s$ une bas de $K$ sur $k(X)$. Introduisons de 
 nouvelles variables $U_{i j}$, en nombre $s n$, telles que 
-$T_i=\sum U_{i j}e_j$. Pour que le polynôme $f(\underline T)$ ait un zéro 
+$T_i=\sum U_{i j}e_j$. Pour que le polynôme $f(T)$ ait un zéro 
 non trivial dans $K$, il suffit que le polynôme 
-$g(X_{i j}) = N_{K/k}(f(\underline T))$ ait un zéro non trivial dans $k(X)$. 
+$g(X_{i j}) = N_{K/k}(f( T))$ ait un zéro non trivial dans $k(X)$. 
 Or $g$ est un polynôme de degré $s d$ en $s n$ variables, d'où le 
 résultat. 
 
@@ -1788,10 +1789,10 @@ d'obtenir en corollaire la
 
 \begin{proposition}[{\cite[IX 5.7]{4}}]\label{3-3-6}
 Soient $k$ un corps algébriquement clos, $X$ une courbe algébrique sur $k$ 
-et $F$ un faisceau de torsion sur $X$. Alors:
+et $\cF$ un faisceau de torsion sur $X$. Alors:
 \begin{enumerate}[\indent i)]
-  \item On a $\h^q(X,F) = 0$ pour $q>2$.
-  \item Si $X$ est affine, on a même $\h^q(X,F) = 0$ pour $q>1$.
+  \item On a $\h^q(X,\cF) = 0$ pour $q>2$.
+  \item Si $X$ est affine, on a même $\h^q(X,\cF) = 0$ pour $q>1$.
 \end{enumerate}
 \end{proposition}
 
@@ -1936,27 +1937,27 @@ Ce chapitre est consacré à la démonstration et aux applications du
 
 
 \begin{theorem}\label{4-1-1}
-Soient $f:X\to S$ un morphisme propre de schémas et $F$ un faisceau abélien 
+Soient $f:X\to S$ un morphisme propre de schémas et $\cF$ un faisceau abélien 
 de torsion sur $X$. Alors, quel que soit $q\geqslant 0$, la fibre de 
-$\R^q f_* F$ en un point géométrique $s$ de $S$ est isomorphe à la 
-cohomologie $\h^q(X_s,F)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
+$\R^q f_* \cF$ en un point géométrique $s$ de $S$ est isomorphe à la 
+cohomologie $\h^q(X_s,\cF)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
 $s$. 
 \end{theorem}
 
 Pour $f:X\to S$ une application continue propre et séparé (séparée 
 signifie que la diagonale de $X\times_S X$ est fermée) entre espaces 
-topologiques, et $F$ un faisceau abélien sur $X$, le résultat analogue est 
+topologiques, et $\cF$ un faisceau abélien sur $X$, le résultat analogue est 
 bien connu, et élémentaire: comme $f$ est fermée, les $f^{-1}(V)$ pour 
 $V$ voisinage de $s$ forment un système fondamental de voisinages de $X_s$, et 
-on vérifie que $\h^*(X_s,F) = \varinjlim_U \h^*(U,F)$, pour $U$ parcourant les 
+on vérifie que $\h^*(X_s,\cF) = \varinjlim_U \h^*(U,\cF)$, pour $U$ parcourant les 
 voisinages de $X_s$. En pratique, $X_s$ a même un système fondamental 
-$\cU$ de voisinages $U$ dont il est rétracte par déformation et, pour $F$ 
-constant, on a donc $\h^*(X_s,F)=\h^*(U,F)$. En termes imagés: la fibre 
+$\sU$ de voisinages $U$ dont il est rétracte par déformation et, pour $\cF$ 
+constant, on a donc $\h^*(X_s,\cF)=\h^*(U,\cF)$. En termes imagés: la fibre 
 spéciale avale la fibre générale. 
 
 Dans le cas des schémas la démonstration est plus délicate et il est 
-indispensable de supposer que $F$ est de torsion (\cite[XII.2]{4}). Compte 
-tenu de la description des fibres de $\R^q f_* F$ (\ref{2-3-3}), le théorème 
+indispensable de supposer que $\cF$ est de torsion (\cite[XII.2]{4}). Compte 
+tenu de la description des fibres de $\R^q f_* \cF$ (\ref{2-3-3}), le théorème 
 (\ref{4-1-1}) est essentiellement équivalent au 
 
  
@@ -1966,15 +1967,15 @@ tenu de la description des fibres de $\R^q f_* F$ (\ref{2-3-3}), le théorème
 \begin{theorem}\label{4-1-2}
 Soient $A$ un anneau local strictement hensélien et $S=\spec(A)$. Soient 
 $f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors, pour 
-tout faisceau abélien de torsion $F$ sur $X$ et pour tout $q\geqslant 0$, on 
-a $\h^q(X,F) \iso \h^q(X_0,F)$. 
+tout faisceau abélien de torsion $\cF$ sur $X$ et pour tout $q\geqslant 0$, on 
+a $\h^q(X,\cF) \iso \h^q(X_0,\cF)$. 
 \end{theorem} 
 
 Par passage à la limite on voit qu'il suffit de démontrer le théorème 
 lorsque $A$ est l'hensélisé strict d'une $\dZ$-algèbre  de type fini en 
-un idéal premier. On traite d'abord le cas $q=0$ ou $1$ et $F=\dZ/n$ 
+un idéal premier. On traite d'abord le cas $q=0$ ou $1$ et $\cF=\dZ/n$ 
 (\ref{4-2}). Un argument basé sur la notion de faisceau constructible 
-(\ref{4-3}) montre d'ailleurs qu'il suffit de considérer le cas où $F$ est 
+(\ref{4-3}) montre d'ailleurs qu'il suffit de considérer le cas où $\cF$ est 
 constant. D'autre part le dévissage (\ref{3-4-3}) permet de supposer que 
 $X_0$ est une courbe; dans ce cas il ne reste plus qu'à démontrer le 
 théorème pour $q=2$ (\ref{4-4}). 
@@ -1991,9 +1992,9 @@ de cohomologie à support propre (\ref{4-5}).
 
 
 
-\subsection{Démonstration pour \texorpdfstring{$q=0$}{q=1} or \texorpdfstring{$1$}{1} et \texorpdfstring{$F=\dZ/n$}{F=Z/n}}\label{4-2} 
+\subsection{Démonstration pour \texorpdfstring{$q=0$}{q=1} or \texorpdfstring{$1$}{1} et \texorpdfstring{$\cF=\dZ/n$}{\cF=Z/n}}\label{4-2} 
 
-Le résultat pour $q=0$ et $F$ constant est équivalent à la proposition 
+Le résultat pour $q=0$ et $\cF$ constant est équivalent à la proposition 
 suivante (théorème de connexion de Zariski):
 
 
@@ -2041,7 +2042,7 @@ est bijective pour tout $n$, ce qui achève la démonstration.
 
 Puisque $\h^1(X,\dZ/n)$ est en bijection avec l'ensemble des classes 
 d'isomorphisme de revêtements étales galoisiens de $X$ de groupe $\dZ/n$, 
-le théorème  pour $q=1$ et $F=\dZ/n$ résulte de la proposition suivante. 
+le théorème  pour $q=1$ et $\cF=\dZ/n$ résulte de la proposition suivante. 
 
 
 
@@ -2081,14 +2082,14 @@ $\bar X=X\otimes_A \hat A$.
 Par passage à la limite, il suffit de démontrer la proposition dans le cas 
 où $A$ est l'hensélisé d'une $\dZ$-algèbre de type fini. On peut alors 
 appliquer le théorème d'approximation d'Artin au foncteur 
-$F:(\textnormal{$A$-algèbres}) \to (\textnormal{ensembles})$ qui, à une 
+$\cF:(\textnormal{$A$-algèbres}) \to (\textnormal{ensembles})$ qui, à une 
 $A$-algèbre $B$, fait correspondre l'ensemble des classes d'isomorphisme de 
 revêtements étales de $X\otimes_A B$. En effet ce foncteur est localement de 
 présentation finie: si $B_i$ est une système inductif filtrant de 
-$A$-algèbres et si $B=\varinjlim B_i$, on a $F(B) = \varinjlim F(B_i)$. 
+$A$-algèbres et si $B=\varinjlim B_i$, on a $\cF(B) = \varinjlim \cF(B_i)$. 
 D'après le théorème d'Artin, étant donné un élément 
-$\xi\in F(\hat A)$, en l'occurrence la classe d'isomorphisme de $\bar X'$, il 
-existe $\xi\in F(A)$ ayant même image que $\bar\xi$ dans $F(A/\fm)$. 
+$\xi\in \cF(\hat A)$, en l'occurrence la classe d'isomorphisme de $\bar X'$, il 
+existe $\xi\in \cF(A)$ ayant même image que $\bar\xi$ dans $\cF(A/\fm)$. 
 Autrement dit il existe un revêtement étale $X'$ de $X$ dont la restriction 
 à $X_0$ est isomorphe à $X_0'$. 
 
@@ -2111,7 +2112,7 @@ appelle faisceau sur $X$ un faisceau \emph{abélien} sur $\et X$.
 
 
 \begin{definition}\label{4-3-1}
-On dit qu'un faisceau $F$ sur $X$ est \emph{localement constant constructible} 
+On dit qu'un faisceau $\cF$ sur $X$ est \emph{localement constant constructible} 
 (en abrégé l.c.c.) s'il est représenté par un revêtement étale de 
 $X$. 
 \end{definition}
@@ -2121,46 +2122,46 @@ $X$.
 
 
 \begin{definition}\label{4-3-2}
-On dit qu'un faisceau $F$ sur $X$ est \emph{constructible} s'il vérifie les 
+On dit qu'un faisceau $\cF$ sur $X$ est \emph{constructible} s'il vérifie les 
 conditions équivalentes suivantes:
 \begin{enumerate}[\indent (i)]
   \item Il existe une famille finie surjective de sous-schémas $X_i$ de $X$ 
-     tels que la restriction de $F$ à $X_i$ soit l.c.c..
+     tels que la restriction de $\cF$ à $X_i$ soit l.c.c..
   \item Il existe une famille finie de morphismes finis $p_i:X_i'\to X$, pour 
     chaque $i$ un faisceau constant constructible ( = défini par un groupe 
     abélien fini) $C_i$ sur $X_i'$, et un monomorphisme 
-    $F\to \prod p_{i*} C_i$. 
+    $\cF\to \prod p_{i*} C_i$. 
 \end{enumerate}
 \end{definition}
 
 On vérifie facilement que la catégorie des faisceaux constructibles sur $X$ 
-est une catégorie abélienne. De plus, si $u:F\to G$ est un homomorphisme de 
-faisceaux et si $F$ est constructible, le faisceau $\im(u)$ est constructible.
+est une catégorie abélienne. De plus, si $u:\cF\to \cG$ est un homomorphisme de 
+faisceaux et si $\cF$ est constructible, le faisceau $\im(u)$ est constructible.
 
 
 
 
 
 \begin{lemma}\label{4-3-3}
-Tout faisceau de torsion $F$ est limite inductive filtrante de faisceaux 
+Tout faisceau de torsion $\cF$ est limite inductive filtrante de faisceaux 
 constructibles.
 \end{lemma}
 
 En effet, si $j:U\to X$ est un schéma étale de type fini sur $X$, un 
-élément $\xi\in F(U)$ tel que $n\xi=0$ définit un homomorphisme de 
-faisceaux $j_! \const{\dZ/n}\to F$ dont l'image (le lus petit sous-faisceau de 
-$F$ dont $\xi$ soit section locale) est un sous-faisceau constructible de $F$. 
-Il est clair que $F$ est limite inductive de tels sous-faisceaux.
+élément $\xi\in \cF(U)$ tel que $n\xi=0$ définit un homomorphisme de 
+faisceaux $j_! \const{\dZ/n}\to \cF$ dont l'image (le lus petit sous-faisceau de 
+$\cF$ dont $\xi$ soit section locale) est un sous-faisceau constructible de $\cF$. 
+Il est clair que $\cF$ est limite inductive de tels sous-faisceaux.
 
 
 
 
 
 \begin{definition}\label{4-3-4}
-Soient $\cC$ une catégorie abélienne et $T$ un foncteur défini sur $\cC$ 
+Soient $\sC$ une catégorie abélienne et $T$ un foncteur défini sur $\sC$ 
 à valeurs dans la catégorie des groupes abéliens. On dira que $T$ est 
-\emph{effaçable} dans $\cC$ si, pour tout objet $A$ de $\cC$ et tout 
-$\alpha\in T(A)$, il existe un monomorphisme $u:A\to M$ dans $\cC$ tel que 
+\emph{effaçable} dans $\sC$ si, pour tout objet $A$ de $\sC$ et tout 
+$\alpha\in T(A)$, il existe un monomorphisme $u:A\to M$ dans $\sC$ tel que 
 $T(u)\alpha = 0$. 
 \end{definition}
 
@@ -2173,14 +2174,14 @@ Les foncteurs $\h^q(X,-)$ pour $q>0$ sont effaçables dans la catégorie des
 faisceaux constructibles sur $X$.
 \end{lemma}
 
-Il suffit de remarquer que, si $F$ est un faisceau constructible, il existe 
-nécessairement un entier $n>0$ tel que $F$ soit un faisceau de 
-$\dZ/n$-modules. Alors il existe un monomorphisme $F\hookrightarrow G$, où 
-$G$ est un faisceau de $\dZ/n$-modules et $\h^q(X,G) = 0$ pour tout $q>0$. On 
-peut par exemple prendre pour $G$ la résolution de Godement 
-$\prod_{x\in X} i_{x*} F_{\bar x}$, où $x$ parcourt les points de $X$ et 
+Il suffit de remarquer que, si $\cF$ est un faisceau constructible, il existe 
+nécessairement un entier $n>0$ tel que $\cF$ soit un faisceau de 
+$\dZ/n$-modules. Alors il existe un monomorphisme $\cF\hookrightarrow \cG$, où 
+$\cG$ est un faisceau de $\dZ/n$-modules et $\h^q(X,\cG) = 0$ pour tout $q>0$.  
+On peut par exemple prendre pour $\cG$ la résolution de Godement 
+$\prod_{x\in X} i_{x*} \cF_{\bar x}$, où $x$ parcourt les points de $X$ et 
 $i_x:\bar x\to X$ est un point géométrique centré en $X$. D'après 
-(\ref{4-3-3}) $G$ est limite inductive de faisceaux constructibles, d'o`u le 
+(\ref{4-3-3}) $\cG$ est limite inductive de faisceaux constructibles, d'o`u le 
 lemme, car les foncteurs $\h^q(X,-)$ commutent aux limites inductives. 
 
 
@@ -2189,17 +2190,17 @@ lemme, car les foncteurs $\h^q(X,-)$ commutent aux limites inductives.
 
 \begin{lemma}\label{4-3-6}
 Soit $\varphi^\bullet:T^\bullet\to {T'}^\bullet$ un morphisme de foncteurs 
-cohomologiques définis sur une catégorie abélienne $\cC$ et à valeurs 
+cohomologiques définis sur une catégorie abélienne $\sC$ et à valeurs 
 dans la catégorie des groupes abéliens. Supposons que $T^q$ est effaçable 
-pour $q>0$ et soit $\cE$ un sous-ensemble d'objets de $\cC$ tel que tout objet 
-de $\cC$ soit contenu dans un objet appartenant à $\cE$. Alors les 
+pour $q>0$ et soit $\sE$ un sous-ensemble d'objets de $\sC$ tel que tout objet 
+de $\sC$ soit contenu dans un objet appartenant à $\sE$. Alors les 
 conditions suivantes sont équivalentes:
 \begin{enumerate}[\indent (i)]
   \item $\varphi^q(A)$ est bijectif pour tout $q\geqslant 0$ et tout 
-    $A\in\ob \cC$.
+    $A\in\ob \sC$.
   \item $\varphi^0(M)$ est bijectif et $\varphi^q(M)$ surjectif pour tout 
-    $q>0$ et tout $M\in\cE$. 
-  \item $\varphi^0(A)$ est bijectif pour tout $A\in\ob \cC$ et ${T'}^q$ est 
+    $q>0$ et tout $M\in\sE$. 
+  \item $\varphi^0(A)$ est bijectif pour tout $A\in\ob \sC$ et ${T'}^q$ est 
     effaçable pour tout $q>0$. 
 \end{enumerate}
 \end{lemma}
@@ -2218,18 +2219,18 @@ pour tout schéma $X'$ fini sur $X$, l'application canonique
   \h^q(X',\dZ/n) \to \h^q(X_0',\dZ/n)\text{,}
 \]
 où $X_0' = X'\times_X X_0$, est bijective pour $q=0$ et surjective pour 
-$q>0$. Alors, pour tout faisceau de torsion $F$ sur $X$ et pour tout 
+$q>0$. Alors, pour tout faisceau de torsion $\cF$ sur $X$ et pour tout 
 $q\geqslant 0$, l'application canonique 
 \[
-  \h^q(X,F) \to \h^q(X_0,F)
+  \h^q(X,\cF) \to \h^q(X_0,\cF)
 \]
 est bijective.
 \end{proposition}
 
-Par passage à la limite, il suffit de démontrer l'assertion pour $F$ 
-constructible. On applique le lemme (\ref{4-3-6}) en prenant pour $\cC$ la 
+Par passage à la limite, il suffit de démontrer l'assertion pour $\cF$ 
+constructible. On applique le lemme (\ref{4-3-6}) en prenant pour $\sC$ la 
 catégorie des faisceaux constructibles sur $X$, $T^q=\h^q(X,-)$, 
-${T'}^q=\h^q(X_0,-)$, et $\cE$ l'ensemble des faisceaux constructibles de la 
+${T'}^q=\h^q(X_0,-)$, et $\sE$ l'ensemble des faisceaux constructibles de la 
 forme $\prod p_{i*} C_i$, où $p_i:X_i'\to X$ est un morphisme fini et $C_i$ 
 un faisceau constant fini sur $X_i'$. 
 
@@ -2345,11 +2346,11 @@ théorème d;approximation d'Artin.
 \begin{definition}\label{4-5-1}
 Soit $X$ un schéma séparé de type fini sur un corps $k$. D'après un 
 théorème de Nagata, il existe un schéma $\bar X$ propre sur $k$ et une 
-immersion ouverte $j:X\to\bar X$. Pour tout faisceau de torsion $F$ sur $X$ on 
-note $j_! F$ le prolongement par $0$ de $F$ à $\bar X$ et on définit les 
+immersion ouverte $j:X\to\bar X$. Pour tout faisceau de torsion $\cF$ sur $X$ on 
+note $j_! \cF$ le prolongement par $0$ de $\cF$ à $\bar X$ et on définit les 
 groupes de \emph{cohomologie à support propre} 
 \[
-  \h_c^q(X,F)=\h^q(\bar X, j_! F) \text{.}
+  \h_c^q(X,\cF)=\h^q(\bar X, j_! \cF) \text{.}
 \]
 \end{definition}
 
@@ -2379,20 +2380,20 @@ avec $p$ un morphisme propre.
 
 
 \begin{lemma}\label{4-5-2}
-On a $p_*(j_{2!} F) = j_{1!} F$ et $\R^q p_*(j_{2!} F) = 0$, pour $q>0$. 
+On a $p_*(j_{2!} \cF) = j_{1!} \cF$ et $\R^q p_*(j_{2!} \cF) = 0$, pour $q>0$. 
 \end{lemma}
 
 Notons tout de suite que lemme suffit pour conclure. En utilisant la suite 
 spectrale de Leray du morphisme $p$, on en déduit qu'on a, pour tout 
 $q\geqslant 0$, 
 \[
-  \h^q(\bar X_2, j_{2!} F) = \h^q(\bar X_1, j_{1!} F) \text{.}
+  \h^q(\bar X_2, j_{2!} \cF) = \h^q(\bar X_1, j_{1!} \cF) \text{.}
 \]
 
 Pour démontrer le lemme, on raisonne fibre par fibre en utilisant le théorème 
 de changement de base (\ref{4-1-1}) pour $p$. Le résultat est immédiat, car, 
 au-dessus d'un point de $X$, $p$ est un isomorphe et, au-dessus d'un point de 
-$\bar X_1\setminus X$, $j_{2!} F$ est nul sur la fibre de $p$. 
+$\bar X_1\setminus X$, $j_{2!} \cF$ est nul sur la fibre de $p$. 
 
 
 
@@ -2404,9 +2405,9 @@ De même, si $f:X\to S$ est un morphisme séparé de type fini de schémas
 noethériens, il existe un morphisme propre $\bar f:\bar X\to S$ et un 
 immersion ouverte $j:X\to \bar X$. On définit alors les images directes s
 supérieures à support propre $\R^q f_!$ en posant pour tout faisceau de 
-torsion $F$ sur $X$
+torsion $\cF$ sur $X$
 \[
-  \R^q f_! F = \R^q f_*(j_! F) \text{.}
+  \R^q f_! \cF = \R^q f_*(j_! \cF) \text{.}
 \]
 On vérifie comme précédemment que cette définition est indépendante de 
 la compactification choisie. 
@@ -2417,9 +2418,9 @@ la compactification choisie.
 
 \begin{theorem}\label{4-5-4}
 Soient $f:X\to S$ un morphisme séparé de type fini de schémas noethériens 
-et $F$ un faisceau de torsion sur $X$. Alors la fibre de $\R^q f_! F$ en un 
+et $\cF$ un faisceau de torsion sur $X$. Alors la fibre de $\R^q f_! \cF$ en un 
 point géométrique $s$ de $S$ est isomorphe à la cohomologie à support 
-propre $\h_c^q(X_s,F)$ de la fibre $X_s$ de $f$ en $s$. 
+propre $\h_c^q(X_s,\cF)$ de la fibre $X_s$ de $f$ en $s$. 
 \end{theorem}
 
 C'est une simple variante du théorème de changement de base pour un morphisme 
@@ -2432,7 +2433,7 @@ propre (\ref{4-1-1}). Plus généralement, si
 }\]
 est un diagramme cartésien, on a un isomorphe canonique 
 \begin{equation}\label{eq:3}
-  g^* (\R^q f_! F) \simeq \R^q f_!'({g'}^* F) \text{.}
+  g^* (\R^q f_! \cF) \simeq \R^q f_!'({g'}^* \cF) \text{.}
 \end{equation}
 
 
@@ -2452,14 +2453,14 @@ est un diagramme cartésien, on a un isomorphe canonique
 
 \begin{theorem}[d'annulation]\label{4-6-1}
 Soient $f:X\to S$ un morphisme séparé de type fini dont les fibres sont de 
-dimension $\leqslant n$ et $F$ un faisceau de torsion sur $X$. Alors on a 
-$\R^q f_! F = 0$ pour $q>2 n$. 
+dimension $\leqslant n$ et $\cF$ un faisceau de torsion sur $X$. Alors on a 
+$\R^q f_! \cF = 0$ pour $q>2 n$. 
 \end{theorem}
 
 D'après le théorème de changement de base, on peut supposer que $S$ est 
 le spectre d'un corps séparablement clos. Si $\dim X = n$, il existe un 
 ouvert affine $U$ de $X$ tel que $\dim(X\setminus U) < n$; on a alors un suite 
-exacte $0\to F_U \to F \to F_{X\setminus U} \to 0$ et, par récurrence sur $n$, 
+exacte $0\to \cF_U \to \cF \to \cF_{X\setminus U} \to 0$ et, par récurrence sur $n$, 
 il suffit de démontrer le théorème pour $X=U$ affine. Puis la méthode de 
 fibration par des courbes (\ref{3-4-1}) et le théorème de changement de 
 base permettent de se ramener à une courbe sur un corps séparablement clos 
@@ -2471,17 +2472,17 @@ pour laquelle on déduit le résultat voulu du théorème de Tsen
 
 
 \begin{theorem}[de finitude]\label{4-6-2}
-Soient $f:X\to S$ un morphisme séparé de type fini et $F$ un faisceau 
-constructible sur $X$. Alors les faisceaux $\R^q f_! F$ sont constructibles. 
+Soient $f:X\to S$ un morphisme séparé de type fini et $\cF$ un faisceau 
+constructible sur $X$. Alors les faisceaux $\R^q f_! \cF$ sont constructibles. 
 \end{theorem}
 
-Nous ne considérons que le cas où $F$ est annulé par un entier inversible 
+Nous ne considérons que le cas où $\cF$ est annulé par un entier inversible 
 sur $X$. 
 
-Par démontrer le théorème on se ramène au cas o`u $F$ est un faisceau 
+Par démontrer le théorème on se ramène au cas o`u $\cF$ est un faisceau 
 constant $\const{\dZ/n}$ et où $f:X\to S$ est un morphisme propre et lisse 
 dont les fibres sont des courbes géométriquement connexes de genre $g$. 
-Pour $n$ inversible sur $X$, les faisceaux $\R^q f_* F$ sont alors localement 
+Pour $n$ inversible sur $X$, les faisceaux $\R^q f_* \cF$ sont alors localement 
 libres de rang fini, nuls pour $q>2$ (\ref{4-6-1}). Remplaçant $\dZ/n$ par le 
 faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement 
 \begin{equation}\label{eq:4}
@@ -2512,7 +2513,7 @@ En particulier, pour $S=$ un point et $\cF$ le faisceau constant $\dZ/n$,
 
 Des dévissages utilisant le théorème de changement de bas nous ramènent au 
 cas où $X$ est une courbe propre et lisse, où $S=$ un point, et où 
-$F=\dZ/n$. Les groupes de cohomologie considérés sont alors nuls pour 
+$\cF=\dZ/n$. Les groupes de cohomologie considérés sont alors nuls pour 
 $q\ne 0,1,2$, et on invoque \cite{12}: en effet, si $X$ est propre sur $\dC$, 
 on a $\pi_0(X) = \pi_0(\an X)$ et $\pi_1(X) = $ complété profini de 
 $\pi_1(\an X)$, d'où l'assertion pour $q=0,1$. Pour $q=2$, on utilise la 
