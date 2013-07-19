@@ -1,7 +1,7 @@
 \documentclass{article}
 
 
-\title{Cohomologie \'Etale}
+\title{Cohomologie \'Etale\thanks{r\'edig\'e par J. Boutot}}
 \author{Pierre Deligne}
 \date{1977}
 
@@ -56,9 +56,11 @@
 
 
 % miscelaneous
+  \newcommand{\an}[1]{{#1}^{\textnormal{an}}}
   \newcommand{\const}[1]{\underline{#1}}
   \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
   \newcommand{\iso}{\xrightarrow\sim}
+  \newcommand{\R}{\mathsf{R}}
 
 
 % theorem types
@@ -1082,10 +1084,10 @@ Si $f:X\to Y$ est un morphisme de schémas et $F$ un faisceau sur $\et X$,
 l'\emph{image directe} $f_* F$ de $F$ par $f$ est le faisceau sur $\et Y$ 
 défini par $f_* F(V) = F(X\times_Y V)$ pour tout $V$ étale sur $Y$. Le foncteur 
 $f_*:\ab\sh(\et X)\to \ab\sh(\et Y)$ est exact à gauche. Ses foncteurs 
-dérivés à droite $R^q f_*$ s'appellent images directes supérieures. Si 
+dérivés à droite $\R^q f_*$ s'appellent images directes supérieures. Si 
 $\bar y$ est un point géométrique de $Y$, on a 
 \[
-  (R^q f_* F)_{\bar y} = \varinjlim \h^q(V\times_Y X,F)\text{,}
+  (\R^q f_* F)_{\bar y} = \varinjlim \h^q(V\times_Y X,F)\text{,}
 \]
 limite inductive prise sur les voisinages étales $V$ de $\bar y$. 
 
@@ -1102,7 +1104,7 @@ que $\widetilde U=U\times_V \widetilde Y$; on posera
 le limite inductive étant prise sur les voisinages étales $V'$ de $\bar y$ qui 
 dominent $V$. Avec cette définition, on a 
 \[
-  \left(R^q f_* F\right)_{\bar y} = \h^q(\widetilde X,F)\text{.}
+  \left(\R^q f_* F\right)_{\bar y} = \h^q(\widetilde X,F)\text{.}
 \]
 
 Le foncteur $f_*$ a un adjoint à gauche $f^*$, le foncteur ``image 
@@ -1121,8 +1123,8 @@ Soient $F$ un faisceau abélien sur $\et X$ et $f:X\to Y$ un morphisme de
 schémas (resp. des morphismes de schémas $X\xrightarrow f Y \xrightarrow g Z$). 
 On a une suite spectrale 
 \begin{align*}
-  E_2^{pq} &= \h^p(Y,R^q f_* F) \Rightarrow \h^{p+q}(X,F) \\
-  \text{(resp.}\qquad E_2^{pq} &= R^p g_* R^q f_* F \Rightarrow R^{p+q}(gf)_* F\text{).}
+  E_2^{pq} &= \h^p(Y,\R^q f_* F) \Rightarrow \h^{p+q}(X,F) \\
+  \text{(resp.}\qquad E_2^{pq} &= \R^p g_* \R^q f_* F \Rightarrow \R^{p+q}(gf)_* F\text{).}
 \end{align*}
 \end{theorem}
 
@@ -1131,8 +1133,8 @@ On a une suite spectrale
 
 
 \begin{corollary}\label{2-3-5}
-Si $R^q f_* F=0$ pour tout $q>0$, on a $\h^p(Y,f_* F)=\h^p(X,F)$ (resp. 
-$R^p g_*(F_* F) = R^p(g f)_* F$) pour tout $p\geqslant 0$. 
+Si $\R^q f_* F=0$ pour tout $q>0$, on a $\h^p(Y,f_* F)=\h^p(X,F)$ (resp. 
+$\R^p g_*(F_* F) = \R^p(g f)_* F$) pour tout $p\geqslant 0$. 
 \end{corollary}
 
 Cela s'applique en particulier dans le cas suivant:
@@ -1143,7 +1145,7 @@ Cela s'applique en particulier dans le cas suivant:
 
 \begin{proposition}\label{2-3-6}
 Soit $f:X\to Y$ un morphisme fini (voire, par passage à la limite, un 
-morphisme entier) et $F$ un faisceau abélien sur $X$. Alors $R^q f_* F=0$, 
+morphisme entier) et $F$ un faisceau abélien sur $X$. Alors $\R^q f_* F=0$, 
 pour tout $q>0$.
 \end{proposition}
 
@@ -1435,7 +1437,7 @@ Remarquons tout d'abord qu'on a:
   \h^2(G',\bar K^\times) \simeq \h^2\left(G,(\bar K\otimes_K K')^\times\right)\text{.}
 \]
 (D'un point de vue géométrique si l'on note $x=\spec(K)$, $x'=\spec(K')$ et 
-$\pi:x'\to x$ le morphisme canonique, on a $R^q \pi_*(\dG_{m,x'}) = 0$ pour 
+$\pi:x'\to x$ le morphisme canonique, on a $\R^q \pi_*(\dG_{m,x'}) = 0$ pour 
 $q>0$ et par suite $\h^q(x',\dG_{m,X'})\simeq \h^q(x,\pi_*\dG_{m,X'})$ pour 
 $q\geqslant 0$). 
 
@@ -1515,7 +1517,7 @@ Si un corps $K$ est $C_1$, on a $\br(K)=0$.
 \end{proposition}
 
 Il s'agit de montrer que tout corps gauche $D$ de centre $K$ et fini sur $K$ 
-est égale à $K$. Soient $r^2$ le degré de $D$ sur $K$ et $\nrd:D\to K$ la 
+est égale à $K$. Soient $\R^2$ le degré de $D$ sur $K$ et $\nrd:D\to K$ la 
 norme réduite. 
 
 (Localement pour la topologie étale sur $K$, $D$ est isomorphe -- non 
@@ -1528,11 +1530,11 @@ topologie étale se descende, à cause de son unicité locale, en une
 application $\nrd:D\to K$). 
 
 Le seul zéro de $\nrd$ est l'élément nul de $D$, car, si $x\ne 0$, on a 
-$\nrd(x)\cdot \nrd(x^{-1}) = 1$. D'autre part, si $\{e_1,\dotsc,e_{r^2}\}$ est 
+$\nrd(x)\cdot \nrd(x^{-1}) = 1$. D'autre part, si $\{e_1,\dotsc,e_{\R^2}\}$ est 
 une base de $D$ sur $K$ et si $x=\sum x_i e_i$, la fonction $\nrd(x)$ s'écrit 
-comme un polynôme homogène $\nrd(x_1,\dotsc,x_{r^2})$ de degré $r$ (c'est 
+comme un polynôme homogène $\nrd(x_1,\dotsc,x_{\R^2})$ de degré $r$ (c'est 
 clair localement pour la topologie étale). Puisque $K$ est $C_1$, on a 
-$r^2\leqslant r$, c'est-à-dire $r=1$ et $D=K$. 
+$\R^2\leqslant r$, c'est-à-dire $r=1$ et $D=K$. 
 
 
 
@@ -1633,7 +1635,7 @@ suite exacte de faisceaux:
 
 
 \begin{lemma}\label{3-3-2}
-On a $R^q j_* \dG_{m,\eta} = 0$ pour tout $q>0$.
+On a $\R^q j_* \dG_{m,\eta} = 0$ pour tout $q>0$.
 \end{lemma}
 
 Il suffit de montrer que la fibre de ce faisceau en tout pointe fermé $x$ 
@@ -1642,7 +1644,7 @@ le corps des fractions de $\tilde\cO_{X,x}$, on a
 \[
   \spec(K) = \eta\times_X \spec(\tilde\cO_{X,x})\text{,}
 \]
-donc $(R^qj_*\dG_{m,\eta})_x = \h^q(\spec(K),\dG_m)$. 
+donc $(\R^qj_*\dG_{m,\eta})_x = \h^q(\spec(K),\dG_m)$. 
 
 Or $K$ est une extension algébrique de $k(X)$, donc une extension de degré 
 de transcendante $1$ de $k$: le lemme résulte de (\ref{3-2-4}). 
@@ -1671,7 +1673,7 @@ pour tout $q\geqslant 0$ et le deuxième membre est nul pour $q>0$ d'après
 On a $\h^q\left(X,\bigoplus_{x\in X} i_{x*} \dZ_x\right) = 0$ pour tout $q>0$. 
 \end{lemma}
 
-En effet pour tout point fermé de $X$, on a $R^q i_{x*}\dZ_x 0$ pour $q>0$, 
+En effet pour tout point fermé de $X$, on a $\R^q i_{x*}\dZ_x 0$ pour $q>0$, 
 car $i_x$ est un morphisme fini (\ref{2-3-6}), et 
 \[
   \h^q(X,i_{x*}\dZ_x) = \h^q(x,\dZ_x)\text{.}
@@ -1910,7 +1912,7 @@ Ce chapitre est consacré à la démonstration et aux applications du
 \begin{theorem}\label{4-1-1}
 Soient $f:X\to S$ un morphisme propre de schémas et $F$ un faisceau abélien 
 de torsion sur $X$. Alors, quel que soit $q\geqslant 0$, la fibre de 
-$R^q f_* F$ en un point géométrique $s$ de $S$ est isomorphe à la 
+$\R^q f_* F$ en un point géométrique $s$ de $S$ est isomorphe à la 
 cohomologie $\h^q(X_s,F)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
 $s$. 
 \end{theorem}
@@ -1928,7 +1930,7 @@ spéciale avale la fibre générale.
 
 Dans le cas des schémas la démonstration est plus délicate et il est 
 indispensable de supposer que $F$ est de torsion (\cite[XII.2]{4}). Compte 
-tenu de la description des fibres de $R^q f_* F$ (\ref{2-3-3}), le théorème 
+tenu de la description des fibres de $\R^q f_* F$ (\ref{2-3-3}), le théorème 
 (\ref{4-1-1}) est essentiellement équivalent au 
 
  
@@ -2218,7 +2220,7 @@ un faisceau constant fini sur $X_i'$.
 
 Par la méthode de fibration par des courbes (\ref{3-4-3}), on se ramène 
 à démontrer le théorème en dimension relative $\leqslant 1$. D'après 
-le paragraphe précédent, il suffira de montrer ue, si $S$ est le spectre 
+le paragraphe précédent, il suffira de montrer que, si $S$ est le spectre 
 d'un anneau local noethérien strictement hensélien, $f:X\to S$ un 
 morphisme propre dont la fibre fermée $X_0$ est de dimension $\leqslant 1$ 
 et $n$ un entier $\geqslant 0$, l'homomorphisme canonique 
@@ -2230,7 +2232,7 @@ est bijectif pour $q=0$ et surjectif pour $q>0$.
 Les cas $q=0$ et $1$ ont été vus plus haut et on a $\h^q(X_0,\dZ/n) = 0$ 
 pour $q\geqslant 3$; il suffit donc de traiter le cas $q=2$. On peut 
 évidemment supposer que $n$ est une puissance d'un nombre premier. Si 
-$n=p^r$, où $p$ est la charactéristique du corps résiduel de $S$, la 
+$n=p^r$, où $p$ est la caractéristique du corps résiduel de $S$, la 
 théorie d'Artin-Schreier montre qu'un a $\h^2(X_0,\dZ/p^r) = 0$. Si 
 $n=\ell^r$, $\ell\ne p$, on déduit de la théorie de Kummer un diagramme 
 commutatif 
@@ -2272,7 +2274,7 @@ Tout diviseur sur $X_0$ est combinaison linéaire de diviseurs dont le
 support est concentré en un seul point fermé non isolé de $X_0$. Soient 
 $x$ un tel point, $t_0\in\cO_{X_0,x}$ un élément régulier non inversible 
 de $\cO_{X_0,x}$ et $D_0$ le diviseur concentré en $x$ d'équation locale 
-$t_0$. Soit $U$ un voisinage ouvert de $x$ dans $X$ tel u'il existe un section 
+$t_0$. Soit $U$ un voisinage ouvert de $x$ dans $X$ tel qu'il existe un section 
 $t\in \Gamma(U,\cO_U)$ relevant $t_0$. Soit $Y$ le fermé de $U$ d'équation 
 $t=0$; quitte à prendre $U$ assez petit, on peut supposer que $x$ est le 
 seul point de $Y\cap X_0$. Alors $Y$ est quasi-fini au-dessus de $S$ en $x$; 
@@ -2282,7 +2284,7 @@ $X_0$. De plus, comme $X$ est séparé sur $S$, $Y_1$ est fermé dans $X$.
 
 Quitte à remplacer $U$ par un voisinage ouvert plus petit de $x$, on peut 
 supposer que $Y=Y_1$, autrement dit que $Y$ est fermé dans $X$. On définit 
-alors un diviseur $D$ sur $X$ relevant $D_0$ en posant $D|X-Y=0$ et 
+alors un diviseur $D$ sur $X$ relevant $D_0$ en posant $D|X\setminus Y=0$ et 
 $D|U=\dv(t)$ ce qui a un sens car $t$ est inversible sur $U\setminus Y$. 
 
 
@@ -2292,12 +2294,12 @@ $D|U=\dv(t)$ ce qui a un sens car $t$ est inversible sur $U\setminus Y$.
 \subsubsection{Remarque}\label{4-4-2}
 
 Dans le cas où $f$ est propre, on pourrait aussi faire une démonstration 
-du m\^eme style que celle de la proposition (\ref{4-2-2}). En effet, comme 
+du même style que celle de la proposition (\ref{4-2-2}). En effet, comme 
 $X_0$ est une courbe, il n'y a pas d'obstruction à relever un faisceau 
 inversible sur $X_0$ aux voisinages infinitésimaux $X_n$ de $X_0$, donc au 
 complété formel $\fX$ de $X$ le long de $X_0$. On conclut alors en 
 appliquant successivement le théorème d'existence de Grothendieck et le 
-théorème dapproximation d'Artin. 
+théorème d;approximation d'Artin. 
 
 
 
@@ -2315,20 +2317,20 @@ théorème dapproximation d'Artin.
 
 
 \begin{definition}\label{4-5-1}
-Soit $X$ un sch\'ema s\'epar\'e de type fini sur un corps $k$. D'apr\`es un 
-th\'eor\`eme de Nagata, il existe un sch\'ema $\bar X$ propre sur $k$ et une 
+Soit $X$ un schéma séparé de type fini sur un corps $k$. D'après un 
+théorème de Nagata, il existe un schéma $\bar X$ propre sur $k$ et une 
 immersion ouverte $j:X\to\bar X$. Pour tout faisceau de torsion $F$ sur $X$ on 
-note $j_! F$ le prolongement par $0$ de $F$ \`a $\bar X$ et on d\'efinit les 
-groupes de \emph{cohomologie \`a support propre} 
+note $j_! F$ le prolongement par $0$ de $F$ à $\bar X$ et on définit les 
+groupes de \emph{cohomologie à support propre} 
 \[
   \h_c^q(X,F)=\h^q(\bar X, j_! F) \text{.}
 \]
 \end{definition}
 
-Montrons que cette d\'efinition est ind\'ependante de la compactification 
+Montrons que cette définition est indépendante de la compactification 
 $j:X\to\bar X$ choisie. Soient $j_1:X\to \bar X_1$ et $j_2:X\to \bar X_2$ deux 
 compactifications. Alors $X$ s'envoie dans $\bar X_1\times \bar X_2$ par 
-$x\mapsto (j_1(x),j_2(x))$ et l'image ferm\'ee $\bar X_3$ de $X$ par cette 
+$x\mapsto (j_1(x),j_2(x))$ et l'image fermée $\bar X_3$ de $X$ par cette 
 application est une compactification de $X$. On a ainsi un diagramme commutatif 
 \[\xymatrix{
   & \bar X_1 \\
@@ -2336,8 +2338,8 @@ application est une compactification de $X$. On a ainsi un diagramme commutatif
     & & \bar X_3 \ar[ul]_-{p_1} \ar[dl]^-{p_2} \\
   & \bar X_2
 }\]
-o\`u $p_1$ et $p_2$, les restrictions des projections naturelles \`a 
-$\bar X_3$, sont des morphismes propres. Il suffit donc de traiter le cas o\`u 
+où $p_1$ et $p_2$, les restrictions des projections naturelles à 
+$\bar X_3$, sont des morphismes propres. Il suffit donc de traiter le cas où 
 on a un diagramme commutatif 
 \[\xymatrix{
   X \ar[r]^-{j_2} \ar[dr]_-{j_1} 
@@ -2351,18 +2353,18 @@ avec $p$ un morphisme propre.
 
 
 \begin{lemma}\label{4-5-2}
-On a $p_*(j_{2!} F) = j_{1!} F$ et $R^q p_*(j_{2!} F) = 0$, pour $q>0$. 
+On a $p_*(j_{2!} F) = j_{1!} F$ et $\R^q p_*(j_{2!} F) = 0$, pour $q>0$. 
 \end{lemma}
 
 Notons tout de suite que lemme suffit pour conclure. En utilisant la suite 
-spectrale de Leray du morphisme $p$, on en d\'eduit qu'on a, pour tout 
+spectrale de Leray du morphisme $p$, on en déduit qu'on a, pour tout 
 $q\geqslant 0$, 
 \[
   \h^q(\bar X_2, j_{2!} F) = \h^q(\bar X_1, j_{1!} F) \text{.}
 \]
 
-Pour d\'emontrer le lemme, on raisonne fibre par fibre en utilisant le th\'eor\`eme 
-de changement de base (\ref{4-1-1}) pour $p$. Le r\'esultat est imm\'ediat, car, 
+Pour démontrer le lemme, on raisonne fibre par fibre en utilisant le théorème 
+de changement de base (\ref{4-1-1}) pour $p$. Le résultat est immédiat, car, 
 au-dessus d'un point de $X$, $p$ est un isomorphe et, au-dessus d'un point de 
 $\bar X_1\setminus X$, $j_{2!} F$ est nul sur la fibre de $p$. 
 
@@ -2372,15 +2374,15 @@ $\bar X_1\setminus X$, $j_{2!} F$ est nul sur la fibre de $p$.
 
 \subsubsection{}\label{4-5-3}
 
-De m\^eme, si $f:X\to S$ est un morphisme s\'epar\'e de type fini de sch\'emas 
-noeth\'eriens, il existe un morphisme propre $\bar f:\bar X\to S$ et un 
-immersion ouverte $j:X\to \bar X$. On d\'efinit alors les images directes s
-sup\'erieures \`a support propre $R^q f_!$ en posant pour tout faisceau de 
+De même, si $f:X\to S$ est un morphisme séparé de type fini de schémas 
+noethériens, il existe un morphisme propre $\bar f:\bar X\to S$ et un 
+immersion ouverte $j:X\to \bar X$. On définit alors les images directes s
+supérieures à support propre $\R^q f_!$ en posant pour tout faisceau de 
 torsion $F$ sur $X$
 \[
-  R^q f_! F = R^q f_*(j_! F) \text{.}
+  \R^q f_! F = \R^q f_*(j_! F) \text{.}
 \]
-On v\'erifie comme pr\'ec\'edemment que cette d\'efinition est ind\'ependante de 
+On vérifie comme précédemment que cette définition est indépendante de 
 la compactification choisie. 
 
 
@@ -2388,23 +2390,23 @@ la compactification choisie.
 
 
 \begin{theorem}\label{4-5-4}
-Soient $f:X\to S$ un morphisme s\'epar\'e de type fini de sch\'emas noeth\'eriens 
-et $F$ un faisceau de torsion sur $X$. Alors la fibre de $R^q f_! F$ en un 
-point g\'eom\'etrique $s$ de $S$ est isomorphe \`a la cohomologie \`a support 
+Soient $f:X\to S$ un morphisme séparé de type fini de schémas noethériens 
+et $F$ un faisceau de torsion sur $X$. Alors la fibre de $\R^q f_! F$ en un 
+point géométrique $s$ de $S$ est isomorphe à la cohomologie à support 
 propre $\h_c^q(X_s,F)$ de la fibre $X_s$ de $f$ en $s$. 
 \end{theorem}
 
-C'est une simple variante du th\'eor\`eme de changement de base pour un morphisme 
-propre (\ref{4-1-1}). Plus g\'en\'eralement, si 
+C'est une simple variante du théorème de changement de base pour un morphisme 
+propre (\ref{4-1-1}). Plus généralement, si 
 \[\xymatrix{
   X \ar[d]^-f
     & X' \ar[l]_-{g'} \ar[d]^-{f'} \\
   S 
     & S' \ar[l]^-g
 }\]
-est un diagramme cart\'esien, on a un isomorphe canonique 
+est un diagramme cartésien, on a un isomorphe canonique 
 \begin{equation}\label{eq:3}
-  g^* (R^q f_! F) \simeq R^q f_!'({g'}^* F) \text{.}
+  g^* (\R^q f_! F) \simeq \R^q f_!'({g'}^* F) \text{.}
 \end{equation}
 
 
@@ -2423,19 +2425,19 @@ est un diagramme cart\'esien, on a un isomorphe canonique
 
 
 \begin{theorem}[d'annulation]\label{4-6-1}
-Soient $f:X\to S$ un morphisme s\'epar\'e de type fini dont les fibres sont de 
+Soient $f:X\to S$ un morphisme séparé de type fini dont les fibres sont de 
 dimension $\leqslant n$ et $F$ un faisceau de torsion sur $X$. Alors on a 
-$R^q f_! F = 0$ pour $q>2 n$. 
+$\R^q f_! F = 0$ pour $q>2 n$. 
 \end{theorem}
 
-D'apr\`es le th\'eor\`eme de changement de base, on peut supposer que $S$ est 
-le spectre d'un corps s\'eparablement clos. Si $\dim X = n$, il existe un 
+D'après le théorème de changement de base, on peut supposer que $S$ est 
+le spectre d'un corps séparablement clos. Si $\dim X = n$, il existe un 
 ouvert affine $U$ de $X$ tel que $\dim(X\setminus U) < n$; on a alors un suite 
-exacte $0\to F_U \to F \to F_{X\setminus U} \to 0$ et, par r\'ecurrence sur $n$, 
-il suffit de d\'emontrer le th\'eor\`eme pour $X=U$ affine. Puis la m\'ethode de 
-fibration par des courbes (\ref{3-4-1}) et le th\'eor\`eme de changement de 
-base permettent de se ramener \`a une courbe sur un corps s\'eparablement clos 
-pour lequelle on d\'eduit le r\'esultat voulu du th\'eor\`eme de Tsen 
+exacte $0\to F_U \to F \to F_{X\setminus U} \to 0$ et, par récurrence sur $n$, 
+il suffit de démontrer le théorème pour $X=U$ affine. Puis la méthode de 
+fibration par des courbes (\ref{3-4-1}) et le théorème de changement de 
+base permettent de se ramener à une courbe sur un corps séparablement clos 
+pour laquelle on déduit le résultat voulu du théorème de Tsen 
 (\ref{3-3-6}). 
 
 
@@ -2443,26 +2445,100 @@ pour lequelle on d\'eduit le r\'esultat voulu du th\'eor\`eme de Tsen
 
 
 \begin{theorem}[de finitude]\label{4-6-2}
-Soient $f:X\to S$ un morphisme s\'epar\'e de type fini et $F$ un faisceau 
-constructible sur $X$. Alors les faisceaux $R^q f_! F$ sont constructibles. 
+Soient $f:X\to S$ un morphisme séparé de type fini et $F$ un faisceau 
+constructible sur $X$. Alors les faisceaux $\R^q f_! F$ sont constructibles. 
 \end{theorem}
 
-Nous ne consid\'erons que le cas o\`u $F$ est annul\'e par un entier inversible 
+Nous ne considérons que le cas où $F$ est annulé par un entier inversible 
 sur $X$. 
 
-Par d\'emontrer le th\'eor\`eme on s\'e ram\`ene au cas o`u $F$ est un faisceau 
-constant $\const{\dZ/n}$ et o\`u $f:X\to S$ est un morphisme propre et lisse 
-dont les fibres sont des courbes g\'eom\'etriquement connexes de genre $g$. 
-Pour $n$ inversible sur $X$, les faisceaux $R^q f_* F$ sont alors localement 
-libres de rang fini, nuls pour $q>2$ (\ref{4-6-1}). Remplacant $\dZ/n$ par le 
+Par démontrer le théorème on se ramène au cas o`u $F$ est un faisceau 
+constant $\const{\dZ/n}$ et où $f:X\to S$ est un morphisme propre et lisse 
+dont les fibres sont des courbes géométriquement connexes de genre $g$. 
+Pour $n$ inversible sur $X$, les faisceaux $\R^q f_* F$ sont alors localement 
+libres de rang fini, nuls pour $q>2$ (\ref{4-6-1}). Remplaçant $\dZ/n$ par le 
 faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement 
 \begin{equation}\label{eq:4}
 \begin{aligned}
-  R^0 f_* \dmu_n &= \dmu_n \\
-  R^1 f_* \dmu_n &= \const\pic(X/S)_n \\
-  R^2 f_* \dmu_n &= \dZ/n \text{.}
+  \R^0 f_* \dmu_n &= \dmu_n \\
+  \R^1 f_* \dmu_n &= \const\pic(X/S)_n \\
+  \R^2 f_* \dmu_n &= \dZ/n \text{.}
 \end{aligned}
 \end{equation}
+
+
+
+
+
+\begin{theorem}[comparaison avec la cohomologie classique]\label{4-6-3}
+Soient $f:X\to S$ un morphisme séparé de schémas de type fini sur $\dC$, 
+et $F$ un faisceau de torsion sur $X$. Notons par un exposant $\an{}$ le foncteur 
+de passage aux espaces topologiques usuels, et par $\R^q \an f_!$ les foncteurs 
+dérivés du foncteur image directe à support propre par $\an f$. On a 
+\[
+  \an{(\R^q f_! F)} \simeq \R^q \an f_! \an F \text{.}
+\]
+En particulier, pour $S=$ un point et $F$ le faisceau constant $\dZ/n$, 
+\[
+  \h_c^q(X,\dZ/n) \simeq \h_c^q(\an X,\dZ/n)\text{.}
+\]
+\end{theorem}
+
+Des dévissages utilisant le théorème de changement de bas nous ramènent au 
+cas où $X$ est une courbe propre et lisse, où $S=$ un point, et où 
+$F=\dZ/n$. Les groupes de cohomologie considérés sont alors nuls pour 
+$q\ne 0,1,2$, et on invoque \cite{12}: en effet, si $X$ est propre sur $\dC$, 
+on a $\pi_0(X) = \pi_0(\an X)$ et $\pi_1(X) = $ complété profini de 
+$\pi_1(\an X)$, d'où l'assertion pour $q=0,1$. Pour $q=2$, on utilise la 
+suite exacte de Kummer et le fait que, par \cite{12} encore, 
+$\pic(X)=\pic(\an X)$. 
+
+
+
+
+
+\begin{theorem}[dimension cohomologique des schémas affines]\label{4-6-4}
+Soient $X$ un schéma affine de type fini sur un corps séparablement clos et 
+$F$ un faisceau de torsion sur $X$. Alors on a $\h^1(X,F) = 0$ pour 
+$q>\dim(X)$. 
+\end{theorem}
+
+Pour la très jolie démonstration nous revoyons à \cite{4}, XIV \S 2 et 3. 
+
+
+
+
+
+\subsubsection{Remarque}\label{4-6-5}
+
+Ce théorème est en quelque sorte un substitut pour la théorie de Morse. 
+Considérons en effet le cas classique où $X$ est lisse et affine sur $\dC$ 
+plongé dans un espace affine type $\dC^N$. Alors, pour presque tout point 
+$p\in\dC^N$, la fonction ``distance à $p$'' sur $X$ est une fonction de Morse 
+et les indices de ses points critiques sont plus petits que $\dim(X)$. Ainsi 
+$X$ est obtenu par recollement d'anses d'indice plus petit que $\dim(X)$, d'où 
+l'analogue classique de (\ref{4-6-4}). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Acyclicité locale des morphismes lisses}\label{5}
 
 
 
@@ -2485,6 +2561,8 @@ faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement
   \bibitem{8} A. Grothendieck et J. Dieudonné, \emph{Éléments de géométrie algébrique}, Pub. Math. IHES, 1960/67. 
 
   \bibitem{11} M. Raynaud, \emph{Anneaux Locaux Henséliens}, Springer no.169, 1970. 
+  
+  \bibitem{12} J.-P. Serre, \emph{Géométrie Algébrique et Géométrie Analytique}, Ann. de l'Institut Fourier, 1956. 
 
   \bibitem{14} J.-P. Serre, \emph{Cohomologie galoisienne}, Springer no.5, 1965.
 
