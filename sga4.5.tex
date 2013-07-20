@@ -4,7 +4,17 @@
 \usepackage[utf8]{inputenc}
 \usepackage[all]{xy}
 \usepackage[stable]{footmisc}
-\usepackage{amsmath,amssymb,amsthm,bm,enumerate,fullpage,mathrsfs,stmaryrd} %,titlesec} to have inline subsubsections
+\usepackage{
+  amsmath,
+  amssymb,
+  amsthm,
+  bm,
+  enumerate,
+  fullpage,
+  mathrsfs,
+  microtype,
+  stmaryrd
+} %,titlesec} to have inline subsubsections
 \usepackage[colorlinks,backref=page]{hyperref}
 
 
@@ -3090,8 +3100,8 @@ $t\to\widetilde S^s$, les flèches de cospécialisation
 $\h^q(X_t,\dZ/n)\to\h^q(X_s,\dZ/n)$ sont bijectives.
 \end{theorem}
 
-Cela r\'esulte imm\'ediatement de la d\'efinition des fl\`eches de 
-cosp\'ecialisation et des théorèmes de finitude et de changement de base pour 
+Cela résulte immédiatement de la définition des flèches de 
+cospécialisation et des théorèmes de finitude et de changement de base pour 
 les propres. 
 
 
@@ -3099,7 +3109,7 @@ les propres.
 
 
 \begin{theorem}[changement de base par un morphisme lisse]\label{I:5-3-2}
-Soit un diagramme cart\'esien 
+Soit un diagramme cartésien 
 \[\xymatrix{
   X' \ar[r]^-{g'} \ar[d]^-{f'} 
     & X \ar[d]^-f \\
@@ -3107,23 +3117,23 @@ Soit un diagramme cart\'esien
     & S
 }\]
 avec $g$ lisse. Pour tout faisceau $\cF$ sur $X$, de torsion et premier aux 
-caract\'eristiques r\'esiduelles de $S$, on a 
+caractéristiques résiduelles de $S$, on a 
 \[
   g^* \R^q f_* \cF \iso \R^q f_*'({g'}^* \cF) \text{.}
 \]
 \end{theorem}
 
-En prenant un recouvrement ouvert de $X$< on se ram\`ene au cas o\`u $X$ est 
-affine, puis par un passage \`a la limite au case \`i $X$ est de type fini sur 
+En prenant un recouvrement ouvert de $X$< on se ramène au cas où $X$ est 
+affine, puis par un passage à la limite au case \`i $X$ est de type fini sur 
 $S$. Alors $f$ se factorise en une immersion ouverte $j:X\to \bar X$ et un 
 morphisme propre $\bar f:\bar X\to S$. De la suite spectrale de Leray pour 
 $\bar f\circ j$ et du théorème de changement de base pour les morphismes 
-propres, on d\'eduit qu'il suffit de d\'emontrer le th\'eor\`eme dans le cas 
-o\`u $X\to S$ est une immersion ouverte. 
+propres, on déduit qu'il suffit de démontrer le théorème dans le cas 
+où $X\to S$ est une immersion ouverte. 
 
-Dans ce cas, si $\cF$ est de la forme $\varepsilon_* C$, o\`u 
-$\varepsilon:t\to X$ est un point g\'eom\'etrique de $X$< le th\'eor\`eme est 
-corollaire de (\ref{I:5-1-5}). Le cas g\'en\'eral en r\'esulte par le lemme 
+Dans ce cas, si $\cF$ est de la forme $\varepsilon_* C$, où 
+$\varepsilon:t\to X$ est un point géométrique de $X$< le théorème est 
+corollaire de (\ref{I:5-1-5}). Le cas général en résulte par le lemme 
 (\ref{I:5-1-8}). 
 
 
@@ -3131,20 +3141,20 @@ corollaire de (\ref{I:5-1-5}). Le cas g\'en\'eral en r\'esulte par le lemme
 
 
 \begin{corollary}\label{I:5-3-3}
-Soient $K/k$ une extension de corps s\'eparablement clos, $X$ un $k$-sch\'ema 
-et $n$ un entier premier \`a la charact\'eristique de $k$. Alors l'application 
+Soient $K/k$ une extension de corps séparablement clos, $X$ un $k$-schéma 
+et $n$ un entier premier à la charactéristique de $k$. Alors l'application 
 canonique $\h^q(X,\dZ/n) \to \h^q(X_K,\dZ/n)$ est bijective pour tout 
 $q\geqslant 0$. 
 \end{corollary}
 
-Il suffit de remarquer que $\bar K$ est limite inductive de $\bar k$-alg\`ebres 
+Il suffit de remarquer que $\bar K$ est limite inductive de $\bar k$-algèbres 
 lisses. 
 
 
 
 
 
-\begin{theorem}[puret\'e relative]\label{I:5-3-4}
+\begin{theorem}[pureté relative]\label{I:5-3-4}
 Soit un diagramme commutatif 
 \begin{equation}\label{I:eq:7}\xymatrix{
   U \ar@{^{(}->}[r]^-j \ar[dr]
@@ -3153,8 +3163,8 @@ Soit un diagramme commutatif
   & S
 }\end{equation}
 avec $f$ lisse purement de dimension relative $N$, $h$ lisse purement de 
-dimension relative $N-1$, $i$ un plongement ferm\'e et $U=X\setminus Y$. Pour 
-$n$ premier aux charact\'eristiques r\'esiduelles de $S$, on a 
+dimension relative $N-1$, $i$ un plongement fermé et $U=X\setminus Y$. Pour 
+$n$ premier aux charactéristiques résiduelles de $S$, on a 
 \begin{equation*}
 \begin{aligned}
   j_* \dZ/n     &= \dZ/n \\
@@ -3164,11 +3174,11 @@ $n$ premier aux charact\'eristiques r\'esiduelles de $S$, on a
 \end{equation*}
 \end{theorem}
 
-Dans ces formules, $\dZ/n(-1)$ d\'esigne le $\dZ/n$-duel de $\dmu_n$. Si $t$ 
-est une \'equation locale pour $Y$, l'isomorphisme 
-$\R^1j_*\dZ/n\simeq\dZ/n(-1)_Y$ est d\'efini par l'application 
+Dans ces formules, $\dZ/n(-1)$ désigne le $\dZ/n$-duel de $\dmu_n$. Si $t$ 
+est une équation locale pour $Y$, l'isomorphisme 
+$\R^1j_*\dZ/n\simeq\dZ/n(-1)_Y$ est défini par l'application 
 $a:\dZ/n\to \R^1j_*\dmu_n$ qui envoie $1$ sur la classe du $\dmu_n$-torseur des 
-racines $n$-i\`emes de $t$. 
+racines $n$-ièmes de $t$. 
 
 La question est de nature locale. Ceci permet de remplacer $(X,Y)$ par un 
 couple localement isomorphe, par exemple 
@@ -3178,25 +3188,25 @@ couple localement isomorphe, par exemple
     & \ar@{_{(}->}[l]_-i T \ar[dl] \\
   & T
 }\]
-avec $T=\dA_S^{n-1}$ et $i=$ section \`a l'infini. Le corollaire (\ref{I:5-1-9}) 
-s'applique \`a $g$, et fournit $\R^q g_ \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
+avec $T=\dA_S^{n-1}$ et $i=$ section à l'infini. Le corollaire (\ref{I:5-1-9}) 
+s'applique à $g$, et fournit $\R^q g_ \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
 Pour $f$, on a par ailleurs \eqref{I:eq:4}
 \[
   \R^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ pour $q>2$.}
 \]
-On v\'erifie facilement que $j_* \dZ/n = \dZ/n$, et que les $\R^q j_*\dZ/n = 0$ 
-sont concentr\'es sur $i(T)$ pour $q>0$. La suite spectrale de Leray 
-$E_2^{pq} = \R^p f_* \R^q j_*\dZ/n \Rightarrow \R^{p+q}g_* \dZ/n$ se r\'eduit 
-donc \`a 
+On vérifie facilement que $j_* \dZ/n = \dZ/n$, et que les $\R^q j_*\dZ/n = 0$ 
+sont concentrés sur $i(T)$ pour $q>0$. La suite spectrale de Leray 
+$E_2^{pq} = \R^p f_* \R^q j_*\dZ/n \Rightarrow \R^{p+q}g_* \dZ/n$ se réduit 
+donc à 
 \[\xymatrix{
   i^* \R^q j_* \dZ/n & 0 & \cdots \\
   i^* \R^1 j_* \dZ/n \ar[drr]^-{d_2} & 0 & \cdots \\
   \dZ/n              & 0 & \dZ/n(-1) & 0 & \cdots
 }\]
 $\R^q j_*\dZ/n=0$ pour $q\geqslant 0$, et $\R^q j_*\dZ/n$ est le prolongement 
-par z\'ero d'un faisceau localement libre de rang un sur $T$ (isomorphe, via 
-$d_2$, \`a $\dZ/n(-1)$). L'application $a$, d\'efinie plus haut, \'etant 
-injective (ainsi qu'on le v\'erifie fibre par fibre), c'est un isomorphisme, et 
+par zéro d'un faisceau localement libre de rang un sur $T$ (isomorphe, via 
+$d_2$, à $\dZ/n(-1)$). L'application $a$, définie plus haut, étant 
+injective (ainsi qu'on le vérifie fibre par fibre), c'est un isomorphisme, et 
 ceci prouve (\ref{I:5-3-4}). 
 
 
@@ -3205,20 +3215,20 @@ ceci prouve (\ref{I:5-3-4}).
 
 \subsubsection{}\label{I:5-3-5}
 
-Nous renvoyons \`a \cite[XVI \S 4 et \S 5]{4} pour la d\'emonstration des 
-applications suivantes du th\'eor\`eme d'acyclicit\'e (\ref{I:5-2-1}). 
+Nous renvoyons à \cite[XVI \S 4 et \S 5]{4} pour la démonstration des 
+applications suivantes du théorème d'acyclicité (\ref{I:5-2-1}). 
 
 
 
 
 
 \begin{theorem}\label{I:5-3-6} % originally 5.3.5.1
-Soient $f:X\to S$ un morphisme de sch\'emas de type finie sur $\dC$ et $\cF$ un 
+Soient $f:X\to S$ un morphisme de schémas de type finie sur $\dC$ et $\cF$ un 
 faisceau constructible sur $X$. Alors 
 \[
   \an{(\R^q f_*\cF)} \sim \R^q \an f_* (\an\cF)
 \]
-(cf. \ref{I:4-6-3}: en cohomologie ordinaire, il est n\'ecessaire de supposer 
+(cf. \ref{I:4-6-3}: en cohomologie ordinaire, il est nécessaire de supposer 
 $\cF$ est constructible et non seulement de torsion). 
 \end{theorem}
 
@@ -3227,18 +3237,18 @@ $\cF$ est constructible et non seulement de torsion).
 
 
 \begin{theorem}\label{I:5-3-7} % originally 5.3.5.2
-Soient $f:X\to S$ un morphisme de sch\'emas de type fini sur un corps $k$ de 
-charact\'eristique $0$ et $\cF$ un faisceau constructible sur $X$. Alors, les 
-$\R^q f_* \cF$ sont \'egalement constructibles.
+Soient $f:X\to S$ un morphisme de schémas de type fini sur un corps $k$ de 
+charactéristique $0$ et $\cF$ un faisceau constructible sur $X$. Alors, les 
+$\R^q f_* \cF$ sont également constructibles.
 \end{theorem}
 
-La preuve utilise la r\'esolution des singularit\'es et (\ref{I:5-3-4}). Elle est 
-g\'en\'eralis\'ee au cas d'un morphisme de type fini de sch\'emas excellents de 
-charact\'eristique $0$ dans \cite[XIX \S 5]{4}. Une autre d\'emonstration, 
-ind\'ependante de la r\'esolution, est donn\'ee dans ce volume (Th. finitude, 
+La preuve utilise la résolution des singularités et (\ref{I:5-3-4}). Elle est 
+généralisée au cas d'un morphisme de type fini de schémas excellents de 
+charactéristique $0$ dans \cite[XIX \S 5]{4}. Une autre démonstration, 
+indépendante de la résolution, est donnée dans ce volume (Th. finitude, 
 1.1),
 % NOTE: this should be hyperlinked
-elle s'applique \`a un morphisme de sch\'emas de type fini sur un corps ou sur 
+elle s'applique à un morphisme de schémas de type fini sur un corps ou sur 
 un anneau de Dedekind. 
 
 
@@ -3273,22 +3283,22 @@ un anneau de Dedekind.
 
 \subsection{Introduction}\label{I:6-1}
 
-Soit $X$ un vari\'et\'e topologique orient\'ee, purement de dimension $N$, et 
+Soit $X$ un variété topologique orientée, purement de dimension $N$, et 
 supposons que $X$ admette un recouvrement ouvert fini 
 $\sU=(U_i)_{1\leqslant i\leqslant K}$, tel que les intersections non vides 
-d'ouverts $U_i$ soient hom\'eomorphes \`a des boules. Pour une telle variété, 
-le théorème de dualit\'e de Poincar\'e peut se pr\'esenter ainsi: 
+d'ouverts $U_i$ soient homéomorphes à des boules. Pour une telle variété, 
+le théorème de dualité de Poincaré peut se présenter ainsi: 
 
 \begin{enumerate}[\indent A]
   \item La cohomologie de $X$ est la cohomologie de \v Cech correspondant au 
-    rev\^etement $\sU$. C'est la cohomologie du complexe 
+    revêtement $\sU$. C'est la cohomologie du complexe 
     \begin{equation}\label{I:eq:8}
       0 \to \dZ^{A_0} \to \dZ^{A_1} \to \cdots
     \end{equation}
-    o\`u $A_k=\{(i_0,\dotsc,i_k) : i_0<\cdots<i_k\text{ et } U_{i_0}\cap \cdots \cap U_{i_k} \ne \varnothing\}$. 
+    où $A_k=\{(i_0,\dotsc,i_k) : i_0<\cdots<i_k\text{ et } U_{i_0}\cap \cdots \cap U_{i_k} \ne \varnothing\}$. 
     \item Pour $a\in A_k$, $a=(i_0,\dotsc,i_k)$, soit 
       $U_a=U_{i_1}\cap \cdots \cap U_{i_k}$ et soit $j_a$ l'inclusion de $U_a$ 
-      dans $X$. Le faisceau constant $\dZ$ sur $X$ admet la r\'esolution (\`a 
+      dans $X$. Le faisceau constant $\dZ$ sur $X$ admet la résolution (à 
       gauche) 
       \begin{equation}\label{I:eq:9}
       \xymatrix{
@@ -3299,8 +3309,8 @@ le théorème de dualit\'e de Poincar\'e peut se pr\'esenter ainsi:
         & & \dZ \text{.}
       }
       \end{equation}
-      La cohomologie \`a support compact $\h_c^\bullet(X,j_{a!}\dZ)$ n'est autre 
-      que la cohomologie \`a support propre de la boule (orient\'ee) $U_a$: 
+      La cohomologie à support compact $\h_c^\bullet(X,j_{a!}\dZ)$ n'est autre 
+      que la cohomologie à support propre de la boule (orientée) $U_a$: 
         \[
           \h_c^i(X,j_{a!}\dZ) = \begin{cases}
                                   0   & \text{si $i\ne N$} \\
@@ -3309,14 +3319,14 @@ le théorème de dualit\'e de Poincar\'e peut se pr\'esenter ainsi:
         \]
 \end{enumerate}
 
-La suite spectrale d'hypercohomologie, pour le complexe \eqref{I:eq:8}, d'o\`u 
-la dualit\'e de Poincar\'e. 
+La suite spectrale d'hypercohomologie, pour le complexe \eqref{I:eq:8}, d'où 
+la dualité de Poincaré. 
 
 Les points essentiels de cette construction sont 
 \begin{enumerate}[\indent a)]
-  \item l'existence d'une th\'eorie de cohomologie \`a support propre: 
-  \item le fait que tout point $x$ d'une var\'et\'e $X$ purement de dimension 
-    $N$ a un syst\`eme fondamental de voisinages ouverts $U$ pour laquels 
+  \item l'existence d'une théorie de cohomologie à support propre: 
+  \item le fait que tout point $x$ d'une varété $X$ purement de dimension 
+    $N$ a un système fondamental de voisinages ouverts $U$ pour laquels 
     \begin{equation}\label{I:eq:10}
       \h_c^i(U) = \begin{cases}
                     0   & \text{pour $i\ne N$,} \\
@@ -3325,10 +3335,10 @@ Les points essentiels de cette construction sont
     \end{equation}
 \end{enumerate}
 
-La dualit\'e de Poincar\'e en cohomologie \'etale peut se construire sur ce 
+La dualité de Poincaré en cohomologie étale peut se construire sur ce 
 modèle. Pour $X$ lisse purement de dimension $N$ sur $k$ algébriquement clos, 
-$n$ inversible sur $X$ et $x$ un point ferm\'e de $X$, le point clef est de 
-calculer la limite projective, \'etendue aux voisinages \'etales $U$ de $x$ 
+$n$ inversible sur $X$ et $x$ un point fermé de $X$, le point clef est de 
+calculer la limite projective, étendue aux voisinages étales $U$ de $x$ 
 \begin{equation}\label{I:eq:11}
   \varprojlim \h_c^i(U,\dZ/n) 
     = \begin{cases}
@@ -3337,27 +3347,27 @@ calculer la limite projective, \'etendue aux voisinages \'etales $U$ de $x$
       \end{cases} 
 \end{equation}
 
-De m\^eme que pour les vari\'et\'es topologiques il faut d'abord traiter 
+De même que pour les variétés topologiques il faut d'abord traiter 
 directement le cas d'une boule ouverte (voire simplement celui de l'intervalle 
 $(0,1)$), ici il faut d'abord traiter directement le cas des courbes 
-(\ref{I:6-2}). Le th\'eor\`eme d'acyclicit\'e locale des morphismes lisses 
-permet ensuite de ramener \eqref{I:eq:11} \`a ce cas particulier (\ref{I:6-3}). 
+(\ref{I:6-2}). Le théorème d'acyclicité locale des morphismes lisses 
+permet ensuite de ramener \eqref{I:eq:11} à ce cas particulier (\ref{I:6-3}). 
 
 Les isomorphismes \eqref{I:eq:10} et \eqref{I:eq:11} ne sont pas canoniques: 
-ils d\'ependent du choix d'une \emph{orientation} de $X$. Pour $n$ inversible 
-sur un sch\'ema $X$, $\dmu_n$ est un faisceau de $\dZ/n$-modules libres de rang 
-un. On note $\dZ/n(N)$ sa puissance tensorielle $N$-i\`eme ($N\in\dZ$). La 
-forme intrins\`eque de la duixi\`eme ligne de \eqref{I:eq:11} est 
+ils dépendent du choix d'une \emph{orientation} de $X$. Pour $n$ inversible 
+sur un schéma $X$, $\dmu_n$ est un faisceau de $\dZ/n$-modules libres de rang 
+un. On note $\dZ/n(N)$ sa puissance tensorielle $N$-ième ($N\in\dZ$). La 
+forme intrinsèque de la duixième ligne de \eqref{I:eq:11} est 
 \begin{equation}\label{I:eq:12}
   \varprojlim \h_c^{2N} \left(U,\dZ/n(N)\right) = \dZ/n \text{,}
 \end{equation}
 et $\dZ/n(N)$ s'appelle le \emph{faisceau d'orientation} de $X$; le faisceau 
-$\dZ/n(N)$ \'etant constant, isomorphe \`a $\dZ/n$, on peut le faire sortir 
-du signe $N$ et \'ecrire plut\^ot
+$\dZ/n(N)$ étant constant, isomorphe à $\dZ/n$, on peut le faire sortir 
+du signe $N$ et écrire plutôt
 \begin{equation}\label{I:eq:13}
   \varprojlim \h_c^{2N} (U,\dZ/n) = \dZ/n(-N) \text{,}
 \end{equation}
-et la dualit\'e de Poincar\'e prendra la forme d'une dualit\'e parfaite, \`a 
+et la dualité de Poincaré prendra la forme d'une dualité parfaite, à 
 valeurs dans $\dZ/n(_N)$, entre $\h^i(X,\dZ/n)$ et $\h_c^{2N-1}(X,\dZ/n)$. 
 
 
@@ -3377,14 +3387,14 @@ valeurs dans $\dZ/n(_N)$, entre $\h^i(X,\dZ/n)$ et $\h_c^{2N-1}(X,\dZ/n)$.
 
 \subsubsection{}\label{I:6-2-1}
 
-Soient $\bar X$ une courbe projective et lisse sur $k$ alg\'ebriquement clos, et 
+Soient $\bar X$ une courbe projective et lisse sur $k$ algébriquement clos, et 
 $n$ inversible sur $\bar X$. La preuve de (\ref{I:3-3-5}) fournit, pour 
 $\bar X$ connexe, un isomorphisme canonique 
 \[\xymatrix{
   \h^2(\bar X,\dmu_n) = \pic(\bar X)/n\pic(\bar X) \ar[r]^-{\deg}_-{\sim}
     & \dZ/n
 }\]
-Soient $D$ un diviseur r\'eduit de $\bar X$ et $X=\bar X\setminus D$ 
+Soient $D$ un diviseur réduit de $\bar X$ et $X=\bar X\setminus D$ 
 \[\xymatrix{
   X \ar@{^{(}->}[r]^-j 
     & \bar X 
@@ -3398,11 +3408,11 @@ isomorphisme
     & \h^2(\bar X,\dmu_n) \ar[r]^-\sim 
     & \dZ/n \text{.}
 }\]
-Pour $\bar X$ disconnexe, on a de m\^eme 
+Pour $\bar X$ disconnexe, on a de même 
 \[
   \h_c^2(X,\dmu_n) = (\dZ/n)^{\pi_0(X)}
 \]
-et on d\'efinit le \emph{morphisme trace} comme la somme 
+et on définit le \emph{morphisme trace} comme la somme 
 \[\xymatrix{
   \tr : \h_c^2(X,\dmu_n) \simeq (\dZ/n)^{\pi_0(X)} \ar[r]^-\Sigma
     & \dZ/n\text{.}
@@ -3413,51 +3423,51 @@ et on d\'efinit le \emph{morphisme trace} comme la somme
 
 
 \begin{theorem}\label{I:6-2-2}
-La forme $\tr(a\smallsmile b)$ identifie chacun des deux groupes $\h^c(X,\dZ/n)$ 
-et $\h_c^{2-i}(X,\dmu_n)$ au dual (\`a valeurs dans $\dZ/n$) de l'autre. 
+La forme $\tr(a\smallsmile b)$ identifie chacun des deux groupes $\h^i(X,\dZ/n)$ 
+et $\h_c^{2-i}(X,\dmu_n)$ au dual (à valeurs dans $\dZ/n$) de l'autre. 
 \end{theorem}
 
 \emph{Preuve transcendante.} Si $\bar X$ est une courbe projective et lisse sur 
 un trait $S$, et que $j:X\hookrightarrow \bar X$ est l'inclusion du 
-compl\'ementaire d'un diviseur $D$ \'etale sur $S$< les cohomologies (resp. 
-les cohomologies \`a support propre) des fibres g\'eom\'etriques sp\'eciales et 
-g\'en\'eriques de $X/S$ sont ``les m\^emes,'' i.e. les fibres de faisceaux 
-localement constants sur $S$. Ceci se d\'eduit des faits analogues pour 
+complémentaire d'un diviseur $D$ étale sur $S$< les cohomologies (resp. 
+les cohomologies à support propre) des fibres géométriques spéciales et 
+génériques de $X/S$ sont ``les mêmes,'' i.e. les fibres de faisceaux 
+localement constants sur $S$. Ceci se déduit des faits analogues pour 
 $\bar X$ et $D$, via la suite exacte $0\to j_! \dZ/n\to\dZ/n\to {\dZ/n}_D\to 0$ 
-(pour la cohomologie \`a supports propres) et les formules $j_*\dZ/n = \dZ/n$, 
+(pour la cohomologie à supports propres) et les formules $j_*\dZ/n = \dZ/n$, 
 $\R^1 j_* \dZ/n \simeq {\dZ/n}_D(-1)$, $\R^i j_*\dZ/n = 0$ ($i\geqslant 2$) 
 (pour la cohomologie ordinaire) (\ref{I:5-3-4}). 
 
-Ce principe de sp\'ecialisation ram\`ene \ref{I:6-2-2} au cas o\`u $k$ est de 
-charact\'eristique $0$. Par (\ref{I:5-3-3}), ce cas se ram\`ene \`a celui o\`u 
+Ce principe de spécialisation ramène \ref{I:6-2-2} au cas où $k$ est de 
+charactéristique $0$. Par (\ref{I:5-3-3}), ce cas se ramène à celui où 
 $k=\dC$. Enfin, pour $k=\dC$, les groupes $\h^\bullet(X,\dZ/n)$ et 
-$\h_c^\bullet(X,\dmu_n)$ coïncident avec les groupes de m\^eme nom, calcul\'es 
+$\h_c^\bullet(X,\dmu_n)$ coïncident avec les groupes de même nom, calculés 
 pour l'espace topologique classique $X_{\textnormal{cl}}$ et, via 
 l'isomorphisme $\dZ/n\to \dmu_n: x\mapsto \exp\left(\frac{2\pi i x}{n}\right)$, 
-le morphisme trace s'identifie \`a ``int\'egration sur la classe fondamentale,'' 
-de sorte que (\ref{I:6-2-2}) r\'esulte de la dualit\'e de Poincar\'e pour 
+le morphisme trace s'identifie à ``intégration sur la classe fondamentale,'' 
+de sorte que (\ref{I:6-2-2}) résulte de la dualité de Poincaré pour 
 $X_{\textnormal{cl}}$. 
 
 
 
 
 
-\subsubsection{Preuve alg\'ebrique}\label{I:6-2-3}
+\subsubsection{Preuve algébrique}\label{I:6-2-3}
 
-Pour une preuve tr\`es \'economique, voir (Dualit\'e \S 2).
+Pour une preuve très économique, voir (Dualité \S 2).
 % NOTE: should be linked
-En voici une autre, li\'ee \`a l'autodualit\'e de la jacobienne. 
+En voici une autre, liée à l'autodualité de la jacobienne. 
 
 Reprenons les notations de (\ref{I:6-2-1}). On peut supposer -- et on suppose -- 
-que $X$ est connexe. Les cas $i=0$ et $i=2$ \'etant triviaux, on suppose aussi 
-que $i=1$. D\'efinissons $_D\dG_m$ par la suite exacte 
-$0\to _D\dG_m \to \dG_m \to i_*\dG_m\to 0$ (sections de $\dG_m$ congrues \`a 
+que $X$ est connexe. Les cas $i=0$ et $i=2$ étant triviaux, on suppose aussi 
+que $i=1$. Définissons $_D\dG_m$ par la suite exacte 
+$0\to _D\dG_m \to \dG_m \to i_*\dG_m\to 0$ (sections de $\dG_m$ congrues à 
 $1\mod D$). Le groupe $\h^1(\bar X, _D\dG_m)$ classifie les faisceaux 
-inversibles sur $\bar X$ trivialis\'es sur $D$. C'est le groupe des points de 
-$\pic_D(\bar X)$, une extension de $\dZ$ (le degr\'e) par le groupe des points 
-d'une jacobienne g\'en\'eralis\'ee de Rosenlicht (correspondant su conducteur 
-$1$ en chaque point de $D$) $\pic_D^0(\bar X)$, elle-m\^eme extension de la 
-vari\'et\'e ab\'elienne $\pic^0(\bar X)$ par le tore 
+inversibles sur $\bar X$ trivialisés sur $D$. C'est le groupe des points de 
+$\pic_D(\bar X)$, une extension de $\dZ$ (le degré) par le groupe des points 
+d'une jacobienne généralisée de Rosenlicht (correspondant su conducteur 
+$1$ en chaque point de $D$) $\pic_D^0(\bar X)$, elle-même extension de la 
+variété abélienne $\pic^0(\bar X)$ par le tore 
 $\dG_m^D/(\text{$\dG_m$ diagonal})$. 
 
 \begin{enumerate}[\indent a)]
@@ -3467,8 +3477,8 @@ $\dG_m^D/(\text{$\dG_m$ diagonal})$.
     \begin{equation}\label{I:eq:14}
       \h_c^1(X,\dmu_n) = \pic_D^0(\bar X)_n \text{.}
     \end{equation}
-  \item L'application qui \`a $x\in X(k)$ associe la classe du faisceau 
-    inversible $\cO(x)$ sur $\bar X$, trivialis\'e par $1$ sur $D$, provient 
+  \item L'application qui à $x\in X(k)$ associe la classe du faisceau 
+    inversible $\cO(x)$ sur $\bar X$, trivialisé par $1$ sur $D$, provient 
     d'un morphisme 
     \[
       f:X \to \pic_D(\bar X) \text{.}
@@ -3477,7 +3487,7 @@ $\dG_m^D/(\text{$\dG_m$ diagonal})$.
 Pour la suite, on fixe un point base $0$ et on pose $f_0(x)=f(x)-f(0)$. Pour 
 tout homomorphisme $v:\pic_D^0(\bar X)_n \to \dZ/n$, soit 
 $\bar v\in \h^1\left(\pic_D^0(\bar X),\dZ/n\right)$ l'image par $v$ de la classe 
-dans $\h^1\left(\pic_D^0(\bar X),\pic_D^0(\bar X)_n\right)$ du torseur d\'efini 
+dans $\h^1\left(\pic_D^0(\bar X),\pic_D^0(\bar X)_n\right)$ du torseur défini 
 par l'extension 
 \[\xymatrix{
   0 \ar[r] 
@@ -3486,17 +3496,17 @@ par l'extension
     & \pic_D^0(\bar X) \ar[r] 
     & 0
 }\]
-La th\'eorie du corps de classes g\'eom\'etrique (telle qu'expos\'ee dans 
+La théorie du corps de classes géométrique (telle qu'exposée dans 
 Serre \cite{15}) montre que l'application $v\mapsto f_0^*(\bar v)$: 
 \begin{equation}\label{I:eq:15}
   \hom\left(\pic_D^0(\bar X)_n,\dZ/n\right) \to \h^1(X,\dZ/n)
 \end{equation}
-est un isomorphisme. Pour d\'eduire (\ref{I:6-2-2}) de \eqref{I:eq:14} et 
-\eqref{I:eq:15}, il reste \`a savoir que 
+est un isomorphisme. Pour déduire (\ref{I:6-2-2}) de \eqref{I:eq:14} et 
+\eqref{I:eq:15}, il reste à savoir que 
 \begin{equation}\label{I:eq:16} % originally 6.2.3.3
   \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.}
 \end{equation}
-Cette compatibilit\'e est prouv\'ee en (Dualit\'e, 3.2.4). 
+Cette compatibilité est prouvée en (Dualité, 3.2.4). 
 %NOTE: should be hyperlinked
 
 
@@ -3508,15 +3518,15 @@ Cette compatibilit\'e est prouv\'ee en (Dualit\'e, 3.2.4).
 
 
 
-\subsection{Le cas g\'en\'eral}\label{I:6-3}
+\subsection{Le cas général}\label{I:6-3}
 
-Soient $X$ un vari\'et\'e alg\'ebrique lisse et purement de dimension $N$, sur 
-$k$ alg\'ebriquement clos. Pour \'enoncer le th\'eor\`eme de dualit\'e de 
-Poincar\'e, il faut tout d'abord d\'efinir le morphisme trace 
+Soient $X$ un variété algébrique lisse et purement de dimension $N$, sur 
+$k$ algébriquement clos. Pour énoncer le théorème de dualité de 
+Poincaré, il faut tout d'abord définir le morphisme trace 
 \[
   \tr : \h_c^{2N}\left(X,\dZ/n(N)\right) \to \dZ/n\text{.}
 \]
-La d\'efinition est un d\'evissage p\'enible \`a partir dur cas des courbes 
+La définition est un dévissage pénible à partir dur cas des courbes 
 \cite[XVIII \S 2]{4}. On a alors 
 
 
@@ -3528,8 +3538,102 @@ La forme $\tr(a\smallsmile b)$ identifie chacun des groupes
 $\h_c^i\left(X,\dZ/n(N)\right)$ et $\h^{2 N-i}(X,\dZ/n)$ au dual de l'autre.
 \end{theorem}
 
-Soient $x\in X$ un point ferm\'e et $X_x$ le localis\'e strict de $X$ en $x$. 
-Nous posons, pour $U$ parcourant les voisinages \'etales de $x$ 
+Soient $x\in X$ un point fermé et $X_x$ le localisé strict de $X$ en $x$. 
+Nous posons, pour $U$ parcourant les voisinages étales de $x$ 
+\begin{equation}\label{I:eq:17}
+  \h_c^\bullet(X_x,\dZ/n) = \varprojlim \h_c^\bullet(U,\dZ/n) \text{.}
+\end{equation}
+Il serait préférable de considérer plutôt le pro-objet 
+$\text{``}\varprojlim\text{''} \h_c^\bullet(U,\dZ/n)$ mais, les groupes en jeu 
+étant finis, la différence est inessentielle. Comme on a tenté de 
+l'expliquer dans l'introduction, (\ref{I:6-3-1}) résulte de ce que 
+\begin{equation}\label{I:eq:18}
+\begin{aligned}
+  \h_c^i(X_x,\dZ/n) &= 0 \text{ pour $i\ne 2N$ et que } \\
+  \tr : \h_c^{2 N}\left(X_x,  \dZ/n(N)\right) &\iso \dZ/n \text{ est un isomorphisme.} 
+\end{aligned}
+\end{equation}
+
+Le cas où $N=0$ est trivial. Si $N>0$, soit $Y_y$ le localisé strict en un 
+point fermé d'un schéma $Y$ lisse purement de dimension $N-1$, et soit 
+$f:X_x\to Y_y$ un morphisme essentiellement lisse (de dimension relative un). 
+La démonstration utilise la suite spectrale de Leray en cohomologie à 
+support propre pour $f$, pour se ramener au cas des courbes. Les ``cohomologie 
+à support propre'' considérées étant définies comme des limites 
+\eqref{I:eq:17}, l'existence d'une telle suite spectrale pose divers problèmes 
+de passage à la limite, traités avec trop de détailes dans 
+\cite[XVIII]{4}. Pour tout point géométrique $z$ de $Y_y$, on a 
+\[
+  (\R^if_! \dZ/n)_z = \h_c^i(f^{-1}(z),\dZ/n) \text{.}
+\]
+La fibre géométrique $f^{-1}(z)$ est une limite projective de courbes lisses 
+sur un corps algébriquement clos. Elle vérifie la dualité de Poincaré. 
+Sa cohomologie ordinaire est donnée par le théorème d'acyclicité locale 
+pour les morphismes lisses: 
+\[
+  \h^i(f^{-1}(z),\dZ/n) 
+    = \begin{cases}
+        \dZ/n & \text{pour $i=0$} \\
+        0     & \text{pour $i>0$.}
+      \end{cases}
+\]
+Par dualité, on a 
+\[
+  \h_c^i(f^{-1}(z),\dZ/n) 
+    = \begin{cases}
+        \dZ/n(-1) & \text{pour $i=2$} \\
+        0         & \text{pour $i\ne 2$.}
+      \end{cases}
+\]
+et la suite spectrale de Leray s'écrit 
+\[
+  \h_c^i\left(X_x,\dZ/n(N)\right) = \h_c^{i-2}\left(Y_y,\dZ/n(N-1)\right) \text{.}
+\]
+On conclut par récurrence sur $N$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Variantes et applications}\label{I:6-4}
+
+On peut construire, en cohomologie étale, un ``formalisme de dualité'' 
+($=$ des foncteurs $\R f_!$, $\R f_!$, $\R f^!$ satisfaisant diverses 
+compatibilités et formules d'adjonction) parallèle à celui qui existe en 
+cohomologie cohérente. Dans ce language, les résultats du paragraphe 
+précédents se transcrivent comme suit: si $f:X\to S$ est lisse et purement 
+de dimension relative $N$, et que $S=\spec(k)$, avec $k$ algébriquement clos, 
+alors 
+\[
+  \R f^! \dZ/n = \dZ/n [2N](N) \text{.}
+\]
+Ce résultat vaut sans hypothèse sur $S$. Il admet le 
+
+
+
+
+
+\begin{corollary}\label{I:6-4-1}
+Si $f$ est lisse et purement de dimension relative $N$, et que les faisceaux 
+$\R^i f_! \dZ/n$ sont localement constants, alors les faisceaux 
+$\R^i f_* \dZ/n$ sont aussi localement constants, et 
+\[
+  \R^i f_* \dZ/n = \const\hom\left(\R^{2 N-i} f_! \dZ/n(N),\dZ/n\right)\text{.}
+\]
+\end{corollary}
+
+En particulier, sous les hypothèses du corollaire, les faisceaux 
+$\R^i f_* \dZ/n$ sont constructibles. Partant de là, on peut montrer que, si 
+$S$ est de type fini sur le spectre d'un corps ou d'un anneau de Dedekind, 
+alors, pour tout morphisme de type fini $f:X\to S$ et tout faisceau 
+constructible $\cF$ sur $X$, les faisceaux $\R^i f_* \cF$ sont constructibles 
+(Th. finitude, 1.1). 
+% NOTE: should be hyperlinked
 
 
 
@@ -3556,6 +3660,8 @@ Nous posons, pour $U$ parcourant les voisinages \'etales de $x$
   \bibitem{12} J.-P. Serre, \emph{Géométrie Algébrique et Géométrie Analytique}, Ann. de l'Institut Fourier, 1956. 
 
   \bibitem{14} J.-P. Serre, \emph{Cohomologie galoisienne}, Springer no.5, 1965.
+
+  \bibitem{15} J.-P. Serre, \emph{Groupes algébriques et corps de classes}, 1959. 
 
 \end{thebibliography}
 
