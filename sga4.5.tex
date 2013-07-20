@@ -48,6 +48,7 @@
 
   \newcommand{\dA}{\mathbb{A}}
   \newcommand{\dC}{\mathbb{C}}
+  \newcommand{\dF}{\mathbb{F}}
   \newcommand{\dG}{\mathbb{G}}
   \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
   \newcommand{\dN}{\mathbb{N}}
@@ -84,8 +85,9 @@
   \setcounter{tocdepth}{2}
 
 
-\renewcommand*\thechapter{\Roman{chapter}}
+%\renewcommand*\thechapter{\Roman{chapter}}
 \renewcommand*\thesection{\arabic{section}}
+\renewcommand{\theequation}{\arabic{equation}}
 \setcounter{secnumdepth}{3}
 
 
@@ -191,7 +193,7 @@ Pierre Deligne
 
 
 
-\chapter{Cohomologie étale: les points de départ\texorpdfstring{\footnote{rédigé par J.F. Boutot}}{}}
+\chapter{Cohomologie étale: les points de départ\texorpdfstring{\footnote{par P. Deligne, rédigé par J.F. Boutot}}{}}
 
 
 
@@ -3644,8 +3646,137 @@ constructible $\cF$ sur $X$, les faisceaux $\R^i f_* \cF$ sont constructibles
 
 
 
+
+
+
+
+
+
+
+
+
+
+\chapter{Rapport sur la formule des traces}\label{II}
+
+Dans ce texte, j'ai tenté d'exposer de façon aussi directe que possible la 
+théorie cohomologique de Grothendieck des fonctions $L$. Je suis de très près 
+certains des exposés donnés par Grothendieck \`a l'IHES au printemps 1966. Dans 
+l'esprit de ce volume, il ne sera pas fait appel \`a SGA 5 -- saui deux 
+références \`a das passages de l'exposé XI, indépendant au reste de ce 
+séminaire. 
+
+Dans le \S 10 (p.81-90) de \cite{II:1}, le lecteur trouvera un résume de la 
+théorie, dans le cas crucial des courbes. 
+
+
+
+
+
+
+
+
+
+
+\section{Quelques rappels}\label{II:1}
+
+
+
+
+
+\subsection{Notations}\label{II:1-1}
+
+$p,q,\dF,\dF_q$: $p$ est un nombre premier, $q=p^f$ une puissance de $p$ et 
+$\dF$ un clôture algébrique du corps premier $\dF_p$. Pour toute puissance 
+$p^n$ de $P$, on note $\dF_{p^n}$ le sous-corps \`a $p^n$ éléments de $\dF$. 
+
+$X_0,X$: On désignera souvent par un symbole affecte d'un indice $0$ un objet 
+sur $\dF_q$. Le même symbole, sans $0$, désigne alors l'objet qui s'en déduit 
+par extension des scalaires \`a $\dF$. Par exemple, si $\cF_0$ est un faisceau 
+sur un schéma $X_0$ sur $\dF_q$, on note $\cF$ son image réciproque sur 
+$X=X_0\otimes_{\dF_q} \dF$. 
+
+$F$: Si $X_0$ est un schéma sur $\dF_q$, on appelle \emph{morphisme de 
+Frobenius} et on note $F$ l'endomorphisme de $X_0$ qui ``envoie le point de 
+coordonnées $x$ dans celui de coordonnées $x^q$'': c'est l'identifie sur 
+l'espace topologique sous-jacent et, pour $x$ une section locale du faisceau 
+structurel, $F^* x = x^q$. 
+
+On désigne encore par $F$ l'endomorphisme de $X$ qui s'en déduit par 
+extension des scalaires. Sur l'ensemble $X(\dF) = X_0(\dF)$ des points 
+rationnels de $X$, $F$ agit comme la substitution de Frobenius 
+$\varphi\in\gal(\dF/\dF_q)$ définie par $\varphi(x)=x^q$. En particulier, 
+$X^F=X_0(\dF_q)$. 
+
+En cas d'ambiguite, on ecrira $F_{(q)}$ plutot que $F$. 
+
+
+
+
+
+
+
+
+
+
+\section{Correspondance de Frobenius}
+
+Soient $X_0$ un schéma sur $\dF_q$, et $\cF_0$ un faisceau sur $X_0$. J'aime 
+voir comme suit la \emph{correspondance de Frobenius} (un $F$-endomorphisme de 
+$\cF_0$): 
+\begin{equation}\label{II:eq:1}
+  F^* : F^*\cF_0 \iso \cF_0
+\end{equation}
+
+On regarde $\cF_0$ comme le faisceau des sections locales d'un espace 
+$[\cF_0]$ étale sur $X_0$ ($[\cF_0]$ est un espace algébrique au sens de M. 
+Artin). La fonctorialité de $F$ fournit un diagramme commutatif 
+\[\xymatrix{
+  [\cF_0] \ar[r]^-F \ar[d]
+    & [\cF_0] \ar[d] \\
+  X_0 \ar[r]^F 
+    & X_0
+}\]
+Parce que $[\cF_0]$ est étale sur $X_0$, ce diagramme est cartésien; il fournit 
+un isomorphisme $[\cF_0]\iso F^*[\cF_0]$ d'inverse \eqref{II:eq:1}. On note 
+encore $F^*$ les correspondances ou morphismes déduits de $F$ par extension 
+des scalaires ou par fonctorialité, tels 
+$F^*:\h_c^\bullet(X,\cF)\to \h_c^\bullet(X,\cF)$. 
+
+Pour une définition en forme, je renvoie \`a SGA 5 XI \S 1,2. On n'y considère 
+que le cas o\`u $q=p$, mais le cas général se traite de même. 
+
+
+
+
+
+
+
+
+
+
+\chapter{Fonctions \texorpdfstring{$L$}{L} modulo \texorpdfstring{$\ell^n$}{l n} et modulo \texorpdfstring{$p$}{p}}\label{III}
+
+\chapter{La classe de cohomologie associée \`a un cycle}\label{IV}
+
+\chapter{Dualité}\label{V}
+
+\chapter{Applications de la formule des traces aux sommes trigonométriques}\label{VI}
+
+\chapter{Théorèmes de finitude en cohomologie \texorpdfstring{$\ell$}{l}-adique}\label{VII}
+
+
+
+
+
+
+
+
+
+
 \begin{thebibliography}{ab}
   \bibitem{Ar} M. Artin, \emph{Grothendieck topologies}, (Harvard University 1962).
+  
+  \bibitem{II:1} P. Deligne, \emph{Les constantes des équations fonctionnelles des fonctions $L$ -- dans Anvers II}, Lecture Notes in Math. 349. 
 
   \bibitem{Gi} J. Giraud, \emph{Analysis situs}, Séminaire Bourbaki 256, mai 1963 -- Benjamin. 
 
