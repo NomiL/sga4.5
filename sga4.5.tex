@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[all]{xy}
 \usepackage[stable]{footmisc}
-\usepackage{amsmath,amssymb,amsthm,enumerate,fullpage,mathrsfs} %,titlesec} to have inline subsubsections
+\usepackage{amsmath,amssymb,amsthm,bm,enumerate,fullpage,mathrsfs,stmaryrd} %,titlesec} to have inline subsubsections
 \usepackage[colorlinks,backref=page]{hyperref}
 
 
@@ -12,6 +12,7 @@
   \DeclareMathOperator{\ab}{Ab}
   \DeclareMathOperator{\aut}{Aut}
   \DeclareMathOperator{\br}{Br}
+  \DeclareMathOperator{\cosp}{cosp}
   \DeclareMathOperator{\dv}{div}
   \DeclareMathOperator{\Div}{Div}
   \DeclareMathOperator{\gal}{Gal}
@@ -36,7 +37,7 @@
 
   \newcommand{\dC}{\mathbb{C}}
   \newcommand{\dG}{\mathbb{G}}
-  \newcommand{\dmu}{\boldsymbol{\mu}}
+  \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
   \newcommand{\dN}{\mathbb{N}}
   \newcommand{\dP}{\mathbb{P}}
   \newcommand{\dR}{\mathbb{R}}
@@ -48,6 +49,7 @@
   \newcommand{\fX}{\mathfrak{X}}
   
   \newcommand{\sC}{\mathscr{C}}
+  \newcommand{\sD}{\mathscr{D}}
   \newcommand{\sE}{\mathscr{E}}
   \newcommand{\sS}{\mathscr{S}}
   \newcommand{\sU}{\mathscr{U}}
@@ -1018,7 +1020,7 @@ $X$, et $\cT\mapsto \cL(\cT)$ est l'inverse cherché de $*$.
 \subsubsection{Racines de l'unité}\label{2-2-4}
 
 Pour tout entier $n>0$, on appelle faisceau des racines $n$-ièmes de 
-l'unité, et on note $\dmu_n$, le noyau d l'élévation à puissance 
+l'unité, et on note $\dmu_n$, le noyau de l'élévation à puissance 
 $n$-iéme dans $\dG_m$. Si $X$ est un schéma sur un corps séparablement 
 clos $k$ et si $n$ est inversible dans $k$, le choix d'une racine primitive 
 $n$-ième de l'unité $\zeta\in k$ définit un isomorphisme 
@@ -2566,6 +2568,524 @@ l'analogue classique de (\ref{4-6-4}).
 
 
 \section{Acyclicité locale des morphismes lisses}\label{5}
+
+Soient $X$ une variété analytique complexe et $f:X\to D$ un morphisme de 
+$X$ dans le disque. On note $[0,t]$ le segment de droit fermé d'extrémités 
+$0$ et $t$ dans $D$ et $(0,t]$ le segment semi-ouvert. Si $f$ est \emph{lisse}, 
+l'inclusion 
+\[
+  j : f^{-1}\left((0,t]\right) \hookrightarrow f^{-1}\left([0,t]\right)
+\]
+est une équivalence d'homotopie; en peut pousser la fibre spécial 
+$X_0=f^{-1}(0)$ dans $f^{-1}([0,t])$. 
+
+En pratique, pour $t$ assez petit, $f^{-1}((0,t])$ sera un fibré sur 
+$(0,t]$ de sorte que l'inclusion 
+\[
+  X_t = f^{-1}(t) \hookrightarrow f^{-1}\left((0,t]\right)
+\]
+sera également une équivalence d'homotopie. On appelle alors \emph{morphisme 
+de cospécialisation} la classe d'homotopie d'applications: 
+\[
+  \cosp : X_0 \hookrightarrow f^{-1}\left([0,t]\right) \xleftarrow\sim f^{-1}\left((0,t]\right) \xleftarrow\sim X_t \text{.}
+\]
+On peut exprimer cette construction en termes imagés en disant que, pour un 
+morphisme lisse, la fibre générale avale la fibre spéciale. 
+
+Ne supposons plus $f$ nécessairement lisse (mais supposons que $f^{-1}((0,t])$ 
+soit un fibré sur $(0,t]$). On peut encore définir un morphisme 
+$\cosp^\bullet$ en cohomologie dès que $j_* \dZ=\dZ$ et 
+$\R^q j_* \dZ = 0$ pour $q>0$. Sous ces hypothèses, la suite spectrale de 
+Leray pour $j$ montre qu'on a 
+\[
+  \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right) \iso \h^\bullet\left(f^{-1}\left((0,t]\right),\dZ\right)
+\]
+et $\cosp^\bullet$ est le morphisme composé: 
+\[
+  \cosp^\bullet : \h^\bullet(X_t,\dZ)
+    \xleftarrow\sim \h^\bullet\left(f^{-1}\left((0,t]\right),\dZ\right) 
+    \xleftarrow\sim \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right) 
+    \to \h^\bullet(X_0,\dZ)
+\]
+La fibre de $\R^q j_* \dZ$ en un point $x\in X_0$ se calcule comme suit. On 
+prend dans un espace ambiant une boule $B_\varepsilon$de centre $x$ et de rayon 
+$\varepsilon$ assez petit, et pour $\eta$ assez petit, on pose 
+$E=X\cap B_\varepsilon \cap f^{-1}(\eta t)$; c'est la \emph{variété des 
+cycles évanescents} en $x$. On a 
+\[
+  (\R^q j_* \dZ)_x \xleftarrow\sim \h^q\left(X\cap B_\varepsilon\cap f^{-1}\left((0,\eta t]\right),\dZ\right) \xrightarrow\sim \h^q(E,\dZ)
+\]
+et le morphisme de cospécialisation est défini en cohomologie dés que les 
+variétés de cycles évanescents sont acycliques ($\h^0(E,\dZ)=\dZ$ et 
+$\h^q(E,\dZ) = 0$ pour $q>0$), ce qui s'exprime en disant que $f$ est 
+\emph{localement acyclique}. 
+
+Ce chapitre est consacré à l'analogue de cette situation pour un morphisme 
+lisse de schémas pour la cohomologie étale. Cependant il est indispensable 
+dans ce cadre de se limiter aux coefficients de torsion et d'ordre \emph{premier aux caractéristiques résiduelles}. La paragraphe \ref{5-1} est consacré 
+à des généralités sur les morphismes localement acycliques et les 
+flèches de cospécialisation. Dans le paragraphe \ref{5-2}, on démontre 
+qu'un morphisme lisse est localement acyclique. Dans le paragraphe \ref{5-3}, on 
+joint ce résultat à ceux du chapitre précédent pour en déduire deux 
+applications: un théorème de spécialisation des groupes de cohomologie (la 
+cohomologie des fibres géométriques d'un morphisme propre et lisse est 
+localement constant) et un théorème de changement de base par un morphisme 
+lisse. 
+
+Dans tout ce qui suit, on fixe un entier $n$ et ``schéma'' signifie ``schéma 
+sur lequel $n$ est inversible.'' ``Point géométrique'' signifiera toujours 
+``point géométrique algébrique'' (\ref{2-3-1}) $x:\spec(k)\to X$, avec $k$ 
+algébriquement clos. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Morphismes localement acycliques}\label{5-1}
+
+
+
+
+
+\subsubsection{Notation}\label{5-1-1}
+
+Étant donnés un schéma $S$ et un point géométrique $s$ de $S$, on 
+notera $\widetilde S^s$ le spectre du localisé stricte de $S$ en $s$. 
+
+
+
+
+
+\begin{definition}\label{5-1-2}
+On dit qu'un point géométrique $t$ de $S$ est une \emph{générisation} de 
+$s$ s'il est défini par une clôture algébrique du corps résiduel d'un 
+point de $\widetilde S^s$. On dit aussi que $s$ est une \emph{spécialisation} 
+de $t$ et on appelle \emph{flèche de spécialisation} le $S$-morphisme 
+$t\to \widetilde S^s$. 
+\end{definition}
+
+
+
+
+
+\begin{definition}\label{5-1-3}
+Soit $f:X\to S$ un morphisme de schémas. Soient $s$ un point géométrique de 
+$S$, $t$ une générisation de $s$, $x$ un point géométrique de $X$ 
+su-dessus de $s$ et 
+$\widetilde X_t^x = \widetilde X^x\times_{\widetilde S^s} t$. Alors on dit que 
+$\widetilde X_t^x$ est une \emph{variété de cycles évanescents} de $f$ au 
+point $x$. 
+
+On dit que $f$ est \emph{localement acyclique} si, la cohomologie réduite de 
+toute variété de cycles évanescents $\widetilde X_t^x$ est nulle:
+\begin{equation}\label{eq:5}
+  \hat\h^\bullet(\widetilde X_t^x,\dZ/n) = 0\text{,}
+\end{equation}
+i.e. $\h^0\left(X_t^x,\dZ/n\right) = \dZ/n$ et 
+$\h^q(\widetilde X_t^x,\dZ/n) = 0$ pour $q>0$. 
+\end{definition}
+
+
+
+
+
+\begin{lemma}\label{5-1-4}
+Soient $f:X\to S$ un morphisme localement acyclique et $g:S'\to S$ un morphisme 
+quasi-fini (ou limite projective de morphismes quasi-finis). Alors le 
+morphisme $f':X'\to S'$ déduit de $f$ par changement de base est localement 
+acyclique.
+\end{lemma}
+
+On vérifie en effet que tout variété de cycles évanescents de $f'$ est 
+une variété de cycles évanescents de $f$.  	
+
+
+
+
+
+\begin{lemma}\label{5-1-5}
+Soit $f:X\to S$ un morphisme localement acyclique. Pour tout point géométrique 
+$t$ de $S$, donnant lieu à un diagramme cartésien 
+\[\xymatrix{
+  X_t \ar[r]^-{\varepsilon'} \ar[d] 
+    & X \ar[d]^-f \\
+  t \ar[r]^-\varepsilon 
+    & S
+}\]
+On a $\varepsilon_*' \dZ/n = f^*\varepsilon_* \dZ/n$ et $\R^q \varepsilon_*'\dZ/n=0$ 
+pour $q>0$. 
+\end{lemma}
+
+Soient $\bar S$ l'adhérence de $\varepsilon(t)$, $S'$ le normalisé de $\bar S$ 
+dans $k(t)$, et le diagramme cartésien 
+\[\xymatrix{
+  X_t \ar[r]^-{f'} \ar[d] 
+    & X' \ar[r]^-{\alpha'} \ar[d]^-{f'} 
+    & X \ar[d]^-f \\
+  t \ar[r]^-i 
+    & S' \ar[r]^-\alpha 
+    & S
+}\]
+Les anneaux locaux de $S'$ sont normaux à corps de fractions séparablement 
+clos. Ils sont donc strictement henséliens, et l'acyclicité locale de $f'$ 
+(\ref{5-1-4}) fournit $f_*'\dZ/n = \dZ/n$, $\R^qi_*'\dZ/n = 0$ pour $q>0$. 
+Puisque $\alpha$ est entier, on a alors 
+\[
+  \R^q\varepsilon_*'\dZ/n 
+    = \alpha_*' \R^q i_*' \dZ/n 
+    = \alpha_*' {f'}^* \R^q i_* \dZ/n 
+    = f^* \alpha_* \R^q i_* \dZ/n 
+    = f^* \R^q \varepsilon_* \dZ/n \text{,}
+\]
+et le lemme. 
+
+
+
+
+
+\subsubsection{}\label{5-1-6}
+
+Etant donnés un morphisme localement acyclique $f:X\to S$ et une flèche de 
+spécialisation $t\to \widetilde S^s$, nous allons définir des 
+homomorphismes canoniques, dits flèches de cospécialisation 
+\[
+  \cosp^\bullet : \h^\bullet(X_t,\dZ/n) \to \h^\bullet(X_s,\dZ/n)\text{,}
+\]
+reliant la cohomologie de la fibre générale $X_t=X\times_S t$ et celle de la 
+fibre spéciale $X_s=X\times_X s$. 
+
+Considérons le diagramme cartésien 
+\[\xymatrix{
+  X_t \ar[d] \ar[r]^-{\varepsilon'} 
+    & \widetilde X \ar[d]^-{f'} 
+    & \ar[l] X_s \ar[d] \\
+  t \ar[r]^-\varepsilon 
+    & \widetilde S^s 
+    & \ar[l] s
+}\]
+déduit de $f$ par changement de base. D'après (\ref{5-1-4}), $f'$ est encore 
+localement acyclique. De la définition de l'acyclicité locale, on tire 
+aussitôt que la restriction à $X_s$ des faisceaux $\R^q \varepsilon_*' \dZ/n$ 
+est $\dZ/n$ pour $q=0$, et $0$ pour $q>0$. Par (\ref{5-1-5}) on sait même que 
+$\R^q \varepsilon_*'\dZ/n = 0$ pour $q>0$. On définit $\cosp^\bullet$ comme la 
+flèche composée 
+\begin{equation}\label{eq:6}
+  \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X,\varepsilon_*' \dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
+\end{equation}
+
+\paragraph{Variante}
+Soient $\bar S$ l'adhérence de $\varepsilon(t)$ dans $\widetilde S^s$, $S'$ le 
+normalisé de $\bar S$ dans $k(t)$ et $X'/S'$ déduit de $X/S$ par changement 
+de base. Le diagramme \eqref{eq:6} peut encore s'écrire 
+\[
+  \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X',\dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
+\]
+
+
+
+
+
+\begin{theorem}\label{5-1-7}
+Soient $S$ un schéma localement noethérien, $s$ un point géométrique de 
+$S$ et $f:X\to S$ un morphisme. On suppose 
+\begin{enumerate}[\indent a)]
+  \item le morphisme $f$ est localement acyclique, 
+  \item pour tout morphisme de spécialisation $t\to \widetilde S^s$ et pour 
+    tout $q\geqslant 0$, les flèches de cospécialisation 
+    $\h^q(X_t,\dZ/n) \to \h^q(X_s,\dZ/n)$ sont bijectives.
+\end{enumerate}
+
+Alors l'homomorphisme canonique $(\R^q f_*\dZ/n)_s\to \h^q(X_s,\dZ/n)$ est 
+bijectif pour tout $q\geqslant 0$. 
+\end{theorem}
+
+Pour démontrer le théorème, il est clair qu'on peut supposer 
+$S=\widetilde S^s$. On va et fait montrer que, pour tout faisceau de 
+$\dZ/n\dZ$-modules $\cF$ sur $S$, l'homomorphisme canonique 
+$\varphi^q(\cF):(\R^q f_* f^* \cF)_s \to \h^q(X_s,f^*\cF)$ est bijectif. 
+
+Tout faisceau de $\dZ/n\dZ$ est limite inductive filtrante de faisceaux 
+constructibles de $\dZ/n\dZ$-modules (\ref{4-3-3}). De plus tout faisceau 
+constructible de $\dZ/n\dZ$-modules se plonge dans un faisceau de la forme 
+$\prod i_{\lambda *} C_\lambda$, où $i_\lambda:t_\lambda\to S$ est une 
+famille finie de générisations de $s$ et $C_\lambda$ un $\dZ/n\dZ$-module 
+libre de rang fini sur $t_\lambda$. D''après la définition des flèches de 
+cospécialisation, la condition b) signifie que les homomorphismes 
+$\varphi^q(\cF)$ sont bijectifs si $\cF$ est de cette forme. 
+
+On conclut à l'aide d'une variant du lemme (\ref{4-3-6}):
+
+
+
+
+
+\begin{lemma}\label{5-1-8}
+Soit $\sC$ un catégorie abélienne dans laquelle les limites inductives 
+filtrantes existent. Soit $\varphi^\bullet:T^\bullet\to{T'}^\bullet$ un 
+morphisme de foncteurs cohomologiques commutant aux limites inductives 
+filtrantes, définis sur $\sC$ et à valeurs dans la catégorie des groupes 
+abéliens. Supposons qu'il existe deux sous-ensembles $\sD$ et $\sE$ d'objets 
+de $\sC$ tels que:
+\begin{enumerate}[\indent a)]
+  \item tout objet de $\sC$ est limite inductive filtrante d'objets appartenant 
+    à $\sD$, 
+  \item tout objet appartenant à $\sD$ est contenu dans un objet appartenant 
+    à $\sE$.
+\end{enumerate}
+
+Alors les conditions suivantes sont équivalentes: 
+\begin{enumerate}[\indent (i)]
+  \item $\varphi^q(A)$ est bijectif pour tout $q\geqslant 0$ et tout 
+    $A\in\ob\sC$.
+  \item $\varphi^q(M)$ est bijectif pour tout $q\geqslant 0$ et tout $M\in\sE$. 
+\end{enumerate}
+\end{lemma}
+
+La démonstration du lemme se fait par passage à la limite inductive, 
+récurrence sur $q$ et application répétée du lemme des cinq au diagramme 
+de suites exactes de cohomologie déduit d'une suite exacte 
+$0\to A\to M\to A'\to 0$, avec $A\in\sD$, $M\in\sE$, $A'\in \ob\sC$. 
+
+
+
+
+
+\begin{corollary}\label{5-1-9}
+Soient $S$ le spectre d'un anneau local noethérien strictement hensélien et 
+$f:X\to S$ un morphisme localement acyclique. Supposons que, pour tout point 
+géométrique $t$ de $S$ on dit $\h^0(X_t,\dZ/n) = \dZ/n$ et 
+$\h^q(X_t,\dZ/n) = 0$ pour $q>0$ (autrement dit les fibres géométriques de 
+$f$ sont acycliques). Alors on a $f_* \dZ/n\dZ/n$ et $\R^qf_*\dZ/n = 0$ pour 
+$q>0$. 
+\end{corollary}
+
+
+
+
+
+\begin{corollary}\label{5-1-10}
+Soient $f:X\to Y$ et $g:Y\to X$ des morphismes de schémas localement 
+noethériens. Alors, si $f$ et $g$ sont localement acycliques, il en est de 
+même de $g\circ f$. 
+\end{corollary}
+
+On peut supposer que $X$, $Y$ et $Z$ sont strictement locaux et que $f$ et $g$ 
+sont des morphismes locaux. Il s'agit alors de montrer que, si $z$ est un point 
+géométrique algébrique de $Z$, on a $\h^0(X_z,\dZ/n) = \dZ/n$ et 
+$\h^q(X_z,\dZ/n) = 0$ pour $q>0$. 
+
+Puisque $g$ est localement acyclique, on a $\h^0(Y_z,\dZ/n) = \dZ/n$, et 
+$\h^q(Y_z,\dZ/n) = 0$ pour $q>0$. Par ailleurs le morphisme $f_z:X_z\to Y_z$ est 
+localement acyclique (\ref{5-1-4}) et ses fibres géométriques sont 
+acycliques, car ce sont des variétés de cycles évanescents de $f$. 
+D'après (\ref{5-1-9}), on a donc $\R^q {f_z}_*\dZ/n = 0$ pour $q>0$. De plus 
+${f_z}_*\dZ/n$ est constant de fibre $\dZ/n$ sur $Y_z$. On conclut à l'aide de 
+la suite spectrale de Leray de $f_z$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Acyclicité locale d'un morphisme lisse}\label{5-2}
+
+
+
+
+
+\begin{theorem}\label{5-2-1}
+Un morphisme lisse est localement acyclique.
+\end{theorem}
+
+Soit $f:X\to S$ un morphisme lisse. L'assertion est locale pour la topologie 
+étale sur $X$ et $S$, on peut donc supposer que $X$ est l'espace affine type 
+de dimension $d$ sur $S$. Par passage à la limite, on peut supposer que $S$ 
+est noethérien et la transitivité de l'acyclicité locale (\ref{5-1-10}) montre 
+qu'il suffit de traiter le cas $d=1$. 
+
+Soient $s$ un point géométrique de $S$ et $x$ un point géométrique de 
+$X$ centré en un point fermé de $X_s$. Il s'agit de montrer que les fibres 
+géométriques du morphisme $\widetilde X^x\to \widetilde S^s$ sont 
+acycliques. On posera désormais $S=\widetilde S^s=\spec(A)$ et 
+$X=\widetilde X^x$. On a $X\simeq \spec A\{T\}$, où $A\{T\}$ est l'hensélise 
+de $A[T]$ au point $T=0$ au-dessus de $s$. 
+
+Si $t$ est un point géométrique de $S$, la fibre $X_t$ est limite 
+projective de courbes affines et lisses sur $t$. On a donc $\h^q(X_t,\dZ/n) = 0$ 
+pour $q\geqslant 0$ et il suffit de montrer que $\h^0(X_t,\dZ/n) = \dZ/n$ et 
+$\h^1(X_t,\dZ/n) = 0$ pour $n$ premier à la caractéristique résiduelle de 
+$S$. Cela résulte des deux propositions suivantes. 
+
+
+
+
+
+\begin{proposition}\label{5-2-2}
+Soient $A$ un anneau local strictement hensélien, $S=\spec(A)$ et 
+$X=\spec A\{T\}$. Alors les fibres géométrique de $X\to S$ sont connexes. 
+\end{proposition}
+
+On peut se ramener par passage à limite au cas où $A$ est un hensélisé 
+strict d'une $\dZ$-algèbre de type fini. 
+
+Soient $\bar t$ un point géométrique de $S$, localisé en $t$, et $k'$ une 
+extension finie séparable de $k(t)$ dans $k(\bar t)$. On pose $t'=\spec(k')$ 
+et $X_{t'} = X\times_S\spec(k')$. Il nous faut vérifier que, quelques soient 
+$\bar t$ et $t'$, $X_{t'}$ est connexe (par qui on entend connexe et non vide). 
+Soit $A'$ le normalisé de $A$ dans $k'$, i.e. l'anneau des éléments de 
+$k'$ entiers sur l'image de $A$ dans $k(t)$. On a 
+$A\{t\}\otimes_A A'\iso A'\{T\}$: le membre de gauche est en effet hensélien 
+local (car $A'$ est fini sur $A$, et local) et limite d'algèbres locales 
+étales sur $A'\{T\}=A\{T\}\otimes_A A'$. Le schéma $X_{t'}$ est donc encore 
+la fibre en $t'$ de $X=\spec\left(A'\{T\}\right)$ sur $S'=\spec(A')$. Le 
+schéma local $X'$ est normal, donc intègre; son localisé $X_{t'}$ est 
+encore intègre, a fortiori connexe. 
+
+
+
+
+
+\begin{proposition}\label{5-2-3}
+Soient $A$ un anneau local strictement hensélien, $S=\spec(A)$ et 
+$X=\spec\left(A\{T\}\right)$. Soient $\bar t$ un point géométrique de $S$ 
+et $X_{\bar t}$ la fibre géométrique correspondante. Alors tout revêtement 
+étale galoisien de $X_{\bar t}$ d'ordre premier à la caractéristique du 
+corps résiduel de $A$ est trivial. 
+\end{proposition}
+
+
+
+
+
+\begin{lemma}[théorème de pureté de Zariski-Nagata en dimension $2$] \label{5-2-4} % originally 5.2.3.1
+Soient $C$ un anneau local régulier de dimension $2$ et $C'$ une $C$-algèbre 
+finie normale étale au--dessus de l'ouvert complémentaire du point fermé 
+de $\spec(C)$. Alors $C'$ est étale sur $C$.
+\end{lemma}
+
+En effet $C'$ est normal de dimension $2$, donc $\operatorname{prof}(C')=2$. 
+Puisque $\operatorname{prof}(C')+\dim\operatorname{proj}(C') = \dim(C)=2$, on 
+en conclut que $C'$ est libre sur $C$. Alors l'ensemble des points de $C$ où 
+$C'$ est ramifié est défini par une équations, le discriminant; puisqu'il 
+ne contient pas de point de hauteur $1$, il est vide. 
+
+
+
+
+
+\begin{lemma}[cas particulier du lemme d'Abhyankar]\label{5-2-5} % originally 5.2.3.2
+Soient $S=\spec(V)$ un trait, $\pi$ une uniformisante, $\eta$ le point 
+générique de $S$, $X$ lisse sur $S$, irréductible, de dimension 
+relative $1$, $\widetilde X_\eta$ un revêtement étale galoisien de $X_\eta$, 
+de degré $n$ inversible sur $S$, et $S_1=\spec\left(V[\pi^{1/n}]\right)$. 
+Notons par un indice $(-)_1$ le changement de base de $S$ à $S_1$. Alors, 
+$\widetilde X_{1\eta}$ se prolonge en un revêtement étale de $X_1$. 
+\end{lemma}
+
+Soit $\widetilde X_1$ le normalisé de $X_1$ de $\widetilde X_{1\eta}$. Vu la 
+structure des groupes d'inertie modérée des anneaux de valuation discrète 
+localisés de $X$ aux points génériques de la fibre spéciale $X_s$, 
+$\widetilde X_1$ est étale sur $X_1$ sur la fibre générale, et aux points 
+génériques de la fibre spéciale. Par (\ref{5-2-4}), il est étale 
+partout. 
+
+
+
+
+
+\subsubsection{}\label{5-2-6} % originally 5.2.3.3
+
+Notons $t$ le point en lequel $\bar t$ est localisé. Il nous est loisible de 
+remplacer $A$ par le normalisé de $A$ dans une extension finie séparable 
+$k(t')$ de $k(t)$ dans $k(\bar t)$ (cf. \ref{5-2-2}). Ceci, et un passage à 
+la limite préliminaire, nous permettent de supposer que 
+\begin{enumerate}[\indent a)]
+  \item $A$ est normal noethérien, et $t$ est le point générique de $S$.
+  \item Le revêtement étale considéré de $X_{\bar t}$ provient d'un 
+    revêtement étale de $X_t$. 
+  \item Il provient d'un revêtement étale $\widetilde X_U$ de l'image 
+    réciproque $X_U$ d'un ouvert non vide $U$ de $S$ (résulte de b): $t$ 
+    est la limite des $U$).
+  \item La complément de $U$ est de codimension $\geqslant 2$ (ceci au prix 
+    d'agrandir $k(t)$, par application de (\ref{5-2-5}) aux anneaux de 
+    valuation discrète localisés de $S$ en les points de $S\setminus U$ de 
+    codimension $1$ dans $S$; ces points sont en nombre fini). 
+  \item Le revêtement $\widetilde X_U$ est trivial su-dessus du sous-schéma 
+    $T=0$. (Ceci quitte à encore agrandir $k(t)$). 
+\end{enumerate}
+
+Lorsque ces conditions sont remplies, nous allons voir que le revêtement 
+$\widetilde X_U$ est trivial. 
+
+
+
+
+
+\begin{lemma}\label{5-2-7} % originally 5.2.3.4
+Soient $A$ un anneau local strictement hensélien normal et noethérien, $U$ 
+un ouvert de $\spec(A)$ dont le complément est de codimension $\geqslant 2$, 
+$V$ son image réciproque dans $X=\spec\left(A\{T\}\right)$ et $V'$ un 
+revêtement étale de $V$. Si $V'$ est trivial au-dessus de $T=0$, alors $V'$ 
+est trivial. 
+\end{lemma}
+
+Soit $B=\Gamma(V',\cO)$. Puisque $V'$ est l'image inverse de $V$ dans 
+$\spec(B)$, il suffit de voir que $B$ est fini étale sur $A\{T\}$ (donc 
+décomposé, puisque $A\{T\}$ est strictement hensélien). Soit 
+$\widehat X=A\llbracket T\rrbracket$, et notons par $(-)^\wedge$ le changement 
+de base de $X$ à $\widehat X$. Le schéma $\widehat X$ est fidèlement plat 
+sur $X$. On a donc 
+$\Gamma(\widehat V',\cO) = B\otimes_{A\{T\}} A\llbracket T\rrbracket$, et il 
+suffit de voir que cet anneau $\widehat B$ est fini étale sur 
+$A\llbracket T\rrbracket$. 
+
+Soit $V_m$ (resp. $V_m'$) le sous-schéma de $\widehat V$ (resp. $\widehat V'$) 
+d'équation $T^{m+1} = 0$. Par hypothèse, $V_0'$ est un revêtement trivial 
+de $V_0$: une somme de $n$ copies de $V_0$. De même pour $V_m'/V_m$, puisque 
+les revêtements étales sont insensibles aux nilpotents. On en tire 
+\[
+  \varphi : \Gamma(\widehat V',\cO) \to \varprojlim_m \Gamma(V_m',\cO) = \left(\varprojlim_m \Gamma(V,\cO)\right)^n \text{.}
+\]
+Par hypothèse, le complément de $U$ est de profondeur $\geqslant 2$: on a 
+$\Gamma(V_m,\cO)=A[T]/(T^{m+1})$, et $\varphi$ est un homomorphisme de 
+$\widehat B$ dans $A\llbracket T\rrbracket^n$. Au-dessus de $U$, il fournit $n$ 
+sections distinctes de $\widehat V'/\widehat V$: $\widehat V'$ est donc trivial, 
+somme de $n$ copies de $\widehat V$. Le complément de $\widehat V$ dans 
+$\widehat X$ étant encore de codimension $\geqslant 2$ (donc de profondeur 
+$\geqslant 2$), on en déduit que $\widehat B=A\llbracket T\rrbracket^n$, 
+d'où le lemme. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Applications}\label{5-3}
+
+
+
+
+
+\begin{theorem}[spécialisation des groupes de cohomologie]\label{5-3-1}
+Soit $f:X\to S$ un morphisme propre et localement acyclique, par exemple un 
+morphisme propre et lisse. Alors les faisceaux $\R^q f_*\dZ/n$ sont localement 
+constants constructibles et pour toute flèche de spécialisation 
+$t\to\widetilde S^s$, les flèches de cospécialisation 
+$\h^q(X_t,\dZ/n)\to\h^q(X_s,\dZ/n)$ sont bijectives.
+\end{theorem}
 
 
 
