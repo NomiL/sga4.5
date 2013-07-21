@@ -27,6 +27,7 @@
   \DeclareMathOperator{\Div}{Div}
   \DeclareMathOperator{\gal}{Gal}
   \DeclareMathOperator{\gl}{GL}
+  \DeclareMathOperator{\gr}{gr}
   \DeclareMathOperator{\h}{H}
   \DeclareMathOperator{\im}{im}
   \DeclareMathOperator{\nrd}{Nrd}
@@ -53,6 +54,7 @@
   \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
   \newcommand{\dN}{\mathbb{N}}
   \newcommand{\dP}{\mathbb{P}}
+  \newcommand{\dQ}{\mathbb{Q}}
   \newcommand{\dR}{\mathbb{R}}
   \newcommand{\dZ}{\mathbb{Z}}
 
@@ -82,6 +84,10 @@
   \newtheorem{definition}[subsubsection]{Définition}
   \newtheorem{theorem}[subsubsection]{Théorème}
   \newtheorem{lemma}[subsubsection]{Lemme}
+  
+  \newtheorem{theorem_}[subsection]{Théorème}
+  \newtheorem{proposition_}[subsection]{Proposition}
+  \newtheorem{definition_}[subsection]{Définition}
   \setcounter{tocdepth}{2}
 
 
@@ -127,24 +133,23 @@ insuffisante pour les applications -- et une idée de leur démonstration. Pour
 des résultats complets, ou des démonstrations détaillées, SGA 4 reste 
 indispensable. 
 
-Le ``Rapport sur la formule des traces'' contient une démonstration complété de 
+Le ``\nameref{II}'' contient une démonstration complété de 
 la formule des traces pour l'endomorphisme de Frobenius. La démonstration est 
 celle donnée par Grothendieck dans SGA 5, élaguée de tout détail inutile. Ce 
 Rapport devrait permettre à utilisateur d'oublier SGA 5, qu'on pourra 
 considérer comme une série de digression, certaines très intéressantes. Son 
 existence permettra de publier prochainement SGA 5 tel quel. Il est complété 
-par l'exposé ``Applications de la formule des traces aux sommes 
-trigonométriques'' qui explique comment la formule des traces permet l'étude de 
-sommes trigonométriques, et donne des exemples. 
+par l'exposé ``\nameref{VI}'' qui explique comment la formule des traces permet 
+l'étude de sommes trigonométriques, et donne des exemples. 
 
 Le public visé par les autres exposés est plus limité, et leur style s'en 
-ressent. L'exposé ``Fonctions $L$ modulo $\ell^n$ et modulo $p$'' est une 
+ressent. L'exposé ``\nameref{III}'' est une 
 généralisation ``modulaire'' du Rappoport, basée sur l'étude SGA 4 XVII 5.5 des 
-puissances symétriques. L'exposé ``La classe de cohomologie associée à un 
-cycle'' définit cette classes dans divers contextes, et donne la compatibilité 
-entre intersections et cup-produits. Dans ``Dualité'' sont rassemblés quelques 
-résultats connus, pour lesquels manquait une référence, et quelques 
-compatibilités. L'exposé ``Théorèmes de finitude en cohomologie $\ell$-adique'' 
+puissances symétriques. L'exposé ``\nameref{IV}'' 
+définit cette classes dans divers contextes, et donne la compatibilité 
+entre intersections et cup-produits. Dans ``\nameref{V}'' sont rassemblés 
+quelques résultats connus, pour lesquels manquait une référence, et quelques 
+compatibilités. L'exposé ``\nameref{VII}'' 
 est nouveau. Il donne notamment, en cohomologie sans supports, des théorèmes de 
 finitude analogues à ceux connus en cohomologie à supports compacts. 
 
@@ -3247,9 +3252,9 @@ $\R^q f_* \cF$ sont également constructibles.
 La preuve utilise la résolution des singularités et (\ref{I:5-3-4}). Elle est 
 généralisée au cas d'un morphisme de type fini de schémas excellents de 
 charactéristique $0$ dans \cite[XIX.5]{4}. Une autre démonstration, 
-indépendante de la résolution, est donnée dans ce volume (Th. finitude, 
-1.1),
-% NOTE: this should be hyperlinked
+indépendante de la résolution, est donnée dans ce volume 
+(\nameref{VII}, \ref{VII:1-1}) 
+% NOTE: originally (Th. finitude, 1.1),
 elle s'applique à un morphisme de schémas de type fini sur un corps ou sur 
 un anneau de Dedekind. 
 
@@ -3456,7 +3461,8 @@ $X_{\textnormal{cl}}$.
 
 \subsubsection{Preuve algébrique}\label{I:6-2-3}
 
-Pour une preuve très économique, voir (Dualité \S 2)
+Pour une preuve très économique, voir (\nameref{V}, \S\ref{V:2}). 
+% originally (Dualité \S 2)
 % NOTE: should be hyperlinked V:2
 En voici une autre, liée à l'autodualité de la jacobienne. 
 
@@ -3508,8 +3514,8 @@ est un isomorphisme. Pour déduire (\ref{I:6-2-2}) de \eqref{I:eq:14} et
 \begin{equation}\label{I:eq:16} % originally 6.2.3.3
   \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.}
 \end{equation}
-Cette compatibilité est prouvée en (Dualité, 3.2.4). 
-%NOTE: should be hyperlinked
+Cette compatibilité est prouvée en (\nameref{V}, \ref{V:3-2-4}). 
+% originally (Dualité, 3.2.4).
 
 
 
@@ -3634,8 +3640,8 @@ $\R^i f_* \dZ/n$ sont constructibles. Partant de là, on peut montrer que, si
 $S$ est de type fini sur le spectre d'un corps ou d'un anneau de Dedekind, 
 alors, pour tout morphisme de type fini $f:X\to S$ et tout faisceau 
 constructible $\cF$ sur $X$, les faisceaux $\R^i f_* \cF$ sont constructibles 
-(Th. finitude, 1.1). 
-% NOTE: should be hyperlinked
+(\nameref{VII}, \ref{VII:1-1}). 
+% originally (Th. finitude, 1.1).
 
 
 
@@ -3660,9 +3666,9 @@ constructible $\cF$ sur $X$, les faisceaux $\R^i f_* \cF$ sont constructibles
 
 Dans ce texte, j'ai tenté d'exposer de façon aussi directe que possible la 
 théorie cohomologique de Grothendieck des fonctions $L$. Je suis de très près 
-certains des exposés donnés par Grothendieck \`a l'IHES au printemps 1966. Dans 
-l'esprit de ce volume, il ne sera pas fait appel \`a SGA 5 -- saui deux 
-références \`a das passages de l'exposé XI, indépendant au reste de ce 
+certains des exposés donnés par Grothendieck à l'IHES au printemps 1966. Dans 
+l'esprit de ce volume, il ne sera pas fait appel à SGA 5 -- saui deux 
+références à das passages de l'exposé XI, indépendant au reste de ce 
 séminaire. 
 
 Dans le \S 10 (p.81-90) de \cite{II:1}, le lecteur trouvera un résume de la 
@@ -3687,11 +3693,11 @@ théorie, dans le cas crucial des courbes.
 
 $p,q,\dF,\dF_q$: $p$ est un nombre premier, $q=p^f$ une puissance de $p$ et 
 $\dF$ un clôture algébrique du corps premier $\dF_p$. Pour toute puissance 
-$p^n$ de $P$, on note $\dF_{p^n}$ le sous-corps \`a $p^n$ éléments de $\dF$. 
+$p^n$ de $P$, on note $\dF_{p^n}$ le sous-corps à $p^n$ éléments de $\dF$. 
 
 $X_0,X$: On désignera souvent par un symbole affecte d'un indice $0$ un objet 
 sur $\dF_q$. Le même symbole, sans $0$, désigne alors l'objet qui s'en déduit 
-par extension des scalaires \`a $\dF$. Par exemple, si $\cF_0$ est un faisceau 
+par extension des scalaires à $\dF$. Par exemple, si $\cF_0$ est un faisceau 
 sur un schéma $X_0$ sur $\dF_q$, on note $\cF$ son image réciproque sur 
 $X=X_0\otimes_{\dF_q} \dF$. 
 
@@ -3707,7 +3713,7 @@ rationnels de $X$, $F$ agit comme la substitution de Frobenius
 $\varphi\in\gal(\dF/\dF_q)$ définie par $\varphi(x)=x^q$. En particulier, 
 $X^F=X_0(\dF_q)$. 
 
-En cas d'ambiguite, on ecrira $F_{(q)}$ plutot que $F$. 
+En cas d'ambiguïté, on écrira $F_{(q)}$ plutôt que $F$. 
 
 
 
@@ -3718,7 +3724,7 @@ En cas d'ambiguite, on ecrira $F_{(q)}$ plutot que $F$.
 
 
 
-\section{Correspondance de Frobenius}
+\subsection{Correspondance de Frobenius}\label{II:1-2}
 
 Soient $X_0$ un schéma sur $\dF_q$, et $\cF_0$ un faisceau sur $X_0$. J'aime 
 voir comme suit la \emph{correspondance de Frobenius} (un $F$-endomorphisme de 
@@ -3742,8 +3748,370 @@ encore $F^*$ les correspondances ou morphismes déduits de $F$ par extension
 des scalaires ou par fonctorialité, tels 
 $F^*:\h_c^\bullet(X,\cF)\to \h_c^\bullet(X,\cF)$. 
 
-Pour une définition en forme, je renvoie \`a \cite[XI.1,2]{SGA5}. On n'y c
-considère que le cas o\`u $q=p$, mais le cas général se traite de même. 
+Pour une définition en forme, je renvoie à \cite[XI.1,2]{SGA5}. On n'y c
+considère que le cas où $q=p$, mais le cas général se traite de même. 
+
+
+
+
+
+\subsection{}\label{II:1-3}
+
+La correspondance de Frobenius est fonctorielle en $(X_0,\cF_0)$. Si 
+$f_0:X_0\to Y_0$ est un morphisme de $\dF_q$-schémas, $\cF_0$ un faisceau sur 
+$X_0$, $\cG_0$ un faisceau sur $Y_0$ et $u\in\hom(f_0^*\cG_0,\cF_0)$ un 
+$f_0$-morphisme de $\cG_0$ dans $\cF_0$, on a un diagramme commutatif d'espaces 
+$f_0 F = F f_0$, et au-dessus un diagramme commutatif de faisceaux 
+\[\xymatrix{
+  X_0 \ar[r]^-{f_0} \ar[d]^-F
+    & Y_0 \ar[d]^-F \\
+  X_0 \ar[r]^-{f_0} 
+    & Y_0
+}\qquad\qquad
+\xymatrix{
+  \cF_0 
+    & \ar[l]_-u \cG_0 \\
+  \cF_0 \ar[u]_-{F^*} 
+    & \ar[l] \cG_0 \ar[u]^-{F^*}
+}\]
+En particulier, la correspondance sur $f_{0*}\cF_0$ déduite la correspondance 
+de Frobenius de $(X_0,\cF_0)$ est la correspondance de Frobenius de 
+$(U_0,f_{0*}\cF_0)$. 
+
+
+
+
+
+\subsection{}\label{II:1-4}
+
+Le morphisme naturel $Y\to Y_0$ est limite de morphismes étales. Il en 
+résulte que pour tout faisceau abélien $\cF_0$ sur $X_0$, les images 
+réciproques sur $Y$ des $\R^if_0\cF_0$ sont les $\R^if_*\cF$. 
+
+Sur $\R^if_*\cF$, on dispose de 
+\begin{enumerate}[\indent a)]
+  \item la correspondance 
+    $F^*\R^i f_*\cF \iso \R^i f_*\cF \xrightarrow{F^*} \R^if_*\cF$ déduite 
+    par fonctoralité de la correspondance Frobenius; 
+  \item la correspondance $F^*\R^if_*\cF\to\R^if_*\cF$ image réciproque sur 
+    $Y$ de la correspondance de Frobenius sur $\R^ii f_{0*}\cF_0$. 
+\end{enumerate}
+
+On déduit de (\ref{II:1-3}) que ces correspondances coïncident. Elles 
+induisent la terme initial d'une action de Frobenius sur toute la suite 
+spectrale 
+\[
+  \h^p(Y,\R^q f_*\cF) \Rightarrow \h^{p+q}(X,\cF) \text{.}
+\]
+De même en cohomologie à support propre, et pour la suite spectrale 
+\[
+  \h_c^p(Y,\R^q f_* \cF) \Rightarrow \h_c^{p+q}(X,\cF)
+\]
+
+
+
+
+
+\subsection{Changement de corps fini}\label{II:1-5}
+
+Soient $(X_0,\cF_0)$ sur $\dF_q$, $n$ un entier, et $(X_1,\cF_1)$ sur 
+$\dF_{q^n}$ déduit de $(X_0,\cF_0)$ par extension des scalaires. On dispose 
+d'une part de la correspondance de Frobenius $F_{(q)}:X_0\to X_0)$, 
+$F_{(q)}^*:F_{(q)}^*\cF_0\to \cF_0$, d'autre part de 
+$F_{(q^n)}:X_1\to X_1$, $F_{(q^n)}^*:F_{(q^n)}^*\cF_1\to\cF_1$. On vérifie 
+facilement que $F_{(q^n)}$ se déduit de la puissance $n$-ième de $F_{(q)}$ 
+par extension des scalaires de $\dF_q$ à $\dF_{q^n}$; après extension des 
+scalaires à $\dF$, on a encore la même identité $F_{(q^n)}=F_{(q)}^n$ 
+entre endomorphismes de $X$ et correspondances sur $X$. 
+
+Si $x$ est un point fermé de $X_0$, avec $[k(x),\dF_q]=n$, et que 
+$\bar x\in X_0(\dF) = X(\dF)$ est localisé en $x$, $\bar x$ est un point 
+fixe de $F_{(q^n)}=F_{(q)}^n$. On note $F_x^*$ l'endomorphisme de 
+$\cF_{\bar x}$ induit par $F_{(q^n)}^*$. A isomorphisme près, 
+$(F_{\bar x}^*,\cF_{\bar x})$ ne dépend pas du choix de $\bar x$. La trace, 
+etc. de $F_x^*$ se désigne par une notation telle que 
+$\tr(F_x^*,\cF)$. 
+
+
+
+
+
+\subsection{Fonction \texorpdfstring{$L$}{L}}\label{II:1-6}
+
+Soit $X_0$ un schéma de type fini sur $\dF_q$. On note $|X_0|$ l'ensemble de 
+ses points fermés et, pour $x\in |X_0|$, on pose $\deg(x)=[k(x),\dF_p]$. Si 
+$\cF_0$ est un $\dQ_\ell$-faisceau sur $X_0$ (pour cette notion, voir 
+ci-dessous) -- ou un faisceau constructible et plat de modules sur un 
+anneau noethérien commutatif $A$, on note $L(X_0,\cF_0)$ la série formelle 
+de terme constant $1$, dans $\dQ_\ell\llbracket t\rrbracket$ ou dans 
+$A\llbracket t\rrbracket$, 
+\[
+  L(X_0,\cF_0) = \prod_{x\in|X|_0} \det\left(1-F_x^* t^{\deg(x)},\cF\right)^{-1} \text{.}
+\]
+
+
+
+
+
+\subsection{Remarque}\label{II:1-7}
+
+Dans la définition (\ref{II:1-6}), on a $\deg(x)=[k(x),\dF_p]$ (degré 
+absolu) et non $\deg(x)=[k(x),\dF_q]$ (degré relatif à $\dF_q$). Ceci à 
+pour effet que $L(X_0,\cF_0)$ ne dépend que du schéma $X_0$ et du faisceau 
+$\cF_0$, non de $q$ et du morphisme structurel $X_0\to\spec(\dF_q)$. 
+L'indéterminée $t$ est un avatar de $p^{-s}$. 
+
+
+
+
+
+\subsection{Le point de vue galoisien}\label{II:1-8}
+
+Ce n$^\circ$ ne serra pas utilisé dans la suite du rapport. Pour $\cF_0$ un 
+faisceau abélien sur $X_0$, le groupe de Galois $\gal(\dF/\dF_q)$ agit sur 
+$\dF$, et par transport de structure sur $\h_c^i(X,\cF)$. En particulier, la 
+substitution de Frobenius $\varphi$ (\ref{II:1-1}) induit un automorphisme, 
+encore noté $\varphi$, de $\h_c^i(X,\cF)$. La correspondance de Frobenius 
+définit de son côté un endomorphisme $F^*$ de $\h_c^i(X,\cF)$. On a 
+\begin{equation}\label{II:eq:2}
+  {F^*}^{-1} = \varphi \qquad \text{(sur $\h_c^i(X,\cF)$).}
+\end{equation}
+
+Pour le voir, appliquons (\ref{II:1-4}) au cas où $Y_0$ est un point: 
+$Y_0=\spec(\dF_q)$. On trouve que $\h_c^i(X,\cF)$ est la fibre, au point 
+géométrique $\spec(\dF)$ de $Y_0$, de $\R^i f_! \cF_0$, et que $F^*$ est 
+la fibre de la correspondance de Frobenius de $\R^i f_!\cF_0$. Soit 
+$[\R^i f_! \cF_0]$ comme en (\ref{II:1-2}). On a 
+$\h_c^i(X,\cF) = [\R^i f_!\cF_0](\dF)$ et 
+\begin{enumerate}[\indent a)]
+  \item $\varphi$ agit par transport de structure, via son action sur $\dF$, 
+  \item $F^*$ est l'inverse de 
+    $F:[\R^i f_!\cF_0](\dF) \to [\R^i f_!\cF_0](\dF)$. 
+\end{enumerate}
+
+On conclut par l'identité $F=\varphi$ de (\ref{II:1-1}). 
+
+Un des intérêts du point de vue galoisien est qu'il permet de raisonner par 
+transport de structure. 
+
+
+
+
+
+
+
+
+
+
+\section{\texorpdfstring{$\dQ_\ell$}{Ql}-faisceaux}\label{II:2}
+
+La notion de $\dQ_\ell$-faisceaux est développée en détail dans 
+\cite[V,VI]{SGA5}. Nous n'utiliserons que les définitions et résultats 
+ci-dessous. 
+
+
+
+
+
+\begin{definition_}\label{II:2-1}
+Soit $X$ un schéma noethérien. Un $\dZ_\ell$-faisceau $\cF$ sur $X$ est un 
+système projectif de faisceaux $\cF_n$ ($n\geqslant 0$), avec $\cF_n$ un 
+faisceau de $\dZ/\ell^{n+1}$-modules constructibles \cite[IX.2]{4}, et tel que 
+le morphisme de transition $\cF_n\to\cF_{n-1}$ se factorise par un isomorphe 
+\[
+  \cF_n\otimes_{\dZ/\ell^{n+1}} \dZ/\ell^n \iso \cF_{n-1}\text{.}
+\]
+On dit que $\cF$ est \emph{lisse} si les $\cF_n$ sont localement constants. 
+\end{definition_}
+
+La terminologie de \cite{SGA5} est différents, on y dit ``$\dZ_\ell$-faisceau 
+constructible'' pour ``$\dZ_\ell$-faisceau,'' et ``constant tordu 
+constructible'' pour ``lisse.'' 
+
+De même, ci-dessous, pour les $\dQ_\ell$-faisceaux. 
+
+
+
+
+
+\subsection{}\label{II:2-2}
+
+Si $k$ est un corps séparablement clos, un faisceau de $\dZ/\ell^n$-modules 
+sur $\spec(k)$ s'identifie à un $\dZ/\ell^n$-module, et le foncteur 
+$\cF\mapsto \varprojlim \cF_n$ identifie les $\dZ_\ell$-faisceaux sur 
+$\spec(k)$ sux $\dZ_\ell$-modules de type fini. Ceci justifie le définition 
+suivante: la \emph{fibre} du $\dZ_\ell$-faisceau $\cF$ en le point 
+géométrique $x$ de $X$ est le $\dZ_\ell$-module $\varprojlim (\cF_n)_x$. 
+
+
+
+
+
+\subsection{}\label{II:2-3}
+
+Supposons $X$ connexe, et soit $x$ un point géométrique de $X$. On sait que 
+le foncteur ``fibre en $x$'' est une équivalence de la catégorie des 
+faisceaux localement constants constructibles de $\dZ/\ell^n$-modules avec la 
+catégorie des $\dZ/\ell^n$-modules de type fini munis d'une action continue 
+de $\pi_1(X,x)$. Par passage à la limite, on en déduit la proposition 
+suivante. 
+
+
+
+
+
+\begin{proposition_}\label{II:2-4}
+Sous les hypothèses ci-dessus, le foncteur ``fibre en $x$'' est une 
+équivalence de la catégorie des $\dZ_\ell$-faisceaux lisse sur $X$ avec 
+celle des $\dZ_\ell$-modules de type fini munis d'une action continue de 
+$\pi_1(X,x)$. 
+\end{proposition_}
+
+
+
+
+
+\begin{proposition_}\label{II:2-5}
+Soit $\cF$ un $\dZ_\ell$-faisceau sur un schéma noethérien $X$. Il existe 
+une partition finie de $X$ en parties localement fermées $X_i$ telles que 
+les $\cF|X_i$ soient lisses.
+\end{proposition_}
+
+Posons $\gr_\ell^n\cF=\ell^n\cF_m/\ell^{m+1}\cF_m$ pour $m\geqslant n$, et 
+$\gr_\ell\cF=\bigoplus \gr_\ell^n\cF$. C'est un faisceau de modules sur 
+l'anneau noethérien $\gr_\ell\dZ=\dZ/\ell[t]$, gradué de $\dZ$ pour la 
+filtration $\ell$-adique. C'est un quotient de 
+$\gr_\ell^0\cF \otimes_{\dZ/\ell} \dZ/\ell[t]$, donc un faisceau de 
+$\gr_\ell\dZ$-modules constructible \cite[IX.2]{4}. et il existe une partition 
+finie de $X$ en parties localement fermées $X_i$, telle que 
+$\gr_\ell \cF|X_i$ sont localement constant. Chacun des faisceaux 
+$\gr_\ell^n\cF|X_i$ est alors localement constant ainsi que les $\cF_m|X_i$, 
+qui en sont des extensions successives. 
+
+
+
+
+
+\subsection{}\label{II:2-6}
+
+Si $\cF$ et $\cG$ sont deux $\dZ_\ell$-faisceaux sur $X$, on pose 
+$\hom(\cF,\cG) = \varprojlim(\cF_n,\cG_n)$; c'est un $\dZ_\ell$-module. 
+Puisque $\hom(\cF_n,\cG_n) = \hom(\cF_m,\cG_n)$ pour $m\geqslant n$, on a 
+encore 
+\[
+  \hom(\cF,\cG) = \varprojlim_n \varinjlim_m \hom(\cF_m,\cG_n) \text{,}
+\]
+de sorte que le foncteur $\cF\mapsto \text{``}\varprojlim\text{''}\cF_n$ est 
+pleinement fidèle, de la catégorie des $\dZ_\ell$-faisceaux dans celle 
+pro-faisceaux sur $X$ ($=$ pro-objets de la catégorie des faisceaux sur $X$). 
+On l'utilisera pour identifier les $\dZ_\ell$-faisceaux à certains 
+pro-faisceaux (ceux tels que chaque $\cF_n=\cF/\ell^{n+1}\cF$ soit un faisceau, 
+et que $\cF\iso \text{``}\varprojlim\text{''}\cF_n$). On vérifie aisément 
+qui si $\cF+\text{``}\varprojlim\text{''}\cF_n$, avec $\cF_n$ un faisceau 
+constructible de $\dZ/\ell^n$-modules, pour que $\cF$ soit un 
+$\dZ_\ell$-faisceau, il faut et il suffit que les systèmes projectifs (en $n$) 
+$\cF_n/\ell^{k+1}\cF_n$ soient essentiellement constants: le système 
+projectif des $\cF_k'=\varprojlim_n\cF_n/\ell^{k+1}\cF_n$ vérifie alors les 
+conditions de (\ref{II:2-1}), et $\cF=\text{``}\varprojlim\text{''}\cF_k'$. 
+
+Dans ce qui suit, nous abandonnons la notation $\cF_n$ de (\ref{II:2-1}); si 
+$\cF$ est un $\dZ_\ell$-faisceau, le faisceau $\cF_n$ de (\ref{II:2-1}) sera 
+noté $\cF\otimes\dZ/\ell^{n+1}$. 
+
+
+
+
+
+\subsection{}\label{II:2-7}
+
+Dans la catégorie abélienne des pro-faisceaux, la sous-catégorie des 
+$\dZ_\ell$-faisceaux est stable par noyau, conoyau et extension. C'est claire 
+pour les conoyaux. Pour les noyaux, si $f:\cF\to\cG$ est un morphisme de 
+$\dZ_\ell$-faisceaux, on déduit aisément de (\ref{II:2-4}, \ref{II:2-5}) 
+et de Artin-Rees que le système projectif des 
+$\ker(f:\cF\otimes\dZ/\ell^n\to\cG\otimes\dZ/\ell^n)$ vérifie le critère 
+donné et (\ref{II:2-6}) ci-dessus. Il existe même un entier $r$ tel que pour 
+tout $n$ 
+\[
+  \ker(f)\otimes\dZ/\ell^n = \ker(f:\cF\otimes\dZ/\ell^{n+r}\to\cG\otimes\dZ/\ell^{n+r})\otimes\dZ/\ell^n \text{.}
+\]
+Le cas des extensions est laissé au lecteur. 
+
+
+
+
+
+\subsection{}\label{II:2-8}
+
+Un $\dZ_\ell$-faisceau $\cF$ est \emph{sans torsion} si 
+$\ker(\ell:\cF\to\cF) = 0$. Chaque $\cF\otimes\dZ/\ell^n$ est alors plat sur 
+$\dZ/\ell^n$ (i.e. à fibres des $\dZ/\ell^n$-modules libres de type fini). On 
+déduit de (\ref{II:2-4}, \ref{II:2-5}) que pour tout $\dZ_\ell$-faisceau 
+$\cF$ il existe un entier $n$ tel que $\cF/\ker(\ell^n)$ soit sans torsion. 
+
+
+
+
+
+\subsection{}\label{II:2-9}
+
+La catégorie abélienne des \emph{$\dQ_\ell$-faisceaux} sur $X$ est le 
+quotient de celle des $\dZ_\ell$-faisceaux par la sous-catégorie de 
+$\dZ_\ell$-faisceaux de torsion. En termes équivalents, ses objets sont les 
+$\dZ_\ell$-faisceaux et, notant $\cF\otimes\dZ_\ell$ le $\dZ_\ell$-faisceaux 
+$\cF$, vu comme objet de le catégorie des $\dQ_\ell$-faisceaux, on a 
+\[
+  \hom(\cF\otimes\dQ_\ell,\cG\otimes\dQ_\ell) = \hom(\cF,\cG)\otimes_{\dZ_\ell}\dQ_\ell \text{.}
+\]
+
+La \emph{fibre} d'un $\dQ_\ell$-faisceau $\cF\otimes\dQ_\ell$ en un point 
+géométrique $x$ de $X$ est la $\dQ_\ell$-espace vectoriel de dimension 
+finie $\cF_x\otimes_{\dZ_\ell}\dQ_\ell$. 
+
+
+
+
+
+\subsection{}\label{II:2-10}
+
+Soient $X$ un schéma séparé de type fini sur un corps algébriquement 
+clos $k$ et $\cF$ un $\dQ_\ell$-faisceau constructible sur $X$. Soit $\cF'$ un 
+$\dZ_\ell$-faisceau constructible tel que 
+$\cF\sim \cF'\otimes_{\dZ_\ell}\dQ_\ell$. Nous verrons en (\ref{II:4-11}) que 
+\[
+  \left(\varprojlim \h_c^q(X,\cF'\otimes \dZ/\ell^n)\right)\otimes_{\dZ_\ell}\dQ_\ell
+\]
+est un $\dQ_\ell$-espace vectoriel de dimension finie. Il ne dépend que de 
+$\cF$, et se note $\h_c^q(X,\cF)$. La preuve n'utilise pas que $\ell$ soit 
+premier à la caractéristique, mais seul ce cas nous intéresse. 
+
+
+
+
+
+\subsection{}\label{II:2-11}
+
+Dans cet exposé, tous les calculs importants se feront au niveau des 
+$\dZ/\ell^n$-faisceaux, le passage aux $\dQ_\ell$-faisceaux ne se faisant qu'en 
+tout dernier lieu. En pratique, il est toutefois souvent commode de travailler 
+systématiquement avec des $\dQ_\ell$-faisceaux. Dans les exposés 
+V et VI de \cite{SGA5}, Jouenolou donne le formalisme qui rend cela possible. 
+Un des résultats essentiels (VI 2.2) est que si $f:X\to Y$ est un morphisme 
+séparé de type fini de schémas noethériens, et $\cF$ un 
+$\dZ_\ell$-faisceau sur $Y$, alors, pour chaque $q$, le pro-faisceau 
+$\text{``}\varprojlim\text{''}\R^q f_! (\cF\otimes\dZ/\ell^n)$ est un 
+$\dZ_\ell$-faisceau sur $Y$. Il démontrer même une propriété de 
+régularité plus forte (à la Artin-Rees) pour le système projectif des 
+$\R^q f_!(\cF\otimes\dZ/\ell^n)$. 
+
+Jouanolou se place même dans un cadre plus général, englobant le cas 
+très utile des $E_\lambda$-faisceau, pour $E_\lambda$ une extension finie de 
+$\dQ_\ell$. Ils sont définis comme l'ont été les $\dQ_\ell$-faisceaux, 
+avec $\dQ_\ell$ remplacé par $E_\lambda$, $\dZ_\ell$ par l'anneau 
+$\cO_\lambda$ de la valuation $\lambda$ et $\dZ/\ell^n$ par 
+$\cO_\lambda/\pi^n$, pour $\pi$ une uniformisante. Il reviendrait au même de 
+définir un $E_\lambda$-faisceau comme un $\dQ_\ell$-faisceau $\cF$, muni 
+d'une homomorphisme $E_\lambda\to\operatorname{End}(\cF)$. 
 
 
 
@@ -3756,7 +4124,7 @@ considère que le cas o\`u $q=p$, mais le cas général se traite de même.
 
 \chapter{Fonctions \texorpdfstring{$L$}{L} modulo \texorpdfstring{$\ell^n$}{l n} et modulo \texorpdfstring{$p$}{p}}\label{III}
 
-\chapter{La classe de cohomologie associée \`a un cycle}\label{IV}
+\chapter{La classe de cohomologie associée à un cycle}\label{IV}
 
 \chapter{Dualité}\label{V}
 
@@ -3765,6 +4133,12 @@ considère que le cas o\`u $q=p$, mais le cas général se traite de même.
 \chapter{Applications de la formule des traces aux sommes trigonométriques}\label{VI}
 
 \chapter{Théorèmes de finitude en cohomologie \texorpdfstring{$\ell$}{l}-adique}\label{VII}
+
+\section{Énoncé des théorèmes}\label{VII:1}
+
+\begin{theorem_}\label{VII:1-1}
+foo
+\end{theorem_}
 
 
 
