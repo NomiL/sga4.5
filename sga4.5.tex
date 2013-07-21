@@ -3,7 +3,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[all]{xy}
-\usepackage[stable]{footmisc}
+\usepackage[stable,symbol]{footmisc}
 \usepackage{
   amsmath,
   amssymb,
@@ -85,7 +85,7 @@
   \setcounter{tocdepth}{2}
 
 
-%\renewcommand*\thechapter{\Roman{chapter}}
+\renewcommand*\thechapter{\Roman{chapter}}
 \renewcommand*\thesection{\arabic{section}}
 \renewcommand{\theequation}{\arabic{equation}}
 \setcounter{secnumdepth}{3}
@@ -638,7 +638,7 @@ $k'$-espace vectoriel muni d'une action semi-linéaire de $G$, c'est-à-dire:
 \end{enumerate}
 
 Soit $V={V'}^G$ le groupe des invariants par cette action de $G$; c'est un 
-$k$-espace vectoriel et, d'après le théorème (\ref{I:1-4-5}), on a:
+$k$-espace vectoriel et, d'après le théorème \ref{I:1-4-5}, on a:
 
 \begin{proposition}\label{I:1-5-2}
 L'inclusion de $V$ dans $V'$ définit un isomorphisme 
@@ -1739,7 +1739,7 @@ qui n'est autre que la suite exacte:
 \[
   1 \to k^\times \to k(X)^\times\to \Div(X) \to \pic(X) \to 1\text{.}
 \]
-De la proposition (\ref{I:3-3-1}) on déduit que les groupes de cohomologie de 
+De la proposition \ref{I:3-3-1} on déduit que les groupes de cohomologie de 
 $X$ à valeur dans $\dZ/n$, $n$ premier à la caractéristique de $k$, ont 
 une valeur raisonnable:
 
@@ -1764,7 +1764,7 @@ canoniquement) à $\mu_n$. De la suite exacte de Kummer:
 \[
   0 \to \mu_n \to \dG_m \to \dG_m \to 0\text{,}
 \]
-et de la proposition (\ref{I:3-3-1}), on déduit les égalité:
+et de la proposition \ref{I:3-3-1}, on déduit les égalité:
 \[
   \h^q(X,\dZ/n) = 0 \text{ pour $q>2$,}
 \]
@@ -3217,7 +3217,7 @@ ceci prouve (\ref{I:5-3-4}).
 
 \subsubsection{}\label{I:5-3-5}
 
-Nous renvoyons à \cite[XVI \S 4 et \S 5]{4} pour la démonstration des 
+Nous renvoyons à \cite[XVI.4,5]{4} pour la démonstration des 
 applications suivantes du théorème d'acyclicité (\ref{I:5-2-1}). 
 
 
@@ -3246,7 +3246,7 @@ $\R^q f_* \cF$ sont également constructibles.
 
 La preuve utilise la résolution des singularités et (\ref{I:5-3-4}). Elle est 
 généralisée au cas d'un morphisme de type fini de schémas excellents de 
-charactéristique $0$ dans \cite[XIX \S 5]{4}. Une autre démonstration, 
+charactéristique $0$ dans \cite[XIX.5]{4}. Une autre démonstration, 
 indépendante de la résolution, est donnée dans ce volume (Th. finitude, 
 1.1),
 % NOTE: this should be hyperlinked
@@ -3440,7 +3440,7 @@ $\bar X$ et $D$, via la suite exacte $0\to j_! \dZ/n\to\dZ/n\to {\dZ/n}_D\to 0$
 $\R^1 j_* \dZ/n \simeq {\dZ/n}_D(-1)$, $\R^i j_*\dZ/n = 0$ ($i\geqslant 2$) 
 (pour la cohomologie ordinaire) (\ref{I:5-3-4}). 
 
-Ce principe de spécialisation ramène \ref{I:6-2-2} au cas où $k$ est de 
+Ce principe de spécialisation ramène (\ref{I:6-2-2}) au cas où $k$ est de 
 charactéristique $0$. Par (\ref{I:5-3-3}), ce cas se ramène à celui où 
 $k=\dC$. Enfin, pour $k=\dC$, les groupes $\h^\bullet(X,\dZ/n)$ et 
 $\h_c^\bullet(X,\dmu_n)$ coïncident avec les groupes de même nom, calculés 
@@ -3456,8 +3456,8 @@ $X_{\textnormal{cl}}$.
 
 \subsubsection{Preuve algébrique}\label{I:6-2-3}
 
-Pour une preuve très économique, voir (Dualité \S 2).
-% NOTE: should be linked
+Pour une preuve très économique, voir (Dualité \S 2)
+% NOTE: should be hyperlinked V:2
 En voici une autre, liée à l'autodualité de la jacobienne. 
 
 Reprenons les notations de (\ref{I:6-2-1}). On peut supposer -- et on suppose -- 
@@ -3742,8 +3742,8 @@ encore $F^*$ les correspondances ou morphismes déduits de $F$ par extension
 des scalaires ou par fonctorialité, tels 
 $F^*:\h_c^\bullet(X,\cF)\to \h_c^\bullet(X,\cF)$. 
 
-Pour une définition en forme, je renvoie \`a SGA 5 XI \S 1,2. On n'y considère 
-que le cas o\`u $q=p$, mais le cas général se traite de même. 
+Pour une définition en forme, je renvoie \`a \cite[XI.1,2]{SGA5}. On n'y c
+considère que le cas o\`u $q=p$, mais le cas général se traite de même. 
 
 
 
@@ -3759,6 +3759,8 @@ que le cas o\`u $q=p$, mais le cas général se traite de même.
 \chapter{La classe de cohomologie associée \`a un cycle}\label{IV}
 
 \chapter{Dualité}\label{V}
+
+\section{La dualité de Poincaré pour les courbes}\label{V:2}
 
 \chapter{Applications de la formule des traces aux sommes trigonométriques}\label{VI}
 
@@ -3783,6 +3785,8 @@ que le cas o\`u $q=p$, mais le cas général se traite de même.
   \bibitem{4} M. Artin, A. Grothendieck, J.L. Verdier. \emph{Théorie des Topos et Cohomologie Étale des Schémas}, SGA 4, Springer nos.269, 270 et 305, 1972/73.
 
   \bibitem{7} A. Grothendieck, \emph{Revêtements Étales et Groupe Fondamental}, SGA 1, Springer no.224, 1971.
+  
+  \bibitem{SGA5} A. Grothendieck, \emph{Cohomologie $\ell$-adique et fonctions $L$}, SGA 5, Springer no. 589, 1965/66. 
   
   \bibitem{8} A. Grothendieck et J. Dieudonné, \emph{Éléments de géométrie algébrique}, Pub. Math. IHES, 1960/67. 
 
