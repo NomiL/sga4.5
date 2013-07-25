@@ -99,6 +99,7 @@
   \newtheorem{theorem_}[subsection]{Théorème}
   \newtheorem{proposition_}[subsection]{Proposition}
   \newtheorem{definition_}[subsection]{Définition}
+  \newtheorem{prop-def_}[subsection]{Proposition-définition}
   \setcounter{tocdepth}{1}
 
 
@@ -4507,6 +4508,148 @@ présentation finie, i.e. projectif de type fini. Le quotient
   0 \to K^r/\im(d) \to K^{r+1} \to K^{r+2}\to \cdots 
 \]
 de $K$ est quasi-isomorphe à $K$, et ceci montre que $K\in\ob\dparf(\Lambda)$. 
+
+
+
+
+
+\begin{prop-def_}\label{II:4-6}
+Soient $X$ un sch\'ema noeth\'erien, et $\Lambda$ un anneau noeth\'erien \`a 
+gauche. On note $\D_\textnormal{ctf}^b(X,\Lambda)$ la sous-cat\'egorie de 
+$\D^-(X,\Lambda)$ form\'ee des complexes $K$ v\'erifient les conditions 
+\'equivalentes suivantes:
+\begin{enumerate}[\indent i)]
+  \item $K$ est isomorphe (dans $\D^-(X,\Lambda)$) \`a un complexe born\'e e 
+    faisceaux de $\Lambda$-modules plats et constructibles. 
+  \item $K$ est de tor-dimension finie et les faisceaux $\h^i(K)$ sont 
+    constructibles. 
+\end{enumerate}
+\end{prop-def_}
+
+M\^eme argument qu'en (\ref{II:4-5}), \`a partir du lemme suivant. 
+
+
+
+
+
+\begin{lemma_}\label{II:4-7}
+Si un complexe de faisceaux de $\Lambda$-modules est tel que les $\h^i(K))$ 
+soient constructibles, et nuls pour $i$ grand, il existe un 
+quasi-isomorphisme $K'\to K$, avec $K'$ born\'e sup\'erieurement \`a 
+composantes constructibles et plates.
+\end{lemma_}
+
+On construit $K'$ en se propageant de droite \`a gauche. Pour un $m$ tel que les 
+$\h^i(K)$ ($i\geqslant m$) soient nuls, on prend ${K'}^i = 0$ pour 
+$i\geqslant m$. Supposons ensuite d\'ej\`a construits les ${K'}^i$ pour 
+$i>n$:
+\[\xymatrix{
+  \cdots \ar[r] 
+    & K^{n-1} \ar[r] 
+    & K^n \ar[r] 
+    & K^{n+1} \ar[r] 
+    & \cdots \\
+  & & & {K'}^{n+1} \ar[u] \ar[r] 
+    & \cdots \text{,}
+}\]
+avec $\h^i(K')\iso \h^i(K)$ pour $i>n+1$, et $\ker(d)\to\h^{n+1}(K)$ surjectif 
+en degr\'e $n+1$. D\'efinissons des faisceaux $A$ et $B$ par le diagramme 
+cart\'esien 
+\[\xymatrix{
+  K^n \ar[r] 
+    & K^n/\im(d) \ar[r] 
+    & \ker(d) \\
+  A \ar[u] \ar[r]^u 
+    & B \ar[u]\ar[r] 
+    & \ker(d) \ar[u] \text{.}
+}\]
+
+Alors, $B$ est constructible, $u$ est surjectif, et pour avancer d'un pas, il 
+suffit de construire $K^n$ plat et constructible et $v:K^n\to A$ tel que u
+$u v$ soit surjectif. Que ce soit possible est garanti par le lemme suivant. 
+
+
+
+
+
+\begin{lemma_}\label{II:4-8}
+Soit $v:A\to B$ un \'epimorphisme de faisceaux de $\Lambda$-modules, avec $B$ 
+constructible. Il existe alors $u:K\to A$ avec $K$ plat et constructible et 
+$v u$ un \'epimorphisme. 
+\end{lemma_}
+
+Le faisceau $A$ est quotient d'une somme de faisceaux de la forme 
+$\varphi_! \Lambda$, pour $\varphi:U\to X$ \'etale. Puisque $B$ est noeth\'erien 
+(\cite[IX.2.10]{4}), une somme finie de ceux-ci s'envoie d\'ej\`a sur $B$, 
+d\`u le lemme. 
+
+
+
+
+
+\begin{theorem_}\label{II:4-9}
+Soit $f:X\to Y$ un morphisme s\'epar\'e de type fini de sch\'emas noeth\'eriens. 
+Si $K\in\ob\D_\textnormal{ctf}^b(X,\Lambda)$, alors 
+$\R f_!\in \ob\D_\textnormal{ctf}^b(Y,\Lambda)$. 
+\end{theorem_}
+
+Rappelons que si $j:X\hookrightarrow \bar X \xrightarrow{\bar f} Y$ est une 
+compactification relative de $X/Y$, on a par d\'efinition 
+$\R f_! = \R \bar f_* \circ j_!$, o\`u $\R \bar f_*$ est le foncteur d\'eriv\'e 
+du foncteur $\bar f_*$. Cette formule ram\`ene la preuve de (\ref{II:4-9}) 
+au cas o\`u $f$ est propre. Pour $f$ propre, $f_*$ est de dimension 
+cohomologique finie;; ceci permet de d\'efinir $\R f_*$ sur la cat\'egorie 
+d\'eriv\'ee tout enti\`ere, et aussi comme un foncteur 
+\[
+  \R f_* : \D^-(X,\Lambda) \to \D^-(Y,\Lambda) \text{.}
+\]
+Par composition, on d\'efinit de m\^eme en g\'en\'eral 
+\[
+  \R f_! : \D^-(X,\Lambda) \to \D^-(Y,\Lambda) \text{.}
+\]
+
+Pour tout $\Lambda$-module \`a droite $N$, on a (preuve donn\'ee ci-dessous) 
+\begin{equation}\label{II:4-9-1}
+  N\lotimes \R f_! K \iso \R f_! (N\lotimes K) \text{.}
+\end{equation}
+
+D\'eduisons (\ref{II:4-9}) de \eqref{II:4-9-1}. 
+\begin{enumerate}[\indent a)]
+  \item La suite spectrale 
+    \[
+      E_2^{p q} = \R^p f_! \h^q(X) \Rightarrow \h^{p+q} \R f_! K \text{.}
+    \]
+    et le th\'eor\`eme de finitude pour $\R f_!$, montrent que 
+    $\R f_!\in \ob \D^b(X,\Lambda)$ et est \`a cohomologie constructible. 
+    Reste \`a prouver la tor-dimension finie (\ref{II:4-6}). 
+  \item Si $K$ est de tor-dimension $\leqslant -r$, il en est de m\^eme pour 
+    $\R f_! K$: on a $\h^i(N\lotimes \R f_! K) = \h^i(\R f_!(N\lotimes K))$, 
+    et, dans la suite spectrale ci-dessus pour $N\lotimes K$, les 
+    $E_2^{p q}$ sont nuls pour $q<r-s$ fortiori pour $p+q<r$. 
+\end{enumerate}
+
+Prouvons \eqref{II:4-9-1}, en restant au niveau des complexes. 
+\begin{enumerate}[\indent a)]
+  \item Utilisant la formule de d\'efinition $\R f_! = \R f_*\circ j_!$, on se 
+    ram\`ene \`a supposer $f$ propre. 
+  \item Repr\'esentons $K$ par un complexe born\'e 
+    sup\'erieurement \`a composantes acyclique pour $f_*:\R^p f_* K^q = 0$ 
+    pour $p>0$. On a alors $\R f_* K \sim f_* K$. Il n'est possible de 
+    travailler ainsi avec des complexes born\'es sup\'erieurement que parce que 
+    $f_*$ est de dimension cohomologique finie. 
+  \item Si $L$ un $\Lambda$-module \`a droite libre, on a 
+    $\R^p f_*(L\otimes K^q) = L\otimes \R^p f_* K^q$: c'est trivial pour 
+    $\Lambda$ libre de type fini, et le cas g\'en\'eral s'en d\'eduit par 
+    passage \`a la limite. Le faisceau $L\otimes K^q$ est acyclique pour 
+    $f_*$, et $f_*(L\otimes K^q) = L\otimes f_* K^q$. 
+  \item Soit $N_\bullet$ un r\'esolution libre de $N$. On a 
+    $N\lotimes K\sim s(N_\bullet\otimes K)$ (complexe simple associ\'e au 
+    complexe double $N_\bullet\otimes K$). D'apr\`es c), 
+    \[
+      \R f_*(N\lotimes K) \sim \R f_* (s(N_\bullet\otimes K)) \sim f_*(s(N_\bullet\otimes K)) \sim s(N_\bullet\otimes f_* K) \sim N\lotimes \R f_* K \text{,}
+    \]
+    soit la formule annonc\'ee. 
+\end{enumerate}
 
 
 
