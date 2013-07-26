@@ -4609,7 +4609,7 @@ Par composition, on d\'efinit de m\^eme en g\'en\'eral
 \]
 
 Pour tout $\Lambda$-module \`a droite $N$, on a (preuve donn\'ee ci-dessous) 
-\begin{equation}\label{II:4-9-1}
+\begin{equation}\label{II:eq:4-9-1}
   N\lotimes \R f_! K \iso \R f_! (N\lotimes K) \text{.}
 \end{equation}
 
@@ -4650,6 +4650,90 @@ Prouvons \eqref{II:4-9-1}, en restant au niveau des complexes.
     \]
     soit la formule annonc\'ee. 
 \end{enumerate}
+
+Lorsque $Y$ est le spectre d'un corps s\'eparablement clos, le foncteur $\R f_!$ 
+s'identifie \`a un foncteur not\'e 
+$\R \Gamma_c : \D_\text{ctf}^b(X,\Lambda)\to\D_\text{parf}(\Lambda)$. 
+
+
+
+
+
+\begin{theorem_}\label{II:4-10}
+Avec les notations du \S\ref{II:1}, soient $X_0$ un sch\'ema s\'epar\'e de type 
+fini sur $\dF_q$, et $\Lambda$ un anneau noeth\'erien de torsion, tu\'e par un 
+entier premier \`a $p$. Soit $K_0\in\ob\D_\textnormal{ctf}^b(X_0,\Lambda)$. 
+Avec la d\'efinition (\ref{II:4-3}) de traces, on a pour tout $N$ 
+\begin{equation}\label{II:eq:4-10}
+  \sum_{x\in X^{F^n}} \tr\left({F^n}^*,K_x\right) = \tr\left({F^n}^*,\R\Gamma_c(X,K)\right) \text{.}
+\end{equation}
+\end{theorem_}
+
+Dans la fin de ce \S, nous allons d\'eduire \ref{II:3-2} de \ref{II:4-10}, et 
+prouver \ref{II:2-10}. 
+
+
+
+
+
+\subsection{Preuve de \texorpdfstring{\ref{II:2-10}}{2.10}}\label{II:4-11}
+
+Soit $X$ un sch\'ema s\'epar\'e de type fini sur un corps alg\'ebriquement clos 
+$k$, et soit $\cG$ un $\dQ_\ell$-faisceau sur $K$. D'apr\`es \ref{II:2-8} on 
+peut l'\'ecrire sous la forme $\cG=\cF\otimes\dQ_\ell$, avec $\cF$ un 
+$\dZ_\ell$-faisceau sans torsion. Posons 
+\[
+  K_n = \R \Gamma_c(X,\cF\otimes\dZ/\ell^{n+1})\in\D(\dZ/\ell^{n+1}) \text{.}
+\]
+D'apr\`es \ref{II:4-9}, on a $K_n\in\ob\D_\text{parf}(\dZ/\ell^{n+1})$, et il 
+r\'esulte de \eqref{II:eq:4-9-1} que la fl\`eche naturelle 
+\begin{equation}\label{II:eq:4-11-1}
+\xymatrix{
+  K_n\lotimes_{\dZ/\ell^{n+1}} \dZ/\ell^n \ar[r] & K_{n+1} \text{,}
+}
+\end{equation}
+est un isomorphisme. Le probl\`eme de la d\'efinition de cette fl\`eche est 
+discut\'e en \ref{II:4-12}. 
+
+On peut maintenant invoquer \cite[XI.3.3]{SGA5} (p. 31, 1-2 \`a la fin; ce 
+passage est ind\'ependant du reste de \cite{SGA5}) pour r\'ealiser chaque 
+$K_n$ par un complexe born\'e de $\dZ/\ell^{n+1}$-modules libres de type fini, 
+et les fl\`eches \eqref{II:eq:4-11-1} par des \emph{isomorphismes de complexes} 
+\[\xymatrix{
+  K_n\otimes \dZ/\ell^n \ar[r]^-\sim 
+    & K_{n-1} \text{.}
+}\]
+Soit $K$ le complexe $\varprojlim K_n$. C'est un complexe born\'e de 
+$\dZ_\ell$-modules libres, et $K_n\simeq K\otimes_{\dZ_\ell}\dZ/\ell^{n+1}$. On 
+a 
+\[
+  \h^i(K) = \varprojlim \h^i(K_n) \text{,}
+\]
+(tout syst\`eme projectif de groupes finis v\'erifie en effet la condition de 
+Mittag-Leffler), et $\h^i(K)$ est un $\dZ_\ell$-module de type fini. On a 
+\[
+  \h_c^i(X,\cG) = \left(\varprojlim \h^i(K_n) \right)\otimes_{\dZ_\ell} \dQ_\ell \text{:}
+\]
+c'est un $\dQ_\ell$-espace vectoriel de dimension finie. 
+
+
+
+
+
+\subsection{La fl\`eche \texorpdfstring{\eqref{II:eq:4-11-1}}{(4.11.1)}}\label{II:4-12}
+
+Pour \emph{d\'efinir} la fl\`eche \eqref{II:eq:4-11-1}, on ne peut pas 
+proc\'eder comme en \ref{II:4-9}, i.e. r\'esoudre $\dZ/\ell^n$ par un complexe 
+de $\dZ/\ell^{n+1}$-modules libres, puisqu'on veut construire on isomorphisme 
+dans $\D_\text{parf}(\dZ/\ell^n)$. La fl\`eche voulue est un cas particulier de 
+la fl\`eche d'extension des scalaires suivante. 
+
+(*) Soit $\Lambda\to\Lambda'$ un homomorphisme d'anneaux noeth\'eriens de 
+torsion. Pour $X$ un sch\'ema s\'epar\'e de type fini sur $k$ alg\'ebriquement 
+clos, et $K\in\ob\D_\text{ctf}(X,\Lambda)$, on a un isomorphisme 
+\[\xymatrix{
+  \R\Gamma_c(X,K)\lotimes_\Lambda \Lambda' \ar[r]^-\sim & \R \Gamma_c(X,K\lotimes_\Lambda \Lambda') \text{.}
+}\]
 
 
 
