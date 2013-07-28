@@ -61,7 +61,7 @@
 
   \newcommand{\fa}{\mathfrak{a}}
   \newcommand{\fm}{\mathfrak{m}}
-  \newcommand{\fr}{\mathfrak{r}}
+  \newcommand{\fp}{\mathfrak{p}}
   \newcommand{\fX}{\mathfrak{X}}
   
   \newcommand{\sA}{\mathscr{A}}
@@ -887,9 +887,9 @@ $B$ est une $A$-algèbre de présentation finie et si les conditions
   \item $B$ est un $A$-module plat et $\Omega_{B/A}=0$ (on note $\Omega_{B/A}$ 
     le module des différentielles relatives).
   \item Soit $B=A[X_1,\dotsc,X_n]/I$ une présentation de $B$. Alors pour tout 
-    idéal premier $\fr$ de $A[X_1,\dotsc,X_n]$ contenant $I$, il existe des 
-    polynômes $P_1,\dotsc,P_n\in I$ tels que $I_\fr$ soit engendré par les 
-    images de $P_1,\dotsc,P_n$ et $\det(\partial P_i/\partial X_j)\notin \fr$.  
+    idéal premier $\fp$ de $A[X_1,\dotsc,X_n]$ contenant $I$, il existe des 
+    polynômes $P_1,\dotsc,P_n\in I$ tels que $I_\fp$ soit engendré par les 
+    images de $P_1,\dotsc,P_n$ et $\det(\partial P_i/\partial X_j)\notin \fp$.  
 \end{enumerate}
 \end{definition}
 (cf. \cite[I]{7} ou \cite[V]{11})
@@ -1883,7 +1883,7 @@ satisfaisant aux conditions suivantes:
 
 On appelle \emph{bon voisinage} relatif à $S$ un $S$-schéma $X$ tel qu'il 
 existe $S$-schémas $X=X_n,\dotsc,X_0=S$ et des fibrations élémentaires 
-$f_i:X_i\to X_{i-1}$, $i=1,\dotsc,n$. On peut montrer \cite[XI, 3.3]{4} que si 
+$f_i:X_i\to X_{i-1}$, $i=1,\dotsc,n$. On peut montrer \cite[XI 3.3]{4} que si 
 $X$ est un schéma lisse sur un corps algébriquement clos $k$ tout point 
 rationnel de $X$ possède un voisinage ouvert qui est un bon voisinage 
 (relatif à $\spec(K)$). 
@@ -2099,7 +2099,7 @@ partie ouverte et fermée de $X'\times_X X''$.
 
 Il s'agit donc de montrer que tout revêtement étale $X_0'$ de $X_0$ s'étend 
 en un revêtement étale de $X$. On sait que les revêtements étales ne 
-dépendent pas des éléments nilpotents \cite[chap. 1]{7}, par conséquent 
+dépendent pas des éléments nilpotents \cite[ch.1]{7}, par conséquent 
 $X_0'$ se relève de manière unique en un revêtement étale $X_n'$ de 
 $X_n$ pour tout $n\geqslant 0$, autrement dit en un revêtement étale 
 $\fX'$ du schéma formel $\fX$ complété de $X$ de long de $X_0$. D'après 
@@ -3521,7 +3521,7 @@ est un isomorphisme. Pour déduire (\ref{I:6-2-2}) de \eqref{I:eq:14} et
 \begin{equation}\label{I:eq:16} % originally 6.2.3.3
   \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.}
 \end{equation}
-Cette compatibilité est prouvée en (\nameref{V}, \ref{V:3-2-4}). 
+
 % originally (Dualité, 3.2.4).
 
 
@@ -4415,12 +4415,12 @@ fini, et
 Un module $\dZ$-gradué sera considéré comme $\dZ/2$-gradué par la 
 parité du degré. En particulier, si $f$ est un endomorphisme d'un complexe 
 borné de $\Lambda$-modules projectifs de type fini, on pose 
-\begin{equation}\label{II:eq:7}
+\begin{equation}\label{II:eq:4-3-1}
   \tr(f) = \sum (-1)^i \tr(f^i) \text{.}
 \end{equation}
 
 D'après \eqref{II:eq:5}, si $f$ est homotope à zéro, $\tr(f) = 0$: 
-\begin{equation}\label{II:eq:8}
+\begin{equation}\label{II:eq:4-3-2}
   f = d H + h D \Rightarrow \tr(f) = 0 \text{.}
 \end{equation}
 
@@ -4429,8 +4429,8 @@ bornés de $\Lambda$-modules projectifs de type fini, et de flèches les
 morphismes de complexes pris à homotopie près. Le foncteur 
 $\mathsf{K}_\text{parf}(\Lambda)\to\D(\Lambda)$ est pleinement fidèle. On note 
 $\mathsf{D}_\text{parf}(\Lambda)$ son image essentielle. Les formules 
-\eqref{II:eq:7} \eqref{II:eq:4-8} permettent de définir $\tr(f)$ pour $f$ un 
-endomorphismede $K\in\ob \mathsf{D}_\text{parf}(\Lambda)$ (et cette trace ne 
+\eqref{II:eq:4-3-1} \eqref{II:eq:4-3-2} permettent de définir $\tr(f)$ pour $f$ 
+un endomorphismede $K\in\ob \mathsf{D}_\text{parf}(\Lambda)$ (et cette trace ne 
 dépend que de la classe d'isomorphe de $(K,f)$). 
 
 
@@ -4610,7 +4610,7 @@ Pour tout $\Lambda$-module \`a droite $N$, on a (preuve donn\'ee ci-dessous)
   N\lotimes \R f_! K \iso \R f_! (N\lotimes K) \text{.}
 \end{equation}
 
-D\'eduisons (\ref{II:4-9}) de \eqref{II:4-9-1}. 
+D\'eduisons (\ref{II:4-9}) de \eqref{II:eq:4-9-1}. 
 \begin{enumerate}[\indent a)]
   \item La suite spectrale 
     \[
@@ -4625,7 +4625,7 @@ D\'eduisons (\ref{II:4-9}) de \eqref{II:4-9-1}.
     $E_2^{p q}$ sont nuls pour $q<r-s$ fortiori pour $p+q<r$. 
 \end{enumerate}
 
-Prouvons \eqref{II:4-9-1}, en restant au niveau des complexes. 
+Prouvons \eqref{II:eq:4-9-1}, en restant au niveau des complexes. 
 \begin{enumerate}[\indent a)]
   \item Utilisant la formule de d\'efinition $\R f_! = \R f_*\circ j_!$, on se 
     ram\`ene \`a supposer $f$ propre. 
@@ -4953,6 +4953,47 @@ $\tr_\Lambda(F) = |H| a_e$, $\tr_\Lambda^H(F) = a_e$.
 
 
 
+\subsection{}\label{II:5-7}
+
+Soient $A$ un anneau commutatif et $\Lambda$ un $A$-alg\`ebre. La multiplication 
+par un \'el\'ement de $A$ passe au quotient pour d\'efinir une structure de 
+$A$-module sur $A^\natural$. Si $H$ est un groupe fini, $P$ un $A[H]$-module 
+projectif et $M$ un $\Lambda[H]$-module, projectif en tant que $\Lambda$-module, 
+on sait que le $\Lambda$-module $P\otimes_A H$, muni de l'action diagonale de 
+$H$, est un $\Lambda[H]$-module projectif. En effet: 
+\begin{enumerate}[\indent a)]
+  \item I suffit de le v\'erifier par $P=A[H]$. 
+  \item Le $\Lambda$-module $P\otimes_A M$, muni de l'action de $H$ d\'efinie 
+    par son action sur le premier facteur, est clairement un 
+    $\Lambda[H]$-module projectif; notions le $(P\otimes_A M)'$. 
+  \item L'application $h\otimes m\mapsto h\otimes h^{-1} m$ induit un 
+    isomorphisme 
+    \begin{equation}\label{II:eq:5-7-1}
+      A[H]\otimes_A M \iso (A[H]\otimes_A M)' \text{.}
+    \end{equation}
+\end{enumerate}
+
+
+
+
+
+\begin{proposition_}\label{II:5-8}
+Avec les notations pr\'ec\'edentes, si $u$ est un endomorphisme de $F$ et 
+$v$ un endomorphisme de $M$, on a 
+\[
+  \tr_\Lambda^H(u\otimes v) = \tr_A^H(u)\tr_\Lambda(v) \text{.}
+\]
+\end{proposition_}
+
+On se ram\`ene \`a supposer que $P=A[H]$; l'endomorphisme $u$ est alors la 
+multiplication \`a droite $m_x$ par un \'el\'ement $x=\sum a_h h$ de $A[H]$. 
+L'isomorphisme \eqref{II:eq:5-7-1} transforme $u\otimes v$ en 
+$\sum a_h m_h\otimes h^{-1} v$, de trace $a_e\cdot\tr_\Lambda(v)$. 
+
+
+
+
+
 
 
 
@@ -4961,6 +5002,12 @@ $\tr_\Lambda(F) = |H| a_e$, $\tr_\Lambda^H(F) = a_e$.
 \chapter{Fonctions \texorpdfstring{$L$}{L} modulo \texorpdfstring{$\ell^n$}{l n} et modulo \texorpdfstring{$p$}{p}}\label{III}
 
 \chapter{La classe de cohomologie associée à un cycle}\label{IV}
+
+\section{Application: la formule des traces de Lefschetz dans le cas propre et lisse}\label{IV:3}
+
+\begin{corollary_}\label{IV:3-7}
+foo
+\end{corollary_}
 
 \chapter{Dualité}\label{V}
 
