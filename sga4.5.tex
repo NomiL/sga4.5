@@ -80,11 +80,6 @@
   \newcommand{\R}{\mathsf{R}}
   \newcommand{\D}{\mathsf{D}}
   \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
-  \newcommand{\kparf}{\mathsf{K}_{\textnormal{parf}}}
-  \newcommand{\dparf}{\mathsf{D}_{\textnormal{parf}}}
-  \newcommand{\DF}{\mathsf{DF}}
-  \newcommand{\kfparf}{\mathsf{K}_{\textnormal{parf}}}
-  \newcommand{\dfparf}{\mathsf{DF}_{\textnormal{parf}}}
 
 
 % theorem types
@@ -1275,7 +1270,7 @@ Le foncteur
           \textnormal{$K$-algèbres} \\ 
           \textnormal{finies étales}
         \end{array}\right\}
-  \to 
+  \to  
   \left\{\begin{array}{c}
           \textnormal{ensembles finis sur lesquels} \\
           \textnormal{$G$ opère continûment}
@@ -3858,7 +3853,7 @@ anneau noethérien commutatif $A$, on note $L(X_0,\cF_0)$ la série formelle
 de terme constant $1$, dans $\dQ_\ell\llbracket t\rrbracket$ ou dans 
 $A\llbracket t\rrbracket$, 
 \[
-  L(X_0,\cF_0) = \prod_{x\in|X|_0} \det\left(1-F_x^* t^{\deg(x)},\cF\right)^{-1} \text{.}
+  L(X_0,\cF_0) = \prod_{x\in|X_0|} \det\left(1-F_x^* t^{\deg(x)},\cF\right)^{-1} \text{.}
 \]
 
 
@@ -4429,14 +4424,14 @@ D'après \eqref{II:eq:5}, si $f$ est homotope à zéro, $\tr(f) = 0$:
   f = d H + h D \Rightarrow \tr(f) = 0 \text{.}
 \end{equation}
 
-Soit $\kparf(\Lambda)$ la catégorie d'objets les complexes bornés de 
-$\Lambda$-modules projectifs de type fini, et de flèches les morphismes de 
-complexes pris à homotopie près. Le foncteur 
-$\kparf(\Lambda)\to\D(\Lambda)$ est pleinement fidèle. On note 
-$\dparf(\Lambda)$ son image essentielle. Les formules \eqref{II:eq:7} 
-\eqref{II:eq:4-8} permettent de définir $\tr(f)$ pour $f$ un endomorphisme 
-de $K\in\ob \dparf(\Lambda)$ (et cette trace ne dépend que de la classe 
-d'isomorphe de $(K,f)$). 
+Soit $\mathsf{K}_\text{parf}(\Lambda)$ la catégorie d'objets les complexes 
+bornés de $\Lambda$-modules projectifs de type fini, et de flèches les 
+morphismes de complexes pris à homotopie près. Le foncteur 
+$\mathsf{K}_\text{parf}(\Lambda)\to\D(\Lambda)$ est pleinement fidèle. On note 
+$\mathsf{D}_\text{parf}(\Lambda)$ son image essentielle. Les formules 
+\eqref{II:eq:7} \eqref{II:eq:4-8} permettent de définir $\tr(f)$ pour $f$ un 
+endomorphismede $K\in\ob \mathsf{D}_\text{parf}(\Lambda)$ (et cette trace ne 
+dépend que de la classe d'isomorphe de $(K,f)$). 
 
 
 
@@ -4444,24 +4439,25 @@ d'isomorphe de $(K,f)$).
 
 \subsection{}\label{II:4-4}
 
-Rappelons que la catégorie dérivée filtrée $\DF(\sA)$ d'une catégorie 
+Rappelons que la catégorie dérivée filtrée $\mathsf{DF}(\sA)$ d'une catégorie 
 abélienne $\sA$ est la catégorie déduite de celle des complexes d'objets 
 filtrés de filtration finie de $\sA$ en inversant les quasi-isomorphismes 
 filtrés ($=$ morphismes de complexes filtrés induisant un quasi-isomorphisme 
 sur le gradué associé). On dispose de foncteurs ``complexe sous-jacent'': 
-$\DF(\sA)\to\D(\sA): (K,F)\mapsto K$ et ``$p$-ième composante du gradué'': 
-$\DF(\sA)\to\D(\sA): (K,F)\mapsto \gr_F^p(K)$. 
+$\mathsf{DF}(\sA)\to\D(\sA): (K,F)\mapsto K$ et ``$p$-ième composante du 
+gradué'': $\mathsf{DF}(\sA)\to\D(\sA): (K,F)\mapsto \gr_F^p(K)$. 
 
-Soit $\kfparf(\Lambda)$ la catégorie d'objets les complexes bornés 
-filtrés de filtration finie $(K,F)$ avec des $\gr_F^p(K^q)$ projectifs de 
-type fini, et de flèches les morphismes de complexes respectant la 
+Soit $\mathsf{KF}_\text{parf}(\Lambda)$ la catégorie d'objets les complexes 
+bornés filtrés de filtration finie $(K,F)$ avec des $\gr_F^p(K^q)$ projectifs 
+de type fini, et de flèches les morphismes de complexes respectant la 
 filtration, pris à une homotopie respectant la filtration près. Le foncteur 
-$\kfparf(\Lambda)\to\DF(\Lambda)$ est pleinement fidèle; son image 
-essentielle $\dfparf(\Lambda)$ est presque tous nuls; si $(K,F)$ est dans 
-$\dfparf(\Lambda)$, alors $K$ est dans $\dparf(\Lambda)$. 
+$\mathsf{KF}_\text{parf}(\Lambda)\to\mathsf{DF}(\Lambda)$ est pleinement fidèle; 
+son image essentielle $\mathsf{DF}_\text{parf}(\Lambda)$ est presque tous nuls; 
+si $(K,F)$ est dans $\mathsf{D}_\text{parf}(\Lambda)$, alors $K$ est dans 
+$\mathsf{D}_\text{parf}(\Lambda)$. 
 
 D'après \eqref{II:eq:6}, si $f$ est un endomorphisme de 
-$(K,F)\in\ob\dfparf(\Lambda)$, on a 
+$(K,F)\in\ob\mathsf{DF}_\text{parf}(\Lambda)$, on a 
 \begin{equation}\label{II:eq:9}
  \tr(f,K) = \sum_p \tr(f,\gr_F^p(K)) \text{.}
 \end{equation}
@@ -4486,8 +4482,8 @@ $K\in\ob\D^-(X,\Lambda)$.
 
 \begin{lemma}\label{II:4-5-1} 
 Soient $\Lambda$ un anneau noethérien à gauche, et $K\in\ob\D^-(\Lambda)$. 
-Pour que $K$ soit dans $\dparf(\Lambda)$, il faut et il suffit qu'il soit de 
-tor-dimension finie et que les $\h^i(K)$ soient de type fini.
+Pour que $K$ soit dans $\mathsf{DF}_\text{parf}(\Lambda)$, il faut et il suffit 
+qu'il soit de tor-dimension finie et que les $\h^i(K)$ soient de type fini.
 \end{lemma}
 
 Quitte à remplacer $K$ par un complexe isomorphe (dans $\D^-(\Lambda)$), on 
@@ -4507,7 +4503,8 @@ présentation finie, i.e. projectif de type fini. Le quotient
 \[
   0 \to K^r/\im(d) \to K^{r+1} \to K^{r+2}\to \cdots 
 \]
-de $K$ est quasi-isomorphe à $K$, et ceci montre que $K\in\ob\dparf(\Lambda)$. 
+de $K$ est quasi-isomorphe à $K$, et ceci montre que 
+$K\in\ob\mathsf{DF}_\text{parf}(\Lambda)$. 
 
 
 
@@ -4735,6 +4732,223 @@ clos, et $K\in\ob\D_\text{ctf}(X,\Lambda)$, on a un isomorphisme
   \R\Gamma_c(X,K)\lotimes_\Lambda \Lambda' \ar[r]^-\sim & \R \Gamma_c(X,K\lotimes_\Lambda \Lambda') \text{.}
 }\]
 
+Des fl\`eches plus g\'en\'erales sont construits dans \cite[XVII.4.2.12]{4}. La 
+m\'
+ethode est la suivante: 
+\begin{enumerate}[\indent a)]
+  \item La d\'efinition de $\R\Gamma_c$ est la formule 
+    $j_!(K\otimes_\Lambda\Lambda') = (j_! K)\otimes_\Lambda\Lambda'$ pour une 
+    immersion ouverte nous ram\`enent au cas o\`u $X$ est propre. 
+  \item Pour $X$ propre, il s'agit de remplacer $K$ par un complexe born\'e \`a 
+    composantes acycliques pour le foncteur $\Gamma$, et de fibre en tout point 
+    g\'eom\'etrique (ou seulement un tout point ferm\'e) homotope \`a un 
+    complexe de $\Lambda$-modules plats. Pour un tel complexe, on a 
+    $\Gamma(X,K)\sim \R\Gamma(X,K)$ et 
+    $K\otimes_\Lambda\Lambda'\sim K\lotimes_\Lambda\Lambda'$; la f\`eche 
+    \eqref{II:eq:4-11-1} est d\'efinie comme la composition 
+    \[
+      \R\Gamma(X,K)\lotimes_\Lambda \Lambda' \to \Gamma(X,K)\otimes_\Lambda\Lambda' \to \Gamma(X,K\otimes_\Lambda\Lambda') \xleftarrow\sim \R\Gamma(X,K\lotimes_\Lambda\Lambda') \text{.}
+    \]
+  \item Il reste \`a montrer qu'il est possible de remplacer $K$ par un 
+    complexe du type voulu \cite[XVII.4.2.10]{4}. On remplace d'abord $K$ par 
+    un complexe born\'e \`a composantes plates (\ref{II:4-6}), puis on en prend 
+    une r\'esolution flasque canonique tronqu\'ee (ceci ne modifie pas le type 
+    d'homotopie des complexes fibres, et on tronque assez loin pour que 
+    v\'erifi\'ee la condition d'acyclicit\'e pour $\Gamma$ (i.e. au-del\`a 
+    de la dimension cohomologique de $\Gamma$)). 
+\end{enumerate}
+
+
+
+
+
+\subsection{Prouve de \texorpdfstring{(\ref{II:3-2})}{(3.2)}}\label{II:4-13}
+
+Pour simplifier les notations, nous ne traiterons que la cas $n=1$ de 
+(\ref{II:3-2}). Le cas g\'en\'eral s'en d\'eduit en remplaçant ci-dessous 
+$F$ par $F^n$. 
+
+Soient donc $X_0$ s\'epar\'e de type fini sur $\dF_q$, et $\cG_0$ un 
+$\dQ_\ell$-faisceau sur $X_0$. On a $\cG_0=\cF_0\otimes\dQ_\ell$, pour 
+$\dZ_\ell$-faisceau sans torsion convenable $\cF_0$. Soit 
+$K_n=\R\Gamma_c(X,\cF\otimes\dZ/\ell^n)$. Les morphismes de Frobenius induisent 
+des morphismes 
+\[
+  F^* : K_n\to K_n \qquad \text{(dans $\D_\text{parf}(\dZ/\ell^{n+1})$),}
+\]
+qui se d\'eduisent les uns des autres via les isomorphismes 
+\eqref{II:eq:4-11-1}. 
+
+R\'ealisons comme en (\ref{II:4-11}) les $K_n$ et les isomorphismes 
+\eqref{II:eq:4-11-1} su niveau des complexes. La passage d\'ej\`a cit\'e de 
+\cite[XV.3.3]{SGA5} permet de r\'ealiser les morphismes $F^*$ par des 
+endomorphismes de complexes, encore not\'es $F^*$, qui se r\'eduisent les uns 
+sur les autres. On note encore $F^*$ leur limite projective, et les 
+endomorphismes qui s'en d\'eduisent. Puisque 
+$\h_c^i(X,\cG) = \h^i(K)\otimes\dQ_\ell = \h^i(K\otimes\dQ_\ell)$, on a (avec 
+la convention de signe de ?.1) 
+\[
+  \tr\left(F^*, \h_c^\bullet(X,\cG)\right) = \tr\left(F^*,K^\bullet\otimes\dQ_\ell\right) = \varprojlim_n \tr\left(F^*,K_n^\bullet\right) = \varprojlim_n \tr\left(F^*,\R\Gamma_c(X,\cF\otimes\dZ/\ell^{n+1})\right) \text{.}
+\]
+Appliquons (\ref{II:4-10}) \`a $\cF_0\otimes\dZ/\ell^{n+1}$ (vu comme complexe 
+r\'eduit su degr\'e $0$), pour $\Lambda=\dZ/\ell^{n+1}$. On trouve que 
+\begin{align*}
+  \tr\left(F^*,\R\Gamma_c(X,\cF\otimes\dZ/\ell^{n+1})\right) 
+    &= \sum_{x\in X^F} \tr\left(F^*,\cF_x\otimes\dZ/\ell^{n+1}\right) \\
+    &= \sum_{x\in X^F} \tr\left(F^*,\cG_x\right) \mod \ell^{n+1} \text{,}
+\end{align*}
+et (\ref{II:3-2}), en r\'esulte par passage \`a limite. 
+
+
+
+
+
+
+
+
+
+
+\section{La m\'ethode de Nielsen-Wecken}\label{II:5}
+
+Dans ce chapitre, nous prouvons deux cas particuliers de (\ref{II:4-10}). Le 
+cas g\'en\'eral sera consid\'er\'e au chapitre suivant. 
+
+
+
+
+
+\begin{lemma_}\label{II:5-1}
+La th\'eor\`eme (\ref{II:4-10}) est vrai pour $X_0$ de dimension $0$. 
+\end{lemma_}
+
+En dimension $0$, la formule \eqref{II:eq:4-10} vaut pour toute 
+correspondance, et non seulement pour les it\'er\'es d'un Frobenius. Elle est 
+un cas particulier de l'\'enonc\'e suivent (allpiqu\'e \`a $X(\dF)$, $K$ et 
+aux ${F^*}^n$). 
+
+(*) Soit $X$ un ensemble fini, $F:X\to X$, $K\in\ob\D_\text{parf}(X,\Lambda)$ 
+et $F^*:F^* K\to K$. On a 
+\[
+  \sum_{X^F} \tr\left(F^*,K_x\right) = \tr\left(F^*,\Gamma(X,K)\right) \text{.}
+\]
+
+On a $\Gamma(X,K)=\bigoplus_{x\in X} K_x$, et la formule r\'esulte de ce que 
+pour tout morphisme $u:\bigoplus_{x\in X} K_x\to \bigoplus_{x\in X} K_x$, de 
+matrice $u_x^y$, on a $\tr(u)=\sum_{x\in X} \tr\left(u_x^x\right)$. 
+
+
+
+
+
+\begin{lemma_}\label{II:5-2}
+Soient $\Lambda$ un anneau noeth\'erien de torsion, tu\'e par une puissance du 
+nombre premier $\ell\ne p$, $X_0$ une courbe projective, lisse et connexe sur 
+$\dF_q$, $j:U_0\hookrightarrow X_0$ un ouvert dense de $X_0$ et $\cG_0$ un 
+faisceau localement constant de $\Lambda$-modules projectifs sur $U_0$. On a 
+\[
+  \sum_{x\in U^F} \tr\left(F^*,\cG_x\right) = \tr\left(F^*,\R\Gamma_c(U,\cG)\right) \text{.}
+\]
+\end{lemma_}
+
+Plus pr\'ecis\'ement, nous d\'eduirons (\ref{II:5-2}) du 
+
+
+
+
+
+\begin{theorem_}\label{II:5-3}
+Soient $X$ une courbe projective non singuli\`ere sur un corps alg\'ebriquement 
+clos $k$, $f$ un endomorphisme \`a points fixes isol\'es de $X$ et $v(f)$ le 
+nombre de points fixes de $f$, chacun \'etant compt\'e avec sa multiplicit\'e: 
+$v(f)$ est la nombre d'intersection du graphe de $f$ avec la diagonale de 
+$X\times X$. Alors, pour $\ell$ premier \`a l'exposant caract\'eristique de $k$, 
+on a 
+\[
+  v(f) = \sum (-1)^i \tr\left(f^*,\h^i(X,\dQ_\ell)\right) \text{.}
+\]
+\end{theorem_}
+
+Ce th\'eor\`eme est d\^u \`a Weil (\cite{II:4}, n$^\circ$ 43, 66 et 68) et la 
+d\'emonstration de Weil est reproduite dans Lang \cite{II:3} (VI \S3 combin\'e 
+avec VII \S2 th.3). On peut aussi le d\'eduire du formalisme de la classe 
+cohomologie associ\'ee \`a un cycle (\nameref{IV}, \ref{IV:3-7}). 
+
+
+
+
+
+\begin{corollary_}\label{II:5-4}
+Soit $j:U\hookrightarrow X$ un ouvert dense de $X$, tel que $f^{-1}(U)=U$. Si 
+les points fixes de $f$ dans $X\setminus U$ sont de multiplicit\'e un, alors le 
+nombre $v_U(f)$ de points fixes de $f$ dans $U$ (chacun compt'e avec sa 
+multiplicit\'e) est 
+\[
+  v_U(f) = \sum (-1)^i \tr\left(f^*,\h_c^i(U,\dQ_\ell)\right) \text{.}
+\]
+\end{corollary_}
+
+Soit $F$ l'ensemble fini $X\setminus U$. La suite exacte de cohomologie 
+d\'efinie par la suite exacte court 
+$0\to j_! \dQ_\ell\to\dQ_\ell\to{\dQ_\ell}_F\to 0$: 
+\[\xymatrix{
+  \ar[r]^-\partial 
+    & \h_c^i(U,\dQ_\ell) \ar[r] 
+    & \h^i(X,\dQ_\ell) \ar[r] 
+    & \h^i(F,\dQ_\ell) \ar[r]^-\partial 
+    & 
+}\]
+fournit, avec la convention de signe de (\ref{II:3-1}). 
+\[
+  \tr\left(f^*,\h_c^\bullet(U,\dQ_\ell)\right) 
+    = \tr\left(f^*,\h^\bullet(X,\dQ_\ell)\right) - \tr\left(f^*,\h^\bullet(F,\dQ_\ell)\right) 
+    = v(f) - \tr(f^*,\dQ_\ell^F) \text{.}
+\]
+La trace de $f^*$ sur $\dQ_\ell^F$ est le nombre $v_F(f)$ de points fixes de 
+$f$ dans $F$; l'hypoth\`ese de multiplicit\'e un assure donc que 
+\[
+  \tr\left(f^*,\h_c^\bullet(U,\dQ_\ell)\right) 
+    = v_F(f) - v_U(f) \text{,}
+\]
+comme promis. 
+
+La preuve de (\ref{II:5-2}) utilise quelques lemmes que nous allons 
+d\'evelopper maintenant sur un cas particulier des traces non commutative 
+(\ref{II:4-2}). \emph{Pour abr\'eger, nous dirons projectif pour projectif de 
+type fini}. 
+
+
+
+
+
+\subsection{}\label{II:5-5}
+
+Soient $\Lambda$ un anneau, et $H$ un groupe fini. L'application 
+$\sum a_h \cdot a\mapsto $ classe de $a_e$, de l'alg\`ebre de groupe 
+$\Lambda[H]$ dans $\Lambda^\natural$, s'annule sur les commutateurs $ab-ba$ de 
+$\Lambda[H]$. Elle se factorise donc par 
+\[
+  \varepsilon : \Lambda[H]^\natural \to \Lambda^\natural \text{.}
+\]
+Si $F$ est un endomorphisme d'un $\Lambda[H]$-module projectif $P$, on pose 
+\[
+  \tr_\Lambda^H(F) = \varepsilon \tr_{\Lambda[H]} (F) 
+\]
+o\`u au second membre figure la trace (\ref{II:4-2}). Pour \'eviter das 
+ambiguit\'es, on \'ecrira parfois cette trace $\tr_\Lambda^H(F,P)$. 
+
+
+
+
+
+\begin{proposition_}\label{II:5-6}
+$\tr_\Lambda(F) = |H|\tr_\Lambda^H(F)$. 
+\end{proposition_}
+
+Les propri\'et\'es formelles des traces nous ram\`enent \`a ne traiter que le 
+cas o\`u $P=\Lambda[H]$. L'endomorphisme $F$ est alors le multiplication \`a 
+droite par un \'el\'ement $\sum a_h\cdot h$ de $\Lambda[H]$, et 
+$\tr_\Lambda(F) = |H| a_e$, $\tr_\Lambda^H(F) = a_e$. 
+
 
 
 
@@ -4789,6 +5003,8 @@ foo
   \bibitem{SGA5} A. Grothendieck, \emph{Cohomologie $\ell$-adique et fonctions $L$}, SGA 5, Springer no. 589, 1965/66. 
   
   \bibitem{8} A. Grothendieck et J. Dieudonné, \emph{Éléments de géométrie algébrique}, Pub. Math. IHES, 1960/67. 
+  
+  \bibitem{II:3} S. Lang, \emph{Abelian varieties}, Interscience 1959. 
 
   \bibitem{11} M. Raynaud, \emph{Anneaux Locaux Henséliens}, Springer no.169, 1970. 
   
@@ -4799,6 +5015,8 @@ foo
   \bibitem{15} J.-P. Serre, \emph{Groupes algébriques et corps de classes}, 1959. 
 
   \bibitem{II:V} J.L. Verdier, \emph{The Lefschetz fixed point theorem in etale cohomology}, Proc. of a conf. on Local Fields, Driebergen, Springer, 1967. 
+  
+  \bibitem{II:4} A. Weil, \emph{Variétés abéliennes et courbes algébriques}, Act. Sci. et Ind., Hermann, Paris. 
 
 \end{thebibliography}
 
