@@ -1045,7 +1045,7 @@ qu'il en soit ainsi en les points rationnelles de $X$.
 Si $f:X\to Y$ est un morphisme de schémas et $\cF$ un faisceau sur $\et X$, 
 l'\emph{image directe} $f_* \cF$ de $\cF$ par $f$ est le faisceau sur $\et Y$ 
 défini par $f_* \cF(V) = \cF(X\times_Y V)$ pour tout $V$ étale sur $Y$. Le foncteur 
-$f_*:\ab\sh(\et X)\to \ab\sh(\et Y)$ est exact à gauche. Ses foncteurs 
+$f_*:\sh(\et X)\to \sh(\et Y)$ est exact à gauche. Ses foncteurs 
 dérivés à droite $\R^q f_*$ s'appellent images directes supérieures. Si 
 $\bar y$ est un point géométrique de $Y$, on a 
 \[
@@ -1335,7 +1335,7 @@ projectif $\pgl(n,\bar K)$ et on a une bijection canonique:
 \]
 
 D'autre part la suite exacte:
-\begin{equation}\label{I:eq:1}
+\begin{equation}\label{I:eq:3-1-2-1}
   1 \to \bar K^\times \to \gl(n,\bar K) \to \pgl(n,\bar K) \to 1\text{,}
 \end{equation}
 permet de définir un opérateur cobord:
@@ -1374,7 +1374,7 @@ injective.
 \end{lemma}
 
 D'après \cite{14}, cor. à la prop. I-44, il suffit de vérifier que chaque 
-fois qu'on tord la suite exacts (\ref{I:eq:1}) par un élément de 
+fois qu'on tord la suite exacts (\ref{I:eq:3-1-2-1}) par un élément de 
 $\h^1\left(G,\pgl(n,\bar K)\right)$, le $\h^1$ du groupe médian est trivial. 
 Ce groupe médian est le groupe des $\bar K$-points du groupe multiplicatif 
 d'une algèbre centrale simple $A$ de rang $n^2$ sur $K$. Pour prouver que 
@@ -1479,8 +1479,8 @@ Si un corps $K$ est $C_1$, on a $\br(K)=0$.
 \end{proposition}
 
 Il s'agit de montrer que tout corps gauche $D$ de centre $K$ et fini sur $K$ 
-est égale à $K$. Soient $r^2$ le degré de $D$ sur $K$ et $\nrd:D\to K$ la 
-norme réduite. 
+est égale à $K$. Soient $r^2$ le degré de $D$ sur $K$ et 
+$\operatorname{Nrd}:D\to K$ la norme réduite. 
 
 (Localement pour la topologie étale sur $K$, $D$ est isomorphe -- non 
 canoniquement -- à une algèbre de matrices $M_r$ et la norme réduite 
@@ -1489,12 +1489,13 @@ indépendamment de l'isomorphisme choisi entre $D$ et $M_r$ car tout
 automorphisme de $M_r$ est intérieur et deux matrices semblables ont 
 même déterminant. Cette application définie localement pour la 
 topologie étale se descende, à cause de son unicité locale, en une 
-application $\nrd:D\to K$). 
+application $\operatorname{Nrd}:D\to K$). 
 
-Le seul zéro de $\nrd$ est l'élément nul de $D$, car, si $x\ne 0$, on a 
-$\nrd(x)\cdot \nrd(x^{-1}) = 1$. D'autre part, si $\{e_1,\dotsc,e_{r^2}\}$ est 
-une base de $D$ sur $K$ et si $x=\sum x_i e_i$, la fonction $\nrd(x)$ s'écrit 
-comme un polynôme homogène $\nrd(x_1,\dotsc,x_{r^2})$ de degré $r$ (c'est 
+Le seul zéro de $\operatorname{Nrd}$ est l'élément nul de $D$, car, si 
+$x\ne 0$, on a $\operatorname{Nrd}(x)\cdot \operatorname{Nrd}(x^{-1}) = 1$. 
+D'autre part, si $\{e_1,\dotsc,e_{r^2}\}$ est une base de $D$ sur $K$ et si 
+$x=\sum x_i e_i$, la fonction $\operatorname{Nrd}(x)$ s'écrit comme un polynôme 
+homogène $\operatorname{Nrd}(x_1,\dotsc,x_{r^2})$ de degré $r$ (c'est 
 clair localement pour la topologie étale). Puisque $K$ est $C_1$, on a 
 $r^2\leqslant r$, c'est-à-dire $r=1$ et $D=K$. 
 
@@ -1581,7 +1582,7 @@ canonique et $\dZ_x$ le faisceau constant de valeur $\dZ$ sur $x$. Ainsi
 $j_*\dG_{m,\eta}$ est le faisceau des fonctions méromorphes non nulles sur 
 $X$ et $\oplus_{x\in X} i_{x_I}\dZ_x$ le faisceau des diviseurs, on a donc une 
 suite exacte de faisceaux:
-\begin{equation}\label{I:eq:2}
+\begin{equation}\label{I:eq:3-3-1-1}
 \xymatrix{
   0 \ar[r] 
     & \dG_m \ar[r]
@@ -1643,7 +1644,7 @@ Le deuxième membre est nul pour tout $q>0$, car $x$ est la spectre d'un
 corps algébriquement clos (On voit que le lemme est vrai plus 
 généralement pour tout faisceau ``gratte-ciel'' sur $X$). 
 
-On déduit des lemmes précédents et de la suite exacte (\ref{I:eq:2}) 
+On déduit des lemmes précédents et de la suite exacte (\ref{I:eq:3-3-1-1}) 
 les égalités:
 \[
   \h^q(X,\dG_m) = 0 \text{ pour $q\geqslant 2$,}
@@ -2366,7 +2367,7 @@ propre (\ref{I:4-1-1}). Plus généralement, si
     & S' \ar[l]^-g
 }\]
 est un diagramme cartésien, on a un isomorphe canonique 
-\begin{equation}\label{I:eq:3}
+\begin{equation}\label{I:eq:4-5-4-1}
   g^* (\R^q f_! \cF) \simeq \R^q f_!'({g'}^* \cF) \text{.}
 \end{equation}
 
@@ -2419,7 +2420,7 @@ dont les fibres sont des courbes géométriquement connexes de genre $g$.
 Pour $n$ inversible sur $X$, les faisceaux $\R^q f_* \cF$ sont alors localement 
 libres de rang fini, nuls pour $q>2$ (\ref{I:4-6-1}). Remplaçant $\dZ/n$ par le 
 faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement 
-\begin{equation}\label{I:eq:4}
+\begin{equation}\label{I:eq:4-6-2-1}
 \begin{aligned}
   \R^0 f_* \dmu_n &= \dmu_n \\
   \R^1 f_* \dmu_n &= \const\pic(X/S)_n \\
@@ -2615,7 +2616,7 @@ point $x$.
 
 On dit que $f$ est \emph{localement acyclique} si, la cohomologie réduite de 
 toute variété de cycles évanescents $\widetilde X_t^x$ est nulle:
-\begin{equation}\label{I:eq:5}
+\begin{equation}\label{I:eq:5-1-3-1}
   \hat\h^\bullet(\widetilde X_t^x,\dZ/n) = 0\text{,}
 \end{equation}
 i.e. $\h^0\left(X_t^x,\dZ/n\right) = \dZ/n$ et 
@@ -2706,14 +2707,14 @@ aussitôt que la restriction à $X_s$ des faisceaux $\R^q \varepsilon_*' \dZ/n$
 est $\dZ/n$ pour $q=0$, et $0$ pour $q>0$. Par (\ref{I:5-1-5}) on sait même que 
 $\R^q \varepsilon_*'\dZ/n = 0$ pour $q>0$. On définit $\cosp^\bullet$ comme la 
 flèche composée 
-\begin{equation}\label{I:eq:6}
+\begin{equation}\label{I:eq:5-1-6-1}
   \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X,\varepsilon_*' \dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
 \end{equation}
 
 \paragraph{Variante}
 Soient $\bar S$ l'adhérence de $\varepsilon(t)$ dans $\widetilde S^s$, $S'$ le 
 normalisé de $\bar S$ dans $k(t)$ et $X'/S'$ déduit de $X/S$ par changement 
-de base. Le diagramme \eqref{I:eq:6} peut encore s'écrire 
+de base. Le diagramme \eqref{I:eq:5-1-6-1} peut encore s'écrire 
 \[
   \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X',\dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
 \]
@@ -3075,7 +3076,7 @@ lisses.
 
 \begin{theorem}[pureté relative]\label{I:5-3-4}
 Soit un diagramme commutatif 
-\begin{equation}\label{I:eq:7}\xymatrix{
+\begin{equation}\label{I:eq:5-3-4-1}\xymatrix{
   U \ar@{^{(}->}[r]^-j \ar[dr]
     & X \ar[d]^-f 
     & \ar@{_{(}->}[l]_-i Y \ar[dl]^-h \\
@@ -3109,7 +3110,7 @@ couple localement isomorphe, par exemple
 }\]
 avec $T=\dA_S^{n-1}$ et $i=$ section à l'infini. Le corollaire (\ref{I:5-1-9}) 
 s'applique à $g$, et fournit $\R^q g_ \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
-Pour $f$, on a par ailleurs \eqref{I:eq:4}
+Pour $f$, on a par ailleurs \eqref{I:eq:4-6-2-1}
 \[
   \R^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ pour $q>2$.}
 \]
@@ -3211,7 +3212,7 @@ le théorème de dualité de Poincaré peut se présenter ainsi:
 \begin{enumerate}[\indent A]
   \item La cohomologie de $X$ est la cohomologie de \v Cech correspondant au 
     revêtement $\sU$. C'est la cohomologie du complexe 
-    \begin{equation}\label{I:eq:8}
+    \begin{equation}\label{I:eq:6-1}
       0 \to \dZ^{A_0} \to \dZ^{A_1} \to \cdots
     \end{equation}
     où $A_k=\{(i_0,\dotsc,i_k) : i_0<\cdots<i_k\text{ et } U_{i_0}\cap \cdots \cap U_{i_k} \ne \varnothing\}$. 
@@ -3219,7 +3220,7 @@ le théorème de dualité de Poincaré peut se présenter ainsi:
       $U_a=U_{i_1}\cap \cdots \cap U_{i_k}$ et soit $j_a$ l'inclusion de $U_a$ 
       dans $X$. Le faisceau constant $\dZ$ sur $X$ admet la résolution (à 
       gauche) 
-      \begin{equation}\label{I:eq:9}
+      \begin{equation}\label{I:eq:6-2}
       \xymatrix{
         \cdots \ar[r]
           & \displaystyle\bigoplus_{a\in A_1} j_{a!}\dZ \ar[r] 
@@ -3238,15 +3239,21 @@ le théorème de dualité de Poincaré peut se présenter ainsi:
         \]
 \end{enumerate}
 
-La suite spectrale d'hypercohomologie, pour le complexe \eqref{I:eq:8}, d'où 
-la dualité de Poincaré. 
+La suite spectrale d'hypercohomologie, pour le complexe \eqref{I:eq:6-2}, et la 
+cohomologie \`a support propre, affirme donc que $\h_c^i(X)$ est le 
+$(i-N)$-i\`eme groupe de cohomologie d'un complexe 
+\begin{equation}\label{I:eq:6-3}
+  \cdots \to \dZ^{A_1} \to \dZ^{A_0} \to 0 \text{.}
+\end{equation}
+Ce complexe est le dual du complexe \eqref{I:eq:6-1}, d'o\`u la dualit\'e de 
+Poincare.
 
 Les points essentiels de cette construction sont 
 \begin{enumerate}[\indent a)]
   \item l'existence d'une théorie de cohomologie à support propre: 
   \item le fait que tout point $x$ d'une varété $X$ purement de dimension 
     $N$ a un système fondamental de voisinages ouverts $U$ pour laquels 
-    \begin{equation}\label{I:eq:10}
+    \begin{equation}\label{I:eq:6-4}
       \h_c^i(U) = \begin{cases}
                     0   & \text{pour $i\ne N$,} \\
                     \dZ & \text{pour $i=N$.}
@@ -3258,7 +3265,7 @@ La dualité de Poincaré en cohomologie étale peut se construire sur ce
 modèle. Pour $X$ lisse purement de dimension $N$ sur $k$ algébriquement clos, 
 $n$ inversible sur $X$ et $x$ un point fermé de $X$, le point clef est de 
 calculer la limite projective, étendue aux voisinages étales $U$ de $x$ 
-\begin{equation}\label{I:eq:11}
+\begin{equation}\label{I:eq:6-5}
   \varprojlim \h_c^i(U,\dZ/n) 
     = \begin{cases}
         0     & \text{si $i\ne 2N$} \\
@@ -3270,20 +3277,20 @@ De même que pour les variétés topologiques il faut d'abord traiter
 directement le cas d'une boule ouverte (voire simplement celui de l'intervalle 
 $(0,1)$), ici il faut d'abord traiter directement le cas des courbes 
 (\ref{I:6-2}). Le théorème d'acyclicité locale des morphismes lisses 
-permet ensuite de ramener \eqref{I:eq:11} à ce cas particulier (\ref{I:6-3}). 
+permet ensuite de ramener \eqref{I:eq:6-5} à ce cas particulier (\ref{I:6-3}). 
 
-Les isomorphismes \eqref{I:eq:10} et \eqref{I:eq:11} ne sont pas canoniques: 
+Les isomorphismes \eqref{I:eq:6-4} et \eqref{I:eq:6-5} ne sont pas canoniques: 
 ils dépendent du choix d'une \emph{orientation} de $X$. Pour $n$ inversible 
 sur un schéma $X$, $\dmu_n$ est un faisceau de $\dZ/n$-modules libres de rang 
 un. On note $\dZ/n(N)$ sa puissance tensorielle $N$-ième ($N\in\dZ$). La 
-forme intrinsèque de la duixième ligne de \eqref{I:eq:11} est 
-\begin{equation}\label{I:eq:12}
+forme intrinsèque de la duixième ligne de \eqref{I:eq:6-5} est 
+\begin{equation}\label{I:eq:6-5'}
   \varprojlim \h_c^{2N} \left(U,\dZ/n(N)\right) = \dZ/n \text{,}
 \end{equation}
 et $\dZ/n(N)$ s'appelle le \emph{faisceau d'orientation} de $X$; le faisceau 
 $\dZ/n(N)$ étant constant, isomorphe à $\dZ/n$, on peut le faire sortir 
 du signe $N$ et écrire plutôt
-\begin{equation}\label{I:eq:13}
+\begin{equation}\label{I:eq:6-5''}
   \varprojlim \h_c^{2N} (U,\dZ/n) = \dZ/n(-N) \text{,}
 \end{equation}
 et la dualité de Poincaré prendra la forme d'une dualité parfaite, à 
@@ -3394,7 +3401,7 @@ $\dG_m^D/(\text{$\dG_m$ diagonal})$.
   \item La suite exacte 
     $0\to j_!\dmu_n \to _D\dG_m \xrightarrow{n} _D\dG_m\to 0$ fournit un 
     isomorphisme 
-    \begin{equation}\label{I:eq:14}
+    \begin{equation}\label{I:eq:6-2-3-1}
       \h_c^1(X,\dmu_n) = \pic_D^0(\bar X)_n \text{.}
     \end{equation}
   \item L'application qui à $x\in X(k)$ associe la classe du faisceau 
@@ -3418,12 +3425,12 @@ par l'extension
 }\]
 La théorie du corps de classes géométrique (telle qu'exposée dans 
 Serre \cite{15}) montre que l'application $v\mapsto f_0^*(\bar v)$: 
-\begin{equation}\label{I:eq:15}
+\begin{equation}\label{I:eq:6-2-3-2}
   \hom\left(\pic_D^0(\bar X)_n,\dZ/n\right) \to \h^1(X,\dZ/n)
 \end{equation}
-est un isomorphisme. Pour déduire (\ref{I:6-2-2}) de \eqref{I:eq:14} et 
-\eqref{I:eq:15}, il reste à savoir que 
-\begin{equation}\label{I:eq:16} % originally 6.2.3.3
+est un isomorphisme. Pour déduire (\ref{I:6-2-2}) de \eqref{I:eq:6-2-3-1} et 
+\eqref{I:eq:6-2-3-2}, il reste à savoir que 
+\begin{equation}\label{I:eq:6-2-3-3}
   \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.}
 \end{equation}
 
@@ -3460,14 +3467,14 @@ $\h_c^i\left(X,\dZ/n(N)\right)$ et $\h^{2 N-i}(X,\dZ/n)$ au dual de l'autre.
 
 Soient $x\in X$ un point fermé et $X_x$ le localisé strict de $X$ en $x$. 
 Nous posons, pour $U$ parcourant les voisinages étales de $x$ 
-\begin{equation}\label{I:eq:17}
+\begin{equation}\label{I:eq:6-3-1-1}
   \h_c^\bullet(X_x,\dZ/n) = \varprojlim \h_c^\bullet(U,\dZ/n) \text{.}
 \end{equation}
 Il serait préférable de considérer plutôt le pro-objet 
 $\text{``}\varprojlim\text{''} \h_c^\bullet(U,\dZ/n)$ mais, les groupes en jeu 
 étant finis, la différence est inessentielle. Comme on a tenté de 
 l'expliquer dans l'introduction, (\ref{I:6-3-1}) résulte de ce que 
-\begin{equation}\label{I:eq:18}
+\begin{equation}\label{I:eq:6-3-1-2}
 \begin{aligned}
   \h_c^i(X_x,\dZ/n) &= 0 \text{ pour $i\ne 2N$ et que } \\
   \tr : \h_c^{2 N}\left(X_x,  \dZ/n(N)\right) &\iso \dZ/n \text{ est un isomorphisme.} 
@@ -3480,8 +3487,8 @@ $f:X_x\to Y_y$ un morphisme essentiellement lisse (de dimension relative un).
 La démonstration utilise la suite spectrale de Leray en cohomologie à 
 support propre pour $f$, pour se ramener au cas des courbes. Les ``cohomologie 
 à support propre'' considérées étant définies comme des limites 
-\eqref{I:eq:17}, l'existence d'une telle suite spectrale pose divers problèmes 
-de passage à la limite, traités avec trop de détailes dans 
+\eqref{I:eq:6-3-1-1}, l'existence d'une telle suite spectrale pose divers 
+problèmes de passage à la limite, traités avec trop de détailes dans 
 \cite[XVIII]{4}. Pour tout point géométrique $z$ de $Y_y$, on a 
 \[
   (\R^if_! \dZ/n)_z = \h_c^i(f^{-1}(z),\dZ/n) \text{.}
@@ -3641,7 +3648,7 @@ En cas d'ambiguïté, on écrira $F_{(q)}$ plutôt que $F$.
 Soient $X_0$ un schéma sur $\dF_q$, et $\cF_0$ un faisceau sur $X_0$. J'aime 
 voir comme suit la \emph{correspondance de Frobenius} (un $F$-endomorphisme de 
 $\cF_0$): 
-\begin{equation}\label{II:eq:1}
+\begin{equation}\label{II:eq:1-2-1}
   F^* : F^*\cF_0 \iso \cF_0
 \end{equation}
 
@@ -3655,7 +3662,7 @@ Artin). La fonctorialité de $F$ fournit un diagramme commutatif
     & X_0
 }\]
 Parce que $[\cF_0]$ est étale sur $X_0$, ce diagramme est cartésien; il fournit 
-un isomorphisme $[\cF_0]\iso F^*[\cF_0]$ d'inverse \eqref{II:eq:1}. On note 
+un isomorphisme $[\cF_0]\iso F^*[\cF_0]$ d'inverse \eqref{II:eq:1-2-1}. On note 
 encore $F^*$ les correspondances ou morphismes déduits de $F$ par extension 
 des scalaires ou par fonctorialité, tels 
 $F^*:\h_c^\bullet(X,\cF)\to \h_c^\bullet(X,\cF)$. 
@@ -3785,7 +3792,7 @@ $\dF$, et par transport de structure sur $\h_c^i(X,\cF)$. En particulier, la
 substitution de Frobenius $\varphi$ (\ref{II:1-1}) induit un automorphisme, 
 encore noté $\varphi$, de $\h_c^i(X,\cF)$. La correspondance de Frobenius 
 définit de son côté un endomorphisme $F^*$ de $\h_c^i(X,\cF)$. On a 
-\begin{equation}\label{II:eq:2}
+\begin{equation}\label{II:eq:1-8-1}
   {F^*}^{-1} = \varphi \qquad \text{(sur $\h_c^i(X,\cF)$).}
 \end{equation}
 
@@ -4098,7 +4105,7 @@ on compare terme à terme.
 Soient $A$ un anneau commutatif, $M$ un $A$-module projectif de type fini et 
 $f$ un endomorphisme de $M$. Pour tout série formelle inversible $Q$, on pose 
 $\frac{d}{dT}\log Q = Q^{-1}\frac{d}{dT}Q$. On a 
-\begin{equation}\label{II:eq:3}
+\begin{equation}\label{II:eq:3-3-1}
   T\frac{d}{dT}\log\det(1-f T)^{-1} = \sum_{n>0} \tr(f^n) T^n \text{.}
 \end{equation}
 \end{proposition_}
@@ -4106,13 +4113,13 @@ $\frac{d}{dT}\log Q = Q^{-1}\frac{d}{dT}Q$. On a
 Soit $M'$ un $A$-module tel que $M\oplus M'$ soit libre de rang fini. 
 Remplacer $(M,f)$ par $(M\oplus M',f\oplus 0)$ ne change pas les deux membres 
 de (\ref{II:3-3}), et nous ramène au cas où $M$ est libre. Pour $M=A^d$, 
-\eqref{II:eq:3} est une identité algébrique portant sur les coefficients 
+\eqref{II:eq:3-3-1} est une identité algébrique portant sur les coefficients 
 $f_i^j$ de $f$. Par le principe de prolongement des identités algébriques, 
 il suffit de la vérifier pour $A$ un corps algébriquement clos de 
 charactéristique $0$. Les deux membres étant additifs en $M$ dans une 
 extension $0\to M'\to M\to M''\to 0$, il suffit même de ne traiter que le cas 
-où $M$ est de rang $1$. Si $f$ est la multiplication par $a$, \eqref{II:eq:3} 
-se réduit alors à la formule 
+où $M$ est de rang $1$. Si $f$ est la multiplication par $a$, 
+\eqref{II:eq:3-3-1} se réduit alors à la formule 
 \[
   T\frac{d}{dT}\log\left((1-a T)^{-1}\right) = \sum_{n>0} a^n T^n \text{.}
 \]
@@ -4125,7 +4132,7 @@ se réduit alors à la formule
 Soient $n$ un entier, et $f^{(n)}$ l'endomorphisme 
 $(x_1,\dotsc,x_n)\mapsto \left(f(x_n),x_1,\dotsc,x_{n-1}\right)$ de $M^n$. 
 On a 
-\begin{equation}\label{II:eq:4}
+\begin{equation}\label{II:eq:3-4-1}
   \det(1-f T^n) = \det(1-f^{(n)} T) \text{.}
 \end{equation}
 \end{corollary_}
@@ -4149,7 +4156,7 @@ et on observe que
 
 \subsection{Remarque}\label{II:3-5}
 
-Pour $A=\dQ_\ell$, \eqref{II:eq:4} est le cas particulier 
+Pour $A=\dQ_\ell$, \eqref{II:eq:3-4-1} est le cas particulier 
 $X_0=\spec(\dF_{q^n})$ de (\ref{II:3-1}). Utilisant cette identité, il est 
 facile de vérifier directement que le second membre de (\ref{II:3-1}) est 
 indépendant de $q$, et du morphisme structural $X_0\to\spec(\dF_q)$. 
@@ -4299,7 +4306,7 @@ $\dZ/2$-gradué, de composantes $f_i^j:P^j\to P^i$, on pose
 S'il y a risque d'ambiguïté, on écrira plutôt $\tr(f;P)$. Si les 
 homomorphismes $f:P\leftrightarrows Q:g$ sont homogènes, on vérifie 
 aussitôt par réduction au cas libre que 
-\begin{equation}\label{II:eq:5}
+\begin{equation}\label{II:eq:4-2-1}
   \tr(f g) = \tr\left((-1)^{\deg f \deg g} g f\right) \text{.}
 \end{equation}
 
@@ -4307,7 +4314,7 @@ Si $f$ est un endomorphisme d'un $\Lambda$-module $\dZ/2$-gradué filtré
 $(P,F)$, de filtration finie, compatible à la graduation, et que les 
 $\gr_F^i(P)$ sont projectifs de type fini, alors $P$ est projectif de type 
 fini, et 
-\begin{equation}\label{II:eq:6}
+\begin{equation}\label{II:eq:4-2-2}
   \tr(f;P) = \sum \tr\left(f; \gr_F^i(P) \right)
 \end{equation}
 (scinder la filtration pour se ramener au cas d'une somme directe). 
@@ -4325,7 +4332,7 @@ borné de $\Lambda$-modules projectifs de type fini, on pose
   \tr(f) = \sum (-1)^i \tr(f^i) \text{.}
 \end{equation}
 
-D'après \eqref{II:eq:5}, si $f$ est homotope à zéro, $\tr(f) = 0$: 
+D'après \eqref{II:eq:4-2-1}, si $f$ est homotope à zéro, $\tr(f) = 0$: 
 \begin{equation}\label{II:eq:4-3-2}
   f = d H + h D \Rightarrow \tr(f) = 0 \text{.}
 \end{equation}
@@ -4362,7 +4369,7 @@ son image essentielle $\mathsf{DF}_\text{parf}(\Lambda)$ est presque tous nuls;
 si $(K,F)$ est dans $\mathsf{D}_\text{parf}(\Lambda)$, alors $K$ est dans 
 $\mathsf{D}_\text{parf}(\Lambda)$. 
 
-D'après \eqref{II:eq:6}, si $f$ est un endomorphisme de 
+D'après \eqref{II:eq:4-2-2}, si $f$ est un endomorphisme de 
 $(K,F)\in\ob\mathsf{DF}_\text{parf}(\Lambda)$, on a 
 \begin{equation}\label{II:eq:4-4-1}
  \tr(f,K) = \sum_p \tr(f,\gr_F^p(K)) \text{.}

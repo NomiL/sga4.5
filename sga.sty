@@ -1,22 +1,21 @@
-\usepackage[utf8]{inputenc}
-\usepackage[all]{xy}
+\usepackage[utf8]{inputenc} % allows French characters
+\usepackage[all]{xy}        % commutative diagrams
 \usepackage[stable,symbol]{footmisc}
 \usepackage[text={5.5in,8in},centering]{geometry}
 \usepackage{
   amsmath,
   amssymb,
   amsthm,
-  bm,
-  enumerate,
-  mathrsfs,
-  microtype,
-  stmaryrd
+  bm,        % to get bold symbols to work with stmaryrd
+  enumerate, % allows \begin{enumerate}[\indent a)]
+  mathrsfs,  % allows \mathscr
+  microtype, % improves general appearance
+  stmaryrd   % allows \llbracket, i.e. [[t]]
 }
 \usepackage[backref=page]{hyperref}
 
 
 % operators
-  \DeclareMathOperator{\ab}{Ab}
   \DeclareMathOperator{\aut}{Aut}
   \DeclareMathOperator{\br}{Br}
   \DeclareMathOperator{\cosp}{cosp}
@@ -27,7 +26,6 @@
   \DeclareMathOperator{\gr}{gr}
   \DeclareMathOperator{\h}{H}
   \DeclareMathOperator{\im}{im}
-  \DeclareMathOperator{\nrd}{Nrd}
   \DeclareMathOperator{\ob}{Ob}
   \DeclareMathOperator{\pgl}{PGL}
   \DeclareMathOperator{\pic}{Pic}
@@ -38,7 +36,7 @@
 
 
 % special characters
-  \newcommand{\cF}{\mathscr{F}}
+  \newcommand{\cF}{\mathscr{F}} % should fix \cG -> \mathscr{G}
   \newcommand{\cG}{\mathscr{G}}
   \newcommand{\cH}{\mathscr{H}}
   \newcommand{\cK}{\mathscr{K}}
@@ -62,7 +60,7 @@
   \newcommand{\fp}{\mathfrak{p}}
   \newcommand{\fX}{\mathfrak{X}}
   
-  \newcommand{\sA}{\mathcal{A}}
+  \newcommand{\sA}{\mathcal{A}} % should fix \sA -> \mathcal{A}
   \newcommand{\sB}{\mathcal{B}}
   \newcommand{\sC}{\mathcal{C}}
   \newcommand{\sD}{\mathcal{D}}
@@ -71,13 +69,13 @@
   \newcommand{\sU}{\mathcal{U}}
 
 
-% miscelaneous
+% miscellaneous operators
   \newcommand{\an}[1]{{#1}^{\textnormal{an}}}
   \newcommand{\const}[1]{\underline{#1}}
   \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
   \newcommand{\iso}{\xrightarrow\sim}
-  \newcommand{\R}{\mathsf{R}}
-  \newcommand{\D}{\mathsf{D}}
+  \newcommand{\R}{\mathsf{R}} % should be turned into \eR
+  \newcommand{\D}{\mathsf{D}} % should be turned into \eD
   \newcommand{\eL}{\mathsf{L}}
   \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
 
@@ -102,4 +100,3 @@
 \renewcommand*\thesection{\arabic{section}}
 \renewcommand{\theequation}{\arabic{equation}}
 \setcounter{secnumdepth}{3}
-
