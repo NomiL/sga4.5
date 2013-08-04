@@ -5230,13 +5230,13 @@ copies de $S$, et $G$ un faisceau plat de $A$-modules sur $X$, on a
 \end{lemma_}
 
 En effet, 
-\[
+\begin{align*}
   \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}^n(\cG)\right) 
-    = \Gamma\left(\operatorname{Sym}_S^n(X),\pi_*\cG^{\boxtimes n}\right)^{S_n} 
-    = \Gamma\left(X^n/S,\cG^{\boxtimes n}\right)^{S_n} 
+    &= \Gamma\left(\operatorname{Sym}_S^n(X),\pi_*\cG^{\boxtimes n}\right)^{S_n} \\
+    &= \Gamma\left(X^n/S,\cG^{\boxtimes n}\right)^{S_n} 
     = \left(\Gamma(X,\cG)^{\otimes n}\right)^{S_n} 
     = \Gamma^n \Gamma(X,\cG) \text{.}
-\]
+\end{align*}
 
 
 
@@ -5359,6 +5359,48 @@ des complexes doubles $\Gamma^i K'\otimes \Gamma^i K''$, et
   \tr(u,\Gamma^n K) = \sum_{i+j=n} \tr(u,\Gamma^i K')\cdot \tr(u,\Gamma^j K'') \text{,}
 \]
 d'o\`u le lemme. De \ref{III:1-9}, on tire par r\'ecurrence. 
+
+
+
+
+
+\begin{lemma_}\label{III:1-10}
+Soient $F$ une filtration finie stable par $u$ de $K$, telle que les 
+$\gr_F^p(K^q)$ soient projectifs de type fini. Alors, 
+\[
+  D(u,K) = \prod_p D\left(u,\gr_F^p(K)\right) \text{.}
+\]
+\end{lemma_}
+
+
+
+
+
+\begin{lemma_}\label{III:1-11}
+Soient $u$ un endomorphisme d'un $A$-module projectif de type fini $M$, et 
+$M[-q]$ le complexe r\'eduit \`a $M$ en degr\'e $q$. On a 
+\[
+  D\left(u,M[-q]\right) = \left(\sum \tr(u,\Gamma^n M) t^n\right)^{(-1)^q} \qquad \text{($q\geqslant 0$.}
+\]
+\end{lemma_}
+
+
+
+
+
+D'apr\`es \ref{III:1-5}, c'est vrai pour $q=0$. Prec\'edons par r\'ecurrence, il 
+reste \`a montrer que 
+\[
+  D\left(u,M[-q]\right) \cdot D\left(u,M[-(q+1)]\right) = 1 \text{.}
+\]
+Cette formule r\'esulte de \ref{III:1-9}, appliqu\'e ou complexe $K$ r\'eduit a 
+$M$ en degr\'es $q$ et $q+1$ (avec $d=\operatorname{id}$), et \`a sa 
+filtration b\^ete:
+\[
+  (\cdot 0 \to M \cdots) \to (\cdots M \to M) \to (\cdots M \to 0 \to 0 \cdots) \text{.}
+\]
+En effet, $K$ est homotope \`a $0$. Dans la cat\'eegorie d\'eriv\'ee, on a donc 
+$\Gamma^n(K)=\Gamma^n(0)$; $0$ pour $n>0$ et $A$ pour $n=0$, et $D(u,K)=1$. 
 
 
 
