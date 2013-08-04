@@ -1,0 +1,106 @@
+\usepackage[utf8]{inputenc}
+\usepackage[all]{xy}
+\usepackage[stable,symbol]{footmisc}
+\usepackage[text={5.5in,8in},centering]{geometry}
+\usepackage{
+  amsmath,
+  amssymb,
+  amsthm,
+  bm,
+  enumerate,
+%  fullpage,
+  mathrsfs,
+  microtype,
+  stmaryrd
+} %,titlesec} to have inline subsubsections
+\usepackage[backref=page]{hyperref}
+
+
+% operators
+  \DeclareMathOperator{\ab}{Ab}
+  \DeclareMathOperator{\aut}{Aut}
+  \DeclareMathOperator{\br}{Br}
+  \DeclareMathOperator{\cosp}{cosp}
+  \DeclareMathOperator{\dv}{div}
+  \DeclareMathOperator{\Div}{Div}
+  \DeclareMathOperator{\gal}{Gal}
+  \DeclareMathOperator{\gl}{GL}
+  \DeclareMathOperator{\gr}{gr}
+  \DeclareMathOperator{\h}{H}
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\nrd}{Nrd}
+  \DeclareMathOperator{\ob}{Ob}
+  \DeclareMathOperator{\pgl}{PGL}
+  \DeclareMathOperator{\pic}{Pic}
+  \DeclareMathOperator{\sh}{Sh}
+  \DeclareMathOperator{\spec}{Spec}
+  \DeclareMathOperator{\tor}{Tor}
+  \DeclareMathOperator{\tr}{tr}
+
+
+% special characters
+  \newcommand{\cF}{\mathcal{F}}
+  \newcommand{\cG}{\mathcal{G}}
+  \newcommand{\cH}{\mathcal{H}}
+  \newcommand{\cK}{\mathcal{K}}
+  \newcommand{\cL}{\mathcal{L}}
+  \newcommand{\cO}{\mathcal{O}}
+  \newcommand{\cT}{\mathcal{T}}
+
+  \newcommand{\dA}{\mathbb{A}}
+  \newcommand{\dC}{\mathbb{C}}
+  \newcommand{\dF}{\mathbb{F}}
+  \newcommand{\dG}{\mathbb{G}}
+  \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
+  \newcommand{\dN}{\mathbb{N}}
+  \newcommand{\dP}{\mathbb{P}}
+  \newcommand{\dQ}{\mathbb{Q}}
+  \newcommand{\dR}{\mathbb{R}}
+  \newcommand{\dZ}{\mathbb{Z}}
+
+  \newcommand{\fa}{\mathfrak{a}}
+  \newcommand{\fm}{\mathfrak{m}}
+  \newcommand{\fp}{\mathfrak{p}}
+  \newcommand{\fX}{\mathfrak{X}}
+  
+  \newcommand{\sA}{\mathscr{A}}
+  \newcommand{\sB}{\mathscr{B}}
+  \newcommand{\sC}{\mathscr{C}}
+  \newcommand{\sD}{\mathscr{D}}
+  \newcommand{\sE}{\mathscr{E}}
+  \newcommand{\sS}{\mathscr{S}}
+  \newcommand{\sU}{\mathscr{U}}
+
+
+% miscelaneous
+  \newcommand{\an}[1]{{#1}^{\textnormal{an}}}
+  \newcommand{\const}[1]{\underline{#1}}
+  \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
+  \newcommand{\iso}{\xrightarrow\sim}
+  \newcommand{\R}{\mathsf{R}}
+  \newcommand{\D}{\mathsf{D}}
+  \newcommand{\eL}{\mathsf{L}}
+  \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
+
+
+% theorem types
+  \newtheorem{proposition}[subsubsection]{Proposition}
+  \newtheorem{corollary}[subsubsection]{Corollaire}
+  \newtheorem{definition}[subsubsection]{Définition}
+  \newtheorem{theorem}[subsubsection]{Théorème}
+  \newtheorem{lemma}[subsubsection]{Lemme}
+  
+  \newtheorem{lemma_}[subsection]{Lemme}
+  \newtheorem{corollary_}[subsection]{Corollaire}
+  \newtheorem{theorem_}[subsection]{Théorème}
+  \newtheorem{proposition_}[subsection]{Proposition}
+  \newtheorem{definition_}[subsection]{Définition}
+  \newtheorem{prop-def_}[subsection]{Proposition-définition}
+  \setcounter{tocdepth}{1}
+
+
+\renewcommand*\thechapter{\Roman{chapter}}
+\renewcommand*\thesection{\arabic{section}}
+\renewcommand{\theequation}{\arabic{equation}}
+\setcounter{secnumdepth}{3}
+

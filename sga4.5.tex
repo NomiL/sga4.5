@@ -1,114 +1,15 @@
-\documentclass{book}
+\documentclass[oneside]{book}
+\usepackage{sga}
 
 
-\usepackage[utf8]{inputenc}
-\usepackage[all]{xy}
-\usepackage[stable,symbol]{footmisc}
-\usepackage{
-  amsmath,
-  amssymb,
-  amsthm,
-  bm,
-  enumerate,
-  fullpage,
-  mathrsfs,
-  microtype,
-  stmaryrd
-} %,titlesec} to have inline subsubsections
-\usepackage[colorlinks,backref=page]{hyperref}
 
 
-% operators
-  \DeclareMathOperator{\ab}{Ab}
-  \DeclareMathOperator{\aut}{Aut}
-  \DeclareMathOperator{\br}{Br}
-  \DeclareMathOperator{\cosp}{cosp}
-  \DeclareMathOperator{\dv}{div}
-  \DeclareMathOperator{\Div}{Div}
-  \DeclareMathOperator{\gal}{Gal}
-  \DeclareMathOperator{\gl}{GL}
-  \DeclareMathOperator{\gr}{gr}
-  \DeclareMathOperator{\h}{H}
-  \DeclareMathOperator{\im}{im}
-  \DeclareMathOperator{\nrd}{Nrd}
-  \DeclareMathOperator{\ob}{Ob}
-  \DeclareMathOperator{\pgl}{PGL}
-  \DeclareMathOperator{\pic}{Pic}
-  \DeclareMathOperator{\sh}{Sh}
-  \DeclareMathOperator{\spec}{Spec}
-  \DeclareMathOperator{\tor}{Tor}
-  \DeclareMathOperator{\tr}{tr}
 
-
-% special characters
-  \newcommand{\cF}{\mathcal{F}}
-  \newcommand{\cG}{\mathcal{G}}
-  \newcommand{\cH}{\mathcal{H}}
-  \newcommand{\cK}{\mathcal{K}}
-  \newcommand{\cL}{\mathcal{L}}
-  \newcommand{\cO}{\mathcal{O}}
-  \newcommand{\cT}{\mathcal{T}}
-
-  \newcommand{\dA}{\mathbb{A}}
-  \newcommand{\dC}{\mathbb{C}}
-  \newcommand{\dF}{\mathbb{F}}
-  \newcommand{\dG}{\mathbb{G}}
-  \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
-  \newcommand{\dN}{\mathbb{N}}
-  \newcommand{\dP}{\mathbb{P}}
-  \newcommand{\dQ}{\mathbb{Q}}
-  \newcommand{\dR}{\mathbb{R}}
-  \newcommand{\dZ}{\mathbb{Z}}
-
-  \newcommand{\fa}{\mathfrak{a}}
-  \newcommand{\fm}{\mathfrak{m}}
-  \newcommand{\fp}{\mathfrak{p}}
-  \newcommand{\fX}{\mathfrak{X}}
-  
-  \newcommand{\sA}{\mathscr{A}}
-  \newcommand{\sB}{\mathscr{B}}
-  \newcommand{\sC}{\mathscr{C}}
-  \newcommand{\sD}{\mathscr{D}}
-  \newcommand{\sE}{\mathscr{E}}
-  \newcommand{\sS}{\mathscr{S}}
-  \newcommand{\sU}{\mathscr{U}}
-
-
-% miscelaneous
-  \newcommand{\an}[1]{{#1}^{\textnormal{an}}}
-  \newcommand{\const}[1]{\underline{#1}}
-  \newcommand{\et}[1]{{#1}_{\textnormal{et}}}
-  \newcommand{\iso}{\xrightarrow\sim}
-  \newcommand{\R}{\mathsf{R}}
-  \newcommand{\D}{\mathsf{D}}
-  \newcommand{\eL}{\mathsf{L}}
-  \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
-
-
-% theorem types
-  \newtheorem{proposition}[subsubsection]{Proposition}
-  \newtheorem{corollary}[subsubsection]{Corollaire}
-  \newtheorem{definition}[subsubsection]{Définition}
-  \newtheorem{theorem}[subsubsection]{Théorème}
-  \newtheorem{lemma}[subsubsection]{Lemme}
-  
-  \newtheorem{lemma_}[subsection]{Lemme}
-  \newtheorem{corollary_}[subsection]{Corollaire}
-  \newtheorem{theorem_}[subsection]{Théorème}
-  \newtheorem{proposition_}[subsection]{Proposition}
-  \newtheorem{definition_}[subsection]{Définition}
-  \newtheorem{prop-def_}[subsection]{Proposition-définition}
-  \setcounter{tocdepth}{1}
-
-
-\renewcommand*\thechapter{\Roman{chapter}}
-\renewcommand*\thesection{\arabic{section}}
-\renewcommand{\theequation}{\arabic{equation}}
-\setcounter{secnumdepth}{3}
-
-
-\title{Séminaire de Géométrie Algébrique du Bois-Marie SGA $4\frac 1 2$}
-\author{par P. Deligne ave la collaboration de J.F. Boutot, \\ A. Grothendieck, L. Illusie et J.L. Verdier}
+\title{Séminaire de Géométrie Algébrique du Bois-Marie \\ \vspace{20pt}
+Cohomologie Étale \\ \vspace{20pt}
+(SGA $4\frac 1 2$)}
+\author{par P. Deligne \vspace{10pt}\\ 
+avec la collaboration de J.F. Boutot, \\ A. Grothendieck, L. Illusie et J.L. Verdier}
 \date{1977}
 
 
@@ -173,10 +74,11 @@ Je remercie enfin J.L. Verdier de m'avoir permis de reproduire ici ses notes
 Dans les références internes à ce volume, les exposés sont cités par 
 un titre abrégé, indiqué entre [ ] dans la table des matières. 
 
+\vspace{20pt}
 Bures-sur-Yvette, le 20 Septembre 1976
 
+\vspace{5pt}
 Pierre Deligne
-
 
 
 
@@ -5432,6 +5334,31 @@ $A$-modules projectifs de type fini. On a \
 \end{proposition_}
 
 Notons $D(u,K)$ le second membre de \eqref{III:eq:1-8-1}. 
+
+
+
+
+
+\begin{lemma_}\label{III:1-9}
+Soit $u$ un endomorphisme d'une suite exacte courte de complexes born\'es \`a 
+degr\'es $\geqslant 0$ de $A$-modules projectifs de type fini 
+\[
+  0 \to K' \to K \to K'' \to 0 \text{.}
+\]
+On a $D(u,)=D(u,K')\cdot D(u,K'')$.
+\end{lemma_}
+
+Si $0\to M'\to M\to M''\to 0$ est une suite exacte courte scindable de 
+$A$-modules, $\Gamma^n M$ a une filtration naturelle, de quotients successifs 
+les $\Gamma^i M'\otimes \Gamma^j M''$ ($i+j=n$). D\`es lors, $\Gamma^n K$ admet 
+une filtration naturelle, de quotients successifs les complexes 
+$N(N^{-1} \Gamma^i K'\otimes N^{-1}\Gamma^j K'')$ ($i+j=n$), canoniquement 
+homotopes aux complexes simples $s(\Gamma^i K'\otimes \Gamma^i K'')$ d\'eduit 
+des complexes doubles $\Gamma^i K'\otimes \Gamma^i K''$, et 
+\[
+  \tr(u,\Gamma^n K) = \sum_{i+j=n} \tr(u,\Gamma^i K')\cdot \tr(u,\Gamma^j K'') \text{,}
+\]
+d'o\`u le lemme. De \ref{III:1-9}, on tire par r\'ecurrence. 
 
 
 
