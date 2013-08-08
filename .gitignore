@@ -6,6 +6,8 @@ $RECYCLE.BIN/
 
 # tex auxiliary files
 *.aux
+*.bbl
+*.blg
 *.brf
 *.txt
 *.out
