@@ -1,0 +1,3451 @@
+\chapter{Cohomologie étale: les points de départ\texorpdfstring{\footnote{par P. Deligne, rédigé par J.F. Boutot}}{}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Topologies de Grothendieck}\label{I:1}
+
+A l'origine, les topologies de Grothendieck sont apparues comme sous-jacentes 
+à sa théorie de la descente (cf. SGA 1 VI, VIII); l'usage des théorie de 
+cohomologie correspondantes est plus tardif. La même démarche est suivi 
+ici: en formalisant les notions classiques de localisation, de propriété 
+locale et de recollement (\ref{I:1-1}, \ref{I:1-2}, \ref{I:1-3}), en dégage le 
+concept général de topologie de Grothendieck (\ref{I:1-6}); pour en justifier 
+l'introduction en géométrie algébrique, on démontre un théorème 
+de descente fidèlement plat (\ref{I:1-4}), généralisation du classique théorème 
+de Hilbert (\ref{I:1-5}). 
+
+Le lecteur trouvera une exposition plus compète, mais concise, du 
+formalisme dans Giraud \cite{gi64}. Les notes de M. Artin: ``Grothendieck 
+topologies'' \cite{ar62} (chapitres I à III) restent également utiles. Les 
+866 pages des exposés I à V de SGA 4 sont précieuses lorsqu'on 
+considère des topologies exotiques, telle celle qui donne naissance à la 
+cohomologie cristalline; pour utiliser la topologie étale si proche de 
+l'intuition classique, il n'est pas indispensable de les lire. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Cribles}\label{I:1-1}
+
+Soient $X$ un espace topologique et $f:X\to \dR$ une fonction à valeur 
+réelles sur $X$. La continuité de $f$ est une propriété de nature 
+locale; autrement dit, si $f$ est continue sur tout ouvert suffisamment petit 
+de $X$, $f$ est continue sur $X$ tout entier. Pour formaliser la notion de 
+``propriété de nature locale,'' nous introduirons quelques définitions.
+
+On dit qu'un ensemble $\sU$ d'ouverts de $X$ est un \emph{crible} si pour tout 
+$U\in\sU$ et $V\subset U$, on a $V\in\sU$. On dit qu'un crible est 
+\emph{couvrant} si la réunion de tout les ouverts appartenant à ce crible est 
+égale à $X$.
+
+Etant donnée une famille $\{U_i\}$ d'ouverts de $X$, le crible engendré par 
+$\{U_i\}$ est par définition l'ensemble des ouverts $U$ de $X$ tels que $U$ 
+soit contenu dans l'un des $U_i$. 
+
+On dit qu'une propriété $P(U)$, définie pour tout ouvert $U$ de $X$, est 
+\emph{locale} si, pour tout crible couvrant $\sU$ de tout ouvert $U$ de $X$, 
+$P(U)$ est vraie si et seulement si $P(V)$ est vraie pour tout $V\in \sU$. Par 
+exemple, étant donné $f:X\to \dR$, la propriété ``$f$ est continue sur $U$'' 
+est locale. 
+
+
+
+
+
+\subsection{Faisceaux}\label{I:1-2}
+
+Précisons la notion de fonction donnée localement sur $X$.
+
+
+
+
+
+\subsubsection{Point de vue des cribles}\label{I:1-2-1}
+
+Soit $\sU$ un crible d'ouverts de $X$. On appelle fonction donnée 
+$\sU$-localement sur $X$ la donnée pour tout $U\in \sU$ d'une fonction $f_U$ 
+sur $U$ telle que, si $V\subset U$, on ait $f_V=f_U|V$. 
+
+
+
+
+
+\subsubsection{Pointe de vue de Čech}\label{I:1-2-2}
+
+Si le crible $\sU$ est engendré par une famille d'ouverts $U_i$ de $X$, se 
+donner une fonction $\sU$-localement revient à se donner une fonction $f_i$ 
+sur chaque $U_i$, telle que $f_i|{U_i\cap U_j} = f_j|{U_i\cap U_j}$. 
+
+Autrement dit, si $Z=\coprod U_i$, se donner une fonction $\sU$-localement 
+revient à se donner une fonction sur $Z$ qui soit constante sur les fibres de 
+la projection naturelle $Z\to X$. 
+
+
+
+
+
+\subsubsection{}\label{I:1-2-3}
+
+Les fonctions continues forment un faisceau; cela signifie que pour tout crible 
+couvrant $\sU$ d'un ouvert $V$ de $X$ et toute fonction donnée 
+$\sU$-localement $\{f_U\}$ telle que chaque $f_U$ soit continue sur $U$, il 
+existe une unique fonction continue $f$ sur $V$ telle que $f|U=f_U$ pour tout 
+$U\in \sU$.
+
+
+
+
+
+
+
+
+
+
+\subsection{Champs}\label{I:1-3}
+
+Précisons maintenant la notion de fibré vectoriel donné localement sur $X$. 
+
+
+
+
+
+\subsubsection{Point de vue des cribles}\label{I:1-3-1}
+
+Soit $\sU$ un crible d'ouverts de $X$. On appelle fibré vectoriel donné 
+$\sU$-localement sur $X$ les données de 
+\begin{enumerate}[\indent a)]
+  \item un fibré vectoriel $E_U$ sur chaque $U\in \sU$, 
+  \item si $V\subset U$, un isomorphisme $\rho_{U,V} : E_V\iso E_U|V$, vérifiant 
+  \item si $W\subset V\subset U$, le diagramme 
+    \[\xymatrix{
+      E_W \ar[r]^-{\rho_{U,W}} \ar[dr]_-{\rho_{V,W}}
+        & E_U|W \\
+      & E_V|W \ar[u]_-{\rho_{U,V}|W}
+    }\]
+    commute, c'est-à-dire 
+    $\rho_{U,V} = (\mbox{$\rho_{U,V}$ restreint à $W$}) \circ \rho_{V,W}$. 
+\end{enumerate}
+
+
+
+
+
+\subsubsection{Point de vue de Čech}\label{I:1-3-2}
+
+Si le crible $\sU$ est engendré par une famille d'ouverts $U_i$ de $X$, se 
+donner un fibré vectoriel $\sU$-localement revient à se donner:
+\begin{enumerate}[\indent a)]
+  \item un fibré vectoriel $E_i$ sur chaque $U_i$, 
+  \item si $U_{ij} = U_i\cap U_j = U_i\times_X U_j$, un isomorphisme 
+    $\rho_{ji} : E_i|U_{ij} \iso E_j|U_{ij}$, de sorte que 
+  \item si $U_{ijk} = U_i\times_X U_j\times_X U_k$, le diagramme 
+    \[\xymatrix{
+      E_i |U_{ijk} \ar[r]^-{\rho_{ki}|U_{ijk}} \ar[dr]_-{\rho_{ji}|U_{ijk}} 
+        & E_k|U_{ijk} \\
+      & E_j|U_{ijk} \ar[u]_-{\rho_{kj}|U_{ijk}}
+    }\]
+    commute, c'est-à-dire $\rho_{ki} = \rho_{kj}\circ \rho_{ji}$ sur 
+    $U_{ijk}$. 
+\end{enumerate}
+
+Autrement dit, si $Z=\coprod U_i$ et si $\pi:Z\to X$ est la projection 
+naturelle, se donner un fibré vectoriel $\sU$-localement revient à se donner: 
+\begin{enumerate}[\indent a)]
+  \item un fibré vectoriel $E$ sur $Z$, 
+  \item si $x$ et $y$ sont deux points de $Z$ tels que $\pi(x) = \pi(y)$, un 
+    isomorphisme $\rho_{y x}:E_x\iso E_y$ entre les fibres de $E$ en $x$ et en 
+    $y$, dépendant continûment de $(x,y)$ et tel que, 
+  \item si $x$, $y$ et $z$ sont trois points de $Z$ tels que 
+  $\pi(x)=\pi(y)=\pi(z)$, on ait $\rho_{zx} = \rho_{zy}\circ \rho_{yx}$. 
+\end{enumerate}
+
+
+
+
+
+\subsubsection{}\label{I:1-3-3}
+
+Une fibré vectoriel $E$ sur $X$ définit un fibré vectoriel donné 
+$\sU$-localement $E_\sU$; le système des restrictions $E_U$ de $E$ aux objets 
+de $\sU$. Le fait que la notion de fibré vectoriel est de nature locale peut 
+s'exprimer ainsi: pour tout crible couvrant $\sU$ de $X$, le foncteur 
+$E\mapsto E_\sU$, des fibrés vectoriels sur $X$ dans les fibrés vectoriels 
+donnés $\sU$-localement, est une équivalence de catégories. 
+
+
+
+
+
+\subsubsection{}\label{I:1-3-4}
+
+Si dans \ref{I:1} on remplace ``ouvert de $X$'' par ``partie de 
+$X$,'' on obtient la notion de crible de sous-espaces de $X$. Dans ce cadre 
+aussi on dispose de théorèmes de recollement. Par exemple: soient $X$ un 
+espace et $\sC$ un crible de sous-espaces de $X$ engendré par un recouvrement 
+fermé localement fini de $X$, alors le foncteur $E\mapsto E_\sC$, des fibrés 
+vectoriels sur $X$ dans les fibrés vectoriels donnés $\sC$-localement est une 
+équivalence de catégories. 
+
+En géométrie algébrique, il est utile de considérer aussi des ``cribles 
+d'espaces au-dessus de $X$''; c'est ce que nous verrons au paragraphe suivant. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Descente fidèlement plat}\label{I:1-4}
+
+
+
+
+
+\subsubsection{}\label{I:1-4-1}
+
+Dans le cadre des schémas, la topologie de Zariski n'est pas assez fine pour 
+l'étude des problèmes non linéaires et on est amené à remplacer dans les 
+définitions précédentes les immersions ouvertes par des morphismes plus 
+généraux. De ce point de vue, les techniques de descente apparaissent comme des 
+techniques de localisation. Ainsi l'énoncé de descente suivant peut sexprimer 
+en disant que les propriétés considérées sont de nature locale pour la 
+topologie fidèlement plate (on dit qu'un morphisme de schémas est fidèlement 
+plat s'il est plat est surjectif). 
+
+
+\begin{proposition}\label{I:1-4-2}
+Soient $A$ un anneau et $B$ une $A$-algèbre fidèlement plate. Alors:
+\begin{enumerate}[(i)]
+  \item Une suite $\Sigma=(M'\to M\to M'')$ de $A$-modules est exacte dés 
+    que la suite $\Sigma_{(B)}$ qui s'en déduit par extension des scalaires 
+    à $B$ est exacte.
+  \item Un $A$-module $M$ est de type fini (resp. de présentation finie, 
+    plat, localement libre de rang fini, inversible (i.e. localement libre 
+    de rang un)) dés que le $B$-module $M_{(B)}$ l'est.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(i) Le foncteur $M\mapsto M_{(B)}$ étant exact (platitude de $B$), il suffit 
+de montrer que, si un $A$-module $N$ est non nul, $N_{(B)}$ est non nul. Si 
+$N$ est non nul, $N$ contient un sous-module monogène non nul $A/\fa$; alors 
+$N_{(B)}$ contient un sous-module monogène $(A/\fa)_{(B)} = B/\fa B$, non nul 
+par surjectivité du morphisme structural $\varphi:\spec(B)\to\spec(A)$ (si 
+$V(\fa)$ est non vide, $\varphi^{-1}(V(\fa))=V(\fa B)$ est non vide). 
+
+(ii) Pour toute famille $(x_i)$ d'éléments de $M_{(B)}$, il existe un 
+sous-module de type fini $M'$ de $M$ tel que $M'_{(B)}$ contienne les $x_i$. Si 
+$M_{(B)}$ est de type fini et si les $x_i$ engendrent $M_{(B)}$, on a 
+$M'_{(B)}=M_{(B)}$, donc $M'=M$ et $M$ est de type fini. 
+\end{proof}
+
+Si $M_{(B)}$ est de présentation finie, on peut, d'aprés ce qui précède, 
+trouver une surjection $A^n\to M$. Si $N$ est le noyau de cette surjection, le 
+$B$-module $N_{(B)}$ est de type fini, donc $N$ l'est, et $M$ est de 
+présentation finie. L'assertion pour ``flat'' résulte aussitôt de (i); 
+``localement libre de rang fini'' signifie ``plat et de présentation finie'' 
+et le rang se teste par extension des scalaires à des corps.
+
+
+
+
+
+\subsubsection{}\label{I:1-4-3}
+
+Soient $X$ un schéma et $\sS$ une classe de $X$-schémas stable par produit 
+fibré sur $X$. Une classe $\sU\subset \sS$ est un \emph{crible} sur $X$ 
+(relativement à $\sS$) si, pour tout morphisme $\varphi:V\to U$ de 
+$X$-schémas, avec $U,V\in \sS$ et $U\in\sU$, on a $V\in \sU$. Le crible 
+\emph{engendré} par une famille $\{U_i\}$ de $X$-schémas dans $\sS$ est la 
+classe des $V\in\sS$ tels qu'il existe un morphisme de $X$-schémas de $V$ dans 
+l'un des $U_i$. 
+
+
+
+
+
+
+\subsubsection{}\label{I:1-4-4}
+
+Soit $\sU$ un crible sur $X$. On appelle module quasi-cohérent donné 
+$\sU$-localement sur $X$ la donnée de 
+\begin{enumerate}[\indent a)]
+  \item un module quasi-cohérent $E_U$ sur chaque $U\in\sU$, 
+  \item pour tout $U\in\sU$ et pour tout morphisme $\varphi:V\to U$ de 
+    $X$-schémas dans $\sS$, un isomorphisme 
+    $\rho_\varphi:E_V\iso \varphi^* E_U$, ceux-ci étant tels que 
+  \item si $\psi:W\to V$ est un morphisme de $X$-schémas dans $\sS$, le 
+    diagramme 
+    \[\xymatrix{
+      E_W \ar[r]^-{\rho_{\varphi\circ\psi}} \ar[dr]_-{\rho_\psi} 
+        & \psi^*\varphi^* E_U \\
+      & \psi^* E_V \ar[u]_-{\psi^*\rho_\varphi}
+    }\]
+    commute, c'est-à-dire 
+    $\rho_{\varphi\circ\psi}=(\psi^*\rho_\varphi)\circ \rho_\psi$. 
+\end{enumerate}
+
+Si $E$ est un module quasi-cohérent sur $X$, on note $E_\sU$ le module 
+donné $\sU$-localement valant $\varphi_U^* E$ sur $\varphi:U\to X$ et tel que, 
+pour tout morphisme $\psi:V\to U$ l'isomorphisme de restriction $\rho_\psi$ 
+soit l'isomorphisme canonique 
+$E_V=(\varphi_U\circ \psi)^* E\iso \psi^* \varphi_U^* E = \psi^* E_U$. 
+
+
+\begin{theorem}\label{I:1-4-5}
+Soit $\{U_i\}\in\sS$ une famille finie de $X$-schémas plats sur $X$ telle que 
+$X$ soit le réunion des images des $U_i$, et soit $\sU$ le crible engendré par 
+$\{U_i\}$. Alors le foncteur $E\mapsto E_\sU$ est une équivalence de la 
+catégorie des modules quasi-cohérents sur $X$ avec la catégorie des modules 
+quasi-cohérents donnés $\sU$-localement.
+\end{theorem}
+\begin{proof}
+Nous ne traiterons que le cas où $x$ est affine et où $\sU$ est engendré par 
+un $X$-schéma affine $U$ fidèlement plat sur $X$. La réduction à ce cas est 
+formelle. On pose $X=\spec(A)$ et $U=\spec(B)$. 
+
+Si le morphisme $U\to X$ admet une section, $X$ appartient au crible $\sU$ et 
+l'assertion est évidente. Nous nous réduirons à ce cas. 
+
+Un module quasi-cohérent donné $\sU$-localement définit des modules $M'$, $M''$ 
+et $M'''$ sur $U$, $U\times_X U$ et $U\times_X U\times_X U$, et des 
+isomorphismes $\rho:p^* M^\bullet\simeq M^\bullet$ pour tout morphisme de 
+projection $p$ entre ces espaces; c'est là un \emph{diagramme cartésien} 
+\[\xymatrix{
+  M^* : M' \ar@<2pt>[r] \ar@<-2pt>[r] 
+    & M'' \ar[r] \ar@<4pt>[r] \ar@<-4pt>[r] 
+    & M'''
+}\]
+au-dessus de 
+\[\xymatrix{
+  U_* : U 
+    & U\times_X U \ar@<2pt>[l] \ar@<-2pt>[l] 
+    & U\times_X U\times_X U \ar[l] \ar@<4pt>[l] \ar@<-4pt>[l] \mbox{.}
+}\]
+Réciproquement $M^*$ détermine le module donné $\sU$-localement: pour 
+$V\in\sU$, il existe $\varphi:V\to U$ et on pose $M_U=\varphi^* M'$; 
+pour $\varphi_1,\varphi_2:V\to U$, on a une identification naturelle 
+$\varphi_1^* M'\simeq (\varphi_1\times \varphi_2)^* M'' \simeq \varphi_2^* M'$, 
+et on voit en utilisant $M'''$ ue ces identifications sont compatibles, de 
+sorte que la définition est légitime. Bref, il revient au même de se donner un 
+module $\sU$-localement ou un diagramme $M^*$ cartésien sur $U_*$. 
+
+Traduisons en termes algébriques: se donner $M^*$ revient à se donner un 
+diagramme cartésien de modules 
+\[\xymatrix{
+  M' \ar@<3pt>[r]|-{\partial_0} \ar@<-3pt>[r]|-{\partial_1} 
+    & M'' \ar@<6pt>[r]|-{\partial_0} \ar[r]|-{\partial_0} \ar@<-6pt>[r]|-{\partial_2}
+    & M'''
+}\]
+au-dessus du diagramme d'anneaux 
+\[\xymatrix{
+  B \ar@<3pt>[r]|-{\partial_0} \ar@<-3pt>[r]|-{\partial_1} 
+    & B\otimes_A B \ar@<6pt>[r]|-{\partial_0} \ar[r]|-{\partial_0} \ar@<-6pt>[r]|-{\partial_2} 
+    & B\otimes_A B\otimes_A B
+}\]
+(précisons: on a $\partial_i(b m)=\partial_i(b)\cdot\partial_i(m)$, les 
+identités usuelles telles que $\partial_0\partial_1=\partial_0\partial_0$ 
+sont vraies, et ``cartésien'' signifie que les morphismes 
+$\partial_i:M'\otimes_{B,\partial_i}(B\otimes_A B)\to M''$ et 
+$M'''\otimes_{B\otimes_A B,\partial_i}(B\otimes_A B\otimes_A B)\to M'''$ sont 
+des isomorphismes). 
+
+Le foncteur $E\mapsto E_\sU$ devient le foncteur qui, à un $A$-module $M$, 
+associe 
+\[\xymatrix{
+  M^* = (M\otimes_A B \ar@<2pt>[r] \ar@<-2pt>[r] 
+    & M\otimes_A B\otimes_A B \ar@<-4pt>[r] \ar[r] \ar@<4pt>[r] 
+    & M\otimes_A B\otimes_A B\otimes_A B)\text{.}
+}\]
+Il admet pour adjoint à droite le foncteur
+\[\xymatrix{
+  (M' \ar@<2pt>[r] \ar@<-2pt>[r] 
+    & M'' \ar@<-4pt>[r] \ar[r] \ar@<4pt>[r]
+    & M''') \ar@{|->}[r] 
+    & \ker(M' \ar@<2pt>[r] \ar@<-2pt>[r] 
+    & M''')\text{.}
+}\]
+Il nous faut prouver que les flèches d'adjonction 
+\[
+  M \to\ker(M\otimes_A B\rightrightarrows M\otimes_A B\times_A B)
+\]
+et
+\[
+  \ker(M''\twoheadrightarrow M'')\otimes_A B \to M'
+\]
+sont des isomorphismes. D'après (\ref{I:1-4-2}.i), il suffit de le prouver 
+après un changement de base fidèlement plat $A\to A'$ ($B$ devenant 
+$B'=B\otimes_A A'$). Prenant $A'=B$, ceci nous ramène au cas où $U\to X$ 
+admet une section. 
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+\subsection{Un cas particulier: le théorème 90 de Hilbert}\label{I:1-5}
+
+
+
+
+
+\subsubsection{}\label{I:1-5-1}
+
+Soient $k$ un corps, $k'$ une extension galoisienne de $k$ et $G=\gal(k'/k)$. 
+Alors l'homomorphisme 
+\begin{align*}
+  k'\otimes_k k' &\to \oplus_{\sigma\in G} k' \\
+  x\otimes y     &\mapsto \{x\cdot \sigma(y)\}_{\sigma\in G}
+\end{align*}
+est bijectif. 
+
+On en déduit qu'il revient au même de se donner un module localement pour 
+le crible engendré par $\spec(k')$ sur $\spec(k)$ ou de se donner un 
+$k'$-espace vectoriel muni d'une action semi-linéaire de $G$, c'est-à-dire: 
+\begin{enumerate}[\indent a)]
+  \item un $k'$-espace vectoriel $V'$,
+  \item pour tout $\sigma\in G$, un endomorphisme $\varphi_\sigma$ de la 
+    structure de groupe de $V'$ tel que 
+    $\varphi_\sigma(\lambda v) = \sigma(\lambda) \varphi_\sigma(v)$, pour 
+    tout $v\in V'$, vérifiant la condition 
+  \item pour tout $\sigma,\tau\in G$, on a 
+    $\varphi_{\tau\sigma} = \varphi_\tau\circ\varphi_\sigma$. 
+\end{enumerate}
+
+Soit $V={V'}^G$ le groupe des invariants par cette action de $G$; c'est un 
+$k$-espace vectoriel et, d'après le théorème \ref{I:1-4-5}, on a:
+
+\begin{proposition}\label{I:1-5-2}
+L'inclusion de $V$ dans $V'$ définit un isomorphisme 
+$V\otimes_k k' \iso V'$.
+\end{proposition}
+
+En particulier, si $V'$ est de dimension $1$ et si $v'\in V$ est non nul, 
+$\varphi_\sigma$ est déterminé par la constante 
+$c(\sigma)\in {k'}^\times$ telle que $\varphi_\sigma(v')=c(\sigma)v'$ et la 
+condition c) s'écrit 
+\[
+  c(\tau\sigma) = c(\tau)\cdot \tau(c(\sigma))\text{.}
+\]
+D'après la proposition il existe un vecteur invariant non nui 
+$v=\mu v'$, $\mu\in {k'}^\times$. On a donc pour tout $\sigma\in G$, 
+\[
+  c(\sigma) = \mu\cdot \sigma(\mu^{-1})\text{.}
+\]
+Autrement dit tout $1$-cocycle de $G$ à valeurs dans ${k'}^\times$ est un 
+cobord: 
+
+\begin{corollary}\label{I:1-5-3}
+On a $\h^1(G,{k'}^\times)=0$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+\subsection{Topologies de Grothendieck}\label{I:1-6}
+
+Nous transcrivons maintenant les définitions des paragraphes précédents 
+dans un cadre abstrait englobant à la fois le cas des espaces topologiques 
+et celui des schémas. 
+
+
+
+
+
+\subsubsection{}\label{I:1-6-1}
+
+Soient $\sS$ une catégorie et $U$ un objet de $\sS$. On appelle \emph{crible} 
+sur $U$ un sous-ensemble $\sU$ de $\ob(\sS/U)$ tel que si $\varphi:V\to U$ 
+appartient à $\sU$ et si $\psi:W\to V$ est un morphisme dans $\sS$, alors 
+$\varphi\circ\psi:W\to U$ appartient à $\sU$. 
+
+Si $\{\varphi_i:U_i\to U\}$ est une famille de morphismes, le crible 
+engendré par les $U_i$ est par définition l'ensemble des morphismes 
+$\varphi:V\to U$ qui se factorisent à travers l'un des $\varphi_i$. 
+
+Si $\sU$ est un crible sur $U$ et si $\varphi:V\to U$ est un morphisme, la 
+restriction $\sU_V$ de $\sU$ à $V$ est par définition le crible sur $V$ 
+constitué oar les morphismes $\psi:w\to V$ tels que 
+$\varphi\circ\psi:W\to U$ appartienne à $\sU$.
+
+
+
+
+
+\subsubsection{}\label{I:1-6-2}
+
+La donnée d'une \emph{topologie de Grothendieck} sur $\sS$ consiste en la 
+donnée pour tout objet $U$ de $\sS$ d'un ensemble $C(U)$ de cribles sur $U$, 
+dits cribles couvrants, de telle sorte que les axiomes suivants soient 
+satisfaits:
+\begin{enumerate}[\indent a)]
+  \item Le crible engendré par l'identité de $U$ est couvrant.
+  \item Si $\sU$ est un crible couvrant sur $U$ et si $V\to U$ est un 
+    morphisme, le crible $\sU_V$ est couvrant.
+  \item Un crible localement couvrant est couvrant. Autrement dit, si $\sU$ est 
+    un crible couvrant sur $U$ et si $\sU'$ est un crible sur $U$ tel que, pour 
+    tout $V\to U$ appartenant à $\sU$, le crible $\sU_V'$ est couvrant, alors 
+    $\sU'$ est couvrant.
+\end{enumerate}
+
+On appelle \emph{site} la donnée d'une catégorie munie d'une topologie de 
+Grothendieck.
+
+
+
+
+
+\subsubsection{}\label{I:1-6-3}
+
+Étant donnée un site $\sS$, on appelle préfaisceau sur $\sS$ un foncteur 
+contravariant $\cF$ de $\sS$ dans la catégorie des ensembles. Pour tout 
+objet $U$ de $\sS$, on appelle section de $\cF$ au-dessus de $U$ les 
+éléments de $\cF(U)$. Pour tout morphisme $V\to U$ et pour tout 
+$s\in \cF(U)$, on note $s|V$ ($s$ restreint à $V$) l'image de $s$ dans 
+$\cF(V)$.
+
+Si $\sU$ est un crible sur $U$, on appelle section donnée $\sU$-localement la 
+donnée, pour tout $V\to U$ appartenant à $\sU$, d'une section 
+$s_V\in\cF(V)$ telle que, pour tout morphisme $W\to V$, on sit $s_V|W=s_W$. On 
+dit que $\cF$ est un \emph{faisceau} si, pour tout objet $U$ de $\sS$, pour 
+tout crible couvrant $\sU$ sur $U$ et pour tout section donnée 
+$\sU$-localement $\{s_V\}$, il existe une unique section $s\in\cF(U)$ telle que 
+$s|V=s_V$, pour tout $V\to U$ appartenant à $\sU$. 
+
+On définit de manière analogue les \emph{faisceaux abéliens} en 
+remplaçant la catégorie des ensembles par celle des groupes abéliens. On 
+montre que la catégorie des faisceaux abéliens sur $\sS$ est une 
+catégorie abélienne possédant suffisamment d'injectifs. Une suite 
+$\cF\xrightarrow f \cG\xrightarrow g \cH$ de faisceaux est exacte si, pour 
+tout objet $U$ de $\sS$, et pour tout $s\in \cG(U)$ telle que $g(s)=0$, 
+il existe localement $t$ tel que $f(t)=s$; i.e. s'il existe un crible couvrant 
+$\sU$ sur $U$ et pour tout $V\in\sU$, une section $t_V$ de $\cF$ sur $V$ telle 
+que $f(t_V)=s|V$. 
+
+
+
+
+
+\subsubsection{Exemples}\label{I:1-6-4}
+
+Nous en avons vu deux plus haut. 
+
+\begin{enumerate}[\indent a)]
+  \item Soient $X$ un espace topologique et $\sS$ la catégorie dont les objets 
+    sont les ouverts de $X$ et les morphismes les inclusions naturelles. La 
+    topologique de Grothendieck sur $\sS$ correspondant à la topologie usuelle 
+    de $X$ est celle pour laquelle un crible $\sU$ sur un ouvert $U$ de $X$ est 
+    couvrant si la réunion des ouverts appartenant à ce crible est égale à 
+    $U$. Il est clair que la catégorie des faisceaux sur $\sS$ est équivalente 
+    à la catégorie des faisceaux sur $X$ au sens usuel. 
+  \item Soient $X$ un schéma et $\sS$ la catégorie des schémas sur $X$. On 
+    appelle topologie fpqc (fidèlement plate quasi-compacte) sur $\sS$ la 
+    topologie de Grothendieck pour laquelle un crible sur un $X$-schéma $U$ est 
+    couvrant s'il est engendré par une famille finie de morphismes plats dont  
+    les images recouvrent $U$. 
+\end{enumerate}
+
+
+
+
+
+\subsubsection{Cohomologie}\label{I:1-6-5}
+
+On supposera toujours que la catégorie $\sS$ a un objet final $X$. Alors on 
+appelle sections globales d'un faisceaux abélien $\cF$, et on note 
+$\Gamma\cF$ ou $\h^0(X,\cF)$, le groupe $\cF(X)$. Le foncteur 
+$\cF\mapsto\Gamma\cF$ est un foncteur exact \'a gauche de la catégorie des 
+faisceaux abéliens sur $\sS$ dans la catégorie des groupes abéliens, ou 
+note $\h^i(X,-)$ ses dérivés (ou satellites). Ces groupes de cohomologie 
+représentent les obstructions à passer du local au global. Par définition, si 
+$0\to\cF\to\cG\to\cH\to 0$ est une suite exacte de faisceaux abéliens, on a une 
+suite exacte longue de cohomologie:
+\[\xymatrix{
+  0 \ar[r] 
+    & \h^0(X,\cF) \ar[r] 
+    & \h^0(X,\cG) \ar[r] 
+    & \h^0(X,\cH) \ar[r] 
+    & \h^1(X,\cF) \ar[r] 
+    & \cdots \\
+  \ldots \ar[r] 
+    & \h^n(X,\cF) \ar[r] 
+    & \h^n(X,\cG) \ar[r]
+    & \h^n(X,\cH) \ar[r] 
+    & \h^{n+1}(X,\cF) \ar[r] 
+    & \cdots
+}\]
+
+
+
+
+
+\subsubsection{}\label{I:1-6-6}
+
+Étant donné un faisceau abélien $\cF$ sur $\sS$, on appelle 
+\emph{$\cF$-torseur} un faisceau $\cG$ muni d'une action $\cF\times\cG\to\cG$ 
+de $\cF$ telle que localement (après restriction à tous les objets d'un 
+crible couvrant l'objet final $X$) $\cG$ muni de l'action de $\cF$ soit 
+isomorphe à $\cF$ muni de l'action canonique $\cF\times \cF\to \cF$ par 
+translations. 
+
+On peut montrer que $\h^1(X,\cF)$ s'interprète comme l'ensemble des classes 
+à isomorphisme près de $\cF$-torseurs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Topologie étale}\label{I:2}
+
+On spécialise les définitions du chapitre précédent au cas de la 
+topologie étale d'un schéma $X$ (\ref{I:2-1}, \ref{I:2-2}, \ref{I:2-3}). La 
+cohomologie correspondante coïncide dans le cas où $X$ est le spectre d'un 
+corps $K$ avec la cohomologie galoisienne de $K$ (\ref{I:2-4}). 
+
+
+
+
+
+
+
+
+
+
+\subsection{Topologie étale}\label{I:2-1}
+
+Nous commencerons par quelques rappels sur la notion de morphisme étale. 
+
+\begin{definition}\label{I:2-1-1}
+Soit $A$ un anneau (commutatif). On dit qu'une $A$-algèbre $B$ est étale si 
+$B$ est une $A$-algèbre de présentation finie et si les conditions 
+équivalentes suivantes sont vérifiées:
+\begin{enumerate}[\indent a)]
+  \item Pour toute $A$-algèbre $C$ et pour tout idéal de carré nul $J$ de 
+    $C$, l'application canonique 
+    \[
+      \hom_{A\textnormal{-alg}}(B,C) \to \hom_{A\textnormal{-alg}}(B,C/J)
+    \]
+    est une bijection.
+  \item $B$ est un $A$-module plat et $\Omega_{B/A}=0$ (on note $\Omega_{B/A}$ 
+    le module des différentielles relatives).
+  \item Soit $B=A[X_1,\dotsc,X_n]/I$ une présentation de $B$. Alors pour tout 
+    idéal premier $\fp$ de $A[X_1,\dotsc,X_n]$ contenant $I$, il existe des 
+    polynômes $P_1,\dotsc,P_n\in I$ tels que $I_\fp$ soit engendré par les 
+    images de $P_1,\dotsc,P_n$ et $\det(\partial P_i/\partial X_j)\notin \fp$.  
+\end{enumerate}
+\end{definition}
+(cf. \cite[I]{sga1} ou \cite[V]{ra70})
+%[cf. SGA I, exposé I ou M. {\sc Raynoud}, \emph{Anneaux Locaux Henséliens}, chapitre V]. 
+
+On dit qu'un morphisme de schémas $f:X\to S$ est \emph{étale} si pour tout 
+$x\in X$ il existe un voisinage ouvert affine $U=\spec(A)$ de $f(x)$ et un 
+voisinage ouvert affine $V=\spec(B)$ de $x$ dans $X\times_S U$ tel que $B$ soit 
+une $A$-algèbre étale. 
+
+
+
+
+
+\subsubsection{Exemples}\label{I:2-1-2}
+\begin{enumerate}[\indent a)]
+  \item Si $A$ est un corps, une $A$-algèbre $B$ est étale si et seulement 
+    si c'est un produit fini d'extensions séparables de $A$. 
+  \item Si $X$ et $S$ sont des schémas de type fini sur $\dC$, un morphisme 
+    $f:X\to S$ est étale si et seulement si son analyticité 
+    $f^{\text{an}}:X^{\text{an}}\to Y^{\text{an}}$ est un isomorphisme local.
+\end{enumerate}
+
+
+
+
+
+\subsubsection{Sorite}\label{I:2-1-3}
+\begin{enumerate}[\indent a)]
+  \item (changement de base) Si $f:X\to S$ est un morphisme étale, il en est 
+    de même de $f_{S'}:X\times_S S'\to S'$ pour tout morphisme $S'\to S$. 
+  \item Si $f:X\to S$ et $g:Y\to S$ sont deux morphismes étales, tout 
+    $S$-morphisme de $X$ dans $Y$ est étale.
+  \item (descente) Soit $f:X\to S$ un morphisme. S'il existe un morphisme 
+    fidèlement plat $S'\to S$, tel que $f_{S'}:X\times_S S'\to S'$ soit 
+    étale, alors $f$ est étale.
+\end{enumerate}
+
+
+
+
+
+\subsubsection{}\label{I:2-1-4}
+
+Soit $X$ un schéma. Soit $\sS$ la catégorie des $X$-schémas étales; 
+d'après (\ref{I:2-1-3}.c) tout morphisme de $\sS$ est un morphisme étale. 
+On appelle \emph{topologie étale} sur $\sS$ la topologie pour laquelle un 
+crible sur $U$ est couvrant s'il est engendré par une famille finie de 
+morphismes $\varphi_i:U_i\to U$ tels que la réunion des images des 
+$\varphi_i$ recouvre $U$. On appelle \emph{site étale} de $X$, et note 
+$\et X$, le site défini par $\sS$ de la topologie étale. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Exemples de faisceaux}\label{I:2-2}
+
+
+
+
+
+\subsubsection{Faisceau constant}\label{I:2-2-1}
+
+Soit $C$ un groupe abélien et supposons pour simplifier $X$ noethérien. On 
+notera $\const C_X$ (ou même $C$ s'il n'y a pas d'ambiguïté) le faisceau 
+défini par $U\mapsto C^{\pi_0(U)}$, où $\pi_0(U)$ est l'ensemble (fini) des 
+composantes connexes de $U$. Le cas le plus important sera $C=\dZ/n$. On a donc 
+par définition 
+\[
+  \h^0(X,\dZ/n)=\left(\dZ/n\right)^{\pi_0(X)}\text{.}
+\]
+De plus $\h^1(X,\dZ/n)$ est l'ensemble des classes d'isomorphisme de 
+$\dZ/n$-torseurs (\ref{I:1-6-6}), autrement dit de revêtements étales 
+galoisiens de $X$ de groupe $\dZ/n$. En particulier, si $X$ est connexe et si 
+$\pi_1(X)$ est son groupe fondamental pour un pointe bas choisi, on a 
+\[
+  \h^1(X,\dZ/n) = \hom(\pi_1(X),\dZ/n)\text{.}
+\]
+
+
+
+
+
+\subsubsection{Groupe multiplicatif}\label{I:2-2-2}
+
+On notera $\dG_{m,X}$ (ou $\dG_m$ s'il n'y a pas d'ambiguïté) le faisceau 
+défini par $U\mapsto \Gamma(U,\cO_U^\times)$; il s'agit bien d'un faisceau 
+grâce au théorème de descente fidèlement plate (\ref{I:1-4-5}). On a 
+par définition 
+\[
+  \h^0(X,\dG_m) = \h^0(X,\cO_X)^\times\text{;}
+\]
+en particulier si $X$ est réduit, connexe et propre sur un corps 
+algébriquement clos $k$, on a:
+\[
+  \h^0(X,\dG_m) = k^\times\text{.}
+\]
+
+\begin{proposition}\label{I:2-2-3}
+On a un isomorphisme:
+\[
+  \h^1(X,\dG_m) = \pic(X)\text{,}
+\]
+où $\pic(X)$ est le groupe des classes de faisceaux inversibles sur $X$.
+\end{proposition}
+\begin{proof}
+Soit $*$ le foncteur qui, à un faisceau inversible $\cL$ sur $X$, associe le 
+préfaisceau $\cL^*$ suivant sur $\et X$: pour $\varphi:U\to X$ étale, 
+\[
+  \cL^*(U)=\operatorname{Isom}_U(\cO_U,\varphi^*\cL)\text{.}
+\]
+% the original references here are just to (4.2) and (4.5), but the context 
+% makes it seem that they refer to the results in chapter 1. Likewise a little 
+% later
+D'après (\ref{I:1-4-2}.i) et et (\ref{I:1-4-5}) (pleine fidélité), ce 
+préfaisceau est un faisceau; c'est même un $\dG_m$-torseur. On vérifie 
+aussitôt que 
+\begin{enumerate}[\indent a)]
+  \item le foncteur $*$ est compatible à la localisation (étale);
+  \item il induit une équivalence de la catégorie des faisceaux 
+    inversibles triviaux (i.e. à $\cO_X$) avec la catégorie des 
+    $\dG_m$-torseurs triviaux: $\cL$ est trivial si et seulement si $\cL^*$ 
+    l'est.
+\end{enumerate}
+
+De plus, d'après (\ref{I:1-4-2}.ii) et (\ref{I:1-4-5}), 
+\begin{enumerate}[\indent a)]
+\setcounter{enumi}{2}
+  \item la notion de faisceau inversible est locale pour la topologie étale. 
+\end{enumerate}
+
+Il résulte formellement de a), b), c) que $*$ est une équivalence entre la 
+catégorie des faisceaux inversibles sur $X$ est celle des $\dG_m$-torseurs 
+sur $\et X$; elle induit l'isomorphisme cherché. On construit comme suit 
+l'équivalence inverse: si $\cT$ est un $\dG_m$-torseur, il existe un 
+recouvrement étale fini $\{U_i\}$ de $X$ tel que les torseurs $\cT/U_i$ soient 
+triviaux; $\cT$ est alors trivial sur chaque $V$ étale sur $X$ appartenant au 
+crible $\sU\subset \et X$ engendré par $\{U_i\}$. Sur chaque 
+$V\in\sU$, $\cT|V$ correspond à un faisceau inversible $\cL_V$ (par b)) et les 
+$\cL_V$ constituent un faisceau inversible donné $\sU$-localement $\cL_\sU$ 
+(par a)). Par c), ce dernier provient d'un faisceau inversible $\cL(\cT)$ sur 
+$X$, et $\cT\mapsto \cL(\cT)$ est l'inverse cherché de $*$. 
+\end{proof}
+
+
+
+
+
+\subsubsection{Racines de l'unité}\label{I:2-2-4}
+
+Pour tout entier $n>0$, on appelle faisceau des racines $n$-ièmes de 
+l'unité, et on note $\dmu_n$, le noyau de l'élévation à puissance 
+$n$-iéme dans $\dG_m$. Si $X$ est un schéma sur un corps séparablement 
+clos $k$ et si $n$ est inversible dans $k$, le choix d'une racine primitive 
+$n$-ième de l'unité $\zeta\in k$ définit un isomorphisme 
+$i\mapsto \zeta^i$ de $\dZ/n$ avec $\dmu_n$. 
+
+La relation entre cohomologie à coefficients dans $\dmu_m$ et cohomologie à 
+coefficients dans $\dG_m$ est donnée par la suite exacte de cohomologie déduite 
+de la 
+
+
+
+
+
+
+\begin{theorem}[Théorie de Kummer]\label{I:2-2-5}
+Si $n$ est inversible sur $X$, l'élévation à la puissance $n$-ième dans 
+$\dG_m$ est un épimorphisme de faisceaux. On a donc une suite exacte 
+\[
+  0 \to \dmu_n \to \dG_m \to \dG_m \to 0\text{.}
+\]
+\end{theorem}
+\begin{proof}
+Soient $U\to X$ un morphisme étale et $a\in \dG_m(U) =\Gamma(U,\cO_U^\times)$. 
+Puisque $n$ est inversible sur $U$, l'équation $T^n-a = 0$ est séparable; 
+autrement dit $U'=\spec\left(\cO_U[T]/(T^n-a)\right)$ est étale su-dessus de 
+$U$. Par ailleurs $U'\to U$ est surjectif et a admet une racine $n$-ième sur 
+$U'$, d'où résultat. 
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+\subsection{Fibres, images directes}\label{I:2-3}
+
+
+
+
+
+\subsubsection{}\label{I:2-3-1}
+
+On appelle \emph{pointe géométrique} de $X$ un morphisme $\bar x\to X$, où 
+$\bar x$ est le spectre d'un corps séparablement clos $k(\bar x)$. On le notera 
+abusivement $\bar x$, sous-entendent le morphisme $\bar x\to X$. Si $x$ est 
+l'image de $\bar x$ dans $X$, on dit que $\bar x$ est centré en $x$. Si le 
+corps $k(\bar x)$ est une extension algébrique du corps résiduel $k(x)$, on dit 
+que $\bar x$ est un point géométrique \emph{algébrique} de $X$. 
+
+On appelle \emph{voisinage étale} de $\bar x$ un diagramme commutatif 
+\[\xymatrix{
+  & U \ar[d] \\
+  \bar x \ar[ur] \ar[r] 
+  & X\text{,}
+}\]
+où $U\to X$ est un morphisme étale. 
+
+Le \emph{localisé stricte} de $X$ en $\bar x$ est l'anneau 
+$\cO_{X,\bar x} = \varinjlim \Gamma(U,\cO_U)$, la limite inductive étant sur les 
+voisinages étales de $\bar x$. C'est un anneau local strictement hensélien dont 
+le corps résiduel est la clôture séparable du corps résiduel $k(x)$ de $X$ en 
+$x$ dans $k(\bar x)$. Il joue le rôle d'anneau local pour la topologie étale. 
+
+
+
+
+
+\subsubsection{}\label{I:2-3-2}
+
+Étant donné un faisceau $\cF$ sur $\et X$, on appelle \emph{fibre} de $\cF$ en 
+$\bar x$ l'ensemble (resp. le groupe,\dots) $\cF_{\bar x}=\varprojlim \cF(U)$, 
+la limite inductive étant toujours prise sur les voisinages étales de  $X$. 
+
+Pour qu'un homomorphisme de faisceaux $\cF\to \cG$ soit un 
+mono-/epi-/isomorphisme il faut et il suffit qu'il en soit ainsi des morphismes 
+$\cF_{\bar x}\to \cG_{\bar x}$ induit sur les fibres et tout point géométrique 
+de $X$. Si $X$ est de type fini sur un corps algébriquement clos, il suffit 
+qu'il en soit ainsi en les points rationnelles de $X$. 
+
+
+
+
+
+\subsubsection{}\label{I:2-3-3}
+
+Si $f:X\to Y$ est un morphisme de schémas et $\cF$ un faisceau sur $\et X$, 
+l'\emph{image directe} $f_* \cF$ de $\cF$ par $f$ est le faisceau sur $\et Y$ 
+défini par $f_* \cF(V) = \cF(X\times_Y V)$ pour tout $V$ étale sur $Y$. Le foncteur 
+$f_*:\sh(\et X)\to \sh(\et Y)$ est exact à gauche. Ses foncteurs 
+dérivés à droite $\R^q f_*$ s'appellent images directes supérieures. Si 
+$\bar y$ est un point géométrique de $Y$, on a 
+\[
+  (\R^q f_* \cF)_{\bar y} = \varinjlim \h^q(V\times_Y X,\cF)\text{,}
+\]
+limite inductive prise sur les voisinages étales $V$ de $\bar y$. 
+
+Soient $\cO_{Y,\bar y}$ le localisé stricte de $Y$ en $\bar y$, 
+$\widetilde Y=\spec(\cO_{Y,\bar y})$ et $\widetilde X=X\times_Y \widetilde Y$. 
+On peut étendre $\cF$ à $\et{\widetilde X}$ (c'est un cas particulier de la 
+notion générale d'image réciproque) de la manière suivante: soit 
+$\widetilde U$ un schéma étale sur $\widetilde X$, alors il existe un 
+voisinage étale $V$ de $\bar y$ et un schéma étale $U$ sur $X\times_Y V$ tel 
+que $\widetilde U=U\times_V \widetilde Y$; on posera 
+\[
+  \cF(\widetilde U)=\varinjlim \cF\left(U\times_V V'\right)\text{,}
+\]
+le limite inductive étant prise sur les voisinages étales $V'$ de $\bar y$ qui 
+dominent $V$. Avec cette définition, on a 
+\[
+  \left(\R^q f_* \cF\right)_{\bar y} = \h^q(\widetilde X,\cF)\text{.}
+\]
+
+Le foncteur $f_*$ a un adjoint à gauche $f^*$, le foncteur ``image 
+réciproque.'' Si $\bar x$ est un point géométrique de $X$ et $f(\bar x)$ son 
+image dans $Y$, on a $(f^* \cF)_{\bar x} = \cF_{f(\bar x)}$. Cette formule montre 
+que $f^*$ est un foncteur exact. Le foncteur $f_*$ transforme donc faisceau 
+injectif en faisceau injectif, et la suite spectrale du foncteur compose 
+$\Gamma\circ f_*$ (resp. $g_* f_*$) fournit la 
+
+
+
+
+
+\begin{theorem}[Suite spectrale de Leray]\label{I:2-3-4}
+Soient $\cF$ un faisceau abélien sur $\et X$ et $f:X\to Y$ un morphisme de 
+schémas (resp. des morphismes de schémas $X\xrightarrow f Y \xrightarrow g Z$). 
+On a une suite spectrale 
+\begin{align*}
+  E_2^{pq} &= \h^p(Y,\R^q f_* \cF) \Rightarrow \h^{p+q}(X,\cF) \\
+  \text{(resp.}\qquad E_2^{pq} &= \R^p g_* \R^q f_* \cF \Rightarrow \R^{p+q}(gf)_* \cF\text{).}
+\end{align*}
+\end{theorem}
+
+
+
+
+
+\begin{corollary}\label{I:2-3-5}
+Si $\R^q f_* \cF=0$ pour tout $q>0$, on a $\h^p(Y,f_* \cF)=\h^p(X,\cF)$ (resp. 
+$\R^p g_*(\cF_* \cF) = \R^p(g f)_* \cF$) pour tout $p\geqslant 0$. 
+\end{corollary}
+
+Cela s'applique en particulier dans le cas suivant:
+
+
+
+
+
+\begin{proposition}\label{I:2-3-6}
+Soit $f:X\to Y$ un morphisme fini (voire, par passage à la limite, un 
+morphisme entier) et $\cF$ un faisceau abélien sur $X$. Alors $\R^q f_* \cF=0$, 
+pour tout $q>0$.
+\end{proposition}
+
+En effet soient $\bar y$ un pointe géométrique de $Y$, $\widetilde Y$ le 
+spectre du localisé strict de $Y$ en $y$ et 
+$\widetilde X=X\times_Y \widetilde Y$; d'après ce qui précède, il suffit de 
+montrer que $\h^q(\widetilde X,\cF) = 0$ pour tout $q>0$. Or $\widetilde X$ est le 
+spectre d'un produit d'anneaux locaux strictement henséliens (cf. 
+\cite[I]{ra70}), le foncteur $\Gamma(\widetilde X,-)$ est exact car tout 
+$\widetilde X$-schéma étale et surjectif admet une section, d'où l'assertion. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Cohomologie galoisienne}\label{I:2-4}
+
+Pour $X=\spec(K)$ le spectre d'un corps, nous allons voir que la cohomologie 
+étale s'identifie à la cohomologie galoisienne. 
+
+
+
+
+
+\subsubsection{}\label{I:2-4-1}
+
+Commençons par une analogie topologique. Si $K$ est le corps des fonctions 
+d'une variété algébrique affine intègre $Y=\spec(A)$ sur $\dC$, on a 
+$K=\varprojlim_{f\in A} A[1/f]$. 
+
+Autrement dit $X=\varprojlim U$, $U$ parcourant l'ensemble des ouverts de $Y$. 
+On sait qu'il existe des ouverts de Zariski arbitrairement petits qui pour la 
+topologie classique sont des $K(\pi,1)$. On ne sera donc pas surpris si l'on 
+considère $\spec(K)$ lui-même comme un $K(\pi,1)$, $\pi$ étant le groupe 
+fondamental (au sens algébrique) de $X$, autrement dit le groupe de Galois de 
+$\bar K/K$, où $\bar K$ est clôture séparable de $K$. 
+
+
+
+
+
+\subsubsection{}\label{I:2-4-2}
+
+Plus précisément soient $K$ un corps, $\bar K$ un clôture séparable de $K$ et 
+$G = \gal(\bar K/K)$ le groupe de Galois topologique. A toute $K$-algèbre finie 
+étale $A$ (produit fini d'extensions séparables de $K$), associons l'ensemble 
+fini $\hom_K(A,\bar K)$. Le groupe de Galois $G$ opère sur cet ensemble à 
+travers un quotient discret (donc fini). Si $A=K[T]/(F)$, il s'identifie à 
+l'ensemble des racines dans $\bar K$ du polynôme $F$. La théorie de Galois, 
+sous la forme que lui a donnée Grothendieck, dit que:
+
+
+
+
+
+\begin{proposition}\label{I:2-4-3}
+Le foncteur 
+\[
+  \left\{\begin{array}{c}
+          \textnormal{$K$-algèbres} \\ 
+          \textnormal{finies étales}
+        \end{array}\right\}
+  \to  
+  \left\{\begin{array}{c}
+          \textnormal{ensembles finis sur lesquels} \\
+          \textnormal{$G$ opère continûment}
+        \end{array}\right\}
+\]
+qui à une algèbre étale $A$ associe $\hom_K(A,\bar K)$ est une 
+anti-équivalence de catégories.
+\end{proposition}
+
+On en déduit une description analogue des faisceaux pour la topologie étale sur 
+$\spec(K)$:
+
+
+
+
+
+\begin{proposition}\label{I:2-4-4}
+Le foncteur 
+\[
+  \left\{\begin{array}{c}
+          \textnormal{Faisceaux étales} \\ 
+          \textnormal{sur $\spec(K)$}
+        \end{array}\right\}
+  \to 
+  \left\{\begin{array}{c}
+          \textnormal{ensembles sur lesquels} \\
+          \textnormal{$G$ opère continûment}
+        \end{array}\right\}
+\]
+qui à un 
+faisceau $\cF$ associe sa fibre $\cF_{\bar K}$ au point géométrique 
+$\spec(\bar K)$ est une équivalence de catégories.
+\end{proposition}
+
+On dit que $G$ opère continûment sur un ensemble $E$ si le fixateur de tout 
+élément de $E$ est un sous-groupe ouvert de $G$. Le foncteur en sens 
+inverse est décrit de la manière évidente: soient $A$ une 
+$K$-algèbre finie étale, $U=\spec(A)$ et $U(\bar K)=\hom_K(A,\bar K)$ le 
+$G$-ensemble correspondant à; alors on a 
+$\cF(U)= \hom_{G\text{-ens}}(U(\bar K),\cF_{\bar K})$. 
+
+En particulier, si $X=\spec(K)$, on a $\cF(X) = \cF_{\bar K}^G$. Si l'on se 
+restreint aux faisceaux abéliens, on obtient en passant aux foncteurs 
+dérivés des isomorphismes canoniques 
+\[
+  \h^q(\et X,\cF) = \h^q(G,\cF_{\bar K})
+\]
+
+
+
+
+
+\subsubsection{Exemples}\label{I:2-4-5}
+
+\begin{enumerate}[\indent a)]
+  \item Au faisceau constant $\dZ/n$ correspond $\dZ/n$ avec action triviale de 
+    $G$. 
+  \item Au faisceau des racines $n$-ièmes de l'unité $\dmu_n$ correspond 
+    le groupe $\dmu_n(\bar K)$ des racines $n$-ièmes de l'unité dans 
+    $\bar K$, avec l'action naturelle de $G$.
+  \item Au faisceau $\dG_m$ correspond le groupe $\bar K^\times$ avec l'action 
+    naturelle de $G$.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Cohomologie des courbes}\label{I:3}
+
+Dans le cas des espaces topologiques, des dévissages utilisant la formule de 
+K\"unneth et des décompositions simpliciales permettent de se ramener pour 
+calculer la cohomologie à l'intervalle $I=[0,1]$ pour lequel on a 
+$\h^0(I,\dZ)=\dZ$ et $\h^q(I,\dZ)=0$ pour $q>0$. 
+
+Dans notre cas, les dévissages aboutiront à des objets plus compliqués, 
+à savoir les courbes sur un corps algébriquement clos; nous allons calculer 
+leur cohomologie dans ce chapitre. La situation est plus complexe que dans le 
+cas topologique car les groupes de cohomologie sont nuis pour $q>2$ seulement. 
+L'ingrédient essentiel des calculs est la nullité du groupe de Brauer du 
+corps des fonctions d'une telle courbe (théorème de Tsen, \ref{I:3-2}). 
+
+
+
+
+
+
+
+
+
+
+\subsection{Le groupe de Brauer}\label{I:3-1}
+
+Rappelons-en tout d'abord la définition classique:
+
+
+
+
+
+\begin{definition}\label{I:3-1-1}
+Soit $K$ un corps et $A$ une $K$-algèbre de dimension finie. On dit que $A$ 
+est une algèbre simple centrale sur $K$ si les conditions équivalentes 
+suivantes sont vérifiées:
+\begin{enumerate}[\indent a)]
+  \item $A$ n'a pas d'idéal bilatère non trivial et son centre est $K$. 
+  \item Il existe une extension galoisienne finie $K'/K$ telle que 
+    $A_{K'} = A\otimes_K K'$ soit isomorphe à une algèbre de matrices 
+    carrées sur $K'$.
+  \item $A$ est $K$-isomorphe à algèbre de matrices carrées sur un corps 
+    gauche de centre $K$.
+\end{enumerate}
+\end{definition}
+
+Deux telles algèbres sont dites équivalentes si les corps gauches qui 
+leur sont associés par c) sont $K$-isomorphes. Si ces algèbres out 
+même dimension, cela revient à dire qu'elles sont $K$-isomorphes. Le 
+produit tensoriel définit par passage au quotient une structure de groupe 
+abélien sur l'ensemble des classes d'équivalence. C'est ce groupe que l'on 
+appelle classiquement \emph{le groupe de Brauer} de $K$ et que l'on note 
+$\br(K)$. 
+
+
+
+
+
+\subsubsection{}\label{I:3-1-2}
+
+On notera $\br(n,K)$ l'ensemble des classes de $K$-isomorphisme de 
+$K$-algèbres $A$ telles qu'il existe une extension galoisienne finie $K'$ de 
+$K$ pour laquelle $A_{K'}$ est isomorphe à l'algèbre $M_n(K')$ des matrices 
+carrées $n\times n$ sur $K'$. Par définition $\br(K)$ est réunion des 
+sous-ensembles $\br(n,K)$ pour $n\in\dN$. Soient $\bar K$ une clôture 
+algébrique de $K$ et $G=\gal(\bar K/K)$. L'ensemble $\br(n,K)$ est 
+l'ensemble des ``formes'' de $M_n(\bar K)$, il est donc canoniquement 
+isomorphe à $\h^1\left(G,\aut(M_n(\bar K))\right)$. 
+
+On sait que tout automorphisme de $M_n(\bar K)$ est intérieur. Par 
+conséquent le groupe $\aut(M_n(\bar K))$ s'identifie au groupe linéare 
+projectif $\pgl(n,\bar K)$ et on a une bijection canonique:
+\[
+  \theta_n : \br(n,K) \iso \h^1\left(G,\pgl(n,\bar K)\right)\text{.}
+\]
+
+D'autre part la suite exacte:
+\begin{equation}\label{I:eq:3-1-2-1}
+  1 \to \bar K^\times \to \gl(n,\bar K) \to \pgl(n,\bar K) \to 1\text{,}
+\end{equation}
+permet de définir un opérateur cobord:
+\[
+  \Delta_n : \h^1\left(G,\pgl(n,\bar K)\right) \to \h^2(G,\bar K^\times)\text{.}
+\]
+
+En composant $\theta_n$ et $\Delta_n$, on obtient une application:
+\[
+  \delta_n : \br(n,K) \to \h^2(G,\bar K^\times)\text{.}
+\]
+On vérifie facilement que les applications $\delta_n$ sont compatibles entre 
+elles et définissent un homomorphisme de groupes:
+\[
+  \delta : \br(K) \to \h^2(G,\bar K^\times)\text{.}
+\]
+
+
+
+
+
+\begin{proposition}\label{I:3-1-3}
+L'homomorphisme $\delta:\br(K)\to \h^2(G,\bar K^\times)$ est bijectif. 
+\end{proposition}
+
+Cela résulte des deux lemmes suivants:
+
+
+
+
+
+\begin{lemma}\label{I:3-1-4}
+L'application 
+$\Delta_n:\h^1\left(G,\pgl(n,\bar K)\right)\to \h^2(G,\bar K^\times)$ est 
+injective.
+\end{lemma}
+
+D'après \cite{se94}, cor. à la prop. I-44, il suffit de vérifier que chaque 
+fois qu'on tord la suite exacts (\ref{I:eq:3-1-2-1}) par un élément de 
+$\h^1\left(G,\pgl(n,\bar K)\right)$, le $\h^1$ du groupe médian est trivial. 
+Ce groupe médian est le groupe des $\bar K$-points du groupe multiplicatif 
+d'une algèbre centrale simple $A$ de rang $n^2$ sur $K$. Pour prouver que 
+$\h^1(G,A_{\bar K}^\times) = 0$, n interprète $A^\times$ comme le groupe 
+des automorphismes du $A$-module libre $L$ de rang $1$, et $\h^1$ comme 
+l'ensemble des ``formes'' de $L$ -- des $A$-modules de rang $n^2$ sur $K$, 
+automatiquement libres. 
+
+
+
+
+
+\begin{lemma}\label{I:3-1-5}
+Soient $\alpha\in \h^2(G,\bar K^\times)$, $K'$ un extension finie de $K$ 
+contenue dans $\bar K$, $n=[K':K]$, et $G'=\gal(\bar K/K')$. Si l'image de 
+$\alpha$ dans $\h^2(G',\bar K^\times)$ est nulle, alors, $\alpha$ appartient 
+à l'image de $\Delta_n$. 
+\end{lemma}
+
+Remarquons tout d'abord qu'on a: 
+\[
+  \h^2(G',\bar K^\times) \simeq \h^2\left(G,(\bar K\otimes_K K')^\times\right)\text{.}
+\]
+(D'un point de vue géométrique si l'on note $x=\spec(K)$, $x'=\spec(K')$ et 
+$\pi:x'\to x$ le morphisme canonique, on a $\R^q \pi_*(\dG_{m,x'}) = 0$ pour 
+$q>0$ et par suite $\h^q(x',\dG_{m,X'})\simeq \h^q(x,\pi_*\dG_{m,X'})$ pour 
+$q\geqslant 0$). 
+
+Par ailleurs la choix d'une base de $K'$ en tant qu'espace vectoriel sur $K$ 
+permet de définir un homomorphisme 
+\[
+  (\bar K\otimes_K K')^\times \to \gl(n,\bar K)
+\]
+qui, à un élément $x$, fait correspondre l'endomorphisme de 
+multiplication par $x$ de $\bar K\otimes_K K'$. On a alors un diagramme 
+commutatif à lignes exactes: 
+\[\xymatrix{
+  1 \ar[r] 
+    & \bar K^\times \ar[r] \ar@{=}[d]
+    & (\bar K\otimes_K K')^\times \ar[r] \ar[d] 
+    & (\bar K\otimes_K K')^\times / \bar K^\times \ar[r] \ar[d] 
+    & 1 \\
+  1 \ar[r] 
+    & \bar K^\times \ar[r] 
+    & \gl(n,\bar K) \ar[r] 
+    & \pgl(n,\bar K) \ar[r] 
+    & 1
+}\]
+Le lemme résulte du diagramme commutatif que l'on en déduit en passant 
+à la cohomologie:
+\[\xymatrix{
+  \h^1\left(G,(\bar K\otimes_K K')^\times/\bar K^\times\right) \ar[r] \ar[d] 
+    & \h^2(G,\bar K^\times) \ar[r] \ar@{=}[d]
+    & \h^2\left(G,(\bar K\otimes_K K')^\times\right) \\
+  \h^1\left(G,\pgl(n,\bar K)\right) \ar[r]^-{\Delta_n} 
+    & \h^2(G,\bar K^\times) \text{.}
+}\]
+
+
+
+
+
+\begin{proposition}\label{I:3-1-6}
+Soient $K$ un corps, $\bar K$ une clôture algébrique de $K$ et 
+$G=\gal(\bar K/K)$. Supposons que, pour tout extension finie $K'$ de $K$, on 
+ait $\br(K')=0$. Alors on a:
+\begin{enumerate}[\indent i)]
+  \item $\h^q(G,\bar K^\times) = 0$ pour tout $q>0$.
+  \item $\h^q(G,\cF) = 0$ pour tout $G$-module de torsion $\cF$ et pour tout 
+    $q\geqslant 2$.
+\end{enumerate}
+\end{proposition}
+
+(Pour la démonstration, cf. \cite{se94}).
+
+
+
+
+
+
+
+
+
+
+\subsection{Le théorème de Tsen}\label{I:3-2}
+
+
+
+
+
+\begin{definition}\label{I:3-2-1}
+On dit qu'un corps $K$ est $C_1$ si tout polynôme homogène non constant 
+$f(x_1,\dotsc,x_n)$ de degré $d<n$ a un zéro non trivial.
+\end{definition}
+
+
+
+
+
+\begin{proposition}\label{I:3-2-2}
+Si un corps $K$ est $C_1$, on a $\br(K)=0$.
+\end{proposition}
+
+Il s'agit de montrer que tout corps gauche $D$ de centre $K$ et fini sur $K$ 
+est égale à $K$. Soient $r^2$ le degré de $D$ sur $K$ et 
+$\operatorname{Nrd}:D\to K$ la norme réduite. 
+
+(Localement pour la topologie étale sur $K$, $D$ est isomorphe -- non 
+canoniquement -- à une algèbre de matrices $M_r$ et la norme réduite 
+coïncide avec l'application déterminant. Celle-ci est bien définie, 
+indépendamment de l'isomorphisme choisi entre $D$ et $M_r$ car tout 
+automorphisme de $M_r$ est intérieur et deux matrices semblables ont 
+même déterminant. Cette application définie localement pour la 
+topologie étale se descende, à cause de son unicité locale, en une 
+application $\operatorname{Nrd}:D\to K$). 
+
+Le seul zéro de $\operatorname{Nrd}$ est l'élément nul de $D$, car, si 
+$x\ne 0$, on a $\operatorname{Nrd}(x)\cdot \operatorname{Nrd}(x^{-1}) = 1$. 
+D'autre part, si $\{e_1,\dotsc,e_{r^2}\}$ est une base de $D$ sur $K$ et si 
+$x=\sum x_i e_i$, la fonction $\operatorname{Nrd}(x)$ s'écrit comme un polynôme 
+homogène $\operatorname{Nrd}(x_1,\dotsc,x_{r^2})$ de degré $r$ (c'est 
+clair localement pour la topologie étale). Puisque $K$ est $C_1$, on a 
+$r^2\leqslant r$, c'est-à-dire $r=1$ et $D=K$. 
+
+
+
+
+
+\begin{theorem}[Tsen]\label{I:3-2-3}
+Soient $k$ un corps algébriquement clos et $K$ une extension de degré de 
+transcendance $1$ de $k$. Alors $K$ est $C_1$.
+\end{theorem}
+
+Supposons tout d'abord que $K=k(X)$. Soit 
+\[
+  f(T) = \sum a_{i_1,\dotsc i_n} T_1^{i_1} \dotsm T_n^{i_n}
+\]
+un polynôme homogène de degré $d<n$ à coefficients dans $k(X)$. Quitte 
+à multiplier les coefficients par un dénominateur commun on peut supposer 
+qu'ils sont dans $k[X]$. Soit alors $\delta=\sup\deg(a_{i_1\dotsc i_n})$. On 
+cherche un zéro non trivial dans $k[X]$ par la méthode des coefficients 
+indéterminés en écrivant chaque $T_i$ ($i=1,\dotsc,n$) comme un 
+polynôme de degré $N$ en $X$. Alors l'équation $f(T)=0$ devient un système 
+d'équations homogènes en les $n\times (N+1)$ coefficients des polynômes 
+$T_i(X)$ exprimant la nullité des coefficients du polynôme en $X$ obtenu en 
+remplaçant $T_i$ par $T_i(X)$. Ce polynôme est de degré $\delta+N D$ au plus, 
+il y a donc $\delta+N d+1$ équations en $n\times (N+1)$ variables. Comme $k$ 
+est algébriquement clos ce système a une solution non triviale si 
+$n(N+1)>N d+\delta+1$, ce qui sera le cas pour $N$ assez grand si $d<n$. 
+
+Il est clair que, pour démontrer le théorème dans la cas général, il 
+suffit de le démontrer lorsque $K$ est une extension finie d'une extension 
+transcendent pure $k(X)$ de $k$. Soit $f(T)=f(T_1,\dotsc,T_n)$ un 
+polynôme homogène de degré $d<n$ à coefficients dans $K$. Soient 
+$a=[K:k(X)]$ et $e_1,\dotsc,e_s$ une bas de $K$ sur $k(X)$. Introduisons de 
+nouvelles variables $U_{i j}$, en nombre $s n$, telles que 
+$T_i=\sum U_{i j}e_j$. Pour que le polynôme $f(T)$ ait un zéro 
+non trivial dans $K$, il suffit que le polynôme 
+$g(X_{i j}) = N_{K/k}(f( T))$ ait un zéro non trivial dans $k(X)$. 
+Or $g$ est un polynôme de degré $s d$ en $s n$ variables, d'où le 
+résultat. 
+
+
+
+
+
+\begin{corollary}\label{I:3-2-4}
+  Soient $k$ un corps algébriquement clos et $K$ une extension de degré 
+de transcendance $1$ de $k$. Alors les groupes de cohomologie étale 
+$\h^q(\spec(K),\dG_m)$ sont nuls pour tout $q>0$. 
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+\subsection{Cohomologie des courbes lisses}
+
+Dorénavant, et sauf mention expresse du contraire, les groupes de 
+cohomologie considérés sont les groupes des cohomologie étale. 
+
+
+
+
+
+\begin{proposition}\label{I:3-3-1}
+Soient $k$ un corps algébriquement clos et $X$ une courbe projective non 
+singulière connexe sur $k$. Alors on a:
+\begin{align*}
+  \h^0(X,\dG_m) &= k^\times \text{,} \\
+  \h^1(X,\dG_m) &= \pic(X) \text{,} \\
+  \h^q(X,\dG_m) &= 0 \text{ pour $q\geqslant 2$.}
+\end{align*}
+\end{proposition}
+
+Soient $\eta$ le point générique de $X$, $j:\eta\to X$ le morphisme 
+canonique et $\dG_{m,X}$ le groupe multiplicatif du corps des fractions 
+$K(X)$. Pour tout pointe fermé $x$ de $X$, soient $i_x:x\to X$ l'immersion 
+canonique et $\dZ_x$ le faisceau constant de valeur $\dZ$ sur $x$. Ainsi 
+$j_*\dG_{m,\eta}$ est le faisceau des fonctions méromorphes non nulles sur 
+$X$ et $\oplus_{x\in X} i_{x_I}\dZ_x$ le faisceau des diviseurs, on a donc une 
+suite exacte de faisceaux:
+\begin{equation}\label{I:eq:3-3-1-1}
+\xymatrix{
+  0 \ar[r] 
+    & \dG_m \ar[r]
+    & j_* \dG_{m,\eta} \ar[r]^-{\dv} \ar[r] 
+    & \displaystyle\bigoplus_{x\in X} i_{x*} \dZ_x \ar[r] 
+    & 0\text{.}
+}
+\end{equation}
+
+
+
+
+
+\begin{lemma}\label{I:3-3-2}
+On a $\R^q j_* \dG_{m,\eta} = 0$ pour tout $q>0$.
+\end{lemma}
+
+Il suffit de montrer que la fibre de ce faisceau en tout pointe fermé $x$ 
+de $X$ est nulle. Si $\tilde\cO_{X,x}$ est l'hensélisé de $X$ en $x$ et $K$ 
+le corps des fractions de $\tilde\cO_{X,x}$, on a 
+\[
+  \spec(K) = \eta\times_X \spec(\tilde\cO_{X,x})\text{,}
+\]
+donc $(\R^qj_*\dG_{m,\eta})_x = \h^q(\spec(K),\dG_m)$. 
+
+Or $K$ est une extension algébrique de $k(X)$, donc une extension de degré 
+de transcendante $1$ de $k$: le lemme résulte de (\ref{I:3-2-4}). 
+
+
+
+
+
+\begin{lemma}\label{I:3-3-3}
+On a $\h^q(X, j_*\dG_{m,\eta}) = 0$ pour tout $q>0$.
+\end{lemma}
+
+En effet de (\ref{I:3-3-2}) et de la suite spectrale de Leray pour $j$, on 
+déduit:
+\[
+  \h^q(X, j_* \dG_{m,\eta}) = \h^q(\eta,\dG_{m,\eta})
+\]
+pour tout $q\geqslant 0$ et le deuxième membre est nul pour $q>0$ d'après 
+(\ref{I:3-2-4}). 
+
+
+
+
+
+\begin{lemma}\label{I:3-3-4}
+On a $\h^q\left(X,\bigoplus_{x\in X} i_{x*} \dZ_x\right) = 0$ pour tout $q>0$. 
+\end{lemma}
+
+En effet pour tout point fermé de $X$, on a $\R^q i_{x*}\dZ_x 0$ pour $q>0$, 
+car $i_x$ est un morphisme fini (\ref{I:2-3-6}), et 
+\[
+  \h^q(X,i_{x*}\dZ_x) = \h^q(x,\dZ_x)\text{.}
+\]
+Le deuxième membre est nul pour tout $q>0$, car $x$ est la spectre d'un 
+corps algébriquement clos (On voit que le lemme est vrai plus 
+généralement pour tout faisceau ``gratte-ciel'' sur $X$). 
+
+On déduit des lemmes précédents et de la suite exacte (\ref{I:eq:3-3-1-1}) 
+les égalités:
+\[
+  \h^q(X,\dG_m) = 0 \text{ pour $q\geqslant 2$,}
+\]
+et une suite exacte de cohomologie en bas degré:
+\[
+  1 \to \h^0(X,\dG_m) \to \h^0(X, j_*\dG_{m,\eta}) \to \h^0\left(X,\bigoplus_{x\in X} i_{x*}\dZ_x\right) \to \h^1(X,\dG_m) \to 1
+\]
+qui n'est autre que la suite exacte:
+\[
+  1 \to k^\times \to k(X)^\times\to \Div(X) \to \pic(X) \to 1\text{.}
+\]
+De la proposition \ref{I:3-3-1} on déduit que les groupes de cohomologie de 
+$X$ à valeur dans $\dZ/n$, $n$ premier à la caractéristique de $k$, ont 
+une valeur raisonnable:
+
+
+
+
+
+\begin{corollary}\label{I:3-3-5}
+Si $X$ est de genre $g$ et si $n$ est inversible dans $k$, les 
+$\h^q(X,\dZ/n)$ sont nuls pour $q>2$, et libres sur $\dZ/n$ de rang $1,2 g,1$ 
+pour $q=0,1,2$. Remplaçant $\dZ/n$ par le groupe isomorphe $\dmu_n$, on a des 
+isomorphismes canoniques 
+\begin{align*}
+  \h^0(X,\dmu_n) &= \dmu_n \\
+  \h^1(X,\dmu_n) &= \pic^0(X)_n \\
+  \h^2(X,\dmu_n) &= \dZ/n \text{.}
+\end{align*}
+\end{corollary}
+
+Comme le corps $k$ est algébriquement clos, $\dZ/n$ est isomorphe (non 
+canoniquement) à $\mu_n$. De la suite exacte de Kummer:
+\[
+  0 \to \mu_n \to \dG_m \to \dG_m \to 0\text{,}
+\]
+et de la proposition \ref{I:3-3-1}, on déduit les égalité:
+\[
+  \h^q(X,\dZ/n) = 0 \text{ pour $q>2$,}
+\]
+et, en bas degré, des suites exactes:
+\[\xymatrix{
+  0 \ar[r] 
+    & \h^0(X,\dmu_n) \ar[r] 
+    & k^\times \ar[r]^-n 
+    & k^\times \ar[r] 
+    & 0
+}\]
+\[\xymatrix{
+  0 \ar[r] 
+    & \h^1(X,\dmu_n) \ar[r] 
+    & \pic(X) \ar[r]^-n 
+    & \h^2(X,\dmu_n) \ar[r] 
+    & 0\text{.}
+}\]
+De plus on a une suite exacte:
+\[\xymatrix{
+  0 \ar[r] 
+    & \pic^0(X) \ar[r] 
+    & \pic(X) \ar[r]^-{\deg}
+    & \dZ \ar[r] 
+    & 0 \text{,}
+}\]
+et $\pic^0(X)$ s'identifie au groupe des points rationnels sur $k$ d'une 
+variété abélienne de dimension $g$, la jacobienne de $X$. Dans un tel 
+groupe, la multiplication par $n$ est surjective et son noyau est un 
+$\dZ/n\dZ$-module libre de rang $2 g$ (car $n$ est inversible dans $k$); d'où 
+le corollaire. 
+
+De dévissage astucieux, utilisant la ``méthode de la trace,'' permet 
+d'obtenir en corollaire la 
+
+
+
+
+
+\begin{proposition}[{\cite[IX 5.7]{sga4}}]\label{I:3-3-6}
+Soient $k$ un corps algébriquement clos, $X$ une courbe algébrique sur $k$ 
+et $\cF$ un faisceau de torsion sur $X$. Alors:
+\begin{enumerate}[\indent i)]
+  \item On a $\h^q(X,\cF) = 0$ pour $q>2$.
+  \item Si $X$ est affine, on a même $\h^q(X,\cF) = 0$ pour $q>1$.
+\end{enumerate}
+\end{proposition}
+
+Pour la démonstration, ainsi que pour l'exposé de la ``méthode de la 
+trace,'' nous renvoyons à \cite[IX 5]{sga4}.
+
+
+
+
+
+
+
+
+
+
+\subsection{Dévissages}\label{I:3-4}
+
+Pour calculer la cohomologie des variétés de dimension $>1$ on emploie des 
+fibrations par des courbes, ce qui permet de se ramener à étudier les 
+morphismes dont les fibres sont de dimension $\leqslant 1$. Ce principe 
+possède plusieurs variantes, indiquons-en quelques-unes.
+
+
+
+
+
+\subsubsection{}\label{I:3-4-1}
+
+Soient $A$ une $k$-algèbre de type fini et $a_1,\dotsc,a_n$ des générateurs de 
+$A$. Si l'on pose $X_0=\spec(k)$, $X_i=\spec(k[a_1,\dotsc,a_i])$, 
+$X_n=\spec(A)$, les inclusions canoniques 
+$k[a_1,\dotsc,a_i]\to k[a_1,\dotsc,a_i,a_{i+1}]$ définissent des morphismes 
+$X_n \to X_{n-1} \to \cdots \to X_1 \to X_0$ dont les fibres sont de dimension 
+$\leqslant 1$. 
+
+
+
+
+
+\subsubsection{}\label{I:3-4-2}
+
+Dans le cas d'un morphisme lisse, on peut être plus précis. On appelle 
+\emph{fibration élémentaire} un morphisme de schémas $f:X\to S$ qui peut 
+être plongé dans un diagramme commutatif
+\[\xymatrix{
+  X \ar@{^{(}->}[r]^-j \ar[dr]_-f
+    & \bar X \ar[d]^-{\bar f}
+    & \ar@{_{(}->}[l]_-i \ar[dl]^-g Y \\
+  & S
+}\]
+satisfaisant aux conditions suivantes:
+\begin{enumerate}[\indent i)]
+  \item $j$ est une immersion ouverte dense dans chaque fibre et 
+    $X=\bar X \setminus Y$. 
+  \item $\bar f$ est lisse et projectif, à fibres géométriques 
+    irréductibles et de dimension $1$.
+  \item $g$ est un revêtement étale et aucune fibre de $g$ n'est vide.
+\end{enumerate}
+
+On appelle \emph{bon voisinage} relatif à $S$ un $S$-schéma $X$ tel qu'il 
+existe $S$-schémas $X=X_n,\dotsc,X_0=S$ et des fibrations élémentaires 
+$f_i:X_i\to X_{i-1}$, $i=1,\dotsc,n$. On peut montrer \cite[XI 3.3]{sga4} que si 
+$X$ est un schéma lisse sur un corps algébriquement clos $k$ tout point 
+rationnel de $X$ possède un voisinage ouvert qui est un bon voisinage 
+(relatif à $\spec(K)$). 
+
+
+
+
+
+\subsubsection{}\label{I:3-4-3}
+
+On peut dévisser un morphisme propre $f:X\to S$ de la façon suivante. 
+D'après le lemme de Chow, il existe un diagramme commutatif
+\[\xymatrix{
+  X \ar[dr]_-f 
+    & \ar[l]_-\pi \ar[d]^-{\bar f} \bar X \\
+  & S
+}\]
+où $\pi$ et $\bar f$ sont des morphismes projectifs, $\pi$ étant de plus un 
+isomorphisme au-dessus d'un ouvert dense de $X$. Localement sur $S$, $\bar X$ 
+est un sous-schéma fermé d'un espace projectif type $\dP_S^n$. 
+
+On dévisse ce dernier en considérant la projection 
+$\varphi:\dP_S^n\to\dP_S^1$ qui envoie le point de coordonnées homogènes 
+$(x_0,x_1,\dotsc,x_n)$ sur $(x_0,x_1)$. C'est une application rationnelle 
+définie en dehors du fermé $Y\simeq \dP_S^{n-2}$ de $\dP_S^n$ d'équations 
+homogènes $x_0=x_1=0$. Soit $u:P\to \dP_S^n$ l'éclatement à centre 
+$Y$; les fibres de $u$ soit de dimension $\leqslant 1$. De plus il existe un 
+morphisme naturel $v:P\to \dP_S^1$ qui prolonge l'application rationnelle 
+$\varphi$ et $v$ fait de $P$ un $\dP_S^1$-schéma localement isomorphe à 
+l'espace projectif type $\dP^{n-1}$ que l'on peut à son tour projeter sur un 
+$\dP^1$, etc. 
+
+
+
+
+
+\subsubsection{}\label{I:3-4-4}
+
+On peut balayer une variété projective et lisse $X$ par un \emph{pinceau de 
+Lefschetz}. L'éclaté $\widetilde X$ de l'intersection de l'axe du pinceau 
+avec $X$ se projette sur $\dP^1$ et les fibres de cette projection sont les 
+sections hyperplans de $X$ par les hyperplans du pinceau.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Théorème de changement de base pour un morphisme propre}\label{I:4}
+
+
+
+
+
+
+
+
+
+
+\subsection{Introduction}\label{I:4-1}
+
+Ce chapitre est consacré à la démonstration et aux applications du 
+
+
+
+
+
+\begin{theorem}\label{I:4-1-1}
+Soient $f:X\to S$ un morphisme propre de schémas et $\cF$ un faisceau abélien 
+de torsion sur $X$. Alors, quel que soit $q\geqslant 0$, la fibre de 
+$\R^q f_* \cF$ en un point géométrique $s$ de $S$ est isomorphe à la 
+cohomologie $\h^q(X_s,\cF)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
+$s$. 
+\end{theorem}
+
+Pour $f:X\to S$ une application continue propre et séparé (séparée 
+signifie que la diagonale de $X\times_S X$ est fermée) entre espaces 
+topologiques, et $\cF$ un faisceau abélien sur $X$, le résultat analogue est 
+bien connu, et élémentaire: comme $f$ est fermée, les $f^{-1}(V)$ pour 
+$V$ voisinage de $s$ forment un système fondamental de voisinages de $X_s$, et 
+on vérifie que $\h^*(X_s,\cF) = \varinjlim_U \h^*(U,\cF)$, pour $U$ parcourant les 
+voisinages de $X_s$. En pratique, $X_s$ a même un système fondamental 
+$\sU$ de voisinages $U$ dont il est rétracte par déformation et, pour $\cF$ 
+constant, on a donc $\h^*(X_s,\cF)=\h^*(U,\cF)$. En termes imagés: la fibre 
+spéciale avale la fibre générale. 
+
+Dans le cas des schémas la démonstration est plus délicate et il est 
+indispensable de supposer que $\cF$ est de torsion (\cite[XII.2]{sga4}). Compte 
+tenu de la description des fibres de $\R^q f_* \cF$ (\ref{I:2-3-3}), le théorème 
+(\ref{I:4-1-1}) est essentiellement équivalent au 
+
+ 
+  
+   
+    
+\begin{theorem}\label{I:4-1-2}
+Soient $A$ un anneau local strictement hensélien et $S=\spec(A)$. Soient 
+$f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors, pour 
+tout faisceau abélien de torsion $\cF$ sur $X$ et pour tout $q\geqslant 0$, on 
+a $\h^q(X,\cF) \iso \h^q(X_0,\cF)$. 
+\end{theorem} 
+
+Par passage à la limite on voit qu'il suffit de démontrer le théorème 
+lorsque $A$ est l'hensélisé strict d'une $\dZ$-algèbre  de type fini en 
+un idéal premier. On traite d'abord le cas $q=0$ ou $1$ et $\cF=\dZ/n$ 
+(\ref{I:4-2}). Un argument basé sur la notion de faisceau constructible 
+(\ref{I:4-3}) montre d'ailleurs qu'il suffit de considérer le cas où $\cF$ est 
+constant. D'autre part le dévissage (\ref{I:3-4-3}) permet de supposer que 
+$X_0$ est une courbe; dans ce cas il ne reste plus qu'à démontrer le 
+théorème pour $q=2$ (\ref{I:4-4}). 
+
+Entre autres applications (\ref{I:4-6}), le théorème permet de définir la notion 
+de cohomologie à support propre (\ref{I:4-5}). 
+
+
+
+
+
+
+
+
+
+
+\subsection{Démonstration pour \texorpdfstring{$q=0$}{q=1} ou \texorpdfstring{$1$}{1} et \texorpdfstring{$\cF=\dZ/n$}{\cF=Z/n}}\label{I:4-2} 
+
+Le résultat pour $q=0$ et $\cF$ constant est équivalent à la proposition 
+suivante (théorème de connexion de Zariski):
+
+
+
+
+
+\begin{proposition}\label{I:4-2-1}
+Soient $A$ un anneau local hensélien noethérien et $S=\spec(A)$. 
+Soient $f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors 
+les ensembles de composantes connexes $\pi_0(X)$ et $\pi_0(X_0)$ sont en 
+bijection.
+\end{proposition}
+
+Il revient au même de montrer que les ensembles de parties à la fois 
+ouvertes et fermées $\operatorname{Of}(X)$ et $\operatorname{Of}(X_0)$ sont 
+en bijection. On sait que l'ensemble $\operatorname{Of}(X)$ correspond 
+bijectivement à l'ensemble des idempotents de $\Gamma(X,\cO_X)$, de même 
+$\operatorname{Of}(X_0)$ correspond bijectivement à l'ensemble des 
+idempotents de $\Gamma(X_0,\cO_{X_0})$. Il s'agit donc de montrer que 
+l'application canonique 
+\[
+  \operatorname{Idem} \Gamma(X,\cO_X) \to \operatorname{Idem}\Gamma(X_0,\cO_{X_0})
+\]
+est bijective. 
+
+On notera $\fm$ l'idéal maximal de $A$, $\Gamma(X,\cO_X)^\wedge$ le complété 
+de $\Gamma(X,\cO_X)$ pour la topologie $\fm$-adique et, pour tout entier 
+$n\geqslant 0$, $X_n=X\otimes_A A/\fm^{n+1}$. D'après le théorème de finitude 
+pour les morphismes propres \cite[III.3.2]{ega}, $\Gamma(X,\cO_X)$ est une 
+$A$-algèbre finie; comme $A$ est hensélien, il en résulte que 
+l'application canonique 
+\[
+  \operatorname{Idem} \Gamma(X,\cO_X) \to \operatorname{Idem}\Gamma(X,\cO_X)^\wedge
+\]
+est bijective. En particulier l'application canonique 
+\[
+  \operatorname{Idem} \Gamma(X,\cO_X)^\wedge \to \varprojlim \operatorname{Idem}\Gamma(X_n,\cO_{X_n})
+\]
+est bijective. Mais, puisque $X_n$ et $X_0$ on même espace topologique 
+sous-jacent, l'application canonique 
+\[
+  \operatorname{Idem}\Gamma(X_n,\cO_{X_n}) \to \operatorname{Idem} \Gamma(X_0,\cO_{X_0})
+\]
+est bijective pour tout $n$, ce qui achève la démonstration. 
+
+Puisque $\h^1(X,\dZ/n)$ est en bijection avec l'ensemble des classes 
+d'isomorphisme de revêtements étales galoisiens de $X$ de groupe $\dZ/n$, 
+le théorème  pour $q=1$ et $\cF=\dZ/n$ résulte de la proposition suivante. 
+
+
+
+
+
+\begin{proposition}\label{I:4-2-2}
+Soient $A$ un anneau local hensélien noethérien et $S=\spec(A)$. Soient 
+$f:X\to S$ un morphisme propre et $X_0$ la fibre fermée de $f$. Alors le 
+foncteur de restriction 
+\[
+  \operatorname{Rev.et}(X) \to \operatorname{Rev.et}(X_0)
+\]
+est une équivalence de catégories. 
+\end{proposition}
+
+(Si $X_0$ est connexe et si l'on a choisi un point géométrique de $X_0$ 
+comme point base, cela revient à dire que l'application canonique 
+$\pi_1(X_0)\to \pi_1(X)$ sur les groupes fondamentaux (profinis) est 
+bijective). 
+
+La proposition (\ref{I:4-2-1}) montre que ce foncteur est pleinement fidèle. En 
+effet, si $X'$ et $X''$ sont deux revêtements étales de $X$, un 
+$X$-morphisme de $X'$ dans $X''$ est déterminé par son graphe qui est une 
+partie ouverte et fermée de $X'\times_X X''$. 
+
+Il s'agit donc de montrer que tout revêtement étale $X_0'$ de $X_0$ s'étend 
+en un revêtement étale de $X$. On sait que les revêtements étales ne 
+dépendent pas des éléments nilpotents \cite[ch.1]{sga1}, par conséquent 
+$X_0'$ se relève de manière unique en un revêtement étale $X_n'$ de 
+$X_n$ pour tout $n\geqslant 0$, autrement dit en un revêtement étale 
+$\fX'$ du schéma formel $\fX$ complété de $X$ de long de $X_0$. D'après 
+le théorème d'algébrisation des faisceaux cohérents formels de 
+Grothendieck (théorème d'existence, \cite[III.5]{ega}), $\fX'$ est le 
+complété formel d'un revêtement étale $\bar X'$, de 
+$\bar X=X\otimes_A \hat A$. 
+
+Par passage à la limite, il suffit de démontrer la proposition dans le cas 
+où $A$ est l'hensélisé d'une $\dZ$-algèbre de type fini. On peut alors 
+appliquer le théorème d'approximation d'Artin au foncteur 
+$\cF:(\textnormal{$A$-algèbres}) \to (\textnormal{ensembles})$ qui, à une 
+$A$-algèbre $B$, fait correspondre l'ensemble des classes d'isomorphisme de 
+revêtements étales de $X\otimes_A B$. En effet ce foncteur est localement de 
+présentation finie: si $B_i$ est une système inductif filtrant de 
+$A$-algèbres et si $B=\varinjlim B_i$, on a $\cF(B) = \varinjlim \cF(B_i)$. 
+D'après le théorème d'Artin, étant donné un élément 
+$\xi\in \cF(\hat A)$, en l'occurrence la classe d'isomorphisme de $\bar X'$, il 
+existe $\xi\in \cF(A)$ ayant même image que $\bar\xi$ dans $\cF(A/\fm)$. 
+Autrement dit il existe un revêtement étale $X'$ de $X$ dont la restriction 
+à $X_0$ est isomorphe à $X_0'$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Faisceaux constructibles}\label{I:4-3}
+
+Dans ce paragraphe, on considère un schéma \emph{noethérien} $X$ et on 
+appelle faisceau sur $X$ un faisceau \emph{abélien} sur $\et X$. 
+
+
+
+
+
+\begin{definition}\label{I:4-3-1}
+On dit qu'un faisceau $\cF$ sur $X$ est \emph{localement constant constructible} 
+(en abrégé l.c.c.) s'il est représenté par un revêtement étale de 
+$X$. 
+\end{definition}
+
+
+
+
+
+\begin{definition}\label{I:4-3-2}
+On dit qu'un faisceau $\cF$ sur $X$ est \emph{constructible} s'il vérifie les 
+conditions équivalentes suivantes:
+\begin{enumerate}[\indent (i)]
+  \item Il existe une famille finie surjective de sous-schémas $X_i$ de $X$ 
+     tels que la restriction de $\cF$ à $X_i$ soit l.c.c..
+  \item Il existe une famille finie de morphismes finis $p_i:X_i'\to X$, pour 
+    chaque $i$ un faisceau constant constructible ( = défini par un groupe 
+    abélien fini) $C_i$ sur $X_i'$, et un monomorphisme 
+    $\cF\to \prod p_{i*} C_i$. 
+\end{enumerate}
+\end{definition}
+
+On vérifie facilement que la catégorie des faisceaux constructibles sur $X$ 
+est une catégorie abélienne. De plus, si $u:\cF\to \cG$ est un homomorphisme de 
+faisceaux et si $\cF$ est constructible, le faisceau $\im(u)$ est constructible.
+
+
+
+
+
+\begin{lemma}\label{I:4-3-3}
+Tout faisceau de torsion $\cF$ est limite inductive filtrante de faisceaux 
+constructibles.
+\end{lemma}
+
+En effet, si $j:U\to X$ est un schéma étale de type fini sur $X$, un 
+élément $\xi\in \cF(U)$ tel que $n\xi=0$ définit un homomorphisme de 
+faisceaux $j_! \const{\dZ/n}\to \cF$ dont l'image (le lus petit sous-faisceau de 
+$\cF$ dont $\xi$ soit section locale) est un sous-faisceau constructible de $\cF$. 
+Il est clair que $\cF$ est limite inductive de tels sous-faisceaux.
+
+
+
+
+
+\begin{definition}\label{I:4-3-4}
+Soient $\sC$ une catégorie abélienne et $T$ un foncteur défini sur $\sC$ 
+à valeurs dans la catégorie des groupes abéliens. On dira que $T$ est 
+\emph{effaçable} dans $\sC$ si, pour tout objet $A$ de $\sC$ et tout 
+$\alpha\in T(A)$, il existe un monomorphisme $u:A\to M$ dans $\sC$ tel que 
+$T(u)\alpha = 0$. 
+\end{definition}
+
+
+
+
+
+\begin{lemma}\label{I:4-3-5}
+Les foncteurs $\h^q(X,-)$ pour $q>0$ sont effaçables dans la catégorie des 
+faisceaux constructibles sur $X$.
+\end{lemma}
+
+Il suffit de remarquer que, si $\cF$ est un faisceau constructible, il existe 
+nécessairement un entier $n>0$ tel que $\cF$ soit un faisceau de 
+$\dZ/n$-modules. Alors il existe un monomorphisme $\cF\hookrightarrow \cG$, où 
+$\cG$ est un faisceau de $\dZ/n$-modules et $\h^q(X,\cG) = 0$ pour tout $q>0$.  
+On peut par exemple prendre pour $\cG$ la résolution de Godement 
+$\prod_{x\in X} i_{x*} \cF_{\bar x}$, où $x$ parcourt les points de $X$ et 
+$i_x:\bar x\to X$ est un point géométrique centré en $X$. D'après 
+(\ref{I:4-3-3}) $\cG$ est limite inductive de faisceaux constructibles, d'o`u le 
+lemme, car les foncteurs $\h^q(X,-)$ commutent aux limites inductives. 
+
+
+
+
+
+\begin{lemma}\label{I:4-3-6}
+Soit $\varphi^\bullet:T^\bullet\to {T'}^\bullet$ un morphisme de foncteurs 
+cohomologiques définis sur une catégorie abélienne $\sC$ et à valeurs 
+dans la catégorie des groupes abéliens. Supposons que $T^q$ est effaçable 
+pour $q>0$ et soit $\sE$ un sous-ensemble d'objets de $\sC$ tel que tout objet 
+de $\sC$ soit contenu dans un objet appartenant à $\sE$. Alors les 
+conditions suivantes sont équivalentes:
+\begin{enumerate}[\indent (i)]
+  \item $\varphi^q(A)$ est bijectif pour tout $q\geqslant 0$ et tout 
+    $A\in\ob \sC$.
+  \item $\varphi^0(M)$ est bijectif et $\varphi^q(M)$ surjectif pour tout 
+    $q>0$ et tout $M\in\sE$. 
+  \item $\varphi^0(A)$ est bijectif pour tout $A\in\ob \sC$ et ${T'}^q$ est 
+    effaçable pour tout $q>0$. 
+\end{enumerate}
+\end{lemma}
+
+La démonstration se fait par récurrence sur $q$ et ne présente pas de 
+difficultés. 
+
+
+
+
+
+\begin{proposition}\label{I:4-3-7}
+Soit $X_0$ un sous-schéma de $X$. Supposons que, pour tout $n\geqslant 0$ et 
+pour tout schéma $X'$ fini sur $X$, l'application canonique 
+\[
+  \h^q(X',\dZ/n) \to \h^q(X_0',\dZ/n)\text{,}
+\]
+où $X_0' = X'\times_X X_0$, est bijective pour $q=0$ et surjective pour 
+$q>0$. Alors, pour tout faisceau de torsion $\cF$ sur $X$ et pour tout 
+$q\geqslant 0$, l'application canonique 
+\[
+  \h^q(X,\cF) \to \h^q(X_0,\cF)
+\]
+est bijective.
+\end{proposition}
+
+Par passage à la limite, il suffit de démontrer l'assertion pour $\cF$ 
+constructible. On applique le lemme (\ref{I:4-3-6}) en prenant pour $\sC$ la 
+catégorie des faisceaux constructibles sur $X$, $T^q=\h^q(X,-)$, 
+${T'}^q=\h^q(X_0,-)$, et $\sE$ l'ensemble des faisceaux constructibles de la 
+forme $\prod p_{i*} C_i$, où $p_i:X_i'\to X$ est un morphisme fini et $C_i$ 
+un faisceau constant fini sur $X_i'$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Fin de la démonstration}\label{I:4-4}
+
+Par la méthode de fibration par des courbes (\ref{I:3-4-3}), on se ramène 
+à démontrer le théorème en dimension relative $\leqslant 1$. D'après 
+le paragraphe précédent, il suffira de montrer que, si $S$ est le spectre 
+d'un anneau local noethérien strictement hensélien, $f:X\to S$ un 
+morphisme propre dont la fibre fermée $X_0$ est de dimension $\leqslant 1$ 
+et $n$ un entier $\geqslant 0$, l'homomorphisme canonique 
+\[
+  \h^q(X,\dZ/n) \to \h^q(X_0,\dZ/n)
+\]
+est bijectif pour $q=0$ et surjectif pour $q>0$. 
+
+Les cas $q=0$ et $1$ ont été vus plus haut et on a $\h^q(X_0,\dZ/n) = 0$ 
+pour $q\geqslant 3$; il suffit donc de traiter le cas $q=2$. On peut 
+évidemment supposer que $n$ est une puissance d'un nombre premier. Si 
+$n=p^r$, où $p$ est la caractéristique du corps résiduel de $S$, la 
+théorie d'Artin-Schreier montre qu'un a $\h^2(X_0,\dZ/p^r) = 0$. Si 
+$n=\ell^r$, $\ell\ne p$, on déduit de la théorie de Kummer un diagramme 
+commutatif 
+\[\xymatrix{
+  \pic(X) \ar[d] \ar[r]^-\alpha 
+    & \h^2(X,\dZ/\ell^r) \ar[d] \\
+  \pic(X_0) \ar[r]^-\beta 
+    & \h^2(X_0,\dZ/\ell^r)
+}\]
+où l'application $\beta$ est surjective (On l'a vu au chapitre \ref{I:3} pour 
+une courbe lisse sur un corps algébriquement clos, mais des arguments 
+similaires s'appliquent à n'importe quelle courbe sur un corps 
+séparablement clos). 
+
+Pour conclure, il suffira donc de montrer:
+
+
+
+
+
+\begin{proposition}\label{I:4-4-1}
+Soient $S$ le spectre d'un anneau local noethérien hensélien et $f:X\to S$ 
+un morphisme propre dont la fibre fermée $X_0$ est de dimension 
+$\leqslant 1$. Alors l'application canonique de restriction 
+\[
+  \pic(X)\to \pic(X_0)
+\]
+est surjective (Il suffit d'ailleurs que le morphisme $f$ soit 
+\emph{séparé} de type fini). 
+\end{proposition}
+
+Pour simplifier la démonstration, nous supposerons que $X$ est intègre, 
+bien que cela ne soit pas nécessaire. Tout faisceau inversible sur $X_0$ est 
+associé à un diviseur de Cartier (car $X_0$ est une courbe, donc 
+quasi-projectif), il suffit donc de montrer que l'application canonique 
+$\Div(X)\to\Div(X_0)$ est surjective. 
+
+Tout diviseur sur $X_0$ est combinaison linéaire de diviseurs dont le 
+support est concentré en un seul point fermé non isolé de $X_0$. Soient 
+$x$ un tel point, $t_0\in\cO_{X_0,x}$ un élément régulier non inversible 
+de $\cO_{X_0,x}$ et $D_0$ le diviseur concentré en $x$ d'équation locale 
+$t_0$. Soit $U$ un voisinage ouvert de $x$ dans $X$ tel qu'il existe un section 
+$t\in \Gamma(U,\cO_U)$ relevant $t_0$. Soit $Y$ le fermé de $U$ d'équation 
+$t=0$; quitte à prendre $U$ assez petit, on peut supposer que $x$ est le 
+seul point de $Y\cap X_0$. Alors $Y$ est quasi-fini au-dessus de $S$ en $x$; 
+puisque $S$ est le spectre d'un anneau local hensélien, on en déduit que 
+$Y=Y_1\amalg Y_2$, où $Y_1$ est fini sur $S$ et où $Y_2$ ne rencontre pas 
+$X_0$. De plus, comme $X$ est séparé sur $S$, $Y_1$ est fermé dans $X$. 
+
+Quitte à remplacer $U$ par un voisinage ouvert plus petit de $x$, on peut 
+supposer que $Y=Y_1$, autrement dit que $Y$ est fermé dans $X$. On définit 
+alors un diviseur $D$ sur $X$ relevant $D_0$ en posant $D|X\setminus Y=0$ et 
+$D|U=\dv(t)$ ce qui a un sens car $t$ est inversible sur $U\setminus Y$. 
+
+
+
+
+
+\subsubsection{Remarque}\label{I:4-4-2}
+
+Dans le cas où $f$ est propre, on pourrait aussi faire une démonstration 
+du même style que celle de la proposition (\ref{I:4-2-2}). En effet, comme 
+$X_0$ est une courbe, il n'y a pas d'obstruction à relever un faisceau 
+inversible sur $X_0$ aux voisinages infinitésimaux $X_n$ de $X_0$, donc au 
+complété formel $\fX$ de $X$ le long de $X_0$. On conclut alors en 
+appliquant successivement le théorème d'existence de Grothendieck et le 
+théorème d;approximation d'Artin. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Cohomologie à support propre}\label{I:4-5}
+
+
+
+
+
+\begin{definition}\label{I:4-5-1}
+Soit $X$ un schéma séparé de type fini sur un corps $k$. D'après un 
+théorème de Nagata, il existe un schéma $\bar X$ propre sur $k$ et une 
+immersion ouverte $j:X\to\bar X$. Pour tout faisceau de torsion $\cF$ sur $X$ on 
+note $j_! \cF$ le prolongement par $0$ de $\cF$ à $\bar X$ et on définit les 
+groupes de \emph{cohomologie à support propre} 
+\[
+  \h_c^q(X,\cF)=\h^q(\bar X, j_! \cF) \text{.}
+\]
+\end{definition}
+
+Montrons que cette définition est indépendante de la compactification 
+$j:X\to\bar X$ choisie. Soient $j_1:X\to \bar X_1$ et $j_2:X\to \bar X_2$ deux 
+compactifications. Alors $X$ s'envoie dans $\bar X_1\times \bar X_2$ par 
+$x\mapsto (j_1(x),j_2(x))$ et l'image fermée $\bar X_3$ de $X$ par cette 
+application est une compactification de $X$. On a ainsi un diagramme commutatif 
+\[\xymatrix{
+  & \bar X_1 \\
+  X \ar[ur]^-{j_1} \ar[rr]^-{(j_1,j_2)} \ar[dr]_-{j_2} 
+    & & \bar X_3 \ar[ul]_-{p_1} \ar[dl]^-{p_2} \\
+  & \bar X_2
+}\]
+où $p_1$ et $p_2$, les restrictions des projections naturelles à 
+$\bar X_3$, sont des morphismes propres. Il suffit donc de traiter le cas où 
+on a un diagramme commutatif 
+\[\xymatrix{
+  X \ar[r]^-{j_2} \ar[dr]_-{j_1} 
+    & \bar X_2 \ar[d]^-p \\
+  & \bar X_1
+}\]
+avec $p$ un morphisme propre. 
+
+
+
+
+
+\begin{lemma}\label{I:4-5-2}
+On a $p_*(j_{2!} \cF) = j_{1!} \cF$ et $\R^q p_*(j_{2!} \cF) = 0$, pour $q>0$. 
+\end{lemma}
+
+Notons tout de suite que lemme suffit pour conclure. En utilisant la suite 
+spectrale de Leray du morphisme $p$, on en déduit qu'on a, pour tout 
+$q\geqslant 0$, 
+\[
+  \h^q(\bar X_2, j_{2!} \cF) = \h^q(\bar X_1, j_{1!} \cF) \text{.}
+\]
+
+Pour démontrer le lemme, on raisonne fibre par fibre en utilisant le théorème 
+de changement de base (\ref{I:4-1-1}) pour $p$. Le résultat est immédiat, car, 
+au-dessus d'un point de $X$, $p$ est un isomorphe et, au-dessus d'un point de 
+$\bar X_1\setminus X$, $j_{2!} \cF$ est nul sur la fibre de $p$. 
+
+
+
+
+
+\subsubsection{}\label{I:4-5-3}
+
+De même, si $f:X\to S$ est un morphisme séparé de type fini de schémas 
+noethériens, il existe un morphisme propre $\bar f:\bar X\to S$ et un 
+immersion ouverte $j:X\to \bar X$. On définit alors les images directes s
+supérieures à support propre $\R^q f_!$ en posant pour tout faisceau de 
+torsion $\cF$ sur $X$
+\[
+  \R^q f_! \cF = \R^q f_*(j_! \cF) \text{.}
+\]
+On vérifie comme précédemment que cette définition est indépendante de 
+la compactification choisie. 
+
+
+
+
+
+\begin{theorem}\label{I:4-5-4}
+Soient $f:X\to S$ un morphisme séparé de type fini de schémas noethériens 
+et $\cF$ un faisceau de torsion sur $X$. Alors la fibre de $\R^q f_! \cF$ en un 
+point géométrique $s$ de $S$ est isomorphe à la cohomologie à support 
+propre $\h_c^q(X_s,\cF)$ de la fibre $X_s$ de $f$ en $s$. 
+\end{theorem}
+
+C'est une simple variante du théorème de changement de base pour un morphisme 
+propre (\ref{I:4-1-1}). Plus généralement, si 
+\[\xymatrix{
+  X \ar[d]^-f
+    & X' \ar[l]_-{g'} \ar[d]^-{f'} \\
+  S 
+    & S' \ar[l]^-g
+}\]
+est un diagramme cartésien, on a un isomorphe canonique 
+\begin{equation}\label{I:eq:4-5-4-1}
+  g^* (\R^q f_! \cF) \simeq \R^q f_!'({g'}^* \cF) \text{.}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+\subsection{Applications}\label{I:4-6}
+
+
+
+
+
+\begin{theorem}[d'annulation]\label{I:4-6-1}
+Soient $f:X\to S$ un morphisme séparé de type fini dont les fibres sont de 
+dimension $\leqslant n$ et $\cF$ un faisceau de torsion sur $X$. Alors on a 
+$\R^q f_! \cF = 0$ pour $q>2 n$. 
+\end{theorem}
+
+D'après le théorème de changement de base, on peut supposer que $S$ est 
+le spectre d'un corps séparablement clos. Si $\dim X = n$, il existe un 
+ouvert affine $U$ de $X$ tel que $\dim(X\setminus U) < n$; on a alors un suite 
+exacte $0\to \cF_U \to \cF \to \cF_{X\setminus U} \to 0$ et, par récurrence sur $n$, 
+il suffit de démontrer le théorème pour $X=U$ affine. Puis la méthode de 
+fibration par des courbes (\ref{I:3-4-1}) et le théorème de changement de 
+base permettent de se ramener à une courbe sur un corps séparablement clos 
+pour laquelle on déduit le résultat voulu du théorème de Tsen 
+(\ref{I:3-3-6}). 
+
+
+
+
+
+\begin{theorem}[de finitude]\label{I:4-6-2}
+Soient $f:X\to S$ un morphisme séparé de type fini et $\cF$ un faisceau 
+constructible sur $X$. Alors les faisceaux $\R^q f_! \cF$ sont constructibles. 
+\end{theorem}
+
+Nous ne considérons que le cas où $\cF$ est annulé par un entier inversible 
+sur $X$. 
+
+Par démontrer le théorème on se ramène au cas o`u $\cF$ est un faisceau 
+constant $\const{\dZ/n}$ et où $f:X\to S$ est un morphisme propre et lisse 
+dont les fibres sont des courbes géométriquement connexes de genre $g$. 
+Pour $n$ inversible sur $X$, les faisceaux $\R^q f_* \cF$ sont alors localement 
+libres de rang fini, nuls pour $q>2$ (\ref{I:4-6-1}). Remplaçant $\dZ/n$ par le 
+faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement 
+\begin{equation}\label{I:eq:4-6-2-1}
+\begin{aligned}
+  \R^0 f_* \dmu_n &= \dmu_n \\
+  \R^1 f_* \dmu_n &= \const\pic(X/S)_n \\
+  \R^2 f_* \dmu_n &= \dZ/n \text{.}
+\end{aligned}
+\end{equation}
+
+
+
+
+
+\begin{theorem}[comparaison avec la cohomologie classique]\label{I:4-6-3}
+Soient $f:X\to S$ un morphisme séparé de schémas de type fini sur $\dC$, 
+et $\cF$ un faisceau de torsion sur $X$. Notons par un exposant $\an{(-)}$ le 
+foncteur de passage aux espaces topologiques usuels, et par $\R^q \an f_!$ les 
+foncteurs dérivés du foncteur image directe à support propre par $\an f$. On a 
+\[
+  \an{(\R^q f_! \cF)} \simeq \R^q \an f_! \an \cF \text{.}
+\]
+En particulier, pour $S=$ un point et $\cF$ le faisceau constant $\dZ/n$, 
+\[
+  \h_c^q(X,\dZ/n) \simeq \h_c^q(\an X,\dZ/n)\text{.}
+\]
+\end{theorem}
+
+Des dévissages utilisant le théorème de changement de bas nous ramènent au 
+cas où $X$ est une courbe propre et lisse, où $S=$ un point, et où 
+$\cF=\dZ/n$. Les groupes de cohomologie considérés sont alors nuls pour 
+$q\ne 0,1,2$, et on invoque \cite{se55}: en effet, si $X$ est propre sur $\dC$, 
+on a $\pi_0(X) = \pi_0(\an X)$ et $\pi_1(X) = $ complété profini de 
+$\pi_1(\an X)$, d'où l'assertion pour $q=0,1$. Pour $q=2$, on utilise la 
+suite exacte de Kummer et le fait que, par \cite{se55} encore, 
+$\pic(X)=\pic(\an X)$. 
+
+
+
+
+
+\begin{theorem}[dimension cohomologique des schémas affines]\label{I:4-6-4}
+Soient $X$ un schéma affine de type fini sur un corps séparablement clos et 
+$\cF$ un faisceau de torsion sur $X$. Alors on a $\h^1(X,\cF) = 0$ pour 
+$q>\dim(X)$. 
+\end{theorem}
+
+Pour la très jolie démonstration nous revoyons à \cite{sga4}, XIV \S 2 et 3. 
+
+
+
+
+
+\subsubsection{Remarque}\label{I:4-6-5}
+
+Ce théorème est en quelque sorte un substitut pour la théorie de Morse. 
+Considérons en effet le cas classique où $X$ est lisse et affine sur $\dC$ 
+plongé dans un espace affine type $\dC^N$. Alors, pour presque tout point 
+$p\in\dC^N$, la fonction ``distance à $p$'' sur $X$ est une fonction de Morse 
+et les indices de ses points critiques sont plus petits que $\dim(X)$. Ainsi 
+$X$ est obtenu par recollement d'anses d'indice plus petit que $\dim(X)$, d'où 
+l'analogue classique de (\ref{I:4-6-4}). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Acyclicité locale des morphismes lisses}\label{I:5}
+
+Soient $X$ une variété analytique complexe et $f:X\to D$ un morphisme de 
+$X$ dans le disque. On note $[0,t]$ le segment de droit fermé d'extrémités 
+$0$ et $t$ dans $D$ et $(0,t]$ le segment semi-ouvert. Si $f$ est \emph{lisse}, 
+l'inclusion 
+\[
+  j : f^{-1}\left((0,t]\right) \hookrightarrow f^{-1}\left([0,t]\right)
+\]
+est une équivalence d'homotopie; en peut pousser la fibre spécial 
+$X_0=f^{-1}(0)$ dans $f^{-1}([0,t])$. 
+
+En pratique, pour $t$ assez petit, $f^{-1}((0,t])$ sera un fibré sur 
+$(0,t]$ de sorte que l'inclusion 
+\[
+  X_t = f^{-1}(t) \hookrightarrow f^{-1}\left((0,t]\right)
+\]
+sera également une équivalence d'homotopie. On appelle alors \emph{morphisme 
+de cospécialisation} la classe d'homotopie d'applications: 
+\[
+  \cosp : X_0 \hookrightarrow f^{-1}\left([0,t]\right) \xleftarrow\sim f^{-1}\left((0,t]\right) \xleftarrow\sim X_t \text{.}
+\]
+On peut exprimer cette construction en termes imagés en disant que, pour un 
+morphisme lisse, la fibre générale avale la fibre spéciale. 
+
+Ne supposons plus $f$ nécessairement lisse (mais supposons que $f^{-1}((0,t])$ 
+soit un fibré sur $(0,t]$). On peut encore définir un morphisme 
+$\cosp^\bullet$ en cohomologie dès que $j_* \dZ=\dZ$ et 
+$\R^q j_* \dZ = 0$ pour $q>0$. Sous ces hypothèses, la suite spectrale de 
+Leray pour $j$ montre qu'on a 
+\[
+  \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right) \iso \h^\bullet\left(f^{-1}\left((0,t]\right),\dZ\right)
+\]
+et $\cosp^\bullet$ est le morphisme composé: 
+\[
+  \cosp^\bullet : \h^\bullet(X_t,\dZ)
+    \xleftarrow\sim \h^\bullet\left(f^{-1}\left((0,t]\right),\dZ\right) 
+    \xleftarrow\sim \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right) 
+    \to \h^\bullet(X_0,\dZ)
+\]
+La fibre de $\R^q j_* \dZ$ en un point $x\in X_0$ se calcule comme suit. On 
+prend dans un espace ambiant une boule $B_\varepsilon$de centre $x$ et de rayon 
+$\varepsilon$ assez petit, et pour $\eta$ assez petit, on pose 
+$E=X\cap B_\varepsilon \cap f^{-1}(\eta t)$; c'est la \emph{variété des 
+cycles évanescents} en $x$. On a 
+\[
+  (\R^q j_* \dZ)_x \xleftarrow\sim \h^q\left(X\cap B_\varepsilon\cap f^{-1}\left((0,\eta t]\right),\dZ\right) \xrightarrow\sim \h^q(E,\dZ)
+\]
+et le morphisme de cospécialisation est défini en cohomologie dés que les 
+variétés de cycles évanescents sont acycliques ($\h^0(E,\dZ)=\dZ$ et 
+$\h^q(E,\dZ) = 0$ pour $q>0$), ce qui s'exprime en disant que $f$ est 
+\emph{localement acyclique}. 
+
+Ce chapitre est consacré à l'analogue de cette situation pour un morphisme 
+lisse de schémas pour la cohomologie étale. Cependant il est indispensable 
+dans ce cadre de se limiter aux coefficients de torsion et d'ordre \emph{premier aux caractéristiques résiduelles}. La paragraphe \ref{I:5-1} est consacré 
+à des généralités sur les morphismes localement acycliques et les 
+flèches de cospécialisation. Dans le paragraphe \ref{I:5-2}, on démontre 
+qu'un morphisme lisse est localement acyclique. Dans le paragraphe \ref{I:5-3}, on 
+joint ce résultat à ceux du chapitre précédent pour en déduire deux 
+applications: un théorème de spécialisation des groupes de cohomologie (la 
+cohomologie des fibres géométriques d'un morphisme propre et lisse est 
+localement constant) et un théorème de changement de base par un morphisme 
+lisse. 
+
+Dans tout ce qui suit, on fixe un entier $n$ et ``schéma'' signifie ``schéma 
+sur lequel $n$ est inversible.'' ``Point géométrique'' signifiera toujours 
+``point géométrique algébrique'' (\ref{I:2-3-1}) $x:\spec(k)\to X$, avec $k$ 
+algébriquement clos. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Morphismes localement acycliques}\label{I:5-1}
+
+
+
+
+
+\subsubsection{Notation}\label{I:5-1-1}
+
+Étant donnés un schéma $S$ et un point géométrique $s$ de $S$, on 
+notera $\widetilde S^s$ le spectre du localisé stricte de $S$ en $s$. 
+
+
+
+
+
+\begin{definition}\label{I:5-1-2}
+On dit qu'un point géométrique $t$ de $S$ est une \emph{générisation} de 
+$s$ s'il est défini par une clôture algébrique du corps résiduel d'un 
+point de $\widetilde S^s$. On dit aussi que $s$ est une \emph{spécialisation} 
+de $t$ et on appelle \emph{flèche de spécialisation} le $S$-morphisme 
+$t\to \widetilde S^s$. 
+\end{definition}
+
+
+
+
+
+\begin{definition}\label{I:5-1-3}
+Soit $f:X\to S$ un morphisme de schémas. Soient $s$ un point géométrique de 
+$S$, $t$ une générisation de $s$, $x$ un point géométrique de $X$ 
+su-dessus de $s$ et 
+$\widetilde X_t^x = \widetilde X^x\times_{\widetilde S^s} t$. Alors on dit que 
+$\widetilde X_t^x$ est une \emph{variété de cycles évanescents} de $f$ au 
+point $x$. 
+
+On dit que $f$ est \emph{localement acyclique} si, la cohomologie réduite de 
+toute variété de cycles évanescents $\widetilde X_t^x$ est nulle:
+\begin{equation}\label{I:eq:5-1-3-1}
+  \hat\h^\bullet(\widetilde X_t^x,\dZ/n) = 0\text{,}
+\end{equation}
+i.e. $\h^0\left(X_t^x,\dZ/n\right) = \dZ/n$ et 
+$\h^q(\widetilde X_t^x,\dZ/n) = 0$ pour $q>0$. 
+\end{definition}
+
+
+
+
+
+\begin{lemma}\label{I:5-1-4}
+Soient $f:X\to S$ un morphisme localement acyclique et $g:S'\to S$ un morphisme 
+quasi-fini (ou limite projective de morphismes quasi-finis). Alors le 
+morphisme $f':X'\to S'$ déduit de $f$ par changement de base est localement 
+acyclique.
+\end{lemma}
+
+On vérifie en effet que tout variété de cycles évanescents de $f'$ est 
+une variété de cycles évanescents de $f$.  	
+
+
+
+
+
+\begin{lemma}\label{I:5-1-5}
+Soit $f:X\to S$ un morphisme localement acyclique. Pour tout point géométrique 
+$t$ de $S$, donnant lieu à un diagramme cartésien 
+\[\xymatrix{
+  X_t \ar[r]^-{\varepsilon'} \ar[d] 
+    & X \ar[d]^-f \\
+  t \ar[r]^-\varepsilon 
+    & S
+}\]
+On a $\varepsilon_*' \dZ/n = f^*\varepsilon_* \dZ/n$ et $\R^q \varepsilon_*'\dZ/n=0$ 
+pour $q>0$. 
+\end{lemma}
+
+Soient $\bar S$ l'adhérence de $\varepsilon(t)$, $S'$ le normalisé de $\bar S$ 
+dans $k(t)$, et le diagramme cartésien 
+\[\xymatrix{
+  X_t \ar[r]^-{f'} \ar[d] 
+    & X' \ar[r]^-{\alpha'} \ar[d]^-{f'} 
+    & X \ar[d]^-f \\
+  t \ar[r]^-i 
+    & S' \ar[r]^-\alpha 
+    & S
+}\]
+Les anneaux locaux de $S'$ sont normaux à corps de fractions séparablement 
+clos. Ils sont donc strictement henséliens, et l'acyclicité locale de $f'$ 
+(\ref{I:5-1-4}) fournit $f_*'\dZ/n = \dZ/n$, $\R^qi_*'\dZ/n = 0$ pour $q>0$. 
+Puisque $\alpha$ est entier, on a alors 
+\[
+  \R^q\varepsilon_*'\dZ/n 
+    = \alpha_*' \R^q i_*' \dZ/n 
+    = \alpha_*' {f'}^* \R^q i_* \dZ/n 
+    = f^* \alpha_* \R^q i_* \dZ/n 
+    = f^* \R^q \varepsilon_* \dZ/n \text{,}
+\]
+et le lemme. 
+
+
+
+
+
+\subsubsection{}\label{I:5-1-6}
+
+Etant donnés un morphisme localement acyclique $f:X\to S$ et une flèche de 
+spécialisation $t\to \widetilde S^s$, nous allons définir des 
+homomorphismes canoniques, dits flèches de cospécialisation 
+\[
+  \cosp^\bullet : \h^\bullet(X_t,\dZ/n) \to \h^\bullet(X_s,\dZ/n)\text{,}
+\]
+reliant la cohomologie de la fibre générale $X_t=X\times_S t$ et celle de la 
+fibre spéciale $X_s=X\times_X s$. 
+
+Considérons le diagramme cartésien 
+\[\xymatrix{
+  X_t \ar[d] \ar[r]^-{\varepsilon'} 
+    & \widetilde X \ar[d]^-{f'} 
+    & \ar[l] X_s \ar[d] \\
+  t \ar[r]^-\varepsilon 
+    & \widetilde S^s 
+    & \ar[l] s
+}\]
+déduit de $f$ par changement de base. D'après (\ref{I:5-1-4}), $f'$ est encore 
+localement acyclique. De la définition de l'acyclicité locale, on tire 
+aussitôt que la restriction à $X_s$ des faisceaux $\R^q \varepsilon_*' \dZ/n$ 
+est $\dZ/n$ pour $q=0$, et $0$ pour $q>0$. Par (\ref{I:5-1-5}) on sait même que 
+$\R^q \varepsilon_*'\dZ/n = 0$ pour $q>0$. On définit $\cosp^\bullet$ comme la 
+flèche composée 
+\begin{equation}\label{I:eq:5-1-6-1}
+  \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X,\varepsilon_*' \dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
+\end{equation}
+
+\paragraph{Variante}
+Soient $\bar S$ l'adhérence de $\varepsilon(t)$ dans $\widetilde S^s$, $S'$ le 
+normalisé de $\bar S$ dans $k(t)$ et $X'/S'$ déduit de $X/S$ par changement 
+de base. Le diagramme \eqref{I:eq:5-1-6-1} peut encore s'écrire 
+\[
+  \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X',\dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
+\]
+
+
+
+
+
+\begin{theorem}\label{I:5-1-7}
+Soient $S$ un schéma localement noethérien, $s$ un point géométrique de 
+$S$ et $f:X\to S$ un morphisme. On suppose 
+\begin{enumerate}[\indent a)]
+  \item le morphisme $f$ est localement acyclique, 
+  \item pour tout morphisme de spécialisation $t\to \widetilde S^s$ et pour 
+    tout $q\geqslant 0$, les flèches de cospécialisation 
+    $\h^q(X_t,\dZ/n) \to \h^q(X_s,\dZ/n)$ sont bijectives.
+\end{enumerate}
+
+Alors l'homomorphisme canonique $(\R^q f_*\dZ/n)_s\to \h^q(X_s,\dZ/n)$ est 
+bijectif pour tout $q\geqslant 0$. 
+\end{theorem}
+
+Pour démontrer le théorème, il est clair qu'on peut supposer 
+$S=\widetilde S^s$. On va et fait montrer que, pour tout faisceau de 
+$\dZ/n\dZ$-modules $\cF$ sur $S$, l'homomorphisme canonique 
+$\varphi^q(\cF):(\R^q f_* f^* \cF)_s \to \h^q(X_s,f^*\cF)$ est bijectif. 
+
+Tout faisceau de $\dZ/n\dZ$ est limite inductive filtrante de faisceaux 
+constructibles de $\dZ/n\dZ$-modules (\ref{I:4-3-3}). De plus tout faisceau 
+constructible de $\dZ/n\dZ$-modules se plonge dans un faisceau de la forme 
+$\prod i_{\lambda *} C_\lambda$, où $i_\lambda:t_\lambda\to S$ est une 
+famille finie de générisations de $s$ et $C_\lambda$ un $\dZ/n\dZ$-module 
+libre de rang fini sur $t_\lambda$. D''après la définition des flèches de 
+cospécialisation, la condition b) signifie que les homomorphismes 
+$\varphi^q(\cF)$ sont bijectifs si $\cF$ est de cette forme. 
+
+On conclut à l'aide d'une variant du lemme (\ref{I:4-3-6}):
+
+
+
+
+
+\begin{lemma}\label{I:5-1-8}
+Soit $\sC$ un catégorie abélienne dans laquelle les limites inductives 
+filtrantes existent. Soit $\varphi^\bullet:T^\bullet\to{T'}^\bullet$ un 
+morphisme de foncteurs cohomologiques commutant aux limites inductives 
+filtrantes, définis sur $\sC$ et à valeurs dans la catégorie des groupes 
+abéliens. Supposons qu'il existe deux sous-ensembles $\sD$ et $\sE$ d'objets 
+de $\sC$ tels que:
+\begin{enumerate}[\indent a)]
+  \item tout objet de $\sC$ est limite inductive filtrante d'objets appartenant 
+    à $\sD$, 
+  \item tout objet appartenant à $\sD$ est contenu dans un objet appartenant 
+    à $\sE$.
+\end{enumerate}
+
+Alors les conditions suivantes sont équivalentes: 
+\begin{enumerate}[\indent (i)]
+  \item $\varphi^q(A)$ est bijectif pour tout $q\geqslant 0$ et tout 
+    $A\in\ob\sC$.
+  \item $\varphi^q(M)$ est bijectif pour tout $q\geqslant 0$ et tout $M\in\sE$. 
+\end{enumerate}
+\end{lemma}
+
+La démonstration du lemme se fait par passage à la limite inductive, 
+récurrence sur $q$ et application répétée du lemme des cinq au diagramme 
+de suites exactes de cohomologie déduit d'une suite exacte 
+$0\to A\to M\to A'\to 0$, avec $A\in\sD$, $M\in\sE$, $A'\in \ob\sC$. 
+
+
+
+
+
+\begin{corollary}\label{I:5-1-9}
+Soient $S$ le spectre d'un anneau local noethérien strictement hensélien et 
+$f:X\to S$ un morphisme localement acyclique. Supposons que, pour tout point 
+géométrique $t$ de $S$ on dit $\h^0(X_t,\dZ/n) = \dZ/n$ et 
+$\h^q(X_t,\dZ/n) = 0$ pour $q>0$ (autrement dit les fibres géométriques de 
+$f$ sont acycliques). Alors on a $f_* \dZ/n\dZ/n$ et $\R^qf_*\dZ/n = 0$ pour 
+$q>0$. 
+\end{corollary}
+
+
+
+
+
+\begin{corollary}\label{I:5-1-10}
+Soient $f:X\to Y$ et $g:Y\to X$ des morphismes de schémas localement 
+noethériens. Alors, si $f$ et $g$ sont localement acycliques, il en est de 
+même de $g\circ f$. 
+\end{corollary}
+
+On peut supposer que $X$, $Y$ et $Z$ sont strictement locaux et que $f$ et $g$ 
+sont des morphismes locaux. Il s'agit alors de montrer que, si $z$ est un point 
+géométrique algébrique de $Z$, on a $\h^0(X_z,\dZ/n) = \dZ/n$ et 
+$\h^q(X_z,\dZ/n) = 0$ pour $q>0$. 
+
+Puisque $g$ est localement acyclique, on a $\h^0(Y_z,\dZ/n) = \dZ/n$, et 
+$\h^q(Y_z,\dZ/n) = 0$ pour $q>0$. Par ailleurs le morphisme $f_z:X_z\to Y_z$ est 
+localement acyclique (\ref{I:5-1-4}) et ses fibres géométriques sont 
+acycliques, car ce sont des variétés de cycles évanescents de $f$. 
+D'après (\ref{I:5-1-9}), on a donc $\R^q {f_z}_*\dZ/n = 0$ pour $q>0$. De plus 
+${f_z}_*\dZ/n$ est constant de fibre $\dZ/n$ sur $Y_z$. On conclut à l'aide de 
+la suite spectrale de Leray de $f_z$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Acyclicité locale d'un morphisme lisse}\label{I:5-2}
+
+
+
+
+
+\begin{theorem}\label{I:5-2-1}
+Un morphisme lisse est localement acyclique.
+\end{theorem}
+
+Soit $f:X\to S$ un morphisme lisse. L'assertion est locale pour la topologie 
+étale sur $X$ et $S$, on peut donc supposer que $X$ est l'espace affine type 
+de dimension $d$ sur $S$. Par passage à la limite, on peut supposer que $S$ 
+est noethérien et la transitivité de l'acyclicité locale (\ref{I:5-1-10}) montre 
+qu'il suffit de traiter le cas $d=1$. 
+
+Soient $s$ un point géométrique de $S$ et $x$ un point géométrique de 
+$X$ centré en un point fermé de $X_s$. Il s'agit de montrer que les fibres 
+géométriques du morphisme $\widetilde X^x\to \widetilde S^s$ sont 
+acycliques. On posera désormais $S=\widetilde S^s=\spec(A)$ et 
+$X=\widetilde X^x$. On a $X\simeq \spec A\{T\}$, où $A\{T\}$ est l'hensélise 
+de $A[T]$ au point $T=0$ au-dessus de $s$. 
+
+Si $t$ est un point géométrique de $S$, la fibre $X_t$ est limite 
+projective de courbes affines et lisses sur $t$. On a donc $\h^q(X_t,\dZ/n) = 0$ 
+pour $q\geqslant 0$ et il suffit de montrer que $\h^0(X_t,\dZ/n) = \dZ/n$ et 
+$\h^1(X_t,\dZ/n) = 0$ pour $n$ premier à la caractéristique résiduelle de 
+$S$. Cela résulte des deux propositions suivantes. 
+
+
+
+
+
+\begin{proposition}\label{I:5-2-2}
+Soient $A$ un anneau local strictement hensélien, $S=\spec(A)$ et 
+$X=\spec A\{T\}$. Alors les fibres géométrique de $X\to S$ sont connexes. 
+\end{proposition}
+
+On peut se ramener par passage à limite au cas où $A$ est un hensélisé 
+strict d'une $\dZ$-algèbre de type fini. 
+
+Soient $\bar t$ un point géométrique de $S$, localisé en $t$, et $k'$ une 
+extension finie séparable de $k(t)$ dans $k(\bar t)$. On pose $t'=\spec(k')$ 
+et $X_{t'} = X\times_S\spec(k')$. Il nous faut vérifier que, quelques soient 
+$\bar t$ et $t'$, $X_{t'}$ est connexe (par qui on entend connexe et non vide). 
+Soit $A'$ le normalisé de $A$ dans $k'$, i.e. l'anneau des éléments de 
+$k'$ entiers sur l'image de $A$ dans $k(t)$. On a 
+$A\{t\}\otimes_A A'\iso A'\{T\}$: le membre de gauche est en effet hensélien 
+local (car $A'$ est fini sur $A$, et local) et limite d'algèbres locales 
+étales sur $A'\{T\}=A\{T\}\otimes_A A'$. Le schéma $X_{t'}$ est donc encore 
+la fibre en $t'$ de $X=\spec\left(A'\{T\}\right)$ sur $S'=\spec(A')$. Le 
+schéma local $X'$ est normal, donc intègre; son localisé $X_{t'}$ est 
+encore intègre, a fortiori connexe. 
+
+
+
+
+
+\begin{proposition}\label{I:5-2-3}
+Soient $A$ un anneau local strictement hensélien, $S=\spec(A)$ et 
+$X=\spec\left(A\{T\}\right)$. Soient $\bar t$ un point géométrique de $S$ 
+et $X_{\bar t}$ la fibre géométrique correspondante. Alors tout revêtement 
+étale galoisien de $X_{\bar t}$ d'ordre premier à la caractéristique du 
+corps résiduel de $A$ est trivial. 
+\end{proposition}
+
+
+
+
+
+\begin{lemma}[théorème de pureté de Zariski-Nagata en dimension $2$] \label{I:5-2-4} % originally 5.2.3.1
+Soient $C$ un anneau local régulier de dimension $2$ et $C'$ une $C$-algèbre 
+finie normale étale au--dessus de l'ouvert complémentaire du point fermé 
+de $\spec(C)$. Alors $C'$ est étale sur $C$.
+\end{lemma}
+
+En effet $C'$ est normal de dimension $2$, donc $\operatorname{prof}(C')=2$. 
+Puisque $\operatorname{prof}(C')+\dim\operatorname{proj}(C') = \dim(C)=2$, on 
+en conclut que $C'$ est libre sur $C$. Alors l'ensemble des points de $C$ où 
+$C'$ est ramifié est défini par une équations, le discriminant; puisqu'il 
+ne contient pas de point de hauteur $1$, il est vide. 
+
+
+
+
+
+\begin{lemma}[cas particulier du lemme d'Abhyankar]\label{I:5-2-5} % originally 5.2.3.2
+Soient $S=\spec(V)$ un trait, $\pi$ une uniformisante, $\eta$ le point 
+générique de $S$, $X$ lisse sur $S$, irréductible, de dimension 
+relative $1$, $\widetilde X_\eta$ un revêtement étale galoisien de $X_\eta$, 
+de degré $n$ inversible sur $S$, et $S_1=\spec\left(V[\pi^{1/n}]\right)$. 
+Notons par un indice $(-)_1$ le changement de base de $S$ à $S_1$. Alors, 
+$\widetilde X_{1\eta}$ se prolonge en un revêtement étale de $X_1$. 
+\end{lemma}
+
+Soit $\widetilde X_1$ le normalisé de $X_1$ de $\widetilde X_{1\eta}$. Vu la 
+structure des groupes d'inertie modérée des anneaux de valuation discrète 
+localisés de $X$ aux points génériques de la fibre spéciale $X_s$, 
+$\widetilde X_1$ est étale sur $X_1$ sur la fibre générale, et aux points 
+génériques de la fibre spéciale. Par (\ref{I:5-2-4}), il est étale 
+partout. 
+
+
+
+
+
+\subsubsection{}\label{I:5-2-6} % originally 5.2.3.3
+
+Notons $t$ le point en lequel $\bar t$ est localisé. Il nous est loisible de 
+remplacer $A$ par le normalisé de $A$ dans une extension finie séparable 
+$k(t')$ de $k(t)$ dans $k(\bar t)$ (cf. \ref{I:5-2-2}). Ceci, et un passage à 
+la limite préliminaire, nous permettent de supposer que 
+\begin{enumerate}[\indent a)]
+  \item $A$ est normal noethérien, et $t$ est le point générique de $S$.
+  \item Le revêtement étale considéré de $X_{\bar t}$ provient d'un 
+    revêtement étale de $X_t$. 
+  \item Il provient d'un revêtement étale $\widetilde X_U$ de l'image 
+    réciproque $X_U$ d'un ouvert non vide $U$ de $S$ (résulte de b): $t$ 
+    est la limite des $U$).
+  \item La complément de $U$ est de codimension $\geqslant 2$ (ceci au prix 
+    d'agrandir $k(t)$, par application de (\ref{I:5-2-5}) aux anneaux de 
+    valuation discrète localisés de $S$ en les points de $S\setminus U$ de 
+    codimension $1$ dans $S$; ces points sont en nombre fini). 
+  \item Le revêtement $\widetilde X_U$ est trivial su-dessus du sous-schéma 
+    $T=0$. (Ceci quitte à encore agrandir $k(t)$). 
+\end{enumerate}
+
+Lorsque ces conditions sont remplies, nous allons voir que le revêtement 
+$\widetilde X_U$ est trivial. 
+
+
+
+
+
+\begin{lemma}\label{I:5-2-7} % originally 5.2.3.4
+Soient $A$ un anneau local strictement hensélien normal et noethérien, $U$ 
+un ouvert de $\spec(A)$ dont le complément est de codimension $\geqslant 2$, 
+$V$ son image réciproque dans $X=\spec\left(A\{T\}\right)$ et $V'$ un 
+revêtement étale de $V$. Si $V'$ est trivial au-dessus de $T=0$, alors $V'$ 
+est trivial. 
+\end{lemma}
+
+Soit $B=\Gamma(V',\cO)$. Puisque $V'$ est l'image inverse de $V$ dans 
+$\spec(B)$, il suffit de voir que $B$ est fini étale sur $A\{T\}$ (donc 
+décomposé, puisque $A\{T\}$ est strictement hensélien). Soit 
+$\widehat X=A\llbracket T\rrbracket$, et notons par $(-)^\wedge$ le changement 
+de base de $X$ à $\widehat X$. Le schéma $\widehat X$ est fidèlement plat 
+sur $X$. On a donc 
+$\Gamma(\widehat V',\cO) = B\otimes_{A\{T\}} A\llbracket T\rrbracket$, et il 
+suffit de voir que cet anneau $\widehat B$ est fini étale sur 
+$A\llbracket T\rrbracket$. 
+
+Soit $V_m$ (resp. $V_m'$) le sous-schéma de $\widehat V$ (resp. $\widehat V'$) 
+d'équation $T^{m+1} = 0$. Par hypothèse, $V_0'$ est un revêtement trivial 
+de $V_0$: une somme de $n$ copies de $V_0$. De même pour $V_m'/V_m$, puisque 
+les revêtements étales sont insensibles aux nilpotents. On en tire 
+\[
+  \varphi : \Gamma(\widehat V',\cO) \to \varprojlim_m \Gamma(V_m',\cO) = \left(\varprojlim_m \Gamma(V,\cO)\right)^n \text{.}
+\]
+Par hypothèse, le complément de $U$ est de profondeur $\geqslant 2$: on a 
+$\Gamma(V_m,\cO)=A[T]/(T^{m+1})$, et $\varphi$ est un homomorphisme de 
+$\widehat B$ dans $A\llbracket T\rrbracket^n$. Au-dessus de $U$, il fournit $n$ 
+sections distinctes de $\widehat V'/\widehat V$: $\widehat V'$ est donc trivial, 
+somme de $n$ copies de $\widehat V$. Le complément de $\widehat V$ dans 
+$\widehat X$ étant encore de codimension $\geqslant 2$ (donc de profondeur 
+$\geqslant 2$), on en déduit que $\widehat B=A\llbracket T\rrbracket^n$, 
+d'où le lemme. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Applications}\label{I:5-3}
+
+
+
+
+
+\begin{theorem}[spécialisation des groupes de cohomologie]\label{I:5-3-1}
+Soit $f:X\to S$ un morphisme propre et localement acyclique, par exemple un 
+morphisme propre et lisse. Alors les faisceaux $\R^q f_*\dZ/n$ sont localement 
+constants constructibles et pour toute flèche de spécialisation 
+$t\to\widetilde S^s$, les flèches de cospécialisation 
+$\h^q(X_t,\dZ/n)\to\h^q(X_s,\dZ/n)$ sont bijectives.
+\end{theorem}
+
+Cela résulte immédiatement de la définition des flèches de 
+cospécialisation et des théorèmes de finitude et de changement de base pour 
+les propres. 
+
+
+
+
+
+\begin{theorem}[changement de base par un morphisme lisse]\label{I:5-3-2}
+Soit un diagramme cartésien 
+\[\xymatrix{
+  X' \ar[r]^-{g'} \ar[d]^-{f'} 
+    & X \ar[d]^-f \\
+  S' \ar[r]^-{g} 
+    & S
+}\]
+avec $g$ lisse. Pour tout faisceau $\cF$ sur $X$, de torsion et premier aux 
+caractéristiques résiduelles de $S$, on a 
+\[
+  g^* \R^q f_* \cF \iso \R^q f_*'({g'}^* \cF) \text{.}
+\]
+\end{theorem}
+
+En prenant un recouvrement ouvert de $X$< on se ramène au cas où $X$ est 
+affine, puis par un passage à la limite au case \`i $X$ est de type fini sur 
+$S$. Alors $f$ se factorise en une immersion ouverte $j:X\to \bar X$ et un 
+morphisme propre $\bar f:\bar X\to S$. De la suite spectrale de Leray pour 
+$\bar f\circ j$ et du théorème de changement de base pour les morphismes 
+propres, on déduit qu'il suffit de démontrer le théorème dans le cas 
+où $X\to S$ est une immersion ouverte. 
+
+Dans ce cas, si $\cF$ est de la forme $\varepsilon_* C$, où 
+$\varepsilon:t\to X$ est un point géométrique de $X$< le théorème est 
+corollaire de (\ref{I:5-1-5}). Le cas général en résulte par le lemme 
+(\ref{I:5-1-8}). 
+
+
+
+
+
+\begin{corollary}\label{I:5-3-3}
+Soient $K/k$ une extension de corps séparablement clos, $X$ un $k$-schéma 
+et $n$ un entier premier à la charactéristique de $k$. Alors l'application 
+canonique $\h^q(X,\dZ/n) \to \h^q(X_K,\dZ/n)$ est bijective pour tout 
+$q\geqslant 0$. 
+\end{corollary}
+
+Il suffit de remarquer que $\bar K$ est limite inductive de $\bar k$-algèbres 
+lisses. 
+
+
+
+
+
+\begin{theorem}[pureté relative]\label{I:5-3-4}
+Soit un diagramme commutatif 
+\begin{equation}\label{I:eq:5-3-4-1}\xymatrix{
+  U \ar@{^{(}->}[r]^-j \ar[dr]
+    & X \ar[d]^-f 
+    & \ar@{_{(}->}[l]_-i Y \ar[dl]^-h \\
+  & S
+}\end{equation}
+avec $f$ lisse purement de dimension relative $N$, $h$ lisse purement de 
+dimension relative $N-1$, $i$ un plongement fermé et $U=X\setminus Y$. Pour 
+$n$ premier aux charactéristiques résiduelles de $S$, on a 
+\begin{equation*}
+\begin{aligned}
+  j_* \dZ/n     &= \dZ/n \\
+  \R^1 j_*\dZ/n &= \dZ/n(-1)_Y \\
+  \R^q j_*\dZ/n &= 0 \qquad \text{pour $q\geqslant 2$}
+\end{aligned}
+\end{equation*}
+\end{theorem}
+
+Dans ces formules, $\dZ/n(-1)$ désigne le $\dZ/n$-duel de $\dmu_n$. Si $t$ 
+est une équation locale pour $Y$, l'isomorphisme 
+$\R^1j_*\dZ/n\simeq\dZ/n(-1)_Y$ est défini par l'application 
+$a:\dZ/n\to \R^1j_*\dmu_n$ qui envoie $1$ sur la classe du $\dmu_n$-torseur des 
+racines $n$-ièmes de $t$. 
+
+La question est de nature locale. Ceci permet de remplacer $(X,Y)$ par un 
+couple localement isomorphe, par exemple 
+\[\xymatrix{
+  \dA_T^1 \ar@{^{(}->}[r]^-j \ar[dr]_-g 
+    & \dP_T^1 \ar[d]^-f 
+    & \ar@{_{(}->}[l]_-i T \ar[dl] \\
+  & T
+}\]
+avec $T=\dA_S^{n-1}$ et $i=$ section à l'infini. Le corollaire (\ref{I:5-1-9}) 
+s'applique à $g$, et fournit $\R^q g_ \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
+Pour $f$, on a par ailleurs \eqref{I:eq:4-6-2-1}
+\[
+  \R^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ pour $q>2$.}
+\]
+On vérifie facilement que $j_* \dZ/n = \dZ/n$, et que les $\R^q j_*\dZ/n = 0$ 
+sont concentrés sur $i(T)$ pour $q>0$. La suite spectrale de Leray 
+$E_2^{pq} = \R^p f_* \R^q j_*\dZ/n \Rightarrow \R^{p+q}g_* \dZ/n$ se réduit 
+donc à 
+\[\xymatrix{
+  i^* \R^q j_* \dZ/n & 0 & \cdots \\
+  i^* \R^1 j_* \dZ/n \ar[drr]^-{d_2} & 0 & \cdots \\
+  \dZ/n              & 0 & \dZ/n(-1) & 0 & \cdots
+}\]
+$\R^q j_*\dZ/n=0$ pour $q\geqslant 0$, et $\R^q j_*\dZ/n$ est le prolongement 
+par zéro d'un faisceau localement libre de rang un sur $T$ (isomorphe, via 
+$d_2$, à $\dZ/n(-1)$). L'application $a$, définie plus haut, étant 
+injective (ainsi qu'on le vérifie fibre par fibre), c'est un isomorphisme, et 
+ceci prouve (\ref{I:5-3-4}). 
+
+
+
+
+
+\subsubsection{}\label{I:5-3-5}
+
+Nous renvoyons à \cite[XVI.4,5]{sga4} pour la démonstration des 
+applications suivantes du théorème d'acyclicité (\ref{I:5-2-1}). 
+
+
+
+
+
+\begin{theorem}\label{I:5-3-6} % originally 5.3.5.1
+Soient $f:X\to S$ un morphisme de schémas de type finie sur $\dC$ et $\cF$ un 
+faisceau constructible sur $X$. Alors 
+\[
+  \an{(\R^q f_*\cF)} \sim \R^q \an f_* (\an\cF)
+\]
+(cf. \ref{I:4-6-3}: en cohomologie ordinaire, il est nécessaire de supposer 
+$\cF$ est constructible et non seulement de torsion). 
+\end{theorem}
+
+
+
+
+
+\begin{theorem}\label{I:5-3-7} % originally 5.3.5.2
+Soient $f:X\to S$ un morphisme de schémas de type fini sur un corps $k$ de 
+charactéristique $0$ et $\cF$ un faisceau constructible sur $X$. Alors, les 
+$\R^q f_* \cF$ sont également constructibles.
+\end{theorem}
+
+La preuve utilise la résolution des singularités et (\ref{I:5-3-4}). Elle est 
+généralisée au cas d'un morphisme de type fini de schémas excellents de 
+charactéristique $0$ dans \cite[XIX.5]{sga4}. Une autre démonstration, 
+indépendante de la résolution, est donnée dans ce volume 
+(\nameref{VII}, \ref{VII:1-1}) 
+% NOTE: originally (Th. finitude, 1.1),
+elle s'applique à un morphisme de schémas de type fini sur un corps ou sur 
+un anneau de Dedekind. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Dualité de Poincaré}
+
+
+
+
+
+
+
+
+
+
+\subsection{Introduction}\label{I:6-1}
+
+Soit $X$ un variété topologique orientée, purement de dimension $N$, et 
+supposons que $X$ admette un recouvrement ouvert fini 
+$\sU=(U_i)_{1\leqslant i\leqslant K}$, tel que les intersections non vides 
+d'ouverts $U_i$ soient homéomorphes à des boules. Pour une telle variété, 
+le théorème de dualité de Poincaré peut se présenter ainsi: 
+
+\begin{enumerate}[\indent A]
+  \item La cohomologie de $X$ est la cohomologie de \v Cech correspondant au 
+    revêtement $\sU$. C'est la cohomologie du complexe 
+    \begin{equation}\label{I:eq:6-1}
+      0 \to \dZ^{A_0} \to \dZ^{A_1} \to \cdots
+    \end{equation}
+    où $A_k=\{(i_0,\dotsc,i_k) : i_0<\cdots<i_k\text{ et } U_{i_0}\cap \cdots \cap U_{i_k} \ne \varnothing\}$. 
+    \item Pour $a\in A_k$, $a=(i_0,\dotsc,i_k)$, soit 
+      $U_a=U_{i_1}\cap \cdots \cap U_{i_k}$ et soit $j_a$ l'inclusion de $U_a$ 
+      dans $X$. Le faisceau constant $\dZ$ sur $X$ admet la résolution (à 
+      gauche) 
+      \begin{equation}\label{I:eq:6-2}
+      \xymatrix{
+        \cdots \ar[r]
+          & \displaystyle\bigoplus_{a\in A_1} j_{a!}\dZ \ar[r] 
+          & \displaystyle\bigoplus_{a\in A_0} j_{a!} \dZ \ar[r] \ar[d] 
+          & 0 \\
+        & & \dZ \text{.}
+      }
+      \end{equation}
+      La cohomologie à support compact $\h_c^\bullet(X,j_{a!}\dZ)$ n'est autre 
+      que la cohomologie à support propre de la boule (orientée) $U_a$: 
+        \[
+          \h_c^i(X,j_{a!}\dZ) = \begin{cases}
+                                  0   & \text{si $i\ne N$} \\
+                                  \dZ & \text{si $i = N$}
+                                \end{cases}
+        \]
+\end{enumerate}
+
+La suite spectrale d'hypercohomologie, pour le complexe \eqref{I:eq:6-2}, et la 
+cohomologie \`a support propre, affirme donc que $\h_c^i(X)$ est le 
+$(i-N)$-i\`eme groupe de cohomologie d'un complexe 
+\begin{equation}\label{I:eq:6-3}
+  \cdots \to \dZ^{A_1} \to \dZ^{A_0} \to 0 \text{.}
+\end{equation}
+Ce complexe est le dual du complexe \eqref{I:eq:6-1}, d'o\`u la dualit\'e de 
+Poincare.
+
+Les points essentiels de cette construction sont 
+\begin{enumerate}[\indent a)]
+  \item l'existence d'une théorie de cohomologie à support propre: 
+  \item le fait que tout point $x$ d'une varété $X$ purement de dimension 
+    $N$ a un système fondamental de voisinages ouverts $U$ pour laquels 
+    \begin{equation}\label{I:eq:6-4}
+      \h_c^i(U) = \begin{cases}
+                    0   & \text{pour $i\ne N$,} \\
+                    \dZ & \text{pour $i=N$.}
+                  \end{cases}
+    \end{equation}
+\end{enumerate}
+
+La dualité de Poincaré en cohomologie étale peut se construire sur ce 
+modèle. Pour $X$ lisse purement de dimension $N$ sur $k$ algébriquement clos, 
+$n$ inversible sur $X$ et $x$ un point fermé de $X$, le point clef est de 
+calculer la limite projective, étendue aux voisinages étales $U$ de $x$ 
+\begin{equation}\label{I:eq:6-5}
+  \varprojlim \h_c^i(U,\dZ/n) 
+    = \begin{cases}
+        0     & \text{si $i\ne 2N$} \\
+        \dZ/n & \text{si $i=2N$.}
+      \end{cases} 
+\end{equation}
+
+De même que pour les variétés topologiques il faut d'abord traiter 
+directement le cas d'une boule ouverte (voire simplement celui de l'intervalle 
+$(0,1)$), ici il faut d'abord traiter directement le cas des courbes 
+(\ref{I:6-2}). Le théorème d'acyclicité locale des morphismes lisses 
+permet ensuite de ramener \eqref{I:eq:6-5} à ce cas particulier (\ref{I:6-3}). 
+
+Les isomorphismes \eqref{I:eq:6-4} et \eqref{I:eq:6-5} ne sont pas canoniques: 
+ils dépendent du choix d'une \emph{orientation} de $X$. Pour $n$ inversible 
+sur un schéma $X$, $\dmu_n$ est un faisceau de $\dZ/n$-modules libres de rang 
+un. On note $\dZ/n(N)$ sa puissance tensorielle $N$-ième ($N\in\dZ$). La 
+forme intrinsèque de la duixième ligne de \eqref{I:eq:6-5} est 
+\begin{equation}\label{I:eq:6-5'}
+  \varprojlim \h_c^{2N} \left(U,\dZ/n(N)\right) = \dZ/n \text{,}
+\end{equation}
+et $\dZ/n(N)$ s'appelle le \emph{faisceau d'orientation} de $X$; le faisceau 
+$\dZ/n(N)$ étant constant, isomorphe à $\dZ/n$, on peut le faire sortir 
+du signe $N$ et écrire plutôt
+\begin{equation}\label{I:eq:6-5''}
+  \varprojlim \h_c^{2N} (U,\dZ/n) = \dZ/n(-N) \text{,}
+\end{equation}
+et la dualité de Poincaré prendra la forme d'une dualité parfaite, à 
+valeurs dans $\dZ/n(_N)$, entre $\h^i(X,\dZ/n)$ et $\h_c^{2N-1}(X,\dZ/n)$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Le cas des courbes}\label{I:6-2}
+
+
+
+
+
+\subsubsection{}\label{I:6-2-1}
+
+Soient $\bar X$ une courbe projective et lisse sur $k$ algébriquement clos, et 
+$n$ inversible sur $\bar X$. La preuve de (\ref{I:3-3-5}) fournit, pour 
+$\bar X$ connexe, un isomorphisme canonique 
+\[\xymatrix{
+  \h^2(\bar X,\dmu_n) = \pic(\bar X)/n\pic(\bar X) \ar[r]^-{\deg}_-{\sim}
+    & \dZ/n
+}\]
+Soient $D$ un diviseur réduit de $\bar X$ et $X=\bar X\setminus D$ 
+\[\xymatrix{
+  X \ar@{^{(}->}[r]^-j 
+    & \bar X 
+    & \ar@{_{(}->}[l]_-i D \text{.}
+}\]
+La suite exacte $0\to j_! \dmu_n \to \dmu_n\to i_* \dmu_n\to 0$ et le fait que 
+$\h^i(\bar X,i_*\dmu_n) = \h^i(D,\dmu_n)=0$ pour $i>0$ fournissent un 
+isomorphisme 
+\[\xymatrix{
+  \h_c^2(X,\dmu_n) = \h^2(\bar X,j_! \dmu_n) \ar[r]^-\sim 
+    & \h^2(\bar X,\dmu_n) \ar[r]^-\sim 
+    & \dZ/n \text{.}
+}\]
+Pour $\bar X$ disconnexe, on a de même 
+\[
+  \h_c^2(X,\dmu_n) = (\dZ/n)^{\pi_0(X)}
+\]
+et on définit le \emph{morphisme trace} comme la somme 
+\[\xymatrix{
+  \tr : \h_c^2(X,\dmu_n) \simeq (\dZ/n)^{\pi_0(X)} \ar[r]^-\Sigma
+    & \dZ/n\text{.}
+}\]
+
+
+
+
+
+\begin{theorem}\label{I:6-2-2}
+La forme $\tr(a\smallsmile b)$ identifie chacun des deux groupes $\h^i(X,\dZ/n)$ 
+et $\h_c^{2-i}(X,\dmu_n)$ au dual (à valeurs dans $\dZ/n$) de l'autre. 
+\end{theorem}
+
+\emph{Preuve transcendante.} Si $\bar X$ est une courbe projective et lisse sur 
+un trait $S$, et que $j:X\hookrightarrow \bar X$ est l'inclusion du 
+complémentaire d'un diviseur $D$ étale sur $S$< les cohomologies (resp. 
+les cohomologies à support propre) des fibres géométriques spéciales et 
+génériques de $X/S$ sont ``les mêmes,'' i.e. les fibres de faisceaux 
+localement constants sur $S$. Ceci se déduit des faits analogues pour 
+$\bar X$ et $D$, via la suite exacte $0\to j_! \dZ/n\to\dZ/n\to {\dZ/n}_D\to 0$ 
+(pour la cohomologie à supports propres) et les formules $j_*\dZ/n = \dZ/n$, 
+$\R^1 j_* \dZ/n \simeq {\dZ/n}_D(-1)$, $\R^i j_*\dZ/n = 0$ ($i\geqslant 2$) 
+(pour la cohomologie ordinaire) (\ref{I:5-3-4}). 
+
+Ce principe de spécialisation ramène (\ref{I:6-2-2}) au cas où $k$ est de 
+charactéristique $0$. Par (\ref{I:5-3-3}), ce cas se ramène à celui où 
+$k=\dC$. Enfin, pour $k=\dC$, les groupes $\h^\bullet(X,\dZ/n)$ et 
+$\h_c^\bullet(X,\dmu_n)$ coïncident avec les groupes de même nom, calculés 
+pour l'espace topologique classique $X_{\textnormal{cl}}$ et, via 
+l'isomorphisme $\dZ/n\to \dmu_n: x\mapsto \exp\left(\frac{2\pi i x}{n}\right)$, 
+le morphisme trace s'identifie à ``intégration sur la classe fondamentale,'' 
+de sorte que (\ref{I:6-2-2}) résulte de la dualité de Poincaré pour 
+$X_{\textnormal{cl}}$. 
+
+
+
+
+
+\subsubsection{Preuve algébrique}\label{I:6-2-3}
+
+Pour une preuve très économique, voir (\nameref{V}, \S\ref{V:2}). 
+% originally (Dualité \S 2)
+% NOTE: should be hyperlinked V:2
+En voici une autre, liée à l'autodualité de la jacobienne. 
+
+Reprenons les notations de (\ref{I:6-2-1}). On peut supposer -- et on suppose -- 
+que $X$ est connexe. Les cas $i=0$ et $i=2$ étant triviaux, on suppose aussi 
+que $i=1$. Définissons $_D\dG_m$ par la suite exacte 
+$0\to _D\dG_m \to \dG_m \to i_*\dG_m\to 0$ (sections de $\dG_m$ congrues à 
+$1\mod D$). Le groupe $\h^1(\bar X, _D\dG_m)$ classifie les faisceaux 
+inversibles sur $\bar X$ trivialisés sur $D$. C'est le groupe des points de 
+$\pic_D(\bar X)$, une extension de $\dZ$ (le degré) par le groupe des points 
+d'une jacobienne généralisée de Rosenlicht (correspondant su conducteur 
+$1$ en chaque point de $D$) $\pic_D^0(\bar X)$, elle-même extension de la 
+variété abélienne $\pic^0(\bar X)$ par le tore 
+$\dG_m^D/(\text{$\dG_m$ diagonal})$. 
+
+\begin{enumerate}[\indent a)]
+  \item La suite exacte 
+    $0\to j_!\dmu_n \to _D\dG_m \xrightarrow{n} _D\dG_m\to 0$ fournit un 
+    isomorphisme 
+    \begin{equation}\label{I:eq:6-2-3-1}
+      \h_c^1(X,\dmu_n) = \pic_D^0(\bar X)_n \text{.}
+    \end{equation}
+  \item L'application qui à $x\in X(k)$ associe la classe du faisceau 
+    inversible $\cO(x)$ sur $\bar X$, trivialisé par $1$ sur $D$, provient 
+    d'un morphisme 
+    \[
+      f:X \to \pic_D(\bar X) \text{.}
+    \]
+\end{enumerate}
+Pour la suite, on fixe un point base $0$ et on pose $f_0(x)=f(x)-f(0)$. Pour 
+tout homomorphisme $v:\pic_D^0(\bar X)_n \to \dZ/n$, soit 
+$\bar v\in \h^1\left(\pic_D^0(\bar X),\dZ/n\right)$ l'image par $v$ de la classe 
+dans $\h^1\left(\pic_D^0(\bar X),\pic_D^0(\bar X)_n\right)$ du torseur défini 
+par l'extension 
+\[\xymatrix{
+  0 \ar[r] 
+    & \pic_D^0(\bar X)_n \ar[r] 
+    & \pic_D^0(\bar X) \ar[r]^-n 
+    & \pic_D^0(\bar X) \ar[r] 
+    & 0
+}\]
+La théorie du corps de classes géométrique (telle qu'exposée dans 
+Serre \cite{se59}) montre que l'application $v\mapsto f_0^*(\bar v)$: 
+\begin{equation}\label{I:eq:6-2-3-2}
+  \hom\left(\pic_D^0(\bar X)_n,\dZ/n\right) \to \h^1(X,\dZ/n)
+\end{equation}
+est un isomorphisme. Pour déduire (\ref{I:6-2-2}) de \eqref{I:eq:6-2-3-1} et 
+\eqref{I:eq:6-2-3-2}, il reste à savoir que 
+\begin{equation}\label{I:eq:6-2-3-3}
+  \tr\left(u \smallsmile f_0^*(\bar v)\right) = -v(u) \text{.}
+\end{equation}
+
+% originally (Dualité, 3.2.4).
+
+
+
+
+
+
+
+
+
+
+\subsection{Le cas général}\label{I:6-3}
+
+Soient $X$ un variété algébrique lisse et purement de dimension $N$, sur 
+$k$ algébriquement clos. Pour énoncer le théorème de dualité de 
+Poincaré, il faut tout d'abord définir le morphisme trace 
+\[
+  \tr : \h_c^{2N}\left(X,\dZ/n(N)\right) \to \dZ/n\text{.}
+\]
+La définition est un dévissage pénible à partir dur cas des courbes 
+\cite[XVIII \S 2]{sga4}. On a alors 
+
+
+
+
+
+\begin{theorem}\label{I:6-3-1}
+La forme $\tr(a\smallsmile b)$ identifie chacun des groupes 
+$\h_c^i\left(X,\dZ/n(N)\right)$ et $\h^{2 N-i}(X,\dZ/n)$ au dual de l'autre.
+\end{theorem}
+
+Soient $x\in X$ un point fermé et $X_x$ le localisé strict de $X$ en $x$. 
+Nous posons, pour $U$ parcourant les voisinages étales de $x$ 
+\begin{equation}\label{I:eq:6-3-1-1}
+  \h_c^\bullet(X_x,\dZ/n) = \varprojlim \h_c^\bullet(U,\dZ/n) \text{.}
+\end{equation}
+Il serait préférable de considérer plutôt le pro-objet 
+$\text{``}\varprojlim\text{''} \h_c^\bullet(U,\dZ/n)$ mais, les groupes en jeu 
+étant finis, la différence est inessentielle. Comme on a tenté de 
+l'expliquer dans l'introduction, (\ref{I:6-3-1}) résulte de ce que 
+\begin{equation}\label{I:eq:6-3-1-2}
+\begin{aligned}
+  \h_c^i(X_x,\dZ/n) &= 0 \text{ pour $i\ne 2N$ et que } \\
+  \tr : \h_c^{2 N}\left(X_x,  \dZ/n(N)\right) &\iso \dZ/n \text{ est un isomorphisme.} 
+\end{aligned}
+\end{equation}
+
+Le cas où $N=0$ est trivial. Si $N>0$, soit $Y_y$ le localisé strict en un 
+point fermé d'un schéma $Y$ lisse purement de dimension $N-1$, et soit 
+$f:X_x\to Y_y$ un morphisme essentiellement lisse (de dimension relative un). 
+La démonstration utilise la suite spectrale de Leray en cohomologie à 
+support propre pour $f$, pour se ramener au cas des courbes. Les ``cohomologie 
+à support propre'' considérées étant définies comme des limites 
+\eqref{I:eq:6-3-1-1}, l'existence d'une telle suite spectrale pose divers 
+problèmes de passage à la limite, traités avec trop de détailes dans 
+\cite[XVIII]{sga4}. Pour tout point géométrique $z$ de $Y_y$, on a 
+\[
+  (\R^if_! \dZ/n)_z = \h_c^i(f^{-1}(z),\dZ/n) \text{.}
+\]
+La fibre géométrique $f^{-1}(z)$ est une limite projective de courbes lisses 
+sur un corps algébriquement clos. Elle vérifie la dualité de Poincaré. 
+Sa cohomologie ordinaire est donnée par le théorème d'acyclicité locale 
+pour les morphismes lisses: 
+\[
+  \h^i(f^{-1}(z),\dZ/n) 
+    = \begin{cases}
+        \dZ/n & \text{pour $i=0$} \\
+        0     & \text{pour $i>0$.}
+      \end{cases}
+\]
+Par dualité, on a 
+\[
+  \h_c^i(f^{-1}(z),\dZ/n) 
+    = \begin{cases}
+        \dZ/n(-1) & \text{pour $i=2$} \\
+        0         & \text{pour $i\ne 2$.}
+      \end{cases}
+\]
+et la suite spectrale de Leray s'écrit 
+\[
+  \h_c^i\left(X_x,\dZ/n(N)\right) = \h_c^{i-2}\left(Y_y,\dZ/n(N-1)\right) \text{.}
+\]
+On conclut par récurrence sur $N$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Variantes et applications}\label{I:6-4}
+
+On peut construire, en cohomologie étale, un ``formalisme de dualité'' 
+($=$ des foncteurs $\R f_!$, $\R f_!$, $\R f^!$ satisfaisant diverses 
+compatibilités et formules d'adjonction) parallèle à celui qui existe en 
+cohomologie cohérente. Dans ce language, les résultats du paragraphe 
+précédents se transcrivent comme suit: si $f:X\to S$ est lisse et purement 
+de dimension relative $N$, et que $S=\spec(k)$, avec $k$ algébriquement clos, 
+alors 
+\[
+  \R f^! \dZ/n = \dZ/n [2N](N) \text{.}
+\]
+Ce résultat vaut sans hypothèse sur $S$. Il admet le 
+
+
+
+
+
+\begin{corollary}\label{I:6-4-1}
+Si $f$ est lisse et purement de dimension relative $N$, et que les faisceaux 
+$\R^i f_! \dZ/n$ sont localement constants, alors les faisceaux 
+$\R^i f_* \dZ/n$ sont aussi localement constants, et 
+\[
+  \R^i f_* \dZ/n = \const\hom\left(\R^{2 N-i} f_! \dZ/n(N),\dZ/n\right)\text{.}
+\]
+\end{corollary}
+
+En particulier, sous les hypothèses du corollaire, les faisceaux 
+$\R^i f_* \dZ/n$ sont constructibles. Partant de là, on peut montrer que, si 
+$S$ est de type fini sur le spectre d'un corps ou d'un anneau de Dedekind, 
+alors, pour tout morphisme de type fini $f:X\to S$ et tout faisceau 
+constructible $\cF$ sur $X$, les faisceaux $\R^i f_* \cF$ sont constructibles 
+(\nameref{VII}, \ref{VII:1-1}). 
+% originally (Th. finitude, 1.1).
