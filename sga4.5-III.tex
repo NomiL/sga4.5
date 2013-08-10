@@ -1,0 +1,376 @@
+
+\chapter{Fonctions \texorpdfstring{$L$}{L} modulo \texorpdfstring{$\ell^n$}{l n} et modulo \texorpdfstring{$p$}{p}}\label{III}
+
+Dans cet expos\'e, je prouve une formule analogue au th\'eor\`eme du rapport sur 
+la formule des traces (ce volume; cit\'e ``Rapport'' par la suite) pour un 
+anneau de coefficients $A$ qui soit de torsion premier \`a $p$, ou un corps de 
+caract\'eristique $p$. Un usage essentiel sera fait de \cite[XVII 5.5]{sga4}. 
+
+
+
+
+
+
+
+
+
+
+\section{Tenseurs sym\'etriques}\label{III:1}
+
+
+
+
+
+\subsection{}\label{III:1-1}
+
+Soit $A$ un anneau commutatif. Pour une liste de propri\'et\'es des foncteurs 
+$\Gamma^n:(\text{$A$-modules})\to (\text{$A$-modules})$, je renvoie \`a 
+\cite[XVII 5.5.1 et 2]{sga4}. Rappelons seulement que pour $M$ plat (en fait, seul 
+le cas o\`u $M$ est projectif de type fini nous int\'eresse), on a 
+\[
+  \Gamma^n M = \left(M^{\otimes n}\right)^{S_n} \qquad \text{(tenseurs sym\'etriques de degr\'e $n$).}
+\]
+
+
+
+
+
+\subsection{}\label{III:1-2}
+
+Soient $X$ un $S$-sch\'ema, $x^n/S$ la puissance fibr\'ee $n$-i\`eme de $X$ et 
+$\pi$ la projection de $X^n/S$ sur $(X^n/S)/S_n=\operatorname{Sym}_S^n(X)$ 
+(suppos\'e exister). Si $\cG$ est un faisceau de $A$-modules sur $X$, le 
+produit tensoriel externe de $n$ copies de $\cG$; $\cG^{\boxtimes n}$, est un 
+faisceau $S_n$-\'equivariant sur $X^n/S$. Nous aurons \`a faire usage du 
+foncteur $\Gamma^n$ \emph{externe} de \cite[XVII 5.5.7 \`a 9]{sga4}. Rappelons 
+seulement que pour $\cG$ un faisceau de $A$-modules plats (en fait, seul le cas 
+constructible et plat nous int\'eresse), on a 
+\[
+  \Gamma_\text{ext}^n(\cG) = \left(\pi_*\cG^{\boxtimes n}\right)^{S_n} \text{.}
+\]
+
+
+
+
+
+\begin{lemma_}\label{III:1-3}
+Pour $S=\spec(k)$, avec $k$ alg\'ebriquement clos, $X$ une somme finie de 
+copies de $S$, et $G$ un faisceau plat de $A$-modules sur $X$, on a 
+\[
+  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}(\cG)\right) = \Gamma^n \Gamma(X,\cG)
+\]
+\end{lemma_}
+
+En effet, 
+\begin{align*}
+  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}^n(\cG)\right) 
+    &= \Gamma\left(\operatorname{Sym}_S^n(X),\pi_*\cG^{\boxtimes n}\right)^{S_n} \\
+    &= \Gamma\left(X^n/S,\cG^{\boxtimes n}\right)^{S_n} 
+    = \left(\Gamma(X,\cG)^{\otimes n}\right)^{S_n} 
+    = \Gamma^n \Gamma(X,\cG) \text{.}
+\end{align*}
+
+
+
+
+
+\subsection{}\label{III:1-4}
+
+Nous aurons \`a utiliser les d\'eriv\'es des foncteurs non additifs $\Gamma^n$ 
+et $\Gamma_\text{ext}^n$. 
+
+La th\'eorie de tela foncteurs d\'eriv\'es est due \`a Dold et Puppe 
+\cite{do61}. Pour des rappels plus complets que ceux donn\'es ci-dessous, je 
+renvoie \`a \cite[XVII 5.5.3]{sga4}. 
+
+Soit $\sA$ une cat\'egorie ab\'elienne (voire une cat\'egorie additive o\`u 
+tout endomorphisme idempotent soit la projection sur un facteur direct). Notons 
+$N$ le foncteur de normalisation: $N:($complexes cosimpliciaux d'objets de 
+$\sA)\to($complexes différentiables d'objets de $\sA$, avec $K^i$ pour 
+$i<0)$. C'est une \'equivalence de cat\'egories. Ainsi que son inverse, elle 
+transforme homotopes en morphismes homotopes. Si $\Gamma$ est un foncteur 
+$\sA\to\sB$, et si $K$ est un complexe d'objets de $\sA$, \`a degr\'es 
+positifs ($K^i=0$ pour $i<0$), on pose $T K=N T N^{-1} K$. 
+
+
+
+
+
+\subsection{Exemple}\label{III:1-5}
+
+Si $K$ est r\'eduit \`a $M$ en degr\'e $0$, $T K$ st r\'eduit \`a $T M$ en 
+degr\'e $0$. 
+
+
+
+
+
+\subsection{}\label{III:1-6}
+
+Si $K$ est un complexe born\'e, \`a degr\'es positifs, de $A$-module projectifs 
+de type fini, le complexe de $A$-modules $\Gamma^n K$ a les m\^emes 
+propri\'et\'es. 
+
+Notons $\D_\text{parf}^{\geqslant 0}(A)$ la sous-cat\'egorie de 
+$\D_\text{parf}(A)$ (Rapport, \ref{II:4-3}) form\'ee des complexes de 
+tor-dimension $\leqslant 0$. On voit que $\Gamma^n$ induit un foncteur 
+\[
+  \eL\Gamma^n : \D_\text{parf}^{\geqslant 0}(A) \to \D_\text{parf}^{\geqslant 0}(A) \text{.}
+\]
+
+Pour la d\'efinition analogue, mais plus compliqu\'ee, de 
+$\eL\Gamma_\text{ext}^n$, je renvoie \`a \cite[XVII 5.5.14]{sga4}. 
+
+
+
+
+
+\subsection{}\label{III:1-7}
+
+Soient $K$ un complexe born\'e de $A$-modules projectifs de type fini, et $u$ 
+un endomorphisme de $K$. On note $\det(1-u t,K)$ la s\'erie formelle de terme 
+constant $1$ 
+\[
+  \det(1-u t,K) = \prod_i \det(1-u t,K^i)^{(-1)^i} \text{.}
+\]
+
+On laisse au lecteur lla v\'erification des propri\'et\'es suivantes. 
+
+
+\subsubsection{}\label{III:1-7-1}
+
+Soit $F$ une filtration finie stable par $u$, telle que les $\gr_F^p(K^q)$ 
+soient projectifs de type fini. Alors 
+\[
+  \det(1-u t,K) = \prod_p \det(1-u t,\gr_F^p(K)) \text{.}
+\]
+
+
+\subsubsection{}\label{III:1-7-2}
+
+Si on translate $K$ de $q$ crans vers la gauche, on a 
+\[
+  \det(1-u t,K[q]) = \det(1-u t,K)^{(-1)^q} \text{.}
+\]
+
+
+
+
+
+\begin{proposition_}\label{III:1-8}
+Soit $u$ un endomorphisme d'un complexe born\'e, \`a degr\'es positifs, de 
+$A$-modules projectifs de type fini. On a \
+\begin{equation}\label{III:eq:1-8-1}
+  \det(1-u t,K)^{-1} = \sum_n \tr(u,\Gamma^n K) t^n \text{.}
+\end{equation}
+\end{proposition_}
+
+Notons $D(u,K)$ le second membre de \eqref{III:eq:1-8-1}. 
+
+
+
+
+
+\begin{lemma_}\label{III:1-9}
+Soit $u$ un endomorphisme d'une suite exacte courte de complexes born\'es \`a 
+degr\'es $\geqslant 0$ de $A$-modules projectifs de type fini 
+\[
+  0 \to K' \to K \to K'' \to 0 \text{.}
+\]
+On a $D(u,K)=D(u,K')\cdot D(u,K'')$.
+\end{lemma_}
+
+Si $0\to M'\to M\to M''\to 0$ est une suite exacte courte scindable de 
+$A$-modules, $\Gamma^n M$ a une filtration naturelle, de quotients successifs 
+les $\Gamma^i M'\otimes \Gamma^j M''$ ($i+j=n$). D\`es lors, $\Gamma^n K$ admet 
+une filtration naturelle, de quotients successifs les complexes 
+$N(N^{-1} \Gamma^i K'\otimes N^{-1}\Gamma^j K'')$ ($i+j=n$), canoniquement 
+homotopes aux complexes simples $s(\Gamma^i K'\otimes \Gamma^i K'')$ d\'eduit 
+des complexes doubles $\Gamma^i K'\otimes \Gamma^i K''$, et 
+\[
+  \tr(u,\Gamma^n K) = \sum_{i+j=n} \tr(u,\Gamma^i K')\cdot \tr(u,\Gamma^j K'') \text{,}
+\]
+d'o\`u le lemme. De \ref{III:1-9}, on tire par r\'ecurrence. 
+
+
+
+
+
+\begin{lemma_}\label{III:1-10}
+Soient $F$ une filtration finie stable par $u$ de $K$, telle que les 
+$\gr_F^p(K^q)$ soient projectifs de type fini. Alors, 
+\[
+  D(u,K) = \prod_p D\left(u,\gr_F^p(K)\right) \text{.}
+\]
+\end{lemma_}
+
+
+
+
+
+\begin{lemma_}\label{III:1-11}
+Soient $u$ un endomorphisme d'un $A$-module projectif de type fini $M$, et 
+$M[-q]$ le complexe r\'eduit \`a $M$ en degr\'e $q$. On a 
+\[
+  D\left(u,M[-q]\right) = \left(\sum \tr(u,\Gamma^n M) t^n\right)^{(-1)^q} \qquad \text{($q\geqslant 0$.)}
+\]
+\end{lemma_}
+
+
+
+
+
+D'apr\`es \ref{III:1-5}, c'est vrai pour $q=0$. Prec\'edons par r\'ecurrence, il 
+reste \`a montrer que 
+\[
+  D\left(u,M[-q]\right) \cdot D\left(u,M[-(q+1)]\right) = 1 \text{.}
+\]
+Cette formule r\'esulte de \ref{III:1-9}, appliqu\'e ou complexe $K$ r\'eduit a 
+$M$ en degr\'es $q$ et $q+1$ (avec $d=\operatorname{id}$), et \`a sa 
+filtration b\^ete:
+\[
+  (\cdots 0 \to M \cdots) \to (\cdots M \to M) \to (\cdots M \to 0 \to 0 \cdots) \text{.}
+\]
+En effet, $K$ est homotope \`a $0$. Dans la cat\'eegorie d\'eriv\'ee, on a donc 
+$\Gamma^n(K)=\Gamma^n(0)$; $0$ pour $n>0$ et $A$ pour $n=0$, et $D(u,K)=1$. 
+
+
+
+
+
+\subsection{}\label{III:1-12}
+
+Prouvons \ref{III:1-8}. D'apr\`es \ref{III:1-10} appliqu\'e \`a la filtration 
+``b\^ete'' de $K$ par les sous-complexes 
+\[
+  0 \to \cdots \to 0 \to K^q \to K^{q+1} \to \cdots \text{,}
+\]
+on a 
+\[
+  D(u,K) = \prod_q D\left(u,K^q[-q]\right) =_{\text{(\ref{III:1-10})}} \prod_q \left(\sum \tr\left(u,\Gamma^n(K^q)\right) t^n \right)^{(-1)^q} \text{.}
+\]
+Il reste \`a prouver que pour $u$ un endomorphisme d'un module projectif de type 
+fini $M$, on a 
+\begin{equation}\label{III:eq:1-12-1}
+  \det\left(1-u t,M\right)^{-1} = \sum \tr(u,\Gamma^n M) t^n \text{.}
+\end{equation}
+Si $u=0$, les deux membres valent $1$. Ajoutant \`a $M$ un module $N$ sur lequel 
+$u=0$, et appliquent \ref{III:1-9}, on se ram\`ene \`a supposer que $M$ est libre. 
+Prenons-en un base. Il s'agit alors de prouver des identit\'es alg\'ebriques 
+entres les coordonn\'ees de $u$. Le principe de prolongement des identit\'es 
+alg\'ebriques nous ram\`ene \`a supposer que $A$ est un corps alg\'ebriquement 
+clos. Le module $M$ admet alors une filtration stable par $u$ \`a quotients 
+successifs de rang $1$, et \ref{III:1-10} nous ram\`ene au case o\`u $M$ est de 
+rang $1$. La formule \eqref{III:eq:1-12-1} se ram\`ene alors \`a l'identit\'e 
+\[
+  \frac{1}{1-a t} = \sum a^n t^n \text{.}
+\]
+
+
+
+
+
+\begin{corollary_}\label{III:1-13}
+Soient $u$ et $u'$ des endomorphismes de complexes born\'es $K$ et $K'$ de 
+$A$-modules projectifs de type fini. Si, dans la cat\'egorie d\'eriv\'ee, $K$, 
+muni de $u$, est isomorphe \`a $K'$, muni de $u'$, alors 
+\[
+  \det(1-u t,K) = \det(1-u' t,K') \text{.}
+\]
+\end{corollary_}
+
+Appliquent \ref{III:1-7-2}, on se ram\`ene \`a supposer que $K$ et $K'$ sont \`a 
+degr\'es positifs. On observe alors que le second membre de \ref{III:1-8} 
+poss\`ede la propri\'et\'e d'invariance voulue. 
+
+
+
+
+
+\subsection{}\label{III:1-14}
+
+Ce corollaire permet de d\'efinir $\det(1-u t,K)$ pour $u$ un endomorphisme de 
+$K\in \ob\D_\text{parf}(A)$. Cette construction est ad hoc; en fait, pour $v$ un 
+automorphisme de $L\in\ob\D_\text{parf}(\Lambda)$, on peut d\'efinir 
+$\det(v)\in\Lambda^\times$, et $\det(1-u t,K)$ s'obtient pour $v=1-u t$, 
+$\Lambda=A\llbracket t\rrbracket$ et $L=K\otimes_A\Lambda$. 
+
+
+
+
+
+
+
+
+
+
+\section{Le Th\'eor\`eme}\label{III:2}
+
+
+
+
+
+\subsection{}\label{III:2-1}
+
+Reprenons les notations de (Rapport, \S\ref{II:1}). Pour $A$ un anneau 
+noeth\'erien commutatif de torsion, $X_0$ un sch\'ema s\'epar\'e de type fini sur 
+$\dF_q$ et $\cK_0\in\ob\D_\text{ctf}(X_0;A)$, on pose 
+\[
+  L(X_0,\cK_0) = \prod_{x\in |X_0|} \det\left(1-F_x^* t^{\deg(x)}, \cK\right)^{-1}
+\]
+(\ref{III:1-7}, \ref{III:1-13} et Rapport, \ref{II:1-5}, \ref{II:1-6}). 
+
+
+
+
+
+\begin{theorem_}\label{III:2-2}
+Dans chacun des deux cas suivants
+\begin{enumerate}[\indent a)]
+  \item $A$ est de torsion premi\`re \`a $p$;
+  \item $A$ est r\'eduit et de caract\'eristique $p$
+\end{enumerate}
+on a 
+\begin{equation}\label{III:eq:2-2-1}
+  L(X_0,\cK_0) = \det\left(1-F^* t^f, \R\Gamma_c(X,\cK)\right)^{-1} \text{.}
+\end{equation}
+\end{theorem_}
+
+
+
+
+
+\subsection{Remarque}\label{III:2-3}
+
+Dans le cas a), la m\'ethode de Rapport, \S\ref{II:3} permet de d\'eduire de 
+la formule des traces (Rapport \ref{II:4-10}) que les d\'eriv\'ees logarithmiques 
+des deux membres de \eqref{III:eq:2-2-1} sont \'egales. L'anneau $A$ \'etant de 
+torsion, cela ne suffit pas pour prouver \ref{III:2-2}. 
+
+
+
+
+
+\subsection{Remarque}\label{III:2-4}
+
+Si $A$ est un corps, on a 
+\[
+  L(X_0,\cK_0) = \prod_i L\left(X_0,\underline\h^i(\cK_0)\right)^{(-1)^i}
+\]
+et la suite spectrale 
+$E_2^{p q} = \h_c^p(X,\underline\h^q(\cK))\Rightarrow \h_c^{p+q}(X,\cK)$ montre 
+que 
+\begin{align*}
+  \det\left(1-F^* t, \R\Gamma_c(X,\cK)\right) 
+    &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\cK)\right)^{(-1)^n} \\
+    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\cK))\right)^{(-1)^{p+1}} \text{.}
+\end{align*}
+Ceci ram\`ene \ref{III:2-2} (pour $A$ un corps) au cas particulier suivant. 
+
+
+\subsubsection{}\label{III:2-4-1}
+
+Si $\cG_0$ est un faisceau constructible de $A$-espaces vectoriels, on a 
+\[
+  L(X_0,\cG_0) = \prod_n \det\left(1-F^* t^f,\h_c^n(X,\cG)\right)^{(-1)^{n+1}} \text{.}
+\]
