@@ -4426,12 +4426,12 @@ $K\in\ob\mathsf{DF}_\text{parf}(\Lambda)$.
 \begin{prop-def_}\label{II:4-6}
 Soient $X$ un sch\'ema noeth\'erien, et $\Lambda$ un anneau noeth\'erien \`a 
 gauche. On note $\D_\textnormal{ctf}^b(X,\Lambda)$ la sous-cat\'egorie de 
-$\D^-(X,\Lambda)$ form\'ee des complexes $K$ v\'erifient les conditions 
+$\D^-(X,\Lambda)$ form\'ee des complexes $\cK$ v\'erifient les conditions 
 \'equivalentes suivantes:
 \begin{enumerate}[\indent i)]
-  \item $K$ est isomorphe (dans $\D^-(X,\Lambda)$) \`a un complexe born\'e e 
+  \item $\cK$ est isomorphe (dans $\D^-(X,\Lambda)$) \`a un complexe born\'e e 
     faisceaux de $\Lambda$-modules plats et constructibles. 
-  \item $K$ est de tor-dimension finie et les faisceaux $\h^i(K)$ sont 
+  \item $\cK$ est de tor-dimension finie et les faisceaux $\h^i(K)$ sont 
     constructibles. 
 \end{enumerate}
 \end{prop-def_}
@@ -4443,39 +4443,39 @@ M\^eme argument qu'en (\ref{II:4-5}), \`a partir du lemme suivant.
 
 
 \begin{lemma_}\label{II:4-7}
-Si un complexe de faisceaux de $\Lambda$-modules est tel que les $\h^i(K))$ 
-soient constructibles, et nuls pour $i$ grand, il existe un 
-quasi-isomorphisme $K'\to K$, avec $K'$ born\'e sup\'erieurement \`a 
+Si un complexe $\cK$ de faisceaux de $\Lambda$-modules est tel que les 
+$\h^i(\cK))$ soient constructibles, et nuls pour $i$ grand, il existe un 
+quasi-isomorphisme $\cK'\to \cK$, avec $\cK'$ born\'e sup\'erieurement \`a 
 composantes constructibles et plates.
 \end{lemma_}
 
-On construit $K'$ en se propageant de droite \`a gauche. Pour un $m$ tel que les 
-$\h^i(K)$ ($i\geqslant m$) soient nuls, on prend ${K'}^i = 0$ pour 
-$i\geqslant m$. Supposons ensuite d\'ej\`a construits les ${K'}^i$ pour 
+On construit $\cK'$ en se propageant de droite \`a gauche. Pour un $m$ tel que les 
+$\h^i(\cK)$ ($i\geqslant m$) soient nuls, on prend ${\cK'}^i = 0$ pour 
+$i\geqslant m$. Supposons ensuite d\'ej\`a construits les ${\cK'}^i$ pour 
 $i>n$:
 \[\xymatrix{
   \cdots \ar[r] 
-    & K^{n-1} \ar[r] 
-    & K^n \ar[r] 
-    & K^{n+1} \ar[r] 
+    & \cK^{n-1} \ar[r] 
+    & \cK^n \ar[r] 
+    & \cK^{n+1} \ar[r] 
     & \cdots \\
-  & & & {K'}^{n+1} \ar[u] \ar[r] 
+  & & & {\cK'}^{n+1} \ar[u] \ar[r] 
     & \cdots \text{,}
 }\]
-avec $\h^i(K')\iso \h^i(K)$ pour $i>n+1$, et $\ker(d)\to\h^{n+1}(K)$ surjectif 
-en degr\'e $n+1$. D\'efinissons des faisceaux $A$ et $B$ par le diagramme 
+avec $\h^i(\cK')\iso \h^i(\cK)$ pour $i>n+1$, et $\ker(d)\to\h^{n+1}(\cK)$ surjectif 
+en degr\'e $n+1$. D\'efinissons des faisceaux $\cA$ et $\cB$ par le diagramme 
 cart\'esien 
 \[\xymatrix{
-  K^n \ar[r] 
-    & K^n/\im(d) \ar[r] 
+  \cK^n \ar[r] 
+    & \cK^n/\im(d) \ar[r] 
     & \ker(d) \\
-  A \ar[u] \ar[r]^u 
-    & B \ar[u]\ar[r] 
+  \cA \ar[u] \ar[r]^u 
+    & \cB \ar[u]\ar[r] 
     & \ker(d) \ar[u] \text{.}
 }\]
 
-Alors, $B$ est constructible, $u$ est surjectif, et pour avancer d'un pas, il 
-suffit de construire $K^n$ plat et constructible et $v:K^n\to A$ tel que u
+Alors, $\cB$ est constructible, $u$ est surjectif, et pour avancer d'un pas, il 
+suffit de construire $K^n$ plat et constructible et $v:\cK^n\to \cA$ tel que u
 $u v$ soit surjectif. Que ce soit possible est garanti par le lemme suivant. 
 
 
@@ -4483,14 +4483,14 @@ $u v$ soit surjectif. Que ce soit possible est garanti par le lemme suivant.
 
 
 \begin{lemma_}\label{II:4-8}
-Soit $v:A\to B$ un \'epimorphisme de faisceaux de $\Lambda$-modules, avec $B$ 
-constructible. Il existe alors $u:K\to A$ avec $K$ plat et constructible et 
-$v u$ un \'epimorphisme. 
+Soit $v:\cA\to \cB$ un \'epimorphisme de faisceaux de $\Lambda$-modules, avec 
+$\cB$ constructible. Il existe alors $u:\cK\to \cA$ avec $\cK$ plat et 
+constructible et $v u$ un \'epimorphisme. 
 \end{lemma_}
 
-Le faisceau $A$ est quotient d'une somme de faisceaux de la forme 
-$\varphi_! \Lambda$, pour $\varphi:U\to X$ \'etale. Puisque $B$ est noeth\'erien 
-(\cite[IX.2.10]{sga4}), une somme finie de ceux-ci s'envoie d\'ej\`a sur $B$, 
+Le faisceau $\cA$ est quotient d'une somme de faisceaux de la forme 
+$\varphi_! \Lambda$, pour $\varphi:U\to X$ \'etale. Puisque $\cB$ est noeth\'erien 
+(\cite[IX.2.10]{sga4}), une somme finie de ceux-ci s'envoie d\'ej\`a sur $\cB$, 
 d\`u le lemme. 
 
 
@@ -4499,8 +4499,8 @@ d\`u le lemme.
 
 \begin{theorem_}\label{II:4-9}
 Soit $f:X\to Y$ un morphisme s\'epar\'e de type fini de sch\'emas noeth\'eriens. 
-Si $K\in\ob\D_\textnormal{ctf}^b(X,\Lambda)$, alors 
-$\R f_!\in \ob\D_\textnormal{ctf}^b(Y,\Lambda)$. 
+Si $\cK\in\ob\D_\textnormal{ctf}^b(X,\Lambda)$, alors 
+$\R f_!\cK\in \ob\D_\textnormal{ctf}^b(Y,\Lambda)$. 
 \end{theorem_}
 
 Rappelons que si $j:X\hookrightarrow \bar X \xrightarrow{\bar f} Y$ est une 
@@ -4520,21 +4520,21 @@ Par composition, on d\'efinit de m\^eme en g\'en\'eral
 
 Pour tout $\Lambda$-module \`a droite $N$, on a (preuve donn\'ee ci-dessous) 
 \begin{equation}\label{II:eq:4-9-1}
-  N\lotimes \R f_! K \iso \R f_! (N\lotimes K) \text{.}
+  N\lotimes \R f_! \cK \iso \R f_! (N\lotimes \cK) \text{.}
 \end{equation}
 
 D\'eduisons (\ref{II:4-9}) de \eqref{II:eq:4-9-1}. 
 \begin{enumerate}[\indent a)]
   \item La suite spectrale 
     \[
-      E_2^{p q} = \R^p f_! \h^q(X) \Rightarrow \h^{p+q} \R f_! K \text{.}
+      E_2^{p q} = \R^p f_! \h^q(\cK) \Rightarrow \h^{p+q} \R f_! \cK \text{.}
     \]
     et le th\'eor\`eme de finitude pour $\R f_!$, montrent que 
-    $\R f_!\in \ob \D^b(X,\Lambda)$ et est \`a cohomologie constructible. 
+    $\R f_!\cK\in \ob \D^b(X,\Lambda)$ et est \`a cohomologie constructible. 
     Reste \`a prouver la tor-dimension finie (\ref{II:4-6}). 
-  \item Si $K$ est de tor-dimension $\leqslant -r$, il en est de m\^eme pour 
-    $\R f_! K$: on a $\h^i(N\lotimes \R f_! K) = \h^i(\R f_!(N\lotimes K))$, 
-    et, dans la suite spectrale ci-dessus pour $N\lotimes K$, les 
+  \item Si $\cK$ est de tor-dimension $\leqslant -r$, il en est de m\^eme pour 
+    $\R f_! \cK$: on a $\h^i(N\lotimes \R f_! \cK) = \h^i(\R f_!(N\lotimes \cK))$, 
+    et, dans la suite spectrale ci-dessus pour $N\lotimes \cK$, les 
     $E_2^{p q}$ sont nuls pour $q<r-s$ fortiori pour $p+q<r$. 
 \end{enumerate}
 
@@ -4542,21 +4542,21 @@ Prouvons \eqref{II:eq:4-9-1}, en restant au niveau des complexes.
 \begin{enumerate}[\indent a)]
   \item Utilisant la formule de d\'efinition $\R f_! = \R f_*\circ j_!$, on se 
     ram\`ene \`a supposer $f$ propre. 
-  \item Repr\'esentons $K$ par un complexe born\'e 
-    sup\'erieurement \`a composantes acyclique pour $f_*:\R^p f_* K^q = 0$ 
-    pour $p>0$. On a alors $\R f_* K \sim f_* K$. Il n'est possible de 
+  \item Repr\'esentons $\cK$ par un complexe born\'e 
+    sup\'erieurement \`a composantes acyclique pour $f_*:\R^p f_* \cK^q = 0$ 
+    pour $p>0$. On a alors $\R f_* K \sim f_* \cK$. Il n'est possible de 
     travailler ainsi avec des complexes born\'es sup\'erieurement que parce que 
     $f_*$ est de dimension cohomologique finie. 
   \item Si $L$ un $\Lambda$-module \`a droite libre, on a 
-    $\R^p f_*(L\otimes K^q) = L\otimes \R^p f_* K^q$: c'est trivial pour 
+    $\R^p f_*(L\otimes \cK^q) = L\otimes \R^p f_* \cK^q$: c'est trivial pour 
     $\Lambda$ libre de type fini, et le cas g\'en\'eral s'en d\'eduit par 
-    passage \`a la limite. Le faisceau $L\otimes K^q$ est acyclique pour 
-    $f_*$, et $f_*(L\otimes K^q) = L\otimes f_* K^q$. 
+    passage \`a la limite. Le faisceau $L\otimes \cK^q$ est acyclique pour 
+    $f_*$, et $f_*(L\otimes \cK^q) = L\otimes f_* \cK^q$. 
   \item Soit $N_\bullet$ un r\'esolution libre de $N$. On a 
-    $N\lotimes K\sim s(N_\bullet\otimes K)$ (complexe simple associ\'e au 
-    complexe double $N_\bullet\otimes K$). D'apr\`es c), 
+    $N\lotimes \cK\sim s(N_\bullet\otimes \cK)$ (complexe simple associ\'e au 
+    complexe double $N_\bullet\otimes \cK$). D'apr\`es c), 
     \[
-      \R f_*(N\lotimes K) \sim \R f_* (s(N_\bullet\otimes K)) \sim f_*(s(N_\bullet\otimes K)) \sim s(N_\bullet\otimes f_* K) \sim N\lotimes \R f_* K \text{,}
+      \R f_*(N\lotimes \cK) \sim \R f_* (s(N_\bullet\otimes \cK)) \sim f_*(s(N_\bullet\otimes \cK)) \sim s(N_\bullet\otimes f_* \cK) \sim N\lotimes \R f_* \cK \text{,}
     \]
     soit la formule annonc\'ee. 
 \end{enumerate}
@@ -4572,10 +4572,10 @@ $\R \Gamma_c : \D_\text{ctf}^b(X,\Lambda)\to\D_\text{parf}(\Lambda)$.
 \begin{theorem_}\label{II:4-10}
 Avec les notations du \S\ref{II:1}, soient $X_0$ un sch\'ema s\'epar\'e de type 
 fini sur $\dF_q$, et $\Lambda$ un anneau noeth\'erien de torsion, tu\'e par un 
-entier premier \`a $p$. Soit $K_0\in\ob\D_\textnormal{ctf}^b(X_0,\Lambda)$. 
+entier premier \`a $p$. Soit $\cK_0\in\ob\D_\textnormal{ctf}^b(X_0,\Lambda)$. 
 Avec la d\'efinition (\ref{II:4-3}) de traces, on a pour tout $N$ 
 \begin{equation}\label{II:eq:4-10}
-  \sum_{x\in X^{F^n}} \tr\left({F^n}^*,K_x\right) = \tr\left({F^n}^*,\R\Gamma_c(X,K)\right) \text{.}
+  \sum_{x\in X^{F^n}} \tr\left({F^n}^*,\cK_x\right) = \tr\left({F^n}^*,\R\Gamma_c(X,\cK)\right) \text{.}
 \end{equation}
 \end{theorem_}
 
@@ -4589,7 +4589,7 @@ prouver \ref{II:2-10}.
 \subsection{Preuve de \texorpdfstring{\ref{II:2-10}}{2.10}}\label{II:4-11}
 
 Soit $X$ un sch\'ema s\'epar\'e de type fini sur un corps alg\'ebriquement clos 
-$k$, et soit $\cG$ un $\dQ_\ell$-faisceau sur $K$. D'apr\`es \ref{II:2-8} on 
+$k$, et soit $\cG$ un $\dQ_\ell$-faisceau sur $X$. D'apr\`es \ref{II:2-8} on 
 peut l'\'ecrire sous la forme $\cG=\cF\otimes\dQ_\ell$, avec $\cF$ un 
 $\dZ_\ell$-faisceau sans torsion. Posons 
 \[
@@ -4640,9 +4640,9 @@ la fl\`eche d'extension des scalaires suivante.
 
 (*) Soit $\Lambda\to\Lambda'$ un homomorphisme d'anneaux noeth\'eriens de 
 torsion. Pour $X$ un sch\'ema s\'epar\'e de type fini sur $k$ alg\'ebriquement 
-clos, et $K\in\ob\D_\text{ctf}(X,\Lambda)$, on a un isomorphisme 
+clos, et $\cK\in\ob\D_\text{ctf}(X,\Lambda)$, on a un isomorphisme 
 \[\xymatrix{
-  \R\Gamma_c(X,K)\lotimes_\Lambda \Lambda' \ar[r]^-\sim & \R \Gamma_c(X,K\lotimes_\Lambda \Lambda') \text{.}
+  \R\Gamma_c(X,\cK)\lotimes_\Lambda \Lambda' \ar[r]^-\sim & \R \Gamma_c(X,\cK\lotimes_\Lambda \Lambda') \text{.}
 }\]
 
 Des fl\`eches plus g\'en\'erales sont construits dans \cite[XVII 4.2.12]{sga4}. La 
@@ -4650,20 +4650,20 @@ m\'
 ethode est la suivante: 
 \begin{enumerate}[\indent a)]
   \item La d\'efinition de $\R\Gamma_c$ est la formule 
-    $j_!(K\otimes_\Lambda\Lambda') = (j_! K)\otimes_\Lambda\Lambda'$ pour une 
+    $j_!(\cK\otimes_\Lambda\Lambda') = (j_! \cK)\otimes_\Lambda\Lambda'$ pour une 
     immersion ouverte nous ram\`enent au cas o\`u $X$ est propre. 
-  \item Pour $X$ propre, il s'agit de remplacer $K$ par un complexe born\'e \`a 
+  \item Pour $X$ propre, il s'agit de remplacer $\cK$ par un complexe born\'e \`a 
     composantes acycliques pour le foncteur $\Gamma$, et de fibre en tout point 
     g\'eom\'etrique (ou seulement un tout point ferm\'e) homotope \`a un 
     complexe de $\Lambda$-modules plats. Pour un tel complexe, on a 
-    $\Gamma(X,K)\sim \R\Gamma(X,K)$ et 
-    $K\otimes_\Lambda\Lambda'\sim K\lotimes_\Lambda\Lambda'$; la fl\`eche 
+    $\Gamma(X,\cK)\sim \R\Gamma(X,\cK)$ et 
+    $K\otimes_\Lambda\Lambda'\sim \cK\lotimes_\Lambda\Lambda'$; la fl\`eche 
     \eqref{II:eq:4-11-1} est d\'efinie comme la composition 
     \[
-      \R\Gamma(X,K)\lotimes_\Lambda \Lambda' \to \Gamma(X,K)\otimes_\Lambda\Lambda' \to \Gamma(X,K\otimes_\Lambda\Lambda') \xleftarrow\sim \R\Gamma(X,K\lotimes_\Lambda\Lambda') \text{.}
+      \R\Gamma(X,\cK)\lotimes_\Lambda \Lambda' \to \Gamma(X,\cK)\otimes_\Lambda\Lambda' \to \Gamma(X,\cK\otimes_\Lambda\Lambda') \xleftarrow\sim \R\Gamma(X,\cK\lotimes_\Lambda\Lambda') \text{.}
     \]
-  \item Il reste \`a montrer qu'il est possible de remplacer $K$ par un 
-    complexe du type voulu \cite[XVII.4.2.10]{sga4}. On remplace d'abord $K$ par 
+  \item Il reste \`a montrer qu'il est possible de remplacer $\cK$ par un 
+    complexe du type voulu \cite[XVII.4.2.10]{sga4}. On remplace d'abord $\cK$ par 
     un complexe born\'e \`a composantes plates (\ref{II:4-6}), puis on en prend 
     une r\'esolution flasque canonique tronqu\'ee (ceci ne modifie pas le type 
     d'homotopie des complexes fibres, et on tronque assez loin pour que 
@@ -4739,14 +4739,14 @@ correspondance, et non seulement pour les it\'er\'es d'un Frobenius. Elle est
 un cas particulier de l'\'enonc\'e suivent (allpiqu\'e \`a $X(\dF)$, $K$ et 
 aux ${F^*}^n$). 
 
-(*) Soit $X$ un ensemble fini, $F:X\to X$, $K\in\ob\D_\text{parf}(X,\Lambda)$ 
-et $F^*:F^* K\to K$. On a 
+(*) Soit $X$ un ensemble fini, $F:X\to X$, $\cK\in\ob\D_\text{parf}(X,\Lambda)$ 
+et $F^*:F^* \cK\to \cK$. On a 
 \[
-  \sum_{X^F} \tr\left(F^*,K_x\right) = \tr\left(F^*,\Gamma(X,K)\right) \text{.}
+  \sum_{X^F} \tr\left(F^*,\cK_x\right) = \tr\left(F^*,\Gamma(X,K)\right) \text{.}
 \]
 
-On a $\Gamma(X,K)=\bigoplus_{x\in X} K_x$, et la formule r\'esulte de ce que 
-pour tout morphisme $u:\bigoplus_{x\in X} K_x\to \bigoplus_{x\in X} K_x$, de 
+On a $\Gamma(X,\cK)=\bigoplus_{x\in X} \cK_x$, et la formule r\'esulte de ce que 
+pour tout morphisme $u:\bigoplus_{x\in X} \cK_x\to \bigoplus_{x\in X} \cK_x$, de 
 matrice $u_x^y$, on a $\tr(u)=\sum_{x\in X} \tr\left(u_x^x\right)$. 
 
 
@@ -5287,7 +5287,7 @@ de type fini, le complexe de $A$-modules $\Gamma^n K$ a les m\^emes
 propri\'et\'es. 
 
 Notons $\D_\text{parf}^{\geqslant 0}(A)$ la sous-cat\'egorie de 
-$\D_\text{parf}(A)$ (\nameref{II}, \ref{II:4-3}) form\'ee des complexes de 
+$\D_\text{parf}(A)$ (Rapport, \ref{II:4-3}) form\'ee des complexes de 
 tor-dimension $\leqslant 0$. On voit que $\Gamma^n$ induit un foncteur 
 \[
   \eL\Gamma^n : \D_\text{parf}^{\geqslant 0}(A) \to \D_\text{parf}^{\geqslant 0}(A) \text{.}
@@ -5321,7 +5321,7 @@ soient projectifs de type fini. Alors
 \]
 
 
-\subsubsection{}\label{III:7-2}
+\subsubsection{}\label{III:1-7-2}
 
 Si on translate $K$ de $q$ crans vers la gauche, on a 
 \[
@@ -5352,7 +5352,7 @@ degr\'es $\geqslant 0$ de $A$-modules projectifs de type fini
 \[
   0 \to K' \to K \to K'' \to 0 \text{.}
 \]
-On a $D(u,)=D(u,K')\cdot D(u,K'')$.
+On a $D(u,K)=D(u,K')\cdot D(u,K'')$.
 \end{lemma_}
 
 Si $0\to M'\to M\to M''\to 0$ est une suite exacte courte scindable de 
@@ -5387,7 +5387,7 @@ $\gr_F^p(K^q)$ soient projectifs de type fini. Alors,
 Soient $u$ un endomorphisme d'un $A$-module projectif de type fini $M$, et 
 $M[-q]$ le complexe r\'eduit \`a $M$ en degr\'e $q$. On a 
 \[
-  D\left(u,M[-q]\right) = \left(\sum \tr(u,\Gamma^n M) t^n\right)^{(-1)^q} \qquad \text{($q\geqslant 0$.}
+  D\left(u,M[-q]\right) = \left(\sum \tr(u,\Gamma^n M) t^n\right)^{(-1)^q} \qquad \text{($q\geqslant 0$.)}
 \]
 \end{lemma_}
 
@@ -5404,10 +5404,151 @@ Cette formule r\'esulte de \ref{III:1-9}, appliqu\'e ou complexe $K$ r\'eduit a
 $M$ en degr\'es $q$ et $q+1$ (avec $d=\operatorname{id}$), et \`a sa 
 filtration b\^ete:
 \[
-  (\cdot 0 \to M \cdots) \to (\cdots M \to M) \to (\cdots M \to 0 \to 0 \cdots) \text{.}
+  (\cdots 0 \to M \cdots) \to (\cdots M \to M) \to (\cdots M \to 0 \to 0 \cdots) \text{.}
 \]
 En effet, $K$ est homotope \`a $0$. Dans la cat\'eegorie d\'eriv\'ee, on a donc 
 $\Gamma^n(K)=\Gamma^n(0)$; $0$ pour $n>0$ et $A$ pour $n=0$, et $D(u,K)=1$. 
+
+
+
+
+
+\subsection{}\label{III:1-12}
+
+Prouvons \ref{III:1-8}. D'apr\`es \ref{III:1-10} appliqu\'e \`a la filtration 
+``b\^ete'' de $K$ par les sous-complexes 
+\[
+  0 \to \cdots \to 0 \to K^q \to K^{q+1} \to \cdots \text{,}
+\]
+on a 
+\[
+  D(u,K) = \prod_q D\left(u,K^q[-q]\right) =_{\text{(\ref{III:1-10})}} \prod_q \left(\sum \tr\left(u,\Gamma^n(K^q)\right) t^n \right)^{(-1)^q} \text{.}
+\]
+Il reste \`a prouver que pour $u$ un endomorphisme d'un module projectif de type 
+fini $M$, on a 
+\begin{equation}\label{III:eq:1-12-1}
+  \det\left(1-u t,M\right)^{-1} = \sum \tr(u,\Gamma^n M) t^n \text{.}
+\end{equation}
+Si $u=0$, les deux membres valent $1$. Ajoutant \`a $M$ un module $N$ sur lequel 
+$u=0$, et appliquent \ref{III:1-9}, on se ram\`ene \`a supposer que $M$ est libre. 
+Prenons-en un base. Il s'agit alors de prouver des identit\'es alg\'ebriques 
+entres les coordonn\'ees de $u$. Le principe de prolongement des identit\'es 
+alg\'ebriques nous ram\`ene \`a supposer que $A$ est un corps alg\'ebriquement 
+clos. Le module $M$ admet alors une filtration stable par $u$ \`a quotients 
+successifs de rang $1$, et \ref{III:1-10} nous ram\`ene au case o\`u $M$ est de 
+rang $1$. La formule \eqref{III:eq:1-12-1} se ram\`ene alors \`a l'identit\'e 
+\[
+  \frac{1}{1-a t} = \sum a^n t^n \text{.}
+\]
+
+
+
+
+
+\begin{corollary_}\label{III:1-13}
+Soient $u$ et $u'$ des endomorphismes de complexes born\'es $K$ et $K'$ de 
+$A$-modules projectifs de type fini. Si, dans la cat\'egorie d\'eriv\'ee, $K$, 
+muni de $u$, est isomorphe \`a $K'$, muni de $u'$, alors 
+\[
+  \det(1-u t,K) = \det(1-u' t,K') \text{.}
+\]
+\end{corollary_}
+
+Appliquent \ref{III:1-7-2}, on se ram\`ene \`a supposer que $K$ et $K'$ sont \`a 
+degr\'es positifs. On observe alors que le second membre de \ref{III:1-8} 
+poss\`ede la propri\'et\'e d'invariance voulue. 
+
+
+
+
+
+\subsection{}\label{III:1-14}
+
+Ce corollaire permet de d\'efinir $\det(1-u t,K)$ pour $u$ un endomorphisme de 
+$K\in \ob\D_\text{parf}(A)$. Cette construction est ad hoc; en fait, pour $v$ un 
+automorphisme de $L\in\ob\D_\text{parf}(\Lambda)$, on peut d\'efinir 
+$\det(v)\in\Lambda^\times$, et $\det(1-u t,K)$ s'obtient pour $v=1-u t$, 
+$\Lambda=A\llbracket t\rrbracket$ et $L=K\otimes_A\Lambda$. 
+
+
+
+
+
+
+
+
+
+
+\section{Le Th\'eor\`eme}\label{III:2}
+
+
+
+
+
+\subsection{}\label{III:2-1}
+
+Reprenons les notations de (Rapport, \S\ref{II:1}). Pour $A$ un anneau 
+noeth\'erien commutatif de torsion, $X_0$ un sch\'ema s\'epar\'e de type fini sur 
+$\dF_q$ et $\cK_0\in\ob\D_\text{ctf}(X_0;A)$, on pose 
+\[
+  L(X_0,\cK_0) = \prod_{x\in |X_0|} \det\left(1-F_x^* t^{\deg(x)}, \cK\right)^{-1}
+\]
+(\ref{III:1-7}, \ref{III:1-13} et Rapport, \ref{II:1-5}, \ref{II:1-6}). 
+
+
+
+
+
+\begin{theorem_}\label{III:2-2}
+Dans chacun des deux cas suivants
+\begin{enumerate}[\indent a)]
+  \item $A$ est de torsion premi\`re \`a $p$;
+  \item $A$ est r\'eduit et de caract\'eristique $p$
+\end{enumerate}
+on a 
+\begin{equation}\label{III:eq:2-2-1}
+  L(X_0,\cK_0) = \det\left(1-F^* t^f, \R\Gamma_c(X,\cK)\right)^{-1} \text{.}
+\end{equation}
+\end{theorem_}
+
+
+
+
+
+\subsection{Remarque}\label{III:2-3}
+
+Dans le cas a), la m\'ethode de Rapport, \S\ref{II:3} permet de d\'eduire de 
+la formule des traces (Rapport \ref{II:4-10}) que les d\'eriv\'ees logarithmiques 
+des deux membres de \eqref{III:eq:2-2-1} sont \'egales. L'anneau $A$ \'etant de 
+torsion, cela ne suffit pas pour prouver \ref{III:2-2}. 
+
+
+
+
+
+\subsection{Remarque}\label{III:2-4}
+
+Si $A$ est un corps, on a 
+\[
+  L(X_0,\cK_0) = \prod_i L\left(X_0,\underline\h^i(\cK_0)\right)^{(-1)^i}
+\]
+et la suite spectrale 
+$E_2^{p q} = \h_c^p(X,\underline\h^q(\cK))\Rightarrow \h_c^{p+q}(X,\cK)$ montre 
+que 
+\begin{align*}
+  \det\left(1-F^* t, \R\Gamma_c(X,\cK)\right) 
+    &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\cK)\right)^{(-1)^n} \\
+    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\cK))\right)^{(-1)^{p+1}} \text{.}
+\end{align*}
+Ceci ram\`ene \ref{III:2-2} (pour $A$ un corps) au cas particulier suivant. 
+
+
+\subsubsection{}\label{III:2-4-1}
+
+Si $\cG_0$ est un faisceau constructible de $A$-espaces vectoriels, on a 
+\[
+  L(X_0,\cG_0) = \prod_n \det\left(1-F^* t^f,\h_c^n(X,\cG)\right)^{(-1)^{n+1}} \text{.}
+\]
 
 
 
