@@ -404,10 +404,166 @@ $Z(X_0,t)$.
 
 
 
-\subsection{Remarque}
+\subsection{Remarque}\label{III:2-7}
 
 
 Contrairement \`a ce que j'avais imprudemment affirm\'e \`a des amis, on ne 
 peut pas dans b) omettre l'hypoth\`ese ``$A$ r\'eduit.'' Pour un contre 
 exemple, cf. \ref{III:4-5}. 
 
+
+
+
+
+\subsection{Plan de la preuve de \ref{III:2-2}}\label{III:2-8}
+
+Une translation sur les degr\'es \ref{III:1-7-2} nous ram\`ene \`a supposer 
+que $\cK_0$ est un complexe born\'e, \`a degr\'e positifs, de faisceaux de 
+$A$-modules constructibles et plats. On a alors 
+$\R\Gamma_c(X,\cK)\in \ob\D_\text{parf}^{\geqslant 0}(A)$ (Rapport, 
+preuve \ref{II:4-9}, b). Nous allons utiliser \ref{III:1-8} pour d\'evelopper 
+les deux membres de \eqref{III:eq:2-2-1} en s\'erie de puissances de $T=t^f$. 
+L'\'egalit\'e des coefficients de $T^n$ de d\'eduira de 
+\cite[XVII 5.5.21]{sga4} et d'une formule des traces sur 
+$\operatorname{Sym}^n(X)$; dans le cas a), le formule (Rapport, 
+\ref{II:4-10} ?), et dans le cas b) une formule qui sera prouv\'ee dans le 
+chapitre suivant. Il y a lieu de se ramener au pr\'ealable au cas o\`u les 
+puissances sym\'etriques de $X_0$ existent (par exemple au cas o\`u $X$ est 
+affine) \`a l'aide des propri\'et\'es de multiplicativit\'e en $X_0$ des deux 
+membres de \eqref{III:eq:2-2-1}: pour $U_0$ un ouvert de $X_0$, de ferm\'e 
+compl\'ementaire $Y_0$, on a $L(X_0,\cK_0)=L(U_0,\cK_0)\cdot L(Y_0,\cK_0)$ et 
+la formule analogue pour le membre de droite r\'esulte de \ref{III:1-7-1} 
+par la m\'ethode de (Rapport \S\ref{II:6}A). 
+
+
+
+
+
+\subsection{Le cas o\`u $X_0$ est fini}\label{III:2-9}
+
+La multiplicativit\'e en $X_0$ des deux membres de \eqref{III:eq:2-2-1} 
+ram\`ene ce cas \`a celui o\`u $X_0=\spec(\dF_{q^k})$. Revenant aux 
+d\'efinitions, on voit que \eqref{III:eq:2-2-1} \'equivaut alors \`a 
+Rapport \ref{II:3-4}. 
+
+
+
+
+
+\subsection{Le premier membre}\label{III:2-10}
+
+D'apr\`es \ref{III:1-8}, on a 
+\[
+  L(X_0,\cK_0) = \prod_{x\in |X_0|} \sum_n \tr\left(F_x^*,\Gamma^n\cK\right) t^{m\deg(x)} \text{.}
+\]
+Le coefficient de $T^n$ est donc la domme, \'etendue \`a celles des 
+combinaisons lin\'eaires formelles $\sum_{x\in |X_0|} n_x\cdot x$ 
+($n_x\geqslant 0$, les $n_x$ presque tous nuls) d'\'el\'ements de $|X_0|$ 
+telles que $\sum n_x [k(x):\dF_q] = n$, des produits 
+\begin{equation}\label{III:eq:2-10-1}
+  \prod_x \tr\left(F_x^*,\Gamma^{n_x} \cK\right) \text{.}
+\end{equation}
+
+Pour $x\in |X_0|$, notons $(x)$ le $0$-cycle des $[k(x):\dF_q]$ points de $X$ 
+au-dessus de $x$ (une orbite de $F$). L'application 
+$\sum n_x\mapsto \sum n_x\cdot (x)$ identifie les combinaisons lin\'eaires 
+formelles comme ci-d
+essus, avec $\sum n_x [k(x):\dF_q]=n$, aux $0$-cycles effectifs de degr\'e $n$ 
+de $X$ fixes sous $F$, soit encore aux points fixes de $F$ dans 
+$\operatorname{Sym}^n(X)$. Le coefficient de $T^n$ dans $L(X_0,\cK_0)$ 
+apparait ainsi comme une somme de produits \eqref{III:eq:2-10-1}, inden\'ee 
+par $\operatorname{Sym}^n(X)^F$. Plus pr\'ecis\'ement, 
+
+
+
+
+
+\begin{lemma_}\label{III:2-11}
+ $L(X_0,\cK_0) = \sum_n \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\eL\Gamma_\textnormal{ext}^n \cK\right) T^n$.
+\end{lemma_}
+
+Pour $Y_0$ un sous-sch\'ema fini de plus en plus grand de $X_0$, on a 
+\[
+  L(X_0,\cK_0) = \lim L(Y_0,\cK_0) \text{,}
+\]
+i.e., pour tout $m$, il existe un sous-sch\'ema fini $Z_0\subset X_0$ tel que 
+si $Y_0\supset Z_0$, $L(X_0,\cK_0)$ et $L(Y_0,\cK_0|Y_0)$ soient congrus 
+$\mod T^m$. 
+Il suffit que $Z_0$ contienne les points ferm\'es de degr\'e $\leqslant m$. 
+Le m\^eme fait valant pour le membre de droite, il suffit de prouver 
+\ref{III:2-11} pour $X_0$ fini. On a alors 
+\begin{align*}
+  L(X_0,\cK_0) 
+    &=_\text{\ref{III:2-9}} \det\left(1-F^* T,\Gamma(X,\cK)\right)^{-1} \\
+    &=_\text{\ref{III:1-8}} \sum_n \tr\left(F^*,\Gamma^n \Gamma(X,\cK)\right) T^n \\
+    &=_\text{\ref{III:1-3}} \sum_n \tr\left(F^*,\Gamma(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n(\cK)\right) T^n \\
+    &= \sum_n \sum_{x\in \operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n(\cK)\right) T^n
+\end{align*}
+(par la formule des traces dans le cas trivial d'un ensemble fini). 
+
+
+
+
+
+\subsection{Le second membre}\label{III:2-12}
+
+D'apr\`es \ref{III:1-8} et \cite[XVII 5.5.12]{sga4}, on a 
+\begin{align*}
+  \det\left(1-F^* T,\R\Gamma_c(X,\cK)\right)^{-1} 
+    &= \sum_n \tr\left(F^*,\eL\Gamma^n\R\Gamma_c(X,\cK)\right) T^n \\
+    &= \sum_n \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n\cK)\right) T^n \text{.}
+\end{align*}
+
+
+
+
+
+\subsection{}\label{III:2-13}
+
+Le th\'eor\`eme \'equivaut donc aux formules des traces 
+\[
+  \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X,\Gamma_\text{ext}^n \cK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\cK\right) \text{.}
+\]
+Dans le cas a), elles r\'esultent de Rapport \ref{II:4-10}. La formule 
+analogue dans le cas b) sera prouv\'ee au \S\ref{III:4}. 
+
+
+
+
+
+
+
+
+
+
+\section{Th\'eorie d'Artin-Scheier}\label{III:3}
+
+
+
+
+
+\subsection{}\label{III:3-1}
+
+Dans ce qui suit, un faisceau coh\'erent sur un sch\'ema $S$ sera toujours 
+regard\'e comme un faisceau sur $S_\text{\'et}$. Soit $S$ un sch\'ema de 
+caract\'eristique $p>0$. Si $G$ un faisceau localement constant de 
+$\dZ/p$-vectoriels de rang fini, $\cG=G\otimes_{\dZ/p}\cO$ est un faisceau 
+coh\'erent localement libre sur $S$. On notera $\Phi$ tant l'endomorphisme 
+$f\mapsto f^p$ de $\cO$ que son produit tensoriel avec l'identit\'e de 
+$G$: $\phi:\cG\to\cG$. La th\'eorie d'Artin-Scheier \cite[IX 3.5]{sga4} 
+affirme que la suite 
+\[\xymatrix{
+  0 \ar[r] 
+    & \dZ/p \ar[r] 
+    & \cO \ar[r]^-{\Phi-1} 
+    & \cO \ar[r] 
+    & 0
+}\]
+est exacte. Par tensorisation avec $G$, on trouve un suite exacte 
+\[\xymatrix{
+  0 \ar[r] 
+    & G \ar[r] 
+    & \cG \ar[r]^-{\Phi-1} 
+    & \cG \ar[r] 
+    & 0
+}\]
