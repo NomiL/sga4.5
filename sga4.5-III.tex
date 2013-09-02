@@ -572,7 +572,404 @@ est exacte. Par tensorisation avec $G$, on trouve un suite exacte
 
 
 
+\subsection{}\label{III:3-2}
 
-\label{III:4}
-\label{III:4-2}
-\label{III:4-5}
+Supposons que $S$ soit un ouvert dans un sch\'ema noeth\'erien $\bar S$. 
+Soient $j:S\hookrightarrow \bar S$ le morphisme d'inclusion, et $I$ un 
+faisceau d'id\'eaux qui d\'efinit le ferm\'e compl\'ementaire 
+$\bar S\setminus S$. Notons encore $\Phi$ le prolongement par fonctoralit\'e 
+de $\Phi$ \`a $j_*\cG$. 
+
+
+
+
+
+\begin{lemma_}\label{III:3-3}
+Il existe des prolongements coh\'erents $\bar\cG\subset j_*\cG$ de $\cG$ tels 
+que 
+\begin{equation}\label{III:eq:3-3-1}
+  \Phi(\bar\cG)\subset I\cdot \bar\cG\text{.}
+\end{equation}
+Si $\bar\cG$ est un tel prolongement, la suite 
+\begin{equation}\label{III:eq:3-3-2}
+\xymatrix{
+  0 \ar[r] 
+    & j_! G \ar[r] 
+    & \bar\cG \ar[r]^-{\Phi-1} 
+    & \bar\cG \ar[r] 
+    & 0
+}
+\end{equation}
+ext exacte.
+\end{lemma_}
+\begin{enumerate}[a)]
+  \item \emph{Existence}: Soit $\cG'\subset j_*\cG$ un prolongement coh\'erent 
+    de $\cG$ \`a $\bar S$. Pour tout $n$, on a 
+    $\Phi(I^n \cG')\subset I^{p^n}\Phi(\cG')$. Soit $n$ assez grand pour 
+    que $I^{n(p-1)-1}\Phi(\cG')\subset \cG'$, et posons $\bar\cG=I^n\cG'$. 
+    On a $\Phi(\bar\cG)\subset I^{p n}\Phi(\cG') 
+    =I\cdot I^n\cdot I^{n(p-1)-1}\Phi(\cG')\subset I\cdot I^n\cG' 
+    = I\bar\cG$. 
+  \item \emph{Noyau de $\Phi-1$}: Sur $S$, l'assertion r\'esulte de 
+    \ref{III:3-1}; il reste \`a v\'erifier qu'une section de $x$ de 
+    $\ker(\Phi-1)$, sur $U$ \'etale sur $\bar S$, s'annule dans un voisinage de 
+    l'image r\'eciproque de $\bar S\setminus S$. Puisque $x=\Phi(x)$, on a en 
+    effet par \eqref{III:eq:3-3-1} $x\in I\bar\cG$; de plus, 
+    $x\in I^n\bar\cG\Rightarrow x=\Phi(x)\in\Phi(I^n\bar\cG)\subset I^{n p}\bar\cG$, et $x$ est dans tous les $I^n\bar\cG$, donc nul au voisinage de 
+    $\bar S\setminus S$.
+  \item \emph{Surjectivit\'e de $\Phi-1$}: On peut supposer $\bar S$ affine, en 
+    \'ecrire $\cG$ comme quotient de $\cO^n$; $\Phi$ se rel\`eve alors en une 
+    application $p$-lin\'eaire $\widetilde\Phi:\cO^n\to\cO^n$, et il suffit de 
+    v\'erifier la surjectivit\'e de $\widetilde\Phi-1$:
+    \[\xymatrix{
+      \cO^n \ar[r]^-{\widetilde \Phi-1} \ar[d] 
+        & \cO^n \ar[d] \\
+      \cG \ar[r]^-{\Phi-1} 
+        & \cG 
+    }\]
+    Le faisceau $\cO^n$ est le faisceau des sections locales du sch\'ema en 
+    groupes $\dG_a^n$, et $\widetilde\Phi-1$ est induit par un homomorphisme 
+    $\dG_a^n$ dans $\dG_a^n$. Cet homomorphisme est \'etale. Pour v\'erifier 
+    qu'il est surjectif, il suffit de le voir apr\`es tout changement de base 
+    $\spec(k)\to\bar S$ ($k$ alg\'ebriquement clos) et sur $k$ alg\'ebriquement 
+    clos, tout homomorphisme \'etale entre groupes connexes de m\^eme dimension 
+    est surjectif. Enfin, un morphisme \'etale et surjectif de 
+    $\bar S$-sch\'emas induit un \'epimorphisme entre les faisceaux 
+    correspondant sur $\et{\bar S}$.
+\end{enumerate}
+
+
+
+
+
+\subsection{Frobenius et Frobenius}\label{III:3-4}
+
+Le morphisme de Frobenius absolu $F_\text{abs}:S\to S$ est l'identit\'e sur 
+l'espace topologique sous-jacent \`a $S$, et $f\mapsto f^p$ sur le faisceau 
+structural. Pour $U/S$ \'etale, on a un isomorphisme canonique 
+$F_\text{abs}^* U=U$: le diagramme 
+\[\xymatrix{
+  U \ar[r]^-{F_\text{abs}} \ar[d] 
+    & S \ar[d] \\
+  S \ar[r]^-{F_\text{abs}} 
+    & S
+}\]
+est cart\'esien. L'endomorphisme de site annel\'e 
+$(\et{\bar S},\cO)\to(\et{\bar S},\cO)$ d\'efini par $F_\text{abs}$ peut donc 
+\^etre d\'ecrit comme suit:
+\begin{center}
+  $F_\text{abs}^*$ est l'identit\'e sur $\et S$; l'homomorphisme 
+  $F_\text{abs}^*\cO=\cO\to\cO$ est $\Phi$.
+\end{center}
+Avec ette description, pour tout faiseau \'etale $\cG$ sur $S$, la 
+correspondance de Frobenius $F_\text{abs}^*\cG\to\cG$ est l'identit\'e. 
+
+Se donner un morphisme $p$-lin\'eaire de faisceaux quasi-coh\'erents 
+$u:\cM\to\cN$ sur $S$ revient \`a se donner un morphisme lin\'eaire 
+$u':F_\text{abs}^*\cM\to\cN$. En particulier, avec les notations de 
+\ref{III:3-5}, l'homomorphisme $\Phi:\cG\to\cG$ correspond \`a 
+$\Phi':F_\text{abs}^*\cG\to\cG$. 
+
+
+
+
+
+\begin{lemma_}\label{III:3-5}
+Avec les notations de \ref{III:3-4}, le diagramme 
+\[\xymatrix{
+  F_\textnormal{abs}^* G \ar[r] \ar[d] 
+    & G \ar[d] \\
+  F_\textnormal{abs}^*\cG \ar[r]^-{\Phi'} 
+    & \cG 
+}\]
+est commutatif.
+\end{lemma_}
+
+Il suffit de le v\'erifier localement. On peut donc supposer $G$ constant, 
+auquel cas le lemme est \'evident. 
+
+La m\^eme th\'eorie vaut pour les puissances de $F_\text{abs}$.
+
+
+
+
+
+\subsection{}\label{III:3-6}
+
+Supposons maintenent que $\bar S$ soit un sch\'ema sur $\dF_q$ ($q=p^f$) et 
+conform\'ement aux conventions de Rapport \S\ref{II:1}, \'ecrivons 
+$S_0,\bar S_0,G_0,\cG_0,\bar\cG_0$ au lieu de $S,\dots$. Le lemme 
+\ref{III:3-5}, pour $F_\text{abs}^F:S_0\to S_0$, donne un diagramme commutatif 
+\[\xymatrix{
+  F^* G_0 \ar[r] \ar[d] 
+    & G_0 \ar[d] \\
+  F^*\cG_0 \ar[r]^-{(\Phi^f)'} \ar[r] 
+    & \cG_0 
+}\qquad\text{, puis}\qquad 
+\xymatrix{
+  F^*(j_! G_0) \ar[r] \ar[d] 
+    & j_!G_0 \ar[d] \\
+  F^*\bar\cG_0 \ar[r]^-{(\Phi^f)'}
+    & \cG_0
+}\text{,}
+\]
+puis, par extension des scalaires de $\dF_q$ \`a $\dF$ et passage \`a la 
+cohomologie 
+\[\xymatrix{
+  F^*(j_! G) \ar[r]^-{F_*} \ar[d] 
+    & j_!G \ar[d] \\
+  F^*\bar\cG \ar[r]
+    & \bar\cG
+}\qquad\text{et}\qquad 
+\xymatrix{
+  \h^\bullet(\bar S,j_! G) \ar[r]^-{F^*} \ar[d] 
+    & \h^\bullet(\bar S,j_!G) \ar[d] \\
+  \h^\bullet(\bar S,\bar\cG) \ar[r]
+    & \h^\bullet(\bar S,\bar\cG)
+}\text{,}
+\]
+o\`u la seconde ligne est obtenue par extension des scalaires de $\dF_q$ \`a 
+$\dF$ de l'endomorphisme $\dF_q$-lin\'eaire $\Phi^f$ de 
+$\h^\bullet(\bar S_0,\bar G_0)$. 
+
+La th\'eorie d'Artin-Scheier fournit une suite exacte longue 
+\[\xymatrix{
+  \cdots \ar[r]
+    & \h^i(\bar S,j_! G) \ar[r]
+    & \h^i(\bar S,\bar\cG) \ar[r]^-{\Phi-1}
+    & \h^i(\bar S,\bar\cG) \ar[r]
+    & \cdots
+}\]
+o\`u $\Phi$ est l'extension $p$-lin\'eaire \`a 
+$\h^\bullet(\bar S,\bar \cG)= \h^\bullet(\bar S_0,\bar\cG_0)\otimes_{\dF_q}\dF$ 
+de l'endomorphisme $p$-lin\'eaire $\Phi$ de $\h^\bullet(\bar S_0,\bar\cG_0)$. 
+
+
+
+
+
+\subsection{}\label{III:3-7}
+
+Si $\bar S_0$ est propre sur $\dF_q$, les $\h^i(\bar S,\bar\cG)$ sont de 
+dimension finie et $\Phi-1$ est surjectif (cf. \ref{III:3-6}b). On a donc 
+\[
+  \h_c^i(S,G) = \ker\left(\Phi-1 : \h^i(\bar S,\bar G) \to \h^i(\bar S,\bar\cG)\right) \text{,}
+\]
+et $F^*$ est induit par l'extension $\dF$-lin\'eaire \`a 
+$\h^i(\bar S,\bar\cG) = \h^i(\bar S_0,\bar\cG_0)\otimes_{\dF_q}\dF$ de 
+l'endomorphisme $\dF_q$-lin\'eaire $\Phi^f$ de $\h^i(\bar S_0m\bar\cG_0)$. 
+
+Appliquant le lemme \ref{III:3-8} ci-dessous, on en d\'eduit l'identit\'e 
+\begin{equation}\label{III:eq:3-7-1}
+  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(\Phi^f,\h^i(\bar S_0,\bar\cG_0)\right) \text{.}
+\end{equation}
+
+
+
+
+
+\begin{lemma_}\label{III:3-8}
+Soit $\Phi$ un endomorphisme $p$-lin\'eaire d'un espace vectoriel $V$ sur 
+$\dF_q$: $\phi(\lambda x) = \lambda^p\phi(x)$. On pose $F=\Phi^f$ ($F$ est 
+lin\'eaire) et on note encore $\Phi$ et $F$ les extensions respectivement 
+$p$-lin\'eaire de $\Phi$ et $F$ \`a $V\otimes_{\dF_q}\dF$. Alors, $F$ stabilise 
+$\ker(\Phi-1)\subset V\otimes_{\dF_q}\dF$ et 
+\[
+  \tr\left(F,\ker(\Phi-1)\right) = \tr(F,V) = \tr\left(F,V\otimes_{\dF_q}\dF\right) \text{.}
+\]
+\end{lemma_}
+
+Sur $V\otimes_{\dF_q}\dF$, on a $F\Phi = \Phi F$: l'endomorphisme $p$-lin\'eaire 
+$F\Phi-\Phi F$ s'annule sur $V$, donc partout. Ecrivons $V=V'+V''$, avec $F$ 
+inversible sur $V'$ et nilpotent sur $V''$. La th\'eorie des endomorphismes 
+$p$-lin\'eaires assure que 
+\[
+  \ker(\Phi-1)\otimes_{\dF_q}\dF \iso V'\otimes_{\dF_q}\dF \text{.}
+\]
+Puisque $\tr(F,V'') = 0$, on a donc 
+\begin{align*}
+  \tr\left(F,\ker(\Phi-1)\right) 
+    &= \tr\left(F,\ker(\Phi-1)\otimes_{\dF_q}\dF\right) = \tr\left(F,V'\otimes_{\dF_q}\dF\right) \\
+    &= \tr\left(F,V\otimes_{\dF_q}\dF\right) = \tr(F,V) \text{.}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+\section{Formule des traces modulo $p$}\label{III:4}
+
+
+
+
+
+\begin{theorem_}\label{III:4-1}
+Soitent $X_0$ un sch\'ema s\'epar\'e de type fini sur $\dF_q$, $A$ un anneau 
+noeth\'erien commutatif r\'eduit et de caract\'eristique $p$, et 
+$\cK_0\in\ob\D_\textnormal{ctf}(X_0,A)$. On a 
+\begin{equation}\label{III:eq:4-1-1}
+  \sum_{x\in X^F} \tr\left(F_x^*,\cK_x\right) = \tr\left(F^*,\R\Gamma_c(X,\cK)\right) \text{.}
+\end{equation}
+\end{theorem_}
+
+
+
+
+
+\subsection{R\'eduction au cas o\`u $A$ est un corps fini}\label{III:4-2}
+
+%NOTE: in this paragraph and others, (3.1.1) seems to be referring to (4.1.1)
+Un argument standard de passage \`a a limite nous ram\`ene au cas o\`u $A$ est 
+de type fini sur $\dZ/p$. Pour chaque id\'eal maximal $\fm$ de $A$, l'image de 
+chaque membre de \eqref{III:eq:4-1-1} dans $A/\fm$ est don\'ee par la m\^eme 
+formule, avec $\cK_0$ remplac\'e par 
+$\cK_0\lotimes_A A/\fm\in\ob\D_\text{ctf}(X_0,A/\fm)$ (pour le second membre, 
+cf. Rapport \ref{II:4-12}). Les $A/\fm$ \'etant finis, et l'intersection des 
+id\'eaux maximaux de $A$ \'etant r\'eduit \`a $0$, on obtient la r\'eduction 
+annonc\'ee.
+
+
+
+
+
+\subsection{R\'eduction au cas o\`u \texorpdfstring{$A=\dZ/p$}{A=Z/p}}\label{III:4-3}
+
+Supposons que $A$ soit un corps fini, et notons $T_A'(\cK_0)$ et $T_A''(\cK_0)$ 
+les deux membres de \eqref{III:eq:4-1-1}. Si, par restriction des scalaires, on 
+regarde $\cK_0$ comme un complexe de faisceaux de $\dZ/p$-modules, on a 
+\[
+  T_{\dZ/p}'(\cK_0) = \tr_{A/(\dZ/p)} T_A'(\cK_0)
+\]
+et de m\^eme pour $T''$. Si \eqref{III:eq:4-1-1} vaut pour $A=\dZ/p$, on a donc 
+\begin{equation}\label{III:eq:4-3-1}
+  \tr_{A/(\dZ/p)} T_A'(\cK_0) = \tr_{A/(\dZ/p)} T_A''(\cK_0) \text{.}
+\end{equation}
+J'affirme que, pour tout $\lambda\in A$, on a m\^eme 
+\begin{equation}\label{III:eq:4-3-2}
+  \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A'(\cK_0)\right) = \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A''(\cK_0)\right) \text{,}
+\end{equation}
+et donc $T_A'(\cK_0) = T_A''(\cK_0)$. C'est clair pour $\lambda=0$. Pour 
+$\lambda$ inversible, notons $A(\lambda)$ l'image r\'eciproque sur $X$ du 
+faisceau de $A$-modules libre de rang un sur $\spec(\dF_q)$ pour lequel 
+$F^*=\lambda$. La formule \eqref{III:eq:4-3-2} n'est autre que 
+\eqref{III:eq:4-3-1} pour $A(\lambda)\otimes_A \cK_0$. 
+
+
+
+
+
+% originally theorem 4.1bis (i.e. theorem 4.1 again)
+\begin{theorem_}\label{III:4-1bis}
+Soient $\bar S_0$ une courbe projective et lisse, 
+$j:S_0\hookrightarrow \bar S_0$ un ouvert dense de $\bar S_0$, et $G_0$ un 
+faisceau localement constant de $\dZ/p$-espaces vectoriels de rang fini sur 
+$S_0$. On a 
+\begin{equation}\label{III:eq:4-4-1}
+  \sum_{x\in S^F} \tr\left(F_x^*,G_x\right) = \sum_i (-1)^i \tr\left(F^*,\h_c^i(S,G)\right) \text{.}
+\end{equation}
+\end{theorem_}
+\begin{proof}
+Appliquons \ref{III:3-3} \`a $(S_0,\bar S_0,G_0)$. Le prolongement coh\'erent 
+$\bar\cG_0$ de $\cG_0$ dont \ref{III:3-3} garantit l'existence est localement 
+libre car il est sans torsion (on  $\bar\cG_0\subset j_*\cG_0$) et que 
+$\bar S_0$  est r\'egulier de dimension un. L'endomorphisme $q$-lin\'eaire 
+$\Phi^f$ de $\bar\cG_0$ peut s'interpr\'eter comme un morphisme 
+\[
+  u : F^*\bar\cG_0 \to \bar\cG_0 \text{.}
+\]
+Il se factorise par $I\bar G$, pour $I$ d\'efinissant le ferm\'e 
+$\bar S\setminus S$. Soit $v:j_!G_0 \to \bar\cG_0$ l'unique prolongement de 
+l'application naturelle $G_0 \to \cG_0 = G_0\otimes_{\dZ/p}\cO$. Le diagramme 
+\begin{equation}\label{III:eq:4-4-2}
+\xymatrix{
+  F^* j_! G_0 \ar[r]^-{F^*} \ar[d]^-{F^* v} 
+    & j_! G_0 \ar[d]^-v \\
+  F^*\bar \cG_0 \ar[r]^-u 
+    & \bar\cG_0
+}
+\end{equation}
+Enfin, notons $u F^*$ l'application compos\'ee 
+\[\xymatrix{
+  \h^\bullet(\bar S,\bar\cG) \ar[r]^-{F^*} 
+    & \h^\bullet(\bar S,F^*\bar\cG) \ar[r]^-u 
+    & \h^\bullet(\bar S,\bar\cG) \text{,}
+}\]
+on par \eqref{III:eq:3-7-1}
+\begin{equation}\label{III:eq:4-4-3}
+  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(u F^*,\h^i(\bar S,\bar\cG)\right) \text{.}
+\end{equation}
+
+%NOTE: trace down reference for Woodshole seminar
+Pour chaque point ferm\'e $i_x:x\hookrightarrow \bar  S$ de $\bar S$, posons 
+$\bar\cG_x = i_x^*\bar\cG$. La formule des traces de Lefschetz en cohomologie 
+coh\'erente (``Woodshole fixed point formula''), appliqu\'e \`a $F$ et $u$, dit 
+que 
+\begin{equation}\label{III:eq:4-4-4}
+  \sum_i (-1)^i \tr\left(u^* F^*, \h^i(\bar S,\bar\cG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\cG_x)}{\det(1-d F_x)} \text{.}
+\end{equation}
+Au second membre
+\begin{enumerate}[\indent a)]
+  \item puisque $d F=0$, les d\'enominateurs valent 1;
+  \item pour $x\in \bar S^F\setminus S^F$, l'endomorphisme $u_x$ de $\bar\cG_x$ 
+    est nul, donc aussi $\tr(u_x,\bar\cG_x)$;
+  \item pour $x\in S^F$, \eqref{III:eq:4-4-4} fournit une contribution 
+    \[
+      \tr(u_x,\bar\cG_x) = \tr(F_x^*,G_x) \text{.}
+    \]
+    L'identit\'e \eqref{III:eq:4-4-1} r\'esulte donc de \eqref{III:eq:4-4-3} 
+    et \eqref{III:eq:4-4-4}. 
+\end{enumerate}
+\end{proof}
+
+
+
+
+
+\subsection{Un contre-exemple}\label{III:4-5}
+
+On montre par un exemple qu'on ne peut pas, dans \ref{III:4-1}, omeettre 
+l'hypoth\`ese que $A$ soit r\'eduit.
+
+Soit $Y_0$ la courbe elliptique sur $\dF_2$ pour laquelle les valeurs propres 
+de Frobenius sont $\pm \sqrt{-2}$. Elle a $3$ points rationnels, et est 
+supersinguli\`ere. L'involution $\sigma:x\mapsto -x$ n'a donc qu'un seul point 
+fixe, le point $0$. Le quotient de $Y_0$ par $\sigma$ est un droite projective; 
+celui de $Y_0\setminus 0$ par $\sigma$ est donc une droite affine $\dF_0^1$, et 
+$Y_0\setminus 0$ est un rev\^etement double non ramifi\'e de $\dF_0^1$:
+\[
+  \pi:Y_0\setminus 0 \to \dA_0^1 \qquad \text{, $\pi=\pi\sigma$.}
+\]
+
+Le faisceau $\pi_*\dZ/2$ est un module libre de rang un sur l'alg\`ebre $A$ du 
+groupe \`a deux \'el\'ements $\{1,\sigma\}$ sur $\dZ/2$. Cette alg\`ebre est 
+isomorphe \`a celle des nombres sur $\dZ/2$. 
+
+Le faisceau de $A$-modules $\pi_*\dZ/2$ est notre exemple:
+\begin{enumerate}[\indent a)]
+  \item On a 
+    $\h_c^\bullet(\dA^1,\pi_*\dZ/2) = \h_c^\bullet(Y\setminus 0,\dZ/2)$. 
+    Puisque $Y_0$ est supersinguli\`ere, on a $\h^i(Y,\dZ/2)=0$ pour $i>0$, et 
+    la suite exacte longue 
+    \[
+      \cdots \to \h_c^i(Y\setminus 0,\dZ/2) \to \h^i(Y,\dZ/2) \to \h^i(\{0\},\dZ/2) \to \cdots
+    \]
+    montre que $\h_c^\bullet(Y\setminus 0,\dZ/2)=0$. On a donc 
+    $\h_c^\bullet(\dA^1,\pi_*\dZ/2)=0$ et 
+    \[
+      \tr_A\left(F^*,\R\Gamma_c(\dA^1,\pi_*\dZ/2)\right) = 0 \text{.}
+    \]
+  \item Puisque $Y_0\setminus 0$ a deux points rationnels, en l'un des points 
+    rationnels de $\dA_1^0$, la substitution de Frobenius est l'identit\'e, et 
+    en l'autre, c'est $\sigma$. On a donc 
+    \[
+      \sum_{x\in {\dA^1}^F} \tr\left(F^*,\pi_*\dZ/2\right) = 1+\sigma \text{,}
+    \]
+    et $1+\sigma\ne 0$.
+\end{enumerate}
+
+L'\'equation du rev\^etement $\pi$ est $y^2-y=x^3$.
