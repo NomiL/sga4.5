@@ -86,6 +86,445 @@ $F$ agit par $(f,x)\mapsto \alpha(f)+x$, soit de classe $\partial h$.
 
 
 
+\subsubsection{}\label{IV:1-1-2}
+
+Soit $\cP$ un $\cF$-torseur. Si $(U_i)$ est un recouvrement ouvert de $X$, et 
+$p_i$ un section de $\cP$ sur $U_i$, on associe \`a $\cP$ le cocycle de 
+\v{C}ech
+\[
+  p_{i j} = p_j - p_i \qquad \text{($p_{i j}\in \h^0(U_i\times U_j,\cF)$).}
+\]
+Si, selon la r\`egle usuelle, on d\'efinit l'application 
+$\operatorname{\check H}^\bullet(X,\cF)\to \h^\bullet(X,\cF)$ de telle sorte 
+que ce soit un morphisme de $\delta$-foncteurs, l'image de 
+$(p_{i j})\in \operatorname{\check H}^1(X,\cF)$ dans $\h^1(X,\cF)$ est la 
+classe de $\cP$, telle que normalis\'ee par \ref{IV:1-1-1}. 
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-3}
+
+La d\'efinition de $\h^\bullet(X,\cF)$ est la suivante: pour $\cF^\bullet$ une 
+r\'esolution \`a composantes acycliques de $\cF$, 
+$\h^i(X,\cF) = \h^i\Gamma(X,\cF^\bullet)$. La structure de $\delta$-functor 
+s'obtient en associant \`a une suite exacte courte de faisceaux une suite 
+exacte courte de r\'esolutions qui reste exacte apr\`es application du 
+foncteur $\Gamma$. Si $\cF^\bullet$ est une r\'esolution de $\cF$, 
+l'homomorphisme de connection $\partial$ associ\'e \`a 
+\[\xymatrix{
+  0 \ar[r]
+    & \cF \ar[r]
+    & \cF^0 \ar[r]^-d 
+    & \ker(d) \ar[r] 
+    & 0
+}\]
+induit l'oppos\'e de l'isomorphisme de d\'efinition 
+$\h^1(X,\cF) = \Gamma\left(X,\ker(d)\right)/d \Gamma(X,\cF^0)$. 
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-4}
+
+Soit $U$ une partie ouverte de $X$ (un sous-faisceau du faisceau final) et 
+soit $D$ le ``ferm\'e compl\'ementaire.'' On sait que $\h_D^1(X,\cF)$ 
+classifie les $\cF$-torseurs sur $X$, trivialis\'es sur $U$. Pour toute suite 
+exacte courte $0\to \cF\xrightarrow\alpha \cG\xrightarrow\beta\cH\to 0$, et 
+toute section \`a support dans $D$ $h\in\h_D^0(X,\cH)$, le torseur 
+$\beta^{-1}(h)$, trivialis\'e sur $U$ par la section $0$, a pour classe 
+$\partial h$.
+
+La suite exacte longue de cohomologie \`a support
+\[\xymatrix{
+  \cdots \ar[r]^-\partial 
+    & \h_D^i(X,\cF) \ar[r] 
+    & \h^i(X,\cF) \ar[r]
+    & \h^i(U,\cF) \ar[r]^-\partial 
+    & \cdots
+}\]
+est d\'efinie \`a partir de la suite de foncteurs 
+\[\xymatrix{
+  0 \ar[r] 
+    & \Gamma_D \ar[r] 
+    & \Gamma \ar[r] 
+    & \Gamma(U,-) \ar[r] 
+    & 0
+}\]
+(exacte sur les faisceaux injectifs). Pour toute section $f\in \h^0(U,\cF)$, 
+$\partial f\in \h_D^1(X,\cF)$ est la classe du torseur trivial $\cF$, 
+trivialis\'e sur $U$ par la section $f$. 
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-5}
+
+Soit $j:U\hookrightarrow X$. Si $\cF$ s'injecte dans $j_* j^* \cF$, la suite 
+exacte 
+\[\xymatrix{
+  0 \ar[r] 
+  & \cF \ar[r]
+  & j_* j^* \cF \ar[r]
+  & j_* j^* \cF / \cF \ar[r]
+  & 0
+}\]
+fournit 
+$\partial:\h^0(j_* j^*\cF/\cF) = \h_D^0(j_* j^* \cF/\cF) \to \h_D^1(X,\cF)$. 
+L'application compos\'ee 
+\[\xymatrix{
+  \h^0(U,\cF) = \h^0(X,j_* j^*\cF) \ar[r] 
+    & \h^0(X,j_* j^*\cF / \cF) \ar[r]^-\partial 
+    & \h_D^1(X,\cF)
+}\]
+est l'oppos\'ee de l'application consid\'er\'ee en \ref{IV:1-1-4}. 
+
+
+
+
+
+\subsubsection{}\label{IV:1-1-6}
+
+On rappelle que si $\cL$ est un faisceau inversible sur un sch\'ema $X$, le 
+$\dG_m$-torseur correspondant est le faisceau $\operatorname{Isom}(\cO,\cL)$, 
+sur lequel $\dG_m$ agit par 
+$(\lambda,f)\mapsto f\circ (\lambda\cdot) = \lambda f$. On rappelle aussi que 
+si $D$ est un diviseur de Cartier sur $X$, et $j:U\hookrightarrow X$ 
+l'inclusion d'ouvert compl\'ementaire, le faisceau inversible $\cO(D)$ est le 
+sous-faisceau de $j_*\cO_U$ form\'e des sections locales $s$ telles que $s f$ 
+soit dans $\cO_X$, pour $f$ une \'equation locale de $D$.
+
+
+
+
+
+
+
+
+
+
+\subsection{Cup-produits}\label{IV:1-2}
+
+Dans ce num\'ero, nous d\'eveloppons quelques remarques sur les cup-produits en 
+cohomologie \`a support qui nous reservirons, dans [\nameref{V}], pour relier 
+dualit\'e de Poincar\'e des courbes et autodualit\'e de la jacobienne.
+
+\subsubsection{}\label{IV:1-2-1}
+
+Soient $X$ un site, $Y$ un partie ferm\'ee de $X$, et $\cF,\cG$ deux faisceaux 
+ab\'eliens sur $X$. Par exemple: $X$ un sch\'ema, $Y$ un sous-sch\'ema ferm\'e 
+et $\cF,\cG$ des faisceaux sur $\et X$. D\'efinissons un produit 
+\begin{equation}\label{IV:eq:1-2-1-1}
+  \Gamma_Y(X,\cF)\otimes \Gamma(Y,\cG) \to \Gamma_Y(X,\cF\otimes\cG) \text{.}
+\end{equation}
+Le produit d'une section $s$, \`a support dans $Y$, de $\cF$ par une section 
+$t$ de $\cG$ sur $Y$ s'obtient comme suit: localement sur $X$, $t$ est la 
+restriction \`a $Y$ d'une section $t'$ de $\cG$ sur $X$, et on forme le produit 
+$s\otimes t'$. Il est \`a support dans $Y$, et ne d\'epend pas du choix de 
+$t'$, ce qui l\'egitime et permet de globaliser la d\'efinition.
+
+Soit $i:Y\hookrightarrow X$ le morphisme d'inclusion. L'analogue local de 
+\eqref{IV:eq:1-2-1-1} est le produit.
+\begin{equation}\label{IV:eq:1-2-1-2}
+  i^!\cF\otimes i^*\cG \to i^!(\cF\otimes\cG) \text{,}
+\end{equation}
+dont \eqref{IV:eq:1-2-1-1} se d\'eduit par application de $\Gamma(Y,-)$. 
+
+
+
+
+
+\subsubsection{}\label{IV:1-2-2}
+
+D\'erivons ces fl\`eches. Soient $\cK$, $\cL$ et $\cM$ dans la cat\'egorie 
+d\'eriv\'ee, et une application bilin\'eaire $\cK\lotimes\cL\to\cM$. Par 
+d\'erivation de \eqref{IV:eq:1-2-1-1}, on en d\'eduit 
+\begin{equation}\label{IV:eq:1-2-2-1}
+  \R\Gamma_Y(X,\cK) \lotimes \R\Gamma(Y,\cL) \to \R\Gamma_Y(X,\cM) 
+\end{equation}
+induisant 
+\begin{equation}\label{IV:eq:1-2-2-2}
+  \h_Y^i(X,\cK)\otimes \h^j(Y,\cL) \to \h_Y^{i+j}(X,\cM)
+\end{equation}
+(le cup-produit). La fl\`eche locale \eqref{IV:eq:1-2-1-2} fournit 
+\begin{equation}\label{IV:eq:1-2-2-3}
+  \R i^! \cK\lotimes i^*\cL \to \R i^!\cM \text{,}
+\end{equation}
+dont \eqref{IV:eq:1-2-2-1} se d\'eduit par application de $\R\Gamma(Y,-)$. 
+
+
+
+
+
+\subsubsection{}\label{IV:1-2-3}
+
+Ci-dessus, j'ai pass\'e sous silence les conflits qu'entraine l'usage dans une 
+m\^eme formule de d\'erivations \`a droite ($\R\Gamma$) et \`a gauche 
+($\lotimes$). 
+\begin{enumerate}[\indent a)]
+  \item Au num\'ero suivant, les d\'eriv\'es droits consid\'er\'es seront tous 
+    de dimension cohomologique finie. Ceci permet de travailler 
+    syst\'ematiquement dans les cat\'egories d\'eriv\'ees $\D^-$. Pour disposer 
+    de complexes \`a la fois plats et flasques, on utilise les r\'esolutions 
+    flasques canoniques comme en \cite[XVII]{sga4}. 
+  \item Pour une th\'eorie plus g\'en\'erale, il cesse d'être d'interpr\'eter 
+    les applications bbilin\'eaires de $\cK$ et $\cL$ dans $\cM$ comme des 
+    morphismes de $\cK\lotimes\cL$ dans $\cM$. Par exemple, 
+    $\R\Gamma_Y(X,\cK)\lotimes\R\Gamma(Y,\cL)$ n'est pas d\'efini si des deux 
+    facteurs sont dans $\D^+$. Une solution est de travailler dans $\D^+$, de 
+    d\'efinir 
+    \[
+      \operatorname{Bil}(\cK,\cL;\cM) = \varinjlim \hom(\cK'\otimes\cL',\cM') \text{,}
+    \]
+    o\`u la limite est prise sur les quasi-isomorphismes $\cK'\iso \cK$, 
+    $\cL'\iso \cL$, $\cM\iso \cM'$ ($\cK'$, $\cL'$, $\cM'$ born\'es 
+    inf\'erieurement) et o\`u $\hom$ est pour ``morphisme de complexes, \`a 
+    homotopie pr\`es,'' et d'utiliser syst\'ematiquement de telles applications 
+    bilin\'eaires, sans jamais mentionner de $\otimes$.  
+\end{enumerate}
+
+
+
+
+\subsubsection{Deuxi\`eme thème}\label{IV:1-2-4}
+
+Soit $U$ un ouvert de $X$ et $j:U\hookrightarrow X$ le morphisme d'inclusion. 
+Pour $\cK$ dans la cat\'egorie d\'eriv\'ee, sur $U$, on pose 
+$\R\Gamma_!(U,\cK)=\R\Gamma(X,j_!\cK)$. Pour $\cK$, $\cL$ et $\cM$ sur $U$, et 
+une application bilin\'eaire $\cK\lotimes\cL\to\cM$, on veut d\'efinir 
+\begin{equation}\label{IV:eq:1-2-4-1}
+  \R\Gamma(U,\cK)\lotimes\R\Gamma_!(U,\cL)\to\R\Gamma_!(U,\cM) \text{.}
+\end{equation}
+Au niveau des faisceaux, et de leurs sections globales, un tel produit se 
+d\'eduit de l'isomorphisme 
+$j_*\cF\otimes j_!\cG\xleftarrow\sim j_!(\cF\otimes \cG)$, mais il faut prendre 
+garde au fait que $\R\Gamma_!$ n'est en g\'en\'eral pas le d\'eriv\'e du 
+foncteur $\Gamma(X,j_!-)$. 
+
+On commence par d\'efinir 
+\[\xymatrix{
+  \R j_* \cK\lotimes j_! \cL 
+    & \ar[l]_-\sim j_!(\cK\lotimes \cL) \ar[r] 
+    & j_!\cM \text{.}
+}\]
+Appliquant $\R\Gamma(X,-)$, on trouve 
+\[\xymatrix{
+  \R\Gamma(U,\cK)\lotimes\R\Gamma_!(U,\cL) = \R\Gamma(X,\R j_*\cK)\lotimes \R\Gamma(X,j_!\cL) \ar[r] 
+    & \R\Gamma(X,j_! \cM) \text{.}
+}\]
+
+Ici encore, le conflit entre la gauche et la droite se r\'esoudra au nom\'ero 
+suivant en travaillant dans $\D^-$. 
+
+
+
+
+
+\subsubsection{Coda}\label{IV:1-2-5}
+
+Soient $j:U\hookrightarrow X$ une partie ouverte et $i:Y\hookrightarrow U$ une 
+partie ferm\'ee de $U$. Soit $\bar Y$ une ferm\'e de $X$ tel que 
+$\bar Y\cap U=Y$, (par exemple, le compl\'ement de $U\setminus Y$). Soit $\cK$ 
+sur $U$. On pose $\R\Gamma_{Y!}(U,\cK)=\R\Gamma_!(Y,\R i^!\cK)$ o\`u 
+$\R\Gamma_!$ est relatif \`a l'inclusion de $Y$ dans $\bar Y$. Pour tout ouvert 
+$V$ de $U$, contenant $Y$, $\R\Gamma_{Y!}(U,\cK)$ s'envoie dans 
+$\R\Gamma_!(V,\cK)$: si on note encore $i$ l'inclusion de $\bar Y$ dans $X$, 
+$j$ celle de $Y$ dans $\bar Y$ et $k$ celle de $V$ dans $X$, on a 
+$\R i^!\cK = j^*\R i^! k_!(k^*\cK)$, d'o\`u un morphisme 
+$j_!\R i^!\cK \to \R i^! k_!(k^*\cK)$. Lui appliquant 
+$\R\Gamma(\bar Y,-)$, on trouve 
+$\R\Gamma_{Y!}(U,\cK)\to \R\Gamma_{\bar Y}(k_! k^* \cK) \to \R\Gamma(k_! k^*\cK) = \R\Gamma_!(V,\cK)$. 
+
+Pour $\cK,\cL,\cM$ sur $U$, et une applicatioin bilin\'eaire 
+$\cK\lotimes\cL\to\cM$, on veut d\'efinir 
+\begin{equation}\label{IV:eq:1-2-5-1-1}
+  \h^n(U,\cK)\otimes \h_!^m(Y,\cL) \to \h_{Y!}^{n+m}(U,\cM)
+\end{equation}
+(ce dernier groupe lui-m\^eme s'envoyant dans $\h_!^{n+m}(V,\cM)$). Dans la 
+cat\'egorie d\'eriv\'ee, il s'agit de d\'efinir 
+\begin{equation}\label{IV:eq:1-2-5-2}
+  \R\Gamma_Y(U,\cK) \lotimes \R\Gamma_!(R,\cL) \to \R\Gamma_{Y!}(U,\cM) \text{.}
+\end{equation}
+On identifie $\R\Gamma_Y$ \`a $\R\Gamma(Y,\R i^!\cK)$. Le produit cherch\'e 
+est alors du type \eqref{IV:eq:1-2-4-1} relatif au produit locale 
+\eqref{IV:eq:1-2-2-3} sur $Y$: $\R i^! \cK\lotimes\cL \to \R i^! \cM$. 
+
+
+
+
+
+\subsubsection{}\label{IV:1-2-6}
+
+Ci-dessus, on a d\'eroul\'e le sorite absolu. On a un sorite relatif 
+parall\`ele, avec $\Gamma$ remplac\'e par $f_*$ par $f$ un morphisme $X\to S$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{La r\`egle de Koszul}\label{IV:1-3}
+
+Soient $A$ un anneau commutatif, et $(V_i)_{i\in I}$ une famille finie de 
+$A$-modules gradu\'es (ou $\dZ/2$-gradu\'es). Rappelons la d\'efinition du 
+produit tensoriel gradu\'e $\bigotimes_{i\in I} V_i$, au sens de la r\`egle de 
+Koszul (cf. \cite[XVII 1.1]{sga4}). Pour chaque ordre total $a$ sur $I$, on va 
+d\'efinir un module $V(a)$. On va aussi d\'efinir un syst\`eme transitif 
+d'isomorphismes $\varphi_{a b}:V(b)\iso V(a)$ et le produit tensoriel 
+gradu\'e des $V_i$ sera la ``valeur commune'' $\varprojlim V(a)$ de ce 
+syst\`eme de modules. On prend 
+\begin{enumerate}[\indent a)]
+  \item $V(a) = \bigotimes_{i\in I} |V_i|$ (produit-tensoriel ordinaire des 
+    modules non gradu\'es sous-jacents aux $V_i$).
+  \item si les $x_i\in V_i$ sont homog\`enes, on prend 
+    $\varphi_{a b}(\otimes x_i) = (-1)^N \otimes x_i$, o\`u $N$ est la somme 
+    des $\deg(x_i)\deg(x_j)$ \'etendue aux couples $(i,j)$ tels que 
+    $i<_a j$ et $i>_b j$.
+\end{enumerate}
+
+
+
+
+
+\subsubsection*{Exemple 1}
+
+Prenons $I=\{1,2\}$ et soient $a$ l'ordre o\`u $1<2$, $b$ l'ordre o\`u $1>2$. 
+Soient $v_i\in V_i$, homog\`enes, et notons $v_1\otimes v_2$ (resp. 
+$v_2\otimes v_1$) l'image dans le produit tensoriel gradu\'e du produit des 
+$v_i$ dans $V(a)$ (resp. $V(b)$). On a 
+\[
+  v_1\otimes v_2 = (-1)^{\deg(v_1)\deg(v_2)} v_2\otimes v_1
+\]
+(r\`egle de Koszul). 
+
+
+
+
+
+\subsubsection*{Exemple 2}
+
+Si les $V_i$ sont tous de degr\'e $1$, on a , reliant le module sous-jacent au 
+produit tensoriel gradu\'e, et le produit tensoriel ordinaire des modules 
+$|V_i|$ sous-jacents aux $V_i$, un isomorphisme canonique 
+\[
+  \left|\bigotimes V_i\right| \simeq \bigotimes |V_i|\otimes_{\dZ}\bigwedge^{|I|}\dZ^I \text{.}
+\]
+
+
+
+
+
+\subsubsection{Exemple 3}
+
+Pour $A$ un corps, et $X_i$ une famille finie d'espaces, la formule de 
+K\"unneth s'\'ecrit 
+$\h^\bullet\left(\prod X_i,A\right) = \bigotimes \h^\bullet(X_i,A)$. 
+
+Soit $V^\vee$ le dual gradu\'e de $V$. L'application canonique 
+\begin{equation}\label{IV:eq:1-3-1}
+  V^\vee\otimes V = V\otimes V^\vee \to A
+\end{equation}
+est $v'\otimes v\to v'(v)$. 
+
+On suppose maintenant que $A$ est un corps, et on ne consid\`ere que des 
+espaces vectoriels de dimension finie. L'isomorphisme canonique 
+\begin{equation}\label{IV:eq:1-3-2}
+  W\otimes V^\vee \to \hom(V,W) 
+\end{equation}
+est $w\otimes v'\mapsto \left(v\mapsto w\cdot v'(v)\right)$. Via cet 
+isomorphisme, la composition $\hom(Y,Z)\otimes \hom(X,Y)\to \hom(X,Z)$ 
+s'identifie au morphisme induit par \eqref{IV:eq:1-3-1}: 
+$Z\otimes Y^\vee\otimes Y\otimes X^\vee \to Z\otimes X^\vee$. 
+
+La trace de $f:V\to V^\vee$ (nulle pour $f$ homog\`ene de degr\'e $\ne 0$) est 
+l'image de $f$ par 
+\begin{equation}\label{IV:eq:1-3-4}
+  \tr:\hom(V,V) {\xleftarrow\sim}_\text{\eqref{IV:eq:1-3-2}} V\otimes V^\vee = V^\vee \otimes V \to_\text{\eqref{IV:eq:1-3-1}} A .
+\end{equation}
+
+On v\'erifie ais\'ement que, pour $f$ de degr\'e $0$, 
+\begin{equation}\label{IV:eq:1-3-5}
+  \tr(f,V) = \sum (-1)^i \tr(f,V^i) \text{.}
+\end{equation}
+
+Si on exprime que les deux morphismes compos\'es de morphismes 
+\eqref{IV:eq:1-3-1} $V^\vee\otimes V\otimes W^\vee\otimes W\to k$ commutent, on 
+trouve que, pour $f:V\to W$ et $g:W\to V$ homog\`enes, on a 
+\begin{equation}\label{IV:eq:1-3-6}
+  \tr(f g) = (-1)^{\deg(f)\deg(g)} \tr(g f) \text{.}
+\end{equation}
+
+Soit $\partial:\h^i(X\setminus D,\dG_m)\to \h_D^i(X,\dG_m)$ le morphisme 
+\ref{IV:1-1-4}. Si $D$ admet une équation globale $f$, la multiplication par 
+$f$ est un isomorphisme de $\cO(D)$, trivialis\'e par $1$ sur $X\setminus D$, 
+avec $\cO$, trivialis\'e par $f$ sur $X\setminus D$. D'apr\`es \ref{IV:1-1-4}, 
+on a donc 
+\begin{equation}\label{IV:2-1-1-1}
+  \operatorname{cl}(D) = \partial f \text{.}
+\end{equation}
+
+Pour tout morphisme $u:X'\to X$ tel que $u^* D$ soit encore un diviseur de 
+Cartier (i.e., $u^{-1} D$ disjoint de $\operatorname{Ass}(X')$), on a 
+$\operatorname{cl}(u^* D) = u^*\operatorname{cl}(D)$. Si on voulait une telle 
+fonctoralit\'e pour tout morphisme $u$, il faudrait consid\'erer non pas des 
+diviseurs de Cartier, mais plus g\'en\'eralement des faisceaux inversibles 
+munis d'une section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{La classe de cohomologie associ\'ee \`a un cycle}\label{IV:2}
+
+
+
+
+
+
+
+
+
+
+\subsection{La classe d'un diviseur}\label{IV:2-1}
+
+
+
+
+
+\subsubsection{}\label{IV:2-1-1}
+
+Soit $D$ un diviseur de Cartier dans un sch\'ema $X$. Hors de $D$, le faisceau 
+inversible $\cO(D)$ est trivialis\'e par la section $1$. La classe 
+$\operatorname{cl}(D)$ de $D$, dans $\h_D^1(X,\dG_m)$, est la classe du 
+$\dG_m$-torseur trivialis\'e sur $X\setminus D$ correspondant 
+(\ref{IV:1-1-6} et \ref{IV:1-1-4}). 
+
+
+
+
+
 \section{Application: la formule des traces de Lefschetz dans le cas propre et lisse}\label{IV:3}
 
 \begin{corollary_}\label{IV:3-7}
