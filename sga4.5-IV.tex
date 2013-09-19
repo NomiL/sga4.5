@@ -1,4 +1,5 @@
-\chapter{La classe de cohomologie associée à un cycle\texorpdfstring{\footnote{par A. Grothendieck, r\'edig\'e par P. Deligne}}{}}\label{IV}
+\chapter{La classe de cohomologie associée à un cycle}\label{IV}
+\blfootnote{par A.\ Grothendieck, r\'edig\'e par P.\ Deligne}
 
 
 
@@ -461,22 +462,6 @@ trouve que, pour $f:V\to W$ et $g:W\to V$ homog\`enes, on a
   \tr(f g) = (-1)^{\deg(f)\deg(g)} \tr(g f) \text{.}
 \end{equation}
 
-Soit $\partial:\h^i(X\setminus D,\dG_m)\to \h_D^i(X,\dG_m)$ le morphisme 
-\ref{IV:1-1-4}. Si $D$ admet une équation globale $f$, la multiplication par 
-$f$ est un isomorphisme de $\cO(D)$, trivialis\'e par $1$ sur $X\setminus D$, 
-avec $\cO$, trivialis\'e par $f$ sur $X\setminus D$. D'apr\`es \ref{IV:1-1-4}, 
-on a donc 
-\begin{equation}\label{IV:2-1-1-1}
-  \operatorname{cl}(D) = \partial f \text{.}
-\end{equation}
-
-Pour tout morphisme $u:X'\to X$ tel que $u^* D$ soit encore un diviseur de 
-Cartier (i.e., $u^{-1} D$ disjoint de $\operatorname{Ass}(X')$), on a 
-$\operatorname{cl}(u^* D) = u^*\operatorname{cl}(D)$. Si on voulait une telle 
-fonctoralit\'e pour tout morphisme $u$, il faudrait consid\'erer non pas des 
-diviseurs de Cartier, mais plus g\'en\'eralement des faisceaux inversibles 
-munis d'une section.
-
 
 
 
@@ -520,6 +505,86 @@ inversible $\cO(D)$ est trivialis\'e par la section $1$. La classe
 $\operatorname{cl}(D)$ de $D$, dans $\h_D^1(X,\dG_m)$, est la classe du 
 $\dG_m$-torseur trivialis\'e sur $X\setminus D$ correspondant 
 (\ref{IV:1-1-6} et \ref{IV:1-1-4}). 
+
+Soit $\partial:\h^i(X\setminus D,\dG_m)\to \h_D^i(X,\dG_m)$ le morphisme 
+\ref{IV:1-1-4}. Si $D$ admet une équation globale $f$, la multiplication par 
+$f$ est un isomorphisme de $\cO(D)$, trivialis\'e par $1$ sur $X\setminus D$, 
+avec $\cO$, trivialis\'e par $f$ sur $X\setminus D$. D'apr\`es \ref{IV:1-1-4}, 
+on a donc 
+\begin{equation}\label{IV:2-1-1-1}
+  \operatorname{cl}(D) = \partial f \text{.}
+\end{equation}
+
+Pour tout morphisme $u:X'\to X$ tel que $u^* D$ soit encore un diviseur de 
+Cartier (i.e., $u^{-1} D$ disjoint de $\operatorname{Ass}(X')$), on a 
+$\operatorname{cl}(u^* D) = u^*\operatorname{cl}(D)$. Si on voulait une telle 
+fonctoralit\'e pour tout morphisme $u$, il faudrait consid\'erer non pas des 
+diviseurs de Cartier, mais plus g\'en\'eralement des faisceaux inversibles 
+munis d'une section.
+
+Rappelons que l'entier $n$ est dor\'enavant suppos\'e inversible sur les 
+sch\'emas consid\'er\'es. Soit 
+$\partial:\h_D^i(X,\dG_m) \to \h_D^{i+1}(X,\dmu_n)$ le cobord pour la suite 
+exacte de Kummer $0 \to \dmu_n \to \dG_m \to \dG_m \to 0$.
+
+
+
+
+
+\begin{definition}\label{IV:2-1-2}
+La \emph{classe $\operatorname{cl}_n(D)$} de $D$ dans $\h_D^2(X,\dmu_n)$ est 
+$\partial \operatorname{cl}(D)$. 
+\end{definition}
+
+Quand il n'y aura pas de risque de confusion, on omettra la mention de $n$. 
+
+
+
+
+
+\subsubsection{}\label{IV:2-1-3}
+
+Le diagramme 
+\[\xymatrix{
+  \h^0(X\setminus D,\dG_m \ar[r]^-\partial \ar[d]^-\partial 
+    & \h_D^1(X,\dG_m) \ar[d]^-\partial \\
+  \h^1(X\setminus D,\dmu_n) \ar[r]^-\partial 
+    & \h_D^2(X,\dmu_n)
+}\]
+est anticommutatif. Si $D$ admet une \'equation globale $f$, 
+$\operatorname{cl}_n(D)$ est donc l'oppos\'e de l'image par $\partial$ de la 
+classe dans $\h^1(X\setminus D,\dmu_n)$ de $\dmu_n$-torseur des racines 
+$n$-i\`emes de $f$. 
+
+
+
+
+
+\begin{proposition}\label{IV:2-1-4}
+Soit $i$ l'inclusion de $D$ dans $X$. Si $D$ et $X$ sont r\'eguliers, les 
+faisceaux de cohomologie \`a support $\R^p i^! \dmu_n$ sont nuls pour $p=0,2$, 
+et $\R^2 i^!\dmu_n = \underline{\dZ/n}$, engendr\'e par 
+$\operatorname{cl}_n(D)$. 
+\end{proposition}
+
+Il suffit de prouver que, pour $X$ strictement locale et $D$ d\'efini par un 
+param\`etre r\'egulier, on a $\h_D^p(X,d\mu_n) = 0$ pour $p=0,1$ et 
+$\h^2(X,\dmu_n) = \dZ/n$ engendr\'e par $\operatorname{cl}(D)$. Notant par 
+$\sim$ la cohomologie r\'eduite, on a 
+$\widetilde\h^{p-1}(X\setminus D,\dmu_n)\iso \h_D^p(X,\dmu_n)$. L'assertion 
+pour $p=0,1$ exprime que $D$ ne disconnecte par $X$, et pour $p=2$ r\'esulte, 
+via \ref{IV:2-1-3}, du lemme d'Abhyankar. 
+
+Ceci est un analogue partiel du th\'eor\`eme relatif 
+(\hyperref[I]{Cohomologie \'etale}, \ref{I:5-3-4}). Grothendieck conjecture 
+que les $\R^p i^! \dmu_n$ sont nuls pour $p\ne 2$, du moins pour $X$ excellent 
+(conjecture de puret\'e), mais ceci n'est connu qu'en caract\'eristique $0$ 
+(\cite[XIX]{sga4}). 
+
+
+
+
+
 
 
 
