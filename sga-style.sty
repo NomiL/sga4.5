@@ -2,10 +2,16 @@
 \usepackage[all]{xy}        % commutative diagrams
 \usepackage[stable,symbol]{footmisc}
 
-% documents geometry - i.e. full-page, tablet version ...
-  \usepackage[text={5.5in,8in},centering]{geometry} % normal
-  %\usepackage[paperwidth=6.125in,paperheight=9.25in,text={5.5in,8in},centering]{geometry} % for tablets
-  %\usepackage[margin=1in,centering]{geometry} % fullpage
+\ifdefined\sgaoption 
+  \ifnum\sgaoption=1 % tablet version
+    \usepackage[paperwidth=6.125in,paperheight=9.25in,text={5.5in,8in},centering]{geometry}
+  \else % tree saving version
+    \usepackage[margin=1in,centering]{geometry}
+  \fi
+\else % normal version
+  \usepackage[text={5.5in,8in},centering]{geometry}
+\fi
+
 
 \usepackage{
   amsmath,
