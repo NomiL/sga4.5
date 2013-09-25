@@ -504,7 +504,7 @@ trouve que, pour $f:V\to W$ et $g:W\to V$ homog\`enes, on a
 
 Soit $D$ un diviseur de Cartier dans un sch\'ema $X$. Hors de $D$, le faisceau 
 inversible $\cO(D)$ est trivialis\'e par la section $1$. La classe 
-$\operatorname{cl}(D)$ de $D$, dans $\h_D^1(X,\dG_m)$, est la classe du 
+$\cl(D)$ de $D$, dans $\h_D^1(X,\dG_m)$, est la classe du 
 $\dG_m$-torseur trivialis\'e sur $X\setminus D$ correspondant 
 (\ref{IV:1-1-6} et \ref{IV:1-1-4}). 
 
@@ -514,12 +514,12 @@ $f$ est un isomorphisme de $\cO(D)$, trivialis\'e par $1$ sur $X\setminus D$,
 avec $\cO$, trivialis\'e par $f$ sur $X\setminus D$. D'apr\`es \ref{IV:1-1-4}, 
 on a donc 
 \begin{equation}\label{IV:2-1-1-1}
-  \operatorname{cl}(D) = \partial f \text{.}
+  \cl(D) = \partial f \text{.}
 \end{equation}
 
 Pour tout morphisme $u:X'\to X$ tel que $u^* D$ soit encore un diviseur de 
 Cartier (i.e., $u^{-1} D$ disjoint de $\operatorname{Ass}(X')$), on a 
-$\operatorname{cl}(u^* D) = u^*\operatorname{cl}(D)$. Si on voulait une telle 
+$\cl(u^* D) = u^*\cl(D)$. Si on voulait une telle 
 fonctoralit\'e pour tout morphisme $u$, il faudrait consid\'erer non pas des 
 diviseurs de Cartier, mais plus g\'en\'eralement des faisceaux inversibles 
 munis d'une section.
@@ -534,8 +534,8 @@ exacte de Kummer $0 \to \dmu_n \to \dG_m \to \dG_m \to 0$.
 
 
 \begin{definition}\label{IV:2-1-2}
-La \emph{classe $\operatorname{cl}_n(D)$} de $D$ dans $\h_D^2(X,\dmu_n)$ est 
-$\partial \operatorname{cl}(D)$. 
+La \emph{classe $\cl_n(D)$} de $D$ dans $\h_D^2(X,\dmu_n)$ est 
+$\partial \cl(D)$. 
 \end{definition}
 
 Quand il n'y aura pas de risque de confusion, on omettra la mention de $n$. 
@@ -554,7 +554,7 @@ Le diagramme
     & \h_D^2(X,\dmu_n)
 }\]
 est anticommutatif. Si $D$ admet une \'equation globale $f$, 
-$\operatorname{cl}_n(D)$ est donc l'oppos\'e de l'image par $\partial$ de la 
+$\cl_n(D)$ est donc l'oppos\'e de l'image par $\partial$ de la 
 classe dans $\h^1(X\setminus D,\dmu_n)$ de $\dmu_n$-torseur des racines 
 $n$-i\`emes de $f$. 
 
@@ -566,12 +566,12 @@ $n$-i\`emes de $f$.
 Soit $i$ l'inclusion de $D$ dans $X$. Si $D$ et $X$ sont r\'eguliers, les 
 faisceaux de cohomologie \`a support $\R^p i^! \dmu_n$ sont nuls pour $p=0,2$, 
 et $\R^2 i^!\dmu_n = \underline{\dZ/n}$, engendr\'e par 
-$\operatorname{cl}_n(D)$. 
+$\cl_n(D)$. 
 \end{proposition}
 
 Il suffit de prouver que, pour $X$ strictement locale et $D$ d\'efini par un 
 param\`etre r\'egulier, on a $\h_D^p(X,d\mu_n) = 0$ pour $p=0,1$ et 
-$\h^2(X,\dmu_n) = \dZ/n$ engendr\'e par $\operatorname{cl}(D)$. Notant par 
+$\h^2(X,\dmu_n) = \dZ/n$ engendr\'e par $\cl(D)$. Notant par 
 $\sim$ la cohomologie r\'eduite, on a 
 $\widetilde\h^{p-1}(X\setminus D,\dmu_n)\iso \h_D^p(X,\dmu_n)$. L'assertion 
 pour $p=0,1$ exprime que $D$ ne disconnecte par $X$, et pour $p=2$ r\'esulte, 
@@ -590,7 +590,7 @@ que les $\R^p i^! \dmu_n$ sont nuls pour $p\ne 2$, du moins pour $X$ excellent
 Soient $X$ uen courbe lisse sur un corps alg\'ebriquement clos $k$, $P$ un 
 point ferm\'e de $X$ et $\tr$ le compos\'e $\h_P^2(X,\dmu_n) \to \h_c^2(X,\dmu_n) \xrightarrow{\tr} \dZ/n$. On a 
 \[
-  \tr \operatorname{cl}(P) = 1 \text{.}
+  \tr \cl(P) = 1 \text{.}
 \]
 \end{theorem}
 
@@ -624,6 +624,320 @@ $\fa/\fm\fa$ une base de $\fa/\fm\fa$, est une suite r\'eguli\`ere
 d'\'equations pour $Y$. 
 
 
+
+
+
+\subsubsection{}\label{IV:2-2-2}
+
+Soit $i:Y\hookrightarrow X$ d'intersection compl\`ete locale, de codimension 
+$c$. On se propose de d\'efinir une classe fondamentale locale 
+$\cl(Y)$ qui soit une section globale du faisceau de cohomologie \`a support 
+$\R^{2c}i^! \dZ/n(c)$ (rappelons que $\dZ/n(c)=\dmu_n^{\otimes c}$). 
+
+Localement, $Y$ est l'intersection d'une suite de $c$ diviseurs $D_i$, et on 
+d\'efinit $\cl(Y)$ comme le cup-produit des $\cl(D_i)$. Chaque $\cl(D_i)$ est 
+\`a support dans $D_i$, leur produit est \`a support dans $Y$. Que, localement, 
+ce produit ne d\'epende pas du choix des $D_i$, r\'esulte de \ref{IV:2-2-3} 
+ci-dessous et des propri\'et\'es d'invariance suivantes:
+\begin{enumerate}[\indent a)]
+  \item compatibilit\'e \`a la localisation;
+  \item ind\'ependance de l'order des $D_i$ (les $\cl(D_i)$ sont de degr\'e 
+    $2$, pair, donc le cup-produit est commutatif);
+  \item le produit ne d\'epend que du ``drapeau'' 
+    $D_1\supset D_1\cap D_2\supset \cdots\supset Y$. 
+\end{enumerate}
+Pour prouver c), on note l'existence d'un produit (variante de \ref{IV:1-2-1}) 
+\[
+  \h_{D_1}^\bullet(X)\otimes \h_{D_1\cap D_2}^\bullet(D_1)\otimes \cdots \otimes \h_Y^\bullet(D_1\cap \cdots \cap D_{c-1}) \to \h_Y^\bullet(X) \text{;}
+\]
+le produit des $\cl(D_i)$ est encore le produit des ($\cl(D_i)$ restreint \`a 
+$D_1\cap \cdots \cap D_{i-1})=(\cl(D_1\cap \cdots \cap D_i)$ dans 
+$D_1\cap \cdots \cap D_{i-1})$. 
+
+
+
+
+
+\begin{lemma}\label{IV:2-2-3}
+Soient $A$ un anneau locale d'id\'eal maximal $\fm$ et $u=(u_1,\dots,u_c)$, 
+$v=(v_1,\dots,v_c)$ deux suites r\'eguli\`eres engendrant le m\^eme id\'eal 
+$\fa$. Il existe alors une suite $w_i$ ($1\leqslant i\leqslant N$) de telles 
+suites, les reliant, telle que $w_{i+1}$ se d\'eduise de $w_i$ par une 
+permutation, ou en ne changeant que le dernier \'el\'ement.
+\end{lemma}
+
+Puisqu'on dispose des permutations, il reviendrait au m\^eme de se permettre de 
+changer un seul \'el\'ement, plut\^ot que le dernier. Par \ref{IV:2-2-1}, on se 
+ram\`ene alors \`a v\'erifier que, dans l'espace vectoriel $\fa/\fm\fa$, on 
+peut passer d'une base \`a une autre par une suite de permutations et de 
+changements de base ne modifiant qu'un seul vecteur. Le groupe lin\'eaire est 
+en effet engendr\'e par les matrices diagonales, \'el\'ementaires et de 
+permutation. 
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-4}
+
+Les m\^emes m\'ethodes permettent de d\'efinir une classe fondamentale locale 
+pour tout $Y\subset X$ localement d\'efinissable par $c$ \'equations (la o\`u 
+moins d\'equations suffisent, la classe est nulle). 
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-5}
+
+On peut passer d'une telle classe fondamentale locale, dans 
+$\h^0\left(Y,\R^{2 c} i^!\dZ/n(c)\right)$, \`a une classe fondamentale globale, 
+dans $\h_Y^{2 c}\left(X,\dZ/n(c)\right)$, lorsqu'on dispose de r\'esultats de 
+semi-puret\'e:
+
+
+
+
+
+\begin{proposition}\label{IV:2-2-6}
+\begin{enumerate}[(i)]
+  \item Si $\R^p i^!\dZ/n=0$ pour $p<2 c$, alors 
+    \[
+      \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \h^0\left(Y,\R^{2 c} i^! \dZ/n(c)\right) \text{.}
+    \]
+  \item Soit $Z$ une partie ferm\'ee de $Y$, de compl\'ement $V$ dans $Y$, et 
+    $k$ l'inclusion de $Z$ dans $X$. Si $\R^p i^! \dZ/n = 0$ pour 
+    $p\leqslant 2 c$, alors 
+    \[
+      \h_Y^{2 c}\left(X,\dZ/n(c)\right) \hookrightarrow \h_V^{2 c}\left(X,\dZ/n(c)\right) \text{.}
+    \]
+    Si $\R^p i^!\dZ/n=0$ pour $p\leqslant 2 c+1$, cette fl\`eche est une 
+    isomorphisme.
+\end{enumerate}
+\end{proposition}
+
+L'hypoth\`ese $\R^p i^!\dZ/n=0$ \'equivaut \`a $\R^p i^!\dZ/n(c)=0$. Ceci dit, 
+(i) se lit sur la suite spectrale 
+$\h^p(Y,\R^q i^!)\Rightarrow \h_Y^{p+q}(X,-)$. Si $k_1$ l'inclusion de $Z$ dans 
+$Y$, on a $k=i k_1$, d'o\`u $\R k^! \dZ/n=\R k_1^! \R i^!$, et la suite exacte 
+longue de cohomologie pour $Z\subset Y$ fournit une suite exacte longue 
+\[\xymatrix{
+  \cdots \ar[r] 
+    & \h^i\left(Z,\R k^! \dZ/n(c)\right) \ar[r] 
+    & \h_Y^i\left(X,\dZ/n(c)\right) \ar[r] 
+    & \h_V^i\left(X,\dZ/n(c)\right) \ar[r] 
+    & \cdots
+}\]
+dont (ii) r\'esulte. 
+
+
+
+
+
+\subsubsection{Amplification}{\label{IV:2-2-7}
+
+La proposition \ref{IV:2-2-6} reste valable pour $i$ un quelconque morphisme 
+s\'epar\'e de type fini, et $2 c$ un entier (positif ou n\'egatif) quelconque, 
+pour autant qu'on y remplace $\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ par 
+$\h^{2 c}\left(Y,\R i^!\dZ/n(c)\right)$, et de m\^eme pour $\h_V$. 
+
+Les r\'esultats de semi-puret\'e suivants r\'esultent de 
+\cite[1.8, 1.10, 1.15]{sga2}. Nous rappellerons leur preuve. 
+
+
+
+
+
+\begin{theorem}\label{IV:2-2-8}
+Soit un morphisme de $S$-sch\'emas de type fini 
+\[\xymatrix{
+  X \ar[r]^-i \ar[dr]_-f 
+    & X \ar[d]^-g \\
+  & S
+}\]
+On suppose $X$ lisse, purement de dimension relative $N$ et que $Y$ est fibre 
+par fibre de dimension $\leqslant d$. Soit $c=N-d$. 
+\begin{enumerate}[\indent (i)]
+  \item On a $\R^p i^!\dZ/n=0$ pour $p<2 c$; de m\^eme pour $\dZ/n$ remplac\'e 
+    par un faisceau $g^* \cF$.
+  \item Si, au dessus d'un ouvert dense $U$ de $S$, $Y$ est fibre par fibre de 
+    dimension $<d$, on a $\R^p i^!\dZ/n=0$ pour $p\leqslant 2 c$. Si de plus le 
+    compl\'ement $Z$ de $U$ ne disconnecte pas localement $S$, on a 
+    $\R^pi^!\dZ/n=0$ pour $p\leqslant 2 c+1$.
+\end{enumerate}
+\end{theorem}
+
+Puisque $\R g^! \cF=g^*\cF(N)[2N]$, la formule de transitivit\'e 
+$\R i^!\R g^!=\R f^!$ montre que 
+$\R^{2 c+q} i^!(g^*\cF)=0\Leftrightarrow \R^{-2 d+q}f^!(\cF)$. Ceci nous 
+ram\`ene \`a \'etudier $f$, i.e. \`a supposer que $X=S$. L'assertion (i) est 
+alors \cite[XVIII 3.17]{sga4}. 
+
+Soit $Y'$ l'image inverse de $Z$ dans $Y$:
+\[\xymatrix{
+  Y' \ar[r]^-v \ar[d]^-f 
+    & Y \ar[d]^-f \\
+  Z \ar[r]^-u 
+    & S
+}\]
+D'apr\`es (i), les $\R^p f^! \dZ/n$ sont \`a support dans $Y'$ pour 
+$p\leqslant -2 d+1$; et la suite spectrale 
+$\R^a v^!\R^b f^! \Rightarrow \R^{a+b} (f v)^!$ montre qu'ils coinc\"ident avec 
+les $\R^p(f v)^!\dZ/n=\R^p(u f)^!\dZ/n$. Appliquant (i) \`a $Y'/Z$ et \`a la 
+suite spectrale $\R^a f^!\R^b u^! \Rightarrow \R^{a+b} (u f)^!$, on trouve que 
+(ii) r\'esulte de la nullit\'e de $\R^b u^! \dZ/n$ pour $b=0$, ou $b=0$ et $1$ 
+selon le cas. 
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-9}
+
+Grothendieck conjecture l'analogue absolu suivant de \ref{IV:2-2-8} (conjecture 
+de semi-puret\'e -- une cons\'equence de la conjecture de puret\'e): pour $Y$ 
+de codimension $\geqslant c$ dans $X$ r\'egulier, on a $\h_Y^i(X,\dZ/n)=0$ pour 
+$i<2 c$, tout au moins si $X$ est excellent. 
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-10}
+
+On est maintenant \`a pied d'oeuvre pour d\'efinir la classe d'un cycle $Y$ de 
+codimension $c$ dans $x$ lisse sur un corps $k$. On \'ecrit $Y=\sum d_i Y_i$, 
+o\`u les $Y_i$ sont r\'eduits irr\'eductibles. Un ouvert $U_i$ de $Y_i$, de 
+compl\'ementaire de codimension $>c$, est alors d'intersection compl\`ete 
+locale dans $X$. Ceci permet de d\'efinir la classe fondamentale locale de 
+$U_i$. D'apr\`es \ref{IV:2-2-6} et \ref{IV:2-2-8}, celle-ci provient d'une 
+unique classe fondamentale $\cl(Y_i)\in \h_{Y_i}^{2 c}\left(X,\dZ/n(c)\right)$, 
+et on pose 
+\[
+  \cl(Y) = \sum d_i \cl(Y_i) \in \h_{|Y|}^{2 c}\left(X,\dZ/n(c)\right) \text{.}
+\]
+
+
+
+
+
+\subsubsection{}\label{IV:2-2-11}
+
+En g\'eom\'etrie analytique complexe, une construction de Baum, Fulton et 
+Mac Pherson \cite{bfm75} permet de d\'efinir sans restriction la classe de 
+cohomologie d'une intersection compl\`ete locale $Y\subset X$. Supposons $Y$ 
+purement de codimension $c$, et soit $\cN$ le fibr\'e vectoriel sur $Y$ fibr\'e 
+normal de $Y$ dans $X$. Ses sections locales sont celles de $(\cI/\cI^2)^\vee$, 
+d'o\`u $\cI$ est le faisceau d'id\'eaux de $Y$. Rappelons que le faisceau des 
+fonctions $C^\infty$ sur $X$ est d\'efini localement, en terme de plongements 
+locaux de $X$ dans $\dC^n$, comme la restriction \`a $X$ du quotient du 
+faiceaux des fonctions $C^\infty$ sur $\dC^n$ par l'id\'eal engendr\'e par les 
+parties r\'eelles et imaginaires des \'equations qui d\'efinissent $X$. Le 
+fibr\'e $\cN$ se prolonge en un fibr\'e vectoriel complexe $C^\infty N$ sur un 
+voisinage $U$ de $Y$ dans $X$, et pour $U$ assez petit, il existe des sections 
+$f$ de $N$, de lieu des z\'eros $Y$, et telles que, sur $Y$, $d f:\cN\to N$ 
+soit l'identit\'e. Deux choix de $N$ et $f$ sont homotopes sur $Y$ assez petit. 
+
+La classe de cohomologie $\cl(U)$ de la section $0$ de $N$ (not\'ee $z:U\to N$) 
+est d\'efinie: $U$ est d'intersection compl\`ete locale dans $N$, et 
+$\R^i z^!\dZ = 0$ pour $i\ne 2 c$, $\R^{2 c} z^!\dZ = \dZ$. On dispose de 
+$f^*:\h_U^\bullet(N,\dZ) \to \h_Y^\bullet(X,\dZ)$ et on pose 
+\[
+  \cl(Y) = f^*\cl(U) \text{.}
+\]
+
+La m\^eme construction marche d\`es qu'on a sur un sous-espace analytique $Y$ 
+de $X$ la structure normale suivante: un faisceau localement libre $\cC$ de 
+rang $c$ sur $Y_\text{red}$, et un \'epimorphisme 
+$\cC\to \cI/\cI\cdot \cI_\text{red}$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{M\'ethode homologique}\label{IV:2-3}
+
+
+
+
+
+\subsubsection{}\label{IV:2-3-1}
+
+Soit $f:Y\to X$ un morphisme plat de type fini, \`a fibres de dimension 
+$\leqslant d$. Dans \cite[XVIII 2.9]{sga4}, nous avons d\'efini un morphisme 
+trace 
+\begin{equation}\label{IV:eq:2-3-1-1}
+  \tr_f:\R^{2 d} f_! \dZ/n(d) \to \dZ/n \text{.}
+\end{equation}
+On a $\R^i f_!\dZ/n(d)=0$ pour $i>2 d$, et $\R^i f^!\dZ/n=0$ pour $i<-2 d$. 
+Ceci, et l'adjonction entre $\R f_!$ et $\R f^!$, fournissent des isomorphismes 
+\begin{equation}\label{IV:eq:2-1-3-2}
+\begin{aligned}
+  \hom\left(\R^{2 d}f_!\dZ/n(d),\dZ/n\right) 
+    &= \hom\left(\R f_!\dZ/n(d),\dZ/n[-2 d]\right) \\
+    &= \hom\left(\dZ/n,\R f^!\dZ/n(-d)[-2 d]\right) \\
+    &= \h^0\left(Y,\R^{-2 d}f^!\dZ/n\right) \text{.}
+\end{aligned}
+\end{equation}
+Au moins sur $S$ un point, l'image de $\tr_f$ dans les deux derniers groupes 
+m\'erite le nom de classe fondamentale de $Y$ (en homologie). 
+
+On note encore $\tr_f$ l'image de $\tr_f$ dans le second groupe, et les 
+morphismes qui s'en d\'eduisent par fonctorialit\'e. Par exemple, pour $Y/S$ 
+propre, le morphisme 
+\begin{equation}\label{IV:eq:2-3-1-3}
+\xymatrix{
+  \h^i\left(Y,\dZ/n(d)\right) = \h^i\left(S,\R f_!\dZ/n(d)\right) \ar[r] 
+    & \h^{i-2 d}(S,\dZ/n) \text{.}
+}
+\end{equation}
+
+Supposons $Y$ contenu dans $X$ lisse sur $S$, purement de dimension relative 
+$N$, et posons $c=N-d$. 
+\[\xymatrix{
+  Y \ar@{^{(}->}[r]^-i \ar[dr]_-f 
+    & X \ar[d] \\
+  & S
+}\]
+On a $\R f^! = \R i^!\R g^!$, et $\R g^! \dZ/n=\dZ/n(-N)[-2 N]$. La classe 
+fondamentale de $Y$ s'identifie \`a un \'el\'emente de 
+$\h^0\left(Y,\R i^!\dZ/n(c)[2 c]\right)=\h_Y^{2 c}\left(X,\dZ/n(c)\right)$, la 
+classe $\cl(Y)$ de $Y$ dans $X$. Nous verrons plus loin qu'elle ne d\'epend que 
+de $Y\subset X$, non de la projection de $X$ sur $S$, et que pour $Y$ 
+d'intersection compl\`ete locale, elle induit la classe locale du nom\'ero 
+pr\'ec\'edent. 
+
+Explicitons l'isomorphisme 
+\[
+  \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \hom\left(\R^{2 d}f_!\dZ/n(d),\dZ/n\right)
+\]
+qui transforme $\cl(Y)$ en $\tr_f$: via les isomorphismes 
+\begin{align*}
+  \h_Y^{2 c}\left(X,\dZ/n(c)\right) 
+    &= \h_Y^{2 c}\left(\R i^!\dZ/n(c)\right) \\
+    &= \hom_Y\left(\dZ/n(d)[2 d],\R i^!\dZ/n(N)[2 N]\right) \\
+    &= \hom_X\left(\dZ/n(d)[2 d]_Y,\dZ/n(N)[2 n]\right) \text{,}
+\end{align*}
+c'est la ligne sup\'erieure de 
+\[\xymatrix{
+  \h_Y^{2 c} \ar[r] \ar[dr]_-{(3)} 
+    & \hom\left(\R f_!\dZ/n(d)[2 d],\R f_! \R i^!\dZ/n(N)[2 n]\right) \ar[r]^-{(1)} \ar[d]^-{\tr_i} \ar@{}[dr]|-{(2)}
+    & \hom\left(\R f_!\dZ/n(d)[2d],\dZ/n\right) \ar@{=}[d] \\
+  & \hom\left(\R g_!\dZ/n(d)[2 d]_Y,\R g_!\dZ/n(N)[2 N]\right) \ar[r]^-{\tr_g} 
+    & \hom\left(\R g_!\dZ/n(d)[2 d]_Y,\dZ/n\right) \text{,}
+}\]
+o\`u (1) est la fl\`eche d'adjonction $\R f_!\R f^!\to \text{id}$. La 
+commutativit\'e (2) exprime que l'isomorphisme $\R f^!=\R i^!\R g^!$ est 
+d\'efini par adjonction. Enfin, la fl\`eche d\'eduite de (3)
+\[
+  \h_Y^{2c}\left(X,\dZ/n(c)\right) \otimes \R^{2 d} g_!\dZ/n(d) \to \R^{2 N} g_!\dZ/n(N)
+\]
+s'interpr\`ete comme un cup-produit (cf. \ref{IV:1-2}). 
 
 
 
