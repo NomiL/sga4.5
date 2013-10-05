@@ -1,0 +1,98 @@
+% !TEX root = sga4.5.tex
+
+\chapter{Dualité}\label{V}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On trouvera dans cet expos\'e quelques th\'eor\`emes et compatibilit\'es, tous 
+relatifs \`a la dualit\'e de Poincar\'e. Au paragraphe 1, le th\'eor\`eme de 
+bidualit\'e locale en dimension $1$ \cite[I.5.1]{sga5} et quelques calculus de 
+deaux. Au paragraphe 2, une d\'emonstration tr\`es \'economique de la dualit\'e 
+de Poincar\'e sur les courbes, que m'a apprise M.\ Artin. Au paragraphe 3, une 
+compatibilit\'e qui fait le lien entre deux d\'efinitions de l'accouplement qui 
+donne lieu \`a la dualit\'e de Poincar\'e pour les courbes: par cup-produit, ou 
+par autodualit\'e de la jacobienne. Au paragraphe 4, enfin, la preuve de la 
+compatibilit\'e du titre. 
+
+Dans tout l'expos\'e, les sch\'emas seront noeth\'eriens et s\'epar\'es, et $n$ 
+est un entier inversible sur tous les sch\'emas consid\'er\'es. 
+
+
+
+
+
+
+
+
+
+
+\section{Bidualit\'e locale, en dimension $1$}\label{V:1}
+
+
+
+
+
+\subsection{}\label{V:1-1}
+
+Soit $S$ un sch\'ema r\'egulier purement de dimension $1$. Nous nous proposons 
+de montrer que le complexe r\'eduit \`a $\dZ/n$ en degr\'e $0$ est 
+dualisant, i.e. que pour $\cK\in \ob\D_c^b(S,\dZ/n)$ ($_c$ pour constructible), 
+si on pose $D\cK=\R\underline\hom(\cK,\dZ/n)$, alors $D\cK$ est encore 
+constructible \`a cohomologie born\'ee, et que le morphisme canonique $\alpha$ 
+de $\cK$ dans $D D\cK$ est un isomorphisme. 
+
+Pour $\cK$ dans $\D^-$, et $\cL$ quelconque, on a 
+\[
+  \hom(\cK\lotimes \cL,\dZ/n) = \hom(\cL,\underline\hom(\cK,\dZ/n)) \text{.}
+\]
+Le morphisme de $\cK$ dans $DD\cK$ est d\'efini en supposant $D\cK$ dans 
+$\D^-$; si $\beta:D\cK\lotimes\cK\to \dZ/n$ est l'accouplement canonique, il 
+est d\'efini par l'accouplement 
+$\cK\lotimes D\cK=D\cK\lotimes \cK \xrightarrow\beta \dZ/n$. 
+
+
+
+
+
+\subsection{}\label{V:1-2}
+
+Soit $f:X\to S$ un morphisme s\'epar\'e de type fini. Posons 
+$\cK_X=\R f^!\dZ/n$. Pour $\cK\in \ob\D^-(X,\dZ/n)$, on pose 
+$D\cK = \R\underline\hom(\cK,\cK_X)$. L'adjonction entre $\R f_!$ et $\R f^!$ 
+assure que 
+\[\xymatrix{
+  \R f_\ast \cK\lotimes \R f_\ast D\cK \ar[r] 
+    & \R f_! (\cK\lotimes D\cK) \ar[r] 
+    & \R f_! \R f^! \dZ/n \ar[r] 
+    & \dZ/n \text{.}
+}\]
+La sym\'etrie de cette description montre que, pour $f$ propre, le diagramme 
+\begin{equation}\label{V:eq:1-2-1}
+\xymatrix{
+  \R f_\ast \cK \ar[r] \ar[d] 
+    & D D \R f_\ast \cK \ar[d]^-\sim \\
+  \R f_\ast D D \cK \ar[r]^\sim 
+    & D\R f_\ast D\cK
+}
+\end{equation}
+est commutatif. 
+
+
+\section{La dualité de Poincaré pour les courbes}\label{V:2}
