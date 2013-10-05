@@ -424,7 +424,7 @@ $|V_i|$ sous-jacents aux $V_i$, un isomorphisme canonique
 
 
 
-\subsubsection{Exemple 3}
+\subsubsection*{Exemple 3}
 
 Pour $A$ un corps, et $X_i$ une famille finie d'espaces, la formule de 
 K\"unneth s'\'ecrit 
@@ -967,12 +967,444 @@ o\`u le cup-produit peut se calculer dans $\h^\bullet(X,\dZ/n)$.
 
 
 
+\subsubsection{}\label{IV:2-3-3}
+
+Nous allons d\'efinir les morphisme trace, et donc la classe $\cl(Y)$, sous des 
+hypoth\`eses plus g\'en\'erales. Soit donc un diagramme 
+\[\xymatrix{
+  Y \ar@{^{(}->}[r] \ar[dr]_-f 
+    & X \ar[d]^-g \\
+  & S
+}\]
+avec $g$ lisse, purement de dimension relative $N$ et $Y$ ferm\'e dans $X$, 
+fibre par fibre de dimension $\leqslant d$. On munit de plus $Y$ d'un 
+``poids'' $\cK$ du type suivant: $\cK\in\D_{\text{parf},X}^b$ est un 
+complexe born\'e de faisceaux de $\cO$-modules sur $X$, de $\tor$-dimension 
+finie sur $S$ (ou sur $X$, cela revient au m\^eme) et dont les faisceaux de 
+cohomologie soient coh\'erents et \`a support dans $Y$. On se propose de 
+d\'efinir un morphisme $\tr_{f,\cK}:\R^{2 d}f_! \dZ/n(d) \to \dZ/n$. Pour $Y$ 
+plat sur $S$ et $\cK=\cO_Y$, ce sera le morphisme trace pr\'ec\'edent. En 
+g\'en\'eral, il ne d\'epend que des longueurs de $\cK$ aux points 
+g\'en\'eriques $y$ des composantes irr\'eductibles de 
+$Y(\operatorname{lg}_y(\cK) = \sum (-1)^i \operatorname{lg} \h^i(\cK)_y)$. 
+% NOTE: notation is not clear, is it a calligraphic H?
+Enfin, on notera $\cl(Y,\cK)$ la classe \`a support dans $Y$ telle que 
+\begin{equation}\label{IV:eq:2-3-3-1}
+  \tr_g\left(\cl(Y,\cK)\smallsmile u\right) = \tr_{f,\cK}(u) \text{.}
+\end{equation}
+
+
+
+
+
+\subsubsection{}\label{IV:2-3-4}
+
+La construction de $\tr_{f,\cK}$ est parall\`ele \`a celle de 
+\cite[XVIII.2]{sga4}; nour n'en indiquerons que les grandes lignes.
+
+\paragraph{A}
+$d=0$ ($f$ quasi-fini). Soit $x$ un point g\'eom\'etrique de $Y$. $s$ son image 
+dans $S$, $\cK_{(x)}$ l'image r\'eciproque de $\cK$ sur le localis\'e stricte 
+de $X$ en $x$, $\cK_{(x)s} = \cK_{(x)}\lotimes_{\cO_{S,s}^h} k(s)$ son image 
+r\'eciproque sur la fibre g\'eom\'etrique en $s$, et 
+$n(x)=\sum (-1)^i \dim_{k(s)} \h^i(\cK_{(x)s})$. La fonction $x\mapsto n(x)$ 
+est une pond\'eration de $f$, et on prend le morphisme trace correspondant 
+\cite[XVII.6.2.5]{sga4}. La pond\'eration $n(x)$, et $\tr_{f,\cK}$ sont de 
+formation compatible \`a tout changement de base. 
+
+\paragraph{B}
+Cas g\'en\'eral. Si $u:Z\to \dA_S^d$ est tel que $u i$ soit quasi-fini, on pose 
+$\tr_{f,\cK} = \tr_{\dA_S^d}\circ \tr_{u i,\cK}$. Ce morphisme trace est 
+clairement compatible \`a tout changement de base $S'/S$. Pour prouver qu'il ne 
+depend pas de $u$, on peut donc supposer que $S$ est le spectre d'un corps 
+alg\'ebriquement clos $k$. Soient dans ce cas $Y_i$ les composantes 
+irr\'eductibles de $Y$, et $\operatorname{lg}_i$ la longueur de $\cK$ au 
+point g\'en\'erique de $Y_i$. Si $\alpha_i$ est l'inclusion de 
+$(Y_i)_\text{red}$ dans $Y$, on a 
+\begin{equation}\label{IV:eq:2-3-4-1}
+  \tr_{f,\cK} = \sum \operatorname{lg}_i \tr_{Y_{i,\text{red}/S}} \alpha_i^\ast
+\end{equation}
+(cette formule r\'esulte de la formule analogue et facile pour $\tr_{u i}$). 
+
+Ceci d\'efinit $\tr_{f,\cK}$ localement sur $Y$; on proc\`ede ensuite comme en 
+\cite[XVIII.2.9]{sga4}. 
+
+
+
+
+
+\begin{lemma}\label{IV:2-3-5}
+Si $g=g'g'':X\xrightarrow{g''} S'\xrightarrow{g'} S$, avec $g'$ et $g''$ lisse 
+et purement de dimension relative $N'$ et $N''$, et que $Y$ est encore, sur 
+$S'$, fibre par fibre de codimension $\geqslant c$, alors la classe 
+$\operatorname{cl}(Y,\cK)$ est la m\^eme, calcul\'ee en terme de $g$ ou de 
+$g''$.
+\end{lemma}
+
+Soient $f'=g'' i$ et $d'=d-N'$. La formule $\tr_g=\tr_{g'}\tr_{g''}$ 
+(\cite[XVIII.2.9]{sga4} Var 3) assure la commutativit\'e de 
+\[\xymatrix{
+  \h_X^{2 c}\left(Z,\dZ/n(c)\right) \ar[d] \\
+  \hom_{S'}\left(\R f_!\dZ/n(d')[2 d'],\R g_!''\dZ/n(N'')[2 N'']\right) \ar[r] \ar[d]^-{\R g_!'(N')} 
+    & \hom_{S'}\left(\R^{2 d'} f_!' \dZ/n,\dZ/n\right) \ar[d]^-{\tr_{g'}\circ \R^{2 N'} g_!'} \\
+  \hom_S\left(\R f_!\dZ/n(d)[2d],\R g_!'\dZ/n(N)[2 N]\right) \ar[r] 
+    & \hom_S\left(\R^{2 d} f_!\dZ/n,\dZ/n\right)
+}\]
+tandis que la formule analogue et facile \`a v\'erifier 
+$\tr_{f,\cK}=\tr_{g'}\tr_{f',\cK}$ assure que l'image de $\tr_{f',\cK}$ est 
+$\tr_{f,\cK}$. L'assertion en r\'esulte. 
+
+
+
+
+
+\begin{lemma}\label{IV:2-3-6}
+Si $Y$ est un diviseur dans $X$, la classe \ref{IV:2-3-2} coincide avec la 
+classe \ref{IV:2-1-2}. 
+\end{lemma}
+
+Par semi-puret\'e (\ref{IV:2-2-6}(i) et \ref{IV:2-2-8}(i)), le probl\`eme est 
+locale sur $Y$; utilisant \ref{IV:2-3-5} pour remplacer $S$ par $S'$ 
+convenable, ceci nous permet de supposer que $N=1$. Utilisant \`a nouveau la 
+semi-puret\'e (\ref{IV:2-2-6}(ii) et \ref{IV:2-2-8}(ii)) il suffit de prouver 
+\ref{IV:2-3-6} au-dessus des points g\'en\'eriques de $S$. Une localisation 
+\'etale nous ram\`ene alors \`a supposer $S$ spectre d'un corps 
+alg\'ebriquement clos $k$. Les classes \ref{IV:2-3-2} et \ref{IV:2-1-2} \'etant 
+chacune additive en $Y$, ceci nous ram\`ene au cas o\`u $Y$ est un point 
+ferm\'e sur un courbe lisse sur $k$. Que la propri\'et\'e caract\'eristique 
+\ref{IV:2-3-2} soit v\'erifi\'ee est alors la compatibilit\'e fondamentale 
+\ref{IV:2-1-5}. 
+
+
+
+
+
+\begin{lemma}\label{IV:2-3-7}
+La formation de $\cl(Y,\cK)$ est compatible \`a tout changement de base 
+$S'/S$.
+\end{lemma}
+
+R\'esulte de la m\^eme assertion pour les morphismes trace.
+
+
+
+
+
+\begin{theorem}\label{IV:2-3-8}
+(i) $\cl(Y,\cK)$ ne d\'epend que de $Y\subset X$ et des longueurs de $\cK$ aux 
+points g\'en\'eriques de $Y$. Cette classe est additive en $\cK$. Pour 
+$\cK=\cO_Y$ et $Y$ d'intersection compl\`ete locale, elle induit la classe 
+locale \ref{IV:2-2-2}.
+
+(ii) Soit un diagramme commutatif 
+\[\xymatrix{
+  X' \ar[r]^-u \ar[d] 
+    & X \ar[d] \\
+  S' \ar[r] 
+    & S
+}\]
+avec $X'$ lisse sur $S'$. Si $u^{-1}(Y)$ est encore fibre par fibre de 
+codimension $\geqslant c$, alors 
+\[
+  \cl\left(u^{-1}(Y),\eL u^\ast\cK\right) = u^\ast \cl(Y,\cK) \text{.}
+\]
+
+(iii) Soit $Y'\subset X$ fibre par fibre de codimension $\geqslant c'$, 
+$\cK'$ un poids sur $Y'$ et supposons que $Y\cap Y'$ soit fibre par fibre de 
+codimension $\geqslant c+c'$. Alors 
+\[
+\cl\left(Y\cap Y',\cK\lotimes \cK'\right) = \cl(Y,\cK) \smallsmile \cl(Y',\cK') \text{.}
+\]
+\end{theorem}
+
+
+% The following paragraphs were originally numbered
+
+% (2.3.8.1)
+\paragraph{(A)}
+Etant donn\'e $Y\subset X/S$ comme dit, il r\'esulte de la semi-puret\'e 
+(\ref{IV:2-2-6}, \ref{IV:2-2-8}) que pour v\'erifier que deux classes dans 
+$\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ coincident, il suffit de le v\'erifier 
+localement aux points g\'en\'eriques de $Y$, voire m\^eme apr\`es tout 
+changement de bas $s\to S$ ($s$ point g\'eom\'etrique g\'en\'erique de $S$), 
+aux points g\'en\'eriques de $Y$. 
+
+% (2.3.8.2)
+\paragraph{(B) Preuve de (ii) pour $S=S'$ et $u$ un plongement ferm\'e}
+Par localisation (A) on peut supposer que $X'$ est l'image 
+r\'eciproque de la section $0$ par un morphisme lisse $v:X\to \dA_S^{N'}$ 
+\[\xymatrix{
+  X' \ar[r]^-u \ar[d] 
+    & X \ar[d]^-v \\
+  S \ar[r]^-0 
+    & \dA_S^{N'} \ar[r]^-\pi 
+    & S
+}\]
+On applique \ref{IV:2-3-5} \`a $g=\pi v$ et \ref{IV:2-3-7} au changement de 
+base $S\to \dA_S^{N'}$. 
+
+% (2.3.8.3)
+\paragraph{(C) Dans une situation produit:}
+$X=X'\times_S X''$, $Y=Y'\times_S Y''$, $\cK=\cK\lotimes_S \cK''$, on a 
+$\cl(Y,\cK) = \cl(Y,\cK')\smallsmile \cl(Y'',\cK'')$ (cup-produit ext\'erieur, 
+i.e. $\operatorname{pr}_1^\ast \cl(Y',\cK')\smallsmile \operatorname{pr}_2^\ast \cl(Y'',\cK'')$). 
+
+Des propri\'et\'es fonctorielles de $\tr_g$ \cite[XVIII.2.12]{sga4} r\'esulte 
+la commutativit\'e de 
+\[\xymatrix{
+  \h_{X'}^{2c'}\otimes \h_{X''}^{2 c''}\ar[r] \ar[d] 
+    & \hom_S\left(\R f_!' \dZ/n(d')[2 d'],\R g_!'\dZ/n(N')[2 N']\right)\otimes \cdots \ar[r] \ar[d] 
+    & \hom_S\left(\R^{2 d'} f_!' \dZ/n,\dZ/n\right) \otimes \cdots \ar[d] \\
+  \h_X^{2 c} \ar[r] 
+    & \hom_S\left(\R f_!\dZ/n(d)[2 d],\R g_!\dZ/n(N)[2 N]\right) \ar[r] 
+    & \hom_S\left(\R ^{2 d}f_!\dZ/n,\dZ/n\right)
+}\]
+et on v\'erifie que $\tr_f$ est l'image de $\tr_{f'}\otimes \tr_{f''}$ d'o\`u 
+l'assertion. 
+
+\paragraph{Preuve de (ii)}
+(\ref{IV:2-3-7}) et un changement de base pr\'eliminaire nous ram\`enent \`a 
+supposer que $S=S'$. Factorisons $u$ par son graphe:
+\[\xymatrix{
+  X' \ar[r]^-{(\text{id},u)} 
+    & X'\times X \ar[r]^-{\operatorname{pr}_2} 
+    & X \text{.}
+}\]
+Ceci nous am\`ene \`a traiter s\'eoar\'ement $\operatorname{pr}_2$, justiciable 
+de (C) pour $X'=X'$, $\cK'=\cO_{x'}$ (avec $\cl(Y')=1\in \h^0(X,\dZ/n)$), et 
+$(\text{id},u)$, justiciable de (B). 
+
+\paragraph{Preuve de (iii)}
+Soit $\delta:X\to X\times_S X$ l'inclusion diagonale. On utilise la formule 
+$\delta^\ast(Y_1\times_S Y_2) = Y_1\cap Y_2$ pour se ramenar \`a 
+(B) et (C). 
+
+\paragraph{Preuve de (i)}
+Le changement de base $S_\text{red}\to S$ remplace $X$ par $X_\text{red}$; ceci 
+nous ram\`ene \`a supposer $X$ et $S$ r\'eduits. Une localisation au voisinage 
+des points g\'en\'eriques de $Y$ nour ram\`ene ensuite au cas o\`u 
+$Y_\text{red}$ est irr\'eductibles et l'intersection compl\`ete de $c$ 
+diviseurs $D_i$. La m\^eme localisation, et la d\'efinition de $\tr$ dans le 
+cas quasi-fini. montre ensuite que 
+$\cl(Y,\cK)=\operatorname{lg}\cl(Y_\text{red},\cO_{Y_\text{red}})$, o\`u 
+$\operatorname{lg}$ est la longueur de $\cK$ au point g\'en\'erique de $Y$. 
+D'apr\`es (iv), on a donc 
+\[
+  \cl(Y,\cK) = \operatorname{lg} \prod_i \cl(D_i,\cO_{D_i})
+\]
+et on conclut par \ref{IV:2-3-6}. 
+
+
+
+
+
+\subsubsection{Remarque}\label{IV:2-3-9}
+
+Pour $S$ le spectre d'un corps, et la classe d'un cycle \'etant d\'efinie comme 
+en \ref{IV:2-2-10}, l'assertion (iii) dit que, si deux cycles $Y'$ et $Y''$ se 
+coupent avec la bonne dimension, alors 
+\[
+  \cl(Y'\cap Y'') = \cl(Y')\smallsmile \cl(Y'')\text{,}
+\]
+pourvu que les multiplicit\'es des composantes de $Y'\cap Y''$ soient 
+calcul\'ees comme sommes altern\'ees de $\tor$. 
+
+
+
+
+
+\subsubsection{Remarque}\label{IV:2-3-10}
+
+Soit $X/\spec(k)$, $k$ alg\'ebriquement clos. Si deux cycles de codimension $c$ 
+dans $X$ sont alg\'ebriquement \'equivalents, il r\'esulte de l'existence de la 
+th\'eorie relative ci-dessus que les images dans $\h^{2 c}(X,\dZ/n(c))$ de 
+leurs classes sont les fibres, en deux points de $S$ connexe convenable, d'une 
+section sur $S$ du faisceau constant $\h^{2 c}(X,\dZ/n(c))$ (le faisceau 
+$\R^{2 c} f_\ast \dZ/n(c)$ pour $f=\operatorname{pr}_2:X\times S\to S$): deux 
+cycles alg\'ebriquement \'equivalentes ont m\^eme classe dans 
+$\h^{2 c}(X,\dZ/n(c))$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 \section{Application: la formule des traces de Lefschetz dans le cas propre et lisse}\label{IV:3}
 
+
+
+
+
+\subsection{}\label{IV:3-1}
+
+Soient $X$ et $Y$ des vari\'et\'es alg\'ebriques propres et lisses sur un corps 
+alg\'ebriquement clos $k$, purement de dimensions $N$ et $M$. Via 
+l'isomorphisme de K\"unneth 
+$\h^\bullet(X\times Y)=\h^\bullet(X)\otimes \h^\bullet(Y)$, le morphisme trace 
+$\h^\bullet(X\times Y)(M)\to \h^\bullet(X)$ n'est autre que 
+$\h^\bullet(X)\otimes ($le morphisme trace $\h^\bullet(Y)(M)\to \dQ_\ell)$. Le 
+morphisme \'etant homog\`ene de degr\'e pair, il n'y a pas de probl\`eme de 
+signe. On le note $\int_Y$. 
+
+
+
+
+
+\subsection{}\label{IV:3-2}
+
+Une classe $\eta\in \h^{2 q}(X\times Y)(q)$ d\'efinit un morphisme de degr\'e 
+$2(q-N)$ $\eta_{XY}:\h^\bullet(Y)(N-q)\to \h^\bullet(X)$, par la formule 
+\[
+  \beta \mapsto \int_Y \eta\cdot \operatorname{pr}_2^\ast \beta \text{.}
+\]
+
+
+
+
+
+\begin{proposition_}\label{IV:3-3}
+Soient $p$ et $q$ deux entiers, avec $p+q=N+M$, et 
+$\varepsilon\in \h^{2 p}(X\times Y)(p)$, $\eta\in \h^{2 q}(X\times Y)(p)$. La 
+trace de $\eta_{X Y}\varepsilon_{Y X}:\h^\bullet(X)\to \h^\bullet(X)$ \'etant 
+entendue au sens \ref{IV:1-3}, on a alors 
+\[
+  \tr_{X\times Y}(\eta\cdot \varepsilon) = \tr\left(\eta_{X Y}\varepsilon_{Y X},\h^\bullet(X)\right) \text{.}
+\]
+\end{proposition_}
+
+Pour exorciser les signes, il y a int\'er\^et \`a ne retenir de la graduation 
+de $\h^\bullet$ que la $\dZ/2$-graduation sous-jacente. Pour \'eviter de 
+trainer avec soi les twist \`a la Tate, on fixe de plus un isomorphisme 
+$\dQ_\ell(1)=\dQ_\ell$. Soit $\alpha_Y$ l'homomorphisme 
+$\h^\bullet(Y)\to \h^\bullet(Y)^\vee$ (un isomorphisme) rendant commutatif le 
+diagramme 
+\[\xymatrix{
+  \h^\bullet(Y)\otimes \h^\bullet(Y) \ar[r] \ar[d]^-{\alpha_Y\otimes 1} 
+    & \h^\bullet(Y) \ar[r]^-{\tr} 
+    & \dQ_\ell \ar@{=}[d] \\
+  \h^\bullet(Y)^\vee \otimes \h^\bullet(Y) \ar[rr]^-{\text{(\ref{IV:eq:1-3-1})}} 
+    & & \dQ_\ell \text{.}
+}\]
+L'application $\eta_{X Y}$ est l'image de $\eta$ par 
+\[\xymatrix{
+  \h^\bullet(X\times Y) = \h^\bullet(X)\otimes \h^\bullet(Y) \ar[r]^-{\alpha_Y} 
+    & \h^\bullet(X) \otimes \h^\bullet(Y)^\vee \ar@{=}[r]^-{\text{(\ref{IV:eq:1-3-2})}} 
+    & \hom\left(\h^\bullet(X),\h^\bullet(Y)\right) \text{,}
+}\]
+et de m\^eme pour $\varepsilon$. La d\'efinition \ref{IV:1-3-4} de la trace 
+ram\`ene alors \ref{IV:3-3} \`a la formule 
+$\tr_{X\times Y}=\tr_X\otimes \tr_Y$. 
+
+
+
+
+
+\subsection{Remarque}\label{IV:3-4}
+
+La preuve de \ref{IV:3-4} n'utilise pas que $\alpha_X$ et $\alpha_Y$ soient des 
+isomorphismes. Elle vaut sans supposer $X$ et $Y$ lisses. Toutefois, en dehors 
+du cas lisse, il est difficile de trouver des classes de \emph{cohomologie} 
+auxquelles on veuille appliquer \ref{IV:3-3}. 
+
+
+
+
+
+\subsection{Remarque}\label{IV:3-5}
+
+Si $\varepsilon,\eta$ sont les classes de cohomologie de cycles alg\'ebriques 
+$A$ et $B$ sur $X\times Y$, de codimension $p$ et $q$, et que $A\cap B$ est de 
+dimension $0$, alors $\tr_{X\times Y}(\eta\varepsilon)$ est la multiplicit\'e 
+d'intersection $A\cdot B$, calcul\'ee par une somme altern\'ee de $\tor$ 
+(\ref{IV:2-3-9}). 
+
+
+
+
+
+\begin{proposition_}\label{IV:3-6}
+Pour $q=M$ et $\eta=\cl(B)$ la classe d'un sous-sch\'ema $B\subset X\times Y$, 
+fini sur $X$, l'application $\eta_{X Y}$ est la compos\'ee 
+\[\xymatrix{
+  \eta_{X Y} : \h^\bullet(Y) \ar[r]^-{\operatorname{pr}_2^\ast} 
+    & \h^\bullet(B) \ar[r]^-{\tr_{B/X}} 
+    & \h^\bullet(X) \text{.}
+}\]
+\end{proposition_}
+
+D'apr\`es \ref{IV:3-2} et \eqref{IV:eq:2-3-3-1} pour $\cK=\cO_B$, on a en 
+effet 
+\[
+  \eta_{X Y}(\beta) = \tr_{X\times Y/X}\left(\cl(B)\cdot \operatorname{pr}_2^\ast\beta\right) = \tr_{B/X}\left(\operatorname{pr}_2^\ast \beta\right) \text{.}
+\]
+
+Le cas le plus important est celui o\`u $B$ est le graphe d'une application 
+$f:X\to Y$. Dans ce cas, \ref{IV:3-6} montre que $\eta_{X Y}=f^\ast$. 
+
+
+
+
+
 \begin{corollary_}\label{IV:3-7}
-foo
+Soit $f$ un endomorphisme de $X$ propre et lisse sur un corps alg\'ebriquement 
+clos $k$. On suppose que les points fixes de $f$ sont isol\'es. Alors, la 
+trace $\sum (-1)^i \tr(f^\ast,\h^i(X))$ est le nombre de points fixes de $f$, 
+chacun compt\'e avec sa multiplicit\'e.
 \end{corollary_}
+
+Dans \ref{IV:3-5}, on prend $A=$graphe de l'identit\'e, $B=$graphe de $f$ et on 
+applique \ref{IV:3-3}, \ref{IV:3-6}. 
+
+
+
+
+
+\begin{corollary_}\label{IV:3-8}
+Soient $X$ un courbe sur $k$ alg\'ebriquement clos, d\'eduit par extension des 
+scalaires de $X_0$ sur $\dF_q$, et $f$ le morphisme de Frobenius. Alors, 
+$\sum (-1)^i \tr\left(f^\ast,\h_c^\bullet(X)\right)$ est le nombre de points 
+fixes de $f$.
+\end{corollary_}
+
+On peut remplacer $X$ par $X_\text{red}$, donc supposer $X$ r\'eduite. Soit $U$ 
+l'ouvert de $X$ o\`u $X$ est lisse de dimension $1$, et $\bar U$ le 
+compl\'etion projective et lisse de $U$. Les suites exactes longues de 
+cohomologie pour $(X,U)$ et $(\bar U,U)$ donnent 
+\[
+  \tr\left(f^\ast,\h_c^\bullet(X)\right) = \tr\left(f^\ast,\h_c^\bullet(U)\right) + \tr\left(f^\ast,\h_c^\bullet(X\setminus U)\right) 
+\]
+et
+\[
+  \tr\left(f^\ast,\h_c^\bullet(\bar U)\right) = \tr\left(f^\ast,\h_c^\bullet(U)\right) + \tr\left(f^\ast,\h_c^\bullet(\bar U\setminus U)\right) \text{.}
+\]
+Le m\^emes formules valent pour les nombres de points fixes. La formule 
+\ref{IV:3-8} \'etant claire pour un sch\'ema de dimension $0$, ceci ram\`ene 
+\`a prouver \ref{IV:3-8} pour $\bar U$. Ce cas est justiciable de \ref{IV:3-7}. 
+Le fait que $d f=0$ garantit que les points fixes sont tous de 
+multiplicit\'e un. 
+
+
+
+
+
+\subsection{Remarque}\label{IV:3-9}
+
+Pour $X$ de dimension $\leqslant 1$ sur $k$ alg\'ebriquement clos, et 
+$f:X\to X$ tel que $d f=0$, il n'est pas difficile de v\'erifier que 
+\ref{IV:3-8} est encore valable. 
+
+
