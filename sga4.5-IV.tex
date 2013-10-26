@@ -77,12 +77,12 @@ lecteur est invité à ne consulter qu'au fur et à mesure des besoins.
 
 \subsubsection{}\label{IV:1-1-1}
 
-Soit $\cF$ un faisceau abélien sur un site $X$. On sait que $\h^1(X,\cF)$ 
-classifie les $\cF$-torseurs sur $X$. Nous normaliserons ($=$choisirons le 
+Soit $\sF$ un faisceau abélien sur un site $X$. On sait que $\h^1(X,\sF)$ 
+classifie les $\sF$-torseurs sur $X$. Nous normaliserons ($=$choisirons le 
 signe) de l'isomorphisme $($ensemble des classes d'isomorphisme de 
-$F$-torseurs$)\to \h^1(X,\cF)$ de telle sorte que pour toute suite exacte 
-$0\to \cF\xrightarrow\alpha\cG\xrightarrow\beta\cH\to 0$ et tout 
-$h\in\h^0(X,\cH)$, le $\cF$-torseur $\beta^{-1}(h)\subset \cG$, sur lequel 
+$F$-torseurs$)\to \h^1(X,\sF)$ de telle sorte que pour toute suite exacte 
+$0\to \sF\xrightarrow\alpha\sG\xrightarrow\beta\sH\to 0$ et tout 
+$h\in\h^0(X,\sH)$, le $\sF$-torseur $\beta^{-1}(h)\subset \sG$, sur lequel 
 $F$ agit par $(f,x)\mapsto \alpha(f)+x$, soit de classe $\partial h$. 
 
 
@@ -91,17 +91,17 @@ $F$ agit par $(f,x)\mapsto \alpha(f)+x$, soit de classe $\partial h$.
 
 \subsubsection{}\label{IV:1-1-2}
 
-Soit $\cP$ un $\cF$-torseur. Si $(U_i)$ est un recouvrement ouvert de $X$, et 
-$p_i$ un section de $\cP$ sur $U_i$, on associe à $\cP$ le cocycle de 
+Soit $\sP$ un $\sF$-torseur. Si $(U_i)$ est un recouvrement ouvert de $X$, et 
+$p_i$ un section de $\sP$ sur $U_i$, on associe à $\sP$ le cocycle de 
 \v{C}ech
 \[
-  p_{i j} = p_j - p_i \qquad \text{($p_{i j}\in \h^0(U_i\times U_j,\cF)$).}
+  p_{i j} = p_j - p_i \qquad \text{($p_{i j}\in \h^0(U_i\times U_j,\sF)$).}
 \]
 Si, selon la règle usuelle, on définit l'application 
-$\operatorname{\check H}^\bullet(X,\cF)\to \h^\bullet(X,\cF)$ de telle sorte 
+$\operatorname{\check H}^\bullet(X,\sF)\to \h^\bullet(X,\sF)$ de telle sorte 
 que ce soit un morphisme de $\delta$-foncteurs, l'image de 
-$(p_{i j})\in \operatorname{\check H}^1(X,\cF)$ dans $\h^1(X,\cF)$ est la 
-classe de $\cP$, telle que normalisée par \ref{IV:1-1-1}. 
+$(p_{i j})\in \operatorname{\check H}^1(X,\sF)$ dans $\h^1(X,\sF)$ est la 
+classe de $\sP$, telle que normalisée par \ref{IV:1-1-1}. 
 
 
 
@@ -109,22 +109,22 @@ classe de $\cP$, telle que normalisée par \ref{IV:1-1-1}.
 
 \subsubsection{}\label{IV:1-1-3}
 
-La définition de $\h^\bullet(X,\cF)$ est la suivante: pour $\cF^\bullet$ une 
-résolution à composantes acycliques de $\cF$, 
-$\h^i(X,\cF) = \h^i\Gamma(X,\cF^\bullet)$. La structure de $\delta$-foncteur 
+La définition de $\h^\bullet(X,\sF)$ est la suivante: pour $\sF^\bullet$ une 
+résolution à composantes acycliques de $\sF$, 
+$\h^i(X,\sF) = \h^i\Gamma(X,\sF^\bullet)$. La structure de $\delta$-foncteur 
 s'obtient en associant à une suite exacte courte de faisceaux une suite 
 exacte courte de résolutions qui reste exacte après application du 
-foncteur $\Gamma$. Si $\cF^\bullet$ est une résolution de $\cF$, 
+foncteur $\Gamma$. Si $\sF^\bullet$ est une résolution de $\sF$, 
 l'homomorphisme de connection $\partial$ associé à 
 \[\xymatrix{
   0 \ar[r]
-    & \cF \ar[r]
-    & \cF^0 \ar[r]^-d 
+    & \sF \ar[r]
+    & \sF^0 \ar[r]^-d 
     & \ker(d) \ar[r] 
     & 0
 }\]
 induit l'opposé de l'isomorphisme de définition 
-$\h^1(X,\cF) = \Gamma\left(X,\ker(d)\right)/d \Gamma(X,\cF^0)$. 
+$\h^1(X,\sF) = \Gamma\left(X,\ker(d)\right)/d \Gamma(X,\sF^0)$. 
 
 
 
@@ -133,19 +133,19 @@ $\h^1(X,\cF) = \Gamma\left(X,\ker(d)\right)/d \Gamma(X,\cF^0)$.
 \subsubsection{}\label{IV:1-1-4}
 
 Soit $U$ une partie ouverte de $X$ (un sous-faisceau du faisceau final) et 
-soit $D$ le ``fermé complémentaire.'' On sait que $\h_D^1(X,\cF)$ 
-classifie les $\cF$-torseurs sur $X$, trivialisés sur $U$. Pour toute suite 
-exacte courte $0\to \cF\xrightarrow\alpha \cG\xrightarrow\beta\cH\to 0$, et 
-toute section à support dans $D$ $h\in\h_D^0(X,\cH)$, le torseur 
+soit $D$ le ``fermé complémentaire.'' On sait que $\h_D^1(X,\sF)$ 
+classifie les $\sF$-torseurs sur $X$, trivialisés sur $U$. Pour toute suite 
+exacte courte $0\to \sF\xrightarrow\alpha \sG\xrightarrow\beta\sH\to 0$, et 
+toute section à support dans $D$ $h\in\h_D^0(X,\sH)$, le torseur 
 $\beta^{-1}(h)$, trivialisé sur $U$ par la section $0$, a pour classe 
 $\partial h$.
 
 La suite exacte longue de cohomologie à support
 \[\xymatrix{
   \cdots \ar[r]^-\partial 
-    & \h_D^i(X,\cF) \ar[r] 
-    & \h^i(X,\cF) \ar[r]
-    & \h^i(U,\cF) \ar[r]^-\partial 
+    & \h_D^i(X,\sF) \ar[r] 
+    & \h^i(X,\sF) \ar[r]
+    & \h^i(U,\sF) \ar[r]^-\partial 
     & \cdots
 }\]
 est définie à partir de la suite de foncteurs 
@@ -156,8 +156,8 @@ est définie à partir de la suite de foncteurs
     & \Gamma(U,-) \ar[r] 
     & 0
 }\]
-(exacte sur les faisceaux injectifs). Pour toute section $f\in \h^0(U,\cF)$, 
-$\partial f\in \h_D^1(X,\cF)$ est la classe du torseur trivial $\cF$, 
+(exacte sur les faisceaux injectifs). Pour toute section $f\in \h^0(U,\sF)$, 
+$\partial f\in \h_D^1(X,\sF)$ est la classe du torseur trivial $\sF$, 
 trivialisé sur $U$ par la section $f$. 
 
 
@@ -166,22 +166,22 @@ trivialisé sur $U$ par la section $f$.
 
 \subsubsection{}\label{IV:1-1-5}
 
-Soit $j:U\hookrightarrow X$. Si $\cF$ s'injecte dans $j_* j^* \cF$, la suite 
+Soit $j:U\hookrightarrow X$. Si $\sF$ s'injecte dans $j_* j^* \sF$, la suite 
 exacte 
 \[\xymatrix{
   0 \ar[r] 
-  & \cF \ar[r]
-  & j_* j^* \cF \ar[r]
-  & j_* j^* \cF / \cF \ar[r]
+  & \sF \ar[r]
+  & j_* j^* \sF \ar[r]
+  & j_* j^* \sF / \sF \ar[r]
   & 0
 }\]
 fournit 
-$\partial:\h^0(j_* j^*\cF/\cF) = \h_D^0(j_* j^* \cF/\cF) \to \h_D^1(X,\cF)$. 
+$\partial:\h^0(j_* j^*\sF/\sF) = \h_D^0(j_* j^* \sF/\sF) \to \h_D^1(X,\sF)$. 
 L'application composée 
 \[\xymatrix{
-  \h^0(U,\cF) = \h^0(X,j_* j^*\cF) \ar[r] 
-    & \h^0(X,j_* j^*\cF / \cF) \ar[r]^-\partial 
-    & \h_D^1(X,\cF)
+  \h^0(U,\sF) = \h^0(X,j_* j^*\sF) \ar[r] 
+    & \h^0(X,j_* j^*\sF / \sF) \ar[r]^-\partial 
+    & \h_D^1(X,\sF)
 }\]
 est l'opposée de l'application considérée en \ref{IV:1-1-4}. 
 
@@ -191,14 +191,14 @@ est l'opposée de l'application considérée en \ref{IV:1-1-4}.
 
 \subsubsection{}\label{IV:1-1-6}
 
-On rappelle que si $\cL$ est un faisceau inversible sur un schéma $X$, le 
-$\dG_m$-torseur correspondant est le faisceau $\operatorname{Isom}(\cO,\cL)$, 
+On rappelle que si $\sL$ est un faisceau inversible sur un schéma $X$, le 
+$\dG_m$-torseur correspondant est le faisceau $\operatorname{Isom}(\sO,\sL)$, 
 sur lequel $\dG_m$ agit par 
 $(\lambda,f)\mapsto f\circ (\lambda\cdot) = \lambda f$. On rappelle aussi que 
 si $D$ est un diviseur de Cartier sur $X$, et $j:U\hookrightarrow X$ 
-l'inclusion d'ouvert complémentaire, le faisceau inversible $\cO(D)$ est le 
-sous-faisceau de $j_*\cO_U$ formé des sections locales $s$ telles que $s f$ 
-soit dans $\cO_X$, pour $f$ une équation locale de $D$.
+l'inclusion d'ouvert complémentaire, le faisceau inversible $\sO(D)$ est le 
+sous-faisceau de $j_*\sO_U$ formé des sections locales $s$ telles que $s f$ 
+soit dans $\sO_X$, pour $f$ une équation locale de $D$.
 
 
 
@@ -217,22 +217,22 @@ dualité de Poincaré des courbes et autodualité de la jacobienne.
 
 \subsubsection{}\label{IV:1-2-1}
 
-Soient $X$ un site, $Y$ un partie fermée de $X$, et $\cF,\cG$ deux faisceaux 
+Soient $X$ un site, $Y$ un partie fermée de $X$, et $\sF,\sG$ deux faisceaux 
 abéliens sur $X$. Par exemple: $X$ un schéma, $Y$ un sous-schéma fermé 
-et $\cF,\cG$ des faisceaux sur $\et X$. Définissons un produit 
+et $\sF,\sG$ des faisceaux sur $\et X$. Définissons un produit 
 \begin{equation}\label{IV:eq:1-2-1-1}
-  \Gamma_Y(X,\cF)\otimes \Gamma(Y,\cG) \to \Gamma_Y(X,\cF\otimes\cG) \text{.}
+  \Gamma_Y(X,\sF)\otimes \Gamma(Y,\sG) \to \Gamma_Y(X,\sF\otimes\sG) \text{.}
 \end{equation}
-Le produit d'une section $s$, à support dans $Y$, de $\cF$ par une section 
-$t$ de $\cG$ sur $Y$ s'obtient comme suit: localement sur $X$, $t$ est la 
-restriction à $Y$ d'une section $t'$ de $\cG$ sur $X$, et on forme le produit 
+Le produit d'une section $s$, à support dans $Y$, de $\sF$ par une section 
+$t$ de $\sG$ sur $Y$ s'obtient comme suit: localement sur $X$, $t$ est la 
+restriction à $Y$ d'une section $t'$ de $\sG$ sur $X$, et on forme le produit 
 $s\otimes t'$. Il est à support dans $Y$, et ne dépend pas du choix de 
 $t'$, ce qui légitime et permet de globaliser la définition.
 
 Soit $i:Y\hookrightarrow X$ le morphisme d'inclusion. L'analogue local de 
 \eqref{IV:eq:1-2-1-1} est le produit.
 \begin{equation}\label{IV:eq:1-2-1-2}
-  i^!\cF\otimes i^*\cG \to i^!(\cF\otimes\cG) \text{,}
+  i^!\sF\otimes i^*\sG \to i^!(\sF\otimes\sG) \text{,}
 \end{equation}
 dont \eqref{IV:eq:1-2-1-1} se déduit par application de $\Gamma(Y,-)$. 
 
@@ -242,19 +242,19 @@ dont \eqref{IV:eq:1-2-1-1} se déduit par application de $\Gamma(Y,-)$.
 
 \subsubsection{}\label{IV:1-2-2}
 
-Dérivons ces flèches. Soient $\cK$, $\cL$ et $\cM$ dans la catégorie 
-dérivée, et une application bilinéaire $\cK\lotimes\cL\to\cM$. Par 
+Dérivons ces flèches. Soient $\sK$, $\sL$ et $\sM$ dans la catégorie 
+dérivée, et une application bilinéaire $\sK\lotimes\sL\to\sM$. Par 
 dérivation de \eqref{IV:eq:1-2-1-1}, on en déduit 
 \begin{equation}\label{IV:eq:1-2-2-1}
-  \R\Gamma_Y(X,\cK) \lotimes \R\Gamma(Y,\cL) \to \R\Gamma_Y(X,\cM) 
+  \R\Gamma_Y(X,\sK) \lotimes \R\Gamma(Y,\sL) \to \R\Gamma_Y(X,\sM) 
 \end{equation}
 induisant 
 \begin{equation}\label{IV:eq:1-2-2-2}
-  \h_Y^i(X,\cK)\otimes \h^j(Y,\cL) \to \h_Y^{i+j}(X,\cM)
+  \h_Y^i(X,\sK)\otimes \h^j(Y,\sL) \to \h_Y^{i+j}(X,\sM)
 \end{equation}
 (le cup-produit). La flèche locale \eqref{IV:eq:1-2-1-2} fournit 
 \begin{equation}\label{IV:eq:1-2-2-3}
-  \R i^! \cK\lotimes i^*\cL \to \R i^!\cM \text{,}
+  \R i^! \sK\lotimes i^*\sL \to \R i^!\sM \text{,}
 \end{equation}
 dont \eqref{IV:eq:1-2-2-1} se déduit par application de $\R\Gamma(Y,-)$. 
 
@@ -274,16 +274,16 @@ même formule de dérivations à droite ($\R\Gamma$) et à gauche
     de complexes à la fois plats et flasques, on utilise les résolutions 
     flasques canoniques comme en \cite[XVII]{sga4}. 
   \item Pour une théorie plus générale, il cesse d'être d'interpréter 
-    les applications bilinéaires de $\cK$ et $\cL$ dans $\cM$ comme des 
-    morphismes de $\cK\lotimes\cL$ dans $\cM$. Par exemple, 
-    $\R\Gamma_Y(X,\cK)\lotimes\R\Gamma(Y,\cL)$ n'est pas défini si des deux 
+    les applications bilinéaires de $\sK$ et $\sL$ dans $\sM$ comme des 
+    morphismes de $\sK\lotimes\sL$ dans $\sM$. Par exemple, 
+    $\R\Gamma_Y(X,\sK)\lotimes\R\Gamma(Y,\sL)$ n'est pas défini si des deux 
     facteurs sont dans $\D^+$. Une solution est de travailler dans $\D^+$, de 
     définir 
     \[
-      \operatorname{Bil}(\cK,\cL;\cM) = \varinjlim \hom(\cK'\otimes\cL',\cM') \text{,}
+      \operatorname{Bil}(\sK,\sL;\sM) = \varinjlim \hom(\sK'\otimes\sL',\sM') \text{,}
     \]
-    où la limite est prise sur les quasi-isomorphismes $\cK'\iso \cK$, 
-    $\cL'\iso \cL$, $\cM\iso \cM'$ ($\cK'$, $\cL'$, $\cM'$ bornés 
+    où la limite est prise sur les quasi-isomorphismes $\sK'\iso \sK$, 
+    $\sL'\iso \sL$, $\sM\iso \sM'$ ($\sK'$, $\sL'$, $\sM'$ bornés 
     inférieurement) et où $\hom$ est pour ``morphisme de complexes, à 
     homotopie près,'' et d'utiliser systématiquement de telles applications 
     bilinéaires, sans jamais mentionner de $\otimes$.  
@@ -295,28 +295,28 @@ même formule de dérivations à droite ($\R\Gamma$) et à gauche
 \subsubsection{Deuxième thème}\label{IV:1-2-4}
 
 Soit $U$ un ouvert de $X$ et $j:U\hookrightarrow X$ le morphisme d'inclusion. 
-Pour $\cK$ dans la catégorie dérivée, sur $U$, on pose 
-$\R\Gamma_!(U,\cK)=\R\Gamma(X,j_!\cK)$. Pour $\cK$, $\cL$ et $\cM$ sur $U$, et 
-une application bilinéaire $\cK\lotimes\cL\to\cM$, on veut définir 
+Pour $\sK$ dans la catégorie dérivée, sur $U$, on pose 
+$\R\Gamma_!(U,\sK)=\R\Gamma(X,j_!\sK)$. Pour $\sK$, $\sL$ et $\sM$ sur $U$, et 
+une application bilinéaire $\sK\lotimes\sL\to\sM$, on veut définir 
 \begin{equation}\label{IV:eq:1-2-4-1}
-  \R\Gamma(U,\cK)\lotimes\R\Gamma_!(U,\cL)\to\R\Gamma_!(U,\cM) \text{.}
+  \R\Gamma(U,\sK)\lotimes\R\Gamma_!(U,\sL)\to\R\Gamma_!(U,\sM) \text{.}
 \end{equation}
 Au niveau des faisceaux, et de leurs sections globales, un tel produit se 
 déduit de l'isomorphisme 
-$j_*\cF\otimes j_!\cG\xleftarrow\sim j_!(\cF\otimes \cG)$, mais il faut prendre 
+$j_*\sF\otimes j_!\sG\xleftarrow\sim j_!(\sF\otimes \sG)$, mais il faut prendre 
 garde au fait que $\R\Gamma_!$ n'est en général pas le dérivé du 
 foncteur $\Gamma(X,j_!-)$. 
 
 On commence par définir 
 \[\xymatrix{
-  \R j_* \cK\lotimes j_! \cL 
-    & \ar[l]_-\sim j_!(\cK\lotimes \cL) \ar[r] 
-    & j_!\cM \text{.}
+  \R j_* \sK\lotimes j_! \sL 
+    & \ar[l]_-\sim j_!(\sK\lotimes \sL) \ar[r] 
+    & j_!\sM \text{.}
 }\]
 Appliquant $\R\Gamma(X,-)$, on trouve 
 \[\xymatrix{
-  \R\Gamma(U,\cK)\lotimes\R\Gamma_!(U,\cL) = \R\Gamma(X,\R j_*\cK)\lotimes \R\Gamma(X,j_!\cL) \ar[r] 
-    & \R\Gamma(X,j_! \cM) \text{.}
+  \R\Gamma(U,\sK)\lotimes\R\Gamma_!(U,\sL) = \R\Gamma(X,\R j_*\sK)\lotimes \R\Gamma(X,j_!\sL) \ar[r] 
+    & \R\Gamma(X,j_! \sM) \text{.}
 }\]
 
 Ici encore, le conflit entre la gauche et la droite se résoudra au numéro 
@@ -330,30 +330,30 @@ suivant en travaillant dans $\D^-$.
 
 Soient $j:U\hookrightarrow X$ une partie ouverte et $i:Y\hookrightarrow U$ une 
 partie fermée de $U$. Soit $\bar Y$ une fermé de $X$ tel que 
-$\bar Y\cap U=Y$, (par exemple, le complément de $U\setminus Y$). Soit $\cK$ 
-sur $U$. On pose $\R\Gamma_{Y!}(U,\cK)=\R\Gamma_!(Y,\R i^!\cK)$ où 
+$\bar Y\cap U=Y$, (par exemple, le complément de $U\setminus Y$). Soit $\sK$ 
+sur $U$. On pose $\R\Gamma_{Y!}(U,\sK)=\R\Gamma_!(Y,\R i^!\sK)$ où 
 $\R\Gamma_!$ est relatif à l'inclusion de $Y$ dans $\bar Y$. Pour tout ouvert 
-$V$ de $U$, contenant $Y$, $\R\Gamma_{Y!}(U,\cK)$ s'envoie dans 
-$\R\Gamma_!(V,\cK)$: si on note encore $i$ l'inclusion de $\bar Y$ dans $X$, 
+$V$ de $U$, contenant $Y$, $\R\Gamma_{Y!}(U,\sK)$ s'envoie dans 
+$\R\Gamma_!(V,\sK)$: si on note encore $i$ l'inclusion de $\bar Y$ dans $X$, 
 $j$ celle de $Y$ dans $\bar Y$ et $k$ celle de $V$ dans $X$, on a 
-$\R i^!\cK = j^*\R i^! k_!(k^*\cK)$, d'où un morphisme 
-$j_!\R i^!\cK \to \R i^! k_!(k^*\cK)$. Lui appliquant 
+$\R i^!\sK = j^*\R i^! k_!(k^*\sK)$, d'où un morphisme 
+$j_!\R i^!\sK \to \R i^! k_!(k^*\sK)$. Lui appliquant 
 $\R\Gamma(\bar Y,-)$, on trouve 
-$\R\Gamma_{Y!}(U,\cK)\to \R\Gamma_{\bar Y}(k_! k^* \cK) \to \R\Gamma(k_! k^*\cK) = \R\Gamma_!(V,\cK)$. 
+$\R\Gamma_{Y!}(U,\sK)\to \R\Gamma_{\bar Y}(k_! k^* \sK) \to \R\Gamma(k_! k^*\sK) = \R\Gamma_!(V,\sK)$. 
 
-Pour $\cK,\cL,\cM$ sur $U$, et une application bilinéaire 
-$\cK\lotimes\cL\to\cM$, on veut définir 
+Pour $\sK,\sL,\sM$ sur $U$, et une application bilinéaire 
+$\sK\lotimes\sL\to\sM$, on veut définir 
 \begin{equation}\label{IV:eq:1-2-5-1-1}
-  \h^n(U,\cK)\otimes \h_!^m(Y,\cL) \to \h_{Y!}^{n+m}(U,\cM)
+  \h^n(U,\sK)\otimes \h_!^m(Y,\sL) \to \h_{Y!}^{n+m}(U,\sM)
 \end{equation}
-(ce dernier groupe lui-même s'envoyant dans $\h_!^{n+m}(V,\cM)$). Dans la 
+(ce dernier groupe lui-même s'envoyant dans $\h_!^{n+m}(V,\sM)$). Dans la 
 catégorie dérivée, il s'agit de définir 
 \begin{equation}\label{IV:eq:1-2-5-2}
-  \R\Gamma_Y(U,\cK) \lotimes \R\Gamma_!(R,\cL) \to \R\Gamma_{Y!}(U,\cM) \text{.}
+  \R\Gamma_Y(U,\sK) \lotimes \R\Gamma_!(R,\sL) \to \R\Gamma_{Y!}(U,\sM) \text{.}
 \end{equation}
-On identifie $\R\Gamma_Y$ à $\R\Gamma(Y,\R i^!\cK)$. Le produit cherché 
+On identifie $\R\Gamma_Y$ à $\R\Gamma(Y,\R i^!\sK)$. Le produit cherché 
 est alors du type \eqref{IV:eq:1-2-4-1} relatif au produit locale 
-\eqref{IV:eq:1-2-2-3} sur $Y$: $\R i^! \cK\lotimes\cL \to \R i^! \cM$. 
+\eqref{IV:eq:1-2-2-3} sur $Y$: $\R i^! \sK\lotimes\sL \to \R i^! \sM$. 
 
 
 
@@ -503,15 +503,15 @@ trouve que, pour $f:V\to W$ et $g:W\to V$ homogènes, on a
 \subsubsection{}\label{IV:2-1-1}
 
 Soit $D$ un diviseur de Cartier dans un schéma $X$. Hors de $D$, le faisceau 
-inversible $\cO(D)$ est trivialisé par la section $1$. La classe 
+inversible $\sO(D)$ est trivialisé par la section $1$. La classe 
 $\cl(D)$ de $D$, dans $\h_D^1(X,\dG_m)$, est la classe du 
 $\dG_m$-torseur trivialisé sur $X\setminus D$ correspondant 
 (\ref{IV:1-1-6} et \ref{IV:1-1-4}). 
 
 Soit $\partial:\h^i(X\setminus D,\dG_m)\to \h_D^i(X,\dG_m)$ le morphisme 
 \ref{IV:1-1-4}. Si $D$ admet une équation globale $f$, la multiplication par 
-$f$ est un isomorphisme de $\cO(D)$, trivialisé par $1$ sur $X\setminus D$, 
-avec $\cO$, trivialisé par $f$ sur $X\setminus D$. D'après \ref{IV:1-1-4}, 
+$f$ est un isomorphisme de $\sO(D)$, trivialisé par $1$ sur $X\setminus D$, 
+avec $\sO$, trivialisé par $f$ sur $X\setminus D$. D'après \ref{IV:1-1-4}, 
 on a donc 
 \begin{equation}\label{IV:2-1-1-1}
   \cl(D) = \partial f \text{.}
@@ -595,7 +595,7 @@ point fermé de $X$ et $\tr$ le composé $\h_P^2(X,\dmu_n) \to \h_c^2(X,\dmu_n) 
 \end{theorem}
 
 Soit $\bar X$ la courbe projective et lisse complétant $X$. La formule 
-exprime que le faisceau inversible $\cO(P)$ sur $\bar X$ est de degré $1$. 
+exprime que le faisceau inversible $\sO(P)$ sur $\bar X$ est de degré $1$. 
 
 
 
@@ -759,7 +759,7 @@ On suppose $X$ lisse, purement de dimension relative $N$ et que $Y$ est fibre
 par fibre de dimension $\leqslant d$. Soit $c=N-d$. 
 \begin{enumerate}[\indent (i)]
   \item On a $\R^p i^!\dZ/n=0$ pour $p<2 c$; de même pour $\dZ/n$ remplacé 
-    par un faisceau $g^* \cF$.
+    par un faisceau $g^* \sF$.
   \item Si, au dessus d'un ouvert dense $U$ de $S$, $Y$ est fibre par fibre de 
     dimension $<d$, on a $\R^p i^!\dZ/n=0$ pour $p\leqslant 2 c$. Si de plus le 
     complément $Z$ de $U$ ne disconnecte pas localement $S$, on a 
@@ -767,9 +767,9 @@ par fibre de dimension $\leqslant d$. Soit $c=N-d$.
 \end{enumerate}
 \end{theorem}
 
-Puisque $\R g^! \cF=g^*\cF(N)[2N]$, la formule de transitivité 
+Puisque $\R g^! \sF=g^*\sF(N)[2N]$, la formule de transitivité 
 $\R i^!\R g^!=\R f^!$ montre que 
-$\R^{2 c+q} i^!(g^*\cF)=0\Leftrightarrow \R^{-2 d+q}f^!(\cF)$. Ceci nous 
+$\R^{2 c+q} i^!(g^*\sF)=0\Leftrightarrow \R^{-2 d+q}f^!(\sF)$. Ceci nous 
 ramène à étudier $f$, i.e. à supposer que $X=S$. L'assertion (i) est 
 alors \cite[XVIII 3.17]{sga4}. 
 
@@ -826,16 +826,16 @@ et on pose
 En géométrie analytique complexe, une construction de Baum, Fulton et 
 Mac Pherson \cite{bfm75} permet de définir sans restriction la classe de 
 cohomologie d'une intersection complète locale $Y\subset X$. Supposons $Y$ 
-purement de codimension $c$, et soit $\cN$ le fibré vectoriel sur $Y$ fibré 
-normal de $Y$ dans $X$. Ses sections locales sont celles de $(\cI/\cI^2)^\vee$, 
-d'où $\cI$ est le faisceau d'idéaux de $Y$. Rappelons que le faisceau des 
+purement de codimension $c$, et soit $\sN$ le fibré vectoriel sur $Y$ fibré 
+normal de $Y$ dans $X$. Ses sections locales sont celles de $(\sI/\sI^2)^\vee$, 
+d'où $\sI$ est le faisceau d'idéaux de $Y$. Rappelons que le faisceau des 
 fonctions $C^\infty$ sur $X$ est défini localement, en terme de plongements 
 locaux de $X$ dans $\dC^n$, comme la restriction à $X$ du quotient du 
 faisceaux des fonctions $C^\infty$ sur $\dC^n$ par l'idéal engendré par les 
 parties réelles et imaginaires des équations qui définissent $X$. Le 
-fibré $\cN$ se prolonge en un fibré vectoriel complexe $C^\infty N$ sur un 
+fibré $\sN$ se prolonge en un fibré vectoriel complexe $C^\infty N$ sur un 
 voisinage $U$ de $Y$ dans $X$, et pour $U$ assez petit, il existe des sections 
-$f$ de $N$, de lieu des zéros $Y$, et telles que, sur $Y$, $d f:\cN\to N$ 
+$f$ de $N$, de lieu des zéros $Y$, et telles que, sur $Y$, $d f:\sN\to N$ 
 soit l'identité. Deux choix de $N$ et $f$ sont homotopes sur $Y$ assez petit. 
 
 La classe de cohomologie $\cl(U)$ de la section $0$ de $N$ (notée $z:U\to N$) 
@@ -847,9 +847,9 @@ $f^*:\h_U^\bullet(N,\dZ) \to \h_Y^\bullet(X,\dZ)$ et on pose
 \]
 
 La même construction marche dès qu'on a sur un sous-espace analytique $Y$ 
-de $X$ la structure normale suivante: un faisceau localement libre $\cC$ de 
+de $X$ la structure normale suivante: un faisceau localement libre $\sC$ de 
 rang $c$ sur $Y_\text{red}$, et un épimorphisme 
-$\cC\to \cI/\cI\cdot \cI_\text{red}$. 
+$\sC\to \sI/\sI\cdot \sI_\text{red}$. 
 
 
 
@@ -978,19 +978,19 @@ hypothèses plus générales. Soit donc un diagramme
 }\]
 avec $g$ lisse, purement de dimension relative $N$ et $Y$ fermé dans $X$, 
 fibre par fibre de dimension $\leqslant d$. On munit de plus $Y$ d'un 
-``poids'' $\cK$ du type suivant: $\cK\in\D_{\text{parf},X}^b$ est un 
-complexe borné de faisceaux de $\cO$-modules sur $X$, de $\tor$-dimension 
+``poids'' $\sK$ du type suivant: $\sK\in\D_{\text{parf},X}^b$ est un 
+complexe borné de faisceaux de $\sO$-modules sur $X$, de $\tor$-dimension 
 finie sur $S$ (ou sur $X$, cela revient au même) et dont les faisceaux de 
 cohomologie soient cohérents et à support dans $Y$. On se propose de 
-définir un morphisme $\tr_{f,\cK}:\R^{2 d}f_! \dZ/n(d) \to \dZ/n$. Pour $Y$ 
-plat sur $S$ et $\cK=\cO_Y$, ce sera le morphisme trace précédent. En 
-général, il ne dépend que des longueurs de $\cK$ aux points 
+définir un morphisme $\tr_{f,\sK}:\R^{2 d}f_! \dZ/n(d) \to \dZ/n$. Pour $Y$ 
+plat sur $S$ et $\sK=\sO_Y$, ce sera le morphisme trace précédent. En 
+général, il ne dépend que des longueurs de $\sK$ aux points 
 génériques $y$ des composantes irréductibles de 
-$Y(\operatorname{lg}_y(\cK) = \sum (-1)^i \operatorname{lg} \h^i(\cK)_y)$. 
+$Y(\operatorname{lg}_y(\sK) = \sum (-1)^i \operatorname{lg} \h^i(\sK)_y)$. 
 % NOTE: notation is not clear, is it a calligraphic H?
-Enfin, on notera $\cl(Y,\cK)$ la classe à support dans $Y$ telle que 
+Enfin, on notera $\cl(Y,\sK)$ la classe à support dans $Y$ telle que 
 \begin{equation}\label{IV:eq:2-3-3-1}
-  \tr_g\left(\cl(Y,\cK)\smallsmile u\right) = \tr_{f,\cK}(u) \text{.}
+  \tr_g\left(\cl(Y,\sK)\smallsmile u\right) = \tr_{f,\sK}(u) \text{.}
 \end{equation}
 
 
@@ -999,34 +999,34 @@ Enfin, on notera $\cl(Y,\cK)$ la classe à support dans $Y$ telle que
 
 \subsubsection{}\label{IV:2-3-4}
 
-La construction de $\tr_{f,\cK}$ est parallèle à celle de 
+La construction de $\tr_{f,\sK}$ est parallèle à celle de 
 \cite[XVIII.2]{sga4}; nour n'en indiquerons que les grandes lignes.
 
 \paragraph{A}
 $d=0$ ($f$ quasi-fini). Soit $x$ un point géométrique de $Y$. $s$ son image 
-dans $S$, $\cK_{(x)}$ l'image réciproque de $\cK$ sur le localisé stricte 
-de $X$ en $x$, $\cK_{(x)s} = \cK_{(x)}\lotimes_{\cO_{S,s}^h} k(s)$ son image 
+dans $S$, $\sK_{(x)}$ l'image réciproque de $\sK$ sur le localisé stricte 
+de $X$ en $x$, $\sK_{(x)s} = \sK_{(x)}\lotimes_{\sO_{S,s}^h} k(s)$ son image 
 réciproque sur la fibre géométrique en $s$, et 
-$n(x)=\sum (-1)^i \dim_{k(s)} \h^i(\cK_{(x)s})$. La fonction $x\mapsto n(x)$ 
+$n(x)=\sum (-1)^i \dim_{k(s)} \h^i(\sK_{(x)s})$. La fonction $x\mapsto n(x)$ 
 est une pondération de $f$, et on prend le morphisme trace correspondant 
-\cite[XVII.6.2.5]{sga4}. La pondération $n(x)$, et $\tr_{f,\cK}$ sont de 
+\cite[XVII.6.2.5]{sga4}. La pondération $n(x)$, et $\tr_{f,\sK}$ sont de 
 formation compatible à tout changement de base. 
 
 \paragraph{B}
 Cas général. Si $u:Z\to \dA_S^d$ est tel que $u i$ soit quasi-fini, on pose 
-$\tr_{f,\cK} = \tr_{\dA_S^d}\circ \tr_{u i,\cK}$. Ce morphisme trace est 
+$\tr_{f,\sK} = \tr_{\dA_S^d}\circ \tr_{u i,\sK}$. Ce morphisme trace est 
 clairement compatible à tout changement de base $S'/S$. Pour prouver qu'il ne 
 dépend pas de $u$, on peut donc supposer que $S$ est le spectre d'un corps 
 algébriquement clos $k$. Soient dans ce cas $Y_i$ les composantes 
-irréductibles de $Y$, et $\operatorname{lg}_i$ la longueur de $\cK$ au 
+irréductibles de $Y$, et $\operatorname{lg}_i$ la longueur de $\sK$ au 
 point générique de $Y_i$. Si $\alpha_i$ est l'inclusion de 
 $(Y_i)_\text{red}$ dans $Y$, on a 
 \begin{equation}\label{IV:eq:2-3-4-1}
-  \tr_{f,\cK} = \sum \operatorname{lg}_i \tr_{Y_{i,\text{red}/S}} \alpha_i^\ast
+  \tr_{f,\sK} = \sum \operatorname{lg}_i \tr_{Y_{i,\text{red}/S}} \alpha_i^\ast
 \end{equation}
 (cette formule résulte de la formule analogue et facile pour $\tr_{u i}$). 
 
-Ceci définit $\tr_{f,\cK}$ localement sur $Y$; on procède ensuite comme en 
+Ceci définit $\tr_{f,\sK}$ localement sur $Y$; on procède ensuite comme en 
 \cite[XVIII.2.9]{sga4}. 
 
 
@@ -1037,7 +1037,7 @@ Ceci définit $\tr_{f,\cK}$ localement sur $Y$; on procède ensuite comme en
 Si $g=g'g'':X\xrightarrow{g''} S'\xrightarrow{g'} S$, avec $g'$ et $g''$ lisse 
 et purement de dimension relative $N'$ et $N''$, et que $Y$ est encore, sur 
 $S'$, fibre par fibre de codimension $\geqslant c$, alors la classe 
-$\operatorname{cl}(Y,\cK)$ est la même, calculée en terme de $g$ ou de 
+$\operatorname{cl}(Y,\sK)$ est la même, calculée en terme de $g$ ou de 
 $g''$.
 \end{lemma}
 
@@ -1051,8 +1051,8 @@ Soient $f'=g'' i$ et $d'=d-N'$. La formule $\tr_g=\tr_{g'}\tr_{g''}$
     & \hom_S\left(\R^{2 d} f_!\dZ/n,\dZ/n\right)
 }\]
 tandis que la formule analogue et facile à vérifier 
-$\tr_{f,\cK}=\tr_{g'}\tr_{f',\cK}$ assure que l'image de $\tr_{f',\cK}$ est 
-$\tr_{f,\cK}$. L'assertion en résulte. 
+$\tr_{f,\sK}=\tr_{g'}\tr_{f',\sK}$ assure que l'image de $\tr_{f',\sK}$ est 
+$\tr_{f,\sK}$. L'assertion en résulte. 
 
 
 
@@ -1080,7 +1080,7 @@ fermé sur un courbe lisse sur $k$. Que la propriété caractéristique
 
 
 \begin{lemma}\label{IV:2-3-7}
-La formation de $\cl(Y,\cK)$ est compatible à tout changement de base 
+La formation de $\cl(Y,\sK)$ est compatible à tout changement de base 
 $S'/S$.
 \end{lemma}
 
@@ -1091,9 +1091,9 @@ Résulte de la même assertion pour les morphismes trace.
 
 
 \begin{theorem}\label{IV:2-3-8}
-(i) $\cl(Y,\cK)$ ne dépend que de $Y\subset X$ et des longueurs de $\cK$ aux 
-points génériques de $Y$. Cette classe est additive en $\cK$. Pour 
-$\cK=\cO_Y$ et $Y$ d'intersection complète locale, elle induit la classe 
+(i) $\cl(Y,\sK)$ ne dépend que de $Y\subset X$ et des longueurs de $\sK$ aux 
+points génériques de $Y$. Cette classe est additive en $\sK$. Pour 
+$\sK=\sO_Y$ et $Y$ d'intersection complète locale, elle induit la classe 
 locale \ref{IV:2-2-2}.
 
 (ii) Soit un diagramme commutatif 
@@ -1106,14 +1106,14 @@ locale \ref{IV:2-2-2}.
 avec $X'$ lisse sur $S'$. Si $u^{-1}(Y)$ est encore fibre par fibre de 
 codimension $\geqslant c$, alors 
 \[
-  \cl\left(u^{-1}(Y),\eL u^\ast\cK\right) = u^\ast \cl(Y,\cK) \text{.}
+  \cl\left(u^{-1}(Y),\eL u^\ast\sK\right) = u^\ast \cl(Y,\sK) \text{.}
 \]
 
 (iii) Soit $Y'\subset X$ fibre par fibre de codimension $\geqslant c'$, 
-$\cK'$ un poids sur $Y'$ et supposons que $Y\cap Y'$ soit fibre par fibre de 
+$\sK'$ un poids sur $Y'$ et supposons que $Y\cap Y'$ soit fibre par fibre de 
 codimension $\geqslant c+c'$. Alors 
 \[
-\cl\left(Y\cap Y',\cK\lotimes \cK'\right) = \cl(Y,\cK) \smallsmile \cl(Y',\cK') \text{.}
+\cl\left(Y\cap Y',\sK\lotimes \sK'\right) = \cl(Y,\sK) \smallsmile \cl(Y',\sK') \text{.}
 \]
 \end{theorem}
 
@@ -1145,9 +1145,9 @@ base $S\to \dA_S^{N'}$.
 
 % (2.3.8.3)
 \paragraph{(C) Dans une situation produit:}
-$X=X'\times_S X''$, $Y=Y'\times_S Y''$, $\cK=\cK\lotimes_S \cK''$, on a 
-$\cl(Y,\cK) = \cl(Y,\cK')\smallsmile \cl(Y'',\cK'')$ (cup-produit extérieur, 
-i.e. $\operatorname{pr}_1^\ast \cl(Y',\cK')\smallsmile \operatorname{pr}_2^\ast \cl(Y'',\cK'')$). 
+$X=X'\times_S X''$, $Y=Y'\times_S Y''$, $\sK=\sK\lotimes_S \sK''$, on a 
+$\cl(Y,\sK) = \cl(Y,\sK')\smallsmile \cl(Y'',\sK'')$ (cup-produit extérieur, 
+i.e. $\operatorname{pr}_1^\ast \cl(Y',\sK')\smallsmile \operatorname{pr}_2^\ast \cl(Y'',\sK'')$). 
 
 Des propriétés fonctorielles de $\tr_g$ \cite[XVIII.2.12]{sga4} résulte 
 la commutativité de 
@@ -1171,7 +1171,7 @@ supposer que $S=S'$. Factorisons $u$ par son graphe:
     & X \text{.}
 }\]
 Ceci nous amène à traiter séparément $\operatorname{pr}_2$, justiciable 
-de (C) pour $X'=X'$, $\cK'=\cO_{x'}$ (avec $\cl(Y')=1\in \h^0(X,\dZ/n)$), et 
+de (C) pour $X'=X'$, $\sK'=\sO_{x'}$ (avec $\cl(Y')=1\in \h^0(X,\dZ/n)$), et 
 $(\text{id},u)$, justiciable de (B). 
 
 \paragraph{Preuve de (iii)}
@@ -1186,11 +1186,11 @@ des points génériques de $Y$ nour ramène ensuite au cas où
 $Y_\text{red}$ est irréductibles et l'intersection complète de $c$ 
 diviseurs $D_i$. La même localisation, et la définition de $\tr$ dans le 
 cas quasi-fini. montre ensuite que 
-$\cl(Y,\cK)=\operatorname{lg}\cl(Y_\text{red},\cO_{Y_\text{red}})$, où 
-$\operatorname{lg}$ est la longueur de $\cK$ au point générique de $Y$. 
+$\cl(Y,\sK)=\operatorname{lg}\cl(Y_\text{red},\sO_{Y_\text{red}})$, où 
+$\operatorname{lg}$ est la longueur de $\sK$ au point générique de $Y$. 
 D'après (iv), on a donc 
 \[
-  \cl(Y,\cK) = \operatorname{lg} \prod_i \cl(D_i,\cO_{D_i})
+  \cl(Y,\sK) = \operatorname{lg} \prod_i \cl(D_i,\sO_{D_i})
 \]
 et on conclut par \ref{IV:2-3-6}. 
 
@@ -1346,7 +1346,7 @@ fini sur $X$, l'application $\eta_{X Y}$ est la composée
 }\]
 \end{proposition_}
 
-D'après \ref{IV:3-2} et \eqref{IV:eq:2-3-3-1} pour $\cK=\cO_B$, on a en 
+D'après \ref{IV:3-2} et \eqref{IV:eq:2-3-3-1} pour $\sK=\sO_B$, on a en 
 effet 
 \[
   \eta_{X Y}(\beta) = \tr_{X\times Y/X}\left(\cl(B)\cdot \operatorname{pr}_2^\ast\beta\right) = \tr_{B/X}\left(\operatorname{pr}_2^\ast \beta\right) \text{.}

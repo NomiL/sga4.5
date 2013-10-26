@@ -40,14 +40,14 @@ le cas où $M$ est projectif de type fini nous intéresse), on a
 
 Soient $X$ un $S$-schéma, $x^n/S$ la puissance fibrée $n$-ième de $X$ et 
 $\pi$ la projection de $X^n/S$ sur $(X^n/S)/S_n=\operatorname{Sym}_S^n(X)$ 
-(supposé exister). Si $\cG$ est un faisceau de $A$-modules sur $X$, le 
-produit tensoriel externe de $n$ copies de $\cG$; $\cG^{\boxtimes n}$, est un 
+(supposé exister). Si $\sG$ est un faisceau de $A$-modules sur $X$, le 
+produit tensoriel externe de $n$ copies de $\sG$; $\sG^{\boxtimes n}$, est un 
 faisceau $S_n$-équivariant sur $X^n/S$. Nous aurons à faire usage du 
 foncteur $\Gamma^n$ \emph{externe} de \cite[XVII 5.5.7 à 9]{sga4}. Rappelons 
-seulement que pour $\cG$ un faisceau de $A$-modules plats (en fait, seul le cas 
+seulement que pour $\sG$ un faisceau de $A$-modules plats (en fait, seul le cas 
 constructible et plat nous intéresse), on a 
 \[
-  \Gamma_\text{ext}^n(\cG) = \left(\pi_*\cG^{\boxtimes n}\right)^{S_n} \text{.}
+  \Gamma_\text{ext}^n(\sG) = \left(\pi_*\sG^{\boxtimes n}\right)^{S_n} \text{.}
 \]
 
 
@@ -58,17 +58,17 @@ constructible et plat nous intéresse), on a
 Pour $S=\spec(k)$, avec $k$ algébriquement clos, $X$ une somme finie de 
 copies de $S$, et $G$ un faisceau plat de $A$-modules sur $X$, on a 
 \[
-  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}(\cG)\right) = \Gamma^n \Gamma(X,\cG)
+  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}(\sG)\right) = \Gamma^n \Gamma(X,\sG)
 \]
 \end{lemma_}
 
 En effet, 
 \begin{align*}
-  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}^n(\cG)\right) 
-    &= \Gamma\left(\operatorname{Sym}_S^n(X),\pi_*\cG^{\boxtimes n}\right)^{S_n} \\
-    &= \Gamma\left(X^n/S,\cG^{\boxtimes n}\right)^{S_n} 
-    = \left(\Gamma(X,\cG)^{\otimes n}\right)^{S_n} 
-    = \Gamma^n \Gamma(X,\cG) \text{.}
+  \Gamma\left(\operatorname{Sym}_S^n(X),\Gamma_\text{ext}^n(\sG)\right) 
+    &= \Gamma\left(\operatorname{Sym}_S^n(X),\pi_*\sG^{\boxtimes n}\right)^{S_n} \\
+    &= \Gamma\left(X^n/S,\sG^{\boxtimes n}\right)^{S_n} 
+    = \left(\Gamma(X,\sG)^{\otimes n}\right)^{S_n} 
+    = \Gamma^n \Gamma(X,\sG) \text{.}
 \end{align*}
 
 
@@ -84,13 +84,13 @@ La théorie de tela foncteurs dérivés est due à Dold et Puppe
 \cite{do61}. Pour des rappels plus complets que ceux donnés ci-dessous, je 
 renvoie à \cite[XVII 5.5.3]{sga4}. 
 
-Soit $\sA$ une catégorie abélienne (voire une catégorie additive où 
+Soit $\cA$ une catégorie abélienne (voire une catégorie additive où 
 tout endomorphisme idempotent soit la projection sur un facteur direct). Notons 
 $N$ le foncteur de normalisation: $N:($complexes cosimpliciaux d'objets de 
-$\sA)\to($complexes différentiables d'objets de $\sA$, avec $K^i$ pour 
+$\cA)\to($complexes différentiables d'objets de $\cA$, avec $K^i$ pour 
 $i<0)$. C'est une équivalence de catégories. Ainsi que son inverse, elle 
 transforme homotopes en morphismes homotopes. Si $\Gamma$ est un foncteur 
-$\sA\to\sB$, et si $K$ est un complexe d'objets de $\sA$, à degrés 
+$\cA\to\cB$, et si $K$ est un complexe d'objets de $\cA$, à degrés 
 positifs ($K^i=0$ pour $i<0$), on pose $T K=N T N^{-1} K$. 
 
 
@@ -315,9 +315,9 @@ $\Lambda=A\llbracket t\rrbracket$ et $L=K\otimes_A\Lambda$.
 
 Reprenons les notations de (Rapport, \S\ref{II:1}). Pour $A$ un anneau 
 noethérien commutatif de torsion, $X_0$ un schéma séparé de type fini sur 
-$\dF_q$ et $\cK_0\in\ob\D_\text{ctf}(X_0;A)$, on pose 
+$\dF_q$ et $\sK_0\in\ob\D_\text{ctf}(X_0;A)$, on pose 
 \[
-  L(X_0,\cK_0) = \prod_{x\in |X_0|} \det\left(1-F_x^* t^{\deg(x)}, \cK\right)^{-1}
+  L(X_0,\sK_0) = \prod_{x\in |X_0|} \det\left(1-F_x^* t^{\deg(x)}, \sK\right)^{-1}
 \]
 (\ref{III:1-7}, \ref{III:1-13} et Rapport, \ref{II:1-5}, \ref{II:1-6}). 
 
@@ -333,7 +333,7 @@ Dans chacun des deux cas suivants
 \end{enumerate}
 on a 
 \begin{equation}\label{III:eq:2-2-1}
-  L(X_0,\cK_0) = \det\left(1-F^* t^f, \R\Gamma_c(X,\cK)\right)^{-1} \text{.}
+  L(X_0,\sK_0) = \det\left(1-F^* t^f, \R\Gamma_c(X,\sK)\right)^{-1} \text{.}
 \end{equation}
 \end{theorem_}
 
@@ -356,24 +356,24 @@ torsion, cela ne suffit pas pour prouver \ref{III:2-2}.
 
 Si $A$ est un corps, on a 
 \[
-  L(X_0,\cK_0) = \prod_i L\left(X_0,\underline\h^i(\cK_0)\right)^{(-1)^i}
+  L(X_0,\sK_0) = \prod_i L\left(X_0,\underline\h^i(\sK_0)\right)^{(-1)^i}
 \]
 et la suite spectrale 
-$E_2^{p q} = \h_c^p(X,\underline\h^q(\cK))\Rightarrow \h_c^{p+q}(X,\cK)$ montre 
+$E_2^{p q} = \h_c^p(X,\underline\h^q(\sK))\Rightarrow \h_c^{p+q}(X,\sK)$ montre 
 que 
 \begin{align*}
-  \det\left(1-F^* t, \R\Gamma_c(X,\cK)\right) 
-    &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\cK)\right)^{(-1)^n} \\
-    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\cK))\right)^{(-1)^{p+1}} \text{.}
+  \det\left(1-F^* t, \R\Gamma_c(X,\sK)\right) 
+    &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\sK)\right)^{(-1)^n} \\
+    &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\sK))\right)^{(-1)^{p+1}} \text{.}
 \end{align*}
 Ceci ramène \ref{III:2-2} (pour $A$ un corps) au cas particulier suivant. 
 
 
 \subsubsection{}\label{III:2-4-1}
 
-Si $\cG_0$ est un faisceau constructible de $A$-espaces vectoriels, on a 
+Si $\sG_0$ est un faisceau constructible de $A$-espaces vectoriels, on a 
 \[
-  L(X_0,\cG_0) = \prod_n \det\left(1-F^* t^f,\h_c^n(X,\cG)\right)^{(-1)^{n+1}} \text{.}
+  L(X_0,\sG_0) = \prod_n \det\left(1-F^* t^f,\h_c^n(X,\sG)\right)^{(-1)^{n+1}} \text{.}
 \]
 
 
@@ -419,9 +419,9 @@ exemple, cf. \ref{III:4-5}.
 \subsection{Plan de la preuve de \ref{III:2-2}}\label{III:2-8}
 
 Une translation sur les degrés \ref{III:1-7-2} nous ramène à supposer 
-que $\cK_0$ est un complexe borné, à degré positifs, de faisceaux de 
+que $\sK_0$ est un complexe borné, à degré positifs, de faisceaux de 
 $A$-modules constructibles et plats. On a alors 
-$\R\Gamma_c(X,\cK)\in \ob\D_\text{parf}^{\geqslant 0}(A)$ (Rapport, 
+$\R\Gamma_c(X,\sK)\in \ob\D_\text{parf}^{\geqslant 0}(A)$ (Rapport, 
 preuve \ref{II:4-9}, b). Nous allons utiliser \ref{III:1-8} pour développer 
 les deux membres de \eqref{III:eq:2-2-1} en série de puissances de $T=t^f$. 
 L'égalité des coefficients de $T^n$ de déduira de 
@@ -432,7 +432,7 @@ chapitre suivant. Il y a lieu de se ramener au préalable au cas où les
 puissances symétriques de $X_0$ existent (par exemple au cas où $X$ est 
 affine) à l'aide des propriétés de multiplicativité en $X_0$ des deux 
 membres de \eqref{III:eq:2-2-1}: pour $U_0$ un ouvert de $X_0$, de fermé 
-complémentaire $Y_0$, on a $L(X_0,\cK_0)=L(U_0,\cK_0)\cdot L(Y_0,\cK_0)$ et 
+complémentaire $Y_0$, on a $L(X_0,\sK_0)=L(U_0,\sK_0)\cdot L(Y_0,\sK_0)$ et 
 la formule analogue pour le membre de droite résulte de \ref{III:1-7-1} 
 par la méthode de (Rapport \S\ref{II:6}A). 
 
@@ -455,14 +455,14 @@ Rapport \ref{II:3-4}.
 
 D'après \ref{III:1-8}, on a 
 \[
-  L(X_0,\cK_0) = \prod_{x\in |X_0|} \sum_n \tr\left(F_x^*,\Gamma^n\cK\right) t^{m\deg(x)} \text{.}
+  L(X_0,\sK_0) = \prod_{x\in |X_0|} \sum_n \tr\left(F_x^*,\Gamma^n\sK\right) t^{m\deg(x)} \text{.}
 \]
 Le coefficient de $T^n$ est donc la somme, étendue à celles des 
 combinaisons linéaires formelles $\sum_{x\in |X_0|} n_x\cdot x$ 
 ($n_x\geqslant 0$, les $n_x$ presque tous nuls) d'éléments de $|X_0|$ 
 telles que $\sum n_x [k(x):\dF_q] = n$, des produits 
 \begin{equation}\label{III:eq:2-10-1}
-  \prod_x \tr\left(F_x^*,\Gamma^{n_x} \cK\right) \text{.}
+  \prod_x \tr\left(F_x^*,\Gamma^{n_x} \sK\right) \text{.}
 \end{equation}
 
 Pour $x\in |X_0|$, notons $(x)$ le $0$-cycle des $[k(x):\dF_q]$ points de $X$ 
@@ -470,7 +470,7 @@ au-dessus de $x$ (une orbite de $F$). L'application
 $\sum n_x\mapsto \sum n_x\cdot (x)$ identifie les combinaisons linéaires 
 formelles comme ci-dessus, avec $\sum n_x [k(x):\dF_q]=n$, aux $0$-cycles 
 effectifs de degré $n$ de $X$ fixes sous $F$, soit encore aux points fixes de 
-$F$ dans $\operatorname{Sym}^n(X)$. Le coefficient de $T^n$ dans $L(X_0,\cK_0)$ 
+$F$ dans $\operatorname{Sym}^n(X)$. Le coefficient de $T^n$ dans $L(X_0,\sK_0)$ 
 apparait ainsi comme une somme de produits \eqref{III:eq:2-10-1}, indenée 
 par $\operatorname{Sym}^n(X)^F$. Plus précisément, 
 
@@ -479,25 +479,25 @@ par $\operatorname{Sym}^n(X)^F$. Plus précisément,
 
 
 \begin{lemma_}\label{III:2-11}
- $L(X_0,\cK_0) = \sum_n \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\eL\Gamma_\textnormal{ext}^n \cK\right) T^n$.
+ $L(X_0,\sK_0) = \sum_n \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\eL\Gamma_\textnormal{ext}^n \sK\right) T^n$.
 \end{lemma_}
 
 Pour $Y_0$ un sous-schéma fini de plus en plus grand de $X_0$, on a 
 \[
-  L(X_0,\cK_0) = \lim L(Y_0,\cK_0) \text{,}
+  L(X_0,\sK_0) = \lim L(Y_0,\sK_0) \text{,}
 \]
 i.e., pour tout $m$, il existe un sous-schéma fini $Z_0\subset X_0$ tel que 
-si $Y_0\supset Z_0$, $L(X_0,\cK_0)$ et $L(Y_0,\cK_0|Y_0)$ soient congrus 
+si $Y_0\supset Z_0$, $L(X_0,\sK_0)$ et $L(Y_0,\sK_0|Y_0)$ soient congrus 
 $\mod T^m$. 
 Il suffit que $Z_0$ contienne les points fermés de degré $\leqslant m$. 
 Le même fait valant pour le membre de droite, il suffit de prouver 
 \ref{III:2-11} pour $X_0$ fini. On a alors 
 \begin{align*}
-  L(X_0,\cK_0) 
-    &=_\text{\ref{III:2-9}} \det\left(1-F^* T,\Gamma(X,\cK)\right)^{-1} \\
-    &=_\text{\ref{III:1-8}} \sum_n \tr\left(F^*,\Gamma^n \Gamma(X,\cK)\right) T^n \\
-    &=_\text{\ref{III:1-3}} \sum_n \tr\left(F^*,\Gamma(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n(\cK)\right) T^n \\
-    &= \sum_n \sum_{x\in \operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n(\cK)\right) T^n
+  L(X_0,\sK_0) 
+    &=_\text{\ref{III:2-9}} \det\left(1-F^* T,\Gamma(X,\sK)\right)^{-1} \\
+    &=_\text{\ref{III:1-8}} \sum_n \tr\left(F^*,\Gamma^n \Gamma(X,\sK)\right) T^n \\
+    &=_\text{\ref{III:1-3}} \sum_n \tr\left(F^*,\Gamma(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n(\sK)\right) T^n \\
+    &= \sum_n \sum_{x\in \operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n(\sK)\right) T^n
 \end{align*}
 (par la formule des traces dans le cas trivial d'un ensemble fini). 
 
@@ -509,9 +509,9 @@ Le même fait valant pour le membre de droite, il suffit de prouver
 
 D'après \ref{III:1-8} et \cite[XVII 5.5.12]{sga4}, on a 
 \begin{align*}
-  \det\left(1-F^* T,\R\Gamma_c(X,\cK)\right)^{-1} 
-    &= \sum_n \tr\left(F^*,\eL\Gamma^n\R\Gamma_c(X,\cK)\right) T^n \\
-    &= \sum_n \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n\cK)\right) T^n \text{.}
+  \det\left(1-F^* T,\R\Gamma_c(X,\sK)\right)^{-1} 
+    &= \sum_n \tr\left(F^*,\eL\Gamma^n\R\Gamma_c(X,\sK)\right) T^n \\
+    &= \sum_n \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n\sK)\right) T^n \text{.}
 \end{align*}
 
 
@@ -522,7 +522,7 @@ D'après \ref{III:1-8} et \cite[XVII 5.5.12]{sga4}, on a
 
 Le théorème équivaut donc aux formules des traces 
 \[
-  \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X,\Gamma_\text{ext}^n \cK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\cK\right) \text{.}
+  \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X,\Gamma_\text{ext}^n \sK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\sK\right) \text{.}
 \]
 Dans le cas a), elles résultent de Rapport \ref{II:4-10}. La formule 
 analogue dans le cas b) sera prouvée au \S\ref{III:4}. 
@@ -547,24 +547,24 @@ analogue dans le cas b) sera prouvée au \S\ref{III:4}.
 Dans ce qui suit, un faisceau cohérent sur un schéma $S$ sera toujours 
 regardé comme un faisceau sur $S_\text{ét}$. Soit $S$ un schéma de 
 caractéristique $p>0$. Si $G$ un faisceau localement constant de 
-$\dZ/p$-vectoriels de rang fini, $\cG=G\otimes_{\dZ/p}\cO$ est un faisceau 
+$\dZ/p$-vectoriels de rang fini, $\sG=G\otimes_{\dZ/p}\sO$ est un faisceau 
 cohérent localement libre sur $S$. On notera $\Phi$ tant l'endomorphisme 
-$f\mapsto f^p$ de $\cO$ que son produit tensoriel avec l'identité de 
-$G$: $\phi:\cG\to\cG$. La théorie d'Artin-Scheier \cite[IX 3.5]{sga4} 
+$f\mapsto f^p$ de $\sO$ que son produit tensoriel avec l'identité de 
+$G$: $\phi:\sG\to\sG$. La théorie d'Artin-Scheier \cite[IX 3.5]{sga4} 
 affirme que la suite 
 \[\xymatrix{
   0 \ar[r] 
     & \dZ/p \ar[r] 
-    & \cO \ar[r]^-{\Phi-1} 
-    & \cO \ar[r] 
+    & \sO \ar[r]^-{\Phi-1} 
+    & \sO \ar[r] 
     & 0
 }\]
 est exacte. Par tensorisation avec $G$, on trouve un suite exacte 
 \[\xymatrix{
   0 \ar[r] 
     & G \ar[r] 
-    & \cG \ar[r]^-{\Phi-1} 
-    & \cG \ar[r] 
+    & \sG \ar[r]^-{\Phi-1} 
+    & \sG \ar[r] 
     & 0
 }\]
 
@@ -578,56 +578,56 @@ Supposons que $S$ soit un ouvert dans un schéma noethérien $\bar S$.
 Soient $j:S\hookrightarrow \bar S$ le morphisme d'inclusion, et $I$ un 
 faisceau d'idéaux qui définit le fermé complémentaire 
 $\bar S\setminus S$. Notons encore $\Phi$ le prolongement par fonctorialité 
-de $\Phi$ à $j_*\cG$. 
+de $\Phi$ à $j_*\sG$. 
 
 
 
 
 
 \begin{lemma_}\label{III:3-3}
-Il existe des prolongements cohérents $\bar\cG\subset j_*\cG$ de $\cG$ tels 
+Il existe des prolongements cohérents $\bar\sG\subset j_*\sG$ de $\sG$ tels 
 que 
 \begin{equation}\label{III:eq:3-3-1}
-  \Phi(\bar\cG)\subset I\cdot \bar\cG\text{.}
+  \Phi(\bar\sG)\subset I\cdot \bar\sG\text{.}
 \end{equation}
-Si $\bar\cG$ est un tel prolongement, la suite 
+Si $\bar\sG$ est un tel prolongement, la suite 
 \begin{equation}\label{III:eq:3-3-2}
 \xymatrix{
   0 \ar[r] 
     & j_! G \ar[r] 
-    & \bar\cG \ar[r]^-{\Phi-1} 
-    & \bar\cG \ar[r] 
+    & \bar\sG \ar[r]^-{\Phi-1} 
+    & \bar\sG \ar[r] 
     & 0
 }
 \end{equation}
 ext exacte.
 \end{lemma_}
 \begin{enumerate}[a)]
-  \item \emph{Existence}: Soit $\cG'\subset j_*\cG$ un prolongement cohérent 
-    de $\cG$ à $\bar S$. Pour tout $n$, on a 
-    $\Phi(I^n \cG')\subset I^{p^n}\Phi(\cG')$. Soit $n$ assez grand pour 
-    que $I^{n(p-1)-1}\Phi(\cG')\subset \cG'$, et posons $\bar\cG=I^n\cG'$. 
-    On a $\Phi(\bar\cG)\subset I^{p n}\Phi(\cG') 
-    =I\cdot I^n\cdot I^{n(p-1)-1}\Phi(\cG')\subset I\cdot I^n\cG' 
-    = I\bar\cG$. 
+  \item \emph{Existence}: Soit $\sG'\subset j_*\sG$ un prolongement cohérent 
+    de $\sG$ à $\bar S$. Pour tout $n$, on a 
+    $\Phi(I^n \sG')\subset I^{p^n}\Phi(\sG')$. Soit $n$ assez grand pour 
+    que $I^{n(p-1)-1}\Phi(\sG')\subset \sG'$, et posons $\bar\sG=I^n\sG'$. 
+    On a $\Phi(\bar\sG)\subset I^{p n}\Phi(\sG') 
+    =I\cdot I^n\cdot I^{n(p-1)-1}\Phi(\sG')\subset I\cdot I^n\sG' 
+    = I\bar\sG$. 
   \item \emph{Noyau de $\Phi-1$}: Sur $S$, l'assertion résulte de 
     \ref{III:3-1}; il reste à vérifier qu'une section de $x$ de 
     $\ker(\Phi-1)$, sur $U$ étale sur $\bar S$, s'annule dans un voisinage de 
     l'image réciproque de $\bar S\setminus S$. Puisque $x=\Phi(x)$, on a en 
-    effet par \eqref{III:eq:3-3-1} $x\in I\bar\cG$; de plus, 
-    $x\in I^n\bar\cG\Rightarrow x=\Phi(x)\in\Phi(I^n\bar\cG)\subset I^{n p}\bar\cG$, et $x$ est dans tous les $I^n\bar\cG$, donc nul au voisinage de 
+    effet par \eqref{III:eq:3-3-1} $x\in I\bar\sG$; de plus, 
+    $x\in I^n\bar\sG\Rightarrow x=\Phi(x)\in\Phi(I^n\bar\sG)\subset I^{n p}\bar\sG$, et $x$ est dans tous les $I^n\bar\sG$, donc nul au voisinage de 
     $\bar S\setminus S$.
   \item \emph{Surjectivité de $\Phi-1$}: On peut supposer $\bar S$ affine, en 
-    écrire $\cG$ comme quotient de $\cO^n$; $\Phi$ se relève alors en une 
-    application $p$-linéaire $\widetilde\Phi:\cO^n\to\cO^n$, et il suffit de 
+    écrire $\sG$ comme quotient de $\sO^n$; $\Phi$ se relève alors en une 
+    application $p$-linéaire $\widetilde\Phi:\sO^n\to\sO^n$, et il suffit de 
     vérifier la surjectivité de $\widetilde\Phi-1$:
     \[\xymatrix{
-      \cO^n \ar[r]^-{\widetilde \Phi-1} \ar[d] 
-        & \cO^n \ar[d] \\
-      \cG \ar[r]^-{\Phi-1} 
-        & \cG 
+      \sO^n \ar[r]^-{\widetilde \Phi-1} \ar[d] 
+        & \sO^n \ar[d] \\
+      \sG \ar[r]^-{\Phi-1} 
+        & \sG 
     }\]
-    Le faisceau $\cO^n$ est le faisceau des sections locales du schéma en 
+    Le faisceau $\sO^n$ est le faisceau des sections locales du schéma en 
     groupes $\dG_a^n$, et $\widetilde\Phi-1$ est induit par un homomorphisme 
     $\dG_a^n$ dans $\dG_a^n$. Cet homomorphisme est étale. Pour vérifier 
     qu'il est surjectif, il suffit de le voir après tout changement de base 
@@ -655,20 +655,20 @@ $F_\text{abs}^* U=U$: le diagramme
     & S
 }\]
 est cartésien. L'endomorphisme de site annelé 
-$(\et{\bar S},\cO)\to(\et{\bar S},\cO)$ défini par $F_\text{abs}$ peut donc 
+$(\et{\bar S},\sO)\to(\et{\bar S},\sO)$ défini par $F_\text{abs}$ peut donc 
 être décrit comme suit:
 \begin{center}
   $F_\text{abs}^*$ est l'identité sur $\et S$; l'homomorphisme 
-  $F_\text{abs}^*\cO=\cO\to\cO$ est $\Phi$.
+  $F_\text{abs}^*\sO=\sO\to\sO$ est $\Phi$.
 \end{center}
-Avec cette description, pour tout faisceau étale $\cG$ sur $S$, la 
-correspondance de Frobenius $F_\text{abs}^*\cG\to\cG$ est l'identité. 
+Avec cette description, pour tout faisceau étale $\sG$ sur $S$, la 
+correspondance de Frobenius $F_\text{abs}^*\sG\to\sG$ est l'identité. 
 
 Se donner un morphisme $p$-linéaire de faisceaux quasi-cohérents 
-$u:\cM\to\cN$ sur $S$ revient à se donner un morphisme linéaire 
-$u':F_\text{abs}^*\cM\to\cN$. En particulier, avec les notations de 
-\ref{III:3-5}, l'homomorphisme $\Phi:\cG\to\cG$ correspond à 
-$\Phi':F_\text{abs}^*\cG\to\cG$. 
+$u:\sM\to\sN$ sur $S$ revient à se donner un morphisme linéaire 
+$u':F_\text{abs}^*\sM\to\sN$. En particulier, avec les notations de 
+\ref{III:3-5}, l'homomorphisme $\Phi:\sG\to\sG$ correspond à 
+$\Phi':F_\text{abs}^*\sG\to\sG$. 
 
 
 
@@ -679,8 +679,8 @@ Avec les notations de \ref{III:3-4}, le diagramme
 \[\xymatrix{
   F_\textnormal{abs}^* G \ar[r] \ar[d] 
     & G \ar[d] \\
-  F_\textnormal{abs}^*\cG \ar[r]^-{\Phi'} 
-    & \cG 
+  F_\textnormal{abs}^*\sG \ar[r]^-{\Phi'} 
+    & \sG 
 }\]
 est commutatif.
 \end{lemma_}
@@ -698,19 +698,19 @@ La même théorie vaut pour les puissances de $F_\text{abs}$.
 
 Supposons maintenant que $\bar S$ soit un schéma sur $\dF_q$ ($q=p^f$) et 
 conformément aux conventions de Rapport \S\ref{II:1}, écrivons 
-$S_0,\bar S_0,G_0,\cG_0,\bar\cG_0$ au lieu de $S,\dots$. Le lemme 
+$S_0,\bar S_0,G_0,\sG_0,\bar\sG_0$ au lieu de $S,\dots$. Le lemme 
 \ref{III:3-5}, pour $F_\text{abs}^F:S_0\to S_0$, donne un diagramme commutatif 
 \[\xymatrix{
   F^* G_0 \ar[r] \ar[d] 
     & G_0 \ar[d] \\
-  F^*\cG_0 \ar[r]^-{(\Phi^f)'} \ar[r] 
-    & \cG_0 
+  F^*\sG_0 \ar[r]^-{(\Phi^f)'} \ar[r] 
+    & \sG_0 
 }\qquad\text{, puis}\qquad 
 \xymatrix{
   F^*(j_! G_0) \ar[r] \ar[d] 
     & j_!G_0 \ar[d] \\
-  F^*\bar\cG_0 \ar[r]^-{(\Phi^f)'}
-    & \cG_0
+  F^*\bar\sG_0 \ar[r]^-{(\Phi^f)'}
+    & \sG_0
 }\text{,}
 \]
 puis, par extension des scalaires de $\dF_q$ à $\dF$ et passage à la 
@@ -718,14 +718,14 @@ cohomologie
 \[\xymatrix{
   F^*(j_! G) \ar[r]^-{F_*} \ar[d] 
     & j_!G \ar[d] \\
-  F^*\bar\cG \ar[r]
-    & \bar\cG
+  F^*\bar\sG \ar[r]
+    & \bar\sG
 }\qquad\text{et}\qquad 
 \xymatrix{
   \h^\bullet(\bar S,j_! G) \ar[r]^-{F^*} \ar[d] 
     & \h^\bullet(\bar S,j_!G) \ar[d] \\
-  \h^\bullet(\bar S,\bar\cG) \ar[r]
-    & \h^\bullet(\bar S,\bar\cG)
+  \h^\bullet(\bar S,\bar\sG) \ar[r]
+    & \h^\bullet(\bar S,\bar\sG)
 }\text{,}
 \]
 où la seconde ligne est obtenue par extension des scalaires de $\dF_q$ à 
@@ -736,13 +736,13 @@ La théorie d'Artin-Scheier fournit une suite exacte longue
 \[\xymatrix{
   \cdots \ar[r]
     & \h^i(\bar S,j_! G) \ar[r]
-    & \h^i(\bar S,\bar\cG) \ar[r]^-{\Phi-1}
-    & \h^i(\bar S,\bar\cG) \ar[r]
+    & \h^i(\bar S,\bar\sG) \ar[r]^-{\Phi-1}
+    & \h^i(\bar S,\bar\sG) \ar[r]
     & \cdots
 }\]
 où $\Phi$ est l'extension $p$-linéaire à 
-$\h^\bullet(\bar S,\bar \cG)= \h^\bullet(\bar S_0,\bar\cG_0)\otimes_{\dF_q}\dF$ 
-de l'endomorphisme $p$-linéaire $\Phi$ de $\h^\bullet(\bar S_0,\bar\cG_0)$. 
+$\h^\bullet(\bar S,\bar \sG)= \h^\bullet(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$ 
+de l'endomorphisme $p$-linéaire $\Phi$ de $\h^\bullet(\bar S_0,\bar\sG_0)$. 
 
 
 
@@ -750,18 +750,18 @@ de l'endomorphisme $p$-linéaire $\Phi$ de $\h^\bullet(\bar S_0,\bar\cG_0)$.
 
 \subsection{}\label{III:3-7}
 
-Si $\bar S_0$ est propre sur $\dF_q$, les $\h^i(\bar S,\bar\cG)$ sont de 
+Si $\bar S_0$ est propre sur $\dF_q$, les $\h^i(\bar S,\bar\sG)$ sont de 
 dimension finie et $\Phi-1$ est surjectif (cf. \ref{III:3-6}b). On a donc 
 \[
-  \h_c^i(S,G) = \ker\left(\Phi-1 : \h^i(\bar S,\bar G) \to \h^i(\bar S,\bar\cG)\right) \text{,}
+  \h_c^i(S,G) = \ker\left(\Phi-1 : \h^i(\bar S,\bar G) \to \h^i(\bar S,\bar\sG)\right) \text{,}
 \]
 et $F^*$ est induit par l'extension $\dF$-linéaire à 
-$\h^i(\bar S,\bar\cG) = \h^i(\bar S_0,\bar\cG_0)\otimes_{\dF_q}\dF$ de 
-l'endomorphisme $\dF_q$-linéaire $\Phi^f$ de $\h^i(\bar S_0m\bar\cG_0)$. 
+$\h^i(\bar S,\bar\sG) = \h^i(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$ de 
+l'endomorphisme $\dF_q$-linéaire $\Phi^f$ de $\h^i(\bar S_0m\bar\sG_0)$. 
 
 Appliquant le lemme \ref{III:3-8} ci-dessous, on en déduit l'identité 
 \begin{equation}\label{III:eq:3-7-1}
-  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(\Phi^f,\h^i(\bar S_0,\bar\cG_0)\right) \text{.}
+  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(\Phi^f,\h^i(\bar S_0,\bar\sG_0)\right) \text{.}
 \end{equation}
 
 
@@ -811,9 +811,9 @@ Puisque $\tr(F,V'') = 0$, on a donc
 \begin{theorem_}\label{III:4-1}
 Soient $X_0$ un schéma séparé de type fini sur $\dF_q$, $A$ un anneau 
 noethérien commutatif réduit et de caractéristique $p$, et 
-$\cK_0\in\ob\D_\textnormal{ctf}(X_0,A)$. On a 
+$\sK_0\in\ob\D_\textnormal{ctf}(X_0,A)$. On a 
 \begin{equation}\label{III:eq:4-1-1}
-  \sum_{x\in X^F} \tr\left(F_x^*,\cK_x\right) = \tr\left(F^*,\R\Gamma_c(X,\cK)\right) \text{.}
+  \sum_{x\in X^F} \tr\left(F_x^*,\sK_x\right) = \tr\left(F^*,\R\Gamma_c(X,\sK)\right) \text{.}
 \end{equation}
 \end{theorem_}
 
@@ -827,8 +827,8 @@ $\cK_0\in\ob\D_\textnormal{ctf}(X_0,A)$. On a
 Un argument standard de passage à a limite nous ramène au cas où $A$ est 
 de type fini sur $\dZ/p$. Pour chaque idéal maximal $\fm$ de $A$, l'image de 
 chaque membre de \eqref{III:eq:4-1-1} dans $A/\fm$ est donée par la même 
-formule, avec $\cK_0$ remplacé par 
-$\cK_0\lotimes_A A/\fm\in\ob\D_\text{ctf}(X_0,A/\fm)$ (pour le second membre, 
+formule, avec $\sK_0$ remplacé par 
+$\sK_0\lotimes_A A/\fm\in\ob\D_\text{ctf}(X_0,A/\fm)$ (pour le second membre, 
 cf. Rapport \ref{II:4-12}). Les $A/\fm$ étant finis, et l'intersection des 
 idéaux maximaux de $A$ étant réduit à $0$, on obtient la réduction 
 annoncée.
@@ -839,25 +839,25 @@ annoncée.
 
 \subsection{Réduction au cas où \texorpdfstring{$A=\dZ/p$}{A=Z/p}}\label{III:4-3}
 
-Supposons que $A$ soit un corps fini, et notons $T_A'(\cK_0)$ et $T_A''(\cK_0)$ 
+Supposons que $A$ soit un corps fini, et notons $T_A'(\sK_0)$ et $T_A''(\sK_0)$ 
 les deux membres de \eqref{III:eq:4-1-1}. Si, par restriction des scalaires, on 
-regarde $\cK_0$ comme un complexe de faisceaux de $\dZ/p$-modules, on a 
+regarde $\sK_0$ comme un complexe de faisceaux de $\dZ/p$-modules, on a 
 \[
-  T_{\dZ/p}'(\cK_0) = \tr_{A/(\dZ/p)} T_A'(\cK_0)
+  T_{\dZ/p}'(\sK_0) = \tr_{A/(\dZ/p)} T_A'(\sK_0)
 \]
 et de même pour $T''$. Si \eqref{III:eq:4-1-1} vaut pour $A=\dZ/p$, on a donc 
 \begin{equation}\label{III:eq:4-3-1}
-  \tr_{A/(\dZ/p)} T_A'(\cK_0) = \tr_{A/(\dZ/p)} T_A''(\cK_0) \text{.}
+  \tr_{A/(\dZ/p)} T_A'(\sK_0) = \tr_{A/(\dZ/p)} T_A''(\sK_0) \text{.}
 \end{equation}
 J'affirme que, pour tout $\lambda\in A$, on a même 
 \begin{equation}\label{III:eq:4-3-2}
-  \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A'(\cK_0)\right) = \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A''(\cK_0)\right) \text{,}
+  \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A'(\sK_0)\right) = \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A''(\sK_0)\right) \text{,}
 \end{equation}
-et donc $T_A'(\cK_0) = T_A''(\cK_0)$. C'est clair pour $\lambda=0$. Pour 
+et donc $T_A'(\sK_0) = T_A''(\sK_0)$. C'est clair pour $\lambda=0$. Pour 
 $\lambda$ inversible, notons $A(\lambda)$ l'image réciproque sur $X$ du 
 faisceau de $A$-modules libre de rang un sur $\spec(\dF_q)$ pour lequel 
 $F^*=\lambda$. La formule \eqref{III:eq:4-3-2} n'est autre que 
-\eqref{III:eq:4-3-1} pour $A(\lambda)\otimes_A \cK_0$. 
+\eqref{III:eq:4-3-1} pour $A(\lambda)\otimes_A \sK_0$. 
 
 
 
@@ -875,51 +875,51 @@ $S_0$. On a
 \end{theorem_}
 \begin{proof}
 Appliquons \ref{III:3-3} à $(S_0,\bar S_0,G_0)$. Le prolongement cohérent 
-$\bar\cG_0$ de $\cG_0$ dont \ref{III:3-3} garantit l'existence est localement 
-libre car il est sans torsion (on  $\bar\cG_0\subset j_*\cG_0$) et que 
+$\bar\sG_0$ de $\sG_0$ dont \ref{III:3-3} garantit l'existence est localement 
+libre car il est sans torsion (on  $\bar\sG_0\subset j_*\sG_0$) et que 
 $\bar S_0$  est régulier de dimension un. L'endomorphisme $q$-linéaire 
-$\Phi^f$ de $\bar\cG_0$ peut s'interpréter comme un morphisme 
+$\Phi^f$ de $\bar\sG_0$ peut s'interpréter comme un morphisme 
 \[
-  u : F^*\bar\cG_0 \to \bar\cG_0 \text{.}
+  u : F^*\bar\sG_0 \to \bar\sG_0 \text{.}
 \]
 Il se factorise par $I\bar G$, pour $I$ définissant le fermé 
-$\bar S\setminus S$. Soit $v:j_!G_0 \to \bar\cG_0$ l'unique prolongement de 
-l'application naturelle $G_0 \to \cG_0 = G_0\otimes_{\dZ/p}\cO$. Le diagramme 
+$\bar S\setminus S$. Soit $v:j_!G_0 \to \bar\sG_0$ l'unique prolongement de 
+l'application naturelle $G_0 \to \sG_0 = G_0\otimes_{\dZ/p}\sO$. Le diagramme 
 \begin{equation}\label{III:eq:4-4-2}
 \xymatrix{
   F^* j_! G_0 \ar[r]^-{F^*} \ar[d]^-{F^* v} 
     & j_! G_0 \ar[d]^-v \\
-  F^*\bar \cG_0 \ar[r]^-u 
-    & \bar\cG_0
+  F^*\bar \sG_0 \ar[r]^-u 
+    & \bar\sG_0
 }
 \end{equation}
 Enfin, notons $u F^*$ l'application composée 
 \[\xymatrix{
-  \h^\bullet(\bar S,\bar\cG) \ar[r]^-{F^*} 
-    & \h^\bullet(\bar S,F^*\bar\cG) \ar[r]^-u 
-    & \h^\bullet(\bar S,\bar\cG) \text{,}
+  \h^\bullet(\bar S,\bar\sG) \ar[r]^-{F^*} 
+    & \h^\bullet(\bar S,F^*\bar\sG) \ar[r]^-u 
+    & \h^\bullet(\bar S,\bar\sG) \text{,}
 }\]
 on par \eqref{III:eq:3-7-1}
 \begin{equation}\label{III:eq:4-4-3}
-  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(u F^*,\h^i(\bar S,\bar\cG)\right) \text{.}
+  \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(u F^*,\h^i(\bar S,\bar\sG)\right) \text{.}
 \end{equation}
 
 %NOTE: trace down reference for Woodshole seminar
 Pour chaque point fermé $i_x:x\hookrightarrow \bar  S$ de $\bar S$, posons 
-$\bar\cG_x = i_x^*\bar\cG$. La formule des traces de Lefschetz en cohomologie 
+$\bar\sG_x = i_x^*\bar\sG$. La formule des traces de Lefschetz en cohomologie 
 cohérente (``Woodshole fixed point formula''), appliqué à $F$ et $u$, dit 
 que 
 \begin{equation}\label{III:eq:4-4-4}
-  \sum_i (-1)^i \tr\left(u^* F^*, \h^i(\bar S,\bar\cG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\cG_x)}{\det(1-d F_x)} \text{.}
+  \sum_i (-1)^i \tr\left(u^* F^*, \h^i(\bar S,\bar\sG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\sG_x)}{\det(1-d F_x)} \text{.}
 \end{equation}
 Au second membre
 \begin{enumerate}[\indent a)]
   \item puisque $d F=0$, les dénominateurs valent 1;
-  \item pour $x\in \bar S^F\setminus S^F$, l'endomorphisme $u_x$ de $\bar\cG_x$ 
-    est nul, donc aussi $\tr(u_x,\bar\cG_x)$;
+  \item pour $x\in \bar S^F\setminus S^F$, l'endomorphisme $u_x$ de $\bar\sG_x$ 
+    est nul, donc aussi $\tr(u_x,\bar\sG_x)$;
   \item pour $x\in S^F$, \eqref{III:eq:4-4-4} fournit une contribution 
     \[
-      \tr(u_x,\bar\cG_x) = \tr(F_x^*,G_x) \text{.}
+      \tr(u_x,\bar\sG_x) = \tr(F_x^*,G_x) \text{.}
     \]
     L'identité \eqref{III:eq:4-4-1} résulte donc de \eqref{III:eq:4-4-3} 
     et \eqref{III:eq:4-4-4}. 

@@ -50,45 +50,62 @@
   \DeclareMathOperator{\tr}{tr}
 
 
+% special symbols: a new way of defining them!
+  \newcommand{\dmu}{{\bm\mu}}
+  \newcounter{char}
+  \setcounter{char}{1}
+  \loop\ifnum\value{char}<27
+    \edef\c{\Alph{char}}
+    \expandafter\edef\csname c\Alph{char}\endcsname{\noexpand\mathcal{\Alph{char}}}  % mathcal
+    \expandafter\edef\csname d\Alph{char}\endcsname{\noexpand\mathbb{\Alph{char}}}   % mathbb
+    \expandafter\edef\csname f\Alph{char}\endcsname{\noexpand\mathfrak{\Alph{char}}} % mathfrak
+    \expandafter\edef\csname s\Alph{char}\endcsname{\noexpand\mathscr{\Alph{char}}}  % mathscr
+    \addtocounter{char}{1}
+  \repeat
+% can't do the previous for lower-case mathfrak because \fi is already defined 
+% (otherwise, could do \alph instead of \Alph above)
+  \def\mydeff#1{\expandafter\def\csname f#1\endcsname{\mathfrak{#1}}}
+  \def\mydefallf#1{\ifx#1\mydefallf\else\mydeff#1\expandafter\mydefallf\fi}
+  \mydefallf abcdefghjklmnopqrstuvwxyz\mydefallf
 % special characters
-  \newcommand{\cA}{\mathscr{A}}
-  \newcommand{\cB}{\mathscr{B}}
-  \newcommand{\cC}{\mathscr{C}}
-  \newcommand{\cF}{\mathscr{F}} % should fix \cG -> \mathscr{G}
-  \newcommand{\cG}{\mathscr{G}}
-  \newcommand{\cH}{\mathscr{H}}
-  \newcommand{\cI}{\mathscr{I}}
-  \newcommand{\cK}{\mathscr{K}}
-  \newcommand{\cL}{\mathscr{L}}
-  \newcommand{\cM}{\mathscr{M}}
-  \newcommand{\cN}{\mathscr{N}}
-  \newcommand{\cO}{\mathscr{O}}
-  \newcommand{\cP}{\mathscr{P}}
-  \newcommand{\cT}{\mathscr{T}}
+%  \newcommand{\cA}{\mathscr{A}}
+%  \newcommand{\cB}{\mathscr{B}}
+%  \newcommand{\cC}{\mathscr{C}}
+%  \newcommand{\cF}{\mathscr{F}} % should fix \cG -> \mathscr{G}
+%  \newcommand{\cG}{\mathscr{G}}
+%  \newcommand{\cH}{\mathscr{H}}
+%  \newcommand{\cI}{\mathscr{I}}
+%  \newcommand{\cK}{\mathscr{K}}
+%  \newcommand{\cL}{\mathscr{L}}
+%  \newcommand{\cM}{\mathscr{M}}
+%  \newcommand{\cN}{\mathscr{N}}
+%  \newcommand{\cO}{\mathscr{O}}
+%  \newcommand{\cP}{\mathscr{P}}
+%  \newcommand{\cT}{\mathscr{T}}
 
-  \newcommand{\dA}{\mathbb{A}}
-  \newcommand{\dC}{\mathbb{C}}
-  \newcommand{\dF}{\mathbb{F}}
-  \newcommand{\dG}{\mathbb{G}}
-  \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
-  \newcommand{\dN}{\mathbb{N}}
-  \newcommand{\dP}{\mathbb{P}}
-  \newcommand{\dQ}{\mathbb{Q}}
-  \newcommand{\dR}{\mathbb{R}}
-  \newcommand{\dZ}{\mathbb{Z}}
+%  \newcommand{\dA}{\mathbb{A}}
+%  \newcommand{\dC}{\mathbb{C}}
+%  \newcommand{\dF}{\mathbb{F}}
+%  \newcommand{\dG}{\mathbb{G}}
+%  \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
+%  \newcommand{\dN}{\mathbb{N}}
+%  \newcommand{\dP}{\mathbb{P}}
+%  \newcommand{\dQ}{\mathbb{Q}}
+%  \newcommand{\dR}{\mathbb{R}}
+%  \newcommand{\dZ}{\mathbb{Z}}
 
-  \newcommand{\fa}{\mathfrak{a}}
-  \newcommand{\fm}{\mathfrak{m}}
-  \newcommand{\fp}{\mathfrak{p}}
-  \newcommand{\fX}{\mathfrak{X}}
-  
-  \newcommand{\sA}{\mathcal{A}} % should fix \sA -> \mathcal{A}
-  \newcommand{\sB}{\mathcal{B}}
-  \newcommand{\sC}{\mathcal{C}}
-  \newcommand{\sD}{\mathcal{D}}
-  \newcommand{\sE}{\mathcal{E}}
-  \newcommand{\sS}{\mathcal{S}}
-  \newcommand{\sU}{\mathcal{U}}
+%  \newcommand{\fa}{\mathfrak{a}}
+%  \newcommand{\fm}{\mathfrak{m}}
+%  \newcommand{\fp}{\mathfrak{p}}
+%  \newcommand{\fX}{\mathfrak{X}}
+%  
+%  \newcommand{\sA}{\mathcal{A}} % should fix \sA -> \mathcal{A}
+%  \newcommand{\sB}{\mathcal{B}}
+%  \newcommand{\sC}{\mathcal{C}}
+%  \newcommand{\sD}{\mathcal{D}}
+%  \newcommand{\sE}{\mathcal{E}}
+%  \newcommand{\sS}{\mathcal{S}}
+%  \newcommand{\sU}{\mathcal{U}}
 
 
 % miscellaneous operators
