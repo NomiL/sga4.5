@@ -53,14 +53,14 @@ est un entier inversible sur tous les sch\'emas consid\'er\'es.
 
 Soit $S$ un sch\'ema r\'egulier purement de dimension $1$. Nous nous proposons 
 de montrer que le complexe r\'eduit \`a $\dZ/n$ en degr\'e $0$ est 
-dualisant, i.e. que pour $\sK\in \ob\D_c^b(S,\dZ/n)$ ($_c$ pour constructible), 
-si on pose $D\sK=\R\underline\hom(\sK,\dZ/n)$, alors $D\sK$ est encore 
+dualisant, i.e. que pour $\sK\in \ob\D_c^b(S,\dZ/n)$ ($(-)_c$ pour 
+constructible), si on pose $D\sK=\rHom(\sK,\dZ/n)$, alors $D\sK$ est encore 
 constructible \`a cohomologie born\'ee, et que le morphisme canonique $\alpha$ 
 de $\sK$ dans $D D\sK$ est un isomorphisme. 
 
 Pour $\sK$ dans $\D^-$, et $\sL$ quelconque, on a 
 \[
-  \hom(\sK\lotimes \sL,\dZ/n) = \hom(\sL,\underline\hom(\sK,\dZ/n)) \text{.}
+  \hom(\sK\lotimes \sL,\dZ/n) = \hom(\sL,\Hom(\sK,\dZ/n)) \text{.}
 \]
 Le morphisme de $\sK$ dans $DD\sK$ est d\'efini en supposant $D\sK$ dans 
 $\D^-$; si $\beta:D\sK\lotimes\sK\to \dZ/n$ est l'accouplement canonique, il 
@@ -75,7 +75,7 @@ $\sK\lotimes D\sK=D\sK\lotimes \sK \xrightarrow\beta \dZ/n$.
 
 Soit $f:X\to S$ un morphisme s\'epar\'e de type fini. Posons 
 $\sK_X=\R f^!\dZ/n$. Pour $\sK\in \ob\D^-(X,\dZ/n)$, on pose 
-$D\sK = \R\underline\hom(\sK,\sK_X)$. L'adjonction entre $\R f_!$ et $\R f^!$ 
+$D\sK = \rHom(\sK,\sK_X)$. L'adjonction entre $\R f_!$ et $\R f^!$ 
 assure que 
 \[\xymatrix{
   \R f_\ast \sK\lotimes \R f_\ast D\sK \ar[r] 
@@ -94,5 +94,196 @@ La sym\'etrie de cette description montre que, pour $f$ propre, le diagramme
 \end{equation}
 est commutatif. 
 
+Si $f$ est l'inclusion d'un point ferm\'e, on sait que 
+$\R f^!\dZ/n=\dZ/n(-1)[-2]$ -- soit, \`a torsion et d\'ecalage pr\`es, $\dZ/n$. 
+Sur le spectre d'un coprs, ce complexe est dualisant (dualit\'e de Pontrjagin 
+pour les $\dZ/n$-modules). D'apr\`es \eqref{V:eq:1-2-1}, on a donc 
+$\sK\iso D D\sK$ pour $\sK$ de la forme $\R f_!\sL$ -- et donc lorsque le 
+support de $\underline\h^\bullet(\sK)$ est fini. 
+
+
+
+
+
+\begin{theorem_}\label{V:1-3}
+Soient $j:U\hookrightarrow S$ un ouvert dense de $S$ et $\sF$ un faisceau 
+localement constant constructible de $\dZ/n$-modules sur $U$. On a 
+$\D j_\ast \sF = j_\ast D \sF$, i.e. $\Hom(j_\ast \sF,\dZ/n) = j_\ast\Hom(\sF,\dZ/n)$ et $\Ext^i(j_\ast\sF,\dZ/n) = 0$ pour $i>0$.
+\end{theorem_}
+
+Sur $U$, $\Ext^i(j_\ast\sF,\dZ/n)=0$ pour $i>0$, car $\sF$ est localement 
+constant (et $\dZ/n$ est un $\dZ/n$-module injectif), tandis que pour $i=0$ 
+c'est le dual $\sF^\vee$ de $\sF$. On v\'erifie que 
+$\hom(j_\ast\sF,\dZ/n)=j_\ast\sF^\vee$, et il reste \`a v\'erifier la nullit\'e 
+des $\Ext^i$ ($i>0$) en les points de $S\setminus U$. Le probl\`eme est local 
+en ces points. Ceci nous ram\`ene \`a supposer que $S$ est un trait strictement 
+local et, que $U$ est r\'eduit \`a son point g\'en\'erique $\eta$. Soit 
+$I=\gal(\bar\eta/\eta)$. Le faisceau $\sF$ s'identifie au module galoisien 
+$\sF_{\bar\eta}$, et la fibre sp\'eciale de $j_\ast \sF$ \`a 
+$\sF_{\bar\eta}^I$. 
+
+Soit $i$ l'inclusion du point ferm\'e $s$, et appliquons $D$ aux suites 
+exactes 
+\[\xymatrix{
+  0 \ar[r] 
+    & j_! \sF \ar[r] 
+    & j_\ast \sF \ar[r] 
+    & i_\ast \sF_{\bar\eta}^I \ar[r] 
+    & 0 \\
+  0 \ar[r] 
+    & j_! \sF_{\bar\eta}^I \ar[r] \ar[u] 
+    & \sF_{\bar\eta}^I \ar[r] \ar[u] 
+    & i_\ast \sF_{\bar\eta}^I \ar[r] \ar[u]
+    & 0 \text{.}
+}\]
+
+On obtient un morphisme de triangles 
+\[\xymatrix{
+  i_\ast\left(\sF_{\bar\eta}^I\right)^\vee (-1)[-2] \ar[r] \ar@{=}[d] 
+    & D j_\ast\sF \ar[r] \ar[d] 
+    & \R j_\ast \sF^\vee \ar[d] \\
+  i_\ast\left(\sF_{\bar\eta}^I\right)^\vee(-1)[-2] \ar[r] 
+    & \left(\sF_{\bar\eta}^I\right)^\vee \ar[r] 
+    & \R j_\ast \sF_{\bar\eta}^I \text{.}
+}\]
+La suite exacte longue d\'eduite de la premi\`er ligne fournit la nullit\'e des 
+$\Ext^i$ ($i>2$) et, prenant la fibre en $s$, on trouve 
+\[\xymatrix{
+  0 \ar[r] 
+    & \left(\underline\h^1(D j_\ast\sF\right)_s \ar[r] 
+    & \h^1\left(I,\sF_{\bar\eta}^\vee\right) \ar[r]^-\partial \ar[d] 
+    & \left(\sF_{\bar\eta}^I\right)^\vee(-1) \ar[r] \ar@{=}[d] 
+    & \left(\underline\h^2 D j_\ast\sF\right)_s \ar[r] 
+    & 0 \\
+  & 0 \ar[r] 
+    & \h^1\left(I,(\sF_{\bar\eta}^I)^\vee\right) \ar[r]^-\partial 
+    & \left(\sF_{\bar\eta}^I\right)^\vee(-1) \ar[r] 
+    & 0 \text{.}
+}\]
+Puisque 
+$\left(\sF_{\bar\eta}^I\right)^\vee = \left(\sF_{\bar\eta}^\vee\right)_I$, 
+posant $M=\sF_{\bar\eta}^\vee$, il faut finalement v\'erifier que 
+\[\xymatrix{
+  \h^1(I,M) \ar[r]^-\sim 
+    & \h^1(I,M_I) \text{.}
+}\]
+Si $p$ est l'exposant caract\'eristique r\'esiduel, $I$ est extension d'un 
+groupe isomorphe \`a $\widehat\dZ_{p'} = \varprojlim_{(m,p)=1} \dZ/m$ par un 
+$p$-groupe $P$. Puisque $P$ est premier \`a l'ordre de $M$, on a 
+$\h^1(P,M)=0$ ($i>0$) et $(M_I)^P=(M^P)_I$. Ceci permet de remplacer $M$ par 
+$M^P$ et $I$ par $I/P$. On a enfin un isomorphisme functoriel 
+$\h^1(\widehat\dZ_{p'},M)\sim ($coinvariants de $\widehat\dZ_{p'}$, dans $M)$, 
+d'o\`u le th\'eor\`eme. 
+
+
+
+
+
+\begin{theorem_}\label{V:1-4}
+Pour $\sK\in \ob\D_c^b(S,\dZ/n)$, on a $\sK\iso D D \sK$.
+\end{theorem_}
+
+Par d\'evissage, on se ram\`ene \`a supposer que $\sK$ est r\'eduit \`a un 
+faisceau constructible $\sF$ en degr\'e $0$, et que $\sF$ est soit \`a support 
+fini (\ref{V:1-2}), soit de la forme $j_\ast\sF_1$ comme en \ref{V:1-3}. Dans 
+ce second cas, \ref{V:1-3} nous ram\`ene \`a la bidualit\'e locale pour $\sF$ 
+localement constant sur $U$. 
+
+
+
+
+
+
+
+
+
 
 \section{La dualité de Poincaré pour les courbes}\label{V:2}
+
+
+
+
+
+\subsection{}\label{V:2-1}
+
+Soit $X$ une courbe projective et lisse sur $k$ alg\'ebriquement clos. On pose 
+$\sK_X=\dZ/n(1)[2]$ et, pour $\sK\in\ob \D_c^b(X,\dZ/n)$, 
+$D\sK=\rHom(\sK,\sK_X)$. Pour $M$ un $\dZ/n$-module, on pose aussi 
+$D M = \hom(M,\dZ/n)$; de m\^eme pour les complexes de modules. Le morphisme 
+trace $\h^0(X,\sK_X) \to \dZ/n$, ou $\R\Gamma(X,\sK_X)\to \dZ/n$, d\'efinit un 
+accouplement $\R\Gamma(X,\sK)\lotimes\R\Gamma(X,D\sK) \to \dZ/n$. La dualit\'e 
+de Poincar\'e entre cohomologie et cohomologie \`a supports propres d'un ouvert 
+$j:U\hookrightarrow X$ de $X$ dit que, pour $\sK=j_!\dZ/n$, cet accouplement 
+identifie chaque facteur au dual de l'autre. 
+
+J'expose ci-dessous une d\'emonstration, qui m'a \'et\'e communiqu\'ee par 
+M.\ Artin, de ce que pour $\sK\in\ob\D_c^b(X,\dZ/n)$, cet accouplement est 
+toujours parfait, i.e. d\'efinit un isomorphisme
+\begin{equation}\label{V:eq:2-1-1}
+\xymatrix{
+  \R\Gamma(X,\sK) \ar[r]^-\sim 
+    & D \R\Gamma(X,D\sK) \text{.}
+}
+\end{equation}
+
+Pour tout faisceau constructible $\sF$, posons 
+\[
+  '\h^i(X,\sF) = \text{$\dZ/n$-dual de $\h^{-i}(X,D\sF)$.}
+\]
+Que \eqref{V:eq:2-1-1} soit un isomorphisme \'equivaut au 
+
+
+
+
+
+\begin{theorem_}\label{V:2-2}
+Pour $\sF$ un faisceau constructible de $\dZ/n$-modules, on a 
+\begin{equation}\label{V:eq:2-2-1}
+\xymatrix{
+  \h^i(X,\sF) \ar[r]^-\sim 
+    & '\h^i(X,\sF) \text{.}
+}
+\end{equation}
+\end{theorem_}
+
+
+
+
+
+\begin{lemma_}\label{V:2-3}
+Soit $f:X\to Y$ un morphisme g\'en\'eriquement \'etale entre courbes lisses sur 
+$k$. On a $\sK_X=f^\ast\sK_Y=\R f^!\sK_Y$, avec $\tr_f$ pour fl\`eche 
+d'adjonction $\R f_!\R f^!\sK_Y\to \sK_Y$.
+\end{lemma_}
+
+% NOTE: \rhom or \rHom ? originally \rhom
+On se ram\`ene \`a v\'erifier que pour $f$ fini, on a 
+$f_\ast \R f^!\sK_Y = \rHom(f_\ast\dZ/n,\sK_Y)$ est $f_\ast\dZ/n$, avec $\tr_f$ 
+pour fl\`eche d'adjonction. La nullit\'e des $\Ext^i$ ($i>0$) r\'esulte de 
+\ref{V:1-3}, et l'assertion en r\'esulte. 
+
+On peut dire, plus explicitement, que $\R f^!$ est le foncteur d\'eriv\'e du 
+foncteur $f^!:f^!\sF(U)=\hom(f_!\dZ_U,\sF)$ et \ref{V:1-3} implique la 
+nullit\'e des $\R^i f^!\dZ/n$ pour $i>0$.
+
+
+
+
+
+\begin{corollary_}\label{V:2-4}
+Soit $f:X'\to X$ un morphisme g\'en\'eneriquement \'etale de courbes 
+projectives et lisses sur $k$. On a $'\h^i(X,f_\ast \sF)='\h^i(X',\sF)$; cet 
+isomorphisme est fonctoriel et le diagramme 
+\[\xymatrix{
+  \h^i(X,f_\ast\sF) \ar[r] \ar@{=}[d] 
+    & '\h^i(X,f_\ast\sF) \ar@{=}[d] \\
+  \h^i(X',\sF) \ar[r] 
+    & '\h^i(X',\sF) 
+}\]
+est commutatif.
+\end{corollary_}
+
+L'isomorphisme est donn\'e par \ref{V:1-2}: $D f_\ast\sF=f_\ast D\sF$. 
+
+
+

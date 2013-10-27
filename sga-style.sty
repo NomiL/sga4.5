@@ -36,10 +36,12 @@
   \DeclareMathOperator{\dv}{div}
   \DeclareMathOperator{\Div}{Div}
   \DeclareMathOperator{\ext}{Ext}
+  \DeclareMathOperator{\Ext}{\mathsf{Ext}} % sheaf ext
   \DeclareMathOperator{\gal}{Gal}
   \DeclareMathOperator{\gl}{GL}
   \DeclareMathOperator{\gr}{gr}
   \DeclareMathOperator{\h}{H}
+  \DeclareMathOperator{\Hom}{\mathsf{hom}} % sheaf hom
   \DeclareMathOperator{\im}{im}
   \DeclareMathOperator{\ob}{Ob}
   \DeclareMathOperator{\pgl}{PGL}
@@ -67,45 +69,6 @@
   \def\mydeff#1{\expandafter\def\csname f#1\endcsname{\mathfrak{#1}}}
   \def\mydefallf#1{\ifx#1\mydefallf\else\mydeff#1\expandafter\mydefallf\fi}
   \mydefallf abcdefghjklmnopqrstuvwxyz\mydefallf
-% special characters
-%  \newcommand{\cA}{\mathscr{A}}
-%  \newcommand{\cB}{\mathscr{B}}
-%  \newcommand{\cC}{\mathscr{C}}
-%  \newcommand{\cF}{\mathscr{F}} % should fix \cG -> \mathscr{G}
-%  \newcommand{\cG}{\mathscr{G}}
-%  \newcommand{\cH}{\mathscr{H}}
-%  \newcommand{\cI}{\mathscr{I}}
-%  \newcommand{\cK}{\mathscr{K}}
-%  \newcommand{\cL}{\mathscr{L}}
-%  \newcommand{\cM}{\mathscr{M}}
-%  \newcommand{\cN}{\mathscr{N}}
-%  \newcommand{\cO}{\mathscr{O}}
-%  \newcommand{\cP}{\mathscr{P}}
-%  \newcommand{\cT}{\mathscr{T}}
-
-%  \newcommand{\dA}{\mathbb{A}}
-%  \newcommand{\dC}{\mathbb{C}}
-%  \newcommand{\dF}{\mathbb{F}}
-%  \newcommand{\dG}{\mathbb{G}}
-%  \newcommand{\dmu}{{\bm\mu}}%{\boldsymbol{\mu}}
-%  \newcommand{\dN}{\mathbb{N}}
-%  \newcommand{\dP}{\mathbb{P}}
-%  \newcommand{\dQ}{\mathbb{Q}}
-%  \newcommand{\dR}{\mathbb{R}}
-%  \newcommand{\dZ}{\mathbb{Z}}
-
-%  \newcommand{\fa}{\mathfrak{a}}
-%  \newcommand{\fm}{\mathfrak{m}}
-%  \newcommand{\fp}{\mathfrak{p}}
-%  \newcommand{\fX}{\mathfrak{X}}
-%  
-%  \newcommand{\sA}{\mathcal{A}} % should fix \sA -> \mathcal{A}
-%  \newcommand{\sB}{\mathcal{B}}
-%  \newcommand{\sC}{\mathcal{C}}
-%  \newcommand{\sD}{\mathcal{D}}
-%  \newcommand{\sE}{\mathcal{E}}
-%  \newcommand{\sS}{\mathcal{S}}
-%  \newcommand{\sU}{\mathcal{U}}
 
 
 % miscellaneous operators
@@ -117,7 +80,8 @@
   \newcommand{\D}{\mathsf{D}} % should be turned into \eD
   \newcommand{\eL}{\mathsf{L}}
   \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
-  \newcommand{\rhom}{\mathsf{Rhom}}
+  \newcommand{\rhom}{\mathsf{R}\hom}
+  \newcommand{\rHom}{\mathsf{Rhom}}
 
 
 % theorem types
