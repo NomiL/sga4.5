@@ -701,7 +701,34 @@ Au niveau des complexes, la commutativit\'e voulue s'\'ecrit (loc. cit.)
     & k^\ast \sL \text{.}
 }\]
 On la v\'erifie composante par composante, ce qui ram\`ene \`a une 
-compatabilit\'e 
+compatabilit\'e pour $\sL$ un faisceau et pour chacune des paires de foncteurs 
+adjoints $(f_i^!,f_!^i)$, not\'es simplement $f^!$ et $f_!$. La fl\`eche (1) 
+est d\'efinie \`a partir de l'isomorphisme $(2):k^\ast f_!=f_! k^\ast$, et d'un 
+morphisme $(3):k^\ast f^! \to f^! k^\ast$ qui s'en d\'eduit. Dans loc. cit., on 
+introduit d'abord un morphisme $(4):k_! f_!\to f_! k_!$, d\'eduit de $(2)$ par 
+adjonction de $k^\ast=k^!$ et de 
+$k_!:k_! f_!\to k_! f_! k^\ast k_!\to k_! k^\ast f_! k_! \to f_! k_!$, et on 
+d\'eduit $(3)$ de $(4)$ par adjonction. Il revient au m\^eme de d\'eduire $(3)$ 
+de $(2)$ par adjonction de $f_!$ et 
+$f^!:k^\ast \to f^! f_! k^\ast f^!\to f^! k^\ast f_! f^! \to f^! k^\ast$. 
+
+Ecrivant $k$ pour $k^\ast$ et omettant $\sL$, la commutativit\'e est alors 
+celle du bord ext\'erieur de 
+\[\xymatrix@=.5cm{
+  k f_! f^! \ar[r] \ar@{=}[d]
+    & f_! k f^! \ar[r] 
+    & f_! f^! f_! k f^! \ar[r] 
+    & f_! f^! k f_! f^! \ar@{=}[d] \\
+  k f_! f^! \ar[d] 
+    & & & \ar[lll] f_! f^! k f_! f^! \ar[d] \\
+  k 
+    & & & \ar[lll] f_! f^! k \text{.}
+}\]
+En premi\`ere ligne, on trouve un homomorphisme 
+$k _! f^! \to f_! f^! k f_! f^!$, d\'efini parce que $k f_! f^!$ est de la 
+forme $f_! X$ ($X=k f^!$); il admet pour r\'etraction le morphisme 
+d'adjonction en seconde ligne, et la commutativit\'e du carr\'e inf\'erieur la 
+fonctorialit\'e de ce morphisme d'adjonction. 
 
 
 
