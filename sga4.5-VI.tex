@@ -1,6 +1,7 @@
 % !TEX root = sga4.5.tex
 
 \chapter{Applications de la formule des traces aux sommes trigonométriques}\label{VI}
+\chaptermark{Applications aux sommes trigonom\'etriques}
 
 
 
@@ -109,6 +110,433 @@ de la formule des traces pour les $\dQ_\ell$-faisceaux (\hyperref[II]{Rapport}
 Nous allons interpr\'eter diverses sommes trigonom\'etriques comme le membre de 
 gauche de \eqref{VI:eq:1-1-1}, pour $X_0$ et $\sF_0$ convenables. 
 
+
+
+
+
+% NOTE: in this section, following the source (but not convention in the 
+% LaTeX version, torsors are denoted in roman (not script) letters
+\subsection{}\label{VE:1-2}
+
+Soit $A$ un groupe fini. Un \emph{$A$-torseur} sur un sch\'ema $X$ est un 
+faisceau $T$ sur $X$, muni d'une action \`a droite de $A$, qui, localement 
+(pour la topologie \'etale) sur $X$, est isomorphe au faisceau constant $A$ sur 
+lequel $A$ agit par translation \`a droite. 
+
+Si $\tau:A\to B$ est un homomorphisme, et $T$ un $A$-torseur, il existe \`a 
+isomorphisme unique pr\`es un et un seul $B$-torseur $\tau(T)$, muni d'un 
+morphisme de faisceaux $\tau:T\to \tau(T)$ tel que 
+\begin{equation*}\tag{1.2.1}\label{VI:eq:1-2-1}
+  \tau(t a) = \tau(t) \tau(a)\text{.}
+\end{equation*}
+
+Si $T$ est un $A$-torseur sur $X$, et $\rho$ une repr\'esentation lin\'eaire 
+de $A$: $\rho:A\to \gl(V)$ ($V$ un espace vectoriel de dimension finie sur 
+$E_\lambda$), il existe \`a isomorphisme unique pr\`es un seul 
+$E_\lambda$-faisceau $\sF$, lisse de rang $\dim(V)$, muni d'un morphisme de 
+faisceaux 
+\begin{equation*}\tag{1.2.2}\label{VI:eq:1-2-2}
+  \rho:T\to \underline{\operatorname{Isom}}(V,\sF) \text{.}
+\end{equation*}
+tel que $\rho(t a) = \rho(t) \rho(a)$. On le note $\rho(T)$. Pour 
+$\tau:A\to B$ et $\rho$ une repr\'esentation de $B$, on a un isomorphisme 
+canonique $\rho(\tau(T)) = (\rho\tau)(T)$. 
+
+Dans ce paragraphe (sauf l'appendice), on ne consid\`ere que le cas o\`u $A$ 
+est commutatif et o\`u $V=E_\lambda$: $\rho$ est un caract\`ere 
+$A\to E_\lambda^\times$, et $\rho(T)$ un $E_\lambda$-faisceau lisse de rang 
+un. Le morphisme \eqref{VI:eq:1-2-2} s'interpr\`ete comme un morphisme partout 
+non nul 
+\begin{equation*}\tag{1.2.3}\label{VI:eq:1-2-3}
+  \rho:T\to \rho(T) 
+\end{equation*}
+tel que $\rho(t a) = \rho(a)\rho(t)$. 
+
+
+
+
+
+\subsection{}\label{VI:1-3}
+
+Soient $S$ un sch\'ema, $G$ un sch\'ema en groupe commutatif sur $S$, et $G'$ 
+une extension de sch\'emas en groupes commutatifs sur $S$
+\[\xymatrix{
+  0 \ar[r] 
+    & A \ar[r] 
+    & G' \ar[r]^-\pi 
+    & G \ar[r] 
+    & 0 \text{.}
+}\]
+Le faisceau $T$ des sections locales de $\pi$ est alors un $A$-torseur sur 
+$G$. 
+
+Si $X$ est un sch\'ema sur $S$, et $f,g$ deux $S$-morphismes de $X$ dans $G$, 
+du fait que $T$ est d\'efini par une extension, on a un isomorphisme 
+canonique 
+\begin{equation*}\tag{1.3.1}\label{VI:eq:1-3-1}
+  (f+g)^\ast T = f^\ast T + g^\ast T \text{.}
+\end{equation*}
+A gauche, $f+g$ est la somme de $f$ et $g$, au sens de la loi de groupe $G$: 
+\`a droite, $+$ d\'esigne une somme de torseurs. 
+
+Si $f:X\to G$ se factorise par $G'$, $f^\ast T$ est trivial (et un 
+factorisation donne une trivialisation); \`a isomorphisme (non unique) pr\`es, 
+le $A$-torseur $f^\ast T$ ne d\'epend que de l'image de $f$ dans 
+$\hom_S(X,G)/\pi\hom_S(X,G')$: il est donn\'e par le morphisme $\partial$ dans 
+la suite exacte 
+\[\xymatrix{
+  \hom(X,G') \ar[r] 
+    & \hom(X,G) \ar[r]^-\partial 
+    & \h^1(X,A) \text{.}
+}\]
+
+Nous appliquerons ces constructions aux suites exactes de Kummer 
+$0 \to \dmu_n \to \dG_m \to \dG_m \to 0$, et aux torseurs de Lang. 
+
+
+
+
+
+\subsection{Le torseur de Lang}\label{VI:1-4}
+
+Soit $G_0$ un groupe alg\'ebrique commutatif connexe sur $\dF_q$ (pour le cas 
+non commutatif, voir l'appendice). La loi de groupe est not\'ee 
+\emph{multiplicativement}. L'isog\'enie de Lang 
+\[
+\fL:G_0 \to G_0: x\mapsto F x\cdot x^{-1}
+\]
+est \'etale; son image, un sous-groupe ouvert de $G_0$, ne peut \^etre que 
+$G_0$ lui-m\^eme; son noyau est le groupe fini $G_0(\dF_q)$. Le \emph{torseur 
+de Lang} $L$ est le $G_0(\dF_q)$-torseur sur $G_0$ d\'efini par la suite 
+exacte 
+\begin{equation*}\tag{1.4.1}\label{VI:eq:1-4-1}
+\xymatrix{
+  0 \ar[r] 
+    & G_0(\dF_q) \ar[r] 
+    & G_0 \ar[r]^-\fL 
+    & G_0 \ar[r] 
+    & 0 \text{.}
+}
+\end{equation*}
+
+
+\paragraph{Notation}
+On note encore $L$ et $\fL$ (ou $L_{(q)}$ et $\fL_{(q)}$) les objects d\'eduits 
+de $L$ et $\fL$ par extension du corps de base. En cas de besoin, on 
+pr\'ecisera par un indice $0$ ou $1$.
+
+
+\paragraph{Exemples}
+Pour $G_0=\dG_a$ ou $\dG_m$, les suites \eqref{VI:eq:1-4-1} s'\'ecrivent 
+\begin{align*}\tag{1.4.2}\label{VI:eq:1-4-2}
+&\xymatrix{
+  0 \ar[r] 
+    & \dF_q \ar[r] 
+    & \dG_a \ar[r]^-{x^q-x} 
+    & \dG_a \ar[r] 
+    & 0 
+} \\
+\tag{1.4.3}\label{VI:eq:1-4-3}
+&\xymatrix{
+  0 \ar[r] 
+    & \dmu_{q-1} \ar[r] 
+    & \dG_m \ar[r]^-{x^{q-1}} 
+    & \dG_m \ar[r] 
+    & 0
+}
+\end{align*}
+
+
+
+
+
+\subsection{}\label{VI:1-6}
+
+Calculons l'endomorphisme $F^\ast$ de la fibre du torseur de Lang en 
+$\gamma\in G^F=G_0(\dF_q)$. Si $g\in \fL^{-1}(\gamma)\subset G$, on a 
+$F g = F g\cdot g^{-1}\cdot g = \gamma g$. D\`es lors (\hyperref[II]{Rapport}, 
+\ref{II:1-2}) 
+\begin{equation*}\tag{1.5.1}\label{VI:eq:1-5-1}
+  \text{sur $L_0(G_0)_\gamma\simeq \fL^{-1}(\gamma)$, $F^\ast$ est $g\mapsto g\gamma^{-1}$.}
+\end{equation*}
+
+
+
+
+
+\subsection{}\label{VI:1-6}
+
+Sur $\dF_{q^n}$, l'identit\'e $F_{(q^n)}=F_{(q)}^n$ entre endomorphismes de 
+$G_1$ implique que $\fL_{(q^n)}=\fL_{(q)}\circ \prod_{i=0}^{n-1} F_{(q)}^i$. 
+Sur $G_0(\dF_{q^n})$, $F_{(q)}^i$ agit comme l'\'el\'ement 
+$x\mapsto x^{q^i}$ de $\gal(\dF_{q^n}/\dF_q)$. Sur $G_0(\dF_{q^n})$, 
+$\prod F_{(q)}^i$ est donc le compos\'e de la norme 
+$G_0(\dF_{q^n})\to G_0(\dF_q)$ et de l'inclusion 
+$G_0(\dF_q)\subset G_0(\dF_{q^n})$: le diagramme 
+\begin{equation*}\tag{1.6.1}\label{VI:eq:1-6-1}
+\xymatrix{
+  0 \ar[r] 
+    & G_0(\dF_{q^n}) \ar[r] \ar[d]^-N 
+    & G_1 \ar[r]^-{\fL_{(q^n)}} \ar[d]^-{\prod_{i=0}^{n-1} F_{(q)}^i} 
+    & G_1 \ar[r] \ar@{=}[d] 
+    & 0 \\
+  0 \ar[r] 
+    & G_0(\dF_q) \ar[r] 
+    & G_q \ar[r]^-{\fL_{(q)}} 
+    & G_1 \ar[r] 
+    & 0
+}
+\end{equation*}
+est commutatif. Dans le langage des torseurs, ceci fournit un isomorphisme 
+canonique entre $G_0(\dF_q)$-torseurs sur $G_1$ 
+\begin{equation*}\tag{1.6.2}\label{VI:eq:1-6-2}
+  N L_{(q^n)} = L_{(q)} \text{.}
+\end{equation*}
+
+
+
+
+
+\begin{definition_}\label{VI:1-7}
+Soient $f_0:X_0\to G_0$ un morphisme et 
+$\chi:G_0(\dF_q)\to E_\lambda^\times$ un caract\`ere. On pose 
+$\sF(\chi,f_0) = \chi^{-1}(f_0^\ast (L_0(G_0))) = f_0^\ast\chi^{-1}(L_0(G_0))$. 
+\end{definition_}
+
+On a les propri\'et\'es de fonctorialit\'e suivantes:
+\begin{enumerate}[a)]
+  \item $\sF(\chi,f_0)$ est bimultiplicatif en $\chi$ et $f_0$: 
+    \begin{align*}\tag{1.7.1}\label{VI:eq:1-7-1}
+      \sF(\chi,f_0'\cdot f_0'') &= \sF(\chi,f_0')\otimes \sF(\chi,f_0'') \text{,} \\
+      \tag{1.7.2}\label{VI:eq:1-7-2}
+      \sF(\chi'\chi'',\sF_0) &= \sF(\chi',f_0)\otimes \sF(\chi'',f_0) \text{.}
+    \end{align*}
+    Cela r\'esulte de la d\'efinition de $\chi(T)$, pour $T$ un torseur, joint 
+    \`a \eqref{VI:eq:1-3-1} pour \eqref{VI:eq:1-7-1}. 
+  \item Pour $g_0:Y_0\to X_0$ un morphisme, on a 
+    \begin{equation*}\tag{1.7.3}\label{VI:eq:1-7-3}
+      \sF(\chi,f_0\circ g_0) = g_0^\ast \sF(\chi,f_0) \text{.}
+    \end{equation*}
+    En particulier, $\sF(\chi,f_0) = f_0^\ast \sF(\chi)$, o\`u $\sF(\chi)$ 
+    d\'esigne $\sF(\chi,\operatorname{id}_{G_0})$, 
+  \item Pour $u_0:G_0\to H_0$ un morphisme, et 
+    $\chi:H_0(\dF_q) \to E_\lambda^\times$, on a 
+    \begin{equation*}\tag{1.7.4}\label{VI:eq:1-7-4}
+      \sF(\chi,u_0 f_0) = \sF(\chi u_0,f_0) \text{.}
+    \end{equation*}
+  \item Pour $G_0=\prod_{i\in I} G_0^i$, $\chi$ de coordonn\'ees $\chi_i$ 
+    ($i\in I$) et $f_0$ de coordonn\'ees $f_0^i$, il r\'esulte de 
+    \eqref{VI:eq:1-7-1} \`a \eqref{VI:eq:1-7-4} que 
+    \begin{equation*}\tag{1.7.5}\label{VI:eq:1-7-5}
+      \sF(\chi,f_0) = \bigotimes_{i\in I} \sF(\chi_i,f_0^i) \text{.}
+    \end{equation*}    
+\end{enumerate}
+
+Noter le $\chi^{-1}$ dans la d\'efinition \ref{VI:1-7}. Il assure que, pour 
+$x\in X^F$, on ait sur $\sF(\chi,f_0)_x$ 
+\begin{equation*}\tag{1.7.6}\label{VI:eq:1-7-6}
+  F_x^\ast = \chi f_0(x)
+\end{equation*}
+(utiliser que la fibre en $x$ du morphisme \eqref{VI:eq:1-2-2}, pour 
+$\rho=\chi^{-1}$, commute \`a $F_x^\ast$, et \eqref{VI:eq:1-5-1}). 
+
+Si $\sF(\chi,f_0)_1$ est le faisceau d\'eduit de $\sF(\chi,f_0)$ par extension 
+du corps de base \`a $\dF_{q^n}$, on d\'eduit de \eqref{VI:eq:1-6-2} que 
+\begin{equation*}\tag{1.7.7}\label{VI:eq:1-7-7}
+  \sF(\chi,f_0)_1 = \sF(\chi\circ N,f_1) \text{.}
+\end{equation*}
+
+
+
+
+
+\subsection{Abus de notations}\label{VI:1-8}
+
+(i) Si $\Xi$ est une notation pour l'application compos\'ee 
+$\chi f_0:X_0(\dF_q) \to E_\lambda^\times$, on \'ecrira parfois $\sF(\Xi)$ au 
+lieu de $\sF(\chi,f_0)$. Grâce \`a \eqref{VI:eq:1-7-1} \`a \eqref{VI:eq:1-7-5}, 
+on ne risque gu\`ere d'ambiguit\'e. Par exemple:
+\begin{enumerate}[a)]
+  \item on \'ecrit $\sF(\chi)$ pour $\sF(\chi,\operatorname{id}_{G_0})$ 
+    (notations d\'ej\`a utilis\'ee en \ref{VI:1-7}b)); 
+  \item en \'ecrit $\sF(\chi f_0)$ pour $\sF(\chi,f_0)$;
+  \item avec les notations de \ref{VI:1-7}d), on \'ecrit 
+    $\sF(\prod \chi_i f_0^i)$ pour $\sF(\chi,f))$. 
+\end{enumerate}
+
+Avec cette notation, \eqref{VI:eq:1-7-4} exprime que l'\'ecriture 
+$\sF(\chi u_0 f_0)$ n'est pas ambiguë, \eqref{VI:eq:1-7-1} \eqref{VI:eq:1-7-2} 
+\eqref{VI:eq:1-7-5} expriment une multiplicativit\'e de $\sF(\Xi)$ en $\Xi$, 
+et \eqref{VI:eq:1-7-6} se r\'ecrit $F_x^\ast = \Xi(x)$ sur $\sF(\Xi)_x$.
+
+(ii) Si $X$ est un sch\'ema sur une extension $k$ de $\dF_q$, et que $f$ est un 
+morphisme de $X$ dans $G_0\otimes_{\dF_q} k$, on notera encore $\sF(\chi,f)$, 
+$\sF(\chi f)$, ou $\sF(\chi)$ (pour $f$ une inclusion) l'image r\'eciproque par 
+$f$ du $E_\lambda$-faisceau d\'eduit de $\chi^{-1}(L_0(G))$ par extension des 
+scalaires de $\dF_q$ \`a $k$. Si $f_0$ est le compos\'e 
+$X\to G_0\otimes_{\dF_q} k \to G_0$, c'est encore le $\sF(\chi,f_0)$ de 
+\ref{VI:1-7}. Pour $k$ est une extension finie de $\dF_q$, on a 
+$\sF(\chi f) = \chi(\chi N_{k/\dF_q} f)$. 
+
+Appliquant \eqref{VI:eq:1-1-1} \`a \eqref{VI:eq:1-7-6} et \eqref{VI:eq:1-7-7}, 
+on trouve: 
+
+
+
+
+
+% NOTE: originally a 'scholium'
+\begin{theorem_}\label{VI:1-9}
+Soient $S_0$ un sch\'ema s\'epar\'e de type fini sur $\dF_q$, $G_0$ un groupe 
+alg\'ebrique commutatif connexe sur $\dF_q$, $f_0:S_0\to G_0$ un morphisme et 
+$\chi:G_0(\dF_q) \to E_\lambda^\times$. On a 
+\begin{equation*}\tag{1.9.1}\label{VI:eq:1-9-1}
+  \sum_{s\in S_0(\dF_q)} \chi f_0(s) = \tr(F^\ast,\h_c^\bullet(S,\sF(\chi,f_0))) 
+\end{equation*}
+et, pour tout entier $n\geqslant 1$
+\begin{equation*}\tag{1.9.2}\label{VI:eq:1-9-2}
+  \sum_{s\in S_0(\dF_{q^n})} \chi\circ N_{\dF_{q^n}/\dF_q} f_0(s) = \tr({F^\ast}^n, \h_c^\bullet\left(S,\sF(\chi,f_0))\right) \text{.}
+\end{equation*}
+\end{theorem_}
+
+
+
+
+
+\subsubsection{Remarque}\label{VI:1-9-3}
+
+Prenons pour $G-0$ un produit. Avec les notations de \ref{VI:1-7}d) et 
+\ref{VI:1-8}c), la formule \eqref{VI:eq:1-9-2} devient 
+\[
+  \sum_{s\in S_0(\dF_{q^n})} \prod_i \chi_i\circ N_{\dF_{q^n}/\dF_q} (f_0^i(s)) = \tr({F^\ast}^n, \h_c^\bullet(S,\sF(\prod_i \chi_i f_0^i))) \text{.}
+\]
+
+
+
+
+
+\subsubsection{Remarque}\label{VI:1-9-4}
+
+Prenons $G_0=\{e\}$. La formule \eqref{VI:eq:1-9-1} devient 
+\[
+  \left|S_0(\dF_q)\right| = \sum_{s\in S_0(\dF_q)} 1 = \tr(F^\ast,\h_c^\bullet(S,\dQ_\ell)) \text{.}
+\]
+
+Il est rare qu'on puisse explicitement calculer le membre de droite de 
+\eqref{VI:eq:1-9-1}. Voici un exemple amusant, avec $G_0=\{e\}$. 
+
+
+
+
+
+\subsection{Exemple: Une quadrique projective non singuli\`ere de dimension impaire sur \texorpdfstring{$\dF_q$}{Fq} a le m\^eme nombre de points rationnels que l'espace projectif sur \texorpdfstring{$\dF_q$}{Fq} de la m\^eme dimension.}
+
+Si, sur $\dC$, $X$ est une hypersurface quadrique non singuli\`ere dans 
+l'espace projectif $\dP^{2 N}$, et $Y$ un hyperplan, on sait que pour 
+$i\leqslant 2\dim(X)=2\dim(Y)$, les inclusions 
+$X\hookrightarrow \dP^{2 N}\hookleftarrow Y$ induisent des isomorphismes (en 
+cohomologie ordinaire) 
+\[\xymatrix{
+  \h^i(X,\dQ) 
+    & \ar[l]_-\sim \h^i(\dP^{2 N},\dQ) \ar[r]^-\sim 
+    & \h^i(Y,\dQ) \text{.}
+}\]
+
+Par sp\'ecialisation, il en r\'esulte que si $X_0'$ est une hypersurface 
+quadrique non singuli\`ere dans l'espace projectif $\dP_0^{2 N}$ sur $\dF_q$, 
+et $Y_0'$ un hyperplan, les inclusions 
+$X_0'\hookrightarrow \dP_0^{2 N}\hookleftarrow Y_0'$ induisent des 
+isomorphismes 
+\[\xymatrix{
+  \h^i(X',\dQ_\ell) 
+    & \ar[l]_-\sim \h^i(\dP^{2 N},\dQ_\ell) \ar[r]^-\sim 
+    & \h^i(Y',\dQ_\ell) \text{.}
+}\]
+Ces isomorphismes commutent \`a $F^\ast$, et on applique la formule des traces. 
+
+
+
+
+
+\subsection{}\label{VI:1-11}
+
+On peut aussi utiliser la formule des traces pour comprendre les formules 
+classiques donnant le nombre de points rationnels des groupes lin\'eaires sur 
+les corps finis, et ceux de certains espaces homog\`enes (voir le paragraphe 
+8). 
+
+
+
+
+
+\subsection{}\label{VI:1-12}
+
+On dispose d'un dictionnaire permettant de traduire en termes cohomologiques 
+ques divers types de manipulations classiques sur les sommes 
+trigonom\'etriques. Ce dictionnaire sera donn\'e au paragraphe 2. L'\'enonc\'e 
+cohomologique \'etant plus ``g\'eom\'etrique,'' il pourra parfois s'appliquer 
+\`a des situations o\`u l'argument classique ne s'applique qu'apr\`es une 
+extension du corps fini de base. Voici un exemple (un cas particulier d'un 
+th\'eor\`eme de Kazhdan). 
+
+
+
+
+
+\begin{theorem_}[Kazhdan]\label{VI:1-13}
+Soit $X-0$ un sch\'ema sur $\dF_q$. Supposons qu'il existe une action $\rho$ de 
+$\dG_a$ sur $X$, et un morphisme $f:X\to Y$ de sch\'emas sur $\dF$, faisant de 
+$X$ un $\dG_a$-torseur sur $Y$. Alors, le nombre de points rationnels de $X_0$ 
+est divisible par $q$.
+\end{theorem_}
+
+Supposons d'abord que $\rho$, $Y$ et $f$ soient d\'efinis sur $\dF_q$. 
+
+
+\paragraph{Argument classique}
+Les fibres de $f:X_0(\dF_q)\to Y_0(\dF_q)$ ont toutes $q$ \'el\'ements: 
+$|X_0(\dF_q)| = q\cdot |U_0(\dF_q)|$, d'o\`u la divisibilit\'e. 
+
+
+\paragraph{Traduction cohomologique}
+Les faisceaux images directes sup\'erieures $\R^i f_!\dQ_\ell$ sont 
+\begin{align*}
+  \R^i f_!\dQ_\ell &= 0  && \text{pour $i\ne 2$} \\
+  \R^2 f_!\dQ_\ell &= \dQ_\ell(-1) \text{.}
+\end{align*}
+La suite spectrale de Leray de $f$ d\'eg\'en\`ere donc en un isomorphisme 
+\[
+  \h_c^i(X,\dQ_\ell) = \h_c^{i-2}(Y,\dQ_\ell)(-1) \text{.}
+\]
+Pour comprendre l'effet d'un twist \`a la Tate sur les valeurs propres de 
+Frobenius, le plus commode est d'utiliser le point de vue galoisien 
+(\hyperref[II]{Rapport} \ref{II:1-8}), et de noter que la substitution de 
+Frobenius $\varphi$ agit sur $\dQ_\ell(1)$ par multiplication par $q$. Les 
+valeurs propres de $F^\ast$ sur $\h_c^p(X,\dQ_\ell)$ sont donc les produits par 
+$q$ des valeurs propres de $F^\ast$ agissant sur $\h_c^{i-2}(Y,\dQ_\ell)$. On 
+sait que celles-ci sont des entiers alg\'ebriques \cite[XXI 5.2.2]{sga7}; d\`es 
+lors 
+
+\begin{equation*}\tag{$*$}\label{VI:eq:*}
+  \substack{\displaystyle\text{les valeurs propres de $F^\ast$ agissant sur $\h_c^i(X,\dQ_\ell)$ sont} \\
+  \displaystyle\text{des entiers alg\'ebriques divisibles par $q$.}}
+\end{equation*}
+
+
+\paragraph{Descente}
+Revenons aux hypoth\`eses du th\'eor\`eme. Pour $n$ convenable, on peut 
+supposer que $\rho$, $Y$ et $f$ sont d\'efinis sur $\dF_{q^n}$. Le morphisme de 
+Frobenius relatif \`a $\dF_{q^n}$ \'etant la puissance $n$-i\`eme de celui 
+relatif \`a $\dF_q$, l'\'enonc\'e \eqref{VI:eq:*} pour le sch\'ema sur 
+$\dF_{q^n}$ d\'eduit de $X_0$ par extension des scalaires nous fournit: 
+\begin{equation*}\tag{$**$}\label{VI:eq:**}
+  \substack{\displaystyle\text{les puissances $n$-\`iemes des valeurs propres de $F^\ast$ agissant sur} \\ \displaystyle\text{$\h_c^i(X,\dQ_\ell)$ sont des entiers alg\'ebriques divisibles par $q^n$.}}
+\end{equation*}
+
+Cette assertion implique \eqref{VI:eq:*}. Le nombre de points rationnels de 
+$X_0$, soit $\sum (-1)^i \tr(F^\ast,\h^i(X,\dQ_\ell))$, est donc entier 
+alg\'ebrique divisible par $q$. Ceci implique qu'il soit divisible par $q$ en 
+tant qu'entier rationnel. 
 
 
 
