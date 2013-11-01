@@ -116,7 +116,7 @@ gauche de \eqref{VI:eq:1-1-1}, pour $X_0$ et $\sF_0$ convenables.
 
 % NOTE: in this section, following the source (but not convention in the 
 % LaTeX version, torsors are denoted in roman (not script) letters
-\subsection{}\label{VE:1-2}
+\subsection{}\label{VI:1-2}
 
 Soit $A$ un groupe fini. Un \emph{$A$-torseur} sur un sch\'ema $X$ est un 
 faisceau $T$ sur $X$, muni d'une action \`a droite de $A$, qui, localement 
@@ -250,7 +250,7 @@ Pour $G_0=\dG_a$ ou $\dG_m$, les suites \eqref{VI:eq:1-4-1} s'\'ecrivent
 
 
 
-\subsection{}\label{VI:1-6}
+\subsection{}\label{VI:1-5}
 
 Calculons l'endomorphisme $F^\ast$ de la fibre du torseur de Lang en 
 $\gamma\in G^F=G_0(\dF_q)$. Si $g\in \fL^{-1}(\gamma)\subset G$, on a 
@@ -561,7 +561,7 @@ d\'efinissons la somme de Gauss $\tau(\chi,\psi)$ par
 
 
 
-\begin{theorem_}[Hasse-Davenport]
+\begin{theorem_}[Hasse-Davenport]\label{VI:1-15}
 On a 
 \begin{equation*}\tag{1.15.1}\label{VI:eq:1-15-1}
   \tau\left(\chi\circ N_{\dF_{q^n}/\dF_q},\psi\circ \tr_{\dF_{q^n}/\dF_q}\right) = \tau(\chi,\psi)^n \text{.}
@@ -667,7 +667,263 @@ conjugu\'es complexes) la majoration
     \]
     donc il peut \^etre utile de tenir compte (cf. la preuve de \ref{VI:3-8}). 
 \end{enumerate}
-    
+
+J'explique ci-dessous une m\'ethode pour prouver que $b_i=0$ pour $i\ne n$. 
+Quand elle s'applique, elle fournit une estimation en $O(q^{n/2}$. La constante 
+implicate dans $0$ est $b_n=(-1)^n \chi(S,\sF(\prod \chi_i f^i))$ en peut 
+\^etre difficile \`a calculer. 
+
+
+
+
+
+\begin{proposition_}\label{VI:1-19}
+Soient $\bar X$ un sch\'ema propre sur un corps alg\'briquement clos $k$, 
+$j:X\hookrightarrow bar X$ un ouvert de $X$ et $\sF$ un $E_\lambda$-faisceaux 
+sur $X$. On suppose que 
+\begin{enumerate}[\indent a)]
+  \item $(j_\ast\sF)_x = 0$ pour $x\in \bar X\setminus X$, i.e. 
+    $j_!\sF\iso j_\ast\sF$; 
+  \item $\R^i j_\ast \sF = 0$ pour $i>0$.
+\end{enumerate}
+Alors, les applications 
+\[
+  \h_c^i(X,\sF) \to \h^i(X,\sF)
+\]
+sont des isomorphismes. 
+\end{proposition_}
+
+Les hypoth\`eses a) b) signifiet que $j_! \sF \iso \R j_\ast \sF$, d'o\`u 
+\[
+  \h_c^i(X,\sF) = \h^i(\bar X,j_!\sF) \iso \hh^i(\bar X,\R j_\ast \sF) = \h^i(X,\sF) \text{.}
+\]
+Autrement dit, la suite spectrale de Leray pour $j$ 
+\[
+  E_2^{pq} = \h^p(\bar X,\R^q j_\ast \sF) \Rightarrow \h^{p+q}(X,\sF) 
+\]
+d\'eg\'en\`ere, par b) en des isomorphismes 
+\[
+  \h^i(\bar X,j_\ast\sF) \iso \h^i(X,\sF) \text{,}
+\]
+tandis que, par a) 
+\[
+  \h_c^i(X,\sF) = \h^i(\bar X,j_!\sF) \iso \h^i(\bar X,j_\ast\sF) \text{.}
+\]
+
+
+
+
+
+\subsubsection{Exemple}\label{VI:1-9-1}
+
+Si $X$ est une courbe, ou si $\bar X$ est lisse, $X$ le compl\'ement d'un 
+diviseur \`a croisements normaux et $\sF$ mod\'er\'ement ramifi\'e, 
+l'hypoth\`ese a) de \ref{VI:1-19} (pas d'invariants sous la monodromie locale) 
+implique l'hypoth\`ese b). 
+
+
+
+
+
+\begin{proposition_}\label{VI:1-20}
+Soient $X_0$ un sch\'ema affine lisse purement de dimension $n$ sur $\dF_q$ et 
+$\sF_0$ un $E_\lambda$-faisceau lisse ponctuellement de poids $m$ sur $X_0$. On 
+suppose que les applications $\h_c^i(X,\sF) \to \h^i(X,\sF)$ sont des 
+isomorphismes (cf. \ref{VI:1-17}). Alors, $\h_c^i(X,\sF) = 0$ pour $i\ne n$, et 
+les conjugu\'es complexes des valeurs propres de $F^\ast$ sur $\h_c^n(X,\sF)$ 
+sont de valeur absolue $q^{(m+n)/2}$. 
+\end{proposition_}
+
+La dualit\'e de Poincar\'e met en dualit\'e $\h_c^i(X,\sF)$ (resp. 
+$\h_c^i(X,\sF^\vee)$) avec $\h^{2n-i}(X,\sF^\vee(n))$ (resp. 
+$\h^{2n-i}(X,\sF(n))$). D'apr\`es \cite[XIV 3.2]{sga4}, les $\h^i$ sans support 
+sont nuls pour $i>n$. Par dualit\'e, les $\h_c^i$ sont nuls pour $i<n$; puisque 
+$\h_c^i(X,\sF) \iso \h^i(X,\sF)$, ces groupes sont nuls pour $i\ne n$. 
+Appliquons \ref{VI:1-15} \`a $\sF_0$ et \`a $\sF_0^\vee(n)$ (de poinds 
+$-m-2n$). On trouve que les conjugu\'es complexes $\alpha$ des valeurs propres 
+de $F^\ast$ sur $\h_c^n(X,\sF) = \h_c^n(X,\sF^\vee(n))^\vee$ v\'erifient 
+\begin{align*}
+  |\alpha| &\leqslant q^{(m+n)/2} && \text{et} \\
+  |\alpha^{-1}| &\leqslant q^{((-m-2n)+n)/2} = q^{-(m+n)/2} \text{,}
+\end{align*}
+d'o\`u l'assertion. 
+
+
+
+
+
+\subsection{Remarque}\label{VI:1-21}
+
+Le dernier argument montre que si $X_0$ est un sch\'ema s\'epar\'e lisse sur 
+$\dF_q$, que $\sF_0$ est un $E_\lambda$-faisceau lisse ponctuellement de poids 
+$m$ sur $X_0$ et que $\h_c^i(X,\sF) \hookrightarrow \h^i(X,\sF)$, alors les 
+conjugu\'es complexes des valeurs propres de $F^\ast$ sur $\h_c^i(X,\sF)$ sont 
+de valeur absolue $q^{(m+i)/2}$. 
+
+
+
+
+
+\subsection*{Appendice. L'isog\'enie de Lang dans le cas non commutatif}
+
+
+
+
+\subsection{}\label{VI:1-22}
+
+Soient $G-0$ un groupe alg\'ebrique connexe sur $\dF_q$ et $\fL$ le morphisme 
+$x\mapsto F x\cdot x^{-1}$ de $G-0$ dans lui-m\^eme. C'est un orphisme de 
+$G_0$-espaces homog\`enes, si \`a la source on fait agir $G-0$ par translation 
+\`a gauche $x\mapsto (y\mapsto x y)$, au but par 
+$x\mapsto (y\mapsto F x\cdot y\cdot x^{-1}$). On a $\fL(xy) = \fL(x)$ pour 
+$y\in G_0(\dF_q)$, et $\fL$ induit un isomorphisme $G_0/G_0(\dF_q)\iso G_0$. 
+
+Comme dans le cas commutatif, $\fL$ fait donc de $G_0$ un $G_0(\dF_q)$-torseur 
+sur $G_0$, le \emph{torseur de Lang} $L$. Si 
+$\rho:G_0(\dF_q) \to \gl(n,E_\lambda)$ est une repr\'esentation lin\'eaire de 
+$G_0(\dF_q)$, nous noterons $\sF(\rho)$ le $E_\lambda$-faisceau $\rho(L)$ 
+(\ref{VI:1-2}). 
+
+
+
+
+
+\subsection{}\label{VI:1-23}
+
+Soit $\gamma\in G^F=G_0(\dF_q)$, et calculons l'endomorphisme $F^\ast$ de 
+$\sF(\rho)_\gamma$. Soit $g\in G$ tel que $\fL(g)=\gamma$, d'o\`u un rep\`ere 
+$\rho(g)\in \operatorname{Isom}(E_\lambda^n,\sF(\rho)_\gamma)$. Pour 
+$e\in E_\lambda^n$, on a 
+\[
+  F(\rho(g)(e)) = \rho(F g)(e) = \rho(\gamma g)(e) = \rho(g\cdot g^{-1}\gamma g)(e) \text{.}
+\]
+On verra que $g^{-1} \gamma g\in G_0(\dF_q)$, d'o\`u 
+\[
+  F(\rho(g)(e)) = \rho(g) \rho(g^{-1}\gamma g)(e)
+\]
+et 
+\begin{equation*}\tag{1.23.1}\label{VI:eq:1-23-1}
+  \rho(g)^{-1} (F_\gamma^\ast)^{-1} \rho(g) = \rho(g^{-1} \gamma g) \text{:}
+\end{equation*}
+$\rho(g)$ identifie l'inverse de $F^\ast$ en $\gamma$ \`a l'automorphisme 
+$\rho(g^{-1} \gamma g)$ de $E_\lambda^n$. Reste \`a comprendre ce qu'est 
+$g^{-1} \gamma g$. 
+
+
+
+
+
+\begin{lemma_}\label{VI:1-24}
+\begin{enumerate}[(i)]
+  \item Si $F g\cdot g^{-1} \in G_0(\dF_q)$, on a 
+    $g^{-1} (F g\cdot g^{-1}) g = g^{-1} F g\in G_0(\dF_q)$.
+  \item Soient $\gamma\in G_0(\dF_q)$, et $g$ tel que 
+    $F g\cdot g^{-1} = \gamma$. La classe de conjugaison de $\gamma'=g^{-1} Fg$ 
+    dans $G_0(\dF_q)$ ne d\'epend que de celle de $\gamma$. 
+  \item L'application induite par $\gamma\mapsto \gamma'$, de l'ensemble 
+    $G_0(\dF_q)^\natural$ des classes de conjugaison de $G_0(\dF_q)$ dans 
+    lui-m\^eme, est bijective. Son inverse est l'application pour le groupe 
+    oppos\'e. 
+\end{enumerate}
+\end{lemma_}
+
+(i) Si $\gamma= F g\cdot g^{-1}\in G_0(\dF_q)$, les identit\'es $F g=\gamma g$ 
+et 
+$F\gamma=\gamma$ donnent $F(g^{-1} F g) = (F g)^{-1} F F g = g^{-1} \gamma^{-1} F(\gamma g) = g^{-1} \gamma^{-1} F \gamma F g = g^{-1} F g$, 
+de sorte que $g^{-1} F g \in G_0(\dF_q)$. 
+
+(ii) Pour $\alpha,\gamma\in G_0(\dF_q)$, les $g$ tels que 
+$F g\cdot g^{-1} = \gamma$ forment une classe \`a droite sous $G_0(\dF_q)$, et 
+si $F g\cdot g^{-1} = \gamma$, on a 
+$F(\alpha g \alpha^{-1})(\alpha g \alpha^{-1})^{-1} = \alpha \gamma\alpha^{-1}$. 
+Pour $\gamma$ parcourant une classe de conjugaison dans $G_0(\dF_q)$, les $g$ 
+tels que $F g\cdot g^{-1} = \gamma$ parcourent donc une double classe sous 
+$G_0(\dF_q)$, et $\gamma'= g^{-1} F g$ parcourt une classe de conjugaison. 
+
+(iii) Enfin, l'inverse de $F g\cdot g^{-1}\mapsto g^{-1} F g$ est 
+$g^{-1} F g\mapsto F g\cdot g^{-1}$. 
+
+
+
+
+
+\subsection{}\label{VI:1-25}
+
+La formule \eqref{VI:eq:1-23-1} peut se lire, bri\`evement: $F^\ast$ en 
+$\gamma$ est $\rho(\gamma')^{-1}$. Si $\gamma$ appartient \`a la composante 
+neutre de son centralisateur, on peut prendre $g$ dans $Z(\gamma)$. On a alors 
+$\gamma=\gamma'$. Si cette condition n'est pas remplie, $\gamma$ et $\gamma'$ 
+peuvent ne pas \^etre conjugu\'es. 
+
+
+
+
+
+\subsection{Un exemple}\label{VI:1-26}
+
+Pour $G_0=\operatorname{SL}(2)$, $q$ impair, 
+$\alpha\in F_q^\times\setminus {\dF_q^\times}^2$ et $\bar\gamma$ la classe de 
+conjugaison de $-1(1+N)$, avec $N^2=0$, $\bar\gamma'$ est la classe de 
+conjugaison de $-1\cdot (1+\alpha N)$, de sorte que $\bar\gamma'\ne \bar\gamma$ 
+si $N\ne 0$. 
+
+
+
+
+
+
+
+
+
+
+\section{Dictionnaire}\label{VI:2}
+
+Une manipulation \'el\'ementaire sur les sommes trigonom\'etriques peut souvent 
+\^etre vue comme le reflet, via la formule des traces, d'un \'enonc\'e 
+cohomologique. Dans ce paragraphe, j\'enum\`ere de tels \'enonc\'es, et leur 
+reflet; il portent le m\^eme num\'ero, augment\'e d'une $\ast$ pour 
+l'\'enonc\'e cohomologique. 
+
+
+
+
+
+
+
+
+
+
+\section{Sommes \`a une variable}\label{VI:3}
+
+\begin{proposition_}\label{VI:3-8}
+Soit $P\in \dF_q[X_1,\dots,X_n]$ un polyn\^ome \`a $n$ variable, de degr\'e 
+$d$, dont on suppose qu'il n'est pas de la forme $Q^P-Q+C^{te}$. Posant encore 
+$\psi(x) = \exp\left(\frac{2\pi i}{p} \tr_{\dF_q/\dF_p}(x)\right)$ on a 
+\[
+  \left|\sum_{x_i\in \dF_q} \psi P(x_1,\dots,x_n)\right| \leqslant (d+1) q^{n-\frac 1 2} \text{.}
+\]
+\end{proposition_}
+
+
+
+
+
+
+
+
+
+
+\section{Sommes de Gauss et sommes de Jacob}\label{VI:4}
+
+\begin{proposition_}\label{VI:4-2}
+La cohomologie de $\dG_m$ \`a coefficient dans $\sF(\psi\chi^{-1})$ v\'erifie 
+\begin{enumerate}[(i)]
+  \item $\h_c^i=0$ pour $i\ne 1$, et $\dim \h_c^1=1$. 
+  \item $F^\ast$, agissant sur $\h_c^1$, est la multiplication par 
+    $\tau(\chi,\psi)$. 
+  \item Si $\chi$ est non trivial, on a $\h_c^\bullet \iso \h^\bullet$. 
+\end{enumerate}
+\end{proposition_}
 
 
 
