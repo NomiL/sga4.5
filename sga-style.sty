@@ -60,7 +60,6 @@
   \newcounter{char}
   \setcounter{char}{1}
   \loop\ifnum\value{char}<27
- %   \edef\c{\Alph{char}} % not sure why this is here - it was messing cedillas up
     \expandafter\edef\csname c\Alph{char}\endcsname{\noexpand\mathcal{\Alph{char}}}  % mathcal
     \expandafter\edef\csname d\Alph{char}\endcsname{\noexpand\mathbb{\Alph{char}}}   % mathbb
     \expandafter\edef\csname f\Alph{char}\endcsname{\noexpand\mathfrak{\Alph{char}}} % mathfrak
@@ -85,6 +84,7 @@
   \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
   \newcommand{\rhom}{\mathsf{R}\hom}
   \newcommand{\rHom}{\mathsf{Rhom}}
+  \renewcommand{\setminus}{\smallsetminus}
 
 
 % theorem types
