@@ -543,3 +543,132 @@ tant qu'entier rationnel.
 
 
 
+
+\subsection{}\label{VI:1-14}
+
+La formule \ref{VI:1-9-3} contr\^ole la d\'ependance en $n$ de la somme 
+trigonom\'etrique au membre de gauche. Elle implique des identit\'es entre une 
+somme trigonom\'etrique et celles qui s'en d\'eduisennt par ``extension des 
+scalaires.'' Le plus c\'el\`ebre de ces identit\'es est celle de 
+Hasse-Davenport: soient $\chi:\dF_q^\times \to \dC^\times$ et 
+$\psi:\dF_q\to \dC^\times$ des caract\`eres, $\psi$ non trivial, et 
+d\'efinissons la somme de Gauss $\tau(\chi,\psi)$ par 
+\begin{equation*}\tag{1.14.1}\label{VI:eq:1-14-1}
+  \tau(\chi,\psi) = - \sum_{x\in \dF_q^\times} \psi(x) \chi^{-1}(x) \text{.}
+\end{equation*}
+
+
+
+
+
+\begin{theorem_}[Hasse-Davenport]
+On a 
+\begin{equation*}\tag{1.15.1}\label{VI:eq:1-15-1}
+  \tau\left(\chi\circ N_{\dF_{q^n}/\dF_q},\psi\circ \tr_{\dF_{q^n}/\dF_q}\right) = \tau(\chi,\psi)^n \text{.}
+\end{equation*}
+\end{theorem_}
+
+Soient $E\subset \dC$ un corps de nombres contenant les valeurs de $\chi$ et 
+$\psi$, et $E_\lambda$ le compl\'et\'e de $E$ en une place de caract\'eristique 
+$\ell\ne p$. L'identit\'e \eqref{VI:eq:1-15-1} est une identit\'e dans $E$. Il 
+revient au m\^eme de la prouver dans $\dC$, ou dans $E_\lambda$. Nous la 
+prouverons dans $E_\lambda$, en regardant $\chi$ et $\psi$ comme \`a valeurs 
+dans $E_\lambda^\times$. 
+
+On applique \ref{VI:1-9-3} pour $X_0=\dG_m$ sur $\dF_q$ et 
+$G_0=\dG_m\times \dG_a$. Les $\h_c^i(\dG_m,\sF(\chi^{-1}\psi))$ sont nuls pour 
+$i\ne 1$, et le $\h_c^1$ est de dimension $1$ (\ref{VI:4-2}). D'apr\`es 
+\ref{VI:1-9-3}, 
+$\tau(\chi\circ N_{\dF_{q^n}/\dF_q},\psi\circ \tr_{\dF_{q^n}/\dF_q})$ est 
+l'unique valeur propre de $(F^\ast)^n$ sur $\h_c^1$, et \eqref{VI:eq:1-15-1} en 
+r\'esulte. 
+
+Des exemples analogues sont donn\'es dans Weil \cite[App V]{we74}. 
+
+
+
+
+
+\subsection{}\label{VI:1-16}
+
+Un $E_\lambda$-faisceau $\sF_0$ sur $X-0$ est dit \emph{ponctuellement de 
+poids $n$} si pour tout point ferm\'e $x\in |X_0|$, les valeurs propres de 
+$F_x^\ast$ (\hyperref[II]{Rapport} \ref{II:1-2}) sont des nombres alg\'ebriques 
+dont tous les conjugu\'es complexes sont de valeur absolue 
+$q_x^{n/2}$, o\`u $q_x$ est le nombre d'\'el\'ements de $k(x)$. Le th\'eor\`eme 
+suivant sera d\'emontr\'e dans \cite{de80}. 
+
+
+
+
+
+\begin{theorem_}\label{VI:1-17}
+Si $\sF_0$ est ponctuellement de poids $n$, pour toute valeur propre $\alpha$ 
+de l'endomorphisme $F^\ast$ de $\h_c^i(X,\sF)$, il existe un entier 
+$m\leqslant n+i$ tel que les conjugu\'es complexes de $\alpha$ soient tous de 
+valeurs absolue $q^{m/2}$.
+\end{theorem_}
+
+Les faisceaux consid\'er\'es en \ref{VI:1-9} sont de poids $0$. Le th\'eor\`eme 
+fournit donc pour la somme \ref{VI:eq:1-9-1} (on plut\^ot, pour tous ses 
+conjugu\'es complexes) la majoration 
+\begin{equation*}\tag{1.17.1}\label{VI:eq:1-17-1}
+  \left|\sum_{s\in S_0(\dF_q)} \prod_i \chi_i(f^i(s)) \right| \leqslant \sum_i \dim \h_c^i\left(S,\sF\left(\prod \chi_i f^i\right)\right)\cdot q^{i/2} \text{.}
+\end{equation*}
+
+
+
+
+
+\subsection{Remarques}\label{VI:1-18}
+
+\begin{enumerate}[a)]
+  \item Si $\dim S=n$, pour tout $E_\lambda$-faisceau $\sF$ sur $S$, on a 
+    \[
+      \h_c^i(S,\sF) = 0 \qquad \text{pour $i\notin [0,2n]$.}
+    \]
+  \item Le groupe $\h_c^0(X,\sF)$ est le groupe des sections globales de $\sF$ 
+    sur $S$ dont le support est propre. Si $S$ est connexe, non complet et 
+    $\sF$ lisse, on bien si $S$ est connexe, $\sF$ lisse de rang un, et non 
+    constant, ce groupe est nul.
+  \item Si $S$ est lisse purement de dimension $n$, et $\sF$ lisse, la 
+    dualit\'e de Poincar\'e dit que les espaces vectoriels 
+    $\h_c^i(X,\sF)$ et $\h^{2n-i}(X,\sF^\vee)(2n)$ sont duax l'un de l'autre 
+    (pour l'effet d'un twist \`a la Tate sur les valeurs propres de Frobenius, 
+    cf. la $2$\`eme partie de la preuve de \ref{VI:1-13}).
+  \item Si $\dim S=n$, la dualit\'e de Poincar\'e permet de calculer comme 
+    suite $\h_c^{2n}(S,\sF)$: on prend un ouvert $U$ de $S_\text{red}$, dont le 
+    compl\'ementaire est de dimension $<n$, lisse purement de dimension $n$, et 
+    sur lequel $\sF$ est lisse. On a alors 
+    $\h_c^{2n}(U,\sF) \iso \h_c^{2n}(S,\sF)$, car dans la suite exacte longue 
+    de cohomologie, $\h_c^i(S\setminus U,\sF) = 0$ pour $i=2n,2n-1$. Par 
+    Poincar\'e, on a donc 
+    \[
+      \h_c^{2n}(S,\sF) \iso \left(\h^0(U,\sF^\vee)(2n)\right)^\vee \text{.}
+    \]
+    
+    Supposons $U$ connexe, et soit $u$ un point g\'eom\'etrique de $U$. Le 
+    ``syst\`eme local'' $\sF$ correspond \`a une repr\'esentation de 
+    $\pi_1(U,u)$ sur $\sF_u$, et $\h^0(U,\sF^\vee)$ est 
+    $(\sF_u^\vee)^{\pi_1(U,u)}=((\sF_u)_{\pi_1(U,u)})^\vee$ (dual des 
+    coinvariants). On a donc 
+    \[
+      \h_c^{2n}(S,\sF) \simeq (\sF_u)_{\pi_1(U,u)}(-2n) \text{.}
+    \]
+  \item Ces remarques permettent souvent le calcul de $b_0$ et $b_{2n}$. 
+    Calculer les autres $b_i$ peut \^etre difficile. Si $b_{2n}=0$ et que 
+    $b_{2n-1}=0$, la majoration \eqref{VI:eq:1-17-1} est une majoration \`a la 
+    Lang-Weil, avec, pour $q$ grand, un gain en $\sqrt q$ par rapport \`a la 
+    majoration triviale en $O(q^n)$. On prendra toutefois garde que la 
+    majoration \eqref{VI:eq:1-17-1} n'implique pas formellement la majoration 
+    triviale 
+    \[
+      \left|\sum_{s\in S_0(\dF_q)} \prod_i \chi_i(f^i(s))\right| \leqslant \left| S_0(\dF_q)\right| \text{,}
+    \]
+    donc il peut \^etre utile de tenir compte (cf. la preuve de \ref{VI:3-8}). 
+\end{enumerate}
+    
+
+
+
+
