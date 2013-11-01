@@ -405,10 +405,10 @@ et, pour tout entier $n\geqslant 1$
 
 \subsubsection{Remarque}\label{VI:1-9-3}
 
-Prenons pour $G-0$ un produit. Avec les notations de \ref{VI:1-7}d) et 
+Prenons pour $G_0$ un produit. Avec les notations de \ref{VI:1-7}d) et 
 \ref{VI:1-8}c), la formule \eqref{VI:eq:1-9-2} devient 
 \[
-  \sum_{s\in S_0(\dF_{q^n})} \prod_i \chi_i\circ N_{\dF_{q^n}/\dF_q} (f_0^i(s)) = \tr({F^\ast}^n, \h_c^\bullet(S,\sF(\prod_i \chi_i f_0^i))) \text{.}
+  \sum_{s\in S_0(\dF_{q^n})} \prod_i \chi_i\circ N_{\dF_{q^n}/\dF_q} (f_0^i(s)) = \tr\Big({F^\ast}^n, \h_c^\bullet\Big(S,\sF\Big(\prod_i \chi_i f_0^i\Big)\Big)\Big) \text{.}
 \]
 
 
@@ -484,7 +484,7 @@ th\'eor\`eme de Kazhdan).
 
 
 \begin{theorem_}[Kazhdan]\label{VI:1-13}
-Soit $X-0$ un sch\'ema sur $\dF_q$. Supposons qu'il existe une action $\rho$ de 
+Soit $X_0$ un sch\'ema sur $\dF_q$. Supposons qu'il existe une action $\rho$ de 
 $\dG_a$ sur $X$, et un morphisme $f:X\to Y$ de sch\'emas sur $\dF$, faisant de 
 $X$ un $\dG_a$-torseur sur $Y$. Alors, le nombre de points rationnels de $X_0$ 
 est divisible par $q$.
@@ -495,15 +495,17 @@ Supposons d'abord que $\rho$, $Y$ et $f$ soient d\'efinis sur $\dF_q$.
 
 \paragraph{Argument classique}
 Les fibres de $f:X_0(\dF_q)\to Y_0(\dF_q)$ ont toutes $q$ \'el\'ements: 
-$|X_0(\dF_q)| = q\cdot |U_0(\dF_q)|$, d'o\`u la divisibilit\'e. 
+$|X_0(\dF_q)| = q\cdot |Y_0(\dF_q)|$, d'o\`u la divisibilit\'e. 
 
 
 \paragraph{Traduction cohomologique}
 Les faisceaux images directes sup\'erieures $\R^i f_!\dQ_\ell$ sont 
-\begin{align*}
-  \R^i f_!\dQ_\ell &= 0  && \text{pour $i\ne 2$} \\
-  \R^2 f_!\dQ_\ell &= \dQ_\ell(-1) \text{.}
-\end{align*}
+\[
+  \R^i f_!\dQ_\ell = \begin{cases}
+                       \dQ_\ell(-1) & \text{si $i = 2$} \\
+                       0            & \text{pour $i\ne 2$}
+                     \end{cases}
+\]
 La suite spectrale de Leray de $f$ d\'eg\'en\`ere donc en un isomorphisme 
 \[
   \h_c^i(X,\dQ_\ell) = \h_c^{i-2}(Y,\dQ_\ell)(-1) \text{.}
