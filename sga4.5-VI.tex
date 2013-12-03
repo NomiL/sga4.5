@@ -898,8 +898,8 @@ analogue cohomologique le th\'eor\`eme suivant, prouv\'e dans
 
 
 
-
-\begin{theorem_}[$\ast$]
+\addtocounter{subsection}{-1}
+\begin{theorem_}[$\ast$]\label{VI:2-1*}
 Soient $X_0$ un sch\'ema s\'epar\'e de type fini sur $\dF_q$ et $\sF_0$ un 
 $E_\lambda$-faisceau sur $X_0$. Si, pour tout $x\in |X_0|$, les valeurs 
 propres de $F_x^\ast$ sur $\sF_0$ sont des entiers alg\'ebriques, alors les 
@@ -938,6 +938,131 @@ $\varepsilon$ un function sur $A$. On a
 \begin{equation*}\tag{2.3.1}\label{VI:eq:2-3-1}
   \sum_{a\in A} \varepsilon(a) = \sum_{b\in B} \sum_{f(a)=b} \varepsilon(a) \text{.}
 \end{equation*}
+
+
+
+
+
+\addtocounter{subsection}{-1}
+\subsection{*}\label{VI:2-3*}
+
+Soient $f:X\to Y$ un morphisme de sch\'emas s\'epar\'es de type fini sur $k$ 
+alg\'ebriquement clos, et $\sF$ un $E_\lambda$-faisceau sur $X$. La suite 
+spectrale de Leray de $f$ en cohomologie \`a support propre s'\'ecrit 
+\begin{align*}\tag{2.3.1*}\label{VI:eq:2-3-1*}
+  E_2^{p q} = \h_c^p(Y,\R^q f_! \sF) \Rightarrow \h_c^{p+q}(X,\sF) \text{.}
+\end{align*}
+
+Soient $f_0:X_0 \to Y_0$ un morphisme de sch\'emas s\'epar\'es de type fini sur 
+$\dF_q$ et $\sF_0$ un $E_\lambda$-faisceau sur $X_0$. On a entre 
+\eqref{VI:eq:2-3-1} et \eqref{VI:eq:2-3-1*} la compatibilit\'e suivante. 
+
+\begin{enumerate}[a)]
+  \item Le faisceau $\R^q f_! \sF$ se d\'eduit par extension des scalaires de 
+    $\dF_q$ \`a $\dF$ du faisceau $\R^q f_{0!} \sF_0$ sur $Y_0$. En tant que 
+    tel, il est muni d'une correspondance de Frobenius 
+    $F^\ast:F^\ast\R^q f_! \sF \to \R^q f_! \sF$. Elle se d\'eduit par 
+    fonctorialit\'e de $\R f_!$ de la correspondance de Frobenius de $\sF$: 
+    c'est le compos\'e 
+    \[\xymatrix{
+      F^\ast \R^q f_! \sF \ar[r]^-\sim 
+        & \R^q f_! F^\ast \sF \ar[r]^-\sim 
+        & \R^q f_! \sF \text{.}
+    }\]
+  \item La formule des traces pour $\sF_q$ s'\'ecrit 
+    \begin{align*}\tag{1}\label{VI:eq:1}
+      \sum_{x\in X_0(\dF_q)} \tr(F_x^\ast,\sF_0) = \tr(F^\ast,\h^\bullet(X,\sF)) \text{;}
+    \end{align*}
+    celle pour $\R^q f_! \sF$ s'\'ecrit 
+    \begin{align*}\tag{2$_q$}\label{VI:eq:2_q} 
+      \sum_{y\in Y_0(\dF_q)} \tr(F_y^\ast,\R^q f_! \sF) = \tr(F^\ast, \h^\bullet(Y,\R^q f_! \sF)) \text{.}
+    \end{align*}
+\end{enumerate}
+
+On a, pour $y\in Y(\dF)$, $(\R^q f_! \sF)_y = \h_c^q(f^{-1}(y),\sF)$, et si 
+$y\in Y_0(\dF_q)$, 
+\[
+  \tr(F_y^\ast,\R^q f_! \sF) = \tr(F^\ast,\h_c^q(f^{-1}(y),\sF)) \text{,}
+\]
+d'o\`u par la formule des traces sur la fibre 
+\[
+  \sum_{\substack{x\in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \sum (-1)^q \tr(F_y^\ast,\R^q f_! \sF) \text{.}
+\]
+Prenant la somme altern\'ee des identit\'es \eqref{VI:eq:2_q}, on trouve donc 
+\begin{align*}\tag{2}\label{VI:eq:2}
+  \sum_{y\in Y_0(\dF_q)} \sum_{\substack{x \in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \tr(F^\ast,\h^\bullet(Y,\R^\bullet f_! \sF)) \text{.}
+\end{align*}
+
+L'\'egalit\'e des membres de gauche de \eqref{VI:eq:1} et \eqref{VI:eq:2} 
+r\'esulte de \eqref{VI:eq:2-3-1}, celle des membres de droite de 
+\eqref{VI:eq:2-3-1*} (compte tenu du fait que $F^\ast$ est un endomorphisme de 
+toute la suite spectrale). 
+
+
+
+
+
+\subsection{}\label{VI:2-4}
+
+Soient $(A_i)_{i\in I}$ une famille finie d'ensembles finis, 
+$A=\prod_{i\in I} A_i$, $\varepsilon_i$ une fonction sur $A_i$, et 
+$\varepsilon$ la fonction $a\mapsto \prod \varepsilon_i(a_i)$ sur $A$. On a 
+\begin{align*}\tag{2.4.1}\label{VI:eq:2-4-1}
+  \sum_{a\in A} \varepsilon(a) = \prod_{i\in I} \sum_{a_i\in A_i} \varepsilon_i(a_i) \text{.}
+\end{align*}
+
+
+
+
+
+\addtocounter{subsection}{-1}
+\subsection{*}\label{VI:2-4*}
+
+Soient $(X_i)_{i\in I}$ une famille finie de sch\'emas s\'epar\'es de type fini 
+sur $k$ alg\'ebriquement clos, $X=\prod_{i\in I} X_i$, $\sF_i$ un 
+$E_\lambda$-faisceau sur $X_i$ et $\sF$ le produit tensoriel externe 
+$\bigboxtimes_{i\in I}\sF_i = \bigotimes_{i\in I} \operatorname{pr}_i^\ast(\sF_i)$ 
+des $\sF_i$. On a la formule de K\"unneth 
+\begin{align*}\tag{2.4.1*}\label{VI:eq:2-4-1*}
+  \h_c^\bullet(X,\sF) = \bigotimes_{i\in I} \h_c^\bullet(X_i,\sF_i) \text{.}
+\end{align*}
+
+Si on veut un isomorphisme \eqref{VI:eq:2-4-1*} canonique, et ind\'ependant du 
+choix d'un ordre total sur $I$, il faut prendre au membre droite le produit 
+tensoriel gradu\'e au sens de la r\`egle de Koszul 
+(\hyperref[IV]{Cycle}, \ref{V:1-3}). 
+
+
+
+
+
+\subsection{}\label{VI:2-5}
+
+Soient $A$ un ensemble fini, $B$ une partie de $A$ et $\varepsilon$ une 
+fonction sur $A$. On a 
+\begin{align*}\tag{2.5.1}\label{VI:2-5-1}
+  \sum_{a\in A} \varepsilon(a) = \sum_{a\in A\setminus B}\varepsilon(a) + \sum_{a\in B} \varepsilon(a) \text{.}
+\end{align*}
+
+
+
+
+
+\addtocounter{subsection}{-1}
+\subsection{*}\label{VI:2-5*}
+
+Soient $x$ un sc\'ema s\'epar\'e de type fini sur $k$ alg\'ebriquement clos, 
+$Y$ un sous-sch\'ema ferm\'e et $\sF$ un $E_\lambda$-faisceaux sur $X$. On a 
+une suite exacte longue de cohomologie 
+\begin{align*}\tag{2.5.1*}\label{VI:eq:2-5-1*}
+\xymatrix{
+  \cdots \ar[r]^-\partial 
+    & \h_c^i(X\setminus Y,\sF) \ar[r] 
+    & \h_c^i(X,\sF) \ar[r] 
+    & \h_c^i(Y,\sF) \ar[r]^-\partial 
+    & \cdots 
+}
+\end{align*}
 
 
 

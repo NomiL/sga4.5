@@ -108,9 +108,7 @@
 \renewcommand{\theequation}{\arabic{equation}}
 \setcounter{secnumdepth}{3}
 
-%\newcommand\blfootnote[1]{
-%  \begingroup
-%  \renewcommand\thefootnote{}\footnote{#1}
-%  \addtocounter{footnote}{-1}
-%  \endgroup
-%}
+% allows for large external tensor product symbol
+\newcommand{\bigboxtimes}{\mathop{\vphantom{\sum}\mathchoice
+  {\vcenter{\hbox{\huge $\boxtimes$}}}
+  {\vcenter{\hbox{\Large $\boxtimes$}}}{\boxtimes}{\boxtimes}}\displaylimits}
