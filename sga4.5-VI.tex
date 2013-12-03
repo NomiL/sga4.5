@@ -1064,6 +1064,134 @@ une suite exacte longue de cohomologie
 }
 \end{align*}
 
+Plus g\'en\'eralement, si on part d'une filtration finie de $X$ par des parties 
+ferm\'ees $X_p$ ($p\in \dZ$; on suppose que $X_p\supset X_{p+1}$, que $X_p=X$ 
+pour $p$ assez petit, et que $X_p=\varnothing$ for $p$ assez grand), on a une 
+suite spectrale 
+\begin{align*}\tag{2.5.2*}\label{VI:eq:2-5-2*}
+  E_1^{p q} = \h_c^{p+1}(X_p\setminus X_{p+1},\sF) \Rightarrow \h_c^{p+q}(X,\sF) \text{.}
+\end{align*}
+
+
+
+
+
+\subsection{}\label{VI:2-6}
+
+Soient $A$ un ensemble fini, $(A_i)_{i\in I}$ un recouvrement fini de $A$ et 
+$\varepsilon$ une fonction sur $A$. Pour $J\subset I$, soit $A_J$ 
+l'intersection des $A_j$ ($j\in J$). On a 
+\begin{align*}\tag{2.6.1}\label{VI:eq:2-6-1}
+  \sum_{J\subset I} (-1)^{|J|} \sum_{a\in A_J} \varepsilon(a) = 0 \text{.}
+\end{align*}
+
+
+
+
+
+\addtocounter{subsection}{-1}
+\subsection{}\label{VI:2-6*}
+
+Soient $X$ un sch\'ema s\'epar\'e de type fini sur $k$ alg\'ebriquement clos, 
+$(X_i)_{i\in I}$ un recouvrement ferm\'e (resp. ouvert) fini de $X$ par des 
+sous-sch\'emas, et $\sF$ un $E_\lambda$-faisceau sur $X$. Pour $J\subset I$, 
+soit $X_J$ l'intersection des $X_j$ ($j\in J$). On a des suites spectrales 
+respectives (de Leray) 
+\begin{align*}\tag{2.6.1*}\label{VI:eq:2-6-1}
+  E_1^{p q} &= \bigoplus_{|J|=p+1>0} \h_c^q(X_J,\sF) \otimes_\dZ \textstyle\bigwedge^{|J|} \dZ^J \Rightarrow \h_c^{p+q}(X,\sF) \\ 
+  \tag{2.6.2*}\label{VI:eq:2-6-2*}
+  E_1^{p q} &= \bigoplus_{|J|=1-p>0} \h_c^q(X_J,\sF) \otimes_\dZ \textstyle\bigwedge^{|J|} \dZ^J \Rightarrow \h_c^{p+q}(X,\sF)
+\end{align*}
+Si $J=\varnothing$ n'\'etait pas exclus, on aurait de m\^eme des suites 
+spectrales convergeant vers $0$. Les facteurs $\bigwedge^{|J|} \dZ^J$ sont l\`a 
+pour nous dispenser de choisir un ordre total sur $I$. 
+
+
+
+
+
+\subsection{}\label{VI:2-7}
+
+Soient $A$ un groupe commutatif fini, et $\chi:A \to E_\lambda^\times$ un 
+caract\`ere non trivial. On a 
+\begin{align*}\tag{2.7.1}\label{VI:eq:2-7-1}
+  \sum_{a\in A} \chi(a) = 0 \text{.}
+\end{align*}
+On prouvera l'analogue cohomologique de \eqref{VI:eq:2-7-1} en en transposant 
+la preuve suivante: si $x\in A$, $a\mapsto x a$ est une permutation de $A$, et 
+\begin{align*}
+  \sum_{a\in A}\chi(a) = \sum_{a\in A} \chi(x a) &= \chi(x) \sum_{a\in A} \chi(a) && \text{, d'o\`u} \\
+  (\chi(x)-1)\sum_{a\in A} &= 0 \text{,}
+\end{align*}
+et il existe par hypoth\`ese $x$ tel que $\chi(x)-1\ne 0$. 
+
+
+
+
+
+\addtocounter{subsection}{-1}
+\begin{theorem_}[*]\label{VI:2-7*}
+Soient $G_0$ un groupe alg\'ebrique commutatif connexe sur $\dF_q$ et 
+$\chi:G_0(\dF_q) \to E_\lambda^\times$ un caract\`ere non triviale. On a 
+\begin{align*}\tag{2.7.1*}\label{VI:eq:2-7-1*}
+  \h_c^\bullet(G,\sF(\chi)) = 0 \text{.}
+\end{align*}
+\end{theorem_}
+
+Pour $x$ un point rationnel de $G$, notons $t_x$ la translation $t_x(g) = x g$ 
+de $G$. La formule $\fL t_x = t_{\fL(x)} \fL$ exprime que $(t_x,t_{\fL(x)})$ 
+est un automorphisme du diagrame $G\xrightarrow\fL G$ ($G$ muni du torseur de 
+Lang). Soit $\rho(g)$ l'automorphisme de $(G,\sF(\chi))$ qui s'en d\'eduit. 
+Pour $g\in G_0(\dF_q)$, i.e. pour $\fL(g) = e$, c'est l'identit\'e sur $G$, et 
+la multiplication par $\chi(g)^{-1}$ sur $\sF(\chi)$. 
+
+Notons $\rho_H(g)$ l'automorphisme de $\h_c^\bullet(G,\sF(\chi))$ d\'eduit de 
+$\rho(g)$. Un argument d'homotopie (Lemme \ref{VI:2-8} ci-dessous) montre que 
+$\rho_H(g) = \rho_H(e)$, donc est l'identit\'e. D'autre part, pour 
+$g\in G_0(\dF_q)$, $\rho_H(g)$ est la multiplication par 
+$(\chi^{-1}(g):\text{ sur }\h^\bullet(G,\sF(\chi))$, la multiplication par 
+$(\chi^{-1}(g)-1)$ est nulle. Prenant $g$ tel que $\chi(g)\ne 1$, on obtient 
+\ref{VI:2-7*}. 
+
+
+
+
+
+\begin{lemma_}\label{VI:2-8}
+Soient $X$ et $Y$ deux sch\'emas sur $k$ alg\'ebriquement clos, avec $X$ 
+s\'epar\'e de type fini et $Y$ connexe. Soient $\sF$ un faisceau sur $X$ et 
+$(\rho,\varepsilon)$ une famille d'endomorphismes de $(X,\sF)$ param\'etr\'ee 
+par $Y$: 
+\begin{align*} 
+  \rho:Y\times_k X &\to Y\times_k X && \text{est un $Y$-morphisme, et} \\
+  \varepsilon:\rho^\ast \operatorname{pr}_2^\ast \sF &\to \operatorname{pr}_2^\ast\sF && \text{un morphisme de faisceaux.} 
+\end{align*}
+On suppose que $\rho$ est propre. Pour $y\in Y(k)$, soit $\rho_H(y)^\ast$ 
+l'endomorphisme de $\h_c^\bullet(X,\sF)$ induit par $\rho_y:X\to X$ et 
+$\varepsilon_y:\rho_y^\ast\sF\to \sF$. Alors, $\rho_H(y)^\ast$ est 
+ind\'ependant de $y$. 
+\end{lemma_}
+
+En effet, $\R^p \operatorname{pr}_{1!} \operatorname{pr}_2^\ast\sF$ est le 
+faisceau constant sur $Y$ de valeur $\h^p(X,\sF)$, et $\rho_H(y)^\ast$ est la 
+fibre en $y$ de l'endomorphisme 
+\[\xymatrix{
+  \R^p \operatorname{pr}_{1!} \operatorname{pr}_2^\ast \sF \ar[r]^-{\rho^\ast} 
+    & \R^p \operatorname{pr}_{1!} \rho^\ast \operatorname{pr}_2^\ast \sF \ar[r]^-\varepsilon 
+    & \R^p \operatorname{pr}_{1!} \operatorname{pr}_2^\ast \sF 
+}\]
+de ce faisceau. 
+
+
+
+
+
+\subsection{Remarque}\label{VI:2-9}
+
+Soient $G_0$ un groupe alg\'ebrique connexe sur $\dF_q$ et 
+$\rho:G_0(\dF_q) \to \operatorname{GL}(V)$ un repr\'esentation lin\'eaire 
+telle que $V^{G_0(\dF_q)}=0$. On a encore $\h_c^\bullet(G,\rho(L))=0$. 
+
 
 
 
@@ -1074,6 +1202,55 @@ une suite exacte longue de cohomologie
 
 
 \section{Sommes \`a une variable}\label{VI:3}
+
+
+
+
+
+\subsection{}\label{VI:3-1}
+
+Weil est le premier \`a avoir appliqu\'e des m\'ethodes ``cohomologiques'' \`a 
+l'\'etude des sommes trigonom\'etriques \`a une variable; puisqu'il avait 
+prouv\'e l'analogue de l'hypoth\`ese de Riemann pour les fonctions $L$ d'Artin 
+sur les corps de fonctions, ces m\'ethodes lui fournissaient d'excellentes 
+estimations (en $O(\text{racine carr\'ee du nombre de termes})$), et le 
+comportement de ces sommes par ``extension du corps de base.'' 
+
+L'essentiel de ce paragraphe est un expos\'e, dans un langage cohomologique, de 
+ses r\'esultes. 
+
+
+
+
+
+\subsection{}\label{VI:3-2}
+
+Les m\'ethodes cohomologiques am\`enent ici \`a calculer des groupes 
+$\h_c^i(X,\sF)$, pour $\sF_0$ un $E_\lambda$-faisceau sur un courbe $X-0$ sur 
+$\dF_q$. Ces groupes sont nuls pour $i\ne 0,1,2$ et pour 
+$i=0,2$, ils ont une interpr\'etation simple (\ref{VI:1-8} a,b,c). De plus, la 
+caract\'eristique d'Euler-Poincar\'e 
+$\chi_c(\sF) = \sum (-1)^i \dim \h_c^i(X,\sF)$ (par ailleurs \'egale \`a 
+$\chi(\sF) = \sum (-1)^i \dim \h^i(X,\sF)$ peut \^etre calcul\'ee en terme de 
+$x$, de rang de $\sF$ aux points g\'en\'eriques de $X$, et des propri\'et\'es 
+de ramification de $\sF$. Le r\'esultat essentiel est le suivant. 
+
+Soient $\bar X$ une courbe projective lisse et connexe, de genre $g$, sur un 
+corps alg\'ebriquement clos $k$, $X$ un ouvert dense de $\bar X$, 
+l'compl\'ement d'un ensemble fini $S$ de points et $\sF$ un 
+$E_\lambda$-faisceau lisse sur $X$. Soient $\chi(X)=2-2 g-\# S$ la 
+caract\'eristique d'Euler-Poincar\'e de $X$, et $\operatorname{rg}(\sF)$ le 
+rang de $\sF$. Pour chaque point $s\in S$, on d\'efinit un entier 
+$\swan_s(\sF)$, le conducteur de Swan, mesurant la ramification sauvage de 
+$\sF$, et 
+\begin{align*}\tag{3.2.1}\label{VI:eq:2-3-1}
+  \chi_c(\sF) = \operatorname{rg}(\sF) \cdot \chi(X) - \sum_{s\in S} \swan_s(\sF) 
+\end{align*}
+\cite{ra65}. 
+
+
+
+
 
 \begin{proposition_}\label{VI:3-8}
 Soit $P\in \dF_q[X_1,\dots,X_n]$ un polyn\^ome \`a $n$ variable, de degr\'e 
