@@ -180,6 +180,566 @@ cat\'egorie triangul\'ee. On a alors les suites exactes:
 \end{proposition}
 
 On d\'eduit alors de cette proposition des \'enonc\'es du genre: 
+\begin{itemize}
+  \item $(f,g,h)$ \'etant un morphisme de triangle distingu\'e et $f,g$ des 
+    isomorphismes. 
+  \item Les triangles distingu\'es construits sur un morphisme 
+    (\hyperlink{VIII:TR1}{TR1}), sont tour isomorphismes (\emph{mais les 
+    isomorphismes ne sont pas, en g\'en\'eral, uniquoment d\'etermin\'es}). 
+  \item Lorsque dans un triangle distingu\'e, un des morphismes admet un noyau 
+    ou un conoyau, celui-ci se scinde i.e. il est de la forme: 
+    \[\xymatrix{
+      & Z+T(X) \ar[dl] \\
+      X+Y \ar[rr] 
+        & & Y+Z \ar[ul]
+    }\]
+  \item La somme de deux triangles distingu\'es est distingu\'ee. (On utilise 
+    l'axiome \hyperlink{VIII:TR4}{TR4}). 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\subsection{Exemples}\label{VIII:1-2}
+
+
+
+
+
+\subsubsection{}\label{VIII:1-2-1}
+
+Nous allons d'abord fixer quelques notations. Soit $\cA$ une cat\'egorie 
+additive $\eC(\cA)$ d\'esignera la cat\'egorie suivante: 
+\begin{itemize}
+  \item Les objets de $\eC(\cA)$ seront les complexes de $\cA$, sans limitation 
+    de degr\'e, \`a diff\'erentielle de degr\'e $+1$. 
+  \item Les morphismes de $\eC(\cA)$ seront les morphismes de complexes (qui 
+    commutent avec la diff\'erentielle) conservant le degr\'e. 
+\end{itemize}
+
+Soit $T$ le foncteur suivant: pour tout objet $X^\bullet$ de $\eC(\cA)$ 
+\begin{align*}
+  T(X^\bullet)_i &= (X^\bullet)_{i+1} \\
+  d_i(T(X^\bullet)) &= -d_{i+1}(X^\bullet)  \text{.}
+\end{align*}
+Sur les morphismes le foncteur $T$ agit de la mani\`ere suivante: pour tout 
+morphisme $f:X^\bullet \to Y^\bullet$, le morphisme 
+$T(f):T(X^\bullet) \to T(Y^\bullet)$ est d\'efini par 
+\[
+  T(f)_i = f_{i+1} \text{.}
+\]
+On v\'erifie imm\'ediatement que $T$ est un automorphisme additif de 
+$\eC(\cA)$. Les morphismes de degr\'e $n$, d\'efinis \`a l'aide de ce foncteur 
+de translation, sont alors les morphismes qui augmentent le degr\'e de $n$, et 
+qui commutent ou anticommutent avec la diff\'erentielle suivant la parit\'e de 
+$n$. On retrouve ainsi la d\'efinition g\'en\'eralement adopt\'ee. 
+
+$\sC$ d\'esignera la famille de triangles suivante: un triangle 
+$(X^\bullet,Y^\bullet,Z^\bullet,u,v,w)$ est un \'el\'ement de la famille 
+si\footnote{Texte modifi\'e en 1976, pour assurer la validit\'e de 
+\ref{VIII:1-2-4}.}
+\begin{itemize}
+  \item $Z^\bullet$ est le complexe simple associ\'e au complexe double 
+    \[\xymatrix{
+      \cdots \ar[r] 
+        & 0 \ar[r] 
+        & X^\bullet \ar[r]^-u 
+        & Y^\bullet \ar[r] 
+        & 0 \ar[r] 
+        & \cdots 
+    }\]
+    o'\`u les objets de $Y^\bullet$ sont les objets de premier degr\'e z\'ero, 
+    et les objets de $X^\bullet$, les objets de premier degr\'e $-1$. 
+  \item $v$ est l'image par le foncteur: complexe double $\mapsto$ complexe 
+    simple, du morphisme de doubles complexes: 
+    \[\xymatrix{
+      \cdots \ar[r] 
+        & 0 \ar[r] \ar[d] 
+        & 0^\bullet \ar[r] \ar[d] 
+        & Y^\bullet \ar[r] \ar[d] 
+        & 0 \ar[r] \ar[d] 
+        & \cdots \\
+      \cdots \ar[r] 
+        & 0 \ar[r] 
+        & X^\bullet \ar[r] 
+        & Y^\bullet \ar[r] 
+        & 0 \ar[r] 
+        & \cdots 
+    }\]
+  \item $w$ est l'oppos\'e de l'image, par le m\^eme foncteur, du morphisme de 
+    doubles complexes: 
+    \[\xymatrix{
+      \cdots \ar[r] 
+        & 0 \ar[r] 
+        & X^\bullet \ar[r] 
+        & 0 \ar[r] 
+        & 0 \ar[r] 
+        & \cdots \\
+      \cdots  \ar[r] 
+        & 0 \ar[r] \ar[u] 
+        & X^\bullet \ar[r] \ar[u] 
+        & Y^\bullet \ar[r] \ar[u] 
+        & 0 \ar[r] \ar[u] 
+        & \cdots 
+    }\]
+\end{itemize}
+
+
+
+
+
+\subsubsection{}\label{VIII:1-2-2}
+
+L'ensemble des morphismes homotopes \`a z\'ero est un id\'eal bilat\`ere (si 
+$f$ et $g$ sont composables et si $f$ ou $g$ homotope \`a z\'ero, la compos\'e 
+est homotope \`a z\'ero. Si $f$ et $g$ sont homotopes \`a z\'ero, le morphisme 
+$f\oplus g$ est homotope \`a z\'ero). Pour tout couple d'objet $X^\bullet$, 
+$Y^\bullet$ on d\'esigne par $\operatorname{Htp}(X^\bullet,Y^\bullet)$ le 
+sous-groupe de $\hom_{\eC(\cA)}(X^\bullet,Y^\bullet)$ des morphismes homotopes 
+\`a z\'ero. $\eK(\cA)$ sera alors la cat\'egorie dont les objets sont les 
+objets de $\eC(\cA)$ et les morphismes de source $X^\bullet$ et de but 
+$Y^\bullet$, le groupe: 
+\[
+  \hom_{\eC(\cA)}(X^\bullet,Y^\bullet) / \operatorname{Htp}(X^\bullet,Y^\bullet) \text{.}
+\]
+La loi de composition sur les morphismes de $\eK(\cA)$ se d\'efinit \`a partir 
+de la loi de composition sur les morphismes de $\eC(\cA)$ en passant au 
+quotient. $\eK(\cA)$ est une cat\'egorie additive. Le foncteur de translation 
+$T$ sur $\eC(\cA)$ passe au quotient (le translat\'e d'un morphisme homotope 
+\`a z\'ero, est homotope \`a z\'ero). Le foncteur obtenu est un automorphisme 
+additif de $\eK(\cA)$ que nous noterons encore $T$. Par abus de notation 
+$\eK(\cA)$ d\'esignera par la suite la cat\'egorie $\eK(\cA)$ gradu\'ee par le 
+foncteur $T$. 
+
+On appellera triangle distingu\'e dans $\eK(\cA)$, tout triangle 
+\emph{isomorphe} \`a un triangle provenant de $\sC$. La famille des triangles 
+distingu\'es v\'erifie les axioms \hyperlink{VIII:TR1}{TR1}, 
+\hyperlink{VIII:TR2}{TR2}, \hyperlink{VIII:TR3}{TR3} et 
+\hyperlink{VIII:TR4}{TR4}. Par abus de notation $\eK(\cA)$ d\'esignera la 
+cat\'egorie $\eK(\cA)$ triangul\'ee par la famille de triangles d\'efinie 
+ci-dessus. 
+
+
+
+
+
+\subsubsection{}\label{VIII:1-2-3}
+
+On d\'efinit de plus tout un arsenal de sous-cat\'egories: 
+\begin{itemize}
+  \item Un complexe est dit born\'e inf\'erieurement si tous ses objets de 
+    degr\'e n\'egatif, sauf au plus un nombre fini, sont nuls. On d\'efinit de 
+    m\^eme les complexes born\'es sup\'erieurement, les complexes born\'es. On 
+    d\'esignera par $\eK^+(\cA)$, $\eK^-(\cA)$, $\eK^b(\cA)$ les 
+    sous-cat\'egories pleines de $\eK(\cA)$ engendr\'ees par ses familles 
+    d'objets. Ces sous-cat\'egories sont des ``\emph{sous-cat\'egories 
+    triangul\'ees}'' de $\eK(\cA)$: tout triangle distingu\'e dont deux des 
+    objets sont des objets de la sous-cat\'egorie, est isomorphe \`a un 
+    triangle dont les trois objets sont des objets de la sous-cat\'egorie. 
+  \item Supposons que $\cA$ soit une cat\'egorie ab\'elienne. Un complexe est 
+    dit cohomologiquement born\'e inf\'erieurement si tous ses objets de 
+    cohomologie de degr\'e n\'egatif sont nuls sauf un nombre fini d'entre 
+    eux. On d\'efinit de mani\`ere analogue les complexes cohomologiquement 
+    born\'es sup\'erieurement, les complexes cohomologiquement born\'es, les 
+    complexes acycliques. $\eK^{\infty,+}(\cA)$, $\eK^{\infty,-}(\cA)$, 
+    $\eK^{\infty,b}(\cA)$, $\eK^{\infty,\varnothing}(\cA)$ d\'esigneront les 
+    sous-cat\'egories pleines engendr\'ees par ces familles d'objets. Ce sont 
+    des sous-cat\'egories triangul\'ees. 
+    
+    On paiera aussi des sous-cat\'egories triangul\'ees $\eK^{+,b}(\cA)$, 
+    $\eK^{+,\varnothing}(\cA)$, \ldots etc \ldots (le premier signe en 
+    exposant donne des renseignements sur les objets des complexes, le 
+    deuxi\`eme signe sur les objets de cohomologie). 
+  \item $\cA$ n'\'etant plus n\'ecessairement ab\'elienne, soit $O$ un 
+    ensemble d'objets de $\cA$ stable par isomorphisme et par somme directe. 
+    $O(\cA)$ d\'esignera la sous-cat\'egorie pleine de $\eC(\cA)$ engendr\'ee 
+    par les complexes dont les objets en tout degr\'e sont des objets de $O$. 
+    On notera $\underline O(\cA)$ la sous-cat\'egorie triangul\'ee 
+    correspondante dans $\eK(\cA)$. $\cA$ \'etant ab\'elienne, on pourra 
+    prendre pour ensemble $O$, l'ensemble $I$ des injectifs ou l'ensemble $P$ 
+    des projectifs. 
+\end{itemize}
+
+
+
+
+
+\subsubsection{}\label{VIII:1-2-4}
+
+$\eK(\cA)$ est uniquement d\'etermin\'ee par la donn\'ee de $\eC(\cA)$et de la 
+famille $\sC$. De mani\`ere pr\'ecise: tout foncteur additif gradu\'e de 
+$\eC(\cA)$ dans une cat\'egorie triangul\'ee, transformant tout triangle de 
+$\sC$ en un triangle distingu\'e, se factorise de mani\`ere unique par 
+$\eK(\cA)$, et le foncteur obtenu est exact. 
+
+Pour tout complexe $X^\bullet$ de $\eC(\cA)$, $\bar X^\bullet$ d\'esignera le 
+complexe obtenu \`a partir de $X^\bullet$ en annulant la diff\'erentielle. Une 
+suite \`a trois termes: 
+\[\xymatrix{
+  0 \ar[r] 
+    & X^\bullet \ar[r] 
+    & Y^\bullet \ar[r] 
+    & Z^\bullet \ar[r] 
+    & 0 
+}\]
+sera dite suite semi-scind\'ee si la suite 
+\[\xymatrix{
+  0 \ar[r] 
+    & \bar X^\bullet \ar[r] 
+    & \bar Y^\bullet \ar[r] 
+    & \bar Z^\bullet \ar[r] 
+    & 0 
+}\]
+est scind\'ee; i.e. si elle est isomorphe \`a la suite: 
+\[\xymatrix{
+  0 \ar[r] 
+    & \bar X^\bullet \ar[r] 
+    & \bar X^\bullet + \bar Z^\bullet \ar[r] 
+    & \bar Z^\bullet \ar[r] 
+    & 0 \text{.}
+}\]
+
+Soit $0 \to X^\bullet \to Y^\bullet \to Z^\bullet \to 0$ une suite 
+semi-scind\'ee. Choisissons un scindage i.e. pour tout $n$ un isomorphisme 
+\[
+  (Y^\bullet)^n \simeq (X^\bullet)^n + (Z^\bullet)^n \text{.}
+\]
+La matrice de la diff\'erentielle de $Y^\bullet$, dans la d\'ecomposition en 
+somme directe si-dessus est de la forme: 
+\[
+  \begin{pmatrix}
+    d_{X^\bullet} & \varphi_n \\
+    0 & d_{Y^\bullet} 
+  \end{pmatrix}
+\]
+o\`u $\varphi_n$ est un morphisme de $(Z^\bullet)^n$ dans 
+$(X^\bullet)^{n+1}$. Les $\varphi_n$ d\'eterminent un morphisme de complexes 
+\[
+  \varphi:Z^\bullet \to T(X^\bullet) \text{.}
+\]
+Lorsqu'on change le scindage, la classe modulo homotopie de $\varphi$ ne 
+change pas. De plus, en notant $\underline u$, $\underline v$, 
+$\underline\varphi$ les images dans $\eK(\cA)$ des morphismes $u$, $v$, 
+$\varphi$, le triangle 
+$(X^\bullet,Y^\bullet,Z^\bullet,\underline u,\underline v,\underline\varphi)$ 
+est distingu\'e. D\'esignons par $\mathsf{S.S.S}(\cA)$ la cat\'egorie des 
+suites semi-scind\'ees de $\eC(\cA)$, et par $\mathsf{Tr.K}(\cA)$ la 
+cat\'egorie des triangles distingu\'es de $\eK(\cA)$. Ce qui pr\'ec\`ede 
+permet de d\'efinir un foncteur: 
+\[
+  \rho:\mathsf{S.S.S}(\cA) \to \mathsf{Tr.K}(\cA) \text{.}
+\]
+Ce foncteur est essentiellement surjectif. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Exemples de foncteurs cohomologiques et de foncteurs exacts}\label{VIII:1-3}
+
+
+
+
+
+\begin{definition}
+Soient $\cA$ une cat\'egorie triangul\'ee, $\cB$ une cat\'egorie ab\'elienne. 
+Un foncteur additif $F:\cA\to \cB$ est die \emph{foncteur cohomologique} si 
+pour tout triangle distingu\'e $(X,Y,Z,u,v,w)$ la suite 
+\[\xymatrix{
+  F(X) \ar[r]^-{F(u)} 
+    & F(Y) \ar[r]^-{F(v)} 
+    & F(Z) 
+}\]
+est exacte. 
+\end{definition}
+
+Le foncteur $F\circ T^i$ sera souvent not\'e $F^i$. En vertu de l'axiome 
+\hyperlink{VIII:TR2}{TR2} des cat\'egories triangul\'ees, on a la suite 
+exacte illimit\'ee: 
+\[\xymatrix{
+  \cdots \ar[r] 
+    & F^i(X) \ar[r] 
+    & F^i(Y) \ar[r] 
+    & F^i(Z) \ar[r] 
+    & F^{i+-}(X) \ar[r] 
+    & \cdots 
+}\]
+
+
+
+
+
+\subsubsection{Exemples}\label{VIII:1-3-2}
+
+\begin{enumerate}
+  \item Soit $\cA$ une cat\'egorie triangul\'ee. Pour tout objet $X$ de $\cA$ 
+    le foncteur $\hom_\cA(X,-)$ est un foncteur cohomologique. Le foncteur 
+    $\hom_\cA(-,X)$ est un foncteur cohomologique $\cA^\circ\to\mathsf{Ab}$. 
+  \item Soient $\cA$ une cat\'egorie ab\'elienne, $\eC(\cA)$ la cat\'egorie des 
+    complexes de $\cA$. On d\'esigne par $\h^0:\eC(\cA)\to\cA$ le foncteur 
+    suivant: Soit $X^\bullet$ un objet de $\eC(\cA)$. On pose 
+    \[
+      \h^0(X^\bullet) = \ker d^0 / \im{d^{-1}} \text{.}
+    \]
+    $\h^0$ annule les morphismes homotopes \`a z\'ero, donc se factorise de 
+    mani\`ere unique par $\eK(\cA)$. On d\'esignera encore par 
+    $\h^0:\eK(\cA) \to \cA$ le foncteur obtenu. 
+\end{enumerate}
+
+
+
+
+
+\subsubsection{Exemple de bi-foncteur exact}\label{VIII:1-3-3}
+
+Soient $\cA$, $\cA'$, $\cA''$ trois cat\'egories additives, 
+\[
+  P:\cA\times \cA'\to \cA''
+\]
+un foncteur bilin\'eaire (i.e. additif par rapport \`a chacun des arguments 
+s\'epar\'ement). On en d\'eduit alors le foncteur bilin\'eaire: 
+\[
+  P^\ast:\eC(\cA)\times \eC(\cA') \to \eC(\cA'') 
+\]
+de la mani\`ere suivante: 
+
+Soient $X^\bullet$ un objet de $\eC(\cA)$ et $Y^\bullet$ un objet de 
+$\eC(\cA')$. $P(X^\bullet,Y^\bullet)$ est un complexe double de $\cA''$. On 
+pose alors: $P^\ast(X^\bullet,Y^\bullet) = $ complexe simple associ\'e \`a 
+$P(X^\bullet,Y^\bullet)$. 
+
+Soient $f$ un morphisme de $\eC(\cA)$ (resp. $\eC(\cA')$) homotope \`a z\'ero 
+et $Z^\bullet$ un objet de $\eC(\cA')$ (resp. $\eC(\cA)$). Le morphisme 
+$P^\ast(f,Z^\bullet)$ (resp. $P^\bullet(Z^\bullet,f)$) est alors homotope \`a 
+z\'ero. On en d\'eduit que $P^\ast$ d\'efinit d'une mani\`ere unique un 
+foncteur: 
+\[
+  P^\bullet:\eK(\cA) \times \eK(\cA') \to \eK(\cA'') \text{.}
+\]
+$P^\bullet$ est un bi-foncteur exact. 
+
+En particulier, soit $\cA$ un cat\'egorie additive. On peut prendre pour $P$ le 
+foncteur: 
+\begin{align*}
+  \cA^\circ\times \cA &\to \mathsf{Ab} \\
+  (X,Y) &\mapsto \hom(X,Y) 
+\end{align*}
+
+On obtient alors par la construction pr\'ec\'edente un foncteur 
+\[
+  \hom^\bullet:\eK(\cA)^\circ \times \eK(\cA) \to \eK(\mathsf{Ab}) 
+\]
+qui, compos\'e avec le foncteur $\h^0:\eK(\mathsf{Ab})\to \mathsf{Ab}$, 
+redonne \'evidemment le foncteur $\hom_{\eK(\cA)}$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Les cat\'egories quotients}\label{VIII:2}
+
+
+
+
+
+
+
+
+
+
+\subsection{Sous-cat\'egories \'epaisses. Syst\`emes multiplicatifs de morphismes}\label{VIII:2-1}
+
+Nous commencerons par donner deux d\'efinitions. 
+
+
+
+
+
+\begin{definition}\label{VIII:2-1-1}
+Une sous-cat\'egorie $\cB$ d'une cat\'egorie triangul\'ee $\cA$ est dite 
+\emph{\'epaisse} si $\cB$ est une sous-cat\'egorie triangul\'ee pleine de $\cA$ 
+et si de plus $\cB$ poss\`ede la propri\'et\'e suivante: 
+
+Pour tout morphisme $f:X\to Y$, se factorisant par un objet de $\cB$ et contenu 
+dans un triangle distingu\'e $(X,Y,Z,f,g,h)$, o\`u $Z$ est un objet de $\cB$, 
+la source de $f$ et le but de $f$ sont des objets de $\cB$. 
+\end{definition}
+
+L'ensemble des sous-cat\'egories \'epaisses de $\cA$ sera not\'e $\sN$. 
+
+L'intersection d'une famille quelconque de sous-cat\'egories \'epaisses est 
+une sous-cat\'egorie \'epaisse. 
+
+
+
+
+
+\begin{definition}
+Soit $\cA$ un cat\'egorie triangul\'ee. Un ensemble $S$ de morphismes de $\cA$ 
+est appel\'e \emph{syst\`eme multiplicatif de morphismes} si'il pos\`ede les 
+cinq propri\'et\'es suivantes: 
+
+\paragraph{FR1}
+\phantomsection\hypertarget{VIII:FR1}{}
+Si $f,g\in S$ et si $f$ et $g$ sont composables, $f\circ g\in S$. Pout tout 
+objet $X$ de $\cA$, le morphisme identique de $X$ est un \'el\'ement de $S$. 
+
+\paragraph{FR2}
+\phantomsection\hypertarget{VIII:FR2}{}
+Dans la cat\'egorie $\cA$, tout diagramme 
+\[\xymatrix{
+  & Y \ar[d]^-{s\in S} \\
+  Z \ar[r]^-f 
+    & X 
+}\]
+se compl\`ete en un diagramme commutatif 
+\[\xymatrix{
+  P \ar[r]^-g \ar[d]^-{t\in S} 
+    & Y \ar[d]^-{s\in S} \\
+  Z \ar[r]^-f 
+    & X 
+}\]
+De plus la propri\'et\'e sym\'etrique est vraie. 
+
+\paragraph{FR3}
+\phantomsection\hypertarget{VIII:FR3}{}
+Si $f$ et $g$ sont des morphismes, les propri\'et\'es suivantes sont 
+\'equivalentes: 
+\begin{enumerate}[\indent i)]
+  \item il existe un $s\in S$ tel que $s\circ f=s\circ g$ 
+  \item il existe un $t\in S$ tel que $f\circ t=g\circ t$
+\end{enumerate}
+
+\paragraph{FR4}
+\phantomsection\hypertarget{VIII:FR4}{}
+Soit $T$ le foncteur de translation de $\cA$. Par tout \'el\'ement $s$ de $S$, 
+$T(s)\in S$. 
+
+\paragraph{FR5}
+\phantomsection\hypertarget{VIII:FR5}{}
+$(X,Y,Z,u,v,w)$, $(X',Y',Z',u',v',w')$ \'etant deux triangles distingu\'ees, 
+$f$ et $g$ deux \'el\'ements de $S$ tels que le couple $(f,g)$ soit un 
+morphisme de $u$ dans $u'$, il existe un morphisme $h\in S$, tel que 
+$(f,g,h)$ soit un morphisme de triangle. 
+\end{definition}
+
+Un syst\`eme multiplicatif de morphismes est dit \emph{satur\'e} s'il poss\`ede 
+la propri\'et\'e suivante: 
+
+Un morphisme $f$ appartient \`a $S$ si et seulement s'il existe deux 
+morphismes $g$ et $g'$ tels que $g\circ f\in S$ et $f\circ g'\in S$. 
+
+L'intersection d'une famille quelconque de syst\`emes multiplicatifs satur\'es 
+un syst\`eme multiplicatif satur\'e. 
+
+L'ensemble des syst\`emes multiplicatifs satur\'es sera not\'e $\sS$. 
+
+Soit $\cB$ une sous-cat\'egorie \'epaisse; on d\'esigne par $\varphi(\cB)$ 
+l'ensemble des morphismes $f$ qui sont contenus dans un triangle distingu\'e 
+$(X,Y,Z,f,g,h)$ o\`u $Z$ est un objet de $\cB$. $\varphi(\cB)$ est un 
+syst\`eme multiplicatif satur\'e. 
+
+Soit $S$ un syst\`eme multiplicatif satur\'e; on d\'esigne par $\psi(S)$ la 
+sous-cat\'egorie pleine engendr\'ee par les objets $Z$ contenus dans un 
+triangle distingu\'e $(X,Y,Z,f,g,h)$ o\`u $f$ est un \'el\'ement de $S$. La 
+sous-cat\'egorie $\psi(S)$ est une sous-cat\'egorie \'epaisse. 
+
+Le r\'esultat principal de ce num\'ero est alors le suivant: $\varphi$ est un 
+isomorphisme (conservant la relation d'ordre d\'efinie par l'inclusion) de 
+$\sN$ sur $\sS$. L'isomorphisme inverse n'est autre que $\psi$. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Probl\`emes universels}\label{VIII:2-2}
+
+Soient $\cA$ et $\cA'$ deux cat\'egories triangul\'ees et $F$ un foncteur 
+exacte de $\cA$ dans $\cA'$. Soient $S(F)$ l'ensemble des morphismes de $\cA$ 
+qui sont transform\'es par $F$ en isomorphismes et $\cB(F)$ la sous-cat\'egorie 
+pleine engendr\'ee par les objets de $\cA$ qui sont transform\'es par $F$ en 
+objets nuls de $\cA'$. $S(F)$ est un syst\`eme multiplicatif satur\'e et 
+$\cB(F)$ est une sous-cat\'egorie \'epaisse. De plus $S(F) = \varphi(\cB(F))$. 
+Soient alors $\cA$ une cat\'egorie triangul\'ee, $\cB$ une sous-cat\'egorie 
+\'epaisse et $S=\varphi(\cB)$ le syst\`eme multiplicatif satur\'e 
+correspondant. Les deux probl\`emes universels ci-dessous sont \'equivalents. 
+
+
+\paragraph{Probl\`eme 1}
+Trouver une cat\'egorie triangul\'ee $\cA/\cB$ et un foncteur exact 
+$Q:\cA\to \cA/\cB$ tels que tout foncteur exact de $\cA$ dans une cat\'egorie 
+triangul\'ee $\cA'$, transformant les objets de $\cB$ en objets nuls de 
+$\cA'$, admette, de mani\`ere unique, une factorisation de la forme $G\circ Q$ 
+o\`u $G$ est un foncteur exact. 
+
+
+\paragraph{Probl\`eme 2}
+Trouver une cat\'egorie triangul\'ee $\cA_S$ et un foncteur exact 
+$Q:\cA\to \cA_S$ tels que tout foncteur exact de $\cA$ dans une cat\'egorie 
+triangul\'ee $\cA'$, transformant les morphismes de $S$ en isomorphismes de 
+$\cA'$, admette, de mani\`ere unique, une factorisation de la forme 
+$G\circ Q$ o\`u $G$ est un foncteur exact. 
+
+(Le r\'edacteur prie le lecteur de bien vouloir l'excuser pour l'emploi de ce 
+langage d\'esuet et r\'etrograde.) Nous allons montrer, dans le num\'ero 
+suivant, que le probl\`eme 2 admet une solution. Donc le probl\`eme 1 
+correspondant admet la m\^eme solution. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Calcul de fraction}\label{VIII:2-3}
+
+
+
+
+
+\subsubsection{}\label{VIII:2-3-1}
+
+Soient $\cA$ un cat\'egorie triangul\'ee, $S$ un syst\`eme multiplicatif 
+satur\'e. D\'esignons par $\cA[S^{-1}]$ la cat\'egorie de fraction de $\cA$ 
+pour l'ensemble de morphismes $S$ et $Q$ le foncteur canonique de $\cA$ dans 
+$\cA[S^{-1}]$. Le couple $(\cA[S^{-1}],Q)$ r\'esout le probl\`eme suivant: Tout 
+foncteur de $\cA$ dans une cat\'egorie quelconque (non n\'ecessairement 
+additive) transformant morphisme de $S$ en isomorphisme, se factorise, d'une 
+mani\`ere unique, par $(\cA[S^{-1}],Q)$. 
 
 
 
