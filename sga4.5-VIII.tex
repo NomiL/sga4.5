@@ -1,0 +1,191 @@
+% !TEX root = sga4.5.tex
+
+\chapter{Categories derivees}\label{VIII}
+
+
+
+
+
+
+
+
+
+
+\section{Categories triangulees}\label{VIII:1}
+
+
+
+
+
+\subsection{D\'efinitions et exemples}\label{VIII:1-1}
+
+
+
+
+
+\addtocounter{subsubsection}{-1}
+\subsubsection{}\label{VIII:1-1-0}
+
+Soient $\cA$ un cat\'egorie additive, $T$ un automorphisme additif de $\cA$. 
+$X$ et $Y$ \'etant deux objets de $\cA$, nous poserons 
+\[
+  \hom^i(X,Y) = \hom_\cA(X,T^i(Y)) \qquad i\in \dZ 
+\]
+Soient $X$, $Y$, $Z$ trois objets de $\cA$, $\alpha\in \hom^i(X,Y)$, 
+$\beta\in \hom^j(X,Y)$. Nous d\'efinirons le compos\'e $\beta\circ\alpha$ 
+appartenant \`a $\hom^{i+j}(X,Z)$ par: 
+\[
+  \beta\circ \alpha = \beta\circ T^i(\alpha) \text{.}
+\]
+On v\'erifie qu'on obtient ainsi une nouvelle cat\'egorie dont les groupes de 
+morphismes entre les objets sont gradu\'es. Cette nouvelle cat\'egorie sera 
+appel\'ee, par abus de langage: la cat\'egorie $\cA$, gradu\'ee par le foncteur 
+de translation $T$. 
+
+Soit $\cA$ une cat\'egorie gradu\'ee par un foncteur de translation $T$. 
+Lorsqu'on nommera ou notera un morphisme sans sp\'ecifier le degr\'e, il 
+s'agira toujours d'un morphisme de degr\'e z\'ero. 
+
+Soient $\cA$ et $\cA'$ deux cat\'egories additives gradu\'ees par les foncteurs
+$T$ et $T'$, $F$ un foncteur additif de $\cA$ dans $\cA'$. On dira que $F$ 
+\emph{est gradu\'e} si l'on s'est donn\'e un isomorphisme de 
+foncteurs\footnote{Texte modifi\'e en 1976: le texte original demandait une 
+\'egalit\'e $F\circ T=T'\circ F$. Le cas des foncteurs \`a plusieurs variables 
+est discut\'e dans \cite[XVIII 0.2]{sga4}. Il pose un probl\`eme de signes.} 
+\[
+  F\circ T = T'\circ F 
+\]
+
+La d\'efinition des morphismes de foncteurs gradu\'es est donn\'ee au 
+\ref{VIII:2-2-1}. 
+
+$\cA$ \'etant une categorie additive gradu\'ee par le foncteur $T$, on 
+appellers triangle, un ensemble de trois objets $X$, $Y$, $Z$ et de trois 
+morphismes $u:X\to Y$, $v:Y\to Z$, $w:Z\to T(X)$ ($\deg w=1$). Pour d\'esigner 
+les triangles on utilisera la notation: $(X,Y,Z,u,v,w)$ on bien le diagramme: 
+\[\xymatrix{
+  & Z \ar[dl]_-w \\
+  X \ar[rr]^-u 
+    & & Y \ar[lu]_-v 
+}\qquad \deg(w)=1
+\]
+Soient $(X,Y,Z,u,v,w)$, $(X',Y',Z',u',v',w')$ deux triangles de $\cA$; un 
+morphisme du premier triangle dans le second est un ensemble de trois 
+morphismes $f:X\to X'$, $g:Y\to Y'$, $h:Z\to Z'$, tels que le diagramme 
+suivant soit commutatif: 
+\[\xymatrix{
+  X \ar[r]^-u \ar[d]^-f 
+    & Y \ar[r]^-v \ar[d]^-g 
+    & Z \ar[r]^-w \ar[d]^-h 
+    & T(X) \ar[d]^-{T(f)} \\
+  X' \ar[r]^-{u'} 
+    & Y' \ar[r]^-{v'} 
+    & Z' \ar[r]^-{w'} 
+    & T(X') 
+}\]
+
+
+
+
+
+\subsubsection{}\label{VIII:1-1-1}
+
+On appelle \emph{cat\'egorie triangul\'ee} une cat\'egorie additive gradu\'ee 
+par un foncteur de translation, munie d'une famille de triangles qu'on appelle 
+famille des triangles distingu\'es. Cette famille doit v\'erifier de plus les 
+axiomes: 
+
+
+\paragraph{TR1}
+\phantomsection\hypertarget{VIII:TR1}{}
+
+Tout triangle isomorphe \`a triangle distingu\'e est distingu\'e. Tout 
+morphisme $u:X\to Y$ est contenu dans un triangle distingu\'e 
+$(X,Y,Z,u,v,w)$. Le triangle $(X,X,0,\operatorname{id}_{X'},0,0)$ est 
+distingu\'e. 
+
+
+\paragraph{TR2}
+\phantomsection\hypertarget{VIII:TR2}{}
+
+Pour que $(X,Y,Z,u,v,w)$ soit distingu\'e, il faut et il suffit que 
+$(Y,Z,T(X),v,w,-T(u))$ soit distingu\'e. 
+
+
+\paragraph{TR3}
+\phantomsection\hypertarget{VIII:TR3}{}
+
+$(X,Y,Z,u,v,w)$, $(X',Y',Z',u',v',w')$ \'etant distingu\'es, pour tout 
+morphisme $(f,g):u\to u'$, il existe un morphisme $h:Z\to Z'$ tel que $(f,g,h)$ 
+soit un morphisme de triangles. 
+
+
+\paragraph{TR4}
+\phantomsection\hypertarget{VIII:TR4}{}
+
+\[\xymatrix{
+  & Z' \ar[dl]|{\deg=1} \\
+  X \ar[rr]^-u 
+    & & Y \ar[ul]_-i 
+}\quad
+\xymatrix{
+  & X' \ar[dl]|{\deg(j)=1} \\
+  Y \ar[rr]^-v 
+    & & Z \ar[ul] 
+}\quad
+\xymatrix{
+  & Y' \ar[dl]|{\deg=1} \\
+  X \ar[rr]^-w 
+    & & Z \ar[ul] 
+}\]
+\'etant trois triangles distingu\'es tels que $w=v\circ u$, il existe deux 
+morphismes $f:Z'\to Y'$, $g:Y' \to X'$ tels que 
+\begin{enumerate}
+  \item $(\operatorname{id}_{X'}, v, f)$ soit un morphisme de triangle 
+  \item $(u,\operatorname{id}_Z,g)$ soit un morphisme de triangle 
+  \item $(Z',Y',X',f,g,T(i) j)$ soit un triangle distingu\'e
+\end{enumerate}
+
+$\cC$ et $\cC'$ \'etant deux cat\'egories triangul\'ees, on appelle 
+\emph{foncteur exact} de $\cC$ dans $\cC'$, tout foncteur additif, gradu\'e, 
+transformant les triangles distingu\'es en triangles distingu\'es. Les 
+morphismes de foncteurs exacts sont les morphismes de foncteurs gradu\'es. 
+
+On d\'eduit imm\'ediatement dex axiomes \hyperlink{VIII:TR1}{TR1}, 
+\hyperlink{VIII:TR2}{TR2}, \hyperlink{VIII:TR3}{TR3} la propri\'et\'e suivante: 
+
+
+
+
+
+\begin{proposition}\label{VIII:1-1-2}
+Soient $(X,Y,Z,u,v,w)$ un triangle distingu\'e et $M$ un objet d'une 
+cat\'egorie triangul\'ee. On a alors les suites exactes: 
+\[\xymatrix{
+  \cdots \ar[r] 
+    & \hom^i(M,X) \ar[r]^-{\hom(M,u)} 
+    & \hom^i(M,Y) \ar[r]^-{\hom(M,v)} 
+    & \hom^i(M,Z) \ar[r]^-{\hom(M,w)} 
+    & \hom^{i+1}(M,X) \ar[r] 
+    & \cdots
+}\]
+\[\xymatrix{
+  \cdots \ar[r] 
+    & \hom^i(Z,M) \ar[r]^-{\hom(v,M)} 
+    & \hom^i(Y,M) \ar[r]^-{\hom(u,M)} 
+    & \hom^i(X,M) \ar[r]^-{\hom(w,M)} 
+    & \hom^{i+1}(Z,M) \ar[r] 
+    & \cdots
+}\]
+\end{proposition}
+
+On d\'eduit alors de cette proposition des \'enonc\'es du genre: 
+
+
+
+
+
+
+
+
+
