@@ -694,6 +694,7 @@ correspondant. Les deux probl\`emes universels ci-dessous sont \'equivalents.
 
 
 \paragraph{Probl\`eme 1}
+\phantomsection\hypertarget{VIII:prob1}{}
 Trouver une cat\'egorie triangul\'ee $\cA/\cB$ et un foncteur exact 
 $Q:\cA\to \cA/\cB$ tels que tout foncteur exact de $\cA$ dans une cat\'egorie 
 triangul\'ee $\cA'$, transformant les objets de $\cB$ en objets nuls de 
@@ -702,6 +703,7 @@ o\`u $G$ est un foncteur exact.
 
 
 \paragraph{Probl\`eme 2}
+\phantomsection\hypertarget{VIII:prob2}{}
 Trouver une cat\'egorie triangul\'ee $\cA_S$ et un foncteur exact 
 $Q:\cA\to \cA_S$ tels que tout foncteur exact de $\cA$ dans une cat\'egorie 
 triangul\'ee $\cA'$, transformant les morphismes de $S$ en isomorphismes de 
@@ -710,8 +712,8 @@ $G\circ Q$ o\`u $G$ est un foncteur exact.
 
 (Le r\'edacteur prie le lecteur de bien vouloir l'excuser pour l'emploi de ce 
 langage d\'esuet et r\'etrograde.) Nous allons montrer, dans le num\'ero 
-suivant, que le probl\`eme 2 admet une solution. Donc le probl\`eme 1 
-correspondant admet la m\^eme solution. 
+suivant, que le \hyperlink{VIII:prob2}{probl\`eme 2} admet une solution. Donc 
+le \hyperlink{VIII:prob1}{probl\`eme 1} correspondant admet la m\^eme solution. 
 
 
 
@@ -737,10 +739,13 @@ $\cA[S^{-1}]$. Le couple $(\cA[S^{-1}],Q)$ r\'esout le probl\`eme suivant: Tout
 foncteur de $\cA$ dans une cat\'egorie quelconque (non n\'ecessairement 
 additive) transformant morphisme de $S$ en isomorphisme, se factorise, d'une 
 mani\`ere unique, par $(\cA[S^{-1}],Q)$. Un tel couple existe toujours, sans 
-hypoth\`ese sur l'ensemble de morphismes $S$ \cite{cgg}. Cependant l'ensemble 
+hypoth\`ese sur l'ensemble de morphismes $S$ \cite[1.1]{gz67}\footnote{The 
+original text references [C.G.G] here. Most likely, this is the lost work 
+\emph{Cat\'egories et foncteurs} by Chevalley, Gabriel and Grothendieck, 
+referenced in\cite{sc72}. }. Cependant l'ensemble 
 de morphismes $S$, \'etant un syst\`me multiplicatif satur\'e, poss\`ede les 
 propri\'et\'es \hyperlink{VIII:FR1}{FR1}, \hyperlink{VIII:FR2}{FR2}, 
-\hyperlink{VIII:FR3}{FR3}. Par suite, d'apr\`es \cite{cgg}, la cat\'egorie 
+\hyperlink{VIII:FR3}{FR3}. Par suite, d'apr\`es \cite{gz67}, la cat\'egorie 
 $\cA[S^{-1}]$ peut s'obtenir par un calcul de fractions, \`a droite ou \`a 
 gauche. Nous allons rappeler comment on obtient $\cA[S^{-1}]$ par un calcul de 
 fractions \`a droite. (Le calcul de fractions \`a gauche s'obtient par le 
@@ -827,7 +832,22 @@ soit exact. Les triangles distingu\'es de $\cA[S^{-1}]$ ne sont qutre que les
 triangles isomorphes aux images, par $Q$, des triangles distingu\'es de $\cA$. 
 En d\'esignant par $\cA_S$, la cat\'egorie $\cA[S^{-1}]$ muni de cette 
 structure triangul\'ee, on d\'emontre sans difficult\'e que le couple 
-$(\cA_S,Q)$ est une solution au probl\`eme 2. 
+$(\cA_S,Q)$ est une solution au \hyperlink{VIII:prob2}{probl\`eme 2}. 
+
+
+
+
+
+\begin{definition}\label{VIII:2-3-3}
+Soient $\cA$ un cat\'egorie triangul\'ee, $\cB$ une sous-cat\'egorie \'epaisse 
+de $\cA$, $(Q,\cA/\cB)$ la solution du \hyperlink{VIII:prob1}{probl\`eme 1} 
+(\S \ref{VIII:2-2}). $\cA/\cB$ sera appel\'ee la \emph{cat\'egorie quotient} de 
+$\cA$ par $\cB$. $Q$ sera appel\'e le foncteur canonique de passage au 
+quotient. Plus g\'en\'eralement soit $\cN$ une sous-cat\'egorie triangul\'ee de 
+$\cA$ et soit $\underline\cN$ la plus petit sous-cat\'egorie \'epaisse 
+contenant $\cN$. La cat\'egorie quotient de $\cA$ par $\cN$: $\cA/\cN$ sera par 
+d\'efinition $\cA/\underline\cN$. 
+\end{definition}
 
 
 
