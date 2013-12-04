@@ -739,7 +739,98 @@ pour l'ensemble de morphismes $S$ et $Q$ le foncteur canonique de $\cA$ dans
 $\cA[S^{-1}]$. Le couple $(\cA[S^{-1}],Q)$ r\'esout le probl\`eme suivant: Tout 
 foncteur de $\cA$ dans une cat\'egorie quelconque (non n\'ecessairement 
 additive) transformant morphisme de $S$ en isomorphisme, se factorise, d'une 
-mani\`ere unique, par $(\cA[S^{-1}],Q)$. 
+mani\`ere unique, par $(\cA[S^{-1}],Q)$. Un tel couple existe toujours, sans 
+hypoth\`ese sur l'ensemble de morphismes $S$ \cite{cgg}. Cependant l'ensemble 
+de morphismes $S$, \'etant un syst\`me multiplicatif satur\'e, poss\`ede les 
+propri\'et\'es \hyperlink{VIII:FR1}{FR1}, \hyperlink{VIII:FR2}{FR2}, 
+\hyperlink{VIII:FR3}{FR3}. Par suite, d'apr\`es \cite{cgg}, la cat\'egorie 
+$\cA[S^{-1}]$ peut s'obtenir par un calcul de fractions, \`a droite ou \`a 
+gauche. Nous allons rappeler comment on obtient $\cA[S^{-1}]$ par un calcul de 
+fractions \`a droite. (Le calcul de fractions \`a gauche s'obtient par le 
+proc\'ed\'e du renversement des fl\`eches.) 
+
+
+
+
+
+\subsubsection{}\label{VIII:2-3-2}
+
+Les objets de $\cA[S^{-1}]$ sont le objets de $\cA$. 
+\begin{itemize}
+  \item Pour tout objet $X$ de $\cA$, d\'esignons par $S_X$ la cat\'egorie des 
+    fl\`eches appartenant \`a $S$, ayant pour but $X$. A tout objet $Y$ de 
+    $\cA$, on associe, fonctoriellement en $Y$, le foncteur suivant sur 
+    $S_X^\circ$ \`a valeur dans la cat\'egorie des ensembles: 
+    ($S_X^\circ$ d\'esigne la cat\'egorie oppos\'ee) 
+    \[
+      H_Y:s\mapsto \hom(\operatorname{source}(s),Y) \text{.}
+    \]
+    On pose alors: 
+    \[
+      \hom_{\cA[S^{-1}]}(X,Y) = \varinjlim_{S_X^\circ} H_Y \text{.}
+    \]
+    Pour tout ce qui concerne les limites inductives, on se r\'ef\'erera \`a 
+    \cite{ar62}. 
+    
+    On constatera alors, avec plaisir en utilisant \hyperlink{VIII:FR1}{FR1}, 
+    \hyperlink{VIII:FR2}{FR2}, \hyperlink{VIII:FR3}{FR3} que la cat\'egorie 
+    $S_X^\circ$ poss\`ede les propri\'et\'es L1, L2, L3. Les limites inductives 
+    poss\`edent donc toutes les bonnes propri\'et\'es des limites inductives 
+    sur les ensembles ordonn\'es filtrants. 
+  \item Soient $X$, $Y$, $Z$, trois objets de $\cA$, $a$ un \'el\'ement de 
+    $\hom_{\cA[S^{-1}]}(X,Y)$ et $b$ un \'el\'ement de 
+    $\hom_{\cA[S^{-1}]}(Y,Z)$. Soient $s$ un objet de $S_X$, $\underline a$ un 
+    \'el\'ement de $\hom(\operatorname{source}(s),Y)$ dont l'image est $a$ et 
+    un objet de $S_y$, $\underline b$ un \'el\'ement de 
+    $\hom(\operatorname{source}(t),Z)$ dont l'image est $b$. On a alors un 
+    diagramme: 
+    \begin{equation*}\tag{1}\label{VIII:eq:2-3-2-1}
+    \xymatrix{
+      & \bullet \ar[dl]_-s \ar[dr]^-{\underline a} 
+        & 
+        & \bullet \ar[dl]_-t \ar[dr]^-{\underline b} \\
+      X 
+        & 
+        & Y 
+        & 
+        & Z 
+    }
+    \end{equation*}
+    que, d'apr\`es \hyperlink{VIII:FR2}{FR2}, on peut compl\'eter en un 
+    diagramme: 
+    \[\xymatrix{
+      & & \bullet \ar[dl]_-{t'} \ar[dr]^-{\underline c} \\
+      & \bullet \ar[dl]_-s \ar[dr]^-{\underline a} 
+        & & \bullet \ar[dl]_-t \ar[dr]^-{\underline b} \\
+      X 
+        & & Y 
+        & & Z 
+    }\]
+    Notons $b\circ a$ l'image dans $\hom_{\cA[S^{-1}]}(X,Z)$ du morphisme 
+    $\underline{b\circ c}$. On v\'erifie que gr\^ace aux propri\'et\'es 
+    \hyperlink{VIII:FR1}{FR1}, \hyperlink{VIII:FR2}{FR2}, 
+    \hyperlink{VIII:FR3}{FR3}, $b\circ a$ ne d\'epend pas des repr\'esentants 
+    $\underline a$ et $\underline b$ choisis et qu'il ne d\'epend pas non plus 
+    de la mani\`ere de compl\'eter le diagramme \eqref{VIII:eq:2-3-2-1}. On 
+    v\'erifie de plus qu'on a ainsi d\'efini une cat\'egorie $\cA[S^{-1}]$. 
+\end{itemize}
+
+Nous noterons $Q$ le foncteur \'evident: $\cA\to \cA[S^{-1}]$. 
+
+$\cA$ \'etant une cat\'egorie additive, $\cA[S^{-1}]$ est une cat\'egorie 
+additive. De plus, on d\'emontre en utilisant \hyperlink{VIII:FR4}{FR4} qu'il 
+existe un et un seul foncteur de translation sur $\cA[S^{-1}]$, que nous 
+noterons $T$, v\'erifiant la relation: 
+\[
+  Q\circ T = T\circ Q \text{.}
+\]
+Enfin, \`a l'aide de \hyperlink{VIII:FR5}{FR5}, on d\'emontre qu'il existe une 
+et une seule structure triangul\'ee sur $\cA[S^{-1}]$ telle que le foncteur $Q$ 
+soit exact. Les triangles distingu\'es de $\cA[S^{-1}]$ ne sont qutre que les 
+triangles isomorphes aux images, par $Q$, des triangles distingu\'es de $\cA$. 
+En d\'esignant par $\cA_S$, la cat\'egorie $\cA[S^{-1}]$ muni de cette 
+structure triangul\'ee, on d\'emontre sans difficult\'e que le couple 
+$(\cA_S,Q)$ est une solution au probl\`eme 2. 
 
 
 
