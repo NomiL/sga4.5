@@ -87,7 +87,7 @@ La symétrie de cette description montre que, pour $f$ propre, le diagramme
 \begin{equation*}\tag{1.2.1}\label{V:eq:1-2-1}
 \xymatrix{
   \R f_\ast \sK \ar[r] \ar[d] 
-    & D D \R f_\ast \sK \ar[d]^-\sim \\
+    & D D \R f_\ast \sK \ar[d]^-\wr \\
   \R f_\ast D D \sK \ar[r]^\sim 
     & D\R f_\ast D\sK
 }
@@ -148,7 +148,7 @@ On obtient un morphisme de triangles
 }\]
 La suite exacte longue déduite de la première ligne fournit la nullité des 
 $\Ext^i$ ($i>2$) et, prenant la fibre en $s$, on trouve 
-\[\xymatrix{
+\[\xymatrix@=0.7cm{
   0 \ar[r] 
     & \left(\underline\h^1(D j_\ast\sF\right)_s \ar[r] 
     & \h^1\left(I,\sF_{\bar\eta}^\vee\right) \ar[r]^-\partial \ar[d] 
@@ -312,7 +312,7 @@ fournit un diagramme
 \begin{equation*}\tag{2.5.2}\label{V:eq:2-5-2}
 \xymatrix@=.5cm{
   & & 0 \ar[r] 
-    & \h^0(X,\sA) \ar[r] \ar[d]^-\sim 
+    & \h^0(X,\sA) \ar[r] \ar[d]^-\wr 
     & \h^0(X,\sF) \ar[r] \ar[d] 
     & \h^0(X,\sG) \ar[r] \ar[d] 
     & 0 \\
@@ -360,6 +360,7 @@ $f:X'\to X$ comme en \ref{V:2-4} tel que $\sG$ se plonge dans $f_\ast\dZ/n$:
 Changeant $X'$ en un $X''/X'$, on peut supposer que 
 $\h^i(X,\sF) \to \h^i(X,f_\ast\dZ/n) = \h^i(X',\dZ/n)$ est nul pour $i>0$. 
 Considérons alors 
+\small
 \[\xymatrix@=.3cm{
   0 \ar[r] 
     & \h^0(X,\sG) \ar[r] \ar[d] 
@@ -378,6 +379,7 @@ Considérons alors
     & '\h^1(X,\sQ) \ar[r] 
     & \cdots
 }\]
+\normalsize
 
 L'isomorphisme en $\h^0(X')$ fournit $\h^0(X,\sG)\hookrightarrow '\h^0(X,\sG)$, 
 et la même injectivité pour $\sF$ \eqref{V:eq:2-5-2}. Appliqué à $\sQ$, 
@@ -612,6 +614,7 @@ où $\tr$ est cette fois l'application
     & \h_c^1(X,\dmu_n) \text{,}
 }\]
 de sorte que $x\mapsto \tr(u\smallsmile x)$ est l'application composée 
+\small
 \begin{equation*}\tag{3.4.2}\label{V:eq:3-4-2}
 \begin{aligned}
 &\xymatrix{
@@ -624,6 +627,7 @@ de sorte que $x\mapsto \tr(u\smallsmile x)$ est l'application composée
 }
 \end{aligned}
 \end{equation*}
+\normalsize
 où (1) est donné par 
 $a\otimes b\otimes c\mapsto (a\smallsmile c)\otimes b$. 
 
