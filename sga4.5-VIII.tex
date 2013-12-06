@@ -1,6 +1,6 @@
 % !TEX root = sga4.5.tex
 
-\chapter{Categories triangul\'ees}\label{VIII}
+\chapter{Cat\'egories dérivées}\label{VIII}
 
 
 
@@ -11,7 +11,7 @@
 
 
 
-\section{D\'efinitions et exemples}\label{VIII:1}
+\section{Cat\'egories triangul\'ees: d\'efinitions et exemples}\label{VIII:1}
 
 
 
@@ -848,6 +848,81 @@ $\cA$ et soit $\underline\cN$ la plus petit sous-cat\'egorie \'epaisse
 contenant $\cN$. La cat\'egorie quotient de $\cA$ par $\cN$: $\cA/\cN$ sera par 
 d\'efinition $\cA/\underline\cN$. 
 \end{definition}
+
+
+
+
+
+
+
+
+
+
+\subsection{Propri\'et\'es des cat\'egories quotients}\label{VIII:2-4}
+
+
+
+
+
+\subsubsection{}\label{VIII:2-4-1}
+
+Soient $\cA$ une cat\'egorie triangul\'ee et $H$ un foncteur cohomologique \`a 
+valeur dans une cat\'egorie ab\'elienne $\cG$. Soient $\cB_H$ la 
+sous-cat\'egorie pleine engendr\'ee par les objets dont tous les translat\'es 
+sont transform\'es par $H$ en objets nuls de $\cG$ et $S_H$ l'ensemble des 
+morphismes dont tous les translat\'es sont transform\'es par $H$ en 
+isomorphismes de $\cG$. $\cB_H$ est une sous-cat\'egorie \'epaisse de $\cA$; 
+$S_H$ est un syst\`eme multiplicatif satur\'e. De plus $S_H=\varphi(\cB_H)$ 
+(\S \ref{VIII:2-1}). Le foncteur $H$ se factorise d'un mani\`ere unique par 
+$(Q,\cA/\cB_H)$. 
+
+
+
+
+
+\begin{theorem}\label{VIII:2-4-2}
+Soient $\cA$ une cat\'egorie triangul\'ee, $\cB$ un sous-cat\'egorie 
+triangul\'ee, $\cN$ une sous-cat\'egorie \'epaisse de $\cA$, $S=\varphi(\cN)$ 
+le syst\`eme multiplicatif satur\'e correspondant. 
+\begin{enumerate}[(a)]
+  \item La cat\'egorie $\cN\cap\cB$ est une sous-cat\'egorie \'epaisse de 
+    $\cB$. Le syst\`eme multiplicatif correspondant est $S\cap \cB$. 
+  \item Les deux propri\'et\'es suivantes sont \'equivalentes: 
+    \begin{enumerate}[(i)]
+      \item Pour tout objet $X$ de $\cB$ et tout morphisme $s:R\to X$ o\`u $s$ 
+        est un \'el\'ement de $S$, il existe un morphisme $s':R'\to R$ o\`u 
+        $s\circ'$ est un \'el\'ement de $S\cap \cB$; et 
+        $R'\in\operatorname{Ob}\cB$. 
+      \item Tout morphisme d'un objet $X$ de $\cB$ dans un objet $Y$ de $\cN$ 
+        se factorise par un objet de $\cN\cap \cB$. 
+    \end{enumerate}
+  \item Les propri\'et\'es (i)' et (ii)' obtenues \`a partir de (i) et (ii) en 
+    renversant les fl\`eches sont \'equivalents. 
+  \item Si les propriet\'es (i) et (ii) sont v\'erifi\'ees ou bien si les 
+    propri\'et\'es (i)' et (ii)' sont v\'erifi\'ees, le foncteur canonique 
+    \[\xymatrix{
+      \cB/\cN\cap \cB \ar[r] & \cA/\cN
+    }\]
+    est fid\`ele. 
+    
+    Comme ce foncteur est injectif sur les objets, il r\'ealise 
+    $\cB/\cN\cap\cB$ comme sous-cat\'egorie de $\cA/\cN$. 
+  \item Si de plus $\cB$ est une sous-cat\'egorie pleine de $\cA$, 
+    $\cB/\cN\cap \cB$ est une sous-cat\'egorie pleine de $\cA/\cN$. 
+\end{enumerate}
+\end{theorem}
+
+
+
+
+
+\begin{corollary}\label{VIII:2-4-3}
+Soient $\cA\subset \cB\subset \cC$ trois cat\'egories triangul\'ees, $\cA$ sous 
+cat\'egorie \'epaisse de $\cB$, $\cB$ sous-cat\'egorie \'epaisse de $\cC$. 
+Alors $\cA$ est une sous-cat\'egorie \'epaisse de $\cC$, $\cB/\cA$ est une 
+sous-cat\'egorie \'epaisse de $\cC/\cA$. Le foncteur canonique 
+$\cC/\cB \to (\cC/\cA)/(\cB/\cA)$ est un isomorphisme. 
+\end{corollary}
 
 
 
