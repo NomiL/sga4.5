@@ -932,3 +932,363 @@ $\cC/\cB \to (\cC/\cA)/(\cB/\cA)$ est un isomorphisme.
 
 
 
+
+\subsection{Propri\'et\'es du foncteur de passage au quotient}\label{VIII:2-5}
+
+Soient $\cA$ un cat\'egorie triangul\'ee, $\cB$ un sous-cat\'egorie \'epaisse, 
+$S$ le syst\`eme multiplicatif correspondant, $Q:\cA\to \cA/\cB$ le foncteur 
+canonique de passage au quotient. 
+
+
+
+
+
+\begin{proposition}\label{VIII:2-5-1}
+$X$ et $Y$ \'etant des objets de $\cA$, les assertions suivantes sont 
+\'equivalentes: 
+\begin{enumerate}[(a)]
+  \item Tout morphisme $f:X\to Y$, tel qu'il existe un morphisme $s:Z\to X$, de 
+    $S$, v\'erifiant $f\circ s=0$, est un morphisme nul.
+  \item Tout morphisme $f:X\to Y$, tel qu'il existe un morphisme $s:Y\to Z$, 
+    $s\in S$, v\'erifiant $s\circ f=0$, est un morphisme nul. 
+  \item Tout morphisme $f:X\to Y$ qui se factorise par un objet de $\cB$ est 
+    nul. 
+  \item L'application canonique: 
+    \[
+      \hom_\cA(X,Y) \to \hom_{\cA/\cB}(Q(X),Q(Y))
+    \]
+    est injective. 
+\end{enumerate}
+\end{proposition}
+
+
+
+
+
+\begin{proposition}\label{VIII:2-5-2}
+Soient $X$ et $Y$ deux objets de $\cA$. Les assertions suivantes sont 
+\'equivalentes: 
+\begin{enumerate}[(a)]
+  \item Tout diagramme ($s\in S$): 
+    \[\xymatrix{
+      & Z \ar[dl]_-s \ar[dr]^-f \\
+      X 
+        & & Y 
+    }\]
+    se compl`ete en un diagramme: $(s,t\in S$): 
+    \[\xymatrix{
+      & Z' \ar[d]_-t \\
+      & Z \ar[dl]_-s \ar[dr]^-f \\
+      X 
+        & & Y 
+    }\]
+    o\`u $f\circ t$ se factorise par $(X,s\circ t)$. 
+  \item Assertion obtenue en renversant le sens de fl\`eches dans (a) et en 
+    permutant $X$ et $Y$. 
+  \item Tout diagramme: 
+    \[\xymatrix{
+      X \ar[r]^-f 
+        & N \ar[r]^-g 
+        & Y 
+    }\]
+    o\`u $g\circ f=0$ et o\`u $N$ est un objet de $\cB$, se compl\`ete en un 
+    diagramme: 
+    \[\xymatrix{
+      & N' \ar[d]^-i \\
+      X \ar[ur]^-h \ar[r]^-f 
+        & N \ar[r]^-g 
+        & Y 
+    }\]
+    o\`u $f=i\circ h$ et o\`u $g\circ i=0$. 
+  \item Assertion obtenue en changeant le sens des fl\`eches dans (c) et en 
+    permutant $X$ et $Y$. 
+  \item L'application canonique: 
+    \[\xymatrix{
+      \hom_\cA(X,Y) \ar[r]^-Q 
+        & \hom_{\cA/\cB}(Q(X),Q(Y)) 
+    }\]
+    est surjective. 
+\end{enumerate}
+\end{proposition}
+
+
+
+
+
+\begin{proposition}\label{VIII:2-5-3}
+Soit $X$ un objet de $\cA$. Les assertions suivantes sont \'equivalentes: 
+\begin{enumerate}[(a)]
+  \item Pour tout objet $Y$ de $\cA$, l'application canonique 
+    \[\xymatrix{
+      \hom_\cA(X,Y) \ar[r]^-Q 
+        & \hom_{\cA/\cB}(Q(X),Q(Y)) 
+    }\]
+    est un isomorphisme. 
+  \item Tout morphisme de $X$ dans un objet de $\cB$ est nul. 
+\end{enumerate}
+De m\^eme, les deux assertions suivantes sont \'equivalentes: 
+\begin{enumerate}[(a)']
+  \item Pour tout objet $Y$ de $\cA$, l'application canonique: 
+    \[\xymatrix{
+      \hom_\cA(X,Y) \ar[r]^-Q 
+        & \hom_{\cA/\cB}(Q(X),Q(Y)) 
+    }\]
+    est un isomorphisme. 
+  \item Tout morphisme d'un objet de $\cB$ dans $X$ est nul. 
+\end{enumerate}
+\end{proposition}
+
+
+
+
+
+\begin{definition}\label{VIII:2-5-4}
+Tout objet poss\'edant les propri\'et\'es \'equivalentes (a) et (b) de la 
+proposition pr\'ec\'edente, sera appel\'e: \emph{objet libre \`a gauche sur 
+$\cA/\cB$} ou bien encore objet \emph{$Q$-libre \`a gauche}. De m\^eme, tout 
+objet poss\'edant les propri\'et\'es \'equivalentes (a)' et (b)' sera appel\'e 
+\emph{objet libre \`a droite sur $\cA/\cB$} ou encore objet 
+\emph{$Q$-libre \`a droite}. Il est d\'efini \`a isomorphisme pr\`es par la 
+connaissance de $Q(X)\in\operatorname{Ob}{\cA/\cB}$. 
+\end{definition}
+
+
+
+
+
+\subsection{Foncteurs adjoints au foncteur de passage au quotient}\label{VIII:2-6}
+
+
+
+
+
+\begin{definition}\label{VIII:2-6-1}
+Deux sous-cat\'egories triangul\'ees $\cN$ et $\cN'$ d'une cat\'egorie 
+triangul\'ee $\cA$ sont dites \emph{orthagonales} si pour tout objet $X$ de 
+$\cN$ et tout objet $Y$ de $\cN'$, on a: 
+\[
+  \hom_\cA(X,Y) = 0 
+\]
+$\cN'$ sera dite alors orthogonale \`a droite \`a $\cN$ et $\cN$ orthogonale 
+\`a gauche \`a $\cN'$. 
+\end{definition}
+
+
+
+
+
+\begin{proposition}\label{VIII:2-6-2}
+Soit $\cN$ une sous-cat\'egorie triangul\'ee d'une cat\'egorie triangul\'ee 
+$\cA$. La cat\'egorie pleine $\cN^\bot$ (resp. $^\bot\cN$) engendr\'ee par les 
+objets $X$ de $\cA$ tels que pour tout objet $Y$ de $\cN$ on ait 
+$\hom_\cA(Y,X)=0$ (resp. $\hom_\cA(X,Y)=0$), est une sous-cat\'egorie \'epaisse 
+de $\cA$. La cat\'egorie $\cN^\bot$ est appel\'ee par abus de langage, 
+l'orthogonale \`a droite de $\cN$. 
+\end{proposition}
+
+Cette proposition nous permet de traduire la proposition \ref{VIII:2-5-3}. 
+
+
+
+
+
+\begin{proposition}\label{VIII:2-6-3}
+Soit $\cB\subset\cA$, une sous-cat\'egorie \'epaisse d'une cat\'egorie 
+triangul\'ee $\cA$. La cat\'egorie pleine engendr\'ee par les objets libre \`a 
+droite sur $\cA/\cB$ (resp. \`a gauche), n'est autre que l'orthogonale \`a 
+droite (resp. \`a gauche) de $\cB$. 
+\end{proposition}
+
+
+
+
+
+\begin{proposition}\label{VIII:2-6-4}
+Soient $\cA$ une cat\'egorie triangul\'ee, $\cB$ une sous-cat\'egorie 
+\'epaisse de $\cA$, $\cB^\bot$ l'orthogonale \`a droite de $\cB$, $S(\cB)$, 
+$s(\cB^\bot)$ les syst\`emes multiplicatifs correspondants, $Q$ et $Q^\bot$ les 
+foncteurs canoniques de passage au quotient. Consid\'erons pour un objet $x$ de 
+$\cA$, les propri\'et\'es suivantes: 
+\begin{enumerate}[(i)]
+  \item $X$ s'envoie par un morphisme de $S(\cB)$ dans un objet de $\cB^\bot$. 
+  \item $X$ reçoit par un morphisme de $S(\cB^\bot)$ un objet de $\cB$. 
+  \item La cat\'egorie $S_X(\cB)$ des fl\`eches de $S(\cB)$ de source $X$, 
+    admet un objet final. 
+  \item La cat\'egorie $S^X(\cB^\bot)$ des fl\`eches de $S(\cB^\bot)$ de but 
+    $X$, admet un objet initial. 
+  \item La cat\'egorie $\cB/X$ des objets de $\cB$ au-dessus de $X$, admet un 
+    objet final. 
+  \item La cat\'egorie $\cB^\bot/X$ des objets de $\cB^\bot$ au-dessous de $X$ 
+    admet un objet initial. 
+\end{enumerate}
+On a alors 
+\[\xymatrix@=0.5cm{
+  & & & & (iv) \\
+  (i) \ar@{<=>}[r] 
+    & (ii) \ar@{<=>}[r] 
+    & (iii) \ar@{<=>}[r] 
+    & (v) \ar@{=>}[ur] \ar@{=>}[dr] \\
+  & & & & (vi) 
+}\]
+
+Si de plus $^\bot(\cB^\bot)=\cB$ alors toutes les propri\'et\'es sont 
+\'equivalentes. 
+\end{proposition}
+
+Soient $\cB$ une sous-cat\'egorie \'epaisse d'une cat\'egorie triangul\'ee 
+$\cA$, le foncteur d'injection $i$ de $\cB$ dans $\cA$ et $Q$ le foncteur de 
+passage au quotient de $\cA$ dans $\cA/\cB$, $\cB^\bot$ l'orthogonale \`a 
+droite de $\cB$, les foncteurs correspondant $i^\bot$ et $Q^\bot$. On d\'eduit 
+imm\'ediatement de la proposition \ref{VIII:2-6-4} les propositions suivantes: 
+
+
+
+
+
+\begin{proposition}\label{VIII:2-6-5}
+Les deux propri\'et\'es suivantes sont \'equivalentes: 
+\begin{enumerate}[(i)]
+  \item Le foncteur $i$ admet un adjoint \`a droite. 
+  \item Le foncteur $Q$ admet un adjoint \`a droite. 
+\end{enumerate}
+\end{proposition}
+
+La proposition est encore vraie lorsqu'on remplace le mot droite par le omt 
+gauche. 
+
+
+
+
+
+\begin{proposition}\label{VIII:2-6-6}
+Les deux propri\'et\'es suivantes sont \'equivalentes: 
+\begin{enumerate}[(i)]
+  \item Le foncteur $i$ admet un adjoint \`a droite. 
+  \item Le foncteur $i^\bot$ admet un adjoint \`a gauche. L'orthogonale \`a 
+    gauche de la cat\'egorie $\cB^\bot$ est \'egale \`a $\cB$. 
+\end{enumerate}
+\end{proposition}
+
+
+
+
+
+\begin{proposition}\label{VIII:2-6-7}
+Supposons v\'erifi\'ees les propri\'et\'es des propositions \ref{VIII:2-6-5} et 
+\ref{VIII:2-6-6}. Soient $i^\ast$ et $Q^\ast$ les adjoints \`a droite de $i$ et 
+$Q$. De m\^eme soient $^\ast i^\bot$ et $^\ast Q^\bot$ les adjoints \`a gauche 
+de $i^\bot$ et de $Q^\bot$. Tous ces foncteurs sont exactes. De plus: 
+
+Il existe un isomorphisme fonctoriel 
+$Q^\ast\circ Q\iso i^\bot\circ ^\ast i^\bot$ tel que le diagramme ci-apr\`es 
+soit commutatif: 
+\[\xymatrix{
+  & \operatorname{id} \ar[dl] \ar[dr] \\
+  Q^\ast \circ Q \ar[rr]^\sim 
+    & & i^\bot\circ ^\ast i^\bot 
+}\]
+(les fl\`eches obliques sont d\'efinies par les propri\'et\'es d'adjonction).
+
+Il existe de m\^eme un isomorphisme 
+$^\ast Q^\bot \circ Q^\bot \iso i\circ i^\ast$ tel que le diagramme suivant soit 
+commutatif: 
+\[\xymatrix{
+  ^\ast Q^\bot\circ Q^\bot \ar[rr]^-\sim \ar[dr] 
+    & & i\circ i^\ast \ar[dl] \\
+  & \operatorname{id}{}
+}\]
+
+Enfin, il existe un morphisme fonctoriel de degr\'e $1$: 
+$\partial:i^\bot\circ ^\ast i^\bot \to i\circ i^\ast$ tel que le le triangle 
+suivant soit distingu\'e $(\deg\partial=1$): 
+\[\xymatrix{
+  i^\bot \circ ^\ast i^\bot \ar[rr]^-\partial 
+    & & i\circ i^\ast \ar[dl] \\
+  & \operatorname{id}{} \ar[ul] 
+}\]
+
+Un tel morphisme $\delta$ est unique et v\'erifie 
+$\delta(T X_0) = - T \delta(X)$ ($X$ objet $q\circ q$, $T$ translation). 
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Applications aux cat\'egories abéliennes: les cat\'egories d\'eriv\'ees d'une cat\'egorie ab\'elienne}\label{VIII:3}
+
+
+
+
+
+\subsection{Les cat\'egories d\'eriv\'ees}\label{VIII:3-1}
+
+On utilise les notations du \ref{VIII:1-2-2}. On utilisera de plus les 
+notations suivantes: 
+
+\begin{definition}\label{VIII:3-1-1}
+Soit $\cA$ une cat\'egorie ab\'elienne. On pose: 
+\begin{align*}
+  \D(\cA) &= \eK^{\infty,\infty}(\cA)/\eK^{\infty,\varnothing}(\cA) \\
+  \D^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \\
+  \D^+(\cA) &= \eK^{+,+}(\cA) / \eK^{+,\varnothing}(\cA) \\
+  \D^-(\cA) &= \eK^{-,-}(\cA) / \eK^{-,\varnothing}(\cA) \text{.}
+\end{align*}
+\end{definition}
+
+
+
+
+
+\begin{proposition}\label{VIII:3-1-2}
+Les foncteurs naturels qui figurent dans le diagramme suivant: 
+\[\xymatrix@=0.5cm{
+  & \D(\cA) \\
+  \D^+(\cA) \ar[ur] 
+    & & \D^-(\cA) \ar[ul] \\
+  & \D^b(\cA) \ar[ul] \ar[ur] 
+}\]
+sont pleinement fid\`eles. 
+
+Les foncteurs naturels: 
+\begin{align*}
+  \D^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{+,b}(\cA)/\eK^{+,\varnothing}(\cA) \\
+  \D^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{-,b}(\cA) / \eK^{-,\varnothing}(\cA) 
+\end{align*}
+sont des \'equivalences de cat\'egories. 
+
+Les foncteurs du diagramme: 
+\[\xymatrix@=0.5cm{
+  & \D(\cA) \\
+  \D^+(\cA) \ar[ur] 
+    & & \D^-(\cA) \ar[ul] \\
+  & \D^b(\cA) \ar[ul] \ar[ur]
+}\]
+\'etant injectifs sur les objets, r\'ealisent les cat\'egories $\D^b(\cA)$, 
+$\D^+(\cA)$, $\D^-(\cA)$ comme sous-cat\'egories pleines de $\D(\cA)$. 
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
