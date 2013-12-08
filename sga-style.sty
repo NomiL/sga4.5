@@ -64,6 +64,7 @@
     \expandafter\edef\csname c\Alph{char}\endcsname{\noexpand\mathcal{\Alph{char}}}  % mathcal
     \expandafter\edef\csname d\Alph{char}\endcsname{\noexpand\mathbb{\Alph{char}}}   % mathbb
     \expandafter\edef\csname f\Alph{char}\endcsname{\noexpand\mathfrak{\Alph{char}}} % mathfrak
+    \expandafter\edef\csname e\Alph{char}\endcsname{\noexpand\mathsf{\Alph{char}}}   % mathsf
     \expandafter\edef\csname s\Alph{char}\endcsname{\noexpand\mathscr{\Alph{char}}}  % mathscr
     \addtocounter{char}{1}
   \repeat
@@ -81,9 +82,6 @@
   \newcommand{\iso}{\xrightarrow\sim}
   \newcommand{\R}{\mathsf{R}} % should be turned into \eR
   \newcommand{\D}{\mathsf{D}} % should be turned into \eD
-  \newcommand{\eC}{\mathsf{C}} % category of complexes
-  \newcommand{\eK}{\mathsf{K}} % category of complexes modulo homotopy
-  \newcommand{\eL}{\mathsf{L}}
   \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
   \newcommand{\rhom}{\mathsf{R}\hom}
   \newcommand{\rHom}{\mathsf{Rhom}}

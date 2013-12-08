@@ -54,7 +54,7 @@ est discut\'e dans \cite[XVIII 0.2]{sga4}. Il pose un probl\`eme de signes.}
 \]
 
 La d\'efinition des morphismes de foncteurs gradu\'es est donn\'ee au 
-\ref{VIII:2-2-1}. 
+\ref{VIII:4-1-1}. 
 
 $\cA$ \'etant une categorie additive gradu\'ee par le foncteur $T$, on 
 appellers triangle, un ensemble de trois objets $X$, $Y$, $Z$ et de trois 
@@ -369,7 +369,7 @@ On d\'efinit de plus tout un arsenal de sous-cat\'egories:
 
 \subsubsection{}\label{VIII:1-2-4}
 
-$\eK(\cA)$ est uniquement d\'etermin\'ee par la donn\'ee de $\eC(\cA)$et de la 
+$\eK(\cA)$ est uniquement d\'etermin\'ee par la donn\'ee de $\eC(\cA)$ et de la 
 famille $\sC$. De mani\`ere pr\'ecise: tout foncteur additif gradu\'e de 
 $\eC(\cA)$ dans une cat\'egorie triangul\'ee, transformant tout triangle de 
 $\sC$ en un triangle distingu\'e, se factorise de mani\`ere unique par 
@@ -425,12 +425,12 @@ change pas. De plus, en notant $\underline u$, $\underline v$,
 $\underline\varphi$ les images dans $\eK(\cA)$ des morphismes $u$, $v$, 
 $\varphi$, le triangle 
 $(X^\bullet,Y^\bullet,Z^\bullet,\underline u,\underline v,\underline\varphi)$ 
-est distingu\'e. D\'esignons par $\mathsf{S.S.S}(\cA)$ la cat\'egorie des 
-suites semi-scind\'ees de $\eC(\cA)$, et par $\mathsf{Tr.K}(\cA)$ la 
+est distingu\'e. D\'esignons par $\mathsf{SSS}(\cA)$ la cat\'egorie des 
+suites semi-scind\'ees de $\eC(\cA)$, et par $\mathsf{TrK}(\cA)$ la 
 cat\'egorie des triangles distingu\'es de $\eK(\cA)$. Ce qui pr\'ec\`ede 
 permet de d\'efinir un foncteur: 
 \[
-  \rho:\mathsf{S.S.S}(\cA) \to \mathsf{Tr.K}(\cA) \text{.}
+  \rho:\mathsf{SSS}(\cA) \to \mathsf{TrK}(\cA) \text{.}
 \]
 Ce foncteur est essentiellement surjectif. 
 
@@ -1225,7 +1225,7 @@ $\delta(T X_0) = - T \delta(X)$ ($X$ objet $q\circ q$, $T$ translation).
 
 
 
-\section{Applications aux cat\'egories abéliennes: les cat\'egories d\'eriv\'ees d'une cat\'egorie ab\'elienne}\label{VIII:3}
+\section{Les cat\'egories d\'eriv\'ees d'une cat\'egorie ab\'elienne}\label{VIII:3}
 
 
 
@@ -1236,7 +1236,8 @@ $\delta(T X_0) = - T \delta(X)$ ($X$ objet $q\circ q$, $T$ translation).
 On utilise les notations du \ref{VIII:1-2-3}. On utilisera de plus les 
 notations suivantes: 
 
-\begin{definition}\label{VIII:3-1-1}
+\subsection{Notations}\label{VIII:3-1-1}
+
 Soit $\cA$ une cat\'egorie ab\'elienne. On pose: 
 \begin{align*}
   \D(\cA) &= \eK^{\infty,\infty}(\cA)/\eK^{\infty,\varnothing}(\cA) \\
@@ -1244,7 +1245,6 @@ Soit $\cA$ une cat\'egorie ab\'elienne. On pose:
   \D^+(\cA) &= \eK^{+,+}(\cA) / \eK^{+,\varnothing}(\cA) \\
   \D^-(\cA) &= \eK^{-,-}(\cA) / \eK^{-,\varnothing}(\cA) \text{.}
 \end{align*}
-\end{definition}
 
 
 
@@ -1295,8 +1295,432 @@ $\D^-(\cA)$, seront appel\'es les objets \emph{limit\'es \`a droite}.
 
 Nous d\'esignerons par $D$ le foncteur canonique: 
 \[
-  D : \eC(\cA) \to \D(\cA) 
+  D : \eC(\cA) \to \D(\cA) \text{.}
 \]
+La ``restriction'' de $D$ \`a la sous-cat\'egorie pleine $\cA$ de $\eC(\cA)$ 
+sera encore not\'e $D$. Le foncteur $D$ restrient \`a $\cA$ est pleinement 
+fid\`ele. Le foncteur $D$ se factorise d'une mani\`ere unique par $\eK(\cA)$. 
+Soient $X$ et $Y$ deux objets de $\cA$. 
+
+On v\'erifie sans difficult\'e que pour tout $m\geqslant 0$, les groupes: 
+\[
+  \hom_{\D(\cA)}(D(X),T^{-m} D(Y)) \qquad \text{($T$ est le foncteur translation)} 
+\]
+sont nuls. La dimension cohomologique de $\cA$ sera le plus petit des entiers 
+$n$ tels que pour tout $m>n$ on ait: 
+\[
+  \hom_{\D(\cA)}(D(X),T^m D(Y)) = 0 \qquad\text{pout tout couple $X,Y$ d'objets de $\cA$.} 
+\]
+S'il n'y a pas de tels entiers, on dira que la dimension cohomologique de $\cA$ 
+est infinie. 
+
+D\'esignons par $\eI^+(\cA)$ (resp. $\eI(\cA)$) la sous-cat\'egorie triangul\'ee 
+pleine de $\eK^+(\cA)$ (resp. de $\eK(\cA)$) d\'efinie par les complexes dont 
+les objets sont injectifs en tout degr\'e. 
+
+
+
+
+
+\begin{proposition}\label{VIII:3-1-4}
+Supposons que la cat\'egorie $\cA$ poss\`ede suffisamment d'injectifs. Le 
+foncteur naturel: 
+\[
+  Q^+:\eK^+(\cA) \to \eD^+(\cA) 
+\]
+induit une \'equivalence de cat\'egorie: 
+\[
+  \eI^+(\cA) \to \eD^+(\cA)  \text{.}
+\]
+Le foncteur quasi-inverse est un adjoint \`a droite de $Q^+$. 
+\end{proposition}
+
+Si de plus $\cA$ est de dimension cohomologique finie, l'assertion 
+pr\'ec\'edente est encore vraie lorsqu'on y supprime les exposants $+$. 
+
+On a \'enonc\'e analogue concernant les projectifs. 
+
+La d\'emonstration de la proposition \ref{VIII:3-1-4} s'appuie sur 
+\ref{VIII:2-6-4}. 
+
+La structure triangul\'ee de $\eD(\cA)$, est pr\'ecis\'ee par la proposition 
+suivante. 
+
+Soit $\eE(\cA)$ la cat\'egorie des suites exactes \`a trois termes de 
+$\eC(\cA)$. La cat\'egorie $\mathsf{SSS}(\cA)$ des suites exactes 
+semi-scind\'ees (\S\ref{VIII:1-2-4}) est une sous-cat\'egorie pleine de 
+$\eE(\cA)$. On a d\'efini (Loc. cit.) un foncteur: 
+\[
+  \rho:\mathsf{SSS}(\cA) \to \mathsf{TrK}(\cA) 
+\]
+o\`u $\mathsf{TrK}(\cA)$ d\'esigne la cat\'egorie des triangles distingu\'es 
+de $\eK(\cA)$. On en d\'eduit un foncteur 
+\[
+  \sigma : \mathsf{SSS}(\cA) \to \mathsf{TrD}(\cA) 
+\]
+o\`u $\mathsf{TrD}(\cA)$ d\'esigne la cat\'egorie des triangles distingu\'es 
+de $\eD(\cA)$. 
+
+
+
+
+
+\begin{proposition}\label{VIII:3-1-5}
+Il existe un et un seul foncteur: 
+\[
+  \Pi:\eE(\cA) \to \mathsf{TrD}(\cA) 
+\]
+de la forme ($\deg \delta(S)=1$): 
+\[
+(S=0 \to X^\bullet \to Y^\bullet \to Z^\bullet \to 0) 
+\mapsto 
+\xymatrix{
+  & D(Z^\bullet) \ar[dl]_-{\delta(S)} \\
+  D(X^\bullet) \ar[rr]^-{D(u)} 
+    & & D(Y^\bullet) \ar[ul]_-{D(v)} 
+}
+\]
+dont la restriction \`a $\mathsf{SSS}(\cA)$ soit $\sigma$. \emph{Ce foncteur 
+est essentiellement surjectif.}
+\end{proposition}
+
+
+
+
+
+\begin{proposition}\label{VIII:3-1-6}
+Le foncteur cohomologique canonique: 
+\[
+  \h^0:\eK(\cA) \to \cA 
+\]
+se factorise d'une mani\`ere unique par un foncteur que nous noterns encore 
+$\h^0$ 
+\[
+  \h^0:\eD(\cA) \to \cA \text{.}
+\]
+Sur $\eD(\cA)$ le foncteur $\h^0$ et ses translat\'es $\h^i$ forment un 
+syst\`eme conservatif, i.e. un morphisme $f:X^\bullet \to Y^\bullet$ et un 
+isomorphisme si et seulement si pour tout entier $i$ 
+\[
+  \h^i(f):\h^i(X) \to \h^i(Y) 
+\]
+est un isomorphisme. 
+\end{proposition}
+
+
+
+
+
+\begin{definition}\label{VIII:3-1-7}
+Un morphisme $f:X^\bullet \to Y^\bullet$ de $\eC(\cA)$ (resp. de $\eK(\cA)$) 
+est appel\'e un \emph{quasi-isomorphisme} lorsque pour tout entier $i$ 
+\[
+  \h^i(f):\h^i(X) \to \h^i(Y) 
+\]
+est un isomorphisme. 
+\end{definition}
+
+D'apr\`es la proposition pr\'ec\'edente les quasi-isomorphismes sont les 
+morphismes qui deviennent des isomorphismes dans $\eD(\cA)$. 
+
+
+
+
+
+\begin{definition}\label{VIII:3-1-8}
+Soient $\sigma$ un ensemble d'objets de $\cA$, $X^\bullet$ un objet de 
+$\eC(\cA)$ (resp. $\eK(\cA)$). Une re\'solution droite (reps. gauche) de type 
+$\sigma$ de $X^\bullet$, est un quasi-isomorphisme $X^\bullet \to V^\bullet$ 
+(resp. $V^\bullet \to X^\bullet$) o\`u $V^\bullet$ est un complexe dont tous 
+les objets appartiennent \`a $\sigma$. On dira \emph{r\'esolution injective} 
+(resp. projective) au lieu de r\'esolution droite (resp. gauche) de type 
+injectif (resp. projectif). 
+\end{definition}
+
+De mani\`ere g\'en\'erale, on se permettra de supprimer les mots ``droite'' ou 
+``gauche'' lorsqu'aucune ambiguit\'e n'en r\'esultera. 
+
+
+
+
+
+\begin{proposition}\label{VIII:3-1-9}
+\begin{enumerate}
+  \item Supposons que tout objet de $\cA$ s'injecte dans un objet de $\sigma$ 
+    (resp. soit quotient d'un objet de $\sigma$). Alors tout objet de 
+    $\eC^+(\cA)$ (resp. de $\eC^-(\cA)$) admet une r\'esolution droite 
+    (resp. gauche) de type $\sigma$ dans $\eC^+(\cA)$ (resp. dans 
+    $\eC^-(\cA)$). 
+  \item Supposons de plus qu'il existe un entier $n$ tel que pour toute suite 
+    exacte: 
+    \begin{align*}
+      Y^0 &\to Y^1 \to \cdots \to Y^{n-1} \to Y^n \to 0 \\
+      \text{(resp. } 0 &\to Y^n \to Y^{n-1} \to \cdots \to Y^1 \to Y^0 \text{)} 
+    \end{align*}
+    d'objets de $\cA$ ou pout tout $i$, $0\leqslant i\leqslant n-1$, $Y^i$ est 
+    un objet de $\sigma$, l'objet $Y^n$ soit un objet de $\sigma$. Alors tout 
+    objet de $\eC(\cA)$ admet une r\'esolution droite (resp. gauche) de type 
+    $\sigma$. 
+\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+\subsection{Etude des $\ext$}\label{VIII:3-2}
+
+Soient $X^\bullet$ et $Y^\bullet$ deux objets de $\eC(\cA)$ (resp. $\eK(\cA)$) 
+et $D:\eC(\cA) \to \eD(\cA)$ (resp. $Q:\eK(\cA) \to \eD(\cA)$) le foncteur 
+canonique. 
+
+
+
+
+
+\begin{definition}\label{VIII:3-2-1}
+On appelle \emph{$i$-\`eme hyper-ext} et on note: 
+\[
+  (X^\bullet,Y^\bullet)\mapsto \ext^i(X^\bullet,Y^\bullet) 
+\]
+le foncteur: $\hom_{\eD(\cA)}(D(X^\bullet),T^i D(Y^\bullet))$ (resp. 
+$\hom_{\eD(\cA)}(Q(X^\bullet),T^i Q(Y^\bullet))$). 
+\end{definition}
+
+
+
+
+
+\begin{proposition}\label{VIII:3-2-2}
+Soit $0 \to X^\bullet \to Y^\bullet \to Z^\bullet \to 0$ une suite exacte de 
+$\eC(\cA)$. Soit $V^\bullet$ un objet de $\eC(\cA)$. On a les suites exactes 
+illimit\'ees: 
+\[\xymatrix@=0.5cm{
+  \cdots \ar[r] 
+    & \ext^i(V^\bullet,X^\bullet) \ar[r] 
+    & \ext^i(V^\bullet,Y^\bullet) \ar[r] 
+    & \ext^i(V^\bullet,Z^\bullet) \ar[r]^-\delta 
+    & \ext^{i+1}(V^\bullet,X^\bullet) \ar[r] 
+    & \cdots \\
+  \cdots \ar[r] 
+    & \ext^i(Z^\bullet,V^\bullet) \ar[r] 
+    & \ext^i(Y^\bullet,V^\bullet) \ar[r] 
+    & \ext^i(X^\bullet,V^\bullet) \ar[r]^-\delta 
+    & \ext^{i+1}(Z^\bullet,V^\bullet) \ar[r] 
+    & \cdots
+}\]
+\end{proposition}
+
+Soient $X^\bullet$ et $Y^\bullet$ deux objets de $\eK(\cA)$. On d\'esigne par 
+$\mathsf{Qis}/X^\bullet$ (resp. $\mathsf{Qis}^+/X^\bullet$, 
+$\mathsf{Qis}^-/X^\bullet$, $\mathsf{Qis}^b/X^\bullet$) la cat\'egorie des 
+quasi-isomorphismes de but $X^\bullet$ et de source dans $\eK(\cA)$ (resp. 
+$\eK^+(\cA)$, $\eK^-(\cA)$, $\eK^b(\cA)$). De m\^eme on d\'efinit les 
+cat\'egories $Y^\bullet/\mathsf{Qis}$, $Y^\bullet/\mathsf{Qis}^+$,\ldots 
+(quasi-isomorphismes de source $Y^\bullet)$. 
+
+On se propose de r\'esumer dans la proposition suivante les diff\'erentes 
+d\'efinitions \'equivalentes des $\ext^i$. 
+
+
+
+
+
+\begin{proposition}\label{VIII:3-2-3}
+1. Il existe des isomorphismes de foncteurs: 
+\[\xymatrix{
+  \ext^0(X^\bullet,Y^\bullet) = \hom_{\eD(\cA)}(Q(X^\bullet),Q(Y^\bullet)) \ar[r]^-\sim 
+    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) \ar[r]^-\sim 
+    & \\
+  \varinjlim_{Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(X^\bullet,-) \ar[r]^-\sim 
+    & \varinjlim_{(\mathsf{Qis}/X^\bullet)^\circ \times Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(-,-) \text{.}
+}\]
+Si $X^\bullet$ est un objet de $\eK^-(\cA)$: 
+\[
+  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{(\mathsf{Qis}^-/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) 
+\]
+Si $Y^\bullet$ est un objet de $\eK^+(\cA)$: 
+\[
+  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}} \hom_{\eK(\cA)}(X^\bullet,-) 
+\]
+Si $X^\bullet$ est un objet de $\eK^-(\cA)$ et si $Y^\bullet$ est un 
+objet de $\eK^b(\cA)$: 
+\[
+  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{Y^\bullet/\mathsf{Qis}^b} \hom_{\eK(\cA)}(X^\bullet,-) 
+\]
+Si $X^\bullet$ est un objet de $\eK^b(\cA)$ et $Y^\bullet$ un objet de 
+$\eK^+(\cA)$: 
+\[
+  \ext^0(X^\bullet,Y^\bullet) \iso \varinjlim_{(\mathsf{Qis}^b/X^\bullet)^\circ} \hom_{\eK(\cA)}(-,Y^\bullet) 
+\]
+Si la cat\'egorie $\cA$ poss\`ede suffisamment d'injectif et si 
+$Y^\bullet$ est un objet de $\eK^+(\cA)$, $Y^\bullet$ admet une 
+r\'esolution injective et une seule (\`a isomorphisme pr\`es dans 
+$\eK^+(\cA)$): 
+\[
+  Y^\bullet \to I(Y^\bullet) 
+\]
+et on a: 
+\[
+  \ext^0(X^\bullet,Y^\bullet) \iso \hom_{\eK(\cA)}(X^\bullet,I(Y^\bullet)) \text{.}
+\]
+On a de m\^eme un \'enonc\'e analogue pour les projectifs. 
+Si la cat\'egorie $\cA$ admet suffisamment d'injectifs et si $\cA$ est 
+de \emph{dimension cohomologique finie}, tout objet $Y^\bullet$ de 
+$\eK(\cA)$ admet une r\'esolution injective et une seule: 
+\[
+  Y^\bullet \to I(Y^\bullet)
+\]
+et on a: 
+\[
+  \ext^0(X^\bullet,Y^\bullet) \iso \hom_{\eK(\cA)}(X^\bullet,I(Y^\bullet)) 
+\]
+Enonc\'e analogue pour les projectifs. 
+\end{proposition}
+
+\paragraph{Remarque:}
+En explicitant l'isomorphisme de la proposition \ref{VIII:3-2-3}(3), on 
+retrouve la d\'efinition de Yoneda. 
+
+
+
+
+
+
+
+
+
+
+\section{Les foncteurs d\'eriv\'es}\label{VIII:4}
+
+
+
+
+
+
+
+
+
+
+\subsection{D\'efinition des foncteurs d\'eriv\'es}\label{VIII:4-1}
+
+
+
+
+
+\begin{definition}\label{VIII:4-1-1}
+Soient $\cC$ et $\cC'$ deux cat\'egories gradu\'ees (on d\'esigne par $T$ le 
+foncteur de translation de $\cC$ et de $\cC'$), $F$ et $G$ deux foncteurs 
+gradu\'es de $\cC$ dans $\cC'$. Un \emph{morphisme de foncteurs gradu\'es} et 
+un morphisme de foncteurs: 
+\[
+  u:F\to G 
+\]
+qui poss\`ede la propri\'et\'e suivante: 
+
+Pour tout objet $X$ de $\cC$ le diagramme suivant est commutatif: 
+\[\xymatrix{
+  F(T X) \ar[r]^-{u(T X)} 
+    & G(T X) \\
+  T F(X) \ar[r]^-{T u(X)} \ar[u]_-\wr 
+    & T G(X) \ar[u]_-\wr 
+}\]
+\end{definition}
+
+Soient $\cC$ et $\cC'$ deux cat\'egories triangul\'ees. On d\'esigne par 
+$\mathsf{Fex}(\cC,\cC')$ la cat\'egorie des foncteurs exacts de $\cC$ dans 
+$\cC'$, le morphismes entre deux foncteurs \'etant les morphismes de foncteurs 
+gradu\'es. 
+
+Soient $\cA$ et $\cB$ deux cat\'egories ab\'eliennes de 
+$\Phi:\eK^\ast(\cA)\to \eK^{\ast'}(\cB)$ un foncteur exact ($\ast$ et $\ast'$ 
+d\'esignent l'un des signes $+$, $-$, $b$, ou $v$ ``vide''). Le foncteur 
+canonique $Q:\eK^\ast(\cA)\to \eD^\ast(\cA)$ nous donne, par composition, un 
+foncteur 
+\[\xymatrix{
+  \mathsf{Fex}(\eD^\ast(\cA),\eD^{\ast'}(\cB)) \ar[r] 
+    & \mathsf{Fex}(\eK^\ast(\cA),\eD^{\ast'}(\cB)) 
+}\]
+d'o\`u (en d\'esignant aussi par $Q'$ le foncteur canonique 
+$\eK^{\ast'}(\cB) \to \eD^{\ast'}(\cB)$) un foncteur: 
+$\%$ (resp. $\%'$): 
+$\mathsf{Fex}(\eD^\ast(\cA),\eD^{\ast'}(\cB)) \to \mathsf{Ab}$: 
+\begin{align*}
+  \Psi  &\mapsto \hom(Q'\circ \Phi,\Psi\circ Q) \\
+  (\text{resp. }\Psi &\mapsto \hom(\Psi\circ Q,Q'\circ \Phi)\text{ ).} 
+\end{align*}
+
+
+
+
+
+\begin{definition}\label{VIII:4-1-2}
+On dira que $\Phi$ admet un \emph{functeur d\'eriv\'e total} \`a droite (resp. 
+\`a gauche) si le foncteur $\%$ (resp. $\%'$) est repr\'esentable. Un objet 
+repr\'esentant le foncteur $\%$ (resp. $\%'$) ser appel\'e foncteur d\'eriv\'e 
+total \`a droite (resp. \`a gauche) de $\Phi$ et sera not\'e 
+$\eR \Phi$ (resp. $\eL \Phi$).\footnote{Une d\'efinition plus maniable (et en 
+practique \'equivalente) est donn\'ee dans \cite[XVII 1.2]{sga4}.}
+\end{definition}
+
+
+
+
+
+\subsubsection{Notations}\label{VIII:4-1-3}
+
+Soient $\cA$ et $\cB$ deux cat\'egories ab\'eliennes et $f:\cA\to \cB$ un 
+foncteur additif. Le \emph{foncteur d\'eriv\'e total \`a droite} du foncteur 
+$\eK^+(f):\eK^+(\cA) \to \eK^+(\cB)$ sera not\'e $\eR^+ f$. On d\'efinit de 
+m\^eme $\eR^- f$, $\eR f$, $\eL^+ f$, $\eL^- f$, $\eL f$. 
+
+Soit de m\^eme $F:\eK^\ast(\cA) \to \cB$, un foncteur cohomologique. Le 
+foncteur canonique de passage au quotient $Q:\eK^\ast(\cA) \to \eD^\ast(\cA)$ 
+d\'efinit par composition un foncteur: 
+\[\xymatrix{
+  \mathsf{Foco}(\eD^\ast(\cA),\cB) \ar[r] 
+    & \mathsf{Foco}(\eK^\ast(\cA),\cB) 
+}\]
+($\mathsf{Foco}(-,-)$ d\'esigne la cat\'egorie des foncteurs cohomologiques) 
+d'o\`u un foncteur $\%$ (resp. $\%'$) 
+$\mathsf{Foco}(\eD^\ast(\cA),\cB) \to \mathsf{Ab}$, $G\mapsto \hom(F,G\circ Q)$ 
+(resp. $G\mapsto \hom(G\circ Q,F)$). 
+
+
+
+
+
+\begin{definition}\label{VIII:4-1-4}
+On dira que le foncteur $F$ admet un \emph{foncteur d\'eriv\'e cohomologique} 
+\`a droite (resp. \`a gauche) si le foncteur $\%$ (resp. $\%'$) est 
+repr\'esentable. Un objet repr\'esentant le foncteur $\%$ (resp. $\%'$) sera 
+appel\'e foncteur d\'eriv\'e cohomologique \`a droite (resp. \`a gauche) et 
+sera not\'e $\eR F$ (resp. $\eL F$). 
+\end{definition}
+
+
+
+
+
+\subsubsection{Notations}\label{VIII:4-1-5}
+
+Soient $\cA$ et $\cB$ deux cat\'egories ab\'eliennes et $f:\cA\to \cB$ un 
+foncteur additif. Le foncteur d\'eriv\'e cohomologique \`a droite du foncteur: 
+\[
+  \h^0{}\circ \eK^+ f:\eK^+(\cA) \to \cB 
+\]
+sera not\'e $\eR^+ f$. Lorsqu'aucune confusion n'en r\'esultera le foncteur 
+$\eR^+ f\circ T^i$ ($T$ est le foncteur de translation) sera not\'e: 
+$\eR^i f$. Le foncteur d\'eriv\'e cohomologique \`a droite du foncteur 
+$\h{}\circ \eK f$ sera not\'e $\eR f$. Lorsqu'aucune confusion n'en r\'esultera 
+le foncteur $\eR f\circ T^i$ sera not\'e $\eR^i f$. 
+
+On d\'efinit de m\^eme les foncteurs $\eL^- f$, $\eL f$, $\eL^i f$. 
 
 
 
