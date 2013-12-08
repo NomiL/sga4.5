@@ -362,20 +362,20 @@ Traduisons en termes algébriques: se donner $M^*$ revient à se donner un
 diagramme cartésien de modules 
 \[\xymatrix{
   M' \ar@<3pt>[r]|-{\partial_0} \ar@<-3pt>[r]|-{\partial_1} 
-    & M'' \ar@<6pt>[r]|-{\partial_0} \ar[r]|-{\partial_0} \ar@<-6pt>[r]|-{\partial_2}
+    & M'' \ar@<6pt>[r]|-{\partial_0} \ar[r]|-{\partial_1} \ar@<-6pt>[r]|-{\partial_2}
     & M'''
 }\]
 au-dessus du diagramme d'anneaux 
 \[\xymatrix{
   B \ar@<3pt>[r]|-{\partial_0} \ar@<-3pt>[r]|-{\partial_1} 
-    & B\otimes_A B \ar@<6pt>[r]|-{\partial_0} \ar[r]|-{\partial_0} \ar@<-6pt>[r]|-{\partial_2} 
+    & B\otimes_A B \ar@<6pt>[r]|-{\partial_0} \ar[r]|-{\partial_1} \ar@<-6pt>[r]|-{\partial_2} 
     & B\otimes_A B\otimes_A B
 }\]
 (précisons: on a $\partial_i(b m)=\partial_i(b)\cdot\partial_i(m)$, les 
 identités usuelles telles que $\partial_0\partial_1=\partial_0\partial_0$ 
 sont vraies, et ``cartésien'' signifie que les morphismes 
 $\partial_i:M'\otimes_{B,\partial_i}(B\otimes_A B)\to M''$ et 
-$M'''\otimes_{B\otimes_A B,\partial_i}(B\otimes_A B\otimes_A B)\to M'''$ sont 
+$M''\otimes_{B\otimes_A B,\partial_i}(B\otimes_A B\otimes_A B)\to M'''$ sont 
 des isomorphismes). 
 
 Le foncteur $E\mapsto E_\cU$ devient le foncteur qui, à un $A$-module $M$, 
@@ -395,11 +395,11 @@ Il admet pour adjoint à droite le foncteur
 }\]
 Il nous faut prouver que les flèches d'adjonction 
 \[
-  M \to\ker(M\otimes_A B\rightrightarrows M\otimes_A B\times_A B)
+  M \to\ker(M\otimes_A B\rightrightarrows M\otimes_A B\otimes_A B)
 \]
 et
 \[
-  \ker(M''\twoheadrightarrow M'')\otimes_A B \to M'
+  \ker(M'\rightrightarrows M'')\otimes_A B \to M'
 \]
 sont des isomorphismes. D'après (\ref{I:1-4-2}.i), il suffit de le prouver 
 après un changement de base fidèlement plat $A\to A'$ ($B$ devenant 
@@ -440,7 +440,7 @@ $k'$-espace vectoriel muni d'une action semi-linéaire de $G$, c'est-à-dire:
   \item pour tout $\sigma\in G$, un endomorphisme $\varphi_\sigma$ de la 
     structure de groupe de $V'$ tel que 
     $\varphi_\sigma(\lambda v) = \sigma(\lambda) \varphi_\sigma(v)$, pour 
-    tout $v\in V'$, vérifiant la condition 
+    tout $\lambda\in k'$ et $v\in V'$, vérifiant la condition
   \item pour tout $\sigma,\tau\in G$, on a 
     $\varphi_{\tau\sigma} = \varphi_\tau\circ\varphi_\sigma$. 
 \end{enumerate}
@@ -806,7 +806,7 @@ préfaisceau $\sL^*$ suivant sur $\et X$: pour $\varphi:U\to X$ étale,
 % the original references here are just to (4.2) and (4.5), but the context 
 % makes it seem that they refer to the results in chapter 1. Likewise a little 
 % later
-D'après (\ref{I:1-4-2}.i) et et (\ref{I:1-4-5}) (pleine fidélité), ce 
+D'après (\ref{I:1-4-2}.i) et (\ref{I:1-4-5}) (pleine fidélité), ce 
 préfaisceau est un faisceau; c'est même un $\dG_m$-torseur. On vérifie 
 aussitôt que 
 \begin{enumerate}[\indent a)]
@@ -918,7 +918,7 @@ $x$ dans $k(\bar x)$. Il joue le rôle d'anneau local pour la topologie étale.
 \subsubsection{}\label{I:2-3-2}
 
 Étant donné un faisceau $\sF$ sur $\et X$, on appelle \emph{fibre} de $\sF$ en 
-$\bar x$ l'ensemble (resp. le groupe,\dots) $\sF_{\bar x}=\varprojlim \sF(U)$, 
+$\bar x$ l'ensemble (resp. le groupe,\dots) $\sF_{\bar x}=\varinjlim \sF(U)$, 
 la limite inductive étant toujours prise sur les voisinages étales de  $X$. 
 
 Pour qu'un homomorphisme de faisceaux $\sF\to \sG$ soit un 
@@ -1032,7 +1032,7 @@ Pour $X=\spec(K)$ le spectre d'un corps, nous allons voir que la cohomologie
 
 Commençons par une analogie topologique. Si $K$ est le corps des fonctions 
 d'une variété algébrique affine intègre $Y=\spec(A)$ sur $\dC$, on a 
-$K=\varprojlim_{f\in A} A[1/f]$. 
+$K=\varinjlim_{f\in A} A[1/f]$. 
 
 Autrement dit $X=\varprojlim U$, $U$ parcourant l'ensemble des ouverts de $Y$. 
 On sait qu'il existe des ouverts de Zariski arbitrairement petits qui pour la 
@@ -2152,7 +2152,7 @@ $X_0$ est une courbe, il n'y a pas d'obstruction à relever un faisceau
 inversible sur $X_0$ aux voisinages infinitésimaux $X_n$ de $X_0$, donc au 
 complété formel $\fX$ de $X$ le long de $X_0$. On conclut alors en 
 appliquant successivement le théorème d'existence de Grothendieck et le 
-théorème d;approximation d'Artin. 
+théorème d'approximation d'Artin. 
 
 
 
