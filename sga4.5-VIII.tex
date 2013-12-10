@@ -2028,8 +2028,8 @@ co\"incident dans leur domaine commun de validité.
 \subsection{\texorpdfstring{$\Tor$}{Tor} de faisceaux}\label{VIII:6-2}
 
 Soient $E$ un site annelé (en particulier un espace topologique annelé) 
-$\sA$ le faisceau d'anneaux et $\underline E$ la catégorie des 
-$\sA$-modules. Un objet $X$ de $\underline E$ est dit 
+$\sA$ le faisceau d'anneaux et $\mathsf{Mod}(E)$ la catégorie des 
+$\sA$-modules. Un objet $X$ de $\mathsf{Mod}(E)$ est dit 
 \emph{$\sA$-plat} si pout toute suite exacte: 
 \[\xymatrix{
   0 \ar[r] 
@@ -2040,26 +2040,26 @@ $\sA$-modules. Un objet $X$ de $\underline E$ est dit
 }\]
 la suite: $0 \to Y'\otimes_\sA X \to Y\otimes_\sA X \to Y''\otimes_\sA X\to 0$ 
 est exacte. Il existe suffisamment d'objets $\sA$-plats: les sommes directes 
-d'objets $\sA_{U'}$, où $U$ est un objet de $E$ et $\sA_U$ le faisceau 
+d'objets $\sA_U$, où $U$ est un objet de $E$ et $\sA_U$ le faisceau 
 $\sA$ ``prolongué par zéro en dehors de $U$.'' Le théorème 
 \ref{VIII:4-2-3} s'applique donc et on peut définir le foncteur 
 \begin{align*}
-  \eD^-(\underline E) \times \eD^-(\underline E) &\to \eD^-(\underline E) \\
+  \eD^-(E,\sA) \times \eD^-(E,\sA) &\to \eD^-(E,\sA) \\
   (X,Y) &\mapsto X\lotimes Y 
 \end{align*}
 produit tensoriel total, dérivé gauche du foncteur produit tensoriel. 
 On définit ainsi en passant à la cohomologie les $\Tor_i^\sA(X,Y)$: 
 hyper-tor locaux. 
 
-La catégorie $\cE$ ayant suffisamment d'injectifs, on peut dériver le 
-foncteur: $\hom^\bullet(X,Y)$: complexe des homomorphismes locaux, 
+La catégorie $\mathsf{Mod}(E)$ ayant suffisamment d'injectifs, on peut 
+dériver le foncteur: $\hom^\bullet(X,Y)$: complexe des homomorphismes locaux,  
 d'où $\mathsf{Rhom}(X,Y)$ ($X\in \eD$, $Y\in \eD^+$). 
 
-Soient $X$ et $Y$ deux objets de $\eD^-(\underline E)$, $Z$ un objet de 
-$\eD^+(\underline E)$. Il existe un isomorphisme fonctoriel: 
+Soient $X$ et $Y$ deux objets de $\eD^-(E,\sA)$, $Z$ un objet de 
+$\eD^+(E,\sA)$. Il existe un isomorphisme fonctoriel: 
 \[\xymatrix{
-  \hom_{\eD(\underline E)}(X\lotimes Y,Z) \ar[r]^-\sim 
-    &\hom_{\eD(\underline E)}(X,\mathsf{Rhom}(Y,Z)) \text{.}
+  \hom_{\eD(E,\sA)}(X\lotimes Y,Z) \ar[r]^-\sim 
+    &\hom_{\eD(E,\sA)}(X,\mathsf{Rhom}(Y,Z)) \text{.}
 }\]
 
 
@@ -2076,17 +2076,17 @@ $\eD^+(\underline E)$. Il existe un isomorphisme fonctoriel:
 Soit $f:E\to E'$ une application d'espaces topologiques annelés. Le 
 foncteur image réciproque: 
 \[
-  f^\ast:\underline E' \to \underline E 
+  f^\ast:\mathsf{Mod}(E') \to \mathsf{Mod}(E) 
 \]
 n'est pas nécessairement exact. Mais on sait définir des objets 
 $f^\ast$-plats et il existe suffisamment de tels objets. On sait donc 
 définir le foncteur $\eL^- f^\ast$. On a de même une formule de dualité: 
 
-Soient $X$ un objet de $\eD^-(\underline E)$ et $Y$ un objet de 
-$\eD^+(\underline E')$; il existe un isomorphisme fonctoriel: 
+Soient $X$ un objet de $\eD^-(E,\sA)$ et $Y$ un objet de 
+$\eD^+(E',\sA')$; il existe un isomorphisme fonctoriel: 
 \[\xymatrix{
-  \hom_{\eD(\underline E')}(\eL^- f^\ast(X),Y) \ar[r]^-\sim 
-    & \hom_{\eD(\underline E)}(X,\eR^+ f_\ast(Y)) \text{.}
+  \hom_{\eD(E',\sA')}(\eL^- f^\ast(X),Y) \ar[r]^-\sim 
+    & \hom_{\eD(E,\sA)}(X,\eR^+ f_\ast(Y)) \text{.}
 }\]
 
 
