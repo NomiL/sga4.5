@@ -1236,7 +1236,7 @@ $\delta(T X_0) = - T \delta(X)$ ($X$ objet $q\circ q$, $T$ translation).
 On utilise les notations du \ref{VIII:1-2-3}. On utilisera de plus les 
 notations suivantes: 
 
-\subsection{Notations}\label{VIII:3-1-1}
+\subsubsection{Notations}\label{VIII:3-1-1}
 
 Soit $\cA$ une cat\'egorie ab\'elienne. On pose: 
 \begin{align*}
@@ -1721,6 +1721,374 @@ $\h{}\circ \eK f$ sera not\'e $\eR f$. Lorsqu'aucune confusion n'en r\'esultera
 le foncteur $\eR f\circ T^i$ sera not\'e $\eR^i f$. 
 
 On d\'efinit de m\^eme les foncteurs $\eL^- f$, $\eL f$, $\eL^i f$. 
+
+
+
+
+
+\subsubsection{Remarques}\label{VIII:4-1-6}
+
+Ces d\'efinitions contiennent, ainsi que nous le verrons dans le num\'ero 
+suivant, la d\'efinition classique des foncteurs d\'eriv\'es lorsque les 
+cat\'egories ont suffisamment d'injectifs ou de projectifs et que les complexes 
+sont convenablement limit\'es. Elles sont cependant plus g\'en\'erales. Mais 
+sans autres hypoth\`eses elles sont peu maniables. Par exemple, soit 
+$f:\cA\to \cB$ un foncteur additif entre deux cat\'egories ab\'eliennes. 
+Supposons que les foncteurs $\eR^+ f$ et $\eR f$ existent. Je ne sais pas 
+d\'montrer que $\eR f$ induit sur $\eD^+(\cA)$ le foncteur $\eR^+ f$. Supposons 
+de plus que le foncteur $\eR^+ f$ (d\'eriv\'e cohomologique) existe. Je ne sais 
+pas d\'emontrer que le foncteur $\h^0{}\circ \eR^+ f$ est isomorphe au foncteur 
+$\eR^+ f$. Cependant dans la pratique ces propri\'et\'es seront v\'erif\'ees. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Existence des foncteurs d\'eriv\'es}\label{VIII:4-2}
+
+
+
+
+
+\begin{proposition}\label{VIII:4-2-1}
+Les hypoth\`eses sont celles de la d\'efinition \label{VIII:4-1-4}. Supposons 
+en outre que $\cA$ soit un $\sU$-cat\'egorie, o\`u $\sU$ est un universe tel 
+que l'ensemble $\dZ$ des entiers rationnel soit un \'el\'ement de $\sU$, telle 
+que l'ensemble des objets de $\cA$ soit un \'el\'ement de $\sU$. Supposons 
+de plus que la cat\'egorie $\cB$ soit la cat\'egorie des $\sU$-groupes 
+ab\'eliens ou plus g\'en\'erelement la cat\'egorie des faisceaux de 
+$\sU$-groupes ab\'eliens sur un $\sU$-site quelconque. (Un $\sU$-site est une 
+$\sU$-cat\'egorie, dont l'ensemble des onjets est un \'el\'ement de $\sU$, 
+munie d'une topologie.) Le foncteur $F$ admet un foncteur d\'eriv\'e 
+cohomologique \`a droite. Ce foncteur se calcule de la mani\`ere suivante: 
+
+Soient $X$ un objet de $\eD^\ast(\cA)$, $\underline X$ l'objet de 
+$\eK^\ast(\cA)$ au-dessus de $X$. On a alors un isomorphisme fonctoriel: 
+\[
+  \eR F(X) = \varinjlim_{\underline X/\mathsf{Qis}^\ast} F(-) \text{.}
+\]
+\end{proposition}
+
+En particulier soit $f:\cA\to \cB$ un foncteur additif. Les foncteurs 
+$\eR f$ et $\eR^+ f$ existent et se calculent de la mani\`ere indiqu\'ee 
+ci-dessus. Le foncteur $\eR f$ induit sur $\eD^+(\cA)$ le foncteur 
+$\eR^+ f$. Comme aucune confusion ne peut alors en r\'esulter, nous 
+emploierons la notation $\eR^i f$. 
+
+
+
+
+
+\subsubsection{Remarques}\label{VIII:4-2-2}
+
+On peut exprimer la proposition \ref{VIII:4-2-1} sous une forme plus 
+g\'en\'erale dans le cadre des cat\'egories triangul\'ees. Les hypoth\`eses 
+\`a faire sur la cat\'egorie $\cB$, pour assurer la validit\'e de la 
+proposition \ref{VIII:4-2-1} sont des hypoth\`eses d'existence et d'exactitude 
+des limites inductives suivant les $\sU$-cat\'egories pseudo-filtrantes, dont 
+les ensembles d'objet sont \'el\'ements de $\sU$. La proposition 
+\ref{VIII:4-2-1} introduit une dissym\'etrie entre les foncteurs d\'eriv\'es 
+droits et les foncteurs d\'eriv\'es gauches tout au moins dans la pratique. 
+
+
+
+
+
+\begin{theorem}\label{VIII:4-2-3} % labelled 4.2.2 in original
+Les donn\'ees sont celles de la d\'efinition \ref{VIII:4-1-2}. On se donne de 
+plus une sous-cat\'egorie triangul\'ee pleine de $\eK^\ast(\cA)$: $\cC$, et on 
+d\'signe par $\cN$ la sous-cat\'egorie triangul\'ee pleine des objets de $\cC$ 
+qui sont acycliques. Supposons que 
+\begin{enumerate}[(1)]
+  \item Tout objet de $\cN$ soit transform\'e par $\Phi$ en objet acyclique 
+    de $\eK^{\ast'}(\cB)$. 
+  \item Tout objet $X$ de $\eK^\ast(\cA)$ soit source (resp. but) d'un 
+    quasi-isomorphisme dont le but (resp. la source) soit un objet de $\cC$. 
+\end{enumerate}
+\begin{enumerate}[a)]
+  \item Alors $\Phi$ admet un foncteur d\'eriv\'e total \`a droite (resp. 
+    \`a gauche). 
+  \item Le fonteur $\eR \Phi$ (resp. $\eL \Phi$) s'obtient de la mani\`ere 
+    suivante: 
+    
+    La restriction du foncteur 
+    $Q'\circ \Phi:\eK^\ast(\cA) \to \eD^{\ast'}(\cB)$ \`a la cat\'egorie $\cC$ 
+    s'annule sur les objets de $\cN$, donc se factorise par $\cC/\cN$. On 
+    obtient ainsi un foncteur $\Phi':\cC/\cN\to \eD^{\ast'}(\cB)$. Mais le 
+    foncteur naturel: $\cC/\cN\to \eD^\ast(\cA)$ est une \'equivalence de 
+    cat\'egories (th\'or\`me \ref{VIII:2-4-2}). D'o\`u en composant avec le 
+    foncteur quasi-inverse le foncteur $\eR\Phi$ (resp. $\eL \Phi$). 
+  \item Soit $X$ un objet de $\eK^\ast(\cA)$. Soient $Y$ un objet de $\cC$ et 
+    $X\to Y$ (resp. $Y\to X$) un quasi-isomorphisme. L'objet 
+    $\eR\Phi\circ Q(X)$ (resp. $\eL \Phi\circ Q(X)$) est isomorphe \`a 
+    $Q\circ \Phi(Y)$. 
+  \item Le foncteur $X\mapsto \eR\Phi\circ Q(X)$ (resp. 
+    $X\mapsto \eL \Phi\circ Q(X)$) est isomorphe au foncteur: 
+    $X\mapsto \varinjlim_{X/\mathsf{Qis}^\ast} Q\circ\Phi(-)$ (resp. 
+    $X\mapsto \varinjlim_{\mathsf{Qis}^\ast/X} Q\circ \Phi(-)$). 
+  \item Le foncteur $\h^0{}\circ \Phi:\eK^\ast(\cA)\to \cB$, admet un 
+    foncteur d\'eriv\'e cohomologique \`a droite (resp. \`a gauche) qui n'est 
+    autre que le foncteur $\h^0{}\circ\eR\Phi$ (resp. $\h^0{}\circ \eL\Phi$). 
+\end{enumerate}
+\end{theorem}
+
+
+
+
+
+\begin{corollary}\label{VIII:4-2-3-1} % originally corollary 1
+Supposons que $\ast=+$ (resp. $\ast=-$) dans les hypoth\`eses du th\'eor\`eme 
+pr\'ec\'edent, et que $\cA$ poss\`ede suffisamment d'injectifs (resp. de 
+projectifs). Alors le th\'eor\`eme \ref{VIII:4-2-3} s'applique en prenant pour 
+$\cC$ la cat\'egorie des complexes injectifs (resp. projectifs). Supposons de 
+plus que $\cA$ soit de dimension cohomologique finie, alors le th\'eor\`eme 
+s'applique, sans restriction sur $\ast$, en prenant sur $\cC$ la cat\'egorie 
+des complexes injectifs (resp. projectifs). 
+\end{corollary}
+
+
+
+
+
+\begin{definition}\label{VIII:4-2-5} % originally 2.4
+Soient $\cA$ et $\cB$ deux cat\'egories ab\'eliennes et $f:\cA\to \cB$ un 
+foncteur additif. 
+
+On dira que $f$ est de \emph{dimension cohomologique finie} \`a droite (resp. 
+\`a gauche) si $\eR^+ f$ (resp. $\eL^- f$) existe et s'il existe un entier 
+$m\geqslant 0$ tel que pour tout entier $n>m$, $\eR^n f$ (resp. 
+$\eL^{-n} f$) soit nul sur les objets provenant de $\cA$ par le foncteur $D$. 
+La \emph{dimension cohomologique} \`a droite (resp. \`a gauche) de $f$ est 
+alors le plus petit des entiers $m$ poss\'edant la propri\'et\'e ci-dessus. Si 
+$\eR^+ f$ (resp. $\eL^- f$) existe et si $f$ n'est pas de dimension 
+cohomologique finie, on dira que $f$ est de dimension cohomologique infinie. 
+
+Un objet $X$ de $\cA$ sera dit \emph{$f$-acyclique} \`a droite (resp. \`a 
+gauche) si pour tout entier $n>0$, $\eR^n f(D(X)) = 0$ (resp. 
+$\eL^{-n} f(D(X))=0$). 
+\end{definition}
+
+
+
+
+
+\begin{corollary}\label{VIII:4-2-3-2} % originally corollary 2
+Les donn\'ees sont celles de la d\'efinition \ref{VIII:4-2-5}. Supposons qu'il 
+existe un ensemble $\sigma$ d'objets de $\cA$ stable par somme directe 
+poss\'edant les propri\'et\'es suivantes: 
+\begin{enumerate}
+  \item Tout complexe acyclique $\in \operatorname{Ob}{\eK^+(\cA)}$ (resp. 
+    $\in\operatorname{Ob}{\eK^-(\cA)}$) d'objets de $\sigma$, est transform\'e 
+    par $f$ en complexe acyclique. 
+  \item Tout objet $X$ de $\cA$ s'injecte dans (resp. est quotient de) un objet 
+    de $\sigma$. Les hypoth\`eses du th\'eor\`eme \ref{VIII:2-4-3} sont 
+    v\'erifi\'ees en prenant $\ast=+$ (resp. $\ast=-$) et en prenant pour 
+    cat\'egorie $\cC$, la cat\'egorie des complexes dont les objets et tout 
+    degr\'e sont des \'el\'ements de $\sigma$. Les \'el\'ements de $\sigma$ 
+    sont des objets $f$-acycliques \`a droite (resp. \`a gauche). 
+\end{enumerate}
+
+Si de plus $f$ est de dimension cohomologique finie \`a droite (resp. \`a 
+gauche), l'ensemble des objets $f$-acycliques \`a droite (resp. \`a gauche) 
+[pss\`ede en plus des propri\'et\'es (1) et (2) ci-dessus, la propri\'et\'e 
+(2) de proposition \ref{VIII:3-1-9}. Le Th\'eor\`eme \ref{VIII:4-2-3} 
+s'applique alors au foncteur $\eK f$ en prenant pour cat\'egorie $\cC$ la 
+cat\'egorie des complexes dont les objets sont $f$-acycliques \`a droite 
+(resp. \`a gauche) en tout degr\'e. Le foncteur $\eR f$ (resp. $\eL f$) existe 
+et induit sur $\eD^+(\cA)$ le foncteur $\eR^+ f$ (resp. $\eL^+ f$) et sur 
+$\eD^-(\cA)$ le foncteur $\eR^- f$ (resp. $\eL^- f$). 
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+\subsection{Produit. Composition}\label{VIII:4-3}
+
+Soient $\cA$ une cat\'egorie ab\'elienne, $F:\eD(\cA) \to \mathsf{Ab}$ un 
+foncteur cohomologique. Soient $X^\bullet$ et $Y^\bullet$ deux objets de 
+$\eC(\cA)$. Le foncteur $F$ d\'efinit une application: 
+\[
+  \ext^0(X^\bullet,Y^\bullet) \to \hom_{\mathsf{Ab}}(F(D(X^\bullet)),F(D(Y^\bullet)))
+\]
+d'o\`u un accouplement: 
+$F(D(X^\bullet))\times \ext^0(X^\bullet,Y^\bullet) \to F(D(Y^\bullet))$. 
+
+Cet accouplement donne, en appliquant des translations, des accouplements: 
+\[
+  F^i(D(X^\bullet))\times \ext^j(X^\bullet,Y^\bullet) \to F^{i+j}(D(Y^\bullet)) \text{.}
+\]
+Ces accouplements, appliqu\'es aux foncteurs d\'eriv\'es cohomologiques, ne 
+sont autres, par d\'efinition, que les produits de Yoneda. Les propri\'et\'es 
+de ces produits se d\'eduisent imm\'ediatement de cette d\'efinition. Nous ne 
+les d\'evelopperons pas ici. 
+
+Soient $\cA$, $\cA'$, $\cA''$ trois cat\'egories ab\'eliennes et 
+$f:\cA\to \cA'$, $g:\cA'\to \cA''$ deux foncteurs additifs. Supposons que les 
+foncteurs $\eR^+ f$ et $\eR^+ g$ existent. Je ne sais pas en d\'eduire que le 
+foncteur $\eR^+ g\circ f$ existe et m\^eme si ce dernier foncteur existe, il 
+n'est probablement pas vraie en g\'en\'eral que l'on ait la formule: 
+\[\xymatrix{
+  \eR^+ g\circ f\ar[r]^-\sim 
+    & \eR^+ g \circ \eR^+ f 
+}\]
+On a cependant la proposition suivante: 
+
+
+
+
+
+\begin{proposition}\label{VIII:4-3-1}
+Supposons que la cat\'egorie $\cA'$ poss\`ede suffisamment d'objets 
+$g$-acycliques \`a droite et que la cat\'egorie $\cA$ poss\`ede suffisamment 
+d'objets $f$-acycliques \`a droite transform\'es par $f$ en objets 
+$g$-acycliques \`a droite. Alors le foncteur $\eR^+ g\circ f$ existe et on a un 
+isomorphisme: 
+\[\xymatrix{
+  \eR^+ g\circ f \ar[r]^-\sim 
+    & \eR^+ g \circ \eR^+ f \text{.}
+}\]
+\end{proposition}
+
+Enonc\'e analogues pour les foncteurs d\'eriv\'es gauches. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Exemples}\label{VIII:6} % originally chapter 2, section 3
+
+
+
+
+
+
+
+
+
+
+\subsection{Le foncteur \texorpdfstring{$\mathsf{Rhom}$}{Hom*}}\label{VIII:6-1}
+
+Soit $\cA$ une cat\'egorie ab\'elienne, poss\'edant suffisamment d'injectifs. 
+
+Le foncteur: $Y\mapsto \hom^\bullet(X^\bullet,Y^\bullet)$ (\ref{VIII:1-3}) 
+o\`u $X^\bullet$ est un objet de $\eK(\cA)$ et $Y^\bullet$ un objet de 
+$\eK^+(\cA)$, admet un foncteur d\'eriv\'e total \`a droite 
+(Corollaire \ref{VIII:4-2-3-1}) qui sera not\'e $\rhom^\bullet(X^\bullet,-)$.  
+Soit $Y$ un objet de $\eD^+(\cA)$ le foncteur 
+\begin{align*}
+  \eK(\cA) &\to \eD(\mathsf{Ab}) \\
+  X^\bullet &\mapsto \rhom^\bullet(X^\bullet,Y) 
+\end{align*}
+est exact et s'annule sur les complexes acycliques, d'o\`u un bi-foncteur 
+exact 
+\[\xymatrix{
+  \eD(\cA)^\circ \times \eD^+(\cA) \ar[r] 
+    & \eD(\mathsf{Ab}) 
+}\]
+que nous d\'esignerons par $\mathsf{Rhom}^\bullet$. 
+
+Lorsque $\cA$ est de dimension cohomologique finie, le foncteur 
+$\mathsf{Rhom}^\bullet$ se prolonge \`a $\eD(\cA)^\circ\times \eD(\cA)$ 
+(loc. cit.). 
+
+Si en outre $\cA$ poss\`ede suffisamment de projectifs on peut d\'eriver le 
+foncteur $\hom$ par rapport au premier argument. Les deux d\'efinitions 
+co\"incident dans leur domaine commun de validit\'e. 
+
+
+
+
+
+
+
+
+
+
+\subsection{\texorpdfstring{$\Tor$}{Tor} de faisceaux}\label{VIII:6-2}
+
+Soient $E$ un site annel\'e (en particulier un espace topologique annel\'e) 
+$\sA$ le faisceau d'anneaux et $\underline E$ la cat\'egorie des 
+$\sA$-modules. Un objet $X$ de $\underline E$ est dit 
+\emph{$\sA$-plat} si pout toute suite exacte: 
+\[\xymatrix{
+  0 \ar[r] 
+    & Y' \ar[r] 
+    & Y \ar[r] 
+    & Y'' \ar[r] 
+    & 0 
+}\]
+la suite: $0 \to Y'\otimes_\sA X \to Y\otimes_\sA X \to Y''\otimes_\sA X\to 0$ 
+est exacte. Il existe suffisamment d'objets $\sA$-plats: les sommes directes 
+d'objets $\sA_{U'}$, o\`u $U$ est un objet de $E$ et $\sA_U$ le faisceau 
+$\sA$ ``prolongu\'e par z\'ero en dehors de $U$.'' Le th\'eor\`eme 
+\ref{VIII:4-2-3} s'applique donc et on peut d\'efinir le foncteur 
+\begin{align*}
+  \eD^-(\underline E) \times \eD^-(\underline E) &\to \eD^-(\underline E) \\
+  (X,Y) &\mapsto X\lotimes Y 
+\end{align*}
+produit tensoriel total, d\'eriv\'e gauche du foncteur produit tensoriel. 
+On d\'efinit ainsi en passant \`a la cohomologie les $\Tor_i^\sA(X,Y)$: 
+hyper-tor locaux. 
+
+La cat\'egorie $\cE$ ayant suffisamment d'injectifs, on peut d\'eriver le 
+foncteur: $\hom^\bullet(X,Y)$: complexe des homomorphismes locaux, 
+d'o\`u $\mathsf{Rhom}(X,Y)$ ($X\in \eD$, $Y\in \eD^+$). 
+
+Soient $X$ et $Y$ deux objets de $\eD^-(\underline E)$, $Z$ un objet de 
+$\eD^+(\underline E)$. Il existe un isomorphisme fonctoriel: 
+\[\xymatrix{
+  \hom_{\eD(\underline E)}(X\lotimes Y,Z) \ar[r]^-\sim 
+    &\hom_{\eD(\underline E)}(X,\mathsf{Rhom}(Y,Z)) \text{.}
+}\]
+
+
+
+
+
+
+
+
+
+
+\subsection{Foncteur d\'eriv\'e gauche de l'image r\'eciproque}\label{VIII:6-3}
+
+Soit $f:E\to E'$ une application d'espaces topologiques annel\'es. Le 
+foncteur image r\'eciproque: 
+\[
+  f^\ast:\underline E' \to \underline E 
+\]
+n'est pas n\'ecessairement exact. Mais on sait d\'efinir des objets 
+$f^\ast$-plats et il existe suffisamment de tels objets. On sait donc 
+d\'efinir le foncteur $\eL^- f^\ast$. On a de m\^eme une formule de dualit\'e: 
+
+Soient $X$ un objet de $\eD^-(\underline E)$ et $Y$ un objet de 
+$\eD^+(\underline E')$; il existe un isomorphisme fonctoriel: 
+\[\xymatrix{
+  \hom_{\eD(\underline E')}(\eL^- f^\ast(X),Y) \ar[r]^-\sim 
+    & \hom_{\eD(\underline E)}(X,\eR^+ f_\ast(Y)) \text{.}
+}\]
+
 
 
 

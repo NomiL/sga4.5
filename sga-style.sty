@@ -20,11 +20,13 @@
   amssymb,
   amsthm,
   bm,        % to get bold symbols to work with stmaryrd
+  calligra,  % for sheaf hom
   enumerate, % allows \begin{enumerate}[\indent a)]
   mathrsfs,  % allows \mathscr
 %  microtype, % improves general appearance
   stmaryrd   % allows \llbracket, i.e. [[t]]
 }
+%\usepackage[T1]{fontenc} % with calligra, but causes everything to crash
 \usepackage[kerning=true]{microtype} % improves general appearance
 \usepackage[backref=page,pdfpagelabels]{hyperref}
 %\setcounter{secnumdepth}{6}
@@ -38,13 +40,13 @@
   \DeclareMathOperator{\dv}{div}
   \DeclareMathOperator{\Div}{Div}
   \DeclareMathOperator{\ext}{Ext}
-  \DeclareMathOperator{\Ext}{\mathsf{Ext}} % sheaf ext
+  \DeclareMathOperator{\Ext}{\mathscr{E}\text{\kern -2pt {\calligra\large xt}}\,\,} % sheaf ext
   \DeclareMathOperator{\gal}{Gal}
   \DeclareMathOperator{\gl}{GL}
   \DeclareMathOperator{\gr}{gr}
   \DeclareMathOperator{\h}{H}
   \DeclareMathOperator{\hh}{\mathsf{H}} % hypercohomology?
-  \DeclareMathOperator{\Hom}{\mathsf{hom}} % sheaf hom
+  \DeclareMathOperator{\Hom}{\mathscr{H}\text{\kern -3pt {\calligra\large om}}\,} % sheaf hom
   \DeclareMathOperator{\im}{im}
   \DeclareMathOperator{\ob}{Ob}
   \DeclareMathOperator{\pgl}{PGL}
@@ -53,6 +55,7 @@
   \DeclareMathOperator{\spec}{Spec}
   \DeclareMathOperator{\swan}{Sw}
   \DeclareMathOperator{\tor}{Tor}
+  \DeclareMathOperator{\Tor}{\mathscr{T}\text{\kern -4pt {\calligra\large or}}\,} % sheaf tor
   \DeclareMathOperator{\tr}{tr}
 
 
@@ -83,8 +86,8 @@
   \newcommand{\R}{\mathsf{R}} % should be turned into \eR
   \newcommand{\D}{\mathsf{D}} % should be turned into \eD
   \newcommand{\lotimes}{{\overset{\mathsf{L}}{\otimes}}}
-  \newcommand{\rhom}{\mathsf{R}\hom}
-  \newcommand{\rHom}{\mathsf{Rhom}}
+  \DeclareMathOperator{\rhom}{\mathsf{R}\hom}
+  \DeclareMathOperator{\rHom}{\mathsf{Rhom}}
   \renewcommand{\setminus}{\smallsetminus}
 
 
