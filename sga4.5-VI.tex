@@ -429,7 +429,9 @@ Il est rare qu'on puisse explicitement calculer le membre de droite de
 
 
 
-\subsection{Exemple: Une quadrique projective non singuli\`ere de dimension impaire sur \texorpdfstring{$\dF_q$}{Fq} a le m\^eme nombre de points rationnels que l'espace projectif sur \texorpdfstring{$\dF_q$}{Fq} de la m\^eme dimension.}
+\subsection{Exemple}\label{VI:1-10}
+
+Une quadrique projective non singuli\`ere de dimension impaire sur \texorpdfstring{$\dF_q$}{Fq} a le m\^eme nombre de points rationnels que l'espace projectif sur \texorpdfstring{$\dF_q$}{Fq} de la m\^eme dimension.
 
 Si, sur $\dC$, $X$ est une hypersurface quadrique non singuli\`ere dans 
 l'espace projectif $\dP^{2 N}$, et $Y$ un hyperplan, on sait que pour 
@@ -1093,7 +1095,7 @@ $(X_i)_{i\in I}$ un recouvrement ferm\'e (resp. ouvert) fini de $X$ par des
 sous-sch\'emas, et $\sF$ un $E_\lambda$-faisceau sur $X$. Pour $J\subset I$, 
 soit $X_J$ l'intersection des $X_j$ ($j\in J$). On a des suites spectrales 
 respectives (de Leray) 
-\begin{align*}\tag{2.6.1*}\label{VI:eq:2-6-1}
+\begin{align*}\tag{2.6.1*}\label{VI:eq:2-6-1*}
   E_1^{p q} &= \bigoplus_{|J|=p+1>0} \h_c^q(X_J,\sF) \otimes_\dZ \textstyle\bigwedge^{|J|} \dZ^J \Rightarrow \h_c^{p+q}(X,\sF) \\ 
   \tag{2.6.2*}\label{VI:eq:2-6-2*}
   E_1^{p q} &= \bigoplus_{|J|=1-p>0} \h_c^q(X_J,\sF) \otimes_\dZ \textstyle\bigwedge^{|J|} \dZ^J \Rightarrow \h_c^{p+q}(X,\sF)
@@ -1247,14 +1249,271 @@ $\sF$, et
 
 
 
+\subsection{}\label{VI:3-3}
+
+Soient $\bar X$, $j:X\hookrightarrow\bar X$ et $\sF$ comme en \ref{VI:3-2}. Le 
+th\'eor\`eme de dualit\'e de Poincar\'e admet la forme tr\`es maniable: 
+$\h^i(\bar X,j_\ast \sF)$ et $\h^{2-i}(\bar X,j_\ast(\sF^\vee(1)))$ sont 
+duaux l'un de l'autre (\hyperlink{V}{Dualit\'e}, \ref{V:1-3}). 
+
+
+
+
+
+\subsection{}\label{VI:3-4}
+
+Faisons $k=\dF$, et supposons que $X$, $\bar X$, et $\sF$ proviennent de 
+$X_0$, $\bar X_0$ et $\sF_0$ sur $\dF_q$. Si $\sF_0$ devient trivial sur un 
+rev\^etement fini de $X_0$, Weil a prouv\'e que les conjugu\'es complexes des 
+valeurs propres de $F^\ast$ sur $\h^i(\bar X,j_\ast\sF)$ sont de valeur 
+absolue $q^{i/2}$. De tels faisceaux $\sF_0$ correspondent aux fonctions $L$ 
+d'Artin sur le corps de fonctions de $\bar X_0$. 
+
+
+
+
+
+\subsection*{3.5}\label{VI:3-5_} % originally one of two 3.5s
+
+Sous les m\^emes hypoth\`eses, ou plus g\'en\'eralement si $E_\lambda$ est le 
+compl\'et\'e en une place $\lambda$ d'un corps de nombres $E$ et que $\sF_0$ 
+appartient \`a un syst\`eme compatible infini de repr\'esentations $v$-adiques 
+($v$ place de $E$), on peut calculer 
+\[
+  \prod_i \det(-F^\ast,\h^i(X,\sF))^{(-1)^i} 
+\]
+\`a partir d'informations \emph{locales} sur $\sF_0$. Ceci est explique dans 
+\cite{de73}. Pour $\sF_0$ trivial sur un rev\^etement fini de $X_0$, c'est 
+l'expression de la constante de l'\'equation fonctionnelle d'une fonction $L$ 
+d'Artin comme produit de constantes locales. 
+
+
+
+
+
+\subsection{Exemple}\label{VI:3-5}
+
+Soit $\psi$ le caract\`ere 
+$\exp\left(\frac{2\pi i}{p} \tr_{\dF_q/\dF_p}\right)$ de $\dF_q$; on a 
+$\psi(a^p-a)=0$. Soient $X_0$ un courbe projective lisse absolument 
+irr\'eductible de genre $g$ sur $\dF_q$, et $f$ une fonction rationnelle sur 
+$X_0$, i.e. un morphisme $f:X_0 \to \dP^1$, non identiquement \'egale \`a 
+$\infty$. On s'int\'erresse \`a la somme 
+\[
+  S_f' = \sum_{\substack{x\in X_0(\dF_q) \\ f(x)\ne \infty}} \psi(f(x)) 
+  \text{.}
+\]
+Cette somme est nulle pour $f$ de la forme $g^p-g$. Ceci sugg\`ere de 
+modifier la somme $S_f'$ comme suite: 
+\begin{enumerate}[\indent a)]
+  \item pour tout point ferm\'e $x$ de $X_0$, on pose $v_x(f) = $ ordre du 
+    pole de $f$ en $x$ si $f(x)=\infty$, $v_x(f)=0$ sinon, et 
+    $v_x^\ast(f) = \inf v_x(f+g^p-g)$ (borne inf\'erieure sur $g$). 
+  \item Si $v_x^\ast(f)=0$, que $x\in X_0(\dF_q)$, et que $f+g^p-g$ est 
+    r\'egulier en $x$, on pose $\psi(f(x)) = \psi((f+g^p-g)(x))$. On pose enfin 
+    \begin{equation*}\tag{3.5.1}\label{VI:eq:3-5-1}
+      S_f = \sum'_{x\in X_0(\dF_q)} \psi(f(x)) \text{,}
+    \end{equation*}
+    o\`u $(-)'$ indique que la somme est \'etendue aux $x$ tels que 
+    $v_x^\ast(f)=0$. 
+\end{enumerate}
+
+On a $S_f=S_{f+g^p-g}$. On se propose de v\'erifier que si $f$ n'est pas la 
+forme $g^p-g+c^{t e}$, alors 
+\begin{equation*}\tag{3.5.2}\label{VI:eq:3-5-2}
+  |S_f|\leqslant \left(2 g-2+\sum_{v_x^\ast(f)\ne 0} [k(x):\dF_q] (1+v_x^\ast(f))\right) q^{1/2} \text{.}
+\end{equation*}
+
+On commence par passer du complexe au $\ell$-adique, en remplaçant $\psi$ par 
+un caract\`ere de la forme $\psi_0\circ \tr_{\dF_q/\dF_p}$, avec 
+$\psi_0:\dF_p\hookrightarrow E_\lambda^\times$. Pour $j:U_0\hookrightarrow X_0$ 
+l'inclusion de l'ouvert o\`u $f\ne\infty$, on preuve alors que 
+\begin{equation*}\tag{3.5.3}\label{VI:eq:3-5-3}
+  S_f = \sum (-1)^i \tr(F^\ast,\h^i(X,j_\ast \sF(\psi f))) \text{.} 
+\end{equation*}
+
+La formule des traes ram\`ene cet \'enonc\'e aux suivants (pour 
+$x\in X_0(\dF_q)$): 
+\begin{enumerate}[\indent a)]
+  \item Si $v_x^\ast(f)=0$, alors $F_x^\ast$ sur $j_\ast \sF(\psi f)$ est 
+    $\psi(f(x))$; 
+  \item Si $v_x^\ast(f)\ne 0$, alors $j_\ast \sF(\psi f)$ se ramifie en $x$: 
+    $(j_\ast \sF(\psi f))_{\bar x}=0$. 
+\end{enumerate}
+
+La formule a) r\'esulte de \eqref{VI:eq:1-7-6} si $v_x(f)=0$, et on se ram\`ene 
+\`a ce cas en remplaçant $f$ par $f+g^p-g$: \`a isomorphisme pr\`es, ceci ne 
+change pas $\sF(\psi f)_0$ sur l'ouvert o\`u $f$ et $g$ sont r\'eguliers 
+(\ref{VI:1-3}). 
+
+La formule b) r\'esulte de 
+\begin{equation*}\tag{3.5.4}\label{VI:eq:3-5-4}
+  \swan_x \sF(f,\psi) = v_x^\ast(f) \text{.} 
+\end{equation*}
+Apr\`es r\'eduction au cas o\`u $v_x(f)=v_x^\ast(f)$ (d'o\`u $p\nmid v_x(f)$) 
+et extension des scalaires \`a $\dF$, cette formule est dans 
+\cite[4.4]{se61}. 
+
+Enfin, on v\'erifie que le faisceau $\sF(\psi f)$ sur $U$ est non constant si 
+$f$ n'est pas de la forme $g^p-g+c^{t e}$: puisque $\psi_0$ est injectif, la 
+trivialit\'e de $\sF(\psi f)=\sF(\psi_0 f)$ (\ref{VI:1-8}.ii) \'equivaut \`a 
+celle du $\dF_q$-torseur d'\'equation serait l'image r\'eciproque d'un 
+$\dF_q$-torseur sur $\spec(\dF_q)$, d'\'equation $T^p-T-\lambda=0$, le 
+$\dF_p$-torseur d'\'equation $T^p-T-(f-\lambda)=0$ sur $U_0$ serait trivial 
+et $f$ serait donc de la forme $g^p-g+\lambda$. Les 
+$\h^i(\bar X,j_\ast \sF(\psi f))$ sont donc nuls pour $i\ne 1$, la formule 
+\eqref{VI:eq:3-5-3} se r\'eduit \`a 
+\begin{equation*}\tag{3.5.5}\label{VI:eq:3-5-5}
+  S_f = -\tr(F^\ast,\h^1(\bar X,j_\ast \sF(\psi f))) 
+\end{equation*}
+et, d'apr\`es \eqref{VI:eq:3-2-1} et \eqref{VI:eq:3-5-4}, de $\h^1$ est de 
+dimension $2 g-2+\sum_{v_x^\ast(f)>0} [k(x):\dF_q](1+v_x^\ast(f))$ et $-S_f$ 
+est somme de ce nombre de valeurs propres de $F^\ast$, chacune de valeurs 
+absolues complexes $q^{1/2}$. 
+
+
+
+
+
+\subsection{}\label{VI:3-6}
+
+Supposons que, pour un automorphisme $\sigma$ de $X_0$, on ait 
+\[
+  f(\sigma x) = - f(x) \text{.} 
+\]
+La somme $S_f$ est alors r\'eelle. Si $\sigma$ est involutif, la dualit\'e de 
+Poincar\'e permet de dire un peu plus: si on pose 
+$\sF_0=j_\ast \sF(\psi f)$, $\sG_0 = j_\ast \sF(\psi(-f))$, on a 
+\begin{enumerate}[\indent a)]
+  \item $\sF_0$ et $\sG_0$ sont en dualit\'e, 
+  \item $\sigma^\ast \sF_0 \iso \sG_0$ et $\sigma^\ast \sG_0 \iso \sF_0$, pour 
+    des isomorphismes naturels tel que le compos\'e 
+    $\sF_0=(\sigma^2)^\ast \sF_0 \iso \sigma^\ast \sG_0 \iso \sF_0$ soit 
+    l'identit\'e. 
+  \item L'accouplement $\sF_0\otimes \sG_0 \to E_\lambda$ v\'erifie 
+    $\sigma^\ast(f\cdot g) = \sigma^\ast(f) \cdot \sigma^\ast (g)$. 
+\end{enumerate} 
+
+Passant \`a cohomologie, on trouve que $\h^1(X,\sF)$ et $\h^1(X,\sF)$ sont en 
+dualit\'e parfaite \`a valeur dans $E_\lambda(1)$, et que la forme bilin\'eaire 
+$\alpha\cdot \sigma^\ast\beta$ sur $\h^1(X,\sF)$ est \emph{altern\'ee}: 
+$\sigma^\ast$ agit trivialement sur $E_\lambda(1)$, et 
+\[
+  \alpha\cdot \sigma^\ast \beta = \sigma^\ast(\alpha\cdot \sigma^\ast \beta) = \sigma^\ast \alpha\cdot \beta = -\beta\cdot \sigma^\ast \alpha \text{.} 
+\]
+On en conclut que $\h^1(X,\sF)$ est de dimension paire (on v\'erifie d'ailleurs 
+facilement que chaque $v_x^\ast(f)$ non nul est impair) et que les valeurs 
+propres de $F^\ast$ sur $\h^1(X,\sF)$ sont group\'ees en pairs $\alpha$ et 
+$q/\alpha$. 
+
+
+
+
+
+\subsection{Exemple}\label{VI:3-7}
+
+Ceci s'applique aux sommes de Kloosterman 
+$\sum_{x\in \dF_q^\times} \psi\left(x+\frac a x\right)$ (faire 
+$X_0=\dP^1$, $f=x+\frac a x$, $\sigma x=-x$; les p\^oles de $f$ sont $0$ et 
+$\infty$, et en chacun d'eux $v_x^\ast(f)=1$; le $\h^1$ est de dimension 
+$-2+2+2=2$). On a donc (pour $a\ne 0$) 
+\[
+  \sum_{\substack{x y=a \\ x,y\in \dF_{q^n}}} \exp\left(\frac{2\pi i}{p} \tr_{\dF_{q^n}/\dF_p}(x+y)\right) = (-\alpha^n+\alpha^{-n}) \qquad \text{, }\alpha\bar \alpha = q \text{.} 
+\]
+Ce r\'esultat est d\^u \`a L.\ Carlitz \cite{ca69}. 
+
+Voici maintenant une application d'une m\'ethode de Lang-Weil. 
+
+
+
+
+
 \begin{proposition_}\label{VI:3-8}
 Soit $P\in \dF_q[X_1,\dots,X_n]$ un polyn\^ome \`a $n$ variable, de degr\'e 
-$d$, dont on suppose qu'il n'est pas de la forme $Q^P-Q+C^{te}$. Posant encore 
+$d$, dont on suppose qu'il n'est pas de la forme $Q^p-Q+C^{te}$. Posant encore 
 $\psi(x) = \exp\left(\frac{2\pi i}{p} \tr_{\dF_q/\dF_p}(x)\right)$ on a 
 \[
   \left|\sum_{x_i\in \dF_q} \psi P(x_1,\dots,x_n)\right| \leqslant (d+1) q^{n-\frac 1 2} \text{.}
 \]
 \end{proposition_}
+
+On a pour le membre de gauche l'estimation triviale $q^n$. Il suffit donc de 
+prouver \ref{VI:3-8} lorsque $d-1<q^{1/2}$; supposons seulement que 
+$d<q+1$, et soit $P_d$ la partie homog\`ene de degr\'e $d$ de $P$. Rappelons le 
+
+
+
+
+
+\begin{lemma_}\label{VI:3-9}
+Une hypersurface de degr\'e $d$ dans $\dP^r$ ($r\geqslant i$) ne peut passer 
+par tout les points rationnels sur $\dF_q$ qui se $d\geqslant q+1$. 
+\end{lemma_}
+
+On proc\`ede par r\'ecurrence: s'il existe un hyperplan rationnel non 
+enti\`erement contenu dans l'hypersurface (tel n'est pas le cas pour $r=1$), on 
+applique l'hypoth\`ese de r\'ecurrence \`a la trace de l'hypersurface sur cet 
+hyperplan. Sinon, le degr\'e $d$ est $\geqslant$ le nombre d'hyperplans 
+rationnel, $\geqslant q+1$. 
+
+Distinguons maintenant deux cas. 
+
+
+\paragraph{Cas 1: $p\nmid d$.}
+Appliquant le lemma \`a $P_d$, on voit que, quitte \`a faire un changement 
+lin\'eaire de variables, on peut supposer que $P_d(1,0,\ldots,0)\ne 0$, i.e. 
+que le coefficient de $X_1^d$ dans $P$ est non nul. Un polyn\^ome \`a $1$ 
+variable 
+\[
+  S(X) = \sum_{i=0}^d a_i x^i \text{,} 
+\]
+avec $a_d\ne 0$ ($p\nmid d$) n'est jamais de la forme $Q^p-Q+C^{t e}$, et 
+l'estimation \eqref{VI:eq:3-5-2} se r\'eduit \`a 
+\[
+  \left| \sum \psi(S(x)) \right| \leqslant (d-1) q^{1/2} \text{.} 
+\]
+Appliquant cette estimation aux sommes partielles obtenues en ne faisant varier 
+que $x_1$, on trouve 
+\[
+  \left| \sum \psi P(x_1,\dots,x_n) \right| = \left| \sum_{x_2,\dots,x_n} \sum_{x_1} \psi P(x_1,\dots,x_n)\right| \leqslant q^{n-1} (d-1) q^{1/2} 
+\]
+comme promis. 
+
+
+\paragraph{Cas 2: $p\mid d$ ($d>0$).}
+Si $P_d$ est une puissance $p$-i\`eme, remplacer $P$ par $P-(P_d-P_d^{1/p})$ ne 
+change pas la somme consid\'er\'ee, et abaisse le degr\'e: on se d\'ebarasse de 
+ce cas en proc\'edant par r\'ecurrence sur $d$. Sinon, la diff\'erentielle de 
+$P_d$ n'est pas identiquement nulle; appliquant \ref{VI:3-9}, on peut supposer, 
+quitte \`a faire un changement lin\'eaire de variables, qu'elle n'est pas nulle 
+au point $(1,0,\dots,0)$. Si on \'ecrit 
+\[
+  P_d = \sum_{i=0}^d X_1^{d-i} S_i(X_2,\dots,X_n) \text{,} 
+\]
+cela signifie que la forme lin\'eaire $S_1$ n'est pas identiquement nulle. 
+
+La forme $S_0$ est une constante, et remplaçant $P$ par 
+$P-(S_0 X_1^d -S_0^{1/p} X_1^{d/p})$, on peut supposer qu'elle est nulle. Soit 
+enfin $-\lambda$ le coefficient de $X_1^{d-1}$ dans $P$. Pour $x_2,\dots,x_n$ 
+fixes, on a 
+\[
+  P(X_1,x_2,\dots,x_n) = (S_1(x_2,\dots,x_n)-\lambda) X_1^{d-1} + \text{termes de plus bas degr\'e en $X_1$} 
+\]
+et si $S_1(x_2,\dots,x_n)\ne \lambda$, on a donc 
+\[
+  \left| \sum_{x_1} \psi P(x_1,\dots,x_n)\right| \leqslant (d-2) q^{1/2} \text{.} 
+\]
+Au total, 
+\begin{align*}
+  \left|\sum \psi P(x_1,\dots,x_n)\right| 
+    &\leqslant \left|\sum_{S=\lambda} \psi P(x_1,\dots,x_n)\right| + \sum_{S(X_2,\dots,X_n)\ne\lambda} \left| \sum_{x_1} \psi P(x_1,\dots,x_n)\right| \\
+    &\leqslant q^{n-1} + (q^{n-1}-q^{n-2})(d-2) q^{1/2} \\
+    &< (d-2) q^{n-1/2} + q^{n-1} \\
+    &< (d-1) q^{n-1/2} \text{.}
+\end{align*}
+
+Un autre r\'esultat de cette nature est donn\'e par R.A.\ Smith 
+\cite{sm70}. 
 
 
 
@@ -1266,6 +1525,29 @@ $\psi(x) = \exp\left(\frac{2\pi i}{p} \tr_{\dF_q/\dF_p}(x)\right)$ on a
 
 
 \section{Sommes de Gauss et sommes de Jacob}\label{VI:4}
+
+
+
+
+
+\subsection{}\label{VI:4-1}
+
+Soient $k$ un corps fini de caract\'eristique $p$, $\chi$ un caract\`ere de 
+$k^\times$, et $\psi$ un caract\`ere non trivial du groupe additif de $k$. Nous 
+prendrons pour d\'efinition des sommes de Gauss: 
+\begin{equation*}\tag{4.1.1}\label{VI:eq:4-1-1}
+  \tau(\chi,\psi) = -\sum_{x\in k^\times} \psi(x) \chi^{-1}(x) 
+\end{equation*}
+(noter le signe). Classiquement, $\chi$ et $\psi$ sont \`a valeurs complexes. 
+Nous les prendrons \`a valeurs dans $E_\lambda^\times$ (cf. la preuve de 
+\ref{VI:1-15}). Regardons $-\tau(\chi,\psi)$ comme une somme sur les points 
+rationnels du sch\'ema $\dG_m$ sur $k$. D'apr\`es le paragraphe \ref{VI:1}, 
+on a $-\tau(\chi,\psi) = \tr(F^\ast,\h_c^\ast(\dG_m,\sF(\psi \chi^{-1}))$. De 
+plus 
+
+
+
+
 
 \begin{proposition_}\label{VI:4-2}
 La cohomologie de $\dG_m$ \`a coefficient dans $\sF(\psi\chi^{-1})$ v\'erifie 

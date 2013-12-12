@@ -1,5 +1,7 @@
 % !TEX root = sga4.5.tex
 
+\usepackage[T1]{fontenc}
+\usepackage{calligra}
 \usepackage[utf8]{inputenc} % allows French characters
 \usepackage[all]{xy}        % commutative diagrams
 \usepackage[stable,symbol]{footmisc}
@@ -20,8 +22,9 @@
   amssymb,
   amsthm,
   bm,        % to get bold symbols to work with stmaryrd
-  calligra,  % for sheaf hom
+ % calligra,  % for sheaf hom
   enumerate, % allows \begin{enumerate}[\indent a)]
+  lmodern,
   mathrsfs,  % allows \mathscr
 %  microtype, % improves general appearance
   stmaryrd   % allows \llbracket, i.e. [[t]]
@@ -120,4 +123,6 @@
   {\vcenter{\hbox{\Large $\boxtimes$}}}{\boxtimes}{\boxtimes}}\displaylimits}
 
 
-\renewcommand{\bullet}{\text{\,\begin{picture}(-1,1)(-1,-2)\circle*{2}\end{picture}\ }}
+%\renewcommand{\bullet}{\text{\,\begin{picture}(-1,1)(-1,-2)\circle*{2}\end{picture}\ }}
+\let\oldbullet\bullet
+\renewcommand{\bullet}{\textnormal{\tiny$\oldbullet$}}
