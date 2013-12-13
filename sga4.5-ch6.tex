@@ -1558,6 +1558,94 @@ La cohomologie de $\dG_m$ \`a coefficient dans $\sF(\psi\chi^{-1})$ v\'erifie
   \item Si $\chi$ est non trivial, on a $\h_c^\bullet \iso \h^\bullet$. 
 \end{enumerate}
 \end{proposition_}
+\begin{proof}[Preuve]
+Pour tout $n$ premier \`a $p$, notons $K_n$ le $\dmu_n$-torseur sur $\dG_m$ 
+d\'efini par la suite exacte de Kummer 
+$0 \to \dmu_n \to \dG_m \xrightarrow{x^n} \dG_m \to 0$. Si $k$ a $q$ 
+\'el\'ements, on a sur $k$: $\dmu_{q-1}=k^\times$, et le torseur de Lang sur 
+$\dG_m/k$ est $K_{q-1}$. D\`es lors, $\sF(\chi^{-1})=\chi(K_{q-1})$. 
+L'assertion \ref{VI:4-2}(ii) r\'esulte de (i,iii), eux-m\^emes contenus dans 
+l'\'enonc\'e g\'eom\'etrique suivant, o\`u $\sF(\psi)$ d\'esigne le faisceau 
+sur $\dG_m/\dF$ d\'eduit par extension des scalaires de $k$ \`a $\dF$ de 
+$\sF(\psi)$ sur $\dG_m/k$ (\ref{VI:1-8}.b). 
+\end{proof}
+
+
+
+
+
+\begin{proposition_}\label{VI:4-3}
+Soit $\chi:\dmu_n \to E_\lambda^\times$. La cohomologie de $\dG_m$ \`a 
+coefficient dans $\sF(\psi)\otimes \chi(K_n)$ v\'erifie 
+\begin{enumerate}[\indent (i)]
+  \item $\h_c^i=0$ pour $i\ne 1$, et $\dim \h_c^1{} = 1$. 
+  \item Si $\chi$ est non triviale, on a $\h_c^\bullet{}\iso \h^\bullet{}$. 
+\end{enumerate}
+\end{proposition_}
+\begin{proof}[Preuve]
+Le faisceau $\sF(\psi)$ est la restriction \`a $\dG_m$ d'un faisceau localement 
+constant sur $\dG_a$, sauvagement ramifi\'e \`a l'infini, de conducteur de 
+Swan $1$. Le faisceau $\chi(K_n)$ est constant si $\chi=1$; si $\chi\ne 1$, il 
+est ramifi\'e en $0$ et $\infty$, mod\'er\'ement. 
+
+Le faisceau $\sF(\psi)\otimes\chi(K_n)$ est donc ramifi\'e \`a l'$\infty$; 
+appliquant \ref{VI:1-18}(b,c), on trouve que 
+$\h_c^i(\dG_m,\sF(\psi)\otimes \chi(K_n))=0$ pour $i\ne 1$. Si $\chi\ne 1$, il 
+est ramifi\'e en $0$ et $\infty$ et (ii) r\'esulte de \ref{VI:1-19}.a. 
+
+Les conducteurs de Swan sont $0$ en $0$ et $1$ en $\infty$. D'apr\`es 
+\eqref{VI:eq:3-2-1}, la caract\'eristique d'Euler-Poincar\'e est donc $-1$ et 
+ceci ach\`eve la d\'emonstration. 
+\end{proof}
+
+
+
+
+
+\subsection{Remarque}\label{VI:4-4}
+
+Si $\chi$ est non trivial, \ref{VI:4-2}(iii) et la dualit\'e de Poincar\'e 
+montrent que $\h_c^1(\dG_m,\sF(\psi\chi^{-1}))$ et 
+$\h_c^1(\dG_m,\sF(\psi^{-1}\chi))$ sont en dualit\'e (dualit\'e \`a valeurs 
+dans $E_\lambda(-1)$). On a donc 
+$\tau(\chi,\psi)\cdot \tau(\chi^{-1},\psi^{-1}) = q$, i.e. 
+$|\tau(\chi,\psi)|=1$. 
+
+
+
+
+
+\subsection{}\label{VI:4-5}
+
+Si $k$ est une extension de degr\'e $N$ de $\dF_q$, on peut aussi regarder 
+\eqref{VI:eq:4-1-1} comme une somme \`a $N$ variables sur $\dF_q$. Soit plus 
+g\'en\'eralement $k$ une alg\`ebre \'etale sur $\dF_q$, de degr\'e $N$ sur 
+$\dF_q$. C'est un produits de corps $k_i$, de degr\'e $N_i$, et on pose 
+\begin{equation*}\tag{4.5.1}\label{VI:eq:4-5-1}
+  \varepsilon(k) = (-1)^{\sum (N_i+1)} \text{.} 
+\end{equation*}
+C'est la signature de la permutation de $S=\hom_{\dF_q}(k,\dF)$ induite par la 
+substitution de Frobenius $\varphi\in \gal(\dF/\dF_q)$. 
+
+Soient $\psi:\dF_q\to E_\lambda^\times$ un caract\`ere non trivial, et 
+$\chi:k^\times \to E_\lambda^\times$. On pose 
+\begin{equation*}\tag{4.5.2}\label{VI:eq:4-5-2}
+  \tau_{\dF_q}(\chi,\psi) = (-1)^N \sum_{x\in k^\times} \psi \tr_{k/\dF_q}(x) \cdot \chi^{-1}(x) \text{.} 
+\end{equation*}
+
+Si $\chi$ a pour coordonn\'ees les $\chi_i:k_i^\times \to E_\lambda^\times$, on 
+a l'identit\'e triviale 
+\begin{equation*}\tag{4.5.3}\label{VI:eq:4-5-3}
+  \tau_{\dF_q}(\chi,\psi) = \varepsilon(k) \prod \tau(\chi_i,\psi\circ \tr_{k_i/\dF_q}) \text{.}
+\end{equation*}
+
+Apr\`es quelques pr\'eliminaires, nous donnerons en \ref{VI:4-10} une 
+interpr\'etation cohomologique des sommes \eqref{VI:eq:4-5-2}. En 
+\ref{VI:4-12}, nous interpreterons l'identit\'e de Hasse-Davenport comme une 
+forme tordue (cf. \ref{VI:1-12}) du cas particulier suivant de 
+\eqref{VI:eq:4-5-3}: pour $k=\dF_q^N$, et $\chi$ un caract\`erre de 
+$\dF_q^\times$, on a 
+$\tau_{\dF_q}(\chi\circ N_{k/\dF_q},\psi)=\tau(\chi,\psi)^N$. 
 
 
 
