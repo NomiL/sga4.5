@@ -1708,3 +1708,167 @@ $\sum x_i$.
 
 
 
+
+\subsection{Torseur de Kummer}\label{VI:4-7}
+
+Soient $S$ un sch\'ema, $n$ un entier inversible sur $S$ et $G$ un sch\'ema en 
+groupes commutatifs \`a fibres connexes (not\'e multiplicativement) sur $S$. 
+La suite 
+\[\xymatrix{
+  0 \ar[r] 
+    & G_n \ar[r] 
+    & G \ar[r]^-{x^n} 
+    & G \ar[r] 
+    & 0 
+}\]
+est exacte. Elle d\'efinit un $G_n$-torseur $K_n(G)$ (ou simplement $K_n$) sur 
+$G$. Pour $\chi:G_n \to E_\lambda^\times$ un homomorphisme du $S$-faisceau 
+\'etale $G_n$ dans le faisceau constant $E_\lambda^\times$, on note 
+$\sK_n(\chi)$ le $E_\lambda$-faisceau $\chi^{-1}(K_n)$. 
+
+Les torseurs $K_n$ forment un syst\`eme projectif de torseurs sous le 
+syst\`eme projectif de groupes $G_n$ (morphismes de transition 
+$x\mapsto x^d:G_{n d}\to G_n$). Ceci exprime la commutativit\'e des diagrammes 
+\[\xymatrix{
+  0 \ar[r] 
+    & G_{n d} \ar[r] \ar[d]^-{x^d} 
+    & G \ar[r]^-{x^{n d}} \ar[d]^-{x^d} 
+    & G \ar[r] \ar@{=}[d] 
+    & 0 \\
+  0 \ar[r] 
+    & G_n \ar[r] 
+    & G \ar[r]^-{x^n} 
+    & G \ar[r] 
+    & 0 \text{.} 
+}\]
+On a donc $\sK_n(\chi) = \sK_{n d}(\chi\circ x^d)$. 
+
+
+
+
+
+\subsection{}\label{VI:4-8}
+
+Appliquons la construction \ref{VI:4-6} pour $A=\dF_q$, et $M=k$ un alg\`ebre 
+\'etale sur $\dF_q$. Conform\'ement aux conventions g\'en\'erales, on notera 
+avec un indice $0$ les $\dF_q$-sch\'emas not\'es $V,V^\ast,\ldots$ en 
+\ref{VI:4-6}. Les m\^emes lettres sans indice d\'esignent les sch\'emas sur 
+$\dF$ qui s'en d\'eduisent par extension des scalaires. 
+
+On pose $I=\hom(k,\dF)$, d'o\`u $V\sim \dG_a^I$ et $T$ s'\'ecrit 
+$(x_i)\mapsto \sum x_i$. 
+\begin{equation*}\tag{4.8.1}\label{VI:eq:4-8-1}
+  \sF(\psi\circ \tr_{k/\dF_q}) = T^\ast \sF(\psi) = \bigotimes_i \operatorname{pr}_i^\ast \sF(\psi) \text{.} 
+\end{equation*}
+Puisque $V^\ast\sim \dG+m^I$, un caract\`ere $\chi$ de $V_n^\ast\sim \dmu_n^I$, 
+\`a valeurs dans $E_\lambda^\times$, s'\'ecrit comme une famille 
+$(\chi_i)_{i\in I}$ de caract\`eres de $\dmu_n$ ind\'en\'ee par $I$. Elle est 
+d\'efinie sur $\dF_q$ si, pour tout $\sigma\in \gal(\dF/\dF_q)$, on a 
+$\chi_{\sigma_i} = \chi_i\circ \sigma^{-1}$. Elle d\'efinit alors un 
+$E_\lambda$-faisceau $\sK_n((\chi_i)_{i\in I})$ sur $V_0^\ast$. Si le produit 
+des $\chi_i$ est trivial, $\chi$ se factorise par un caract\`ere de 
+$(V_0^\ast/\dG_m)_n$ et $\sK_n((\chi_i)_{i\in I})$ est l'image r\'eciproque 
+d'un faisceau, not\'e de m\^eme, sur $V-0^\ast/\dG_m$. Cette construction se 
+compare comme suit au torseur de Lang. 
+
+
+
+
+
+\begin{lemma_}\label{VI:4-9}
+\begin{enumerate}[(i)]
+  \item Pour $n$ assez divisible, on a un diagramme commutatif 
+    \[\xymatrix{
+      0 \ar[r] 
+        & (V_0^\ast)_n \ar[r] \ar[d]^-\tau 
+        & V_0^\ast \ar[r]^-{x^n} \ar[d]^-\tau 
+        & V_0^\ast \ar[r] \ar@{=}[d] 
+        & 0 \\
+      0 \ar[r] 
+        & k^\times \ar[r] 
+        & V_0^\ast \ar[r]^-\fL 
+        & V_0^\ast \ar[r] 
+        & 0 \text{;} 
+    }\]
+    si $\chi$ est un caract\`ere $\chi:k^\times \to E_\lambda^\times$, on a 
+    $\sF(\chi) = \sK_n(\chi\circ\tau)$. 
+  \item Pour $n$ assez divisible, $\tau$ identifie $k^\times$ aux coinvariants 
+    de $\gal(\bar\dF/F)$ agissant sur $V_n^\ast\sim \dmu_n^I$. 
+  \item Pour $k$ un corps, $N=[k:\dF_q]$, $\omega\in I$ un plongement de $k$ 
+    dans $\dF$, et $n=q^N-1$, la composante d'indice $\omega$ de 
+    $\chi\circ\tau$ est $\chi\circ \omega^{-1}$. 
+  \item Si $\chi$ est non trivial sur chaque facteur de $k$, les 
+    $(\chi\circ \tau)_i$ sont tous non triviaux. 
+\end{enumerate}
+\end{lemma_}
+
+Il suffit de prouver le lemme lorsque $k$ est un corps, de degr\'e $N$ sur 
+$\dF_q$. Dans ce cas, $n$ est ``assez divisible'' si $q^N-1\mid n$. 
+Choisissons un plongement $\omega$ de $k$ dans $\dF_q$; $I$ s'identifie alors 
+\`a $\dZ/N$: \`a $i\in \dZ/N$ correspond $\omega_i=\omega^{q^i}$. Via 
+l'isomorphisme $V_0^\ast(\dF) = {F^\times}^I$, on a 
+\begin{enumerate}[\indent a)]
+  \item $x\in k^\times$ correspond \`a $(\omega_i(x))\in {\dF^\times}^I$; 
+  \item $F((x_i)_{i\in \dZ/N})=(x_{i-1}^q)_{i\in \dZ/N}$. 
+\end{enumerate}
+
+Un caract\`ere $\chi=(\chi_i)$ de $V_n^\ast\sim \dmu_n^I$ sera d\'efini sur 
+$\dF_q$ si $\chi_{-i} =\chi_0(x^{q^i})$ ($i\in \dZ$). Si $q^N-1\mid n$, il y a 
+$q^N-1$ tels caract\`eres: $\chi_0$ se factorise par $\dmu_{q^N-1}$, et 
+d\'etermine les $\chi_i$. Pour prouver (ii), il suffit donc de v\'erifier (i) 
+et (iii) (ou son corollaire (iv)) qui assure que $\chi\mapsto \chi\circ \tau$ 
+est injectif. 
+
+Prouvons (i) et (iii), pour $n=q^N-1$. Notons additivement le groupe des 
+endomorphismes de $V^\ast\sim \dG_m^I$; en particulier, notons $n$ 
+l'op\'erateur $x\mapsto x^n$. Si $\alpha$ est l'op\'erateur de permutations 
+circulaire $(x_i)\mapsto (x_{i-1})$, on a 
+$q^N-1=(q\alpha)^N-1 = (q\alpha-1)((q\alpha)^{N-1}+\cdots + 1)$. Ceci 
+d\'etermine $\tau$: on a $\tau((x_i)) = \prod_{0\leqslant j<N} x_{i-j}^{q^j}$, 
+et l'application induite de $(V_0^\ast)_n$ dans $k^\times$ s'\'ecrit [a) 
+ci-dessus] $(x_i)\mapsto \prod x_{-i}^{q^i}$; de l\`a r\'esulte (iii). 
+
+
+
+
+
+\begin{proposition_}\label{VI:4-10}
+La cohomologie de $V^\ast$ \`a coefficients dans 
+$\sF(\chi^{-1}\cdot \psi\tr_{k/\dF_q})$ v\'erifie 
+\begin{enumerate}[\indent (i)]
+  \item $\h_c^i = 0$ pour $i\ne N$, et $\dim \h_c^N=1$. 
+  \item Sur $\h_c^N$, $F^\ast$ est la multiplication par 
+    $\tau_{\dF_q}(\chi,\psi)$. 
+  \item Si $\chi$ est non trivial sur chaque facteur de $k$, on a 
+    $\h_c^\bullet \iso \h^\bullet$. 
+\end{enumerate}
+\end{proposition_}
+
+Appliquons \ref{VI:4-9}(i): sur $\dF$, si $\chi\circ \tau=(\chi_i)_{i\in I}$, 
+on a $\sF(\chi) = \sK_n((\chi_i)_{i\in I})$. Les points (i) et (iii) 
+r\'esultant donc de l'\'enonc\'e plus g\'eom\'etrique suivant (pour (iii), 
+appliquer \ref{VI:4-9}(iv)) et (ii) en r\'esulte par la formule des traces: 
+
+
+
+
+
+\begin{proposition_}\label{VI:4-11}
+Soit $(\chi_i)_{i\in I}$ une famille de caract\`ere de $\dmu_n(\dF)$. La 
+cohomologie de $V^\ast\simeq \dG_m^I$ \`a coefficient dans 
+$\sK_n((\chi_i)_{i\in I})\otimes \sF(\psi\tr_{k/\dF_q})$ v\'erifie 
+\begin{enumerate}[\indent (i)]
+  \item $\h_c^i{}=0$ pour $i\ne N$, et $\dim \h_c^N{} = 1$. 
+  \item Si les $\chi_i$ sont tous non triviaux, on a 
+    $\h_c^\bullet{}\iso \h^\bullet$. 
+\end{enumerate}
+\end{proposition_}
+
+On a $V^\ast\sim \dG_m^I$, 
+$\sK((\chi_i)) = \bigotimes_i \operatorname{pr}_i^\ast \chi_i(K_n(\dG_m))$ et 
+$\sF(\psi\circ \tr_{\dF_q/k})=T^\ast \sF(\psi) = \bigotimes_i \operatorname{pr}_i^\ast \sF(\psi)$. 
+Ceci permet d'appliquer la formule de K\"unneth, et \ref{VI:4-11} r\'esulte de 
+\ref{VI:4-3}. 
+
+
+
