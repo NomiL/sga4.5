@@ -1650,3 +1650,61 @@ $\tau_{\dF_q}(\chi\circ N_{k/\dF_q},\psi)=\tau(\chi,\psi)^N$.
 
 
 
+
+\subsection{}\label{VI:4-6}
+
+Rappelons que pour $M$ un module projectif de type fini sur un anneau $A$, le 
+foncteur $\spec(B)\mapsto M\otimes_A B$, des sch\'emas affines sur $\spec(A)$ 
+dans $\mathsf{Ens}$ est repr\'esent\'e par le sch\'ema affine $\dV(M^\vee)$ 
+(notations des EGA), le spectre de $\operatorname{Sym}_A^\bullet(M^\vee)$. Si 
+$M=A^n$, c'est l'espace affine type de dimension $n$. 
+
+Supposons que $M$ soit une $A$-alg\`ebre \`a unit\'e, et posons 
+$V=\dV(M^\vee)$. Par d\'efinition, pour toute extension $B$ de $A$, l'ensemble 
+$V(B)$ de points de $V$ \`a coordonn\'ees dans $B$ est $M\otimes_A B$. Le 
+foncteur $B\mapsto M\otimes_A B$ \'etant \`a valeurs dans les anneaux \`a 
+unit\'e, $V$ est un sch\'ema en anneaux \`a unit\'es sur $\spec(A)$. Les 
+morphismes norme et trace: $M\otimes_A B\to B$ sont fonctoriels en $B$; ils 
+correspondent donc \`a des morphismes de sch\'ema $N$ et $T$ de $V$ dans 
+$\dG_a$. Nous aurons \`a consid\'erer les sch\'emas d\'eduits de $V$ suivant: 
+\begin{enumerate}[a)]
+  \item $V^\ast$ est l'ouvert des \'el\'ements inversibles de $V$ (un sch\'ema 
+    en groupes pour $\cdot$);
+  \item $W$ est l'hyperplan d'\'equation $T=0$ et $W^\ast=W\cap V^\ast$; 
+  \item $P$ est l'hyperplan \`a l'infini $V\setminus \{0\}/\dG_m$ de l'espace 
+    affine $V$ sur $\spec(A)$. Si $Q$ est l'hyperplan \`a l'infini de $W$, 
+    $W^\ast/\dG_m$ et $V^\ast/\dG_m$ sont des ouverts des espaces projectifs 
+    $Q$ et $P$ sur $\spec(A)$. 
+    \begin{equation*}\tag{4.6.1}\label{VI:eq:4-6-1}
+    \xymatrix{
+      W^\ast \ar@{^{(}->}[r] \ar[d]^-\pi 
+        & V^\ast \ar[d]^-\pi \\
+      W^\ast/\dG_m \ar@{^{(}->}[r] 
+        & V^\ast/\dG_m 
+    }\qquad\subset\qquad
+    \xymatrix{
+      W\setminus \{0\} \ar@{^{(}->}[r] \ar[d]^-\pi 
+        & V\setminus \{0\} \ar[d]^-\pi \\
+      Q \ar@{^{(}->}[r] 
+        & P \text{.}
+    }
+    \end{equation*}
+\end{enumerate}
+
+Si $M=A^I$, $I$ un ensemble fini, alors $V\simeq \dG_a^I$, $V^\ast=\dG_m^I$, 
+$V^\ast/\dG_m$ est le tore $\dG_m^I/(\dG_m\text{ diagonal})$, $N$ et $T$ 
+s'\'ecrivant $\prod x_i$ et $\sum x_i$, et $Q$ est donc l'hyperplan 
+projectif d'\'equation $\sum x_i=0$ de $P$. 
+
+Le cas qui nous int\'eresse est celui o\`u $M$ est fini \'etale sur $A$. La 
+description pr\'ec\'edente vaut alors localement sur $\spec(A)$ (pour la 
+topologie \'etale) et on peut \'ecrire $V^\ast=\dG_m^I$, pour $I$ un faisceau 
+localement constant d'ensembles finis sur $\spec(A)$. Si par exemple $A$ est un 
+corps, de cl\^oture alg\'ebrique $\bar A$, et que $M$ est un $A$-alg\`ebre 
+s\'eparable, on pose $I=\hom_A(M,\bar A)$, et, sur $\bar A$, on a 
+$V\sim \dG_a^I$. Via cet isomorphisme, $N$ et $T$ s'\'ecrivent $\prod x_i$ et 
+$\sum x_i$. 
+
+
+
+
