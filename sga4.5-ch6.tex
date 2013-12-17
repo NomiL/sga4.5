@@ -1872,3 +1872,69 @@ Ceci permet d'appliquer la formule de K\"unneth, et \ref{VI:4-11} r\'esulte de
 
 
 
+
+
+\subsection{}\label{VI:4-12}
+
+De \ref{VI:2-4*}* et (\hyperlink{VI}{Cycle}, \ref{VI:1-3} exemple 2), on tire 
+aussi que le groupe des permutations $\sigma$ de $I$ telles que 
+$\chi_i = \chi_{\sigma i}$ ($i\in I$) agit sur $\h_c^N$ par multiplication par 
+la signature $\varepsilon(\sigma)$. Nous allons en d\'eduire une seconde preuve 
+de l'identit\'e de Hasse-Davenport. 
+
+Si $\chi$ est un caract\`ere de $\dF_q^\times$, le fait que, sur $\dF$, $N$ 
+s'\'ecrit $(x_i)\mapsto \prod x_i$ fournit: 
+$\sF(\chi\circ N)=N^\ast\sF(\chi) = \bigotimes_i \operatorname{pr}_i^\ast\sF(\psi)$ 
+et la formule de K\"unneth fournit: 
+\[
+  \h_c^\bullet(V^\ast,\sF(\chi^{-1}\circ N,\psi\circ \tr)) \sim \h_c^\bullet(\dG_m,\sF(\chi^{-1}\psi))^{\otimes I} \text{,} 
+\]
+o\`u, au membre de droite, le produit tensoriel est pris au sens 
+\ref{VI:2-4*}*. Puirsque $\h_c^1(\dG_m,\sF(\psi\chi^{-1}))$ est de dimension 
+$1$, sa puissance tensorielle $\otimes I$, au sens ordinaire, ne d\'epend que 
+du cardinal $n$ de $I$. Appliquant (\hyperlink{IV}{Cycle}, \ref{IV:1-3} exemple 
+2), on obtient un isomorphisme canonique 
+\begin{equation*}\tag{4.12.1}\label{VI:eq:4-12-1}
+  \h_c^N\left(V,\sF(\chi^{-1}\circ N)\otimes T^\ast \sF(\psi)\right) \sim \h_c^1(\dG_m,\sF(\psi\chi^{-1})) \otimes_\dZ \textstyle \bigwedge^N \dZ^I \text{.}
+\end{equation*}
+Pour calculer l'action de $F^\ast$, le plus commode est d'adopter le point de 
+vue galoisien et de dire que l'isomorphisme \eqref{VI:eq:4-12-1} \'etant 
+canonique, il est compatible \`a l'action par transport de structure de 
+$\gal(\dF/\dF_q)$. Si $\varepsilon(k)$ est la signature de la permutation 
+$\varphi$ de $I$, on trouve que 
+\begin{align*} 
+  \tau_{\dF_q}(\chi\circ N_{k/\dF_q},\psi) 
+    &= \tr\left(\varphi^{-1},\h_c^N\left(V^\ast,N^\ast\sF(\chi^{-1})\otimes T^\ast \sF(\psi)\right)\right) \\ 
+    &= \varepsilon(k) \tr\left(\varphi^{-1},\h_c^1(\dG_m,\sF(\chi^{-1}\psi))\right)^N \\
+    &= \varepsilon(k) \tau(\chi,\psi)^N \text{,} 
+\end{align*}
+soit 
+\begin{equation*}\tag{4.12.2}\label{VI:eq:4-12-2}
+  \tau_{\dF_q}\left(\chi\circ N_{k/\dF_q},\psi\right) = \varepsilon(k) \tau(\chi,\psi)^N \text{.} 
+\end{equation*}
+
+Si $k$ est un corps, $\varphi$ est une permutation circulaire de $I$, 
+$\varepsilon(k) = (-1)^{N+1}$, et on retrouve l'identit\'e de Hasse-Davenport: 
+\[
+  \tau\left(\chi\circ N_{k/\dF_q},\psi\circ \tr_{k/\dF_q}\right) = (-1)^{N+1} \tau_{\dF_q}\left(\chi\circ N_{k/\dF_q},\psi\right) = \tau(\chi,\psi)^N \text{.} 
+\]
+
+
+
+
+
+\begin{lemma_}\label{VI:4-13}
+Pour $\chi\circ \tau=(\chi_i)_{i\in I}$ comme en \ref{VI:4-9}(i), les
+conditions suivantes sont \'equivalentes 
+\begin{enumerate}[\indent (i)]
+  \item $\chi| \dF_q^\times$ est trivial 
+  \item Le produit des $\chi_i$ est trivial 
+  \item $\sF(\chi) = \sK_n((\chi_i))$ est image r\'eciproque d'un (unique) 
+    faisceau sur $V^\ast/\dG_m$. 
+  \item L'image r\'eciproque de $\sF(\chi)$ sur $\dG_m$ (envoy\'e dans 
+    $V^\ast$ \`a partir du morphisme structural $\dF_q \to k$) est triviale. 
+\end{enumerate}
+\end{lemma_}
+
+
+
