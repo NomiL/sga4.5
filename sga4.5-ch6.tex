@@ -716,7 +716,7 @@ tandis que, par a)
 
 
 
-\subsubsection{Exemple}\label{VI:1-9-1}
+\subsubsection{Exemple}\label{VI:1-19-1}
 
 Si $X$ est une courbe, ou si $\bar X$ est lisse, $X$ le compl\'ement d'un 
 diviseur \`a croisements normaux et $\sF$ mod\'er\'ement ramifi\'e, 
@@ -1935,6 +1935,448 @@ conditions suivantes sont \'equivalentes
     $V^\ast$ \`a partir du morphisme structural $\dF_q \to k$) est triviale. 
 \end{enumerate}
 \end{lemma_}
+
+(i)$\Rightarrow$(ii). On regarde $\chi$ comme une caract\`ere de 
+$V^\ast/\dG_m(\dF_q)=k^\times/\dF_q^\times$, et on prend $\sF(\chi)$ sur 
+$V^\ast/\dG_m$. 
+
+(ii)$\Rightarrow$(iii). De m\^eme, on regarde $(\chi_i)$ comme un caract\`ere 
+de $(V^\ast/\dG_m)_n$. L'unicit\'e dans (iii) r\'esulte de ce que $V^\ast$ est 
+un fibr\'e \`a fibres connexes sur $V^\ast/\dG_m$, et (iii)$\Rightarrow$(iv)  
+est trivial. 
+
+(iv)$\Rightarrow$(i), (ii). Cette image r\'eciproque est 
+$\sF(\chi|\dF_q^\times)$ et $\sK_n(\prod \chi_i)$. 
+
+
+
+
+
+\subsection{}\label{VI:4-14}
+
+Soient $k$ une alg\`ebre \'etale sur $\dF_q$, de 
+dimension $N+1$ et $\chi$ un caract\`ere non trivial de $k^\times$, trivial sur 
+$\dF_q^\times$. La somme de Jacobi $J(\chi)$ est d\'efinie par 
+\begin{equation*}\tag{4.14.1}\label{VI:eq:4-14-1}
+  J(\chi) = (-1)^{N-1} \sum_{\substack{x\in k^\times/\dF_q^\times \\ \tr(x)=0}} \chi^{-1}(x) \text{.} 
+\end{equation*}
+
+On a entre sommes de Gauss et sommes de Jacobi l'identit\'e suivante. 
+
+
+
+
+
+\begin{proposition_}\label{VI:4-15}
+Pour $\chi$ comme ci-dessus et $\psi$ un caract\`ere additif non trivial de 
+$\dF_q$, on a 
+\[
+  q J(\chi) = \tau_{\dF_q}(\chi,\psi) \text{.} 
+\]
+\end{proposition_}
+
+Dans le cas particulier o\`u $k=\dF_q^n$, cette formule se r\'ecrit par 
+\eqref{VI:eq:4-5-3} 
+\begin{equation*}\tag{4.15.1}\label{VI:eq:4-15-1}
+  q J(\chi) = \prod_i \tau(\chi_i,\psi) \text{,} 
+\end{equation*}
+plus \'ecrit sous la forme 
+\begin{align*}
+  \chi_0(-1) J(\chi) &= (-1)^{N-1} \sum_{\substack{x_1,\dots,x_N\in \dF_q^\times \\ \sum x_i = 1}} \prod_{i=1}^N \chi_i^{-1}(x_i) = \tau(\chi_0^{-1},\psi)^{-1} \prod_{i=1}^N \tau(\chi_i,\psi) \\
+  \chi_0^{-1} &= \prod_{i=1}^N \chi_i 
+\end{align*}
+
+
+
+
+
+\begin{proof}[Preuve de \ref{VI:4-15}]
+\[
+  \tau_{\dF_q}(\chi,\psi) = (-1)^{N+1} \sum_{x\in k^\times} \chi(x)^{-1} \psi \tr(x) = (-1)^{N+1} \sum_{x\in k^\times/\dF_q^\times} \chi(x)^{-1} \sum_{\lambda\in \dF_q^\times} \psi(\lambda \tr x) \text{.}
+\]
+La somme $\sum_{\lambda\in \dF_q^\times} \psi(\lambda \tr x)$ vaut $q-1$ si 
+$\tr(x)=0$, et $-1$ si $\tr(x)\ne 0$. D\`es lors, 
+\[
+  \tau_{\dF_q}(\chi,\psi) = (-1)^{N+1} \left(q\sum_{x\in k^\times/\dF_q^\times} \chi(x)^{-1} - \sum_{x\in k^\times/\dF_q^\times} \chi(x)^{-1}\right) \text{.}
+\]
+La second terme au second membre est nul, car somme des valeurs d'un 
+caract\`ere, et \ref{VI:4-15} en r\'esulte. 
+\end{proof}
+
+La proposition \ref{VI:4-15} se transpose ainsi en cohomologie: 
+
+
+
+
+
+\begin{proposition_}\label{VI:4-16}
+La cohomologie de $W^\ast/\dG_m$ (\ref{VI:4-6}, \ref{VI:4-8}) \`a coefficient 
+dans $\sF(\chi^{-1})$ v\'erifie 
+\begin{enumerate}[\indent (i)]
+  \item $\h_c^i=0$ pour $i\ne N-1$, et $\dim \h_c^{N-1}{}=1$. 
+  \item Sur $\h_c^{N-1}$, $F^\ast$ est la multiplication par $J(\chi)$. 
+  \item $\h_c^{N-1}$ est canoniquement isomorphe \`a 
+    $\h_c^{N+1}\left(V^\ast,\sF(\chi^{-1},\psi\circ \tr_{k/\dF_q})\right)(1)$. 
+\end{enumerate}
+\end{proposition_}
+
+L'assertion (ii) r\'esulte de (i) et de la formule des traces; (i) et (iii) 
+r\'esultent de \ref{VI:4-11} et de l'\'enonc\'e plus g\'eom\'etrique suivant. 
+
+
+
+
+
+\begin{proposition_}\label{VI:4-17}
+Soit $(\chi_i)_{i\in I}$ une famille de caract\`eres non trous triviaux de 
+$\dmu_n(\dF)$, de produit $1$. Alors, 
+$\h_c^{i-1}\left(W^\ast/\dG_m,\sK_m((\chi_i)_{i\in I})\right)$ est 
+canoniquement isomorphe \`a 
+\newline
+$\h_c^{i+1}\left(V^\ast,\sK_m((\chi_i)_{i\in I})\otimes \sF(\psi\tr_{k/\dF_q})\right)(1)$. 
+\end{proposition_}
+
+La premi\`ere ligne de \ref{VI:4-15} devient ($\pi$ comme en 
+\eqref{VI:eq:4-6-1}). 
+\begin{equation*}\tag{4.17.1}\label{VI:eq:4-17-1}
+  \eR^i \pi_!\left(\sK_n((\chi_i)_{i\in I})\otimes \sF(\psi \tr_{k/\dF_q})\right) = \sK_n((\chi_i)_{i\in I}) \otimes \eR^i \pi_! \sF(\psi\tr_{k/\dF_q}) 
+\end{equation*}
+(sur $V^\ast/\dG_m$). Calculons les faisceaux 
+$\eR^i\pi_! \sF(\psi\tr_{k/\dF_q}) = \eR^i \pi_! T^\ast \sF(\psi)$. Soit 
+$v_0:\widetilde V_0 \to V_0$ l'\'eclat\'e de $V_0$ en $\{0\}$. Dans le 
+diagramme 
+\begin{equation*}\tag{4.17.2}\label{VI:eq:4-17-2}
+\xymatrix{
+  V_0\setminus \{0\} \ar@{^{(}->}[r] \ar[dr]_-\pi 
+    & \widetilde V_0 \ar[r]^-{v_0} \ar[d]^-{\bar\pi} 
+    & V_0 \\
+  & P_0 
+}
+\end{equation*}
+$\pi$ est une fibration de fibre des droites \'epoint\'ees, $\widetilde V_0$ 
+est le fibr\'e en droites correspondant, et $Z_0=v_0^{-1}(0)$ sa section $0$. 
+Le faisceau $T^\ast\sF(\psi)$ sur $V-0\setminus \{0\}$ se prolonge en 
+$(T v_0)^\ast \sF(\psi)$ sur $\widetilde V_0$, et la restriction de ce faisceau 
+\`a $Z_0$ est le faisceau constant $E_\lambda$, car $T_0 v_0$ est nul sur 
+$Z_0$. La suite exacte longue de cohomologie \`a support propre s'\'ecrit 
+donc 
+\begin{equation*}\tag{4.17.3}\label{VI:eq:4-17-3}
+\xymatrix{
+  \ar[r] 
+    & \eR^i \pi_! T^\ast \sF(\psi) \ar[r] 
+    & \eR^i \bar\pi_! (T v)^\ast \sF(\psi) \ar[r] 
+    & (E_\lambda\text{ pour $i=0$, $0$ sinon}) \ar[r] 
+    & 
+}
+\end{equation*}
+
+L'image r\'eciproque $\bar\pi^{-1}(Q_0)$ est l'\'eclat\'e $\widetilde W_0$ de 
+$W_0$ en $0$; $T_0 V_0$ s'annule sur $\widetilde W_0$; on a donc 
+$(T v)^\ast \sF(\psi)=E_\lambda$ sur $\pi^{-1}(Q_0)$ et, $\bar\pi$ \'etant un 
+fibr\'e en droites 
+\begin{equation*}\tag{4.17.4}\label{VI:eq:4-17-4}
+  \eR^i \bar\pi_! (T v)^\ast \sF(\psi)|Q = 
+    \begin{cases}
+      0 & \text{pour $i\ne 2$} \\
+      E_\lambda(-1) & \text{pour $i=2$.} 
+    \end{cases} 
+\end{equation*}
+
+Si $x\in P$, $x\notin Q$, la droite $D=\pi^{-1}(x)$ est envoy\'e 
+isomorphiquement sur $\dG_a$ par $T v$; on a donc 
+\ref{VI:2-7}*) 
+\begin{align} \notag 
+  \h_c^\bullet(D,(T v)^\ast \sF(\psi)) &= \h^\bullet(\dG_a,\sF(\psi)) = 0 && \text{et} \\
+  \tag{4.17.5}\label{VI:eq:4-17-5}
+  \eR^i \bar\pi_! (T v)^\ast \sF(\psi) 
+    &= \begin{cases} 
+         0 & \text{pour $i\ne 2$} \\
+         E_\lambda(-1)_Q & \text{pour $i=2$} 
+       \end{cases} 
+\end{align}
+
+Conjuguant \eqref{VI:eq:4-17-3} et \eqref{VI:eq:4-17-5}, on trouve enfin 
+\begin{equation*}\tag{4.17.6}\label{VI:eq:4-17-6}
+  \eR^i \pi_! T^\ast\sF(\psi) = 
+    \begin{cases}
+      0 & \text{pour $i\ne 1,2$} \\
+      E_\lambda & \text{pour $i=1$} \\
+      E_\lambda(-1)_Q & \text{pour $i=2$.} 
+    \end{cases}
+\end{equation*}
+
+
+
+
+
+\subsection{}\label{VI:4-18}
+
+Calculons la cohomologie \`a support propre du faisceau 
+$\sK_n((\chi_i))\otimes T^\ast \sF(\psi)$ sur $V^\ast$ \`a l'aide de la suite 
+spectrale de Leray de $\pi:V^\ast\to V^\ast/\dG_m$. Appliquant 
+\eqref{VI:eq:4-17-1} et \eqref{VI:eq:4-17-6}, on trouve comme termes initiaux 
+les $E_2^{p,1} = \h_c^p(V^\ast/\dG_m,\sK_n(\chi_i)) = 0$ (car $(\chi_i)\ne 0$) 
+et les $E_2^{p,2} = \h_c^p(W^\ast/\dG_m,\sK(\chi_i))(-1)$. 
+
+La suite spectrale se r\'eduit \`a un isomorphisme, et \ref{VI:4-17} en 
+r\'esulte. 
+
+
+
+
+
+\subsection{}\label{VI:4-19}
+
+Les faisceaux $\sK_n((\chi_i)_{i\in I})$ ont un sens sur n'importe quel corps, 
+voire sur n'importe sch\'ema de base. Ceci va nous permettre de g\'en\'eraliser 
+\ref{VI:4-16}(i). Avec les notations de \ref{VI:4-6}, supposons $M$ fini 
+\'etale partout de rang $N$ sur $A$, et soit $n$ un entier inversible dans $A$. 
+On note $a$ la projection de $W^\ast/\dG_m$ sur $\spec(A)$. Soit aussi $\chi$ 
+un caract\`ere (morphisme de faisceaux) 
+$\chi:(V^\ast/\dG_m)_n \to E_\lambda^\times$, et $\sK_n(\chi)$ le faisceau 
+correspondant. Localement pour la topologie \'etale, on peut regarder $\chi$ 
+comme une famille de caract\`eres $(\chi_i)_{i\in I}$ de $\dmu_n$, de produit 
+trivial. 
+
+
+
+
+
+\begin{proposition_}\label{VI:4-20}
+\begin{enumerate}[(i)]
+  \item Si $\chi$ est (en tout point) non trivial, on a 
+    $\eR^i a_! (\sK_n(\chi)) = 0$ pour $i\ne N-1$, et 
+    $\eR^{N-1} a_!(\sK_n(\chi))$ est lisse, de rang $1$. 
+  \item Une automorphisme $\sigma$ de $M$ qui respecte $\chi$ agit sur ce 
+    $\eR^{N-1} a_!$ par multiplication par la signature $\varepsilon(\sigma)$ 
+    de $\sigma$, vu comme permutation de $I$. 
+  \item Si les $\chi_i$ sont tous non triviaux, on a $\eR a_! \iso \eR a_\ast$. 
+\end{enumerate}
+\end{proposition_}
+\begin{proof}[Preuve]
+Le sch\'ema $W^\ast/\dG_m$ est le compl\'ement d'un diviseur \`a croisements 
+normaux relatif dans le sch\'ema $Q$, propre et lisse sur $\spec(A)$, et 
+$\sK_n(\chi)$ est localement constant sur $W^\ast/\dG_m$, \`a ramification 
+mod\'er\'ee a l'infini. Il en r\'esulte que les $\eR^i a_!$ et 
+$\eR^i a_\ast$ sont lisses, de formation compatible \`a tout changement de 
+base. Un argument standard nous ram\`ene alors \`a supposer que $A$ est un 
+corps fini, et (i) r\'esulte de \ref{VI:4-17} et \ref{VI:4-11}(i). Pour 
+prouver (ii), on utilise que l'action de $\sigma$ est compatible \`a 
+l'isomorphisme \ref{VI:4-17}, et \ref{VI:4-12}. Pour (iii), on note que si les 
+$\chi_i$ sont tous non triviaux, alors $\sK_n(\chi)$ sur 
+$W^\ast/\dG_m\subset Q$ est ramifi\'e le long de chaque diviseur \`a l'infini, 
+et \ref{VI:1-19-1}. 
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+\section{Caract\`eres de Hecke}\label{VI:5}
+
+
+
+
+
+\subsection{}\label{VI:5-1}
+
+Soient $F$ un corps de nombres (de degr\'e fini sur $\dQ$) et $k$ un corps de 
+caract\'eristique $0$. Voici diverses façon \'equivalentes de dire ce qu'est un 
+homomorphisme \emph{alg\'ebrique} $\alpha:F^\times \to k^\times$. 
+\begin{enumerate}[(i)]
+  \item Soit $\{e_i\}$ une base de $F$ sur $\dQ$. L'homomorphisme $\alpha$ est 
+    alg\'ebrique s'il est donn\'e par une formule 
+    $\alpha(\sum x^i e_i) = A(x^i)$, $A\in k(X^i)$. 
+\end{enumerate}
+
+Ceci signifie que $\alpha$ coïncide sur $F^\times$ avec une application 
+rationnelle d\'efinie sur $k$ de $\res_{F/\dQ}(\dG_m)$ dans $\dG_m$. Par 
+densit\'e de Zariski de $F^\times$, et le fait qu'un homomorphisme birationnel 
+est partout d\'efini, une telle application est un homomorphisme de sch\'emas 
+en groupes: 
+\begin{enumerate}[(i)]
+\setcounter{enumi}{1}
+  \item $\alpha$ est induit par un homomorphisme de $k$-sch\'emas en groupes 
+    \[
+      \res_{F/\dQ}(\dG_m)\otimes_\dQ k \to \dG_m \text{.} 
+    \] 
+\end{enumerate}
+
+Si $k$ est un corps de nombre, la propri\'et\'e d'adjonction de la restriction 
+des scalaires $R$ montre que ceci \'equivaut \`a 
+\begin{enumerate}[(i)]
+\setcounter{enumi}{2}
+  \item ($k$ un corps de nombres) $\alpha$ est induit par un homomorphisme de 
+    $\dQ$-sch\'emas en groupes: $\res_{F/\dQ}(\dG_m) \to \res_{k/\dQ}(\dG_m)$. 
+\end{enumerate}
+
+Soient $\bar k$ un cl\^oture alg\'ebrique de $k$, et $I=\hom(F,\bar k)$. Sur 
+$\bar k$, le groupe des caract\`eres de $\res_{F/\dQ}(\dG_m)$ est $\dZ^I$, de 
+base les plongements de $F$ dans $\bar k$. Les caract\`eres d\'efinis sur $k$ 
+sont ceux invariants par $\gal(\bar k/k)$; on peut les d\'ecrire soit comme 
+ceux envoyant $F^\times$ dans $k^\times\subset \bar k$, soit en terme des 
+orbites de $\gal(\bar k/k)$ dans $I$, correspondant elle-m\^eme aux facteurs de 
+$F\otimes k$. 
+\begin{enumerate}[(i)]
+\setcounter{enumi}{3}
+  \item $\alpha$ est de la forme 
+    $\alpha=\prod_{\omega\in I} \omega^{n_\omega}$. Les familles d'exposants 
+    $(n_\omega)$ permises sont celles telles que $n_\omega=n_{\omega'}$ pour 
+    $\omega$ et $\omega'$ dans la m\^eme orbite de $\gal(\bar k/k)$. Ce sont 
+    encore celles telle que $\prod_\omega (x)^{n_\omega}\in k$ pour tout 
+    $x\in F$. 
+  \item Posons $F\otimes k=\prod_{j\in J} F_j$, les $F_j$ \'etant des corps. 
+    Alors, $\alpha$ s'\'ecrit $\alpha=\prod N_{F_j/k}^{m_j}$. 
+\end{enumerate}
+
+Dans le cas particulier o\`u $k$ contient une cl\^oture normale de $F$, ces 
+expressions deviennent: $\alpha=\prod \omega^{n_\omega}$, o\`u $\omega$ 
+parcourt les $[F:\dQ]$ plongements de $F$ dans $k$. 
+
+
+
+
+
+\subsection{}\label{VI:5-2}
+
+Supposons que $k$ soit un corps de nombres, et soit $\alpha$ un homomorphisme 
+alg\'ebrique de $F^\times$ dans $k^\times$. Il existe alors un et un seul 
+homomorphisme, encore not\'e $\alpha$, du groupe $I(F)$ des id\'eaux 
+fractionnaires de $F$ dans celui de $k$, tel que $\alpha((x))=(\alpha(x))$. 
+L'unicit\'e r\'esulte de ce que tout id\'eal $a$ une puissance qui est un 
+id\'eal principal, et de ce que $I(k)$ est sans torsion. Pour prouver 
+l'existence, on utilise par exemple \ref{VI:5-1}(v): on a 
+$\alpha(a) = \prod N_{F_j/k}^{m_j}((a))$. 
+
+
+
+
+
+\subsection{}\label{VI:5-3}
+
+Rappelons la d\'efinition des caract\`eres de Hecke alg\'ebriques, appel\'es 
+Weil caract\`eres de Hecke (ou: gr\"ossencharaktere) de type $A_0$. Soient $F$ 
+un corps de nombres, $\fm$ un id\'eal de $F$ (i.e., de l'anneau des entiers de 
+$F$), $I_\fm$ le groupe des id\'eaux fractionnaires de $F$ premiers \`a $\fm$, 
+et $k$ un corps de caract\'eristique $0$. Un homomorphisme 
+$\chi:I_\fm \to k^\times$ est un \emph{caract\`ere de Hecke alg\'ebrique} (de 
+conducteur $\leqslant \fm$) s'il existe un homomorphisme alg\'ebrique 
+$\chi_\text{alg}:F^\times \to k^\times$ v\'erifiant 
+\begin{equation*}\tag{$*$}\label{VI:eq:5-3-1}
+\text{Pour $x\in F^\times$, premier \`a $\fm$, totalement positif et 
+$\equiv 1\pmod\fm$, on a $\chi((x))=\chi_\text{alg}(x)$.}
+\end{equation*}
+
+Par densit\'e de l'ensemble des $x$ de \eqref{VI:eq:5-3-1}, $\chi_\text{alg}$ 
+est enti\`erement d\'etermin\'e par $\chi$. C'est la \emph{partie alg\'ebrique} 
+de $\chi$. Si $\chi((x))=\chi_\text{alg}(x)$ pour $x$ totalement positif et 
+$\equiv 1\pmod{\fm'}$, $\chi$ se prolonge en un caract\`ere de Hecke de 
+conducteur $\leqslant \inf(\fm,\fm')$: $I_{\fm+\fm'}\to k^\times$. On 
+identifiera les caract\`eres de Hecke qui coïncident sur leur domaine commun de 
+d\'efinition, et on appelle \emph{conducteur} de $\chi$ le plus petit $\fm'$ 
+tel que $\chi$ soit de conducteur $\leqslant \fm'$. 
+
+
+
+
+
+\subsection{Remarque}\label{VI:5-4}
+
+Si un caract\`ere de Hecke alg\'ebrique $\chi$ prend ses valeurs dans un 
+sous-corps $k'$ de $k$, c'est d\'ej\`a un caract\`ere de Hecke \`a valeurs dans 
+$k'$: il suffit de voire que $\chi_\text{alg}:\res_{F/\dQ}(\dG_m) \to \dG_m$ 
+est d\'ej\`a d\'efini sur $k'$, et ceci r\'esulte de la densit\'e de Zariski 
+dans $\res_{F/\dQ}(\dG_m)$ de l'ensemble des $x$ totalement positif 
+$\equiv 1\pmod\fm$. On pour toujours prendre pour $k'$ un sous-corps de $k$ de 
+degr\'e fini sur $\dQ$. 
+
+
+
+
+
+\subsection{}\label{VI:5-5}
+
+Si $\varepsilon$ est une unit\'e totalement positive $\equiv 1\pmod\fm$, on a 
+$\chi_\text{alg}(\varepsilon) = \chi((\varepsilon)) = 1$. L'homomorphisme 
+$\chi_\text{alg}$ se factorise donc par le quotient $T_\fm$ de 
+$\res_{F/\dQ}(\dG_m)$ par l'adh\'erence de Zariski du groupe 
+$E_\fm\subset F^\times$ des unit\'es totalement positifs $\equiv 1\pmod\fm$. 
+
+D'apr\`es Serre \cite[II.3]{se68}, si $k$ est une cl\^oture alg\'ebrique de 
+$\dQ$, et que $\fm$ est assez grand, les caract\`eres $\prod \omega^{n_\omega}$ 
+de $\res_{F/\dQ}(\dG_m)$ de la forme $\chi_\text{alg}$ sont caract\'eris\'es 
+comme suit: il doit exister un entier $N$, le \emph{poids} de $\chi$ (ou de 
+$\chi_\text{alg}$), tel que pour tout \'el\'ement $\sigma$ de $\gal(k/\dQ)$ 
+conju\'e \`a la conjugaison complexe, on ait $n_\omega+n_{\sigma \omega}=N$. Si 
+$F_1$ est le plus grand sous-corps de $F$ qui soit une extension quadratique 
+totalement imaginaire d'un corps totalement r\'eel $F_1'$, cela revient \`a 
+dire que $\chi_\text{alg}$ est de la forme $\chi_1\circ N_{F/F_1}$, et que 
+$\chi_1|F_1=(N_{F_1/\dQ})^N$. 
+
+Si $\chi$ est de poids $N$, pour tout id\'eal $\fa$ de $F$, $\chi(\fa)$ est un 
+nombre alg\'ebrique dont tous les conjugu\'es sont de valeur absolue 
+$N(\fa)^{N/2}$ \cite[II.3 prop.2]{se68}. 
+
+
+
+
+
+\subsection{}\label{VI:5-6}
+
+Pour $k$ un corps de nombres fix\'e, des conditions suppl\'ementaires sont 
+impos\'ees \`a $\chi_\text{alg}$. Pour tout id\'eal $\fa$ de $F$ premier au 
+conducteur, on a en effet 
+\begin{equation*}\tag{5.6.1}\label{VI:eq:5-6-1}
+  \chi_\text{alg}(\fa) = (\chi(\fa)) \text{,} 
+\end{equation*}
+de sorte que $\chi_\text{alg}(\fa)$ est principal. Puisque le groupe des 
+id\'eaux fractionnaire de $k$ est sous torsion, il suffit de prouver la 
+puissance $n$-i\`eme de \eqref{VI:eq:5-6-1}, $n\ne 0$ convenable; ceci permet 
+de remplacer $\fa$ par $\fa^n$, donc de supposer $\fa=(x)$, avec $x$ totalement 
+positif $\equiv 1\pmod\fm$. Il ne reste qu'\`a utiliser les d\'efinitions. 
+
+Ceci, joint \`a \ref{VI:5-5}, montre que $\chi_\text{alg}$ d\'etermine la norme 
+des $\chi(\fa)$ en toutes les places de $k$. 
+
+
+
+
+
+\subsection{}\label{VI:5-7}
+
+Le groupe $S_\fm$ de Serre pourrait \^etre caract\'eris\'e comme \'etant le 
+groupe de type multiplicatif dont le groupe des caract\`eres (sur n'importe 
+quel corps) est le groupe des caract\`eres de Hecke alg\'ebriques de conducteur 
+$\leqslant \fm$. (cf. \cite[II 2.1 et 2.2]{se68}). Sa relation avec les 
+repr\'esentations $\ell$-adiques est expliqu\'ee en \cite[II 2.3]{se68}. 
+
+
+
+
+
+\begin{theorem_}[{\cite{se68}}]\label{VI:5-8}
+Soit $\chi$ un caract\`ere de Hecke alg\'ebrique de $F$ dans $E_\lambda$, pour 
+$E_\lambda$ une extension finie de $\dQ_\ell$. Il existe alors un (et un seul) 
+homomorphisme $\chi_\lambda:\gal(\bar F/F)^\textnormal{ab} \to E_\lambda$, tel 
+que 
+\begin{enumerate}[\indent (i)]
+  \item $\chi_\lambda$ est non ramifi\'e en dehors du conducteur $\ff$ de 
+    $\chi$ et de $\ell$. 
+  \item Pour $\fp$ un id\'eal premier de $F$ premier \`a $\ff$ et \`a $\ell$, 
+    et $F_\fp\in \gal(\bar F/F)^\textnormal{ab}$ le Frobenius g\'eom\'etrique 
+    en $\fp$, on a 
+    \[
+      \chi_\lambda(F_\fp) = \chi(\fp) \text{.}
+    \] 
+\end{enumerate}
+\end{theorem_}
+
+
 
 
 
