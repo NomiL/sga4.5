@@ -2380,3 +2380,105 @@ que
 
 
 
+\subsection{}\label{VI:5-9}
+
+Dans la fin de ce paragraphe, nous donnerons un crit\`ere pour qu'une 
+repr\'esentation $\lambda$-adique provienne ainsi d'un caract\`ere de Hecke, 
+et, au paragraphe suivant, nous l'appliquerons aux sommes de Jacobi. Nous 
+retrouverons ainsi, un peu g\'en\'eralis\'es des r\'esultats de Weil 
+\cite{we52,we74-2}, avec la seconde partie de la d\'emonstration de Weil 
+remplac\'ee par un argument de cohomologie $\ell$-adique. 
+
+
+
+
+
+\begin{theorem_}\label{VI:5-10}
+Soient $F$ de $k$ deux corps de nombres, $\lambda$ une place de $k$ de 
+caract\'eristique $\ell$, et 
+$\chi_\lambda:\gal(\bar F/F)^\textnormal{ab}\to k_\lambda^\times$ un 
+homomorphisme, non ramifi\'e en dehors de $\ell$ et d'un ensemble fini $S$ de 
+places. On suppose qu'il existe un ensemble $T$ de places (contenant $S$ et les 
+places au-dessus de $\ell$), de densit\'e $0$, et un homomorphisme alg\'ebrique 
+$\chi_0:F^\times \to k^\times$ tels que 
+\begin{enumerate}[(i)]
+  \item Pour $\bar k$ une cl\^oture alg\'ebrique de $k$, 
+    $\chi_0:F^\times \to k^\times \hookrightarrow \bar k^\times$ est du type 
+    consid\'er\'e en \ref{VI:5-5}, de poids $N$; 
+  \item Pour $\fp$ premier $\notin T$, $\chi_\lambda(F_\fp)$ est dans 
+    $k^\times$, $(\chi_\lambda(F_\fp))=\chi_0(\fp)$, et tous les conjugu\'es 
+    complexes de $\chi_\lambda(F_\fp)$ sont de valeur absolue $(N \fp)^{N/2}$. 
+\end{enumerate}
+
+Alors, $\chi_\lambda$ est d\'efini (\ref{VI:5-8}) par un caract\`ere de Hecke 
+alg\'ebrique de $F$ \`a valeurs dans $k$, de partie alg\'ebrique $\chi_0$. 
+\end{theorem_}
+
+Soit $\chi'$ un caract\`ere de Hecke alg\'ebrique \`a valeurs dans une 
+extension galoisienne finie $k'$ de $k$, de partie alg\'ebrique $\chi_0$ 
+(\ref{VI:5-5}). Quitte \`a aggrandir $T$, on peut supposer que le conducteur de 
+$\chi'$ est \`a support dans $T$. Soient $\lambda'$ une place de $k'$ au-dessus 
+de $\lambda$, $\chi_{\lambda'}$ le compos\'e 
+$\gal(\bar F/F)^\text{ab}\to k_\lambda^\times \to {k'}_{\lambda'}^\times$, et 
+$\chi_{\lambda'}':\gal(\bar F/F)^\text{ab}\to {k'}_{\lambda'}^\times$ d\'efini 
+par $\chi'$ (\ref{VI:5-8}). Posons 
+$\varepsilon = \chi_{\lambda'} \cdot {\chi'}_{\lambda'}^{-1}$. 
+
+L'hypoth\`ese (ii), et \ref{VI:5-5}, \ref{VI:5-6}, \ref{VI:5-8} assurent que 
+pour $\fp\notin T$, on a $\varepsilon(F_\fp)\in {k'}^\times$, et que, dans tous 
+les compl\'et\'es de $k'$, ce nombre est de norme $1$. Il en r\'esulte que 
+$\varepsilon(F_\fp)$ appartient au groupe (fini) $\dmu$ racines de l'unit\'e 
+de $k'$. D'apr\`es le th\'eor\`eme de densit\'e de Cebotarev, et l'hypoth\`ese 
+de densit\'e faite sur $T$, les $F_\fp$ ($\fp\notin T$) sont denses dans 
+$\gal(\bar F/F)^\text{ab}$, de sorte que $\varepsilon(\sigma)\in \mu$ pour tout 
+$\sigma\in \gal(\bar F/F)^\text{ab}$: le caract\`ere $\varepsilon$ est un 
+caract\`ere d'ordre fini $\gal(\bar F/F)^\text{ab}\to \mu$. D'apr\`es la 
+th\'eorie du corps de classes, il correspond \`a un charact\`ere d'ordre fini 
+du groupe des classes d'id\`eles de $F$, i.e. \`a un caract\`ere de Hecke 
+alg\'ebrique de partie alg\'ebrique triviale. Corrigeant $\chi'$ par ce 
+caract\`ere, on se ram\`ene \`a supposer que 
+$\chi_{\lambda'}=\chi_{\lambda'}'$,  et il reste \`a montrer que $\chi'$, \`a 
+priori \`a valeurs dans $k'$, est en fait \`a valeurs dans $k$. Si 
+$\sigma\in \gal(k'/k)$, $\chi'$ et ${\chi'}^\sigma$ coïncident sur tout id\'eal 
+premier $\fp\notin T$, puisque 
+$\chi'(\fp) = \chi'_{\lambda'}(F_\fp) = \chi_{\lambda'}(F_\fp) \in k^\times$. 
+Les caract\`eres $\chi_{\lambda'}'$, et ${\chi_{\lambda'}'}^\sigma$, coïncident 
+donc sur une partie dense de $\gal(\bar F/F)^\text{ab}$, donc sont \'egaux, de 
+sorte que $\chi'={\chi'}^\sigma$: $\chi'$ est \`a valeurs dans $k$. 
+
+
+
+
+
+
+
+
+
+
+\section{Les caract\`eres de Hecke d\'efinis par les sommes de Jacobi}\label{VI:6}
+
+L'id\'ee de ce paragraphe est la suivante. Soit une somme de Gauss 
+$\tau_{\dF_q}(\chi,\psi)$. Elle-m\^eme, et le faisceau correspondant 
+$\sF(\chi^{-1}\psi)$ sont deux fois li\'es \`a la caract\'eristique $p$, et au 
+corps de base $\dF_q$: 
+\begin{enumerate}[\indent a)]
+  \item car il y appara\^it le caract\`ere additif $\psi$, et le faisceau 
+    $\sf(\psi)$; 
+  \item car $\sF(\chi)$ est d\'efni \`a partir de la suite exacte de Lang 
+    \[\xymatrix{
+      0 \ar[r] 
+        & k^\times \ar[r] 
+        & V^\ast \ar[r] 
+        & V^\ast \ar[r] 
+        & 0 \text{.} 
+    }\]
+\end{enumerate}
+Deux difficult\'es si on veut relever sur un corps de nombres $F$ les 
+constructions cohomologiques correspondantes, et trouver des 
+repr\'esentations $\ell$-adiques de $\gal(\bar F/F)$ o\`u les valeurs propres 
+de Frobenius soient des sommes de Gauss. 
+
+
+
+
+
