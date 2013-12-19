@@ -1,15 +1,7 @@
 % !TEX root = sga4.5.tex
 
 
-
-
-
-
-
-
 \chapter{Théorèmes de finitude en cohomologie \texorpdfstring{$\ell$}{l}-adique}\label{VII}
-
-
 
 
 
@@ -22,6 +14,286 @@
 
 \section{Énoncé des théorèmes}\label{VII:1}
 
+Dans tout cet expos\'e, $S$ sera un sch\'ema noeth\'erien et $A$ un anneau 
+noeth\'erien \`a gauche, de torsion annul\'e par un entier inversible sur $S$. 
+Notre r\'esultat principal est le suivant. 
+
+
+
+
+
 \begin{theorem_}\label{VII:1-1}
-foo
+On suppose $S$ r\'egulier de dimension $0$ ou $1$. Soient $f:X\to Y$ un 
+morphisme de $S$-sch\'emas de type fini et $\sF$ un faisceau constructible de 
+$A$-modules \`a gauche sur $X$. Alors, les faisceaux $\eR^i f_\ast \sF$ sont 
+constructibles. 
 \end{theorem_}
+
+La preuve sera donn\'ee au paragraphe \ref{VII:2} et en \ref{VII:3-10}. 
+
+
+
+
+
+\subsection{Remarque}\label{VIII:1-2}
+
+En caract\'eristique $0$, ce r\'esultat est moins g\'en\'eral que 
+\cite[XIX paragraphe 5]{sga4}, qui prouve la conclusion du th\'eor\`eme pour 
+tout morphisme de type fini de sch\'emas excellents de caract\'eristique $0$. 
+La d\'emonstration de \cite[XIX]{sga4} utilise d'une part la r\'esolution des  
+singularit\'es, d'autre part que les sch\'emas soient d'\'egale 
+caract\'eristique (pour prouvoir d\'eduire de la r\'esolution le ``th\'eor\`eme 
+de pureté''). 
+
+
+
+
+
+
+\subsection{Remarque}\label{VII:1-3}
+
+Nous dirons qu'un complexe $K\in\ob\eD(X,A)$ est \emph{constructible} si ses 
+faisceaux de cohomologie sont constructibles et nous noterons avec un indice 
+$c$ la sous-cat\'egorie de $\eD(X,A)$ (ou $\eD^+$, $\eD^-$, $\eD^b$) form\'ee 
+des complexes constructibles. Dans le langage des cat\'egories d\'eriv\'ees, 
+que nous utiliserons librement, \ref{VII:1-1} dit que 
+$\eR f_\ast:\eD^+(X,A) \to \eD^+(Y,A)$ envoie $\eD_c^+$ dans $\eD_c^+$. 
+Explicitons: 
+\begin{enumerate}[\indent a)]
+  \item Pour $K$ r\'eduit \`a un faisceau $\sF$ en degr\'e $0$, on a 
+    $\sH^i\eR f_\ast K = \eR^i f_\ast \sF$; l'\'enonc\'e d\'eriv\'e implique 
+    donc le th\'eor\`eme. 
+  \item Dans l'autre sens, on invoque la suite spectrale 
+    \[
+      E_1^{p q} = \eR^q f_\ast \sH^p(K) \Rightarrow \sH^{p+q} \eR f_\ast K \text{.} 
+    \]
+\end{enumerate}
+
+Parler le langage des cat\'egories d\'eriv\'ees \`a l'avantage de remplacer par 
+une simple formule de transitivit\'e $\eR(f g)_\ast = \eR f_\ast \eR g_\ast$ 
+une suite spectrale de Leray 
+$E_2^{p q} = \eR^p f_\ast \eR^q g_\ast \Rightarrow \eR^{p+q} (f g)_\ast$. 
+
+Sous les hypoth\`eses de \ref{VII:1-1}, il r\'esulte de \cite{sga4} que 
+$\eR f_\ast$ est de dimension cohomologique finie. Cela permet ci-dessus de 
+remplacer $\eD^+$ par $\eD$, $\eD^-$ ou $\eD^b$. 
+
+
+
+
+
+\subsection{Les id\'ees de la d\'emonstration}\label{VII:1-4}
+\begin{enumerate}[\indent a)]
+  \item La dualit\'e de Poincar\'e permet de traiter le cas o\`u $X$ est 
+    lisse, $\sF$ localement constant, et $Y=S$. L'hypoth\`ese de dimension 
+    appara\"it par calculer des $\rHom$ sur $S$.
+  \item On factorise $f$ en $g j$: $g$ propre et $j$ plongement ouvert. On a 
+    $\eR f_\ast = \eR g_\ast \eR j_\ast$ et le th\'eor\`eme de finitude pour 
+    les morphismes propres contr\^ole $\eR g_\ast$. D\'evissant, on se ram\`ene 
+    \`a supposer $x$ lisse, $\sF$ localement constant, $f$ un plongement ouvert 
+    et $Y$ propre sur $S$. 
+  \item Une r\'ecurrence sur $\dim X$ (avec changement de $S$) permet, grosso 
+    modo, de supposer le th\'eor\`eme vrai en dehors d'une partie de $Y$ finie 
+    sur $S$. Notant $a:X\to S$ et $b:Y\to S$ les morphismes structuraux, on 
+    montre alors que si le th\'eor\`eme \'etait faux pour $\sF$ et 
+    $\eR f_\ast$, il le serait aussi pour $\sF$ et 
+    $\eR b_\ast \eR f_\ast = \eR a_\ast$: contradiction. 
+\end{enumerate}
+
+
+
+
+
+\begin{corollary_}\label{VII:1-5}
+Sous les hypoth\`eses du th\'eor\`eme, les cat\'egories $\eD_c(X,A)$ et 
+$\eD_c(Y,A)$ sont transform\'ees l'une en l'autre par les $4$ op\'erations 
+$\eR f_\ast$, $\eR f_!$, $f^\ast$, $\eR f^!$. 
+\end{corollary_}
+
+$\eR f_\ast$ est trait\'e ci-dessus, $\eR f_!$ en \cite[XVII 5.3]{sga4}, 
+$f^\ast$ est clair. Reste $\eR f^!$. Le probl\`eme est local, ce qui permet de 
+supposer que $f$ se factorise en $X\xrightarrow i Z \xrightarrow g Y$ ($i$ 
+plongement ferm\'e et $g$ lisse, purement de dimension relatif $n$). La 
+dualit\'e de Poincar\'e $\eR g_! K(n)[2 n]$ et la transitivit\'e 
+$\eR f^! = \eR i^! \eR g^!$ nous ram\`enent \`a prouver \ref{VII:1-5} pour $i$. 
+Pour tout $L\in \eD(Z,A)$, si $j$ est l'inclusion dans $Z$ de $U=Z\setminus X$, 
+$i_\ast \eR i^! L$ est le mapping cylinder de $K\to \eR j_\ast j^\ast K$ et 
+\ref{VII:1-5} pour $i$ r\'esulte de \ref{VII:1-1} pour $j$. 
+
+
+
+
+
+\begin{corollary_}\label{VII:1-6}
+Soit $X$ comme dans le th\'eor\`eme, et supposons $A$ commutatif. Alors, si 
+$\sF$ et $\sG$ sont des faisceaux constructibles de $A$-modules sur $X$, les 
+$\Ext_A^i(\sF,\sG)$ sont constructibles: $\rHom$ envoie 
+$\eD_c^-(X,A)\times \eD_c^+(X,A)$ dans $\eD_c^+(X,A)$. 
+\end{corollary_}
+
+Par d\'evissage de $\sF$, on se ram\`ene \`a supposer $\sF$ de la forme 
+$j_!\sF_1$ ($j:Y\hookrightarrow X$) un plongement localement ferm\'e et $\sF_1$ 
+localement constant sur $Y$). On a alors 
+\[
+  \rHom(j_! \sF_1,\sG) = \eR j_\ast \Hom(\sF_1,\eR j^! \sG) \text{:} 
+\]
+d'apr\`es \ref{VII:1-3}, nous sommes ramen\'es au cas o\`u $\sF$ est localement 
+constant -- voire constant puisque le probl\`eme est local. Pour $\sF$ 
+localement constant constructible, on a $\Hom(\sF,\sG)_x=\hom(\sF_x,\sG_x)$, 
+et de m\^eme pour $\rHom$. Pour $\sF$ constant, on peut donc calculer les 
+$\Ext^i$ \`a l'aide d'une r\'esolution projective de type fini de sa valeur 
+constante, et les $\Ext^i$ sont constructibles si $\sG$ l'est -- d'o\`u le 
+corollaire. 
+
+
+
+
+
+\subsection{Remarque}\label{VII:1-7}
+
+Puisque $\eR f_\ast$ est de dimension cohomologique finie, il transforme 
+complexes de tor-dimension finie (resp. $\leqslant d$) en complexes de 
+tor-dimension finie (resp. $\leqslant d$) \cite[XVII 5.2.11]{sga4}. 
+\cite[XVII 5.2.10]{sga4} et la preuve de \ref{VII:1-5} montrent alors que la 
+tor-dimension finie est stable par les $4$ op\'erations $\eR f_\ast$, 
+$\eR f_!$, $f^\ast$, $\eR f^!$. Une variant de celle de \ref{VII:1-6} 
+(d\'evisser $K$ selon une partition de $x$ pour supposer les faisceaux de 
+cohomologie localement constants, puis se localiser pour remplacer $K$ par un 
+complexe fini de faisceaux localement libres de type fini) montre alors que, 
+pour $A$ commutatif, $\rHom$ induit 
+\[
+  \rHom:\eD_\text{ctf}^b(X,A)\times \eD_\text{tf}^b(X,A) \to \eD_\text{tf}^+(X,A) 
+\]
+(t.f.: tor-dimension finie). 
+
+
+
+
+
+\subsection{}\label{VII:1-8}
+
+Sous les hypoth\`eses du th\'eor\`eme, la m\^eme m\'ethode nous permet de 
+prouver un th\'eor\`eme de bidualit\'e locale $K\iso D D K$ (paragraphe 
+\ref{VII:4}). Nous prouvons aussi un th\'eor\`eme de finitude pous les 
+faisceaux de cycles \'evanescents. Pour $S$ quelconque, on obtient encore un 
+th\'eor\`eme ``g\'en\'erique'': 
+
+
+
+
+
+\begin{theorem_}\label{VII:1-9}
+Soit $f:X\to Y$ un morphisme de $S$-sch\'emas de type fini et $\sF$ un faisceau 
+constructible de $A$-modules sur $X$. Il existe un ouvert dense $U$ de $S$ tel 
+que 
+\begin{enumerate}[\indent (i)]
+  \item Au-dessus de $U$, les $\eR^i f_\ast \sF$ sont constructibles, et nuls 
+    sauf un nombre fini d'entre eux. 
+  \item La formation des $\eR^i f_\ast \sF$ est compatible \`a tout 
+    changement de base $S' \to U\subset S$. 
+\end{enumerate}
+\end{theorem_}
+
+Pour $S$ le spectre d'un corps, on a $U=S$. 
+
+Si $S$ est le spectre d'un corps, un argument de passage \`a la limite fournit 
+la compatibilit\'e aux $S$-changements de base des $\eR^i f_\ast$ pour tout 
+morphisme quasi-compact quasi-s\'epar\'e de $S$-sch\'emas et tout faisceau 
+$\sF$. 
+
+
+
+
+
+\begin{corollary_}\label{VII:1-10}
+Soient $x$ un sch\'ema de type fini sur $k$ s\'eparablement clos et $\sF$ un 
+faisceau constructible de $A$-modules. Alors, les $\h^i(X,\sF)$ sont de type 
+fini. 
+\end{corollary_}
+
+C'est le cas particulier $S=\spec(k)$, $Y=S$. 
+
+\begin{corollary_}\label{VII:1-11}
+Soient $X$ et $Y$ deux sch\'emas de type fini sur $k$ s\'eparablement clos et 
+$K\in \ob\eD^-(X,A^\circ)$, $L\in \ob\eD^-(Y,A)$ des complexes de faisceaux de 
+modules \`a droite et \`a gauche. La fl\`eche de K\"unneth 
+\[
+  \eR \Gamma(X,K) \lotimes \eR \Gamma(Y,L) \to \eR\Gamma(X\times Y,\operatorname{pr}_1^\ast K \lotimes \operatorname{pr}_2^\ast L) 
+\]
+est un isomorphisme. 
+\end{corollary_}
+
+On proc\`ede comme en \cite[XVII 5.4.3]{sga4}: 
+\[\xymatrix{
+  X\times Y \ar[r]^-{\text{pr}_1} \ar[d]^-{\text{pr}_2} 
+    & X \ar[d]^-a \\
+  Y \ar[r]^-b 
+    & \spec(k) 
+}\]
+changeant de base par $b$, on trouve que 
+$\eR\operatorname{pr}_{2,\ast}{} \operatorname{pr}_1^\ast K$ est 
+$b^\ast \eR\Gamma(X,K)$. On a alors (cf. \cite[XVII 5.2.11]{sga4} et preuve) 
+
+\begin{align*}
+  \eR\Gamma(X\times Y,\operatorname{pr}_1^\ast K\lotimes \operatorname{pr}_2^\ast L) 
+    &= \eR\Gamma(Y,\eR \operatorname{pr}_{2,\ast}(\operatorname{pr}_1^\ast K\lotimes \operatorname{pr}_2^\ast L)) \\
+    &= \eR\Gamma(Y,(\eR\operatorname{pr}_{2,\ast}\operatorname{pr}_1^\ast K)\lotimes L) \\
+    &= \eR\Gamma(Y,b^\ast \eR\Gamma(X,K)\lotimes L) \\
+    &= \eR\Gamma(X,K)\lotimes \eR\Gamma(Y,L) 
+\end{align*}
+
+
+
+
+
+\subsection{}\label{VII:1-12}
+
+Enfin, comme contre-partie locale de \ref{VII:1-9}(ii), nous prouverons un 
+th\'eor\`eme d'acyclicit\'e locale g\'en\'erique (\ref{VII:2-13}). 
+
+
+
+
+
+
+
+
+
+
+\section{Th\'eor\`emes g\'en\'eriques}\label{VII:2}
+
+Dans ce paragraphe, nous prouvons \ref{VII:1-9} et le th\'eor\`eme 
+d'acyclicit\'e locale g\'en\'erique \ref{VII:2-13}. Pour prouver \ref{VII:1-9}, 
+on se ram\`ene aussit\^ot \`a supposer $S$ int\`egre. Soit $\eta$ son point 
+g\'en\'erique. 
+
+
+
+
+
+\subsection{}\label{VII:2-1}
+
+Nous commencerons par prouver \ref{VII:1-9} sous les hypoth\`eses 
+additionnelles suivantes: $X$ est lisse sur $S$, purement de dimension relative 
+$n$, $A=\dZ/m$, $\sF$ est localement constant et $Y=S$. Soit 
+$\sF'=\Hom(\sF,\dZ/m)$. Nous allons montrer que si les $\eR^i f_! \sF'$ sont 
+localement constants, les conclusions de \ref{VII:1-9} valent pour $U=S$. 
+Rappelons que si $\sL$ est un faisceau localement constant constructible, les 
+$\Ext^i(\sL,\sG)$ se calculent fibre par fibre, et sont constructibles si $\sG$ 
+l'est. Rappelons aussi que $\dZ/m$ est un $\dZ/m$-module injectif, et est le 
+module dualisant, de sorte que $\sF=\rHom(\sF',\dZ/m)$. La dualit\'e de 
+Poincar\'e 
+\[
+  \eR f_\ast \rHom(K,\eR f^! L) = \rHom(\eR f_! K,L) \text{,} 
+\]
+pour $K=\sF'$, $L=\dZ/m$, $\eR f^! L = \dZ/m[2n](n)$, fournit donc 
+\[
+  \eR^{2n-i} f_\ast \sF = \Hom(\eR^i f_! \sF',\dZ/m)(-n) \text{.} 
+\]
+
+Le faisceau au second membre est localement constant, de formation compatible 
+\`a tout changement de base -- d'o\`u l'assertion. 
+
+
+
+
