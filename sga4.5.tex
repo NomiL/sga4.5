@@ -25,10 +25,6 @@ avec la collaboration de J.F. Boutot, \\ A. Grothendieck, L. Illusie et J.L. Ver
 % French characters
 % à é è ê ô ù û
 
-% other notes: there are two I.6.5's in Deligne's original - one defining sheaf 
-% cohomology, the other defining torsors
-
-
 
 
 
@@ -37,6 +33,7 @@ avec la collaboration de J.F. Boutot, \\ A. Grothendieck, L. Illusie et J.L. Ver
 \include{sga4.5-note}
 \include{sga4.5-intro}
 \tableofcontents
+
 \pagenumbering{arabic} % rest of pages are numbered the usual way
 \include{sga4.5-1}
 \include{sga4.5-2}
@@ -44,83 +41,12 @@ avec la collaboration de J.F. Boutot, \\ A. Grothendieck, L. Illusie et J.L. Ver
 \include{sga4.5-4}
 \include{sga4.5-5}
 \include{sga4.5-6}
-
-
-
-
-
-\chapter{Théorèmes de finitude en cohomologie \texorpdfstring{$\ell$}{l}-adique}\label{VII}
-
-\section{Énoncé des théorèmes}\label{VII:1}
-
-\begin{theorem_}\label{VII:1-1}
-foo
-\end{theorem_}
-
-
-
-
-
+\include{sga4.5-7}
 \include{sga4.5-8}
+\include{sga4.5-erratum}
 
-
-
-
-
-\appendix
-\chapter{Erratum pour SGA 4, tome 3}
-
-\paragraph{XIV p.18 1.14}
-(XIX 6) au lieu de (XX 6). 
-
-\paragraph{XVI 2.2}
-Il faut supposer $F$ localement constant!
-
-\paragraph{XVI 5.2}
-La démonstration donnée est incomplète. Arpès l'énoncé de 
-l'hypothèse de récurrence, il faut d'abord se ramener au cas o\`u $F$ est 
-constant ($F$ devient constant sur un rev\^etement galoisien étale 
-$\pi:X'\to X$ de $X$, de groupe de Galois $G$, et on invoque la suite spectrale 
-de Hochschild-Serre $E_2^{p q}=\h^p(G,\h^q(X',\pi^\ast F))\Rightarrow \h^{p+q}(X,F)$). 
-Les arguments qui suivent sont alors corrects. 
-
-\paragraph{XVII 1.1.8}
-Le signe (1.1.8.1) est erroné lorsque $F$ est contravariant en certaines 
-variables. Il faut lire: 
-\begin{equation*}\tag{1.1.8.1}
-  \rho^{\underline k} = (-1)^{A(\underline k)}: \text{ automorphisme de }
-F\circ (G_j)\left(K_i^{k_i\varepsilon(i)\varepsilon(\psi(i))}\right) 
-\end{equation*}
-avec 
-\[
-  A(\underline k) = \sum_{\varepsilon(i) = \varepsilon(\psi(i))=-} k_i + \sum_{\varepsilon(j)=-} \sum_{\substack{\psi(a)=\psi(b)=j \\ a<b}} k_a k_b 
-\]
-
-\paragraph{XVII 2.1.3}
-La démonstration contient des erreurs flagrantes. Il faut supprimer la 
-3-ème ligne (p.34 1.9) et remplacer les 6-ème et 7-ème (p.34 1.12, 13) 
-par: 
-
-Les flèches du diagramme (2.1.3.2) induisent des applications 
-\[
-  \hom_y(F,F) \to \hom_{f g'}({g'}^\ast F,f_\ast F) = \hom_{x'}(f'_\ast {g'}^\ast F,g^\ast f_\ast F) \text{,}
-\]
-
-\paragraph{XVIII 2.14.4}
-Lire XVII 6.2.7.2 au lieu de XVII 6.2.4.
-
-\paragraph{XVIII p.99 1-1}
-Lire $u$ au lieu de $U$ et 3.1.16.1 au lieu de 3.1.11.1.
-
-
-
-
-
-
-% to use BibTeX
 \bibliographystyle{amsplain}
 \bibliography{sga-sources}
-
 
 
 

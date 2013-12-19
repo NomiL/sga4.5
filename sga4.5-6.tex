@@ -2478,6 +2478,328 @@ constructions cohomologiques correspondantes, et trouver des
 repr\'esentations $\ell$-adiques de $\gal(\bar F/F)$ o\`u les valeurs propres 
 de Frobenius soient des sommes de Gauss. 
 
+Si $\chi$ est trivial sur $\dF_q^\times$, la somme $\tau_{\dF_q}(\chi,\psi)$ 
+est ind\'ependante de $\psi$, et $q$ fois une somme de Jacobi. Celle-ci est 
+li\'ee \`a la cohomologie de $W^\ast/\dG_m$, \`a valeurs dans un faisceau 
+d\'eduit de $\chi$: $\psi$, et la difficult\'e a), ont disparu. Pour 
+r\'esoudre b), il suffit de d\'ecrire les faisceaux utilis\'es \`a l'aide de 
+suites exactes de K\"ummer (qui ont un sens en toute caract\'eristique). C'est 
+possible gr\^ace \`a \ref{VI:4-9}. 
+
+Une fois trouv\'ees les repr\'esentations $\ell$-adiques, on utilise 
+\ref{VI:5-10} et le th\'eor\`eme de Stickelberger pour montrer qu'elles 
+proviennent de caract\`eres de Hecke alg\'ebriques. 
+
+
+
+
+
+\subsection{}\label{VI:6-1}
+
+Si $E$ est un corps, de cl\^oture alg\'ebrique $\bar E$, et que $\lambda$ est 
+un caract\`ere d'ordre divisant $n$ de $\mu_d(\bar E)$, on note $_n\lambda$ le 
+caract\`ere de $\mu_n(\bar E)$ tel que $\lambda$ et $_n \lambda$ induisent le 
+m\^eme caract\`ere de $\widehat\dZ(1)_{\bar E} = \varinjlim \mu_n(\bar E)$. De 
+m\^eme pour $\lambda$ un caract\`ere de $\widehat\dZ(1)_{\bar E}$. 
+
+Soient $F$ et $k$ deux corps de nombres, $\bar F$ un cl\^oture alg\'ebrique de 
+$F$, $I$ un ensemble fini muni d'une action de $\gal(\bar F/F)$ et 
+$\lambda=(\lambda_i)_{i\in I}$ une famille de caract\`eres 
+$\lambda_i:\widehat\dZ(1)_{\bar F} \to k^\times$. On suppose que 
+$\lambda_i\ne 1$ ($i\in I$), que le produit des $\lambda_i$ est trivial et que 
+la famille $\lambda$ est d\'efini sur $F$, i.e. que pour tout 
+$\sigma\in \gal(\bar F/F)$, on a 
+$\lambda_{\sigma(i)}=\lambda_i\circ \sigma^{-1}$. 
+
+L'ensemble galoisien $I$ est l'ensemble des homomorphismes dans $\bar F$ d'une 
+alg\`bre $E$ s\'eparable sur $F$. Si $C$ est l'ensemble des orbites de 
+$\gal(\bar F/F)$ dans $I$, on a une d\'ecomposition de $E$ en produit de corps 
+$E=\prod_{\alpha\in C} E_\alpha$, o\`u $\alpha$ s'identifie \`a l'ensemble des 
+plongements de $E_\alpha$ dans $\bar F$. Si les caract\`eres $\lambda_i$, pour 
+$i\in \alpha$, sont d'ordre $d_\alpha$, le corps $E_\alpha$ contient les 
+racines $d_\alpha$-i\`emes de $1$ et il existe 
+$\lambda_\alpha:\mu_{d_\alpha}(E_\alpha) \hookrightarrow k^\times$  tel que, si 
+$i\in \alpha$ correspond au plongement $\sigma_i$ de $E_\alpha$ dans $\bar F$, 
+on ait $_{d_\alpha} \lambda_i = \lambda_\alpha \sigma_i^{-1}$. 
+
+
+
+
+
+\subsection{}\label{VI:6-2}
+
+Soient $n>0$ un multiple des $d_\alpha$, $\Sigma$ l'ensemble des places de $F$ 
+o\`u $E/F$ se ramifie ou qui divisent $n$, $\mu$ une place de $k$ de 
+caract\'eristique r\'esiduelle $\ell$, et $A$ l'anneau des \'el\'ements de $F$ 
+entiers en dehors de $\Sigma$ et $\ell$. La cl\^oture int\'egrale $M$ de $A$ 
+est finie \'etale de rang $N=|I|$ sur $A$. Avec les notations de \ref{VI:4-6}, 
+\ref{VI:4-8}, les $_n \lambda_i$ d\'efinissent 
+\[
+  _n\lambda:(V^\ast/\dG_m)_n \to k^\times \subset k_\mu^\times \text{.} 
+\]
+
+Soit $a$ la projection de $W^\ast/\dG_m$ sur $\spec(A)$. D'apr\`es 
+\ref{VI:4-20}, le faisceau $\eR^{N-2} a_! \sK_n(_n \lambda)$ est lisse de rang 
+un; il d\'efinit une repr\'esentation $\ell$-adique 
+\[
+  j_\mu[\lambda]:\gal(\bar F/F)^\text{ab} \to k_\mu^\times 
+\]
+(ou simplement $j_\mu$) nono ramifi\'ee en dehors de $\sigma$ et $\ell$. 
+
+
+
+
+
+\subsection{}\label{VI:6-3}
+
+Calculons $j_\mu(F_\fp)$. D'apr\`es \ref{VI:4-20}, il suffit de le faire 
+apr\`es r\'eduction modulo $\fp$. Soient donc $f=A/\fp$, $e=M/\fp  M$, et 
+$\bar f$ la cl\^oture alg\'ebrique de $f$ d\'efinie par une place de $\bar F$ 
+au-dessus de $\fp$. On a encore $I=\hom_f(e,\bar f)$. Apr\`es r\'eduction, 
+$_n\lambda$ admet encore une description \ref{VI:6-1}: 
+\begin{enumerate}[a)]
+  \item Soit $D$ l'ensemble des orbites de $\gal(\bar f/f)$ dans $I$. La 
+    d\'ecomposition de $e$ en produit de corps s'\'ecrit 
+    $e=\prod_{\beta\in D} e_\beta$, o\`u les $\sigma_i$ ($i\in \beta$) 
+    s'identifient aux plongements de $e_\beta$ dans $F$. Pour $\beta\in D$, on 
+    note $\alpha(\beta)$ l'\'el\'ement de $C$ contenant $\beta$ et 
+    $d_\beta=d_{\alpha(\beta)}$. Soit 
+    \[\xymatrix{
+      \lambda_\beta : \mu_{d_\beta}(e_\beta) 
+        & \ar[l]_-\sim \mu_{d_\beta}(E_{\alpha(\beta)}) \ar[r]^-{\lambda_{d(\beta)}} 
+        & k^\times \text{.} 
+    }\]
+  \item Si $i\in I$ correspond au plongement $\sigma_i$ de $e_\beta$ dans 
+    $\bar f$, la r\'eduction 
+    $_{d\beta} \bar\lambda_i:\mu_{d\beta}(\bar f) \to k^\times$ de 
+    $_{d\beta} \lambda_i$ de $_{d\beta} \lambda_i$ est 
+    $\lambda_\beta \circ \sigma_i^{-1}$. 
+\end{enumerate}
+
+Soient $q_\beta$ le nombre d'\'el\'ements de $e_\beta$, 
+$\chi_\beta=_{(q_{\beta^{-1}})} \lambda_\beta$, et 
+$\chi:e^\times \to k^\times$ de coordonn\'ees les $\chi_\beta$. Sur l'espace 
+affine sur $A/\fp$ d\'efini par $e$ (\ref{VI:4-6}), ou plut\^ot sur le tore 
+$e_\beta^\times$, on a des isomorphismes 
+$\sK_n((_n\bar\lambda_i)_{i\in\beta}) = \sK_{d_\beta}((\lambda_\beta \circ \sigma_i^{-1})_{i\in\beta}) =\sK_{q_{\beta^{-1}}}((\chi_\beta\circ \sigma_i^{-1})_{i\in I}) = \sF(\chi_\beta)$ (\ref{VI:4-9}). 
+Sur $e^\times$, on a donc $\sK_n((_n\bar\lambda_i)_{i\in \beta}) = \sF(\chi)$ 
+et cet isomorphismes se descend \`a la r\'eduction mod $\fp$ de $V^\ast/\dG_m$. 
+D\`es lors
+
+
+
+
+
+\begin{proposition_}\label{VI:6-4}
+Avec les notations de \ref{VI:6-2} et \ref{VI:6-3}, $j_\mu(F_\fp)$ est la 
+somme de Jacobi $J(\chi)$. 
+\end{proposition_}
+
+R\'ecrivons les formules liant $(\lambda_i)_{i\in I}$ \`a 
+$(\chi_\beta)_{\beta\in B}$: pour $i\in \beta\subset \alpha$, 
+\begin{align*}
+  _{d_\alpha} \lambda_i &= \lambda_\alpha\circ \sigma_i^{-1} && \lambda_\alpha:\mu_{d_\alpha}(E_\alpha) \to k^\times \\
+  \lambda_\beta &= \text{r\'eduction de $\lambda_\alpha$} && :\mu_{d_\alpha}(e_\beta) \to k^\times \\
+  \chi_\beta &= _{q_{\beta^{-1}}}\lambda_\beta: x\mapsto \lambda_\beta(x^{(q_\beta-1)/d_\alpha}) && :e_\beta^\times \to k^\times 
+\end{align*}
+
+
+
+
+
+\begin{theorem_}\label{VI:6-5}
+La repr\'esentation $j_\mu$ est d\'efinie par un caract\`ere de Hecke 
+alg\'ebrique de $F$ \`a valeurs dans $k^\times$. 
+\end{theorem_}
+
+Nous le v\'erifierons \`a l'aide de \ref{VI:5-10}. On rejoint ici la 
+d\'emonstration de Weil \cite{we52,we74-2}, par l'usage du th\'eor\`eme de 
+Stickelberger, et je ne donnerai que quelques indications. 
+
+
+
+
+
+\subsection{}\label{VI:6-6}
+
+Etant donn\'e $j:\gal(\bar F/F) \to k_\lambda^\times$, et une extension finie 
+$F'/F$, on v\'erifie \`a l'aide de \ref{VI:5-10} que $j$ est d\'efini par un 
+caract\`ere de Hecke si et seulement si $j|\gal(\bar F/F')$ l'est. Cette 
+remarque permet dans \ref{VI:6-5} de se r\'eduire au cas o\`u Galois agit 
+trivialement sur $I$, et o\`u $F$ contient les racines $n$-i\`emes de 
+l'unit\'e. On peut ensuite se r\'eduire au cas o\`u $F=\dQ(\sqrt[n]{1})$, puis 
+prendre $k=F$. Dans ce cas, chaque $_n \lambda_i$ est d\'efini par 
+$a_i\in \dZ/n$: c'est $x\mapsto x^{a_i}:\mu_n \to k^\times$. On a 
+$\sum a_i=0$, et $a_i\ne 0$. 
+
+
+
+
+
+\subsection{}\label{VI:6-7}
+
+Dans un corps de nombres, les places de degr\'e $1$ forment toujours un 
+ensemble de densit\'e $0$. En appliquant \ref{VI:5-10}, on peut donc n\'egliger 
+les autres, et n'utiliser Stickelberger que pour un corps premier. Soient donc 
+$p$ premier, $0<a<p-1$, $\widetilde x:\dF_p^\times \to \dQ_p^\times$ le 
+caract\`ere ``rel\`evement multiplicatif'' et 
+$g=-\sum_{x\in \dF_p^\times} \widetilde x^{-a} \zeta^z\in \dQ_p(\zeta)$, pour 
+$\zeta$ une racine $p$-i\`eme de $1$. Notons encore $x$ l'entier dans $[0,p-1]$ 
+relevant $x$, et d\'eveloppons $\zeta^x=(1+\pi)x$ par la formule du bin\^ome. 
+On trouve $g=-\sum_{0=0}^{p-1} A_i\pi^i$ avec $A_i\in \dZ_p$, de r\'eduction 
+$\mod p$ la somme $\sum_{x\in \dF_p^\times} x^{-a} \binom x i$. Pour $b$ non 
+divisible par $p-1$, on a $\sum_{x\in \dF_p^\times} x^b=0$. Si $i<a$, 
+$\binom x i$ est un polyn\^ome en $x$ de degr\'e $i<a$, d'o\`u 
+$A_i\equiv 0\pmod p$. De m\^eme, $A_a\equiv \frac{p-1}{a!} \pmod p$, et 
+$g\sim \frac{\pi^a}{a!}$: la valuation de $g$ est donn\'ee par 
+$v(g)/v(p) = \frac{a}{p-1}$. 
+
+
+
+
+
+\subsection{}\label{VI:6-8}
+
+Soit $\sigma_i$ ($i\in (\dZ/n)^\times$) l'\'el\'ement de 
+$\gal(\dQ(\sqrt[n]{1})/\dQ)$ tel que $\sigma_i(\zeta)=\zeta^i$ pour $\zeta^n=1$, 
+et notons additivement le groupe des homomorphismes alg\'ebriques 
+$\dQ(\sqrt[n]{1})^\times \to \dQ(\sqrt[n]{1})^\times$. Pour $\lambda$ comme en 
+\ref{VI:6-6}, d\'efini par une famille $(a_i)_{i\in I}$ d'entiers $\mod n$, non 
+nuls et de somme nulle \ref{VI:5-10}, \eqref{VI:eq:4-15-1} et \ref{VI:6-7} 
+montrent que $j_\mu[\lambda]$ st d\'efini par un caract\`ere de Hecke 
+alg\'ebrique $j[a]$ et que, si $N$ est la norme, sa partie alg\'ebrique est 
+donn\'ee par 
+\begin{equation*}\tag{6.8.1}\label{VI:eq:6-8-1}
+  (N j[a])_\text{alg} = \sum_{i\in (\dZ/n)^\times} \sum_{j\in I} \left \lfloor \frac{i a_j}{n} \right\rfloor \sigma_i^{-1} 
+\end{equation*}
+o\`u $\lfloor \cdot \rfloor$ est la partie fractionnaire. 
+
+
+
+
+
+\subsection{}\label{VI:6-9}
+
+Le cas le plus int\'eressant est celui o\`u $F\subset \dQ(\sqrt[n]{1})$, et 
+o\`u la famille des $_n \lambda_i$ est construite comme suite: 
+\begin{enumerate}[a)]
+  \item On prend une famille finie $(Aj)_{j\in J}$ d'orbites de 
+    $\gal(\sqrt[n]{1}/F)=H\subset (\dZ/n)^\times$ dans $\dZ/n$. On suppose que 
+    $A_j\ne\{0\}$ et que $\sum_{j\in J} \sum_{a\in A_j} a=0$. 
+  \item On prend $I=\sqcup_{j\in J} A_j$; Galois agit sur chaque $A_j$. 
+  \item On prend $\bar F\supset \dQ(\sqrt[n]{1})$, $k=\dQ(\sqrt[n]{1})$ et, si 
+    $i\in I$ correspond \`a $a\in A_j\subset (\dZ/n)^\times$, 
+    $_n\lambda_i(x)=x^a$. 
+\end{enumerate}
+
+On v\'erifie \`a l'aide de \ref{VI:4-20} qu'un $j_\mu$ g\'en\'eral (relatif \`a 
+$F_1$) se d\'eduit d'un $j_\mu$ comme ci-dessus (pour 
+$F\subset \dQ(\sqrt[n]{1})$, $F_1$ extension de $F$) par restriction \`a 
+$\gal(\bar F/F_1)$ et multiplication par un caract\`ere d'ordre deux. 
+
+Pour $a\in \gal(k/\dQ)=(\dZ/n)^\times$, $a$ transform\'e la famille des $A_j$ 
+en celle des $a A_j$. Si $a\in H$, la famille des $A_j$ est donc pr\'eserv\'ee, 
+et les $j_\mu(F_\fp)$ sont invariant par $H$: 
+
+
+
+
+
+\begin{proposition_}\label{VI:6-10}
+Sous les hypoth\`eses de \ref{VI:6-9}, $j_\mu$ est d\'efini par un caract\`ere 
+de Hecke alg\'ebrique de $F$ \`a valeurs dans $F$. 
+\end{proposition_}
+
+Faisons \`a nouveau $F=\dQ(\sqrt[n]{1})$, et consid\'erons les caract\`eres de 
+hecke $j[a]$ d\'efinis par une famille $(a_i)_{i\in I}$, $i\in \dZ/n$, 
+$a_i\ne 0$, $\sum a_i=0$. Le th\'eor\`eme suivant a \'et\'e obtenu 
+ind\'ependamment par Vishik. 
+
+
+
+
+
+\begin{theorem_}\label{VI:6-11}
+Tout caract\`ere de hecke alg\'ebrique de $\dQ(\sqrt[n]{1})$, $a$ un puissance 
+dans le groupe engendr\'e par les $j[a]$ et la norme. 
+\end{theorem_}
+
+Puisqu'on travaille ``\`a torsion pr\`es,'' seule compte la partie alg\'ebrique 
+des caract\`eres de Hecke consid\'er\'es. Appliquant \eqref{VI:eq:6-8-1} aux 
+$j[a]$, avec $a=$ un \'el\'ement de $\dZ/n$ r\'ep\'et\'e $n$ fois, on se 
+ram\`ene au lemme suivant.
+
+
+
+
+
+\begin{lemma_}\label{VI:6-12}
+Notons $\sum x_j \sigma_j$ les \'el\'ements de l'alg\`ebre de groupe 
+$\dQ[(\dZ/n)^\times]$, et soit $x$ le sous-groupe de ceux tels que 
+$x_j+x_{-j}=C^{\underline{t e}}$. Alors, $X$ est engendr\'e sur $\dQ$ par 
+$N=\sum \sigma_j$ et par les 
+$g_a=\sum \left\lfloor \frac{i a}{n}\right\rfloor \sigma)i^{-1}$ 
+($a\in \dZ/n$, $a\ne 0$). 
+\end{lemma_}
+
+Tant $X$ que $Y=\langle N,(g_a)\rangle$ sont des id\'eaux de l'alg\`ebre du 
+groupe, et il suffit de v\'erifier qu'ils sont annul\'es par les m\^emes 
+caract\`eres complexes $\chi$ de $(\dZ/n)^\times$. Ceci revient \`a dire qu'un 
+caract\`ere impair $(\chi(j)=-\chi(-j)$) n'annule jamais tous les $g_a$. Si 
+$\chi$ est primitif, on a 
+\[
+  \chi(g_1) = \sum \frac i n \chi^{-1}(i) = -L(\chi,0)\ne 0 \text{.} 
+\]
+Dans le cas g\'en\'eral, si $\chi$ provient d'un caract\`ere primitif de 
+$(\dZ/n)^\times$, $\chi(g_{n/d})$ se ram\`ene \`a une somme analogue sur 
+$(\dZ/n)^\times$, d'o\`u le lemme. 
+
+
+
+
+
+
+
+
+
+
+\section{Sommes de Kloosterman g\'en\'eralis\'ees}\label{VI:7}
+
+
+
+
+
+\subsection{}\label{VI:7-1}
+
+Soient $\dF_q$ un corps fini \`a $q$ \'el\'ements, et $\psi$ un caract\`ere 
+additif non trivial. Dans ce paragraphe, nous faisons une \'etude cohomologique 
+des sommes de Kloosterman g\'en\'eralis\'ees 
+\begin{equation*}\tag{7.1.1}\label{VI;eq:7-1-1}
+  \kloos_{n,a} = \sum_{x_1\dotsm x_n = a} \psi(x_1+\cdots + x_n) \qquad (n\geqslant 1) \text{.} 
+\end{equation*}
+Pour $a=0$, cette somme est \'el\'ementaire (cf. \ref{vi:7-7}): 
+\begin{equation*}\tag{7.1.2}\label{VI:eq:7-1-2}
+  \kloos_{n,0} = (-1)^{n-1} \text{.} 
+\end{equation*}
+La cas int\'eressant est celui o\`u $a\ne 0$. Les $x_i$ sont alors dans 
+$\dF_q^\times$. Nous prouverons dans ce cas une majoration 
+\begin{equation*}\tag{7.1.3}\label{VI:eq:7-1-3}
+  \left|K_{n,a}\right| \leqslant n q^{\frac{n-1}{2}} \text{.} 
+\end{equation*}
+
+Nous outils essentiels seront les \'enonc\'es cohomologiques de reflet les 
+identit\'es suivantes 
+\begin{align*}\tag{7.1.4}\label{VI:eq:7-1-4}
+  \kloos_{n,a} &= \sum_{x_1} \psi(x_i) \sum_{x_2\dotsm x_n = a/x_1} \psi(x_2+\cdots + x_n) \\ \notag
+    &= \sum_{x\in \dF_q^\times} \psi(x) \kloos_{n-1,a/x} \qquad (a\ne 0,n\geqslant 2) \\ \tag{7.1.5}\label{VI:eq:7-1-5}
+  \sum_a \kloos_{n,a} &= \sum_a \sum_{x_1 \dotsm x_n = a} \psi\left(\sum x_i\right) = \sum_{x_1,\dots,x_n} \psi\left(\sum x_i\right) = 0 
+\end{align*}
+Pour $\chi$ un caract\`ere non trivial de $\dF_q^\times$, 
+\begin{equation*}\tag{7.1.6}\label{VI:eq:7-1-6}
+  \sum \chi(a) \kloos_{n,a} = \sum_{x_1,\dots,x_n} \chi\left(\prod x_i\right) \cdot \psi\left(\sum x_i\right) = (-\tau(\chi^{-1},\psi))^n 
+\end{equation*}
+(somme de Gauss). 
+
 
 
 
