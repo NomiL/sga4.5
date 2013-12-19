@@ -2804,3 +2804,37 @@ Pour $\chi$ un caract\`ere non trivial de $\dF_q^\times$,
 
 
 
+\subsection{}\label{VI:7-2}
+
+Soient $k$ un alg\`ebre \'etale de degr\'e $n$ sur $\dF_q$, et $\varepsilon(k)$ 
+comme en \eqref{VI:eq:4-5-1}. Posons 
+\[
+  \kloos_{k,a} = \sum_{N_{k/\dF_q}(x)=a} \psi \tr(x) \text{.} 
+\]
+On a encore 
+\begin{align*}\tag{7.2.1}\label{VI:eq:7-2-1}
+  \kloos_{k,0} &= (-1)^{n-1} \cdot \varepsilon(k) \\ \tag{7.2.2}\label{VI:eq:7-2-2}
+  \sum_a \kloos_{k,a} &= 0 \\ \tag{7.2.3}\label{VI:eq:7-2-3}
+  \sum_a \chi(a) \kloos_{k,a} &= (-1)^n \tau_{\dF_q}\left(\chi^{-1}\circ N_{k/\dF_q},\psi\right) \text{.} 
+\end{align*}
+
+Par inversion de Fourier sur $\dF_q^\times$, on en d\'eduit une expression de 
+$\kloos_{k,a}$ en terme de sommes de Gauss: 
+\begin{align*} 
+  \kloos_{k,a} &= \frac{1}{q-1} \sum_\chi \chi(a) \sum_{b\in \dF_q^\times} \chi^{-1}(b) \kloos_{k,b} \\ \tag{7.2.4}\label{VI:eq:7-2-4}
+  (-1)^n \kloos_{k,a} &= \frac{1}{q-1} \left(\varepsilon(k) + \sum_{\chi\ne 1} \chi(a) \tau_{\dF_q}\left(\chi\circ N_{k/\dF_q},\psi\right) \right) \text{.} 
+\end{align*}
+
+L'identit\'e de Hasse-Davenport permet maintenant de comparer $\kloos_{k,a}$ 
+\`a $\kloos_{n,a} = \kloos_{\dF_{q^n},a}$: 
+\begin{equation*}\tag{7.2.5}\label{VI:eq:7-2-5}
+  \kloos_{k,a} = \varepsilon(k) \kloos_{n,a} \text{.} 
+\end{equation*}
+
+Je ne connais pas d'interpr\'etation cohomologique de \eqref{VI:eq:7-2-4}, mais 
+j'en donnerai une de \eqref{VI:eq:7-2-5}. Revenons aux sommes $\kloos_{n,a}$. 
+
+
+
+
+
