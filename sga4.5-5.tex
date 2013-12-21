@@ -53,17 +53,17 @@ est un entier inversible sur tous les schémas considérés.
 
 Soit $S$ un schéma régulier purement de dimension $1$. Nous nous proposons 
 de montrer que le complexe réduit à $\dZ/n$ en degré $0$ est 
-dualisant, i.e. que pour $\sK\in \ob\D_c^b(S,\dZ/n)$ ($(-)_c$ pour 
+dualisant, i.e. que pour $\sK\in \ob\eD_c^b(S,\dZ/n)$ ($(-)_c$ pour 
 constructible), si on pose $D\sK=\rHom(\sK,\dZ/n)$, alors $D\sK$ est encore 
 constructible à cohomologie bornée, et que le morphisme canonique $\alpha$ 
 de $\sK$ dans $D D\sK$ est un isomorphisme. 
 
-Pour $\sK$ dans $\D^-$, et $\sL$ quelconque, on a 
+Pour $\sK$ dans $\eD^-$, et $\sL$ quelconque, on a 
 \[
   \hom(\sK\lotimes \sL,\dZ/n) = \hom(\sL,\Hom(\sK,\dZ/n)) \text{.}
 \]
 Le morphisme de $\sK$ dans $DD\sK$ est défini en supposant $D\sK$ dans 
-$\D^-$; si $\beta:D\sK\lotimes\sK\to \dZ/n$ est l'accouplement canonique, il 
+$\eD^-$; si $\beta:D\sK\lotimes\sK\to \dZ/n$ est l'accouplement canonique, il 
 est défini par l'accouplement 
 $\sK\lotimes D\sK=D\sK\lotimes \sK \xrightarrow\beta \dZ/n$. 
 
@@ -74,31 +74,31 @@ $\sK\lotimes D\sK=D\sK\lotimes \sK \xrightarrow\beta \dZ/n$.
 \subsection{}\label{V:1-2}
 
 Soit $f:X\to S$ un morphisme séparé de type fini. Posons 
-$\sK_X=\R f^!\dZ/n$. Pour $\sK\in \ob\D^-(X,\dZ/n)$, on pose 
-$D\sK = \rHom(\sK,\sK_X)$. L'adjonction entre $\R f_!$ et $\R f^!$ 
+$\sK_X=\eR f^!\dZ/n$. Pour $\sK\in \ob\eD^-(X,\dZ/n)$, on pose 
+$D\sK = \rHom(\sK,\sK_X)$. L'adjonction entre $\eR f_!$ et $\eR f^!$ 
 assure que 
 \[\xymatrix{
-  \R f_\ast \sK\lotimes \R f_\ast D\sK \ar[r] 
-    & \R f_! (\sK\lotimes D\sK) \ar[r] 
-    & \R f_! \R f^! \dZ/n \ar[r] 
+  \eR f_\ast \sK\lotimes \eR f_\ast D\sK \ar[r] 
+    & \eR f_! (\sK\lotimes D\sK) \ar[r] 
+    & \eR f_! \eR f^! \dZ/n \ar[r] 
     & \dZ/n \text{.}
 }\]
 La symétrie de cette description montre que, pour $f$ propre, le diagramme 
 \begin{equation*}\tag{1.2.1}\label{V:eq:1-2-1}
 \xymatrix{
-  \R f_\ast \sK \ar[r] \ar[d] 
-    & D D \R f_\ast \sK \ar[d]^-\wr \\
-  \R f_\ast D D \sK \ar[r]^\sim 
-    & D\R f_\ast D\sK
+  \eR f_\ast \sK \ar[r] \ar[d] 
+    & D D \eR f_\ast \sK \ar[d]^-\wr \\
+  \eR f_\ast D D \sK \ar[r]^\sim 
+    & D\eR f_\ast D\sK
 }
 \end{equation*}
 est commutatif. 
 
 Si $f$ est l'inclusion d'un point fermé, on sait que 
-$\R f^!\dZ/n=\dZ/n(-1)[-2]$ -- soit, à torsion et décalage près, $\dZ/n$. 
+$\eR f^!\dZ/n=\dZ/n(-1)[-2]$ -- soit, à torsion et décalage près, $\dZ/n$. 
 Sur le spectre d'un corps, ce complexe est dualisant (dualité de Pontrjagin 
 pour les $\dZ/n$-modules). D'après \eqref{V:eq:1-2-1}, on a donc 
-$\sK\iso D D\sK$ pour $\sK$ de la forme $\R f_!\sL$ -- et donc lorsque le 
+$\sK\iso D D\sK$ pour $\sK$ de la forme $\eR f_!\sL$ -- et donc lorsque le 
 support de $\underline\h^\bullet(\sK)$ est fini. 
 
 
@@ -108,7 +108,7 @@ support de $\underline\h^\bullet(\sK)$ est fini.
 \begin{theorem_}\label{V:1-3}
 Soient $j:U\hookrightarrow S$ un ouvert dense de $S$ et $\sF$ un faisceau 
 localement constant constructible de $\dZ/n$-modules sur $U$. On a 
-$\D j_\ast \sF = j_\ast D \sF$, i.e. $\Hom(j_\ast \sF,\dZ/n) = j_\ast\Hom(\sF,\dZ/n)$ et $\Ext^i(j_\ast\sF,\dZ/n) = 0$ pour $i>0$.
+$\eD j_\ast \sF = j_\ast D \sF$, i.e. $\Hom(j_\ast \sF,\dZ/n) = j_\ast\Hom(\sF,\dZ/n)$ et $\Ext^i(j_\ast\sF,\dZ/n) = 0$ pour $i>0$.
 \end{theorem_}
 
 Sur $U$, $\Ext^i(j_\ast\sF,\dZ/n)=0$ pour $i>0$, car $\sF$ est localement 
@@ -141,10 +141,10 @@ On obtient un morphisme de triangles
 \[\xymatrix{
   i_\ast\left(\sF_{\bar\eta}^I\right)^\vee (-1)[-2] \ar[r] \ar@{=}[d] 
     & D j_\ast\sF \ar[r] \ar[d] 
-    & \R j_\ast \sF^\vee \ar[d] \\
+    & \eR j_\ast \sF^\vee \ar[d] \\
   i_\ast\left(\sF_{\bar\eta}^I\right)^\vee(-1)[-2] \ar[r] 
     & \left(\sF_{\bar\eta}^I\right)^\vee \ar[r] 
-    & \R j_\ast \sF_{\bar\eta}^I \text{.}
+    & \eR j_\ast \sF_{\bar\eta}^I \text{.}
 }\]
 La suite exacte longue déduite de la première ligne fournit la nullité des 
 $\Ext^i$ ($i>2$) et, prenant la fibre en $s$, on trouve 
@@ -180,7 +180,7 @@ d'où le théorème.
 
 
 \begin{theorem_}\label{V:1-4}
-Pour $\sK\in \ob\D_c^b(S,\dZ/n)$, on a $\sK\iso D D \sK$.
+Pour $\sK\in \ob\eD_c^b(S,\dZ/n)$, on a $\sK\iso D D \sK$.
 \end{theorem_}
 
 Par dévissage, on se ramène à supposer que $\sK$ est réduit à un 
@@ -207,22 +207,22 @@ localement constant sur $U$.
 \subsection{}\label{V:2-1}
 
 Soit $X$ une courbe projective et lisse sur $k$ algébriquement clos. On pose 
-$\sK_X=\dZ/n(1)[2]$ et, pour $\sK\in\ob \D_c^b(X,\dZ/n)$, 
+$\sK_X=\dZ/n(1)[2]$ et, pour $\sK\in\ob \eD_c^b(X,\dZ/n)$, 
 $D\sK=\rHom(\sK,\sK_X)$. Pour $M$ un $\dZ/n$-module, on pose aussi 
 $D M = \hom(M,\dZ/n)$; de même pour les complexes de modules. Le morphisme 
-trace $\h^0(X,\sK_X) \to \dZ/n$, ou $\R\Gamma(X,\sK_X)\to \dZ/n$, définit un 
-accouplement $\R\Gamma(X,\sK)\lotimes\R\Gamma(X,D\sK) \to \dZ/n$. La dualité 
+trace $\h^0(X,\sK_X) \to \dZ/n$, ou $\eR\Gamma(X,\sK_X)\to \dZ/n$, définit un 
+accouplement $\eR\Gamma(X,\sK)\lotimes\eR\Gamma(X,D\sK) \to \dZ/n$. La dualité 
 de Poincaré entre cohomologie et cohomologie à supports propres d'un ouvert 
 $j:U\hookrightarrow X$ de $X$ dit que, pour $\sK=j_!\dZ/n$, cet accouplement 
 identifie chaque facteur au dual de l'autre. 
 
 J'expose ci-dessous une démonstration, qui m'a été communiquée par 
-M.\ Artin, de ce que pour $\sK\in\ob\D_c^b(X,\dZ/n)$, cet accouplement est 
+M.\ Artin, de ce que pour $\sK\in\ob\eD_c^b(X,\dZ/n)$, cet accouplement est 
 toujours parfait, i.e. définit un isomorphisme
 \begin{equation*}\tag{2.1.1}\label{V:eq:2-1-1}
 \xymatrix{
-  \R\Gamma(X,\sK) \ar[r]^-\sim 
-    & D \R\Gamma(X,D\sK) \text{.}
+  \eR\Gamma(X,\sK) \ar[r]^-\sim 
+    & D \eR\Gamma(X,D\sK) \text{.}
 }
 \end{equation*}
 
@@ -252,19 +252,19 @@ Pour $\sF$ un faisceau constructible de $\dZ/n$-modules, on a
 
 \begin{lemma_}\label{V:2-3}
 Soit $f:X\to Y$ un morphisme génériquement étale entre courbes lisses sur 
-$k$. On a $\sK_X=f^\ast\sK_Y=\R f^!\sK_Y$, avec $\tr_f$ pour flèche 
-d'adjonction $\R f_!\R f^!\sK_Y\to \sK_Y$.
+$k$. On a $\sK_X=f^\ast\sK_Y=\eR f^!\sK_Y$, avec $\tr_f$ pour flèche 
+d'adjonction $\eR f_!\eR f^!\sK_Y\to \sK_Y$.
 \end{lemma_}
 
 % NOTE: \rhom or \rHom ? originally \rhom
 On se ramène à vérifier que pour $f$ fini, on a 
-$f_\ast \R f^!\sK_Y = \rHom(f_\ast\dZ/n,\sK_Y)$ est $f_\ast\dZ/n$, avec $\tr_f$ 
+$f_\ast \eR f^!\sK_Y = \rHom(f_\ast\dZ/n,\sK_Y)$ est $f_\ast\dZ/n$, avec $\tr_f$ 
 pour flèche d'adjonction. La nullité des $\Ext^i$ ($i>0$) résulte de 
 \ref{V:1-3}, et l'assertion en résulte. 
 
-On peut dire, plus explicitement, que $\R f^!$ est le foncteur dérivé du 
+On peut dire, plus explicitement, que $\eR f^!$ est le foncteur dérivé du 
 foncteur $f^!:f^!\sF(U)=\hom(f_!\dZ_U,\sF)$ et \ref{V:1-3} implique la 
-nullité des $\R^i f^!\dZ/n$ pour $i>0$.
+nullité des $\eR^i f^!\dZ/n$ pour $i>0$.
 
 
 
@@ -464,9 +464,9 @@ Avec les notations précédentes, $c^{1,1}=-u$.
 Soit $e$ la différence des images dans $\h^2(X\times \bar X,j_!\dmu_n)$ des 
 classes de cohomologie de $\Delta$ et $X\times\{0\}$ étant de type de 
 K\"unneth $(0,2)$, on a $c^{1,1}=e^{1,1}$. Soit la suite spectrale de Leray 
-pour $\operatorname{pr}_1:X\times \bar X\to X$ et le faisceau $j_!\dmu_n$: 
+pour $\pr_1:X\times \bar X\to X$ et le faisceau $j_!\dmu_n$: 
 \[
-  E_2^{pq} = \h^p(X,\R^q {\operatorname{pr}_1}_\ast j_!\dmu_n) = \h^p(X,\h_c^q(X,\dmu_n)) \Rightarrow \h^{p+q}(X\times \bar X,j_!\dmu_n) \text{.}
+  E_2^{pq} = \h^p(X,\eR^q {\pr_1}_\ast j_!\dmu_n) = \h^p(X,\h_c^q(X,\dmu_n)) \Rightarrow \h^{p+q}(X\times \bar X,j_!\dmu_n) \text{.}
 \]
 Elle dégénère: c'est le produit tensoriel de $\h^\bullet(X)$ par la 
 suite spectrale de Leray (triviale) pour $\bar X\to \spec(k)$ et le faisceau 
@@ -491,14 +491,14 @@ et $e$ est l'image par $\partial$ de la classe $e_1\in \h^1(X\times\bar X,\sG)$
 du faisceau inversible $\sO(\Delta-X\times\{0\})$ trivialisé par $1$ sur 
 $X\times D$. 
 
-L'image directe par $\R\operatorname{pr}_{1\ast}$ du triangle distingué par 
+L'image directe par $\eR\pr_{1\ast}$ du triangle distingué par 
 \eqref{V:eq:2-2-1} est un triangle distingué 
 \begin{equation*}\tag{3.2.2}\label{V:eq:3-2-2}
 \xymatrix{
   & \ar[r]^-\partial 
-    & \R \operatorname{pr}_{1\ast} j_!\dmu_n \ar[r] 
-    & \R \operatorname{pr}_{2\ast}\sG \ar[r] 
-    & \R \operatorname{pr}_{2\ast}\sG \ar[r]^-\partial 
+    & \eR \pr_{1\ast} j_!\dmu_n \ar[r] 
+    & \eR \pr_{2\ast}\sG \ar[r] 
+    & \eR \pr_{2\ast}\sG \ar[r]^-\partial 
     & 
 }
 \end{equation*}
@@ -506,20 +506,20 @@ et le diagramme
 \[\xymatrix{
   \h^1(X\times \bar X,\sG) \ar[r]^-\partial \ar@{=}[d]^-{(1)} 
     & \h^2(X\times \bar X,j_!\dmu_n) \ar@{=}[d] \\
-  \h^1(X,\R\operatorname{pr}_{1\ast} \sG) \ar[r]^-\partial 
-    & \h^2(X,\R\operatorname{pr}_{1\ast} j_!\dmu_n) 
+  \h^1(X,\eR\pr_{1\ast} \sG) \ar[r]^-\partial 
+    & \h^2(X,\eR\pr_{1\ast} j_!\dmu_n) 
 }\]
 est commutatif: notre problème devient celui d'identifier l'image dans 
 $E^{11}=\h^1(X,\h_c^1(X,\dmu_n))$ (l'image dans $E^{02}$ étant nulle) de 
 l'image par 
-$\partial_{\text{\eqref{V:eq:3-2-2}}}:\h^1(X,\R\operatorname{pr}_{1\ast}\sG) \to \h^2(X,\R\operatorname{pr}_{1\ast} j_!\dmu_n)$ 
+$\partial_{\text{\eqref{V:eq:3-2-2}}}:\h^1(X,\eR\pr_{1\ast}\sG) \to \h^2(X,\eR\pr_{1\ast} j_!\dmu_n)$ 
 de la classe, encore notée $e_1$, qui correspond à $e_1$ par 
 (1). 
 
-Le faisceau $\R^1\operatorname{pr}_{1\ast}\sG$ est défini par le schéma en 
+Le faisceau $\eR^1\pr_{1\ast}\sG$ est défini par le schéma en 
 groupe sur $X$ image réciproque du groupe algébrique $\pic_D(\bar X)$ sur 
 $\spec(k)$, et l'image de $e_1$ dans 
-$\h^0(X,\R^1\operatorname{pr}_\ast\sG) = \hom(X,\pic_D(\bar X))$ est $f_0$. 
+$\h^0(X,\eR^1\pr_\ast\sG) = \hom(X,\pic_D(\bar X))$ est $f_0$. 
 
 Représentons le triangle \eqref{V:eq:3-2-2} comme défini par une suite 
 exacte courte de complexes de faisceaux.
@@ -650,7 +650,7 @@ Notons $u'$ l'image de $u$ par l'application
 \end{align*}
 Vu la relation entre K\"unneth et cup-produit, on a 
 \[
-  \tr(u\smallsmile x) = -\tr(u'\smallsmile \operatorname{pr}_1^\ast x) \text{.}
+  \tr(u\smallsmile x) = -\tr(u'\smallsmile \pr_1^\ast x) \text{.}
 \]
 Le second cup-produit est celui de (\hyperref[IV]{Cycle} \ref{IV:1-2-4}):
 \[\xymatrix{
@@ -658,19 +658,19 @@ Le second cup-produit est celui de (\hyperref[IV]{Cycle} \ref{IV:1-2-4}):
     & \h^3(\bar X\times \bar X,j_!\dmu_n \boxtimes j_!\dmu_n) \text{.}
 }\]
 Le signe -- provient de la permutation de deux symboles de degré $1$ dans 
-(1). Puisque $c\smallsmile\operatorname{pr}_1^\ast x$ et 
-$c^{1,1}\smallsmile \operatorname{pr}_1^\ast$ ont même $(2,1)$-composante de 
+(1). Puisque $c\smallsmile\pr_1^\ast x$ et 
+$c^{1,1}\smallsmile \pr_1^\ast$ ont même $(2,1)$-composante de 
 K\"unneth, et que $u'=c^{1,1}$, on a 
 \[
-  \tr(u\smallsmile x) = \tr(c\smallsmile \operatorname{pr}_1^\ast x) \text{.}
+  \tr(u\smallsmile x) = \tr(c\smallsmile \pr_1^\ast x) \text{.}
 \]
 Le cup-produit à droite peut cette fois s'interpréter comme le 
 cup-produit (\hyperref[IV]{Cycle} \ref{IV:1-2-5}) de 
 $\cl(\Delta)\in \h_\Delta^2(X\times X,\dmu_n)$ par 
-$\operatorname{pr}_1^\ast x\in \h_c^1(\Delta,\dmu_n)$. Sur $\Delta$, on a 
-$\operatorname{pr}_1=\operatorname{pr}_2$, d'ù 
+$\pr_1^\ast x\in \h_c^1(\Delta,\dmu_n)$. Sur $\Delta$, on a 
+$\pr_1=\pr_2$, d'ù 
 \[
-  \tr(c\smallsmile \operatorname{pr}_1^\ast x) = \tr(\cl(\Delta)\smallsmile \operatorname{pr}_1^\ast x) = \tr(\cl(\Delta)\smallsmile \operatorname{pr}_2^\ast x) = \tr(\cl(\Delta))\smallsmile x = x \text{.}
+  \tr(c\smallsmile \pr_1^\ast x) = \tr(\cl(\Delta)\smallsmile \pr_1^\ast x) = \tr(\cl(\Delta)\smallsmile \pr_2^\ast x) = \tr(\cl(\Delta))\smallsmile x = x \text{.}
 \]
 
 
@@ -688,7 +688,7 @@ Dans \cite[XVIII]{sga4}, en proie au découragement, je n'ai pas vérifié
 la compatibilité du titre. Bien qu'elle s'avère n'être que fumée, je me 
 crois tenu du réparer ici cette lacune. Pour $f:X\to S$ séparé de type 
 fini, il s'agissait de vérifier que le morphisme d'adjonction 
-$\R f_!\R f^!\sL\to \sL$ est compatible à toute localisation étale 
+$\eR f_!\eR f^!\sL\to \sL$ est compatible à toute localisation étale 
 $k:V\to S$. Désignant par $k$ et $f$ plusieurs flèches, comme ci-dessous, 
 il s'agit de vérifier une commutativité:
 \[\xymatrix{
@@ -698,9 +698,9 @@ il s'agit de vérifier une commutativité:
     & S 
 } \qquad 
 \xymatrix{
-  k^\ast \R f_! \R f^!\sL \ar[r]^-{k^\ast(\text{adj})} \ar[d]^-\sim 
+  k^\ast \eR f_! \eR f^!\sL \ar[r]^-{k^\ast(\text{adj})} \ar[d]^-\sim 
     & k^\ast \sL \ar@{=}[d] \\
-  \R f_! \R f^! k^\ast \sL \ar[r]^-{\text{adj}} 
+  \eR f_! \eR f^! k^\ast \sL \ar[r]^-{\text{adj}} 
     & k^\ast \sL \text{.}
 }\]
 Au niveau des complexes, la commutativité voulue s'écrit (loc. cit.) 

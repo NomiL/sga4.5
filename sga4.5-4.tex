@@ -246,7 +246,7 @@ Dérivons ces flèches. Soient $\sK$, $\sL$ et $\sM$ dans la catégorie
 dérivée, et une application bilinéaire $\sK\lotimes\sL\to\sM$. Par 
 dérivation de \eqref{IV:eq:1-2-1-1}, on en déduit 
 \begin{equation*}\tag{1.2.2.1}\label{IV:eq:1-2-2-1}
-  \R\Gamma_Y(X,\sK) \lotimes \R\Gamma(Y,\sL) \to \R\Gamma_Y(X,\sM) 
+  \eR\Gamma_Y(X,\sK) \lotimes \eR\Gamma(Y,\sL) \to \eR\Gamma_Y(X,\sM) 
 \end{equation*}
 induisant 
 \begin{equation*}\tag{1.2.2.2}\label{IV:eq:1-2-2-2}
@@ -254,9 +254,9 @@ induisant
 \end{equation*}
 (le cup-produit). La flèche locale \eqref{IV:eq:1-2-1-2} fournit 
 \begin{equation*}\tag{1.2.2.3}\label{IV:eq:1-2-2-3}
-  \R i^! \sK\lotimes i^*\sL \to \R i^!\sM \text{,}
+  \eR i^! \sK\lotimes i^*\sL \to \eR i^!\sM \text{,}
 \end{equation*}
-dont \eqref{IV:eq:1-2-2-1} se déduit par application de $\R\Gamma(Y,-)$. 
+dont \eqref{IV:eq:1-2-2-1} se déduit par application de $\eR\Gamma(Y,-)$. 
 
 
 
@@ -265,19 +265,19 @@ dont \eqref{IV:eq:1-2-2-1} se déduit par application de $\R\Gamma(Y,-)$.
 \subsubsection{}\label{IV:1-2-3}
 
 Ci-dessus, j'ai passé sous silence les conflits qu'entraine l'usage dans une 
-même formule de dérivations à droite ($\R\Gamma$) et à gauche 
+même formule de dérivations à droite ($\eR\Gamma$) et à gauche 
 ($\lotimes$). 
 \begin{enumerate}[\indent a)]
   \item Au numéro suivant, les dérivés droits considérés seront tous 
     de dimension cohomologique finie. Ceci permet de travailler 
-    systématiquement dans les catégories dérivées $\D^-$. Pour disposer 
+    systématiquement dans les catégories dérivées $\eD^-$. Pour disposer 
     de complexes à la fois plats et flasques, on utilise les résolutions 
     flasques canoniques comme en \cite[XVII]{sga4}. 
   \item Pour une théorie plus générale, il cesse d'être d'interpréter 
     les applications bilinéaires de $\sK$ et $\sL$ dans $\sM$ comme des 
     morphismes de $\sK\lotimes\sL$ dans $\sM$. Par exemple, 
-    $\R\Gamma_Y(X,\sK)\lotimes\R\Gamma(Y,\sL)$ n'est pas défini si des deux 
-    facteurs sont dans $\D^+$. Une solution est de travailler dans $\D^+$, de 
+    $\eR\Gamma_Y(X,\sK)\lotimes\eR\Gamma(Y,\sL)$ n'est pas défini si des deux 
+    facteurs sont dans $\eD^+$. Une solution est de travailler dans $\eD^+$, de 
     définir 
     \[
       \operatorname{Bil}(\sK,\sL;\sM) = \varinjlim \hom(\sK'\otimes\sL',\sM') \text{,}
@@ -296,31 +296,31 @@ même formule de dérivations à droite ($\R\Gamma$) et à gauche
 
 Soit $U$ un ouvert de $X$ et $j:U\hookrightarrow X$ le morphisme d'inclusion. 
 Pour $\sK$ dans la catégorie dérivée, sur $U$, on pose 
-$\R\Gamma_!(U,\sK)=\R\Gamma(X,j_!\sK)$. Pour $\sK$, $\sL$ et $\sM$ sur $U$, et 
+$\eR\Gamma_!(U,\sK)=\eR\Gamma(X,j_!\sK)$. Pour $\sK$, $\sL$ et $\sM$ sur $U$, et 
 une application bilinéaire $\sK\lotimes\sL\to\sM$, on veut définir 
 \begin{equation*}\tag{1.2.4.1}\label{IV:eq:1-2-4-1}
-  \R\Gamma(U,\sK)\lotimes\R\Gamma_!(U,\sL)\to\R\Gamma_!(U,\sM) \text{.}
+  \eR\Gamma(U,\sK)\lotimes\eR\Gamma_!(U,\sL)\to\eR\Gamma_!(U,\sM) \text{.}
 \end{equation*}
 Au niveau des faisceaux, et de leurs sections globales, un tel produit se 
 déduit de l'isomorphisme 
 $j_*\sF\otimes j_!\sG\xleftarrow\sim j_!(\sF\otimes \sG)$, mais il faut prendre 
-garde au fait que $\R\Gamma_!$ n'est en général pas le dérivé du 
+garde au fait que $\eR\Gamma_!$ n'est en général pas le dérivé du 
 foncteur $\Gamma(X,j_!-)$. 
 
 On commence par définir 
 \[\xymatrix{
-  \R j_* \sK\lotimes j_! \sL 
+  \eR j_* \sK\lotimes j_! \sL 
     & \ar[l]_-\sim j_!(\sK\lotimes \sL) \ar[r] 
     & j_!\sM \text{.}
 }\]
-Appliquant $\R\Gamma(X,-)$, on trouve 
+Appliquant $\eR\Gamma(X,-)$, on trouve 
 \[\xymatrix{
-  \R\Gamma(U,\sK)\lotimes\R\Gamma_!(U,\sL) = \R\Gamma(X,\R j_*\sK)\lotimes \R\Gamma(X,j_!\sL) \ar[r] 
-    & \R\Gamma(X,j_! \sM) \text{.}
+  \eR\Gamma(U,\sK)\lotimes\eR\Gamma_!(U,\sL) = \eR\Gamma(X,\eR j_*\sK)\lotimes \eR\Gamma(X,j_!\sL) \ar[r] 
+    & \eR\Gamma(X,j_! \sM) \text{.}
 }\]
 
 Ici encore, le conflit entre la gauche et la droite se résoudra au numéro 
-suivant en travaillant dans $\D^-$. 
+suivant en travaillant dans $\eD^-$. 
 
 
 
@@ -331,15 +331,15 @@ suivant en travaillant dans $\D^-$.
 Soient $j:U\hookrightarrow X$ une partie ouverte et $i:Y\hookrightarrow U$ une 
 partie fermée de $U$. Soit $\bar Y$ une fermé de $X$ tel que 
 $\bar Y\cap U=Y$, (par exemple, le complément de $U\setminus Y$). Soit $\sK$ 
-sur $U$. On pose $\R\Gamma_{Y!}(U,\sK)=\R\Gamma_!(Y,\R i^!\sK)$ où 
-$\R\Gamma_!$ est relatif à l'inclusion de $Y$ dans $\bar Y$. Pour tout ouvert 
-$V$ de $U$, contenant $Y$, $\R\Gamma_{Y!}(U,\sK)$ s'envoie dans 
-$\R\Gamma_!(V,\sK)$: si on note encore $i$ l'inclusion de $\bar Y$ dans $X$, 
+sur $U$. On pose $\eR\Gamma_{Y!}(U,\sK)=\eR\Gamma_!(Y,\eR i^!\sK)$ où 
+$\eR\Gamma_!$ est relatif à l'inclusion de $Y$ dans $\bar Y$. Pour tout ouvert 
+$V$ de $U$, contenant $Y$, $\eR\Gamma_{Y!}(U,\sK)$ s'envoie dans 
+$\eR\Gamma_!(V,\sK)$: si on note encore $i$ l'inclusion de $\bar Y$ dans $X$, 
 $j$ celle de $Y$ dans $\bar Y$ et $k$ celle de $V$ dans $X$, on a 
-$\R i^!\sK = j^*\R i^! k_!(k^*\sK)$, d'où un morphisme 
-$j_!\R i^!\sK \to \R i^! k_!(k^*\sK)$. Lui appliquant 
-$\R\Gamma(\bar Y,-)$, on trouve 
-$\R\Gamma_{Y!}(U,\sK)\to \R\Gamma_{\bar Y}(k_! k^* \sK) \to \R\Gamma(k_! k^*\sK) = \R\Gamma_!(V,\sK)$. 
+$\eR i^!\sK = j^*\eR i^! k_!(k^*\sK)$, d'où un morphisme 
+$j_!\eR i^!\sK \to \eR i^! k_!(k^*\sK)$. Lui appliquant 
+$\eR\Gamma(\bar Y,-)$, on trouve 
+$\eR\Gamma_{Y!}(U,\sK)\to \eR\Gamma_{\bar Y}(k_! k^* \sK) \to \eR\Gamma(k_! k^*\sK) = \eR\Gamma_!(V,\sK)$. 
 
 Pour $\sK,\sL,\sM$ sur $U$, et une application bilinéaire 
 $\sK\lotimes\sL\to\sM$, on veut définir 
@@ -349,11 +349,11 @@ $\sK\lotimes\sL\to\sM$, on veut définir
 (ce dernier groupe lui-même s'envoyant dans $\h_!^{n+m}(V,\sM)$). Dans la 
 catégorie dérivée, il s'agit de définir 
 \begin{equation*}\tag{1.2.5.2}\label{IV:eq:1-2-5-2}
-  \R\Gamma_Y(U,\sK) \lotimes \R\Gamma_!(R,\sL) \to \R\Gamma_{Y!}(U,\sM) \text{.}
+  \eR\Gamma_Y(U,\sK) \lotimes \eR\Gamma_!(R,\sL) \to \eR\Gamma_{Y!}(U,\sM) \text{.}
 \end{equation*}
-On identifie $\R\Gamma_Y$ à $\R\Gamma(Y,\R i^!\sK)$. Le produit cherché 
+On identifie $\eR\Gamma_Y$ à $\eR\Gamma(Y,\eR i^!\sK)$. Le produit cherché 
 est alors du type \eqref{IV:eq:1-2-4-1} relatif au produit locale 
-\eqref{IV:eq:1-2-2-3} sur $Y$: $\R i^! \sK\lotimes\sL \to \R i^! \sM$. 
+\eqref{IV:eq:1-2-2-3} sur $Y$: $\eR i^! \sK\lotimes\sL \to \eR i^! \sM$. 
 
 
 
@@ -564,8 +564,8 @@ $n$-ièmes de $f$.
 
 \begin{proposition}\label{IV:2-1-4}
 Soit $i$ l'inclusion de $D$ dans $X$. Si $D$ et $X$ sont réguliers, les 
-faisceaux de cohomologie à support $\R^p i^! \dmu_n$ sont nuls pour $p=0,2$, 
-et $\R^2 i^!\dmu_n = \underline{\dZ/n}$, engendré par 
+faisceaux de cohomologie à support $\eR^p i^! \dmu_n$ sont nuls pour $p=0,2$, 
+et $\eR^2 i^!\dmu_n = \underline{\dZ/n}$, engendré par 
 $\cl_n(D)$. 
 \end{proposition}
 
@@ -579,7 +579,7 @@ via \ref{IV:2-1-3}, du lemme d'Abhyankar.
 
 Ceci est un analogue partiel du théorème relatif 
 (\hyperref[I]{Cohomologie étale}, \ref{I:5-3-4}). Grothendieck conjecture 
-que les $\R^p i^! \dmu_n$ sont nuls pour $p\ne 2$, du moins pour $X$ excellent 
+que les $\eR^p i^! \dmu_n$ sont nuls pour $p\ne 2$, du moins pour $X$ excellent 
 (conjecture de pureté), mais ceci n'est connu qu'en caractéristique $0$ 
 (\cite[XIX]{sga4}). 
 
@@ -632,7 +632,7 @@ d'équations pour $Y$.
 Soit $i:Y\hookrightarrow X$ d'intersection complète locale, de codimension 
 $c$. On se propose de définir une classe fondamentale locale 
 $\cl(Y)$ qui soit une section globale du faisceau de cohomologie à support 
-$\R^{2c}i^! \dZ/n(c)$ (rappelons que $\dZ/n(c)=\dmu_n^{\otimes c}$). 
+$\eR^{2c}i^! \dZ/n(c)$ (rappelons que $\dZ/n(c)=\dmu_n^{\otimes c}$). 
 
 Localement, $Y$ est l'intersection d'une suite de $c$ diviseurs $D_i$, et on 
 définit $\cl(Y)$ comme le cup-produit des $\cl(D_i)$. Chaque $\cl(D_i)$ est 
@@ -691,7 +691,7 @@ moins d'équations suffisent, la classe est nulle).
 \subsubsection{}\label{IV:2-2-5}
 
 On peut passer d'une telle classe fondamentale locale, dans 
-$\h^0\left(Y,\R^{2 c} i^!\dZ/n(c)\right)$, à une classe fondamentale globale, 
+$\h^0\left(Y,\eR^{2 c} i^!\dZ/n(c)\right)$, à une classe fondamentale globale, 
 dans $\h_Y^{2 c}\left(X,\dZ/n(c)\right)$, lorsqu'on dispose de résultats de 
 semi-pureté:
 
@@ -701,29 +701,29 @@ semi-pureté:
 
 \begin{proposition}\label{IV:2-2-6}
 \begin{enumerate}[(i)]
-  \item Si $\R^p i^!\dZ/n=0$ pour $p<2 c$, alors 
+  \item Si $\eR^p i^!\dZ/n=0$ pour $p<2 c$, alors 
     \[
-      \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \h^0\left(Y,\R^{2 c} i^! \dZ/n(c)\right) \text{.}
+      \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \h^0\left(Y,\eR^{2 c} i^! \dZ/n(c)\right) \text{.}
     \]
   \item Soit $Z$ une partie fermée de $Y$, de complément $V$ dans $Y$, et 
-    $k$ l'inclusion de $Z$ dans $X$. Si $\R^p i^! \dZ/n = 0$ pour 
+    $k$ l'inclusion de $Z$ dans $X$. Si $\eR^p i^! \dZ/n = 0$ pour 
     $p\leqslant 2 c$, alors 
     \[
       \h_Y^{2 c}\left(X,\dZ/n(c)\right) \hookrightarrow \h_V^{2 c}\left(X,\dZ/n(c)\right) \text{.}
     \]
-    Si $\R^p i^!\dZ/n=0$ pour $p\leqslant 2 c+1$, cette flèche est une 
+    Si $\eR^p i^!\dZ/n=0$ pour $p\leqslant 2 c+1$, cette flèche est une 
     isomorphisme.
 \end{enumerate}
 \end{proposition}
 
-L'hypothèse $\R^p i^!\dZ/n=0$ équivaut à $\R^p i^!\dZ/n(c)=0$. Ceci dit, 
+L'hypothèse $\eR^p i^!\dZ/n=0$ équivaut à $\eR^p i^!\dZ/n(c)=0$. Ceci dit, 
 (i) se lit sur la suite spectrale 
-$\h^p(Y,\R^q i^!)\Rightarrow \h_Y^{p+q}(X,-)$. Si $k_1$ l'inclusion de $Z$ dans 
-$Y$, on a $k=i k_1$, d'où $\R k^! \dZ/n=\R k_1^! \R i^!$, et la suite exacte 
+$\h^p(Y,\eR^q i^!)\Rightarrow \h_Y^{p+q}(X,-)$. Si $k_1$ l'inclusion de $Z$ dans 
+$Y$, on a $k=i k_1$, d'où $\eR k^! \dZ/n=\eR k_1^! \eR i^!$, et la suite exacte 
 longue de cohomologie pour $Z\subset Y$ fournit une suite exacte longue 
 \[\xymatrix{
   \cdots \ar[r] 
-    & \h^i\left(Z,\R k^! \dZ/n(c)\right) \ar[r] 
+    & \h^i\left(Z,\eR k^! \dZ/n(c)\right) \ar[r] 
     & \h_Y^i\left(X,\dZ/n(c)\right) \ar[r] 
     & \h_V^i\left(X,\dZ/n(c)\right) \ar[r] 
     & \cdots
@@ -739,7 +739,7 @@ dont (ii) résulte.
 La proposition \ref{IV:2-2-6} reste valable pour $i$ un quelconque morphisme 
 séparé de type fini, et $2 c$ un entier (positif ou négatif) quelconque, 
 pour autant qu'on y remplace $\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ par 
-$\h^{2 c}\left(Y,\R i^!\dZ/n(c)\right)$, et de même pour $\h_V$. 
+$\h^{2 c}\left(Y,\eR i^!\dZ/n(c)\right)$, et de même pour $\h_V$. 
 
 Les résultats de semi-pureté suivants résultent de 
 \cite[1.8, 1.10, 1.15]{sga2}. Nous rappellerons leur preuve. 
@@ -758,18 +758,18 @@ Soit un morphisme de $S$-schémas de type fini
 On suppose $X$ lisse, purement de dimension relative $N$ et que $Y$ est fibre 
 par fibre de dimension $\leqslant d$. Soit $c=N-d$. 
 \begin{enumerate}[\indent (i)]
-  \item On a $\R^p i^!\dZ/n=0$ pour $p<2 c$; de même pour $\dZ/n$ remplacé 
+  \item On a $\eR^p i^!\dZ/n=0$ pour $p<2 c$; de même pour $\dZ/n$ remplacé 
     par un faisceau $g^* \sF$.
   \item Si, au dessus d'un ouvert dense $U$ de $S$, $Y$ est fibre par fibre de 
-    dimension $<d$, on a $\R^p i^!\dZ/n=0$ pour $p\leqslant 2 c$. Si de plus le 
+    dimension $<d$, on a $\eR^p i^!\dZ/n=0$ pour $p\leqslant 2 c$. Si de plus le 
     complément $Z$ de $U$ ne disconnecte pas localement $S$, on a 
-    $\R^pi^!\dZ/n=0$ pour $p\leqslant 2 c+1$.
+    $\eR^pi^!\dZ/n=0$ pour $p\leqslant 2 c+1$.
 \end{enumerate}
 \end{theorem}
 
-Puisque $\R g^! \sF=g^*\sF(N)[2N]$, la formule de transitivité 
-$\R i^!\R g^!=\R f^!$ montre que 
-$\R^{2 c+q} i^!(g^*\sF)=0\Leftrightarrow \R^{-2 d+q}f^!(\sF)$. Ceci nous 
+Puisque $\eR g^! \sF=g^*\sF(N)[2N]$, la formule de transitivité 
+$\eR i^!\eR g^!=\eR f^!$ montre que 
+$\eR^{2 c+q} i^!(g^*\sF)=0\Leftrightarrow \eR^{-2 d+q}f^!(\sF)$. Ceci nous 
 ramène à étudier $f$, i.e. à supposer que $X=S$. L'assertion (i) est 
 alors \cite[XVIII 3.17]{sga4}. 
 
@@ -780,12 +780,12 @@ Soit $Y'$ l'image inverse de $Z$ dans $Y$:
   Z \ar[r]^-u 
     & S
 }\]
-D'après (i), les $\R^p f^! \dZ/n$ sont à support dans $Y'$ pour 
+D'après (i), les $\eR^p f^! \dZ/n$ sont à support dans $Y'$ pour 
 $p\leqslant -2 d+1$; et la suite spectrale 
-$\R^a v^!\R^b f^! \Rightarrow \R^{a+b} (f v)^!$ montre qu'ils coïncident avec 
-les $\R^p(f v)^!\dZ/n=\R^p(u f)^!\dZ/n$. Appliquant (i) à $Y'/Z$ et à la 
-suite spectrale $\R^a f^!\R^b u^! \Rightarrow \R^{a+b} (u f)^!$, on trouve que 
-(ii) résulte de la nullité de $\R^b u^! \dZ/n$ pour $b=0$, ou $b=0$ et $1$ 
+$\eR^a v^!\eR^b f^! \Rightarrow \eR^{a+b} (f v)^!$ montre qu'ils coïncident avec 
+les $\eR^p(f v)^!\dZ/n=\eR^p(u f)^!\dZ/n$. Appliquant (i) à $Y'/Z$ et à la 
+suite spectrale $\eR^a f^!\eR^b u^! \Rightarrow \eR^{a+b} (u f)^!$, on trouve que 
+(ii) résulte de la nullité de $\eR^b u^! \dZ/n$ pour $b=0$, ou $b=0$ et $1$ 
 selon le cas. 
 
 
@@ -840,7 +840,7 @@ soit l'identité. Deux choix de $N$ et $f$ sont homotopes sur $Y$ assez petit.
 
 La classe de cohomologie $\cl(U)$ de la section $0$ de $N$ (notée $z:U\to N$) 
 est définie: $U$ est d'intersection complète locale dans $N$, et 
-$\R^i z^!\dZ = 0$ pour $i\ne 2 c$, $\R^{2 c} z^!\dZ = \dZ$. On dispose de 
+$\eR^i z^!\dZ = 0$ pour $i\ne 2 c$, $\eR^{2 c} z^!\dZ = \dZ$. On dispose de 
 $f^*:\h_U^\bullet(N,\dZ) \to \h_Y^\bullet(X,\dZ)$ et on pose 
 \[
   \cl(Y) = f^*\cl(U) \text{.}
@@ -872,16 +872,16 @@ Soit $f:Y\to X$ un morphisme plat de type fini, à fibres de dimension
 $\leqslant d$. Dans \cite[XVIII 2.9]{sga4}, nous avons défini un morphisme 
 trace 
 \begin{equation*}\tag{2.3.1.1}\label{IV:eq:2-3-1-1}
-  \tr_f:\R^{2 d} f_! \dZ/n(d) \to \dZ/n \text{.}
+  \tr_f:\eR^{2 d} f_! \dZ/n(d) \to \dZ/n \text{.}
 \end{equation*}
-On a $\R^i f_!\dZ/n(d)=0$ pour $i>2 d$, et $\R^i f^!\dZ/n=0$ pour $i<-2 d$. 
-Ceci, et l'adjonction entre $\R f_!$ et $\R f^!$, fournissent des isomorphismes 
+On a $\eR^i f_!\dZ/n(d)=0$ pour $i>2 d$, et $\eR^i f^!\dZ/n=0$ pour $i<-2 d$. 
+Ceci, et l'adjonction entre $\eR f_!$ et $\eR f^!$, fournissent des isomorphismes 
 \begin{equation*}\tag{2.1.3.2}\label{IV:eq:2-1-3-2}
 \begin{aligned}
-  \hom\left(\R^{2 d}f_!\dZ/n(d),\dZ/n\right) 
-    &= \hom\left(\R f_!\dZ/n(d),\dZ/n[-2 d]\right) \\
-    &= \hom\left(\dZ/n,\R f^!\dZ/n(-d)[-2 d]\right) \\
-    &= \h^0\left(Y,\R^{-2 d}f^!\dZ/n\right) \text{.}
+  \hom\left(\eR^{2 d}f_!\dZ/n(d),\dZ/n\right) 
+    &= \hom\left(\eR f_!\dZ/n(d),\dZ/n[-2 d]\right) \\
+    &= \hom\left(\dZ/n,\eR f^!\dZ/n(-d)[-2 d]\right) \\
+    &= \h^0\left(Y,\eR^{-2 d}f^!\dZ/n\right) \text{.}
 \end{aligned}
 \end{equation*}
 Au moins sur $S$ un point, l'image de $\tr_f$ dans les deux derniers groupes 
@@ -892,7 +892,7 @@ morphismes qui s'en déduisent par fonctorialité. Par exemple, pour $Y/S$
 propre, le morphisme 
 \begin{equation*}\tag{2.3.1.3}\label{IV:eq:2-3-1-3}
 \xymatrix{
-  \h^i\left(Y,\dZ/n(d)\right) = \h^i\left(S,\R f_!\dZ/n(d)\right) \ar[r] 
+  \h^i\left(Y,\dZ/n(d)\right) = \h^i\left(S,\eR f_!\dZ/n(d)\right) \ar[r] 
     & \h^{i-2 d}(S,\dZ/n) \text{.}
 }
 \end{equation*}
@@ -904,9 +904,9 @@ $N$, et posons $c=N-d$.
     & X \ar[d] \\
   & S
 }\]
-On a $\R f^! = \R i^!\R g^!$, et $\R g^! \dZ/n=\dZ/n(-N)[-2 N]$. La classe 
+On a $\eR f^! = \eR i^!\eR g^!$, et $\eR g^! \dZ/n=\dZ/n(-N)[-2 N]$. La classe 
 fondamentale de $Y$ s'identifie à un élément de 
-$\h^0\left(Y,\R i^!\dZ/n(c)[2 c]\right)=\h_Y^{2 c}\left(X,\dZ/n(c)\right)$, la 
+$\h^0\left(Y,\eR i^!\dZ/n(c)[2 c]\right)=\h_Y^{2 c}\left(X,\dZ/n(c)\right)$, la 
 classe $\cl(Y)$ de $Y$ dans $X$. Nous verrons plus loin qu'elle ne dépend que 
 de $Y\subset X$, non de la projection de $X$ sur $S$, et que pour $Y$ 
 d'intersection complète locale, elle induit la classe locale du numéro 
@@ -914,28 +914,28 @@ précédent.
 
 Explicitons l'isomorphisme 
 \[
-  \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \hom\left(\R^{2 d}f_!\dZ/n(d),\dZ/n\right)
+  \h_Y^{2 c}\left(X,\dZ/n(c)\right) \iso \hom\left(\eR^{2 d}f_!\dZ/n(d),\dZ/n\right)
 \]
 qui transforme $\cl(Y)$ en $\tr_f$: via les isomorphismes 
 \begin{align*}
   \h_Y^{2 c}\left(X,\dZ/n(c)\right) 
-    &= \h_Y^{2 c}\left(\R i^!\dZ/n(c)\right) \\
-    &= \hom_Y\left(\dZ/n(d)[2 d],\R i^!\dZ/n(N)[2 N]\right) \\
+    &= \h_Y^{2 c}\left(\eR i^!\dZ/n(c)\right) \\
+    &= \hom_Y\left(\dZ/n(d)[2 d],\eR i^!\dZ/n(N)[2 N]\right) \\
     &= \hom_X\left(\dZ/n(d)[2 d]_Y,\dZ/n(N)[2 n]\right) \text{,}
 \end{align*}
 c'est la ligne supérieure de 
 \[\xymatrix{
   \h_Y^{2 c} \ar[r] \ar[dr]_-{(3)} 
-    & \hom\left(\R f_!\dZ/n(d)[2 d],\R f_! \R i^!\dZ/n(N)[2 n]\right) \ar[r]^-{(1)} \ar[d]^-{\tr_i} \ar@{}[dr]|-{(2)}
-    & \hom\left(\R f_!\dZ/n(d)[2d],\dZ/n\right) \ar@{=}[d] \\
-  & \hom\left(\R g_!\dZ/n(d)[2 d]_Y,\R g_!\dZ/n(N)[2 N]\right) \ar[r]^-{\tr_g} 
-    & \hom\left(\R g_!\dZ/n(d)[2 d]_Y,\dZ/n\right) \text{,}
+    & \hom\left(\eR f_!\dZ/n(d)[2 d],\eR f_! \eR i^!\dZ/n(N)[2 n]\right) \ar[r]^-{(1)} \ar[d]^-{\tr_i} \ar@{}[dr]|-{(2)}
+    & \hom\left(\eR f_!\dZ/n(d)[2d],\dZ/n\right) \ar@{=}[d] \\
+  & \hom\left(\eR g_!\dZ/n(d)[2 d]_Y,\eR g_!\dZ/n(N)[2 N]\right) \ar[r]^-{\tr_g} 
+    & \hom\left(\eR g_!\dZ/n(d)[2 d]_Y,\dZ/n\right) \text{,}
 }\]
-où (1) est la flèche d'adjonction $\R f_!\R f^!\to \text{id}$. La 
-commutativité (2) exprime que l'isomorphisme $\R f^!=\R i^!\R g^!$ est 
+où (1) est la flèche d'adjonction $\eR f_!\eR f^!\to \text{id}$. La 
+commutativité (2) exprime que l'isomorphisme $\eR f^!=\eR i^!\eR g^!$ est 
 défini par adjonction. Enfin, la flèche déduite de (3)
 \[
-  \h_Y^{2c}\left(X,\dZ/n(c)\right) \otimes \R^{2 d} g_!\dZ/n(d) \to \R^{2 N} g_!\dZ/n(N)
+  \h_Y^{2c}\left(X,\dZ/n(c)\right) \otimes \eR^{2 d} g_!\dZ/n(d) \to \eR^{2 N} g_!\dZ/n(N)
 \]
 s'interprète comme un cup-produit (cf. \ref{IV:1-2}). 
 
@@ -945,7 +945,7 @@ s'interprète comme un cup-produit (cf. \ref{IV:1-2}).
 
 \begin{definition}\label{IV:2-3-2}
 La classe $\cl(Y)\in\h_Y^{2 c}\left(X,\dZ/n(c)\right)$ a pour propriété 
-caractéristique que, pour tout section locale $u$ de $\R^{2 d}f_! \dZ/n(d)$, 
+caractéristique que, pour tout section locale $u$ de $\eR^{2 d}f_! \dZ/n(d)$, 
 on a 
 \[
   \tr_f(u) = \tr_g\left(\cl(Y)\smallsmile u\right) \text{.}
@@ -953,7 +953,7 @@ on a
 \end{definition}
 
 Du fait que $\cl(Y)$ ait déjà une image $\tr_f$ dans 
-$\hom\left(\R f_!\dZ/n(d)[2 d],\dZ/n\right)$, le formule \ref{IV:2-3-2} vaut 
+$\hom\left(\eR f_!\dZ/n(d)[2 d],\dZ/n\right)$, le formule \ref{IV:2-3-2} vaut 
 pour les flèches déduites de $\tr_f$ par fonctorialité. Par exemple, 
 pour $X$ sur $S$ propre et $u\in \h^\bullet(Y,\dZ/n)$, la formule vaut dans 
 $\h^\bullet\left(S,\dZ/n(-d)\right)$. Pour $v\in \h^\bullet(X,\dZ/n)$, elle 
@@ -978,11 +978,11 @@ hypothèses plus générales. Soit donc un diagramme
 }\]
 avec $g$ lisse, purement de dimension relative $N$ et $Y$ fermé dans $X$, 
 fibre par fibre de dimension $\leqslant d$. On munit de plus $Y$ d'un 
-``poids'' $\sK$ du type suivant: $\sK\in\D_{\text{parf},X}^b$ est un 
+``poids'' $\sK$ du type suivant: $\sK\in\eD_{\text{parf},X}^b$ est un 
 complexe borné de faisceaux de $\sO$-modules sur $X$, de $\tor$-dimension 
 finie sur $S$ (ou sur $X$, cela revient au même) et dont les faisceaux de 
 cohomologie soient cohérents et à support dans $Y$. On se propose de 
-définir un morphisme $\tr_{f,\sK}:\R^{2 d}f_! \dZ/n(d) \to \dZ/n$. Pour $Y$ 
+définir un morphisme $\tr_{f,\sK}:\eR^{2 d}f_! \dZ/n(d) \to \dZ/n$. Pour $Y$ 
 plat sur $S$ et $\sK=\sO_Y$, ce sera le morphisme trace précédent. En 
 général, il ne dépend que des longueurs de $\sK$ aux points 
 génériques $y$ des composantes irréductibles de 
@@ -1045,10 +1045,10 @@ Soient $f'=g'' i$ et $d'=d-N'$. La formule $\tr_g=\tr_{g'}\tr_{g''}$
 (\cite[XVIII.2.9]{sga4} Var 3) assure la commutativité de 
 \[\xymatrix{
   \h_X^{2 c}\left(Z,\dZ/n(c)\right) \ar[d] \\
-  \hom_{S'}\left(\R f_!\dZ/n(d')[2 d'],\R g_!''\dZ/n(N'')[2 N'']\right) \ar[r] \ar[d]^-{\R g_!'(N')} 
-    & \hom_{S'}\left(\R^{2 d'} f_!' \dZ/n,\dZ/n\right) \ar[d]^-{\tr_{g'}\circ \R^{2 N'} g_!'} \\
-  \hom_S\left(\R f_!\dZ/n(d)[2d],\R g_!'\dZ/n(N)[2 N]\right) \ar[r] 
-    & \hom_S\left(\R^{2 d} f_!\dZ/n,\dZ/n\right)
+  \hom_{S'}\left(\eR f_!\dZ/n(d')[2 d'],\eR g_!''\dZ/n(N'')[2 N'']\right) \ar[r] \ar[d]^-{\eR g_!'(N')} 
+    & \hom_{S'}\left(\eR^{2 d'} f_!' \dZ/n,\dZ/n\right) \ar[d]^-{\tr_{g'}\circ \eR^{2 N'} g_!'} \\
+  \hom_S\left(\eR f_!\dZ/n(d)[2d],\eR g_!'\dZ/n(N)[2 N]\right) \ar[r] 
+    & \hom_S\left(\eR^{2 d} f_!\dZ/n,\dZ/n\right)
 }\]
 tandis que la formule analogue et facile à vérifier 
 $\tr_{f,\sK}=\tr_{g'}\tr_{f',\sK}$ assure que l'image de $\tr_{f',\sK}$ est 
@@ -1154,11 +1154,11 @@ la commutativité de
 \small
 \[\xymatrix@=0.5cm{
   \h_{X'}^{2c'}\otimes \h_{X''}^{2 c''}\ar[r] \ar[d] 
-    & \hom_S\left(\R f_!' \dZ/n(d')[2 d'],\R g_!'\dZ/n(N')[2 N']\right)\otimes \cdots \ar[r] \ar[d] 
-    & \hom_S\left(\R^{2 d'} f_!' \dZ/n,\dZ/n\right) \otimes \cdots \ar[d] \\
+    & \hom_S\left(\eR f_!' \dZ/n(d')[2 d'],\eR g_!'\dZ/n(N')[2 N']\right)\otimes \cdots \ar[r] \ar[d] 
+    & \hom_S\left(\eR^{2 d'} f_!' \dZ/n,\dZ/n\right) \otimes \cdots \ar[d] \\
   \h_X^{2 c} \ar[r] 
-    & \hom_S\left(\R f_!\dZ/n(d)[2 d],\R g_!\dZ/n(N)[2 N]\right) \ar[r] 
-    & \hom_S\left(\R ^{2 d}f_!\dZ/n,\dZ/n\right)
+    & \hom_S\left(\eR f_!\dZ/n(d)[2 d],\eR g_!\dZ/n(N)[2 N]\right) \ar[r] 
+    & \hom_S\left(\eR^{2 d}f_!\dZ/n,\dZ/n\right)
 }\]
 \normalsize
 et on vérifie que $\tr_f$ est l'image de $\tr_{f'}\otimes \tr_{f''}$ d'où 
@@ -1222,7 +1222,7 @@ dans $X$ sont algébriquement équivalents, il résulte de l'existence de la
 théorie relative ci-dessus que les images dans $\h^{2 c}(X,\dZ/n(c))$ de 
 leurs classes sont les fibres, en deux points de $S$ connexe convenable, d'une 
 section sur $S$ du faisceau constant $\h^{2 c}(X,\dZ/n(c))$ (le faisceau 
-$\R^{2 c} f_\ast \dZ/n(c)$ pour $f=\operatorname{pr}_2:X\times S\to S$): deux 
+$\eR^{2 c} f_\ast \dZ/n(c)$ pour $f=\operatorname{pr}_2:X\times S\to S$): deux 
 cycles algébriquement équivalentes ont même classe dans 
 $\h^{2 c}(X,\dZ/n(c))$. 
 

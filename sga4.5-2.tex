@@ -67,9 +67,9 @@ En cas d'ambiguïté, on écrira $F_{(q)}$ plutôt que $F$.
 Soient $X_0$ un schéma sur $\dF_q$, et $\sF_0$ un faisceau sur $X_0$. J'aime 
 voir comme suit la \emph{correspondance de Frobenius} (un $F$-endomorphisme de 
 $\sF_0$): 
-\begin{equation}\label{II:eq:1-2-1}
+\begin{equation*}\tag{1.2.1}\label{II:eq:1-2-1}
   F^* : F^*\sF_0 \iso \sF_0
-\end{equation}
+\end{equation*}
 
 On regarde $\sF_0$ comme le faisceau des sections locales d'un espace 
 $[\sF_0]$ étale sur $X_0$ ($[\sF_0]$ est un espace algébrique au sens de M. 
@@ -124,26 +124,26 @@ $(U_0,f_{0*}\sF_0)$.
 
 Le morphisme naturel $Y\to Y_0$ est limite de morphismes étales. Il en 
 résulte que pour tout faisceau abélien $\sF_0$ sur $X_0$, les images 
-réciproques sur $Y$ des $\R^if_0\sF_0$ sont les $\R^if_*\sF$. 
+réciproques sur $Y$ des $\eR^if_0\sF_0$ sont les $\eR^if_*\sF$. 
 
-Sur $\R^if_*\sF$, on dispose de 
+Sur $\eR^if_*\sF$, on dispose de 
 \begin{enumerate}[\indent a)]
   \item la correspondance 
-    $F^*\R^i f_*\sF \iso \R^i f_*\sF \xrightarrow{F^*} \R^if_*\sF$ déduite 
+    $F^*\eR^i f_*\sF \iso \eR^i f_*\sF \xrightarrow{F^*} \eR^if_*\sF$ déduite 
     par fonctorialité de la correspondance Frobenius; 
-  \item la correspondance $F^*\R^if_*\sF\to\R^if_*\sF$ image réciproque sur 
-    $Y$ de la correspondance de Frobenius sur $\R^ii f_{0*}\sF_0$. 
+  \item la correspondance $F^*\eR^if_*\sF\to\eR^if_*\sF$ image réciproque sur 
+    $Y$ de la correspondance de Frobenius sur $\eR^ii f_{0*}\sF_0$. 
 \end{enumerate}
 
 On déduit de (\ref{II:1-3}) que ces correspondances coïncident. Elles 
 induisent la terme initial d'une action de Frobenius sur toute la suite 
 spectrale 
 \[
-  \h^p(Y,\R^q f_*\sF) \Rightarrow \h^{p+q}(X,\sF) \text{.}
+  \h^p(Y,\eR^q f_*\sF) \rightarrow \h^{p+q}(X,\sF) \text{.}
 \]
 De même en cohomologie à support propre, et pour la suite spectrale 
 \[
-  \h_c^p(Y,\R^q f_* \sF) \Rightarrow \h_c^{p+q}(X,\sF)
+  \h_c^p(Y,\eR^q f_* \sF) \rightarrow \h_c^{p+q}(X,\sF)
 \]
 
 
@@ -211,20 +211,20 @@ $\dF$, et par transport de structure sur $\h_c^i(X,\sF)$. En particulier, la
 substitution de Frobenius $\varphi$ (\ref{II:1-1}) induit un automorphisme, 
 encore noté $\varphi$, de $\h_c^i(X,\sF)$. La correspondance de Frobenius 
 définit de son côté un endomorphisme $F^*$ de $\h_c^i(X,\sF)$. On a 
-\begin{equation}\label{II:eq:1-8-1}
+\begin{equation*}\tag{1.8.1}\label{II:eq:1-8-1}
   {F^*}^{-1} = \varphi \qquad \text{(sur $\h_c^i(X,\sF)$).}
-\end{equation}
+\end{equation*}
 
 Pour le voir, appliquons (\ref{II:1-4}) au cas où $Y_0$ est un point: 
 $Y_0=\spec(\dF_q)$. On trouve que $\h_c^i(X,\sF)$ est la fibre, au point 
-géométrique $\spec(\dF)$ de $Y_0$, de $\R^i f_! \sF_0$, et que $F^*$ est 
-la fibre de la correspondance de Frobenius de $\R^i f_!\sF_0$. Soit 
-$[\R^i f_! \sF_0]$ comme en (\ref{II:1-2}). On a 
-$\h_c^i(X,\sF) = [\R^i f_!\sF_0](\dF)$ et 
+géométrique $\spec(\dF)$ de $Y_0$, de $\eR^i f_! \sF_0$, et que $F^*$ est 
+la fibre de la correspondance de Frobenius de $\eR^i f_!\sF_0$. Soit 
+$[\eR^i f_! \sF_0]$ comme en (\ref{II:1-2}). On a 
+$\h_c^i(X,\sF) = [\eR^i f_!\sF_0](\dF)$ et 
 \begin{enumerate}[\indent a)]
   \item $\varphi$ agit par transport de structure, via son action sur $\dF$, 
   \item $F^*$ est l'inverse de 
-    $F:[\R^i f_!\sF_0](\dF) \to [\R^i f_!\sF_0](\dF)$. 
+    $F:[\eR^i f_!\sF_0](\dF) \to [\eR^i f_!\sF_0](\dF)$. 
 \end{enumerate}
 
 On conclut par l'identité $F=\varphi$ de (\ref{II:1-1}). 
@@ -437,10 +437,10 @@ V et VI de \cite{sga5}, Jouenolou donne le formalisme qui rend cela possible.
 Un des résultats essentiels (VI 2.2) est que si $f:X\to Y$ est un morphisme 
 séparé de type fini de schémas noethériens, et $\sF$ un 
 $\dZ_\ell$-faisceau sur $Y$, alors, pour chaque $q$, le pro-faisceau 
-$\text{``}\varprojlim\text{''}\R^q f_! (\sF\otimes\dZ/\ell^n)$ est un 
+$\text{``}\varprojlim\text{''}\eR^q f_! (\sF\otimes\dZ/\ell^n)$ est un 
 $\dZ_\ell$-faisceau sur $Y$. Il démontrer même une propriété de 
 régularité plus forte (à la Artin-Rees) pour le système projectif des 
-$\R^q f_!(\sF\otimes\dZ/\ell^n)$. 
+$\eR^q f_!(\sF\otimes\dZ/\ell^n)$. 
 
 Jouanolou se place même dans un cadre plus général, englobant le cas 
 très utile des $E_\lambda$-faisceau, pour $E_\lambda$ une extension finie de 
@@ -524,9 +524,9 @@ on compare terme à terme.
 Soient $A$ un anneau commutatif, $M$ un $A$-module projectif de type fini et 
 $f$ un endomorphisme de $M$. Pour tout série formelle inversible $Q$, on pose 
 $\frac{d}{dT}\log Q = Q^{-1}\frac{d}{dT}Q$. On a 
-\begin{equation}\label{II:eq:3-3-1}
+\begin{equation*}\tag{3.3.1}\label{II:eq:3-3-1}
   T\frac{d}{dT}\log\det(1-f T)^{-1} = \sum_{n>0} \tr(f^n) T^n \text{.}
-\end{equation}
+\end{equation*}
 \end{proposition_}
 
 Soit $M'$ un $A$-module tel que $M\oplus M'$ soit libre de rang fini. 
@@ -551,9 +551,9 @@ où $M$ est de rang $1$. Si $f$ est la multiplication par $a$,
 Soient $n$ un entier, et $f^{(n)}$ l'endomorphisme 
 $(x_1,\dotsc,x_n)\mapsto \left(f(x_n),x_1,\dotsc,x_{n-1}\right)$ de $M^n$. 
 On a 
-\begin{equation}\label{II:eq:3-4-1}
+\begin{equation*}\tag{3.4.1}\label{II:eq:3-4-1}
   \det(1-f T^n) = \det(1-f^{(n)} T) \text{.}
-\end{equation}
+\end{equation*}
 \end{corollary_}
 
 Procédant comme en (\ref{II:3-3}), on se ramène à supposer que $A$ est de 
@@ -604,7 +604,7 @@ de $F$ est transverse à la diagonale (puisque $d F = 0$).
 
 Si on admet le formalisme de $\dQ_\ell$-faisceaux (cf. \ref{II:2-11}; il faut 
 disposer de la suite spectrale de Leray et du théorème de changement de 
-base pour les images directes supérieures $\R^q f_!$), il est facile de 
+base pour les images directes supérieures $\eR^q f_!$), il est facile de 
 ramener la preuve de (\ref{II:3-1}, \ref{II:3-2}), au cas où $X_0$ est 
 une courbe lisse et où $\sF_0$ est lisse. Ceci est clairement expliqué 
 dans \cite[\S 5]{gr95} (pour \ref{II:3-1}; \ref{II:3-2} se traite de même). 
@@ -666,18 +666,18 @@ catégories dérivées.
 
 \subsection{}\label{II:4-1}
 
-Pour la définition de la catégorie dérivée $\D(\cA)$ d'une catégorie 
-abélienne $\cA$, et celle des sous-catégorie $\D^+(\cA)$, $\D^-(\cA)$, 
-$\D^b(\cA)$, je renvoie au texte de Verdier dans ce volume. Pour $\Lambda$ 
-un anneau, on écrit $\D(\Lambda)$ au lieu de 
-$\D(\text{catégorie des $\Lambda$-modules à gauche})$; pour $X$ un site, on 
-écrit $\D(X,\Lambda)$ au lieu de 
-$\D($catégorie des faisceaux de $\Lambda$-modules à gauche$)$. De 
-même pour $\D^-$, etc\ldots
+Pour la définition de la catégorie dérivée $\eD(\cA)$ d'une catégorie 
+abélienne $\cA$, et celle des sous-catégorie $\eD^+(\cA)$, $\eD^-(\cA)$, 
+$\eD^b(\cA)$, je renvoie au texte de Verdier dans ce volume. Pour $\Lambda$ 
+un anneau, on écrit $\eD(\Lambda)$ au lieu de 
+$\eD(\text{catégorie des $\Lambda$-modules à gauche})$; pour $X$ un site, on 
+écrit $\eD(X,\Lambda)$ au lieu de 
+$\eD($catégorie des faisceaux de $\Lambda$-modules à gauche$)$. De 
+même pour $\eD^-$, etc\ldots
 
-Le signe $\R$ (resp. $\mathsf{L}$) indique un foncteur dérivé droit (resp. 
+Le signe $\eR$ (resp. $\mathsf{L}$) indique un foncteur dérivé droit (resp. 
 gauche). Par exemple, $\lotimes$ indique le foncteur dérivé du produit 
-tensoriel: pour $K$ dans $\D^-(\Lambda^\circ)$ et $L$ dans $\D^-(\Lambda)$ 
+tensoriel: pour $K$ dans $\eD^-(\Lambda^\circ)$ et $L$ dans $\eD^-(\Lambda)$ 
 ($\Lambda^\circ$ anneau opposé à $\Lambda$), $K\lotimes L$ se calcule 
 comme suit: on prend des quasi-isomorphismes $K'\to K$, $L'\to L$, avec 
 $K'$ et $L$ bornés supérieurement et l'un d'eux à composantes plates, et 
@@ -725,17 +725,17 @@ $\dZ/2$-gradué, de composantes $f_i^j:P^j\to P^i$, on pose
 S'il y a risque d'ambiguïté, on écrira plutôt $\tr(f;P)$. Si les 
 homomorphismes $f:P\leftrightarrows Q:g$ sont homogènes, on vérifie 
 aussitôt par réduction au cas libre que 
-\begin{equation}\label{II:eq:4-2-1}
+\begin{equation*}\tag{4.2.1}\label{II:eq:4-2-1}
   \tr(f g) = \tr\left((-1)^{\deg f \deg g} g f\right) \text{.}
-\end{equation}
+\end{equation*}
 
 Si $f$ est un endomorphisme d'un $\Lambda$-module $\dZ/2$-gradué filtré 
 $(P,F)$, de filtration finie, compatible à la graduation, et que les 
 $\gr_F^i(P)$ sont projectifs de type fini, alors $P$ est projectif de type 
 fini, et 
-\begin{equation}\label{II:eq:4-2-2}
+\begin{equation*}\tag{4.2.2}\label{II:eq:4-2-2}
   \tr(f;P) = \sum \tr\left(f; \gr_F^i(P) \right)
-\end{equation}
+\end{equation*}
 (scinder la filtration pour se ramener au cas d'une somme directe). 
 
 
@@ -747,19 +747,19 @@ fini, et
 Un module $\dZ$-gradué sera considéré comme $\dZ/2$-gradué par la 
 parité du degré. En particulier, si $f$ est un endomorphisme d'un complexe 
 borné de $\Lambda$-modules projectifs de type fini, on pose 
-\begin{equation}\label{II:eq:4-3-1}
+\begin{equation*}\tag{4.3.1}\label{II:eq:4-3-1}
   \tr(f) = \sum (-1)^i \tr(f^i) \text{.}
-\end{equation}
+\end{equation*}
 
 D'après \eqref{II:eq:4-2-1}, si $f$ est homotope à zéro, $\tr(f) = 0$: 
-\begin{equation}\label{II:eq:4-3-2}
-  f = d H + h D \Rightarrow \tr(f) = 0 \text{.}
-\end{equation}
+\begin{equation*}\tag{4.3.2}\label{II:eq:4-3-2}
+  f = d H + h D \rightarrow \tr(f) = 0 \text{.}
+\end{equation*}
 
 Soit $\mathsf{K}_\text{parf}(\Lambda)$ la catégorie d'objets les complexes 
 bornés de $\Lambda$-modules projectifs de type fini, et de flèches les 
 morphismes de complexes pris à homotopie près. Le foncteur 
-$\mathsf{K}_\text{parf}(\Lambda)\to\D(\Lambda)$ est pleinement fidèle. On note 
+$\mathsf{K}_\text{parf}(\Lambda)\to\eD(\Lambda)$ est pleinement fidèle. On note 
 $\mathsf{D}_\text{parf}(\Lambda)$ son image essentielle. Les formules 
 \eqref{II:eq:4-3-1} \eqref{II:eq:4-3-2} permettent de définir $\tr(f)$ pour $f$ 
 un endomorphisme de $K\in\ob \mathsf{D}_\text{parf}(\Lambda)$ (et cette trace ne 
@@ -776,8 +776,8 @@ abélienne $\cA$ est la catégorie déduite de celle des complexes d'objets
 filtrés de filtration finie de $\cA$ en inversant les quasi-isomorphismes 
 filtrés ($=$ morphismes de complexes filtrés induisant un quasi-isomorphisme 
 sur le gradué associé). On dispose de foncteurs ``complexe sous-jacent'': 
-$\mathsf{DF}(\cA)\to\D(\cA): (K,F)\mapsto K$ et ``$p$-ième composante du 
-gradué'': $\mathsf{DF}(\cA)\to\D(\cA): (K,F)\mapsto \gr_F^p(K)$. 
+$\mathsf{DF}(\cA)\to\eD(\cA): (K,F)\mapsto K$ et ``$p$-ième composante du 
+gradué'': $\mathsf{DF}(\cA)\to\eD(\cA): (K,F)\mapsto \gr_F^p(K)$. 
 
 Soit $\mathsf{KF}_\text{parf}(\Lambda)$ la catégorie d'objets les complexes 
 bornés filtrés de filtration finie $(K,F)$ avec des $\gr_F^p(K^q)$ projectifs 
@@ -790,9 +790,9 @@ $\mathsf{D}_\text{parf}(\Lambda)$.
 
 D'après \eqref{II:eq:4-2-2}, si $f$ est un endomorphisme de 
 $(K,F)\in\ob\mathsf{DF}_\text{parf}(\Lambda)$, on a 
-\begin{equation}\label{II:eq:4-4-1}
+\begin{equation*}\tag{4.4.1}\label{II:eq:4-4-1}
  \tr(f,K) = \sum_p \tr(f,\gr_F^p(K)) \text{.}
-\end{equation}
+\end{equation*}
 
 
 
@@ -800,25 +800,25 @@ $(K,F)\in\ob\mathsf{DF}_\text{parf}(\Lambda)$, on a
 
 \subsection{}\label{II:4-5}
 
-Soient $\Lambda$ un anneau, et $K\in\ob\D^-(\Lambda)$. On dit que $K$ est de 
+Soient $\Lambda$ un anneau, et $K\in\ob\eD^-(\Lambda)$. On dit que $K$ est de 
 tor-dimension $\leqslant r$ si pour tout $\Lambda$-module à droite $N$, les 
 hypertors $\h^i(N\lotimes_\Lambda K)$ sont nuls pour $i<-r$. Il est dit de 
 tor-dimension finie si cette condition est vérifiée pour un $r$. 
 
 On emploie la même terminologie pour un complexe de faisceaux 
-$K\in\ob\D^-(X,\Lambda)$. 
+$K\in\ob\eD^-(X,\Lambda)$. 
 
 
 
 
 
 \begin{lemma}\label{II:4-5-1} 
-Soient $\Lambda$ un anneau noethérien à gauche, et $K\in\ob\D^-(\Lambda)$. 
+Soient $\Lambda$ un anneau noethérien à gauche, et $K\in\ob\eD^-(\Lambda)$. 
 Pour que $K$ soit dans $\mathsf{DF}_\text{parf}(\Lambda)$, il faut et il suffit 
 qu'il soit de tor-dimension finie et que les $\h^i(K)$ soient de type fini.
 \end{lemma}
 
-Quitte à remplacer $K$ par un complexe isomorphe (dans $\D^-(\Lambda)$), on 
+Quitte à remplacer $K$ par un complexe isomorphe (dans $\eD^-(\Lambda)$), on 
 peut supposer $K$ borné supérieurement et à composantes libres de type 
 fini (cf. \ref{II:4-7}, ci-dessous). Si $K$ est de tor-dimension $\leqslant r$, 
 les $\h^i(K)$ sont nuls pour $i<-r$, $K^{-r}/\im(d)$ admet la résolution 
@@ -844,11 +844,11 @@ $K\in\ob\mathsf{DF}_\text{parf}(\Lambda)$.
 
 \begin{prop-def_}\label{II:4-6}
 Soient $X$ un schéma noethérien, et $\Lambda$ un anneau noethérien à 
-gauche. On note $\D_\textnormal{ctf}^b(X,\Lambda)$ la sous-catégorie de 
-$\D^-(X,\Lambda)$ formée des complexes $\sK$ vérifient les conditions 
+gauche. On note $\eD_\textnormal{ctf}^b(X,\Lambda)$ la sous-catégorie de 
+$\eD^-(X,\Lambda)$ formée des complexes $\sK$ vérifient les conditions 
 équivalentes suivantes:
 \begin{enumerate}[\indent i)]
-  \item $\sK$ est isomorphe (dans $\D^-(X,\Lambda)$) à un complexe borné e 
+  \item $\sK$ est isomorphe (dans $\eD^-(X,\Lambda)$) à un complexe borné e 
     faisceaux de $\Lambda$-modules plats et constructibles. 
   \item $\sK$ est de tor-dimension finie et les faisceaux $\h^i(K)$ sont 
     constructibles. 
@@ -918,56 +918,56 @@ d'où le lemme.
 
 \begin{theorem_}\label{II:4-9}
 Soit $f:X\to Y$ un morphisme séparé de type fini de schémas noethériens. 
-Si $\sK\in\ob\D_\textnormal{ctf}^b(X,\Lambda)$, alors 
-$\R f_!\sK\in \ob\D_\textnormal{ctf}^b(Y,\Lambda)$. 
+Si $\sK\in\ob\eD_\textnormal{ctf}^b(X,\Lambda)$, alors 
+$\eR f_!\sK\in \ob\eD_\textnormal{ctf}^b(Y,\Lambda)$. 
 \end{theorem_}
 
 Rappelons que si $j:X\hookrightarrow \bar X \xrightarrow{\bar f} Y$ est une 
 compactification relative de $X/Y$, on a par définition 
-$\R f_! = \R \bar f_* \circ j_!$, où $\R \bar f_*$ est le foncteur dérivé 
+$\eR f_! = \eR \bar f_* \circ j_!$, où $\eR \bar f_*$ est le foncteur dérivé 
 du foncteur $\bar f_*$. Cette formule ramène la preuve de (\ref{II:4-9}) 
 au cas où $f$ est propre. Pour $f$ propre, $f_*$ est de dimension 
-cohomologique finie; ceci permet de définir $\R f_*$ sur la catégorie 
+cohomologique finie; ceci permet de définir $\eR f_*$ sur la catégorie 
 dérivée tout entière, et aussi comme un foncteur 
 \[
-  \R f_* : \D^-(X,\Lambda) \to \D^-(Y,\Lambda) \text{.}
+  \eR f_* : \eD^-(X,\Lambda) \to \eD^-(Y,\Lambda) \text{.}
 \]
 Par composition, on définit de même en général 
 \[
-  \R f_! : \D^-(X,\Lambda) \to \D^-(Y,\Lambda) \text{.}
+  \eR f_! : \eD^-(X,\Lambda) \to \eD^-(Y,\Lambda) \text{.}
 \]
 
 Pour tout $\Lambda$-module à droite $N$, on a (preuve donnée ci-dessous) 
-\begin{equation}\label{II:eq:4-9-1}
-  N\lotimes \R f_! \sK \iso \R f_! (N\lotimes \sK) \text{.}
-\end{equation}
+\begin{equation*}\tag{4.9.1}\label{II:eq:4-9-1}
+  N\lotimes \eR f_! \sK \iso \eR f_! (N\lotimes \sK) \text{.}
+\end{equation*}
 
 Déduisons (\ref{II:4-9}) de \eqref{II:eq:4-9-1}. 
 \begin{enumerate}[\indent a)]
   \item La suite spectrale 
     \[
-      E_2^{p q} = \R^p f_! \h^q(\sK) \Rightarrow \h^{p+q} \R f_! \sK \text{.}
+      E_2^{p q} = \eR^p f_! \h^q(\sK) \rightarrow \h^{p+q} \eR f_! \sK \text{.}
     \]
-    et le théorème de finitude pour $\R f_!$, montrent que 
-    $\R f_!\sK\in \ob \D^b(X,\Lambda)$ et est à cohomologie constructible. 
+    et le théorème de finitude pour $\eR f_!$, montrent que 
+    $\eR f_!\sK\in \ob \eD^b(X,\Lambda)$ et est à cohomologie constructible. 
     Reste à prouver la tor-dimension finie (\ref{II:4-6}). 
   \item Si $\sK$ est de tor-dimension $\leqslant -r$, il en est de même pour 
-    $\R f_! \sK$: on a $\h^i(N\lotimes \R f_! \sK) = \h^i(\R f_!(N\lotimes \sK))$, 
+    $\eR f_! \sK$: on a $\h^i(N\lotimes \eR f_! \sK) = \h^i(\eR f_!(N\lotimes \sK))$, 
     et, dans la suite spectrale ci-dessus pour $N\lotimes \sK$, les 
     $E_2^{p q}$ sont nuls pour $q<r-s$ fortiori pour $p+q<r$. 
 \end{enumerate}
 
 Prouvons \eqref{II:eq:4-9-1}, en restant au niveau des complexes. 
 \begin{enumerate}[\indent a)]
-  \item Utilisant la formule de définition $\R f_! = \R f_*\circ j_!$, on se 
+  \item Utilisant la formule de définition $\eR f_! = \eR f_*\circ j_!$, on se 
     ramène à supposer $f$ propre. 
   \item Représentons $\sK$ par un complexe borné 
-    supérieurement à composantes acyclique pour $f_*:\R^p f_* \sK^q = 0$ 
-    pour $p>0$. On a alors $\R f_* K \sim f_* \sK$. Il n'est possible de 
+    supérieurement à composantes acyclique pour $f_*:\eR^p f_* \sK^q = 0$ 
+    pour $p>0$. On a alors $\eR f_* K \sim f_* \sK$. Il n'est possible de 
     travailler ainsi avec des complexes bornés supérieurement que parce que 
     $f_*$ est de dimension cohomologique finie. 
   \item Si $L$ un $\Lambda$-module à droite libre, on a 
-    $\R^p f_*(L\otimes \sK^q) = L\otimes \R^p f_* \sK^q$: c'est trivial pour 
+    $\eR^p f_*(L\otimes \sK^q) = L\otimes \eR^p f_* \sK^q$: c'est trivial pour 
     $\Lambda$ libre de type fini, et le cas général s'en déduit par 
     passage à la limite. Le faisceau $L\otimes \sK^q$ est acyclique pour 
     $f_*$, et $f_*(L\otimes \sK^q) = L\otimes f_* \sK^q$. 
@@ -975,14 +975,14 @@ Prouvons \eqref{II:eq:4-9-1}, en restant au niveau des complexes.
     $N\lotimes \sK\sim s(N_\bullet\otimes \sK)$ (complexe simple associé au 
     complexe double $N_\bullet\otimes \sK$). D'après c), 
     \[
-      \R f_*(N\lotimes \sK) \sim \R f_* (s(N_\bullet\otimes \sK)) \sim f_*(s(N_\bullet\otimes \sK)) \sim s(N_\bullet\otimes f_* \sK) \sim N\lotimes \R f_* \sK \text{,}
+      \eR f_*(N\lotimes \sK) \sim \eR f_* (s(N_\bullet\otimes \sK)) \sim f_*(s(N_\bullet\otimes \sK)) \sim s(N_\bullet\otimes f_* \sK) \sim N\lotimes \eR f_* \sK \text{,}
     \]
     soit la formule annoncée. 
 \end{enumerate}
 
-Lorsque $Y$ est le spectre d'un corps séparablement clos, le foncteur $\R f_!$ 
+Lorsque $Y$ est le spectre d'un corps séparablement clos, le foncteur $\eR f_!$ 
 s'identifie à un foncteur noté 
-$\R \Gamma_c : \D_\text{ctf}^b(X,\Lambda)\to\D_\text{parf}(\Lambda)$. 
+$\eR \Gamma_c : \eD_\text{ctf}^b(X,\Lambda)\to\eD_\text{parf}(\Lambda)$. 
 
 
 
@@ -991,11 +991,11 @@ $\R \Gamma_c : \D_\text{ctf}^b(X,\Lambda)\to\D_\text{parf}(\Lambda)$.
 \begin{theorem_}\label{II:4-10}
 Avec les notations du \S\ref{II:1}, soient $X_0$ un schéma séparé de type 
 fini sur $\dF_q$, et $\Lambda$ un anneau noethérien de torsion, tué par un 
-entier premier à $p$. Soit $\sK_0\in\ob\D_\textnormal{ctf}^b(X_0,\Lambda)$. 
+entier premier à $p$. Soit $\sK_0\in\ob\eD_\textnormal{ctf}^b(X_0,\Lambda)$. 
 Avec la définition (\ref{II:4-3}) de traces, on a pour tout $N$ 
-\begin{equation}\label{II:eq:4-10}
-  \sum_{x\in X^{F^n}} \tr\left({F^n}^*,\sK_x\right) = \tr\left({F^n}^*,\R\Gamma_c(X,\sK)\right) \text{.}
-\end{equation}
+\begin{equation*}\label{II:eq:4-10}
+  \sum_{x\in X^{F^n}} \tr\left({F^n}^*,\sK_x\right) = \tr\left({F^n}^*,\eR\Gamma_c(X,\sK)\right) \text{.}
+\end{equation*}
 \end{theorem_}
 
 Dans la fin de ce \S, nous allons déduire \ref{II:3-2} de \ref{II:4-10}, et 
@@ -1012,15 +1012,15 @@ $k$, et soit $\sG$ un $\dQ_\ell$-faisceau sur $X$. D'après \ref{II:2-8} on
 peut l'écrire sous la forme $\sG=\sF\otimes\dQ_\ell$, avec $\sF$ un 
 $\dZ_\ell$-faisceau sans torsion. Posons 
 \[
-  K_n = \R \Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\in\D(\dZ/\ell^{n+1}) \text{.}
+  K_n = \eR \Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\in\eD(\dZ/\ell^{n+1}) \text{.}
 \]
-D'après \ref{II:4-9}, on a $K_n\in\ob\D_\text{parf}(\dZ/\ell^{n+1})$, et il 
+D'après \ref{II:4-9}, on a $K_n\in\ob\eD_\text{parf}(\dZ/\ell^{n+1})$, et il 
 résulte de \eqref{II:eq:4-9-1} que la flèche naturelle 
-\begin{equation}\label{II:eq:4-11-1}
+\begin{equation*}\tag{4.11.1}\label{II:eq:4-11-1}
 \xymatrix{
   K_n\lotimes_{\dZ/\ell^{n+1}} \dZ/\ell^n \ar[r] & K_{n+1} \text{,}
 }
-\end{equation}
+\end{equation*}
 est un isomorphisme. Le problème de la définition de cette flèche est 
 discuté en \ref{II:4-12}. 
 
@@ -1054,32 +1054,32 @@ c'est un $\dQ_\ell$-espace vectoriel de dimension finie.
 Pour \emph{définir} la flèche \eqref{II:eq:4-11-1}, on ne peut pas 
 procéder comme en \ref{II:4-9}, i.e. résoudre $\dZ/\ell^n$ par un complexe 
 de $\dZ/\ell^{n+1}$-modules libres, puisqu'on veut construire on isomorphisme 
-dans $\D_\text{parf}(\dZ/\ell^n)$. La flèche voulue est un cas particulier de 
+dans $\eD_\text{parf}(\dZ/\ell^n)$. La flèche voulue est un cas particulier de 
 la flèche d'extension des scalaires suivante. 
 
 (*) Soit $\Lambda\to\Lambda'$ un homomorphisme d'anneaux noethériens de 
 torsion. Pour $X$ un schéma séparé de type fini sur $k$ algébriquement 
-clos, et $\sK\in\ob\D_\text{ctf}(X,\Lambda)$, on a un isomorphisme 
+clos, et $\sK\in\ob\eD_\text{ctf}(X,\Lambda)$, on a un isomorphisme 
 \[\xymatrix{
-  \R\Gamma_c(X,\sK)\lotimes_\Lambda \Lambda' \ar[r]^-\sim & \R \Gamma_c(X,\sK\lotimes_\Lambda \Lambda') \text{.}
+  \eR\Gamma_c(X,\sK)\lotimes_\Lambda \Lambda' \ar[r]^-\sim & \eR \Gamma_c(X,\sK\lotimes_\Lambda \Lambda') \text{.}
 }\]
 
 Des flèches plus générales sont construits dans \cite[XVII 4.2.12]{sga4}. La 
 m\'
 ethode est la suivante: 
 \begin{enumerate}[\indent a)]
-  \item La définition de $\R\Gamma_c$ est la formule 
+  \item La définition de $\eR\Gamma_c$ est la formule 
     $j_!(\sK\otimes_\Lambda\Lambda') = (j_! \sK)\otimes_\Lambda\Lambda'$ pour une 
     immersion ouverte nous ramènent au cas où $X$ est propre. 
   \item Pour $X$ propre, il s'agit de remplacer $\sK$ par un complexe borné à 
     composantes acycliques pour le foncteur $\Gamma$, et de fibre en tout point 
     géométrique (ou seulement un tout point fermé) homotope à un 
     complexe de $\Lambda$-modules plats. Pour un tel complexe, on a 
-    $\Gamma(X,\sK)\sim \R\Gamma(X,\sK)$ et 
+    $\Gamma(X,\sK)\sim \eR\Gamma(X,\sK)$ et 
     $K\otimes_\Lambda\Lambda'\sim \sK\lotimes_\Lambda\Lambda'$; la flèche 
     \eqref{II:eq:4-11-1} est définie comme la composition 
     \[
-      \R\Gamma(X,\sK)\lotimes_\Lambda \Lambda' \to \Gamma(X,\sK)\otimes_\Lambda\Lambda' \to \Gamma(X,\sK\otimes_\Lambda\Lambda') \xleftarrow\sim \R\Gamma(X,\sK\lotimes_\Lambda\Lambda') \text{.}
+      \eR\Gamma(X,\sK)\lotimes_\Lambda \Lambda' \to \Gamma(X,\sK)\otimes_\Lambda\Lambda' \to \Gamma(X,\sK\otimes_\Lambda\Lambda') \xleftarrow\sim \eR\Gamma(X,\sK\lotimes_\Lambda\Lambda') \text{.}
     \]
   \item Il reste à montrer qu'il est possible de remplacer $\sK$ par un 
     complexe du type voulu \cite[XVII.4.2.10]{sga4}. On remplace d'abord $\sK$ par 
@@ -1103,10 +1103,10 @@ $F$ par $F^n$.
 Soient donc $X_0$ séparé de type fini sur $\dF_q$, et $\sG_0$ un 
 $\dQ_\ell$-faisceau sur $X_0$. On a $\sG_0=\sF_0\otimes\dQ_\ell$, pour 
 $\dZ_\ell$-faisceau sans torsion convenable $\sF_0$. Soit 
-$K_n=\R\Gamma_c(X,\sF\otimes\dZ/\ell^n)$. Les morphismes de Frobenius induisent 
+$K_n=\eR\Gamma_c(X,\sF\otimes\dZ/\ell^n)$. Les morphismes de Frobenius induisent 
 des morphismes 
 \[
-  F^* : K_n\to K_n \qquad \text{(dans $\D_\text{parf}(\dZ/\ell^{n+1})$),}
+  F^* : K_n\to K_n \qquad \text{(dans $\eD_\text{parf}(\dZ/\ell^{n+1})$),}
 \]
 qui se déduisent les uns des autres via les isomorphismes 
 \eqref{II:eq:4-11-1}. 
@@ -1120,12 +1120,12 @@ endomorphismes qui s'en déduisent. Puisque
 $\h_c^i(X,\sG) = \h^i(K)\otimes\dQ_\ell = \h^i(K\otimes\dQ_\ell)$, on a (avec 
 la convention de signe de (?.1) 
 \[
-  \tr\left(F^*, \h_c^\bullet(X,\sG)\right) = \tr\left(F^*,K^\bullet\otimes\dQ_\ell\right) = \varprojlim_n \tr\left(F^*,K_n^\bullet\right) = \varprojlim_n \tr\left(F^*,\R\Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\right) \text{.}
+  \tr\left(F^*, \h_c^\bullet(X,\sG)\right) = \tr\left(F^*,K^\bullet\otimes\dQ_\ell\right) = \varprojlim_n \tr\left(F^*,K_n^\bullet\right) = \varprojlim_n \tr\left(F^*,\eR\Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\right) \text{.}
 \]
 Appliquons (\ref{II:4-10}) à $\sF_0\otimes\dZ/\ell^{n+1}$ (vu comme complexe 
 réduit su degré $0$), pour $\Lambda=\dZ/\ell^{n+1}$. On trouve que 
 \begin{align*}
-  \tr\left(F^*,\R\Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\right) 
+  \tr\left(F^*,\eR\Gamma_c(X,\sF\otimes\dZ/\ell^{n+1})\right) 
     &= \sum_{x\in X^F} \tr\left(F^*,\sF_x\otimes\dZ/\ell^{n+1}\right) \\
     &= \sum_{x\in X^F} \tr\left(F^*,\sG_x\right) \mod \ell^{n+1} \text{,}
 \end{align*}
@@ -1158,7 +1158,7 @@ correspondance, et non seulement pour les itérés d'un Frobenius. Elle est
 un cas particulier de l'énoncé suivent (appliqué à $X(\dF)$, $K$ et 
 aux ${F^*}^n$). 
 
-(*) Soit $X$ un ensemble fini, $F:X\to X$, $\sK\in\ob\D_\text{parf}(X,\Lambda)$ 
+(*) Soit $X$ un ensemble fini, $F:X\to X$, $\sK\in\ob\eD_\text{parf}(X,\Lambda)$ 
 et $F^*:F^* \sK\to \sK$. On a 
 \[
   \sum_{X^F} \tr\left(F^*,\sK_x\right) = \tr\left(F^*,\Gamma(X,K)\right) \text{.}
@@ -1178,7 +1178,7 @@ nombre premier $\ell\ne p$, $X_0$ une courbe projective, lisse et connexe sur
 $\dF_q$, $j:U_0\hookrightarrow X_0$ un ouvert dense de $X_0$ et $\sG_0$ un 
 faisceau localement constant de $\Lambda$-modules projectifs sur $U_0$. On a 
 \[
-  \sum_{x\in U^F} \tr\left(F^*,\sG_x\right) = \tr\left(F^*,\R\Gamma_c(U,\sG)\right) \text{.}
+  \sum_{x\in U^F} \tr\left(F^*,\sG_x\right) = \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) \text{.}
 \]
 \end{lemma_}
 
@@ -1300,9 +1300,9 @@ $H$, est un $\Lambda[H]$-module projectif. En effet:
     $\Lambda[H]$-module projectif; notions le $(P\otimes_A M)'$. 
   \item L'application $h\otimes m\mapsto h\otimes h^{-1} m$ induit un 
     isomorphisme 
-    \begin{equation}\label{II:eq:5-7-1}
+    \begin{equation*}\tag{5.7.1}\label{II:eq:5-7-1}
       A[H]\otimes_A M \iso (A[H]\otimes_A M)' \text{.}
-    \end{equation}
+    \end{equation*}
 \end{enumerate}
 
 
@@ -1338,9 +1338,9 @@ $g\in G^+$, on note $Z_g$ le centralisateur de $g$ dans $H$; la multiplication
 par $g$ est un endomorphisme de $P$, vu comme $\Lambda[Z_g]$-module. $P$ étant 
 $\Lambda[Z_g]$-projectif, une trace $\tr_\Lambda^{Z_g}(g)$ est définie. 
 D'après \ref{II:5-6}, on a 
-\begin{equation}\label{II:eq:5-9-1}
+\begin{equation*}\tag{5.9.1}\label{II:eq:5-9-1}
   \tr_\Lambda(g) = |Z_g| \cdot \tr_\Lambda^{Z_g}(g) \text{.}
-\end{equation}
+\end{equation*}
 
 Supposons que $\Lambda$ soit une algèbre sur un anneau commutatif $A$. Pour 
 $P$ un $A[G^+]$-module, projectif en tant que $A[H]$-module et $M$ un 
@@ -1348,9 +1348,9 @@ $\Lambda[G^+]$-module, projectif en tant que $\Lambda$-module, le
 $\Lambda[G^+]$-module $P\otimes_A M$ (action diagonale de $G^+$) est projectif 
 en tant que $\Lambda[H]$-module et d'après \ref{II:5-8}, pour tout 
 $g\in G^+$, on a 
-\begin{equation}\label{II:eq:5-9-2}
+\begin{equation*}\tag{5.9.2}\label{II:eq:5-9-2}
   \tr_\Lambda^{Z_g}(g,P\otimes_A M) = \tr_A^{Z_g}(g,P) \cdot \tr_\Lambda(g,M) \text{.}
-\end{equation}
+\end{equation*}
 
 
 
@@ -1429,7 +1429,7 @@ tant que $\Lambda$-module.
 
 Le faisceau $f_* A$ sur $U_0$, muni de l'action naturelle de $H$, est un 
 faisceau localement libre (de rang un) de $A[H]$-modules. Le complexe 
-$\R\Gamma_c(U,f_* A)$ est donc objet de $\D_\text{parf}\left(A[H]\right)$. Il 
+$\eR\Gamma_c(U,f_* A)$ est donc objet de $\eD_\text{parf}\left(A[H]\right)$. Il 
 est muni d'un endomorphisme de Frobenius $F^*$. 
 
 Pour l'action naturelle de $H$ sur $f_* f^*\sG_0$, le morphisme trace 
@@ -1445,31 +1445,31 @@ $H$). L'isomorphisme
 }\]
 se dérive (\ref{II:4-12}) et un isomorphisme 
 \[
-  \R\Gamma_c(U,\sG) \sim \left(\R\Gamma_c(U,f_* A)\otimes_A M\right)\otimes_{\Lambda[H]} \Lambda \text{.}
+  \eR\Gamma_c(U,\sG) \sim \left(\eR\Gamma_c(U,f_* A)\otimes_A M\right)\otimes_{\Lambda[H]} \Lambda \text{.}
 \]
 
 L'endomorphisme $F^*$ du membre de gauche se déduit de l'endomorphisme 
-$F^*$ de $\R\Gamma_c(U,f_* A)$. Le complexe de $\Lambda[H]$-modules 
-$\R\Gamma_c(U,f_* A)$, muni de $F^*$, peut être vu comme un complexe de 
+$F^*$ de $\eR\Gamma_c(U,f_* A)$. Le complexe de $\Lambda[H]$-modules 
+$\eR\Gamma_c(U,f_* A)$, muni de $F^*$, peut être vu comme un complexe de 
 $\Lambda[G^+]$-modules, pour $G^+=H\times \dN$. Les formules \ref{II:5-10} 
 et \eqref{II:eq:5-9-2}, amplifiées par \ref{II:5-11-1}, fournissent donc 
 \[
-  \tr\left(F^*,\R\Gamma_c(U,\sG)\right) = \sum_h' \tr_A^{Z_g}\left(h F^*,\R\Gamma_c(U,f_* A)\right)\cdot \tr_\Lambda(h,M)
+  \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \tr_A^{Z_g}\left(h F^*,\eR\Gamma_c(U,f_* A)\right)\cdot \tr_\Lambda(h,M)
 \]
 où $\sum'$ est une somme sur les classes de conjugaison dans $H$, De plus, 
 \[
-  |Z_h|\cdot \tr_A^{Z_h}\left(h F^*,\R\Gamma_c(U,f_ A)\right) = \tr_A\left((F h^{-1})^*,\R\Gamma_c(V,A)\right) \text{.}
+  |Z_h|\cdot \tr_A^{Z_h}\left(h F^*,\eR\Gamma_c(U,f_ A)\right) = \tr_A\left((F h^{-1})^*,\eR\Gamma_c(V,A)\right) \text{.}
 \]
 Cette formule reste vraie pour $A=\dZ/\ell^m$, avec $m$ de plus en plus grand. 
 Passant à limite, on trouve que 
-$\tr_A^{Z_g}\left(h F^*,\R\Gamma_c(U,f^* A)\right)$ vaut 
+$\tr_A^{Z_g}\left(h F^*,\eR\Gamma_c(U,f^* A)\right)$ vaut 
 \[
   \frac{1}{|Z_h|} \sum (-1)^i \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)
 \]
 (un élément de $\dZ_\ell$), et
-\begin{equation}\label{II:eq:5-12-1}
-\tr\left(F^*,\R\Gamma_c(U,\sG)\right) = \sum_h' \frac{1}{|Z_h|} \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)\cdot \tr_\Lambda(h,M) \text{.} 
-\end{equation}
+\begin{equation*}\tag{5.12.1}\label{II:eq:5-12-1}
+\tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \sum_h' \frac{1}{|Z_h|} \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)\cdot \tr_\Lambda(h,M) \text{.} 
+\end{equation*}
 
 
 
@@ -1481,7 +1481,7 @@ Il reste maintenant à appliquer \ref{II:5-4} (noter que si $\bar V$ est la
 complétion projective non singulière de $V$, les points fixes de $F h^{-1}$ 
 sont tous de multiplicité un). On peut le faire sans aucun calcul: 
 \begin{enumerate}[\indent A.]
-  \item Si $U^F=\varnothing$, $\tr\left(F^*,\R\Gamma_c(U,\sG)\right) = 0$. \end{enumerate}
+  \item Si $U^F=\varnothing$, $\tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = 0$. \end{enumerate}
 
 En effet, $F h^{-1}$ n'a pas de point fixe sur $V$, \ref{II:5-4} montre que 
 $\sum (-1)^i \tr\left((F h^{-1})^*,\h_c^i(V,\dQ_\ell)\right)=0$ et on 
@@ -1490,11 +1490,11 @@ applique \eqref{II:eq:5-12-1}.
 \setcounter{enumi}{1}
   \item Dans le cas général, soit $j:U'=U\setminus U^F\hookrightarrow U$. 
     La filtration  $j_! j^* \sG_0\subset \sG_0$ de $\sG_0$ induit une 
-    filtration de $\R\Gamma_c(U,\sG)$ de quotients successifs 
-    $\R\Gamma_c(U',\sG)$ et $\R\Gamma_c(U^F,\sG)$. D'après \eqref{II:eq:4-4-1} 
+    filtration de $\eR\Gamma_c(U,\sG)$ de quotients successifs 
+    $\eR\Gamma_c(U',\sG)$ et $\eR\Gamma_c(U^F,\sG)$. D'après \eqref{II:eq:4-4-1} 
     et \ref{II:5-1}, on a 
     \[
-      \tr\left(F^*,\R\Gamma_c(U,\sG)\right) = \tr\left(F^*,\R\Gamma_c(U',\sG)\right) + \sum_{x\in U^F} \tr(F^*,\sG_x) \text{,}
+      \tr\left(F^*,\eR\Gamma_c(U,\sG)\right) = \tr\left(F^*,\eR\Gamma_c(U',\sG)\right) + \sum_{x\in U^F} \tr(F^*,\sG_x) \text{,}
     \]
     et, puisque ${U'}^F=0$, le premier terme au second membre est $0$. 
 \end{enumerate}
@@ -1517,13 +1517,13 @@ composantes $\ell$-primaires ($\ell$ parcourant les nombre premiers), et
 remplacer $\dF_q$ par $\dF_{q^n}$, $X_0$ par $X_0\otimes_{\dF_q}\dF_{q^n}$. 
 
 Pour $X_0$ séparé de type fini sur $\dF_q$, et 
-$\sK_0\in\ob\D_\text{ctf}(X_0,\Lambda)$, posons 
+$\sK_0\in\ob\eD_\text{ctf}(X_0,\Lambda)$, posons 
 \[
   T'(X_0,\sK_0) = \sum_{x\in X^F} \tr(F^*,\sK_x)
 \]
 et
 \[
-  T''(X_0,\sK_0) = \tr(F^*,\R\Gamma_c(X,\sK)) \text{.}
+  T''(X_0,\sK_0) = \tr(F^*,\eR\Gamma_c(X,\sK)) \text{.}
 \]
 Il faut prouver l'identité 
 \[
@@ -1539,11 +1539,11 @@ complémentaire $Y_0$, on a
 \]
 C'est clair pour $T'$. Pour $T''$, on observe que la filtration 
 $0\subset j_! j^* \sK_0\subset \sK_0$ de $\sK_0$ induit une filtration de 
-$\R\Gamma_c(X,\sK)$, de quotients successifs $\R\Gamma_c(U,\sK)$ et 
-$\R\Gamma_c(Y,\sK)$, et on invoque \eqref{II:eq:4-4-1} (plus exactement 
+$\eR\Gamma_c(X,\sK)$, de quotients successifs $\eR\Gamma_c(U,\sK)$ et 
+$\eR\Gamma_c(Y,\sK)$, et on invoque \eqref{II:eq:4-4-1} (plus exactement 
 énoncé: $\sK_0$, muni de la filtrations dite, définit un objet de 
-$\mathsf{DF}(X,\Lambda)$; par application de $\R\Gamma_c$, on a déduit un 
-objet de $\mathsf{DF}_\text{parf}(\Lambda)$, auquel $\R\Gamma_c(X,\sK)$ est 
+$\mathsf{DF}(X,\Lambda)$; par application de $\eR\Gamma_c$, on a déduit un 
+objet de $\mathsf{DF}_\text{parf}(\Lambda)$, auquel $\eR\Gamma_c(X,\sK)$ est 
 sous-jacent, et de gradué comme dit). 
 
 (B) Si $\sK_0$ est un complexe borné à composantes constructibles et plates, 
@@ -1558,7 +1558,7 @@ filtration bête de $\sK_0$, pour obtenir
 
 (C) Pour $f:X_0\to Y_0$ un morphisme, on a 
 \[
-  T''(X_0,\sK_0) = T''(Y_0,\R f_! \sK_0)
+  T''(X_0,\sK_0) = T''(Y_0,\eR f_! \sK_0)
 \]
 et la même identité vaut pour $T'$ si les fibres de $f$ aux points 
 rationnels de $Y_0$ vérifiant $\left(1;f^{-1}(y),\sK_0|f^{-1}(y)\right)$: on 
@@ -1568,7 +1568,7 @@ utilise que
 \]
 et 
 \[
-  \R\Gamma_c(Y, \R f_! \sK) = \R\Gamma_c(X,\sK) \text{.}
+  \eR\Gamma_c(Y, \eR f_! \sK) = \eR\Gamma_c(X,\sK) \text{.}
 \]
 
 Utilisant ce formalisme, et \ref{II:4-7}, on ramène la preuve de \ref{II:4-10} 

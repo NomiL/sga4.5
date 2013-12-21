@@ -112,11 +112,11 @@ Si $K$ est un complexe borné, à degrés positifs, de $A$-module projectifs
 de type fini, le complexe de $A$-modules $\Gamma^n K$ a les mêmes 
 propriétés. 
 
-Notons $\D_\text{parf}^{\geqslant 0}(A)$ la sous-catégorie de 
-$\D_\text{parf}(A)$ (Rapport, \ref{II:4-3}) formée des complexes de 
+Notons $\eD_\text{parf}^{\geqslant 0}(A)$ la sous-catégorie de 
+$\eD_\text{parf}(A)$ (Rapport, \ref{II:4-3}) formée des complexes de 
 tor-dimension $\leqslant 0$. On voit que $\Gamma^n$ induit un foncteur 
 \[
-  \eL\Gamma^n : \D_\text{parf}^{\geqslant 0}(A) \to \D_\text{parf}^{\geqslant 0}(A) \text{.}
+  \eL\Gamma^n : \eD_\text{parf}^{\geqslant 0}(A) \to \eD_\text{parf}^{\geqslant 0}(A) \text{.}
 \]
 
 Pour la définition analogue, mais plus compliquée, de 
@@ -161,9 +161,9 @@ Si on translate $K$ de $q$ crans vers la gauche, on a
 \begin{proposition_}\label{III:1-8}
 Soit $u$ un endomorphisme d'un complexe borné, à degrés positifs, de 
 $A$-modules projectifs de type fini. On a \
-\begin{equation}\label{III:eq:1-8-1}
+\begin{equation*}\tag{1.8.1}\label{III:eq:1-8-1}
   \det(1-u t,K)^{-1} = \sum_n \tr(u,\Gamma^n K) t^n \text{.}
-\end{equation}
+\end{equation*}
 \end{proposition_}
 
 Notons $D(u,K)$ le second membre de \eqref{III:eq:1-8-1}. 
@@ -252,9 +252,9 @@ on a
 \]
 Il reste à prouver que pour $u$ un endomorphisme d'un module projectif de type 
 fini $M$, on a 
-\begin{equation}\label{III:eq:1-12-1}
+\begin{equation*}\tag{1.12.1}\label{III:eq:1-12-1}
   \det\left(1-u t,M\right)^{-1} = \sum \tr(u,\Gamma^n M) t^n \text{.}
-\end{equation}
+\end{equation*}
 Si $u=0$, les deux membres valent $1$. Ajoutant à $M$ un module $N$ sur lequel 
 $u=0$, et appliquent \ref{III:1-9}, on se ramène à supposer que $M$ est libre. 
 Prenons-en un base. Il s'agit alors de prouver des identités algébriques 
@@ -291,8 +291,8 @@ possède la propriété d'invariance voulue.
 \subsection{}\label{III:1-14}
 
 Ce corollaire permet de définir $\det(1-u t,K)$ pour $u$ un endomorphisme de 
-$K\in \ob\D_\text{parf}(A)$. Cette construction est ad hoc; en fait, pour $v$ un 
-automorphisme de $L\in\ob\D_\text{parf}(\Lambda)$, on peut définir 
+$K\in \ob\eD_\text{parf}(A)$. Cette construction est ad hoc; en fait, pour $v$ un 
+automorphisme de $L\in\ob\eD_\text{parf}(\Lambda)$, on peut définir 
 $\det(v)\in\Lambda^\times$, et $\det(1-u t,K)$ s'obtient pour $v=1-u t$, 
 $\Lambda=A\llbracket t\rrbracket$ et $L=K\otimes_A\Lambda$. 
 
@@ -315,7 +315,7 @@ $\Lambda=A\llbracket t\rrbracket$ et $L=K\otimes_A\Lambda$.
 
 Reprenons les notations de (Rapport, \S\ref{II:1}). Pour $A$ un anneau 
 noethérien commutatif de torsion, $X_0$ un schéma séparé de type fini sur 
-$\dF_q$ et $\sK_0\in\ob\D_\text{ctf}(X_0;A)$, on pose 
+$\dF_q$ et $\sK_0\in\ob\eD_\text{ctf}(X_0;A)$, on pose 
 \[
   L(X_0,\sK_0) = \prod_{x\in |X_0|} \det\left(1-F_x^* t^{\deg(x)}, \sK\right)^{-1}
 \]
@@ -332,9 +332,9 @@ Dans chacun des deux cas suivants
   \item $A$ est réduit et de caractéristique $p$
 \end{enumerate}
 on a 
-\begin{equation}\label{III:eq:2-2-1}
-  L(X_0,\sK_0) = \det\left(1-F^* t^f, \R\Gamma_c(X,\sK)\right)^{-1} \text{.}
-\end{equation}
+\begin{equation*}\tag{2.2.1}\label{III:eq:2-2-1}
+  L(X_0,\sK_0) = \det\left(1-F^* t^f, \eR\Gamma_c(X,\sK)\right)^{-1} \text{.}
+\end{equation*}
 \end{theorem_}
 
 
@@ -362,7 +362,7 @@ et la suite spectrale
 $E_2^{p q} = \h_c^p(X,\underline\h^q(\sK))\Rightarrow \h_c^{p+q}(X,\sK)$ montre 
 que 
 \begin{align*}
-  \det\left(1-F^* t, \R\Gamma_c(X,\sK)\right) 
+  \det\left(1-F^* t, \eR\Gamma_c(X,\sK)\right) 
     &= \prod_n \det\left(1-F^* t^f,\h_c^n(X,\sK)\right)^{(-1)^n} \\
     &= \prod_{p,q} \det\left(1-F^* t,\h_c^p(X,\underline\h^q(\sK))\right)^{(-1)^{p+1}} \text{.}
 \end{align*}
@@ -421,7 +421,7 @@ exemple, cf. \ref{III:4-5}.
 Une translation sur les degrés \ref{III:1-7-2} nous ramène à supposer 
 que $\sK_0$ est un complexe borné, à degré positifs, de faisceaux de 
 $A$-modules constructibles et plats. On a alors 
-$\R\Gamma_c(X,\sK)\in \ob\D_\text{parf}^{\geqslant 0}(A)$ (Rapport, 
+$\eR\Gamma_c(X,\sK)\in \ob\eD_\text{parf}^{\geqslant 0}(A)$ (Rapport, 
 preuve \ref{II:4-9}, b). Nous allons utiliser \ref{III:1-8} pour développer 
 les deux membres de \eqref{III:eq:2-2-1} en série de puissances de $T=t^f$. 
 L'égalité des coefficients de $T^n$ de déduira de 
@@ -461,9 +461,9 @@ Le coefficient de $T^n$ est donc la somme, étendue à celles des
 combinaisons linéaires formelles $\sum_{x\in |X_0|} n_x\cdot x$ 
 ($n_x\geqslant 0$, les $n_x$ presque tous nuls) d'éléments de $|X_0|$ 
 telles que $\sum n_x [k(x):\dF_q] = n$, des produits 
-\begin{equation}\label{III:eq:2-10-1}
+\begin{equation*}\tag{2.10.1}\label{III:eq:2-10-1}
   \prod_x \tr\left(F_x^*,\Gamma^{n_x} \sK\right) \text{.}
-\end{equation}
+\end{equation*}
 
 Pour $x\in |X_0|$, notons $(x)$ le $0$-cycle des $[k(x):\dF_q]$ points de $X$ 
 au-dessus de $x$ (une orbite de $F$). L'application 
@@ -509,9 +509,9 @@ Le même fait valant pour le membre de droite, il suffit de prouver
 
 D'après \ref{III:1-8} et \cite[XVII 5.5.12]{sga4}, on a 
 \begin{align*}
-  \det\left(1-F^* T,\R\Gamma_c(X,\sK)\right)^{-1} 
-    &= \sum_n \tr\left(F^*,\eL\Gamma^n\R\Gamma_c(X,\sK)\right) T^n \\
-    &= \sum_n \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n\sK)\right) T^n \text{.}
+  \det\left(1-F^* T,\eR\Gamma_c(X,\sK)\right)^{-1} 
+    &= \sum_n \tr\left(F^*,\eL\Gamma^n\eR\Gamma_c(X,\sK)\right) T^n \\
+    &= \sum_n \tr\left(F^*,\eR\Gamma_c(\operatorname{Sym}^n(X),\Gamma_\text{ext}^n\sK)\right) T^n \text{.}
 \end{align*}
 
 
@@ -522,7 +522,7 @@ D'après \ref{III:1-8} et \cite[XVII 5.5.12]{sga4}, on a
 
 Le théorème équivaut donc aux formules des traces 
 \[
-  \tr\left(F^*,\R\Gamma_c(\operatorname{Sym}^n(X,\Gamma_\text{ext}^n \sK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\sK\right) \text{.}
+  \tr\left(F^*,\eR\Gamma_c(\operatorname{Sym}^n(X,\Gamma_\text{ext}^n \sK)\right) = \sum_{x\in\operatorname{Sym}^n(X)^F} \tr\left(F_x^*,\Gamma_\text{ext}^n\sK\right) \text{.}
 \]
 Dans le cas a), elles résultent de Rapport \ref{II:4-10}. La formule 
 analogue dans le cas b) sera prouvée au \S\ref{III:4}. 
@@ -587,11 +587,11 @@ de $\Phi$ à $j_*\sG$.
 \begin{lemma_}\label{III:3-3}
 Il existe des prolongements cohérents $\bar\sG\subset j_*\sG$ de $\sG$ tels 
 que 
-\begin{equation}\label{III:eq:3-3-1}
+\begin{equation*}\tag{3.3.1}\label{III:eq:3-3-1}
   \Phi(\bar\sG)\subset I\cdot \bar\sG\text{.}
-\end{equation}
+\end{equation*}
 Si $\bar\sG$ est un tel prolongement, la suite 
-\begin{equation}\label{III:eq:3-3-2}
+\begin{equation*}\tag{3.3.2}\label{III:eq:3-3-2}
 \xymatrix{
   0 \ar[r] 
     & j_! G \ar[r] 
@@ -599,7 +599,7 @@ Si $\bar\sG$ est un tel prolongement, la suite
     & \bar\sG \ar[r] 
     & 0
 }
-\end{equation}
+\end{equation*}
 ext exacte.
 \end{lemma_}
 \begin{enumerate}[a)]
@@ -760,9 +760,9 @@ $\h^i(\bar S,\bar\sG) = \h^i(\bar S_0,\bar\sG_0)\otimes_{\dF_q}\dF$ de
 l'endomorphisme $\dF_q$-linéaire $\Phi^f$ de $\h^i(\bar S_0m\bar\sG_0)$. 
 
 Appliquant le lemme \ref{III:3-8} ci-dessous, on en déduit l'identité 
-\begin{equation}\label{III:eq:3-7-1}
+\begin{equation*}\tag{3.7.1}\label{III:eq:3-7-1}
   \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(\Phi^f,\h^i(\bar S_0,\bar\sG_0)\right) \text{.}
-\end{equation}
+\end{equation*}
 
 
 
@@ -811,10 +811,10 @@ Puisque $\tr(F,V'') = 0$, on a donc
 \begin{theorem_}\label{III:4-1}
 Soient $X_0$ un schéma séparé de type fini sur $\dF_q$, $A$ un anneau 
 noethérien commutatif réduit et de caractéristique $p$, et 
-$\sK_0\in\ob\D_\textnormal{ctf}(X_0,A)$. On a 
-\begin{equation}\label{III:eq:4-1-1}
-  \sum_{x\in X^F} \tr\left(F_x^*,\sK_x\right) = \tr\left(F^*,\R\Gamma_c(X,\sK)\right) \text{.}
-\end{equation}
+$\sK_0\in\ob\eD_\textnormal{ctf}(X_0,A)$. On a 
+\begin{equation*}\tag{4.1.1}\label{III:eq:4-1-1}
+  \sum_{x\in X^F} \tr\left(F_x^*,\sK_x\right) = \tr\left(F^*,\eR\Gamma_c(X,\sK)\right) \text{.}
+\end{equation*}
 \end{theorem_}
 
 
@@ -828,7 +828,7 @@ Un argument standard de passage à a limite nous ramène au cas où $A$ est
 de type fini sur $\dZ/p$. Pour chaque idéal maximal $\fm$ de $A$, l'image de 
 chaque membre de \eqref{III:eq:4-1-1} dans $A/\fm$ est donée par la même 
 formule, avec $\sK_0$ remplacé par 
-$\sK_0\lotimes_A A/\fm\in\ob\D_\text{ctf}(X_0,A/\fm)$ (pour le second membre, 
+$\sK_0\lotimes_A A/\fm\in\ob\eD_\text{ctf}(X_0,A/\fm)$ (pour le second membre, 
 cf. Rapport \ref{II:4-12}). Les $A/\fm$ étant finis, et l'intersection des 
 idéaux maximaux de $A$ étant réduit à $0$, on obtient la réduction 
 annoncée.
@@ -846,13 +846,13 @@ regarde $\sK_0$ comme un complexe de faisceaux de $\dZ/p$-modules, on a
   T_{\dZ/p}'(\sK_0) = \tr_{A/(\dZ/p)} T_A'(\sK_0)
 \]
 et de même pour $T''$. Si \eqref{III:eq:4-1-1} vaut pour $A=\dZ/p$, on a donc 
-\begin{equation}\label{III:eq:4-3-1}
+\begin{equation*}\tag{4.3.1}\label{III:eq:4-3-1}
   \tr_{A/(\dZ/p)} T_A'(\sK_0) = \tr_{A/(\dZ/p)} T_A''(\sK_0) \text{.}
-\end{equation}
+\end{equation*}
 J'affirme que, pour tout $\lambda\in A$, on a même 
-\begin{equation}\label{III:eq:4-3-2}
+\begin{equation*}\tag{4.3.2}\label{III:eq:4-3-2}
   \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A'(\sK_0)\right) = \tr_{A/(\dZ/p)}\left(\lambda\cdot T_A''(\sK_0)\right) \text{,}
-\end{equation}
+\end{equation*}
 et donc $T_A'(\sK_0) = T_A''(\sK_0)$. C'est clair pour $\lambda=0$. Pour 
 $\lambda$ inversible, notons $A(\lambda)$ l'image réciproque sur $X$ du 
 faisceau de $A$-modules libre de rang un sur $\spec(\dF_q)$ pour lequel 
@@ -869,9 +869,9 @@ Soient $\bar S_0$ une courbe projective et lisse,
 $j:S_0\hookrightarrow \bar S_0$ un ouvert dense de $\bar S_0$, et $G_0$ un 
 faisceau localement constant de $\dZ/p$-espaces vectoriels de rang fini sur 
 $S_0$. On a 
-\begin{equation}\label{III:eq:4-4-1}
+\begin{equation*}\tag{4.4.1}\label{III:eq:4-4-1}
   \sum_{x\in S^F} \tr\left(F_x^*,G_x\right) = \sum_i (-1)^i \tr\left(F^*,\h_c^i(S,G)\right) \text{.}
-\end{equation}
+\end{equation*}
 \end{theorem_}
 \begin{proof}
 Appliquons \ref{III:3-3} à $(S_0,\bar S_0,G_0)$. Le prolongement cohérent 
@@ -885,14 +885,14 @@ $\Phi^f$ de $\bar\sG_0$ peut s'interpréter comme un morphisme
 Il se factorise par $I\bar G$, pour $I$ définissant le fermé 
 $\bar S\setminus S$. Soit $v:j_!G_0 \to \bar\sG_0$ l'unique prolongement de 
 l'application naturelle $G_0 \to \sG_0 = G_0\otimes_{\dZ/p}\sO$. Le diagramme 
-\begin{equation}\label{III:eq:4-4-2}
+\begin{equation*}\tag{4.4.2}\label{III:eq:4-4-2}
 \xymatrix{
   F^* j_! G_0 \ar[r]^-{F^*} \ar[d]^-{F^* v} 
     & j_! G_0 \ar[d]^-v \\
   F^*\bar \sG_0 \ar[r]^-u 
     & \bar\sG_0
 }
-\end{equation}
+\end{equation*}
 Enfin, notons $u F^*$ l'application composée 
 \[\xymatrix{
   \h^\bullet(\bar S,\bar\sG) \ar[r]^-{F^*} 
@@ -900,18 +900,18 @@ Enfin, notons $u F^*$ l'application composée
     & \h^\bullet(\bar S,\bar\sG) \text{,}
 }\]
 on par \eqref{III:eq:3-7-1}
-\begin{equation}\label{III:eq:4-4-3}
+\begin{equation*}\tag{4.4.3}\label{III:eq:4-4-3}
   \tr\left(F^*,\h_c^i(S,G)\right) = \tr\left(u F^*,\h^i(\bar S,\bar\sG)\right) \text{.}
-\end{equation}
+\end{equation*}
 
 %NOTE: trace down reference for Woodshole seminar
 Pour chaque point fermé $i_x:x\hookrightarrow \bar  S$ de $\bar S$, posons 
 $\bar\sG_x = i_x^*\bar\sG$. La formule des traces de Lefschetz en cohomologie 
 cohérente (``Woodshole fixed point formula''), appliqué à $F$ et $u$, dit 
 que 
-\begin{equation}\label{III:eq:4-4-4}
+\begin{equation*}\tag{4.4.4}\label{III:eq:4-4-4}
   \sum_i (-1)^i \tr\left(u^* F^*, \h^i(\bar S,\bar\sG)\right) = \sum_{x\in \bar S^F} \frac{\tr(u_x,\sG_x)}{\det(1-d F_x)} \text{.}
-\end{equation}
+\end{equation*}
 Au second membre
 \begin{enumerate}[\indent a)]
   \item puisque $d F=0$, les dénominateurs valent 1;
@@ -961,7 +961,7 @@ Le faisceau de $A$-modules $\pi_*\dZ/2$ est notre exemple:
     montre que $\h_c^\bullet(Y\setminus 0,\dZ/2)=0$. On a donc 
     $\h_c^\bullet(\dA^1,\pi_*\dZ/2)=0$ et 
     \[
-      \tr_A\left(F^*,\R\Gamma_c(\dA^1,\pi_*\dZ/2)\right) = 0 \text{.}
+      \tr_A\left(F^*,\eR\Gamma_c(\dA^1,\pi_*\dZ/2)\right) = 0 \text{.}
     \]
   \item Puisque $Y_0\setminus 0$ a deux points rationnels, en l'un des points 
     rationnels de $\dA_1^0$, la substitution de Frobenius est l'identité, et 

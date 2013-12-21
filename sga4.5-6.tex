@@ -502,9 +502,9 @@ $|X_0(\dF_q)| = q\cdot |Y_0(\dF_q)|$, d'où la divisibilité.
 
 
 \paragraph{Traduction cohomologique}
-Les faisceaux images directes supérieures $\R^i f_!\dQ_\ell$ sont 
+Les faisceaux images directes supérieures $\eR^i f_!\dQ_\ell$ sont 
 \[
-  \R^i f_!\dQ_\ell = \begin{cases}
+  \eR^i f_!\dQ_\ell = \begin{cases}
                        \dQ_\ell(-1) & \text{si $i = 2$} \\
                        0            & \text{pour $i\ne 2$}
                      \end{cases}
@@ -687,7 +687,7 @@ sur $X$. On suppose que
 \begin{enumerate}[\indent a)]
   \item $(j_\ast\sF)_x = 0$ pour $x\in \bar X\setminus X$, i.e. 
     $j_!\sF\iso j_\ast\sF$; 
-  \item $\R^i j_\ast \sF = 0$ pour $i>0$.
+  \item $\eR^i j_\ast \sF = 0$ pour $i>0$.
 \end{enumerate}
 Alors, les applications 
 \[
@@ -696,13 +696,13 @@ Alors, les applications
 sont des isomorphismes. 
 \end{proposition_}
 
-Les hypothèses a) b) signifient que $j_! \sF \iso \R j_\ast \sF$, d'où 
+Les hypothèses a) b) signifient que $j_! \sF \iso \eR j_\ast \sF$, d'où 
 \[
-  \h_c^i(X,\sF) = \h^i(\bar X,j_!\sF) \iso \hh^i(\bar X,\R j_\ast \sF) = \h^i(X,\sF) \text{.}
+  \h_c^i(X,\sF) = \h^i(\bar X,j_!\sF) \iso \hh^i(\bar X,\eR j_\ast \sF) = \h^i(X,\sF) \text{.}
 \]
 Autrement dit, la suite spectrale de Leray pour $j$ 
 \[
-  E_2^{pq} = \h^p(\bar X,\R^q j_\ast \sF) \Rightarrow \h^{p+q}(X,\sF) 
+  E_2^{pq} = \h^p(\bar X,\eR^q j_\ast \sF) \Rightarrow \h^{p+q}(X,\sF) 
 \]
 dégénère, par b) en des isomorphismes 
 \[
@@ -952,7 +952,7 @@ Soient $f:X\to Y$ un morphisme de schémas séparés de type fini sur $k$
 algébriquement clos, et $\sF$ un $E_\lambda$-faisceau sur $X$. La suite 
 spectrale de Leray de $f$ en cohomologie à support propre s'écrit 
 \begin{align*}\tag{2.3.1*}\label{VI:eq:2-3-1*}
-  E_2^{p q} = \h_c^p(Y,\R^q f_! \sF) \Rightarrow \h_c^{p+q}(X,\sF) \text{.}
+  E_2^{p q} = \h_c^p(Y,\eR^q f_! \sF) \Rightarrow \h_c^{p+q}(X,\sF) \text{.}
 \end{align*}
 
 Soient $f_0:X_0 \to Y_0$ un morphisme de schémas séparés de type fini sur 
@@ -960,39 +960,39 @@ $\dF_q$ et $\sF_0$ un $E_\lambda$-faisceau sur $X_0$. On a entre
 \eqref{VI:eq:2-3-1} et \eqref{VI:eq:2-3-1*} la compatibilité suivante. 
 
 \begin{enumerate}[a)]
-  \item Le faisceau $\R^q f_! \sF$ se déduit par extension des scalaires de 
-    $\dF_q$ à $\dF$ du faisceau $\R^q f_{0!} \sF_0$ sur $Y_0$. En tant que 
+  \item Le faisceau $\eR^q f_! \sF$ se déduit par extension des scalaires de 
+    $\dF_q$ à $\dF$ du faisceau $\eR^q f_{0!} \sF_0$ sur $Y_0$. En tant que 
     tel, il est muni d'une correspondance de Frobenius 
-    $F^\ast:F^\ast\R^q f_! \sF \to \R^q f_! \sF$. Elle se déduit par 
-    fonctorialité de $\R f_!$ de la correspondance de Frobenius de $\sF$: 
+    $F^\ast:F^\ast\eR^q f_! \sF \to \eR^q f_! \sF$. Elle se déduit par 
+    fonctorialité de $\eR f_!$ de la correspondance de Frobenius de $\sF$: 
     c'est le composé 
     \[\xymatrix{
-      F^\ast \R^q f_! \sF \ar[r]^-\sim 
-        & \R^q f_! F^\ast \sF \ar[r]^-\sim 
-        & \R^q f_! \sF \text{.}
+      F^\ast \eR^q f_! \sF \ar[r]^-\sim 
+        & \eR^q f_! F^\ast \sF \ar[r]^-\sim 
+        & \eR^q f_! \sF \text{.}
     }\]
   \item La formule des traces pour $\sF_q$ s'écrit 
     \begin{align*}\tag{1}\label{VI:eq:1}
       \sum_{x\in X_0(\dF_q)} \tr(F_x^\ast,\sF_0) = \tr(F^\ast,\h^\bullet(X,\sF)) \text{;}
     \end{align*}
-    celle pour $\R^q f_! \sF$ s'écrit 
+    celle pour $\eR^q f_! \sF$ s'écrit 
     \begin{align*}\tag{2$_q$}\label{VI:eq:2_q} 
-      \sum_{y\in Y_0(\dF_q)} \tr(F_y^\ast,\R^q f_! \sF) = \tr(F^\ast, \h^\bullet(Y,\R^q f_! \sF)) \text{.}
+      \sum_{y\in Y_0(\dF_q)} \tr(F_y^\ast,\eR^q f_! \sF) = \tr(F^\ast, \h^\bullet(Y,\eR^q f_! \sF)) \text{.}
     \end{align*}
 \end{enumerate}
 
-On a, pour $y\in Y(\dF)$, $(\R^q f_! \sF)_y = \h_c^q(f^{-1}(y),\sF)$, et si 
+On a, pour $y\in Y(\dF)$, $(\eR^q f_! \sF)_y = \h_c^q(f^{-1}(y),\sF)$, et si 
 $y\in Y_0(\dF_q)$, 
 \[
-  \tr(F_y^\ast,\R^q f_! \sF) = \tr(F^\ast,\h_c^q(f^{-1}(y),\sF)) \text{,}
+  \tr(F_y^\ast,\eR^q f_! \sF) = \tr(F^\ast,\h_c^q(f^{-1}(y),\sF)) \text{,}
 \]
 d'où par la formule des traces sur la fibre 
 \[
-  \sum_{\substack{x\in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \sum (-1)^q \tr(F_y^\ast,\R^q f_! \sF) \text{.}
+  \sum_{\substack{x\in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \sum (-1)^q \tr(F_y^\ast,\eR^q f_! \sF) \text{.}
 \]
 Prenant la somme alternée des identités \eqref{VI:eq:2_q}, on trouve donc 
 \begin{align*}\tag{2}\label{VI:eq:2}
-  \sum_{y\in Y_0(\dF_q)} \sum_{\substack{x \in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \tr(F^\ast,\h^\bullet(Y,\R^\bullet f_! \sF)) \text{.}
+  \sum_{y\in Y_0(\dF_q)} \sum_{\substack{x \in X_0(\dF_q) \\ f(x) = y}} \tr(F_x^\ast,\sF_0) = \tr(F^\ast,\h^\bullet(Y,\eR^\bullet f_! \sF)) \text{.}
 \end{align*}
 
 L'égalité des membres de gauche de \eqref{VI:eq:1} et \eqref{VI:eq:2} 
@@ -1170,13 +1170,13 @@ $\varepsilon_y:\rho_y^\ast\sF\to \sF$. Alors, $\rho_H(y)^\ast$ est
 indépendant de $y$. 
 \end{lemma_}
 
-En effet, $\R^p \pr_{1!} \pr_2^\ast\sF$ est le 
+En effet, $\eR^p \pr_{1!} \pr_2^\ast\sF$ est le 
 faisceau constant sur $Y$ de valeur $\h^p(X,\sF)$, et $\rho_H(y)^\ast$ est la 
 fibre en $y$ de l'endomorphisme 
 \[\xymatrix{
-  \R^p \pr_{1!} \pr_2^\ast \sF \ar[r]^-{\rho^\ast} 
-    & \R^p \pr_{1!} \rho^\ast \pr_2^\ast \sF \ar[r]^-\varepsilon 
-    & \R^p \pr_{1!} \pr_2^\ast \sF 
+  \eR^p \pr_{1!} \pr_2^\ast \sF \ar[r]^-{\rho^\ast} 
+    & \eR^p \pr_{1!} \rho^\ast \pr_2^\ast \sF \ar[r]^-\varepsilon 
+    & \eR^p \pr_{1!} \pr_2^\ast \sF 
 }\]
 de ce faisceau. 
 

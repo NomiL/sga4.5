@@ -1240,10 +1240,10 @@ notations suivantes:
 
 Soit $\cA$ une catégorie abélienne. On pose: 
 \begin{align*}
-  \D(\cA) &= \eK^{\infty,\infty}(\cA)/\eK^{\infty,\varnothing}(\cA) \\
-  \D^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \\
-  \D^+(\cA) &= \eK^{+,+}(\cA) / \eK^{+,\varnothing}(\cA) \\
-  \D^-(\cA) &= \eK^{-,-}(\cA) / \eK^{-,\varnothing}(\cA) \text{.}
+  \eD(\cA) &= \eK^{\infty,\infty}(\cA)/\eK^{\infty,\varnothing}(\cA) \\
+  \eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \\
+  \eD^+(\cA) &= \eK^{+,+}(\cA) / \eK^{+,\varnothing}(\cA) \\
+  \eD^-(\cA) &= \eK^{-,-}(\cA) / \eK^{-,\varnothing}(\cA) \text{.}
 \end{align*}
 
 
@@ -1253,29 +1253,29 @@ Soit $\cA$ une catégorie abélienne. On pose:
 \begin{proposition}\label{VIII:3-1-2}
 Les foncteurs naturels qui figurent dans le diagramme suivant: 
 \[\xymatrix@=0.5cm{
-  & \D(\cA) \\
-  \D^+(\cA) \ar[ur] 
-    & & \D^-(\cA) \ar[ul] \\
-  & \D^b(\cA) \ar[ul] \ar[ur] 
+  & \eD(\cA) \\
+  \eD^+(\cA) \ar[ur] 
+    & & \eD^-(\cA) \ar[ul] \\
+  & \eD^b(\cA) \ar[ul] \ar[ur] 
 }\]
 sont pleinement fidèles. 
 
 Les foncteurs naturels: 
 \begin{align*}
-  \D^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{+,b}(\cA)/\eK^{+,\varnothing}(\cA) \\
-  \D^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{-,b}(\cA) / \eK^{-,\varnothing}(\cA) 
+  \eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{+,b}(\cA)/\eK^{+,\varnothing}(\cA) \\
+  \eD^b(\cA) &= \eK^{b,b}(\cA)/\eK^{b,\varnothing}(\cA) \to \eK^{-,b}(\cA) / \eK^{-,\varnothing}(\cA) 
 \end{align*}
 sont des équivalences de catégories. 
 
 Les foncteurs du diagramme: 
 \[\xymatrix@=0.5cm{
-  & \D(\cA) \\
-  \D^+(\cA) \ar[ur] 
-    & & \D^-(\cA) \ar[ul] \\
-  & \D^b(\cA) \ar[ul] \ar[ur]
+  & \eD(\cA) \\
+  \eD^+(\cA) \ar[ur] 
+    & & \eD^-(\cA) \ar[ul] \\
+  & \eD^b(\cA) \ar[ul] \ar[ur]
 }\]
-étant injectifs sur les objets, réalisent les catégories $\D^b(\cA)$, 
-$\D^+(\cA)$, $\D^-(\cA)$ comme sous-catégories pleines de $\D(\cA)$. 
+étant injectifs sur les objets, réalisent les catégories $\eD^b(\cA)$, 
+$\eD^+(\cA)$, $\eD^-(\cA)$ comme sous-catégories pleines de $\eD(\cA)$. 
 \end{proposition}
 
 La preuve de cette proposition se trouve au théorème \ref{VIII:2-4-2}. 
@@ -1285,17 +1285,17 @@ La preuve de cette proposition se trouve au théorème \ref{VIII:2-4-2}.
 
 
 \begin{definition}\label{VIII:3-1-3}
-La catégorie $\D(\cA)$ sera appelée la \emph{catégorie dérivée} de la 
-catégorie $\cA$. Les objets de $\D(\cA)$ isomorphes aux objets de $\D^b(\cA)$ 
-seront appelés les objets \emph{bornés} de $\D(\cA)$. Les objets de 
-$\D(\cA)$ isomorphes aux objets de $\D^+(\cA)$ seront appelés les objets 
-\emph{limités à gauche}, les objets de $\D(\cA)$ isomorphes aux objets de 
-$\D^-(\cA)$, seront appelés les objets \emph{limités à droite}. 
+La catégorie $\eD(\cA)$ sera appelée la \emph{catégorie dérivée} de la 
+catégorie $\cA$. Les objets de $\eD(\cA)$ isomorphes aux objets de $\eD^b(\cA)$ 
+seront appelés les objets \emph{bornés} de $\eD(\cA)$. Les objets de 
+$\eD(\cA)$ isomorphes aux objets de $\eD^+(\cA)$ seront appelés les objets 
+\emph{limités à gauche}, les objets de $\eD(\cA)$ isomorphes aux objets de 
+$\eD^-(\cA)$, seront appelés les objets \emph{limités à droite}. 
 \end{definition}
 
 Nous désignerons par $D$ le foncteur canonique: 
 \[
-  D : \eC(\cA) \to \D(\cA) \text{.}
+  D : \eC(\cA) \to \eD(\cA) \text{.}
 \]
 La ``restriction'' de $D$ à la sous-catégorie pleine $\cA$ de $\eC(\cA)$ 
 sera encore noté $D$. Le foncteur $D$ restrient à $\cA$ est pleinement 
@@ -1304,12 +1304,12 @@ Soient $X$ et $Y$ deux objets de $\cA$.
 
 On vérifie sans difficulté que pour tout $m\geqslant 0$, les groupes: 
 \[
-  \hom_{\D(\cA)}(D(X),T^{-m} D(Y)) \qquad \text{($T$ est le foncteur translation)} 
+  \hom_{\eD(\cA)}(D(X),T^{-m} D(Y)) \qquad \text{($T$ est le foncteur translation)} 
 \]
 sont nuls. La dimension cohomologique de $\cA$ sera le plus petit des entiers 
 $n$ tels que pour tout $m>n$ on ait: 
 \[
-  \hom_{\D(\cA)}(D(X),T^m D(Y)) = 0 \qquad\text{pout tout couple $X,Y$ d'objets de $\cA$.} 
+  \hom_{\eD(\cA)}(D(X),T^m D(Y)) = 0 \qquad\text{pout tout couple $X,Y$ d'objets de $\cA$.} 
 \]
 S'il n'y a pas de tels entiers, on dira que la dimension cohomologique de $\cA$ 
 est infinie. 

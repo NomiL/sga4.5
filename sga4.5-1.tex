@@ -937,10 +937,10 @@ Si $f:X\to Y$ est un morphisme de schémas et $\sF$ un faisceau sur $\et X$,
 l'\emph{image directe} $f_* \sF$ de $\sF$ par $f$ est le faisceau sur $\et Y$ 
 défini par $f_* \sF(V) = \sF(X\times_Y V)$ pour tout $V$ étale sur $Y$. Le foncteur 
 $f_*:\sh(\et X)\to \sh(\et Y)$ est exact à gauche. Ses foncteurs 
-dérivés à droite $\R^q f_*$ s'appellent images directes supérieures. Si 
+dérivés à droite $\eR^q f_*$ s'appellent images directes supérieures. Si 
 $\bar y$ est un point géométrique de $Y$, on a 
 \[
-  (\R^q f_* \sF)_{\bar y} = \varinjlim \h^q(V\times_Y X,\sF)\text{,}
+  (\eR^q f_* \sF)_{\bar y} = \varinjlim \h^q(V\times_Y X,\sF)\text{,}
 \]
 limite inductive prise sur les voisinages étales $V$ de $\bar y$. 
 
@@ -957,7 +957,7 @@ que $\widetilde U=U\times_V \widetilde Y$; on posera
 le limite inductive étant prise sur les voisinages étales $V'$ de $\bar y$ qui 
 dominent $V$. Avec cette définition, on a 
 \[
-  \left(\R^q f_* \sF\right)_{\bar y} = \h^q(\widetilde X,\sF)\text{.}
+  \left(\eR^q f_* \sF\right)_{\bar y} = \h^q(\widetilde X,\sF)\text{.}
 \]
 
 Le foncteur $f_*$ a un adjoint à gauche $f^*$, le foncteur ``image 
@@ -976,8 +976,8 @@ Soient $\sF$ un faisceau abélien sur $\et X$ et $f:X\to Y$ un morphisme de
 schémas (resp. des morphismes de schémas $X\xrightarrow f Y \xrightarrow g Z$). 
 On a une suite spectrale 
 \begin{align*}
-  E_2^{pq} &= \h^p(Y,\R^q f_* \sF) \Rightarrow \h^{p+q}(X,\sF) \\
-  \text{(resp.}\qquad E_2^{pq} &= \R^p g_* \R^q f_* \sF \Rightarrow \R^{p+q}(gf)_* \sF\text{).}
+  E_2^{pq} &= \h^p(Y,\eR^q f_* \sF) \Rightarrow \h^{p+q}(X,\sF) \\
+  \text{(resp.}\qquad E_2^{pq} &= \eR^p g_* \eR^q f_* \sF \Rightarrow \eR^{p+q}(gf)_* \sF\text{).}
 \end{align*}
 \end{theorem}
 
@@ -986,8 +986,8 @@ On a une suite spectrale
 
 
 \begin{corollary}\label{I:2-3-5}
-Si $\R^q f_* \sF=0$ pour tout $q>0$, on a $\h^p(Y,f_* \sF)=\h^p(X,\sF)$ (resp. 
-$\R^p g_*(\sF_* \sF) = \R^p(g f)_* \sF$) pour tout $p\geqslant 0$. 
+Si $\eR^q f_* \sF=0$ pour tout $q>0$, on a $\h^p(Y,f_* \sF)=\h^p(X,\sF)$ (resp. 
+$\eR^p g_*(\sF_* \sF) = \eR^p(g f)_* \sF$) pour tout $p\geqslant 0$. 
 \end{corollary}
 
 Cela s'applique en particulier dans le cas suivant:
@@ -998,7 +998,7 @@ Cela s'applique en particulier dans le cas suivant:
 
 \begin{proposition}\label{I:2-3-6}
 Soit $f:X\to Y$ un morphisme fini (voire, par passage à la limite, un 
-morphisme entier) et $\sF$ un faisceau abélien sur $X$. Alors $\R^q f_* \sF=0$, 
+morphisme entier) et $\sF$ un faisceau abélien sur $X$. Alors $\eR^q f_* \sF=0$, 
 pour tout $q>0$.
 \end{proposition}
 
@@ -1290,7 +1290,7 @@ Remarquons tout d'abord qu'on a:
   \h^2(G',\bar K^\times) \simeq \h^2\left(G,(\bar K\otimes_K K')^\times\right)\text{.}
 \]
 (D'un point de vue géométrique si l'on note $x=\spec(K)$, $x'=\spec(K')$ et 
-$\pi:x'\to x$ le morphisme canonique, on a $\R^q \pi_*(\dG_{m,x'}) = 0$ pour 
+$\pi:x'\to x$ le morphisme canonique, on a $\eR^q \pi_*(\dG_{m,x'}) = 0$ pour 
 $q>0$ et par suite $\h^q(x',\dG_{m,X'})\simeq \h^q(x,\pi_*\dG_{m,X'})$ pour 
 $q\geqslant 0$). 
 
@@ -1488,7 +1488,7 @@ suite exacte de faisceaux:
 
 
 \begin{lemma}\label{I:3-3-2}
-On a $\R^q j_* \dG_{m,\eta} = 0$ pour tout $q>0$.
+On a $\eR^q j_* \dG_{m,\eta} = 0$ pour tout $q>0$.
 \end{lemma}
 
 Il suffit de montrer que la fibre de ce faisceau en tout pointe fermé $x$ 
@@ -1497,7 +1497,7 @@ le corps des fractions de $\tilde\sO_{X,x}$, on a
 \[
   \spec(K) = \eta\times_X \spec(\tilde\sO_{X,x})\text{,}
 \]
-donc $(\R^qj_*\dG_{m,\eta})_x = \h^q(\spec(K),\dG_m)$. 
+donc $(\eR^qj_*\dG_{m,\eta})_x = \h^q(\spec(K),\dG_m)$. 
 
 Or $K$ est une extension algébrique de $k(X)$, donc une extension de degré 
 de transcendante $1$ de $k$: le lemme résulte de (\ref{I:3-2-4}). 
@@ -1526,7 +1526,7 @@ pour tout $q\geqslant 0$ et le deuxième membre est nul pour $q>0$ d'après
 On a $\h^q\left(X,\bigoplus_{x\in X} i_{x*} \dZ_x\right) = 0$ pour tout $q>0$. 
 \end{lemma}
 
-En effet pour tout point fermé de $X$, on a $\R^q i_{x*}\dZ_x 0$ pour $q>0$, 
+En effet pour tout point fermé de $X$, on a $\eR^q i_{x*}\dZ_x 0$ pour $q>0$, 
 car $i_x$ est un morphisme fini (\ref{I:2-3-6}), et 
 \[
   \h^q(X,i_{x*}\dZ_x) = \h^q(x,\dZ_x)\text{.}
@@ -1765,7 +1765,7 @@ Ce chapitre est consacré à la démonstration et aux applications du
 \begin{theorem}\label{I:4-1-1}
 Soient $f:X\to S$ un morphisme propre de schémas et $\sF$ un faisceau abélien 
 de torsion sur $X$. Alors, quel que soit $q\geqslant 0$, la fibre de 
-$\R^q f_* \sF$ en un point géométrique $s$ de $S$ est isomorphe à la 
+$\eR^q f_* \sF$ en un point géométrique $s$ de $S$ est isomorphe à la 
 cohomologie $\h^q(X_s,\sF)$ de la fibre $X_s=X\otimes_S \spec k(s)$ de $f$ en 
 $s$. 
 \end{theorem}
@@ -1783,7 +1783,7 @@ spéciale avale la fibre générale.
 
 Dans le cas des schémas la démonstration est plus délicate et il est 
 indispensable de supposer que $\sF$ est de torsion (\cite[XII.2]{sga4}). Compte 
-tenu de la description des fibres de $\R^q f_* \sF$ (\ref{I:2-3-3}), le théorème 
+tenu de la description des fibres de $\eR^q f_* \sF$ (\ref{I:2-3-3}), le théorème 
 (\ref{I:4-1-1}) est essentiellement équivalent au 
 
  
@@ -2206,7 +2206,7 @@ avec $p$ un morphisme propre.
 
 
 \begin{lemma}\label{I:4-5-2}
-On a $p_*(j_{2!} \sF) = j_{1!} \sF$ et $\R^q p_*(j_{2!} \sF) = 0$, pour $q>0$. 
+On a $p_*(j_{2!} \sF) = j_{1!} \sF$ et $\eR^q p_*(j_{2!} \sF) = 0$, pour $q>0$. 
 \end{lemma}
 
 Notons tout de suite que lemme suffit pour conclure. En utilisant la suite 
@@ -2230,10 +2230,10 @@ $\bar X_1\setminus X$, $j_{2!} \sF$ est nul sur la fibre de $p$.
 De même, si $f:X\to S$ est un morphisme séparé de type fini de schémas 
 noethériens, il existe un morphisme propre $\bar f:\bar X\to S$ et un 
 immersion ouverte $j:X\to \bar X$. On définit alors les images directes s
-supérieures à support propre $\R^q f_!$ en posant pour tout faisceau de 
+supérieures à support propre $\eR^q f_!$ en posant pour tout faisceau de 
 torsion $\sF$ sur $X$
 \[
-  \R^q f_! \sF = \R^q f_*(j_! \sF) \text{.}
+  \eR^q f_! \sF = \eR^q f_*(j_! \sF) \text{.}
 \]
 On vérifie comme précédemment que cette définition est indépendante de 
 la compactification choisie. 
@@ -2244,7 +2244,7 @@ la compactification choisie.
 
 \begin{theorem}\label{I:4-5-4}
 Soient $f:X\to S$ un morphisme séparé de type fini de schémas noethériens 
-et $\sF$ un faisceau de torsion sur $X$. Alors la fibre de $\R^q f_! \sF$ en un 
+et $\sF$ un faisceau de torsion sur $X$. Alors la fibre de $\eR^q f_! \sF$ en un 
 point géométrique $s$ de $S$ est isomorphe à la cohomologie à support 
 propre $\h_c^q(X_s,\sF)$ de la fibre $X_s$ de $f$ en $s$. 
 \end{theorem}
@@ -2259,7 +2259,7 @@ propre (\ref{I:4-1-1}). Plus généralement, si
 }\]
 est un diagramme cartésien, on a un isomorphe canonique 
 \begin{equation*}\tag{4.5.4.1}\label{I:eq:4-5-4-1}
-  g^* (\R^q f_! \sF) \simeq \R^q f_!'({g'}^* \sF) \text{.}
+  g^* (\eR^q f_! \sF) \simeq \eR^q f_!'({g'}^* \sF) \text{.}
 \end{equation*}
 
 
@@ -2280,7 +2280,7 @@ est un diagramme cartésien, on a un isomorphe canonique
 \begin{theorem}[d'annulation]\label{I:4-6-1}
 Soient $f:X\to S$ un morphisme séparé de type fini dont les fibres sont de 
 dimension $\leqslant n$ et $\sF$ un faisceau de torsion sur $X$. Alors on a 
-$\R^q f_! \sF = 0$ pour $q>2 n$. 
+$\eR^q f_! \sF = 0$ pour $q>2 n$. 
 \end{theorem}
 
 D'après le théorème de changement de base, on peut supposer que $S$ est 
@@ -2299,7 +2299,7 @@ pour laquelle on déduit le résultat voulu du théorème de Tsen
 
 \begin{theorem}[de finitude]\label{I:4-6-2}
 Soient $f:X\to S$ un morphisme séparé de type fini et $\sF$ un faisceau 
-constructible sur $X$. Alors les faisceaux $\R^q f_! \sF$ sont constructibles. 
+constructible sur $X$. Alors les faisceaux $\eR^q f_! \sF$ sont constructibles. 
 \end{theorem}
 
 Nous ne considérons que le cas où $\sF$ est annulé par un entier inversible 
@@ -2308,14 +2308,14 @@ sur $X$.
 Par démontrer le théorème on se ramène au cas o`u $\sF$ est un faisceau 
 constant $\const{\dZ/n}$ et où $f:X\to S$ est un morphisme propre et lisse 
 dont les fibres sont des courbes géométriquement connexes de genre $g$. 
-Pour $n$ inversible sur $X$, les faisceaux $\R^q f_* \sF$ sont alors localement 
+Pour $n$ inversible sur $X$, les faisceaux $\eR^q f_* \sF$ sont alors localement 
 libres de rang fini, nuls pour $q>2$ (\ref{I:4-6-1}). Remplaçant $\dZ/n$ par le 
 faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement 
 \begin{equation*}\tag{4.6.2.1}\label{I:eq:4-6-2-1}
 \begin{aligned}
-  \R^0 f_* \dmu_n &= \dmu_n \\
-  \R^1 f_* \dmu_n &= \const\pic(X/S)_n \\
-  \R^2 f_* \dmu_n &= \dZ/n \text{.}
+  \eR^0 f_* \dmu_n &= \dmu_n \\
+  \eR^1 f_* \dmu_n &= \const\pic(X/S)_n \\
+  \eR^2 f_* \dmu_n &= \dZ/n \text{.}
 \end{aligned}
 \end{equation*}
 
@@ -2326,10 +2326,10 @@ faisceau localement isomorphe (sur $S$) $\dmu_n$, on a canoniquement
 \begin{theorem}[comparaison avec la cohomologie classique]\label{I:4-6-3}
 Soient $f:X\to S$ un morphisme séparé de schémas de type fini sur $\dC$, 
 et $\sF$ un faisceau de torsion sur $X$. Notons par un exposant $\an{(-)}$ le 
-foncteur de passage aux espaces topologiques usuels, et par $\R^q \an f_!$ les 
+foncteur de passage aux espaces topologiques usuels, et par $\eR^q \an f_!$ les 
 foncteurs dérivés du foncteur image directe à support propre par $\an f$. On a 
 \[
-  \an{(\R^q f_! \sF)} \simeq \R^q \an f_! \an \sF \text{.}
+  \an{(\eR^q f_! \sF)} \simeq \eR^q \an f_! \an \sF \text{.}
 \]
 En particulier, pour $S=$ un point et $\sF$ le faisceau constant $\dZ/n$, 
 \[
@@ -2419,7 +2419,7 @@ morphisme lisse, la fibre générale avale la fibre spéciale.
 Ne supposons plus $f$ nécessairement lisse (mais supposons que $f^{-1}((0,t])$ 
 soit un fibré sur $(0,t]$). On peut encore définir un morphisme 
 $\cosp^\bullet$ en cohomologie dès que $j_* \dZ=\dZ$ et 
-$\R^q j_* \dZ = 0$ pour $q>0$. Sous ces hypothèses, la suite spectrale de 
+$\eR^q j_* \dZ = 0$ pour $q>0$. Sous ces hypothèses, la suite spectrale de 
 Leray pour $j$ montre qu'on a 
 \[
   \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right) \iso \h^\bullet\left(f^{-1}\left((0,t]\right),\dZ\right)
@@ -2431,13 +2431,13 @@ et $\cosp^\bullet$ est le morphisme composé:
     \xleftarrow\sim \h^\bullet\left(f^{-1}\left([0,t]\right),\dZ\right) 
     \to \h^\bullet(X_0,\dZ)
 \]
-La fibre de $\R^q j_* \dZ$ en un point $x\in X_0$ se calcule comme suit. On 
+La fibre de $\eR^q j_* \dZ$ en un point $x\in X_0$ se calcule comme suit. On 
 prend dans un espace ambiant une boule $B_\varepsilon$de centre $x$ et de rayon 
 $\varepsilon$ assez petit, et pour $\eta$ assez petit, on pose 
 $E=X\cap B_\varepsilon \cap f^{-1}(\eta t)$; c'est la \emph{variété des 
 cycles évanescents} en $x$. On a 
 \[
-  (\R^q j_* \dZ)_x \xleftarrow\sim \h^q\left(X\cap B_\varepsilon\cap f^{-1}\left((0,\eta t]\right),\dZ\right) \xrightarrow\sim \h^q(E,\dZ)
+  (\eR^q j_* \dZ)_x \xleftarrow\sim \h^q\left(X\cap B_\varepsilon\cap f^{-1}\left((0,\eta t]\right),\dZ\right) \xrightarrow\sim \h^q(E,\dZ)
 \]
 et le morphisme de cospécialisation est défini en cohomologie dés que les 
 variétés de cycles évanescents sont acycliques ($\h^0(E,\dZ)=\dZ$ et 
@@ -2541,7 +2541,7 @@ $t$ de $S$, donnant lieu à un diagramme cartésien
   t \ar[r]^-\varepsilon 
     & S
 }\]
-On a $\varepsilon_*' \dZ/n = f^*\varepsilon_* \dZ/n$ et $\R^q \varepsilon_*'\dZ/n=0$ 
+On a $\varepsilon_*' \dZ/n = f^*\varepsilon_* \dZ/n$ et $\eR^q \varepsilon_*'\dZ/n=0$ 
 pour $q>0$. 
 \end{lemma}
 
@@ -2557,14 +2557,14 @@ dans $k(t)$, et le diagramme cartésien
 }\]
 Les anneaux locaux de $S'$ sont normaux à corps de fractions séparablement 
 clos. Ils sont donc strictement henséliens, et l'acyclicité locale de $f'$ 
-(\ref{I:5-1-4}) fournit $f_*'\dZ/n = \dZ/n$, $\R^qi_*'\dZ/n = 0$ pour $q>0$. 
+(\ref{I:5-1-4}) fournit $f_*'\dZ/n = \dZ/n$, $\eR^qi_*'\dZ/n = 0$ pour $q>0$. 
 Puisque $\alpha$ est entier, on a alors 
 \[
-  \R^q\varepsilon_*'\dZ/n 
-    = \alpha_*' \R^q i_*' \dZ/n 
-    = \alpha_*' {f'}^* \R^q i_* \dZ/n 
-    = f^* \alpha_* \R^q i_* \dZ/n 
-    = f^* \R^q \varepsilon_* \dZ/n \text{,}
+  \eR^q\varepsilon_*'\dZ/n 
+    = \alpha_*' \eR^q i_*' \dZ/n 
+    = \alpha_*' {f'}^* \eR^q i_* \dZ/n 
+    = f^* \alpha_* \eR^q i_* \dZ/n 
+    = f^* \eR^q \varepsilon_* \dZ/n \text{,}
 \]
 et le lemme. 
 
@@ -2594,9 +2594,9 @@ Considérons le diagramme cartésien
 }\]
 déduit de $f$ par changement de base. D'après (\ref{I:5-1-4}), $f'$ est encore 
 localement acyclique. De la définition de l'acyclicité locale, on tire 
-aussitôt que la restriction à $X_s$ des faisceaux $\R^q \varepsilon_*' \dZ/n$ 
+aussitôt que la restriction à $X_s$ des faisceaux $\eR^q \varepsilon_*' \dZ/n$ 
 est $\dZ/n$ pour $q=0$, et $0$ pour $q>0$. Par (\ref{I:5-1-5}) on sait même que 
-$\R^q \varepsilon_*'\dZ/n = 0$ pour $q>0$. On définit $\cosp^\bullet$ comme la 
+$\eR^q \varepsilon_*'\dZ/n = 0$ pour $q>0$. On définit $\cosp^\bullet$ comme la 
 flèche composée 
 \begin{equation*}\tag{5.1.6.1}\label{I:eq:5-1-6-1}
   \h^\bullet(X_t,\dZ/n) \simeq \h^\bullet(X,\varepsilon_*' \dZ/n) \to \h^\bullet(X_s,\dZ/n) \text{.}
@@ -2624,14 +2624,14 @@ $S$ et $f:X\to S$ un morphisme. On suppose
     $\h^q(X_t,\dZ/n) \to \h^q(X_s,\dZ/n)$ sont bijectives.
 \end{enumerate}
 
-Alors l'homomorphisme canonique $(\R^q f_*\dZ/n)_s\to \h^q(X_s,\dZ/n)$ est 
+Alors l'homomorphisme canonique $(\eR^q f_*\dZ/n)_s\to \h^q(X_s,\dZ/n)$ est 
 bijectif pour tout $q\geqslant 0$. 
 \end{theorem}
 
 Pour démontrer le théorème, il est clair qu'on peut supposer 
 $S=\widetilde S^s$. On va et fait montrer que, pour tout faisceau de 
 $\dZ/n\dZ$-modules $\sF$ sur $S$, l'homomorphisme canonique 
-$\varphi^q(\sF):(\R^q f_* f^* \sF)_s \to \h^q(X_s,f^*\sF)$ est bijectif. 
+$\varphi^q(\sF):(\eR^q f_* f^* \sF)_s \to \h^q(X_s,f^*\sF)$ est bijectif. 
 
 Tout faisceau de $\dZ/n\dZ$ est limite inductive filtrante de faisceaux 
 constructibles de $\dZ/n\dZ$-modules (\ref{I:4-3-3}). De plus tout faisceau 
@@ -2684,7 +2684,7 @@ Soient $S$ le spectre d'un anneau local noethérien strictement hensélien et
 $f:X\to S$ un morphisme localement acyclique. Supposons que, pour tout point 
 géométrique $t$ de $S$ on dit $\h^0(X_t,\dZ/n) = \dZ/n$ et 
 $\h^q(X_t,\dZ/n) = 0$ pour $q>0$ (autrement dit les fibres géométriques de 
-$f$ sont acycliques). Alors on a $f_* \dZ/n\dZ/n$ et $\R^qf_*\dZ/n = 0$ pour 
+$f$ sont acycliques). Alors on a $f_* \dZ/n\dZ/n$ et $\eR^qf_*\dZ/n = 0$ pour 
 $q>0$. 
 \end{corollary}
 
@@ -2707,7 +2707,7 @@ Puisque $g$ est localement acyclique, on a $\h^0(Y_z,\dZ/n) = \dZ/n$, et
 $\h^q(Y_z,\dZ/n) = 0$ pour $q>0$. Par ailleurs le morphisme $f_z:X_z\to Y_z$ est 
 localement acyclique (\ref{I:5-1-4}) et ses fibres géométriques sont 
 acycliques, car ce sont des variétés de cycles évanescents de $f$. 
-D'après (\ref{I:5-1-9}), on a donc $\R^q {f_z}_*\dZ/n = 0$ pour $q>0$. De plus 
+D'après (\ref{I:5-1-9}), on a donc $\eR^q {f_z}_*\dZ/n = 0$ pour $q>0$. De plus 
 ${f_z}_*\dZ/n$ est constant de fibre $\dZ/n$ sur $Y_z$. On conclut à l'aide de 
 la suite spectrale de Leray de $f_z$. 
 
@@ -2905,7 +2905,7 @@ d'où le lemme.
 
 \begin{theorem}[spécialisation des groupes de cohomologie]\label{I:5-3-1}
 Soit $f:X\to S$ un morphisme propre et localement acyclique, par exemple un 
-morphisme propre et lisse. Alors les faisceaux $\R^q f_*\dZ/n$ sont localement 
+morphisme propre et lisse. Alors les faisceaux $\eR^q f_*\dZ/n$ sont localement 
 constants constructibles et pour toute flèche de spécialisation 
 $t\to\widetilde S^s$, les flèches de cospécialisation 
 $\h^q(X_t,\dZ/n)\to\h^q(X_s,\dZ/n)$ sont bijectives.
@@ -2930,7 +2930,7 @@ Soit un diagramme cartésien
 avec $g$ lisse. Pour tout faisceau $\sF$ sur $X$, de torsion et premier aux 
 caractéristiques résiduelles de $S$, on a 
 \[
-  g^* \R^q f_* \sF \iso \R^q f_*'({g'}^* \sF) \text{.}
+  g^* \eR^q f_* \sF \iso \eR^q f_*'({g'}^* \sF) \text{.}
 \]
 \end{theorem}
 
@@ -2979,16 +2979,16 @@ $n$ premier aux charactéristiques résiduelles de $S$, on a
 \begin{equation*}
 \begin{aligned}
   j_* \dZ/n     &= \dZ/n \\
-  \R^1 j_*\dZ/n &= \dZ/n(-1)_Y \\
-  \R^q j_*\dZ/n &= 0 \qquad \text{pour $q\geqslant 2$}
+  \eR^1 j_*\dZ/n &= \dZ/n(-1)_Y \\
+  \eR^q j_*\dZ/n &= 0 \qquad \text{pour $q\geqslant 2$}
 \end{aligned}
 \end{equation*}
 \end{theorem}
 
 Dans ces formules, $\dZ/n(-1)$ désigne le $\dZ/n$-duel de $\dmu_n$. Si $t$ 
 est une équation locale pour $Y$, l'isomorphisme 
-$\R^1j_*\dZ/n\simeq\dZ/n(-1)_Y$ est défini par l'application 
-$a:\dZ/n\to \R^1j_*\dmu_n$ qui envoie $1$ sur la classe du $\dmu_n$-torseur des 
+$\eR^1j_*\dZ/n\simeq\dZ/n(-1)_Y$ est défini par l'application 
+$a:\dZ/n\to \eR^1j_*\dmu_n$ qui envoie $1$ sur la classe du $\dmu_n$-torseur des 
 racines $n$-ièmes de $t$. 
 
 La question est de nature locale. Ceci permet de remplacer $(X,Y)$ par un 
@@ -3000,21 +3000,21 @@ couple localement isomorphe, par exemple
   & T
 }\]
 avec $T=\dA_S^{n-1}$ et $i=$ section à l'infini. Le corollaire (\ref{I:5-1-9}) 
-s'applique à $g$, et fournit $\R^q g_ \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
+s'applique à $g$, et fournit $\eR^q g_ \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
 Pour $f$, on a par ailleurs \eqref{I:eq:4-6-2-1}
 \[
-  \R^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ pour $q>2$.}
+  \eR^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ pour $q>2$.}
 \]
-On vérifie facilement que $j_* \dZ/n = \dZ/n$, et que les $\R^q j_*\dZ/n = 0$ 
+On vérifie facilement que $j_* \dZ/n = \dZ/n$, et que les $\eR^q j_*\dZ/n = 0$ 
 sont concentrés sur $i(T)$ pour $q>0$. La suite spectrale de Leray 
-$E_2^{pq} = \R^p f_* \R^q j_*\dZ/n \Rightarrow \R^{p+q}g_* \dZ/n$ se réduit 
+$E_2^{pq} = \eR^p f_* \eR^q j_*\dZ/n \Rightarrow \eR^{p+q}g_* \dZ/n$ se réduit 
 donc à 
 \[\xymatrix{
-  i^* \R^q j_* \dZ/n & 0 & \cdots \\
-  i^* \R^1 j_* \dZ/n \ar[drr]^-{d_2} & 0 & \cdots \\
+  i^* \eR^q j_* \dZ/n & 0 & \cdots \\
+  i^* \eR^1 j_* \dZ/n \ar[drr]^-{d_2} & 0 & \cdots \\
   \dZ/n              & 0 & \dZ/n(-1) & 0 & \cdots
 }\]
-$\R^q j_*\dZ/n=0$ pour $q\geqslant 0$, et $\R^q j_*\dZ/n$ est le prolongement 
+$\eR^q j_*\dZ/n=0$ pour $q\geqslant 0$, et $\eR^q j_*\dZ/n$ est le prolongement 
 par zéro d'un faisceau localement libre de rang un sur $T$ (isomorphe, via 
 $d_2$, à $\dZ/n(-1)$). L'application $a$, définie plus haut, étant 
 injective (ainsi qu'on le vérifie fibre par fibre), c'est un isomorphisme, et 
@@ -3037,7 +3037,7 @@ applications suivantes du théorème d'acyclicité (\ref{I:5-2-1}).
 Soient $f:X\to S$ un morphisme de schémas de type finie sur $\dC$ et $\sF$ un 
 faisceau constructible sur $X$. Alors 
 \[
-  \an{(\R^q f_*\sF)} \sim \R^q \an f_* (\an\sF)
+  \an{(\eR^q f_*\sF)} \sim \eR^q \an f_* (\an\sF)
 \]
 (cf. \ref{I:4-6-3}: en cohomologie ordinaire, il est nécessaire de supposer 
 $\sF$ est constructible et non seulement de torsion). 
@@ -3050,7 +3050,7 @@ $\sF$ est constructible et non seulement de torsion).
 \begin{theorem}\label{I:5-3-7} % originally 5.3.5.2
 Soient $f:X\to S$ un morphisme de schémas de type fini sur un corps $k$ de 
 charactéristique $0$ et $\sF$ un faisceau constructible sur $X$. Alors, les 
-$\R^q f_* \sF$ sont également constructibles.
+$\eR^q f_* \sF$ sont également constructibles.
 \end{theorem}
 
 La preuve utilise la résolution des singularités et (\ref{I:5-3-4}). Elle est 
@@ -3252,7 +3252,7 @@ génériques de $X/S$ sont ``les mêmes,'' i.e. les fibres de faisceaux
 localement constants sur $S$. Ceci se déduit des faits analogues pour 
 $\bar X$ et $D$, via la suite exacte $0\to j_! \dZ/n\to\dZ/n\to {\dZ/n}_D\to 0$ 
 (pour la cohomologie à supports propres) et les formules $j_*\dZ/n = \dZ/n$, 
-$\R^1 j_* \dZ/n \simeq {\dZ/n}_D(-1)$, $\R^i j_*\dZ/n = 0$ ($i\geqslant 2$) 
+$\eR^1 j_* \dZ/n \simeq {\dZ/n}_D(-1)$, $\eR^i j_*\dZ/n = 0$ ($i\geqslant 2$) 
 (pour la cohomologie ordinaire) (\ref{I:5-3-4}). 
 
 Ce principe de spécialisation ramène (\ref{I:6-2-2}) au cas où $k$ est de 
@@ -3382,7 +3382,7 @@ support propre pour $f$, pour se ramener au cas des courbes. Les ``cohomologie
 problèmes de passage à la limite, traités avec trop de détailes dans 
 \cite[XVIII]{sga4}. Pour tout point géométrique $z$ de $Y_y$, on a 
 \[
-  (\R^if_! \dZ/n)_z = \h_c^i(f^{-1}(z),\dZ/n) \text{.}
+  (\eR^if_! \dZ/n)_z = \h_c^i(f^{-1}(z),\dZ/n) \text{.}
 \]
 La fibre géométrique $f^{-1}(z)$ est une limite projective de courbes lisses 
 sur un corps algébriquement clos. Elle vérifie la dualité de Poincaré. 
@@ -3421,14 +3421,14 @@ On conclut par récurrence sur $N$.
 \subsection{Variantes et applications}\label{I:6-4}
 
 On peut construire, en cohomologie étale, un ``formalisme de dualité'' 
-($=$ des foncteurs $\R f_!$, $\R f_!$, $\R f^!$ satisfaisant diverses 
+($=$ des foncteurs $\eR f_!$, $\eR f_!$, $\eR f^!$ satisfaisant diverses 
 compatibilités et formules d'adjonction) parallèle à celui qui existe en 
 cohomologie cohérente. Dans ce language, les résultats du paragraphe 
 précédents se transcrivent comme suit: si $f:X\to S$ est lisse et purement 
 de dimension relative $N$, et que $S=\spec(k)$, avec $k$ algébriquement clos, 
 alors 
 \[
-  \R f^! \dZ/n = \dZ/n [2N](N) \text{.}
+  \eR f^! \dZ/n = \dZ/n [2N](N) \text{.}
 \]
 Ce résultat vaut sans hypothèse sur $S$. Il admet le 
 
@@ -3438,17 +3438,17 @@ Ce résultat vaut sans hypothèse sur $S$. Il admet le
 
 \begin{corollary}\label{I:6-4-1}
 Si $f$ est lisse et purement de dimension relative $N$, et que les faisceaux 
-$\R^i f_! \dZ/n$ sont localement constants, alors les faisceaux 
-$\R^i f_* \dZ/n$ sont aussi localement constants, et 
+$\eR^i f_! \dZ/n$ sont localement constants, alors les faisceaux 
+$\eR^i f_* \dZ/n$ sont aussi localement constants, et 
 \[
-  \R^i f_* \dZ/n = \const\hom\left(\R^{2 N-i} f_! \dZ/n(N),\dZ/n\right)\text{.}
+  \eR^i f_* \dZ/n = \const\hom\left(\eR^{2 N-i} f_! \dZ/n(N),\dZ/n\right)\text{.}
 \]
 \end{corollary}
 
 En particulier, sous les hypothèses du corollaire, les faisceaux 
-$\R^i f_* \dZ/n$ sont constructibles. Partant de là, on peut montrer que, si 
+$\eR^i f_* \dZ/n$ sont constructibles. Partant de là, on peut montrer que, si 
 $S$ est de type fini sur le spectre d'un corps ou d'un anneau de Dedekind, 
 alors, pour tout morphisme de type fini $f:X\to S$ et tout faisceau 
-constructible $\sF$ sur $X$, les faisceaux $\R^i f_* \sF$ sont constructibles 
+constructible $\sF$ sur $X$, les faisceaux $\eR^i f_* \sF$ sont constructibles 
 (\nameref{VII}, \ref{VII:1-1}). 
 % originally (Th. finitude, 1.1).
