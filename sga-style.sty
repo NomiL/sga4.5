@@ -127,3 +127,12 @@
 %\renewcommand{\bullet}{\text{\,\begin{picture}(-1,1)(-1,-2)\circle*{2}\end{picture}\ }}
 \let\oldbullet\bullet
 \renewcommand{\bullet}{\textnormal{\tiny$\oldbullet$}}
+
+
+% unmarked footnote
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
