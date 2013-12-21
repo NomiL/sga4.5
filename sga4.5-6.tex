@@ -2777,7 +2777,7 @@ des sommes de Kloosterman g\'en\'eralis\'ees
 \begin{equation*}\tag{7.1.1}\label{VI;eq:7-1-1}
   \kloos_{n,a} = \sum_{x_1\dotsm x_n = a} \psi(x_1+\cdots + x_n) \qquad (n\geqslant 1) \text{.} 
 \end{equation*}
-Pour $a=0$, cette somme est \'el\'ementaire (cf. \ref{vi:7-7}): 
+Pour $a=0$, cette somme est \'el\'ementaire (cf. \ref{VI:7-7}): 
 \begin{equation*}\tag{7.1.2}\label{VI:eq:7-1-2}
   \kloos_{n,0} = (-1)^{n-1} \text{.} 
 \end{equation*}
@@ -2833,6 +2833,261 @@ L'identit\'e de Hasse-Davenport permet maintenant de comparer $\kloos_{k,a}$
 
 Je ne connais pas d'interpr\'etation cohomologique de \eqref{VI:eq:7-2-4}, mais 
 j'en donnerai une de \eqref{VI:eq:7-2-5}. Revenons aux sommes $\kloos_{n,a}$. 
+
+
+
+
+
+\subsection{}\label{VI:7-3}
+
+Soit $\dF$ un cl\^oture alg\'ebrique de $\dF_q$ et, pour $a\in \dF$, soit 
+$V_a^{n-1}$, ou simplement $V_a$, l'hypersurface de $\dA^n$ d'\'equation 
+$x_1 \dotsm x_n=a$. Comme d'habitude, nous regarderons $\psi$ comme \'etant \`a 
+valeurs $\ell$-adiques plut\^ot que complexes. Avec la notation 
+\ref{VI:1-8}(ii), \eqref{VI:eq:7-1-3} se d\'eduit du 
+
+
+
+
+
+\begin{theorem_}\label{VI:7-4}
+La cohomologie de $V_a^{n-1}$ \`a valeurs dans $\sF(\psi(\sum x_i))$ v\'erifie 
+\begin{enumerate}[\indent (i)]
+  \item $\h_c^i=0$ pour $i\ne n-1$; 
+  \item $\h_c^\bullet{} \iso \h^\bullet{}$; 
+  \item pour $a\ne 0$, $\dim \h_c^{n-1}{}=n$; 
+  \item pour $a=0$, $\h_c^{n-1}{}$ est canoniquement isomorphe \`a $E_\lambda$. 
+\end{enumerate}
+\end{theorem_}
+
+
+
+
+
+\subsection{}\label{VI:7-5}
+
+Comme d'habitude, ce th\'eor\`eme contr\^ole aussi la d\'ependance de 
+$\kloos_{n,a}$ en $q$: pour chaque $a\in \dF_q^\times$, il existe $n$ valeurs 
+propres de Frobenius $\alpha_1,\dots,\alpha_n$, de valeur absolue complexe 
+$q^{\frac{n-1}{2}}$, telles que 
+\[
+  \sum_{\substack{x_1\dotsm x_n = a \\ x_i\in \dF_{q^m}}} \psi\circ \tr\left(\sum x_i\right) = (-1)^{n-1} \left(\alpha_1^m + \cdots + \alpha_n^m \right) \text{.} 
+\]
+
+Pour $n$ pair, $x\mapsto -x$ est une involution de $V_a$, qui transforme 
+$\sF(\psi)$ en son dual. Raisonnant comme en \ref{VI:3-6}, on en d\'eduit une 
+forme altern\'ee non d\'eg\'ener\'ee canonique sur $\h_c^{n-1}(V_a,\sF(\psi))$, 
+\`a valeurs dans $\dQ_\ell(-(n-1))$ et le 
+
+
+
+
+
+\begin{corollary_}\label{VI:7-6}
+Avec les notations de \ref{VI:7-5}, si $n$ est pair, les $\alpha_i$ se groupent 
+en $\frac n 2$ paires de racines $\alpha,\bar\alpha$ de produit \'egal \`a 
+$q^{n-1}$. 
+\end{corollary_}
+
+
+
+
+
+\subsection{}\label{VI:7-7}
+
+V\'erifions le cas $a=0$ de \ref{VI:7-5}. L'hypersurface $V_0$ est la r\'eunion 
+des hyperplans de coordonn\'ee $x_i=0$. Calculons la suite spectrale de Leray 
+\eqref{VI:eq:2-6-1*} de ce recouvrement de $V_0$, pour la cohomologie avec ou 
+sans support \`a coefficient dans $\sF(\psi)$. D'apr\`es \ref{VI:2-7*}*, tout 
+les termes initiaux sont nuls, sauf la cohomologie de l'intersection $\{0\}$ de 
+tous les hyperplans de coordonn\'ee. L\`a subsiste un isomorphisme 
+$\h_c^0{}\iso \h^0{}=E_\lambda$ qui justifie \ref{VI:7-4}. 
+
+Nous prouverons \ref{VI:7-4} et \ref{VI:7-8} ci-dessous par une r\'ecurrence 
+simultan\'ee sur $n$, et nous appuyant sur la suite spectrale dont 
+\eqref{VI:eq:7-1-4} est le reflet. Ceci exige un contr\^ole de la d\'ependance 
+en $a$ de $\kloos_{n,a}$. 
+
+Soit $\pi:\dA^n \to \dA$ l'application ``produit des coordonn\'ees,'' et 
+$\sigma$ la somme des coordonn\'ees. Les hypersurfaces $V_a$ sont les fibres de 
+$\pi$. 
+
+
+
+
+
+\begin{theorem_}\label{VI:7-8}
+\begin{enumerate}[(i)]
+  \item Le faisceau $\eR^{n-1}\pi_! \sF(\psi\sigma)$ est lisse de rang $n$ sur 
+    $\dA^1\setminus \{0\}$. 
+  \item son prolongement par $0$ sur $\dP^1$ est ll'image directe de sa 
+    restriction \`a $\dA^1\setminus \{0\}$. 
+  \item en $0$, la monodromie est unipotente, avec un seul bloc de Jordan
+  \item en $\infty$, l'inertie sauvage agit sans point fixe $\ne 0$, et le 
+    conducteur de Swan vaut $1$, 
+  \item on a $\eR^i \pi_! \sF(\psi\sigma) \iso \eR^i \pi_\ast \sF(\psi\sigma)$ 
+    (nul pour $i\ne n-1$).
+\end{enumerate}
+\end{theorem_}
+\begin{proof}[Preuve]
+de ce que \ref{VI:7-4} (pour une valeur donn\'ee de $n$) implique \ref{VI:7-8} 
+(pour la m\^eme valeur de $n$). 
+
+La fibre de $\eR^i \pi_! \sF(\psi\sigma)$ en $a$ est 
+$\h_c^i(V_a,\sF(\psi\sigma))$, et sur l'ouvert dense $\dA^1$ o\`u les 
+$\eR^i \pi_!\sF(\psi^{-1}\sigma)$ sont localement constants celle de 
+$\eR^i \pi_\ast \sF(\psi\sigma)$ est $\h^i(V_a,\sF(\psi\sigma))$ 
+(\hyperlink{VII}{Th.\ Finitude} \ref{VII:2-1}). L'hypoth\`ese \ref{VI:7-4}($n$) 
+nous fournit donc le 
+
+
+
+
+
+\begin{lemma_}\label{VI:7-9}
+\begin{enumerate}[(i)]
+  \item $\eR^i \pi_! \sF(\psi\sigma)=0$ pour $i\ne n-1$. 
+  \item Pour $i=n-1$, la fibre de ce faisceau en tout point $a\ne 0$ est de rang 
+    constant $n$. En $0$, elle est de rang $1$. 
+  \item Sur un ouvert dense $U$, on a 
+    $\eR^i \pi_! \sF(\psi) \iso \eR^i \pi_\ast \sF(\psi)$. 
+\end{enumerate}
+\end{lemma_}
+
+
+
+
+
+\subsection{}\label{VI:7-10}
+
+Nous allons maintenant utiliser la suite spectrale de Leray de $\pi$, pour la 
+cohomologie avec ou sans support, \`a coefficients dans $\sF(\psi\sigma)$. 
+L'aboutisement est connu: 
+$\h_c^\bullet(\dA^n,\sF(\psi\sigma))=\h^\bullet(\dA^n,\sF(\psi\sigma)) = 0$ 
+(\ref{VI:2-7*}*). En cohomologie \`a support propre, \ref{VI:7-9}(i) assure que 
+$E_2^{pq}=0$ pour $q\ne n-1$. Les termes $E_2$ sont donc tous nuls: 
+\begin{equation*}\tag{7.10.1}\label{VI:eq:7-10-1}
+  \h_c^p(\dA^1,\eR^{n-1} \pi_!\sF(\psi\sigma)) = 0 \text{.} 
+\end{equation*}
+
+Pour $p=0$, ceci signifie que $\eR^{n-1}\pi+! \sF(\psi\sigma)$ est sans section 
+\`a support ponctuel. Vu la constance de rang \ref{VI:7-9}(ii), on en d\'eduit 
+\begin{equation*}\tag{7.10.2}\label{VI:eq:7-10-2}
+  \begin{array}{c}
+    \text{Le faisceau $\eR^{n-1} \pi_! \sF(\psi\sigma)$ sur $\dA^1$ est lisse sur $\dA^1\setminus \{0\}$, et est } \\ 
+    \text{un sous-faisceau de l'image directe $\sG$ de sa restriction \`a $\dA^1\setminus \{0\}$.}
+  \end{array}
+\end{equation*}
+
+La suite exacte longue de cohomologie de 
+\[\xymatrix{
+  0 \ar[r] 
+    & \eR^{n-1} \pi_! \sF(\psi\sigma) \ar[r] 
+    & \sG \ar[r] 
+    & \sQ \ar[r] 
+    & 0 \text{.} 
+}\]
+o\`u le support de $\sQ$ est concentr\'e en $0$, donne 
+\[\xymatrix{
+  \h_c^0(\dA^1,\sG) \ar[r] 
+    & \sQ_0 \ar[r] 
+    & \h_c^1(\dA^1,\eR^{n-1} \pi_! \sF(\psi\sigma)) \text{.} 
+}\]
+Les termes extr\^emes \'etant nuls, $\sQ=0$ et 
+\begin{equation*}\tag{7.10.3}\label{VI:eq:7-10-3}
+  \text{$\eR^{n-1} \pi_! \sF(\psi\sigma)$ est l'image directe de sa restriction \`a $\dA^1\setminus \{0\}$.}
+\end{equation*}
+
+Soit $j$ l'inclusion de $\dA^1$ dans $\dP^1$. La version ``cat\'egorie 
+d\'eriv\'ee'' des suites spectrales de Leray est 
+\begin{align*}
+  \hh^\bullet(\dP^1,j_! \eR\pi_! \sF(\psi\sigma)) &= \hh_c^\bullet(\dA^1,\eR \pi_! \sF(\psi\sigma)) = \h_c^\bullet(\dA^n,\sF(\psi\sigma)) = 0 \\
+  \hh^\bullet(\dP^1,\eR j_\ast \eR \pi_\ast \sF(\psi\sigma)) &= \hh^\bullet(\dA^1,\eR \pi_\ast \sF(\psi\sigma)) = \h^\bullet(\dA^n,\sF(\psi\sigma)) = 0 \text{.}
+\end{align*}
+Soit $\Delta$ le mapping cylinder de 
+$j_! \eR\pi_! \sF(\psi\sigma) \to \eR j_\ast \eR \pi_\ast \sF(\psi\sigma)$. 
+D'apr\`es \ref{VI:7-9}(iii), les faisceaux de cohomologie de ce complexe de 
+faisceaux sont \`a support fini. D'autre part, la suite exacte longue de 
+cohomologie du triangle 
+$(j_!\eR \pi_! \sF(\psi\sigma),\eR j_\ast \eR \pi_\ast \sF(\psi\sigma),\Delta)$ 
+montre que $\hh^\bullet(\dP^1,\Delta)=0$. On a 
+$\hh^\bullet(\dP^1,\Delta) = \h^0(\dP^1,\sH^\bullet(\Delta))$, et finalement 
+$\Delta=0$: 
+\[\xymatrix{
+  j_! \eR\pi_! \sF(\psi\sigma) \ar[r]^-\sim 
+    & \eR j_\ast \eR \pi_\ast \sF(\psi\sigma) \text{.} 
+}\]
+
+En particulier, $\eR\pi_! \sF(\psi\sigma)\iso \eR\pi_\ast \sF(\psi\sigma)$ et, 
+ces complexes de faisceaux n'ayant qu'un faisceau de cohomologie non nul, 
+\begin{equation*}\tag{7.10.4}\label{VI:eq:7-10-4}
+\xymatrix{
+  j_! \eR \pi_! \sF(\psi\sigma) \ar[r]^-\sim 
+    & j_\ast \eR \pi_! \sF(\psi\sigma) \text{.} 
+}
+\end{equation*}
+Ceci compl\`ete la preuve de (i) (ii) (v). 
+
+
+
+
+
+\subsection{}\label{VI:7-11}
+
+Soient $\swan_0$ et $\swan_\infty$ les conducteurs de Swan en $0$ et en 
+$\infty$ de $\eR^{n-1} \pi_! \sF(\psi\sigma)$. On a 
+$\chi_c(\eR^{n-1} \pi_! \sF(\psi\sigma))=0$ \eqref{VI:eq:7-10-1} et la formule 
+d'Euler-Poincar\'e \eqref{VI:eq:3-2-1} se r\'eduit \`a 
+\begin{equation*}\tag{7.11.1}\label{VI:eq:7-11-1}
+  \swan_0 + \swan_\infty =1 \text{:} 
+\end{equation*}
+un de cces conducteurs vaut $0$ (ramification mod\'er\'ee), l'autre vaut $1$. 
+
+
+
+
+
+\subsection{}\label{VI:7-12}
+
+Soit $\sG$ un faisceau de rang $1$ sur $\dG_m$, de type kumm\'erien 
+\ref{VI:4-7} ($\sG=\sK_n(\chi)$) et non constant ($\chi\ne 1$). Le faisceau 
+$\sF(\psi\sigma)\otimes \pi^\ast \sG$ sur 
+$V^\ast=\pi^{-1}(\dG_m) = \dA^n\setminus \pi^{-1}(0)$ est alors du type 
+rencontr\'e dans l'\'etude des sommes de Gauss, et \ref{VI:4-11}(ii) nous donne 
+\begin{equation*}\tag{7.12.1}\label{VI:eq:7-12-1}
+\xymatrix{
+  \h_c^\bullet(V^\ast,\pi^\ast\sG\otimes \sF(\psi\sigma)) \ar[r]^-\sim 
+    & \h^\bullet(V^\ast,\pi^\ast \sG\otimes \sF(\psi\sigma)) \text{.} 
+}
+\end{equation*}
+La suite spectrale de Leray de $\pi$ transforme cet \'enonc\'e en 
+\begin{equation*}\tag{7.12.2}\label{VI:eq:7-12-2}
+\xymatrix{
+  \h_c^\bullet(\dG_m,\sG\otimes \eR^{n-1} \pi_! \sF(\psi\sigma)) \ar[r]^-\sim 
+    & \h^\bullet(\dG_m,\sG\otimes \eR^{n-1} \pi_\ast \sF(\psi\sigma)) \text{.} 
+}
+\end{equation*}
+
+Soit $i$ l'inclusion de $\dG_m$ dans $\dP^1$, et $\Delta$ le mapping cylinder 
+de 
+$\delta:i_!(\sG\otimes \eR^{n-1}\pi_! \sF(\psi))\to \eR i_\ast (\sG\otimes \eR^{n-1} \pi_! \sF(\psi\sigma))$
+(o\`u $\eR^{n-1} \pi_! = \eR^{n-1}\pi_\ast$). Raisonnant comme en 
+\ref{VI:7-10}, on d\'eduit de \eqref{VI:eq:7-12-2} que $\Delta=0$. En 
+particulier 
+\begin{equation*}\tag{7.12.3}\label{VI:eq:7-12-3}
+  \text{En $0$ et en $\infty$, l'inertie agit sans point fixe $\ne 0$ sur $\sG\otimes \eR^{n-1}\pi_! \sF(\psi\sigma)$.}
+\end{equation*}
+
+En $\infty$, ceci vaut m\^eme si $\sG$ est trivial \eqref{VI:eq:7-10-4}, de 
+sorte que l'inertie sauvage agit sans point fixe. En particulier, la 
+ramification est sauvage: d'apr\`es \ref{VI:7-11}, on a $\swan_\infty=1$, et la 
+ramification en $0$ es mod\'er\'ee. 
+
+En $0$, \eqref{VI:eq:7-12-3} impose \`a la ramification -- mod\'er\'ee -- de 
+$\eR^{n-1} \pi_! \sF(\psi\sigma)$ \^etre unipotente. D'apr\`es 
+\eqref{VI:eq:7-10-3} et \ref{VI:7-9}(ii), on a seul bloc de Jordan. Ceci 
+ach\`eve la preuve de \ref{VI:7-8}($n$). 
+\end{proof}
 
 
 
