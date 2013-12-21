@@ -403,6 +403,7 @@ et, pour tout entier $n\geqslant 1$
 
 
 
+\addtocounter{subsubsection}{2}
 \subsubsection{Remarque}\label{VI:1-9-3}
 
 Prenons pour $G_0$ un produit. Avec les notations de \ref{VI:1-7}d) et 
@@ -1021,7 +1022,7 @@ $\varepsilon$ la fonction $a\mapsto \prod \varepsilon_i(a_i)$ sur $A$. On a
 Soient $(X_i)_{i\in I}$ une famille finie de sch\'emas s\'epar\'es de type fini 
 sur $k$ alg\'ebriquement clos, $X=\prod_{i\in I} X_i$, $\sF_i$ un 
 $E_\lambda$-faisceau sur $X_i$ et $\sF$ le produit tensoriel externe 
-$\bigboxtimes_{i\in I}\sF_i = \bigotimes_{i\in I} \operatorname{pr}_i^\ast(\sF_i)$ 
+$\bigboxtimes_{i\in I}\sF_i = \bigotimes_{i\in I} \pr_i^\ast(\sF_i)$ 
 des $\sF_i$. On a la formule de K\"unneth 
 \begin{align*}\tag{2.4.1*}\label{VI:eq:2-4-1*}
   \h_c^\bullet(X,\sF) = \bigotimes_{i\in I} \h_c^\bullet(X_i,\sF_i) \text{.}
@@ -1161,7 +1162,7 @@ $(\rho,\varepsilon)$ une famille d'endomorphismes de $(X,\sF)$ param\'etr\'ee
 par $Y$: 
 \begin{align*} 
   \rho:Y\times_k X &\to Y\times_k X && \text{est un $Y$-morphisme, et} \\
-  \varepsilon:\rho^\ast \operatorname{pr}_2^\ast \sF &\to \operatorname{pr}_2^\ast\sF && \text{un morphisme de faisceaux.} 
+  \varepsilon:\rho^\ast \pr_2^\ast \sF &\to \pr_2^\ast\sF && \text{un morphisme de faisceaux.} 
 \end{align*}
 On suppose que $\rho$ est propre. Pour $y\in Y(k)$, soit $\rho_H(y)^\ast$ 
 l'endomorphisme de $\h_c^\bullet(X,\sF)$ induit par $\rho_y:X\to X$ et 
@@ -1169,13 +1170,13 @@ $\varepsilon_y:\rho_y^\ast\sF\to \sF$. Alors, $\rho_H(y)^\ast$ est
 ind\'ependant de $y$. 
 \end{lemma_}
 
-En effet, $\R^p \operatorname{pr}_{1!} \operatorname{pr}_2^\ast\sF$ est le 
+En effet, $\R^p \pr_{1!} \pr_2^\ast\sF$ est le 
 faisceau constant sur $Y$ de valeur $\h^p(X,\sF)$, et $\rho_H(y)^\ast$ est la 
 fibre en $y$ de l'endomorphisme 
 \[\xymatrix{
-  \R^p \operatorname{pr}_{1!} \operatorname{pr}_2^\ast \sF \ar[r]^-{\rho^\ast} 
-    & \R^p \operatorname{pr}_{1!} \rho^\ast \operatorname{pr}_2^\ast \sF \ar[r]^-\varepsilon 
-    & \R^p \operatorname{pr}_{1!} \operatorname{pr}_2^\ast \sF 
+  \R^p \pr_{1!} \pr_2^\ast \sF \ar[r]^-{\rho^\ast} 
+    & \R^p \pr_{1!} \rho^\ast \pr_2^\ast \sF \ar[r]^-\varepsilon 
+    & \R^p \pr_{1!} \pr_2^\ast \sF 
 }\]
 de ce faisceau. 
 
@@ -1758,7 +1759,7 @@ $\dF$ qui s'en d\'eduisent par extension des scalaires.
 On pose $I=\hom(k,\dF)$, d'o\`u $V\sim \dG_a^I$ et $T$ s'\'ecrit 
 $(x_i)\mapsto \sum x_i$. 
 \begin{equation*}\tag{4.8.1}\label{VI:eq:4-8-1}
-  \sF(\psi\circ \tr_{k/\dF_q}) = T^\ast \sF(\psi) = \bigotimes_i \operatorname{pr}_i^\ast \sF(\psi) \text{.} 
+  \sF(\psi\circ \tr_{k/\dF_q}) = T^\ast \sF(\psi) = \bigotimes_i \pr_i^\ast \sF(\psi) \text{.} 
 \end{equation*}
 Puisque $V^\ast\sim \dG+m^I$, un caract\`ere $\chi$ de $V_n^\ast\sim \dmu_n^I$, 
 \`a valeurs dans $E_\lambda^\times$, s'\'ecrit comme une famille 
@@ -1865,8 +1866,8 @@ $\sK_n((\chi_i)_{i\in I})\otimes \sF(\psi\tr_{k/\dF_q})$ v\'erifie
 \end{proposition_}
 
 On a $V^\ast\sim \dG_m^I$, 
-$\sK((\chi_i)) = \bigotimes_i \operatorname{pr}_i^\ast \chi_i(K_n(\dG_m))$ et 
-$\sF(\psi\circ \tr_{\dF_q/k})=T^\ast \sF(\psi) = \bigotimes_i \operatorname{pr}_i^\ast \sF(\psi)$. 
+$\sK((\chi_i)) = \bigotimes_i \pr_i^\ast \chi_i(K_n(\dG_m))$ et 
+$\sF(\psi\circ \tr_{\dF_q/k})=T^\ast \sF(\psi) = \bigotimes_i \pr_i^\ast \sF(\psi)$. 
 Ceci permet d'appliquer la formule de K\"unneth, et \ref{VI:4-11} r\'esulte de 
 \ref{VI:4-3}. 
 
@@ -1884,7 +1885,7 @@ de l'identit\'e de Hasse-Davenport.
 
 Si $\chi$ est un caract\`ere de $\dF_q^\times$, le fait que, sur $\dF$, $N$ 
 s'\'ecrit $(x_i)\mapsto \prod x_i$ fournit: 
-$\sF(\chi\circ N)=N^\ast\sF(\chi) = \bigotimes_i \operatorname{pr}_i^\ast\sF(\psi)$ 
+$\sF(\chi\circ N)=N^\ast\sF(\chi) = \bigotimes_i \pr_i^\ast\sF(\psi)$ 
 et la formule de K\"unneth fournit: 
 \[
   \h_c^\bullet(V^\ast,\sF(\chi^{-1}\circ N,\psi\circ \tr)) \sim \h_c^\bullet(\dG_m,\sF(\chi^{-1}\psi))^{\otimes I} \text{,} 
@@ -3087,7 +3088,327 @@ En $0$, \eqref{VI:eq:7-12-3} impose \`a la ramification -- mod\'er\'ee -- de
 $\eR^{n-1} \pi_! \sF(\psi\sigma)$ \^etre unipotente. D'apr\`es 
 \eqref{VI:eq:7-10-3} et \ref{VI:7-9}(ii), on a seul bloc de Jordan. Ceci 
 ach\`eve la preuve de \ref{VI:7-8}($n$). 
+
+
+
+
+
+\subsection{}\label{VI:7-13}
+
+Pour $n=1$, \ref{VI:7-4} est trivial. Pour achever la preuve de \ref{VI:7-4} et 
+\ref{VI:7-8}, il nous reste \`a prouver que \ref{VI:7-8}, pour une valeur 
+donn\'ee de $n$, implique \ref{VI:7-4}, pour $n+1$. Le cas $a=0$ ayant \'et\'e 
+trait\'e (\ref{VI:7-7}), on suppose que $a=0$. On \'ecrira $x_0,\dots,x_n$ pour 
+les coordonn\'ees de $\dA^{n+1}$. Soient $g=x_0:V_a\to \dG_m$, $\tau$ 
+l'involution $x\mapsto a x^{-1}$ de $\dG_m$, et soit comme plus haut $\pi$ le 
+produit des coordonn\'ees: $\dA^{n+1} \to \dA^1$, et $\sigma$ leur somme. On 
+notera $\sF(\psi\sigma)$ le faisceau $\sF(\psi(\sum x_i))$ tant sur $\dA^{n+1}$ 
+que sur $\dA^n$. 
+
+
+
+
+
+\subsection{}\label{VI:7-14}
+
+Ecrivons la suite spectrale de Leray de $g$. Le faisceau $\sF(\psi\sigma)$ sur 
+$\dA^{n+1}$ \'etant produit tensoriel externe des faisceaux $\sF(\psi)$ sur 
+$\dA^1$ et $\sF(\psi\sigma)$ sur $\dA^n$, on trouve (cf. \eqref{VI:eq:7-1-4}). 
+\begin{align*}
+  'E_2^{p q} &= \h_c^p(\dG_m,\sF(\psi)\otimes \tau^\ast \eR^q \pi_! \sF(\psi\sigma)) \Rightarrow \h_c^{p+q}(V_a,\sF(\psi\sigma)) \\
+  ''E_2^{p q} &= \h^p(\dG_m,\sF(\psi)\otimes \tau^\ast \eR^q \pi_\ast \sF(\psi\sigma)) \Rightarrow \h^{p+q}(V_a,\sF(\psi\sigma)) \text{.} 
+\end{align*}
+Par hypoth\`ese, 
+$\eR^q \pi_! \sF(\psi\sigma) \iso \eR^q \pi_\ast \sF(\psi\sigma)$, et ce 
+faisceau est nul pour $q\ne n-1$. Le faisceau $\sF(\psi)$ sur $\dG_m$ est 
+sauvagement ramifi\'e en $\infty$ et non ramifi\'e en $0$, tandis que 
+$\tau^\ast \eR^q \pi_! \sF(\psi\sigma)$ est sauvagement ramifi\'e en $0$ (sans 
+invariant sous l'inertie sauvage, de conducteur de Swan $1$) et mod\'er\'ement 
+ramifi\'e en $\infty$. Leur produit tensoriel est donc 
+\begin{enumerate}[\indent a)]
+  \item sauvagement ramifi\'e en $0$ et $\infty$, sans invariant sous l'inertie 
+    sauvage; 
+  \item de conducteur de Swan $1$ en $0$ et $n$ (le rang de 
+    $\eR^q \pi_! \sF(\psi))$ en $\infty$. 
+\end{enumerate}
+On a $'E_2^{p q} \iso ''E_2^{p q}$, et $'E_2^{p q}=0$ sauf pour $p=1$ et 
+$q=n-1$. La formule d'Euler-Poincar\'e donne enfin 
+\[
+  \dim{'E_2^{p q}} = 1+n \text{;} 
+\]
+ceci ach\`eve la d\'emonstration. 
 \end{proof}
+
+
+
+
+
+\subsection{Remarque}\label{VI:7-15}
+
+L'isomorphisme obtenu en \ref{VI:7-14} 
+\begin{equation*}\tag{7.15.1}\label{VI:eq:7-15-1}
+  \h_c^n(V_a^n,\sF(\psi\sigma)) = \h_c^1(\dG_m,\sF(\psi)\otimes \tau^\ast \eR^{n-1} \pi_! \sF(\psi\sigma)) 
+\end{equation*}
+permet, avec les notations de \ref{VI:7-5}, de calculer le produit $\det(F)$ 
+des valeurs propres $\alpha_i$ de Frobenius. Le formalisme de \cite{de73} 
+s'applique, puisque $\sF(\psi)$ et $\eR^{n-1} \pi_! \sF(\psi\sigma)$ 
+appartiennent \`a des syst\`emes compatibles infinis de repr\'esentations 
+$\ell$-adiques. Ceci nous ram\`ene \`a des probl\`emes locaux, qu'on peut 
+simplifier en notant que (cf. \cite[9.5]{de73}) 
+\begin{enumerate}[\indent a)]
+  \item les constantes globales pour 
+    $\sF(\psi)$ et $\tau^\ast \eR^{n-1} \pi_! \sF(\psi)$ sont ais\'ees \`a 
+    calculer, la cohomologie de ces faisceaux \'etant de nature triviale. 
+  \item en tout point, pour l'un ou l'autre de ces faisceaux, la 
+    repr\'esentation $\ell$-adique correspondante du groupe de d\'ecomposition 
+    a une semi-simplifi\'ee non ramifi\'ee. 
+\end{enumerate}
+
+La r\'esultat, pour la somme \`a $n$ variables, est que 
+\begin{equation*}\tag{7.15.2}\label{VI:eq:7-15-2}
+  \det\left(F,\h_c^{n-1}(V_a^{n-1},\sF(\psi))\right) = q^{\frac{n(n-1)}{2}} \text{.} 
+\end{equation*}
+
+
+
+
+
+\subsection{Remarque}\label{VI:7-16}
+
+Pour $p=2$, le faisceau $\sf(\psi)$ est orthogonal. Pour $a\ne 0$ et $n$ 
+impair, on en d\'eduit par \ref{VI:7-4}(ii) et dualit\'e de Poincar\'e une 
+forme bilin\'eaire sym\'etrique sur $\h_c^{n-1}(V_a^{n-1},\sF(\psi))$, \`a 
+valeurs dans $\bar\dQ_\ell(1-n)$. Relativement \`a cetta forme, $F$ est une 
+simlitude orthogonale de multiplicateur $q^{n-1}$, et $q^{\frac{1-n}{2}} F$ 
+appartient au groupe sp\'ecial orthogonal, d'apr\`es \eqref{VI:eq:7-15-2}. Une 
+des valeurs propres de $F$ est donc $q^{\frac{1-n}{2}}$, et les autres se 
+rangent par paires de racines $\alpha$, $\bar\alpha$ de produit $q^{n-1}$. 
+
+Pour $n=3$, L.\ Carlitz \cite{ca69-2} a obtenu un r\'esultat plus pr\'ecis, 
+\'equivalent \`a la proposition suivante. 
+
+
+
+
+
+\begin{proposition_}\label{VI:7-17}
+Pour $p=2$, et $\psi(x)=(-1)^{\tr_{\dF_q/\dF_q}(x)}$, on a un isomorphisme 
+\[
+  \h_c^2(V_a^2,\sF(\psi\sigma)) = \operatorname{Sym}^2 \h_c^1(V_a^1,\sF(\psi\sigma)) \text{.} 
+\]
+\end{proposition_}
+
+La puissance tensorielle seconde de $\h_c^1(V_a^1,\sF(\psi\sigma))$ est 
+$\h_c^1(V_a^1\times V_a^1,\sF(\psi\sigma)\boxtimes \sF(\psi\sigma))$ 
+(K\"unneth), la symm\'etre $x\otimes y\mapsto y\otimes x$ se repr\'esentant 
+g\'eom\'etriquement comme $-\tau^\ast$, o\`u $\tau$ est l'automorphisme 
+$(x,y)\mapsto (y,x)$ de $V_a\times V_a$. Si $X'$ est le quotient de 
+$V_a^1\times V_a^1$ par $\{\operatorname{id}{},\tau\}$ et $\pi$ est la 
+projection de $V_a^1\times V_a^1$ sur $X'$, le groupe 
+$\operatorname{Sym}^2 \h_c^1(V_a^1,\sF(\psi\sigma))$ s'identifie donc \`a la 
+cohomologie de $X'$ \`a coefficient dans la partie antiinvariante par $\tau$ de 
+$\pi_\ast(\sF(\psi\sigma)\boxtimes \sF(\psi\sigma))$. Notons $s$ la fonction 
+sur $X'$ telle que $s\pi =\sigma\pr_1+\sigma\pr_2$. On a 
+$\sF(\psi\sigma)\boxtimes \sF(\psi\sigma) = \sF(\psi(\sigma\pr_1+\sigma\pr_2)) = \sF(\psi s \pi) = \pi^\ast \sF(\psi s)$ 
+(isomorphisme compatible \`a $\tau$). Sur l'image $\pi(\Delta)$ de la 
+diagonale, le faisceau d'antiinvariants cherch\'es est donc nul, tandis que sur 
+le compl\'ement $X=X'\setminus \pi(\Delta)$, c'est le produit tensoriel de 
+$\sF(\psi s)$ par $\varepsilon(P)$, pour $\varepsilon$ l'unique caract\`ere 
+d'ordre $2$ de $\{1,\tau\}$, et $P$ le $\{1,\tau\}$-torseur sur $X$ qu'est le 
+rev\^etement double induit par $V_a^1\times V_a^1$. On a 
+\begin{equation*}\tag{7.17.1}\label{VI:eq:7-17-1}
+  \operatorname{Sym}^2 \h_c^1(V_a^1,\sF(\psi\sigma)) = \h_c^2(X,\sF(\psi\sigma)\otimes \varepsilon(P)) \text{.}
+\end{equation*}
+
+Calculons $X$, $s$ et $\varepsilon(P)$. Sur $V_a^1\times V_a^1$, posons 
+$x_1=x_1\circ\pr_1$, $x_2=x_2\circ\pr_2$, $x_1'=x_1\circ \pr_2$, 
+$x_2'=x_2\circ \pr_2$. On a $x_1 x_2=x_1'x_2'=a$. Identifions fonctions sur 
+$X'$ et fonctions sur $X$ invariante par $\tau$. Soient $s_1=x_1+x_1'$, 
+$s_2=x_2+x_2'$, $p_1=x_1 x_1'$, $p_2=x_2 x_2'$. On a $s_1 p_2 = a s_2$, 
+$s_2 p_1 = a s_1$ et $X$ est d\'efini dans $X'$ par $s_1\ne 0$, $s_2\ne 0$. Sur 
+$X$, on a donc $p_1 = a s_1 s_2^{-1}$, et $(s_1,s_2)$ identifie $x$ \`a 
+$\dG_m\times \dG_m$. Sur $X$, le rev\^etement $P$ admet pour \'equation 
+$T^2-s_1 T+a s_1 s_2^{-1}$ (prendre pour $T$ la coordonn\'ee $x_1$). Si 
+$T=s_1 t$, cela se r\'ecrit $t^2-t+a s_1^{-1} s_2^{-1}$. On a donc 
+$\varepsilon(P) = \sF(\psi(a s_1^{-1} s_2^{-1}))$. Puisque $s=s_1+s-2$, on a 
+$\sF(\psi s)\otimes \varepsilon(P) = \sF(\psi(s_1+s_2+ a s_1^{-1} s_2^{-1}))$ 
+et le second membre de \eqref{VI:eq:7-17-1} s'identifie au premier membre de 
+\ref{VI:7-17}. 
+
+
+\paragraph{Remarque}
+
+$\h_c^1(V_a^1,\sF(\psi\sigma))$ est aussi le premier groupe de cohomologie de 
+la courbe elliptique compl\'et\'ee de la courbe affine d'\'equation 
+\begin{align*}
+  y^2-y &= x_1+x_2 \\
+  x_1 x_2 &= a \text{;} 
+\end{align*}
+son invariant modulaire est $j=a^{-2}$. 
+
+
+
+
+
+\subsection{Remarque}\label{VI:7-18}
+
+Pour $\chi$ un caract\`ere multiplicatif de $\dF_q^\times$, et $a\ne 0$, la 
+m\'ethode de \ref{VI:7-14} s'applique \`a l'\'etude de la somme 
+\[
+  s = \sum_{x_0\dotsm x_n = a} \chi(x_0) \psi(x_0+\cdots + x_n) 
+\]
+(remplacer le faisceau $\sF(\psi)$ sur $\dG_m$ par $\sF(\chi\cdot \psi)$). On 
+trouve encore une cohomologie de dimension $n+1$, et 
+$|S|\leqslant (n+1)q^{n/2}$. De telles sommes ont \'et\'e consid\'er\'ees par 
+Salie et Mordell \cite{mo73}.
+
+On peut esp\'erer que nos m\'ethodes permettent d'\'etudier les sommes 
+\[
+  S_{k,\chi,a} = \sum_{N(x)=a} \chi(x) \psi \tr(x) 
+\]
+($k$ alg\`ebre \'etale sur $\dF_q$, $a\in \dF_q^\times$, $\chi$ caract\`ere de 
+$k^\times$). L'analogue de \ref{VI:7-4} (pour $a\ne 0$) devrait \^etre vrai. 
+
+
+
+
+
+\subsection{}\label{VI:7-19}
+
+Le groupe sym\'etrique $S_n$ agit sur $\dA^n$ en respectant $V_a$ et 
+l'application $\sigma$, donc aussi le faisceau $\sf(\psi\sigma)$, image 
+r\'eciproque par $\sigma$ du faisceau $\sf(\psi)$ sur $\dG_a$. Il s'agit donc 
+sur $\h_c^{n-1}(V_a,\sF(\psi\sigma))$. La formule \eqref{VI:eq:7-2-5} admet 
+l'interpr\'etation cohomologique suivante
+
+
+
+
+
+\begin{proposition_}\label{VI:7-20}
+L'action de $S_n$ sur $\h_c^{n-1}(V_a,\sF(\psi\sigma))$ est la multiplication 
+par le caract\`ere signe. 
+\end{proposition_}
+
+Ceci revient \`a montrer qu'une transposition $\tau$ agit par multiplication 
+par $-1$. Puisque $\tau^2=1$, $\tau$ ne peut avoir pour valeur propres que 
+$\pm 1$. Soit $V_a/\tau$ le quotient de $V_a$ pour 
+$\{\operatorname{id},\tau\}$. L'application $\sigma$, donc le faisceau 
+$\sf(\psi\sigma)$, passent au quotient, et le sous-espace de 
+$\h_c^{n-1}(V_a,\sF(\psi))$ fixe par 
+$\tau$ est $\h_c^{n-1}(V_a/\tau,\sF(\psi\sigma))$. Il nous faut prouver que 
+cette cohomologie est nulle. 
+
+Supposons que $a\ne 0$. Pour $\tau=(1,2)$ le quotient $V_a/\tau$ s'identifie 
+\`a $\dG_a\times \dG_m^{n-2}$, avec pour application de passage au quotient 
+$(x_1,x_2,x_3,\dots,x_n)\mapsto (x_1+x_2,x_3,\dots,x_n)$. En effet, $x_1$ et 
+$x_2$ sont d\'etermin\'es \`a l'ordre pr\`es par $x_1+x_2$ et 
+$x_1x_2 = a/x_3\dotsm x_n$. En ces coordonn\'ees $(t,x_3,\dots,x_n)$, le 
+faisceau s'\'ecrit 
+$\sF(\psi(t+x_3+\cdots + x_n)) = \sF(\psi(t))\otimes \sF(\psi(x_3+\cdots + x_n))$. 
+La formule de K\"unneth, et $\h_0^\bullet(\dG_a,\sF(\psi)) = 0$, fournissent 
+donc la nullit\'e demand\'ee. 
+
+Pour $a=0$, on peut d\'eduire \ref{VI:7-20} de calcul \ref{VI:7-7}. 
+
+
+
+
+
+\subsection{}\label{VI:7-21}
+
+Les sommes $\kloos_{n,a}$ de ce paragraphe ont \'et\'e \'etudi\'ees par 
+S.\ Sperber, dans sa th\`ese, et dans \cite{sp77} par des m\'ethodes 
+$p$-adiques inspir\'ees de Dwork et de l'article de Bombieri \cite{bo66}. 
+Pour $p\ne 2$, ces m\'ethodes lui donnent la d\'ependance en $q$ \ref{VI:7-5}, 
+l'\'equation fonctionnelle $\alpha_i = q^{n-1} \beta_i^{-1}$ entre les 
+valeurs propres de Frobenius pour les sommes $\kloos_{n,a}$ et 
+$\kloos_{n,b}$ si $b=(-1)^n a$ (cf. \ref{VI:7-6}), et la valeur \ref{VI:7-15} 
+du produit des racines. Pour $p\geqslant n+3$, il d\'etermine de plus les 
+valuations $p$-adiques des racines. Le r\'esultat est tr\`es beau: si on range 
+les racines $\alpha_i$ dans un ordre convenable, avec 
+$0\leqslant i\leqslant n$, les $\alpha_i q^{-i}$ sont des unit\'es. Les 
+restrictions sur $p$ ne sont sans doute pas essentielles. 
+
+
+
+
+
+
+
+
+
+
+\section{Autres applications}\label{VI:8}
+
+
+
+
+
+\subsection{}\label{VI:8-1}
+
+L'identit\'e \ref{VI:1-9-4} peut parfois \^etre utilis\'ee pour calculer 
+le nombre de points rationnels d'une vari\'et\'e alg\'ebrique sur $\dF_q$. Dans 
+la plupart des cas o\`u un r\'esultat exact a \'et\'e obtenu, la cohomologie 
+s'exprime en terme de cycles alg\'ebriques; tel est le cas pour les surfaces 
+rationnelles, les quadriques, les intersections lisses de deux quadriques de 
+dimension impaire, les vari\'et\'es de drapeaux\ldots. Ce n'est toutefois par 
+toujours le cas; dans le tr\`es bel article de Lusztig: \cite{lu76}, les cycles 
+alg\'ebriques n'apparaissent pas. 
+
+
+
+
+
+\subsection{}\label{VI:8-2}
+
+Pour les groupes r\'eductifs, la cohomologie peut se calculer en se relevant en 
+caract\'eristique $0$: si $B$ est un sous-groupe de Borel de $G$, $G$ est un 
+$B$-torseur sur $G/B$; la cohomologie de la vari\'et\'e projective et lisse 
+$G/B$ est invariant pour sp\'ecialisation, et on utilise la suite spectrale de 
+leray de $G\to G/B$ pour prouver le m\^eme r\'esultat pour $G$. Elle s'exprime 
+commod\'ement en terme \emph{du} tore maximal $T$ de $G$ et de l'action 
+\emph{du} groupe de Weil $W$ sur $T$ (pour la d\'efinition \emph{du} tore 
+maximal, cf. \cite[VIII \S 2 Rem.2]{bo05} ou \cite[p.105]{dl76}). C'est 
+l'alg\`ebre ext\'erieure de sa partie primitive, qui coïncide \`a un d\'ecalage 
+pr\`es avec le quotient $I(\h^\bullet(B G,\dQ_\ell))$ de la cohomologie de 
+$B G$ form\'e des ``\'el\'ements ind\'ecomposables,'' et 
+$\h^\bullet(B G,\dQ_\ell)=\h^\bullet(B T,\dQ_\ell)^W$. Si $X$ est le groupe des 
+caract\`eres de $T$, on a au total 
+\[
+  \h^\bullet(G,\dQ_\ell) = \bigwedge \left(I\left(\operatorname{Sym}^\bullet(X\otimes \dQ_\ell(-1))^W\right)[-1]\right) \text{.}
+\]
+Si $G$ est d\'efini sur un corps fini $\dF_q$, $\gal(\dF/\dF_q)$ agit sur $X$ 
+et cet isomorphisme est compatible \`a Galois. Passant de l\`a \`a la 
+cohomologie \`a supports propres, on trouve les formules classiques pour la 
+nombre de points rationnels de $G$. Si $F^\ast:X\to X$ est d\'efini par le 
+morphisme de Frobenius $F:T\to T$, et que $\deg_G(F)$ est le degr\'e 
+$q^{\dim G}$ de $F:G\to G$, on a 
+\begin{equation*}\tag{8.2.1}\label{VI:eq:8-2-1}
+  \left|G_0(\dF_q)\right| = \deg_G(F) \cdot \det\left(1-{F^\ast}^{-1},I(\operatorname{Sym}^\bullet(X\otimes \dQ)^W)\right) \text{.}
+\end{equation*}
+
+La m\^eme formule vaut pour les groupes de Ree et de Suzuki; ces groupes sont 
+de la forme $G^F$ ($G$ r\'eductif, $F^2$ un Frobenius), et il suffit de 
+v\'erifier que la formule des traces de Lefschetz est vraie pour $F$ agissant 
+sur $G$. Si $B$ est un sous-groupe de Borel stable par $F$, on le v\'erifie 
+directement pour $F$ agissant sur $B$, et pour l'action sur $G/B$, propre et 
+lisse, on peut invoquer les th\'eor\`emes g\'en\'eraux. 
+
+
+
+
+
+\subsection{}\label{VI:8-3}
+
+La formule des traces a \'et\'e utilis\'ee par Deligne-Lusztig \cite{dl76}, 
+Kazhdan \cite{ka77} et Springer \cite{sp76} dans l'\'etude des 
+repr\'esentations complexes des groupes finis $G_0(\dF_q)$, pour $G_0$ 
+r\'eductif sur $\dF_q$. Les travaux de Kazhdan et Springer contiennent dex 
+exemples admirables de comment la formule des traces permet le ``prolongement 
+analytique'' d'une situation d\'eploy\'ee \`a une situation non d\'eploy\'ee 
+(cf. \ref{VI:1-13}). 
+
 
 
 
