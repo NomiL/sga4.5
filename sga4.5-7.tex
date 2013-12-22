@@ -335,3 +335,402 @@ $S$, $\sF$ est localement constant et $Y=S$.
 
 
 
+
+\subsection{}\label{VII:2-3}
+
+Prouvons par r\'ecurrence sur $n$ que 
+\begin{equation*}\tag{$\ast_n$}\label{VII:eq:2-3-1}
+  \begin{array}{c}
+    \text{Les conclusions de \ref{VII:1-9} sont vraies lorsque $\dim{X_\eta}\leqslant n$} \\
+    \text{et que $f$ est un plongement ouvert d'image dense.}
+  \end{array}
+\end{equation*}
+
+Pour $n=0$, quitte \`a r\'etr\'ecir $S$, on a $X=Y$: $(\ast_0)$ est \'evident. 
+Supposons ($\ast_{n-1})$, et prouvons \eqref{VII:eq:2-3-1}. Dans 
+($\ast_{n-1}$), on peut remplacer ``plongement ouvert'' par ``plongement'' 
+comme on le voit en factorisant en plongement ouvert et plongement ferm\'e. 
+
+
+
+
+
+\begin{lemma_}\label{VII:2-4}
+Quitte \`a r\'etr\'ecir $S$, les conclusions de \ref{VII:1-9} valent au-
+dessus de $Y'\subset Y$, le compl\'ement $Y_1$ de $Y'$ \'etant fini sur $S$. 
+\end{lemma_}
+
+L'assertion est locale sur $Y$, qu'on peut supposer affine: $Y\subset \dA_S^n$. 
+L'hypoth\`ese de r\'ecurrence ($\ast_{n-1}$) s'applique \`a 
+\[\xymatrix{
+  X \ar[r]^-f \ar[dr] 
+    & Y \ar[d]^-{\pr_i} \\
+  & \dA_S^1 
+}\]
+Il existe donc pour chaque $i$ ouvert dense $U_i$ de $\dA_S^1$ tel que les 
+conclusions de \ref{VII:1-9} valent au-dessus de $\pr_i^{-1}(U_i)$; elle valent 
+au-dessus de la r\'eunion des $\pr_i^{-1}(U_i)$, et \ref{VII:2-4} en r\'esulte. 
+
+
+
+
+
+\addtocounter{subsection}{1} % a section is skipped in the original
+\subsection{}\label{VII:2-6}
+
+Prouvons \eqref{VII:eq:2-3-1} pour $X$ lisse sur $S$ et $\sF$ localement 
+constant sur $X$. Le probl\`eme \'etant local sur $Y$, on peut supposer $Y$ 
+affine, puis projectif (remplacer $Y$ par son adh\'erence dans un espace 
+projectif). Soient $i:Y_1\hookrightarrow Y$ et $j:Y' \to Y$ garantis par 
+\ref{VII:2-4}. 
+\[\xymatrix{
+  X \ar@{^{(}->}[r] \ar[dr]_-a 
+    & Y \ar[d]^-b 
+    & \ar[l]_-i \ar[dl]^-{b_1} Y_1 \\
+  & S 
+}\] 
+quitte \`a r\'etr\'ecir $S$, on sait que $j^\ast \eR f_\ast \sF$ est 
+constructible, de formation compatible \`a tout changement de base en $S$; on 
+sait aussi que $\eR a_\ast \sF = \eR b_\ast \eR f_\ast \sF$ est constructible, 
+de formation compatible \`a tout changement de base. 
+
+Appliquons $\eR b_\ast$ au triangle d\'efini par la suite exacate 
+\begin{equation*}\tag{1}\label{VII:eq:2-6-1}
+\xymatrix{
+  0 \ar[r] 
+    & j_! j^\ast \eR f_\ast \sF \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & i_! i^\ast \eR f_\ast \sF \ar[r] 
+    & 0 \text{:} 
+}
+\end{equation*}
+on obtient un triangle 
+\begin{equation*}\tag{2}\label{VII:eq:2-6-2}
+\xymatrix{
+  \ar[r] 
+    & \eR b_\ast j_! j^\ast \eR f_\ast \sF \ar[r] 
+    & \eR a_\ast \sF \ar[r] 
+    & {b_1}_\ast i^\ast \eR f_\ast \sF \ar[r] 
+    & 
+}
+\end{equation*}
+dans lequel les deux premiers termes sont constructibles, de formation 
+compatible \`a tout changement de base en $S$ (pour le ler, d'apr\`es le 
+th\'eor\`eme de finitude pour le morphisme propre $b$). Il en va donc de 
+m\^eme pour le troisi\`eme. Puisque $b_1$ est fini, on en d\'eduit que 
+$i^\ast \eR f_\ast \sF$ est constructible de formation compatible \`a tout 
+changement de base en $S$, et de m\^eme pour $\eR f_\ast \sF$ par 
+\eqref{VII:eq:2-6-1}. 
+
+
+
+
+
+\subsection{}\label{VII:2-7}
+
+Prouvons \eqref{VII:eq:2-3-1} en g\'en\'eral. On commence par se ramener au cas 
+o\`u dans $X$ existe un ouvert dense $V$ lisse sur $S$. Pour $S$ spectre d'un 
+corps parfait, il suffit de remplacer $X$ par $X_\text{red}$ (et $Y$ par 
+$Y_\text{red}$). En g\'en\'eral, il faut rapetisser $S$, faire un changement de 
+base fini radicel et surjectif $S' \to S$, et remplacer $X$ et $Y$ par 
+$X_\text{red}$ et $Y_\text{red}$. La topologie \'etale \'etant insensible aux 
+morphismes finis radiciels et surjectifs, ceci est innocent. Quitte \`a 
+r\'etr\'ecir $V$, on peut supposer $\sF$ localement constant sur $V$ 
+\[\xymatrix{
+  V \ar@{^{(}->}[r]^i 
+    & X \ar@{^{(}->}[r]^-f 
+    & Y \text{.} 
+}\]
+D\'efinissons $\Delta$ par le triangle 
+\begin{equation*}\tag{1}\label{VII:eq:2-7-1}
+\xymatrix{
+  \ar[r] 
+    & \sF \ar[r] 
+    & \eR j_\ast j^\ast \sF \ar[r] 
+    & \Delta \ar[r] 
+    & \text{.} 
+}
+\end{equation*}
+Les faisceaux de cohomologie e $\Delta$ sont \`a support dans $X\setminus V$, 
+et $\dim(X\setminus V)_\eta < n$. L'hypoth\`ese de r\'ecrrence permet donc de 
+supposer que $\eR f_\ast \Delta$ est constructible. Appliquons $\eR f_\ast$ au 
+triangle \eqref{VII:eq:2-7-1}; on trouve un triangle 
+\[\xymatrix{
+  \ar[r] 
+    & \eR f_\ast \sF \ar[r] 
+    & \eR(f j)_\ast j^\ast \sF \ar[r] 
+    & \eR f_\ast \Delta \ar[r] 
+    & 
+}\]
+dans lequel deux des sommets sont constructibles de formation compatible \`a 
+tout changement de base en $S$. Le troisi\`eme l'est donc \'egalement. 
+
+
+
+
+
+\subsection{}\label{VII:2-8}
+
+Prouvons \ref{VII:1-9}. Le probl\`eme est local sur $Y$, qu'on peut supposer 
+affine. Prenant un recouvrement affine de $X$ et invoquant la suite spectrale 
+de Leray, on se ram\`ene \`a avoir $X$ \'egalement affine. Tout ceci pour 
+assurer qu'on puisse factoriser $f$ en un plongement ouvert suivi d'un 
+morphisme propre: $f=g j$, d'o\`u $\eR f_\ast = \eR g_\ast \eR j_\ast$. Le 
+plongement ouvert est justiciable d'un \eqref{VII:eq:2-3-1}, le morphisme 
+propre du th\'eor\`eme de finitude. 
+
+Les corollaires suivants se prouvent comme au paragraphe 1. 
+
+
+
+
+
+\begin{corollary_}\label{VII:2-9}
+Sous les hypoth\`eses du th\'eor\`eme, pour $K$ dans $\eD_c^b(X,A)$ ou 
+$\eD_c^b(Y,A)$ respectivement, il existe un ouvert non vide $U$ de $S$ 
+au-dessus duquel $\eR f_\ast K$, $\eR f_! K$, $f^\ast K$, $\eR f^! K$ soient 
+dans $\eD_c^b(Y,A)$ ou $\eD_c^b(X,A)$, et de formation compatible \`a tout 
+changement de base $S' \to U\subset S$. 
+\end{corollary_}
+
+
+
+
+
+\begin{corollary_}\label{VII:2-10}
+Soit $X$ comme dans le th\'eor\`eme, et supposons $A$ commutatif. Alors, si 
+$\sF$ et $\sG$ sont des faisceaux constructibles de $A$-modules sur $X$, 
+au-dessus d'un ouvert dense $U$ de $S$, les $\Ext_A^i(\sF,\sG)$ sont encore 
+constructibles, de formation compatible \`a tout changement de base 
+$S' \to U\subset S$. 
+\end{corollary_}
+
+
+
+
+
+\subsection{}\label{VII:2-11}
+
+Si $x$ est un point g\'eo\'emetrique d'un sch\'ema $X$, nous noterons $X_x$ 
+l'henselis\'e strict de $X$ en $x$. Pour $f:X\to S$ et $t$ un point 
+g\'eom\'etrique de $S$, nous noterons $X_t$ la fibre g\'eom\'etrique de $X$ en 
+$t$. Enfin, pour $x$ un point g\'eom\'etrique de $X$, et $t$ un point 
+g\'eom\'etrique de $S_{f(x)}$, $(X_x)_t$ est la fibre en $t$ de 
+$X_x \to S_{f(x)}$. 
+
+
+
+
+
+\begin{definition_}\label{VII:2-12}
+Soient $f:X\to S$ et $K\in \ob\eD^+(X,A)$. On dit que $f$ est \emph{localement 
+acyclique en $x$, res. $K$}, si pour tout point g\'eom\'etrique $t$ de 
+$S_{f(x)}$ on a $K_x=\eR\Gamma(X_x,K)\iso \eR\Gamma(X_{x,t},K)$. On dit que $f$ 
+est \emph{localement acyclique, rel. $K$}, si c'est vrai pour tout $x$, et 
+\emph{universellement localement acyclique, rel. $K$}, si cela reste vraie 
+apr\`es tout changement de base $S' \to S$.
+\end{definition_}
+
+
+
+
+
+\begin{theorem_}\label{VII:2-13}
+Soit $f:X\to S$ un morphisme de type fini et $\sF$ constructible sur $X$. Il 
+existe un ouvert dense $U$ de $S$ au-dessus duquel $f$ est universellement 
+localement acyclique, rel. $\sF$. 
+\end{theorem_}
+
+Nous admettrons le r\'esultat suivant, prouv\'e dans l'appendice. 
+
+
+
+
+
+\begin{lemma_}\label{VII:2-14}
+Soit $X\xrightarrow f S_1 \xrightarrow g S_2$. Si $g$ est lisse, et $f$ 
+universellement localement acyclique rel. $K$, alors $g f$ l'est aussi. 
+\end{lemma_}
+
+On se ram\`ene \`a supposer $S$ int\`egre, de point g\'en\'erique $\eta$, et 
+on proc\`ede par r\'ecurrence sur $\dim{X_\eta}$. On commence par d\'eduire de 
+hypoth\`ese de r\'ecurrence que 
+\begin{equation*}\tag{A}\label{VII:eq:2-14-1}
+  \begin{array}{c}
+    \text{Quitte \`a r\'etr\'ecir $S$, il existe $T\subset X$, fini sur $S$, tel que $f$} \\
+    \text{soit universellement localement acyclique en dehors de $T$.} 
+  \end{array}
+\end{equation*}
+
+Cette question \'etant locale, on se localise sur $X$ et on factorise $f$ en 
+$X\xrightarrow u \dA_S^1 \xrightarrow S$. L'hypoth\`ese de r\'ecurrence 
+s'applique \`a $u$ et on conclut par \ref{VII:2-14} et les arguments habituels. 
+
+Pour prouver le th\'eor\`eme, on peut supposer $X$ propre, puisque le 
+probl\`eme est local. On r\'etr\'ecit $S$ pour que les $\eR^i f_\ast \sF$ 
+soient localement constants et que \eqref{VII:eq:2-14-1} soit applicable, et on 
+utilise le lemme suivant. 
+
+
+
+
+
+\begin{lemma_}\label{VII:2-15}
+Soient $f:X\to S$, propre, et $\sF$ constructible. On suppose que les 
+$\eR^i f_\ast \sF$ sont localement constants et que, en dehors de $T\subset X$ 
+fini sur $S$, $f$ localement acyclique rel. \`a $\sF$. Alors, $f$ est 
+localement acyclique rel. \`a $\sF$. 
+\end{lemma_}
+
+Soient $s$ un point g\'eom\'etrique de $S$, $S_s$ le localis\'e strict de $S$ 
+en $s$ et $t$ un point g\'eom\'etrique de $S_s$. Soient $X_{(s)}$ l'image 
+r\'eciproque de $X$ sur $S_s$, $\bar j:X_t \to X_{(s)}$ et 
+$i:X_s \hookrightarrow X_{(s)}$. Notant encore $\sF$ l'image r\'eciproque de 
+$\sF$ sur $X_{(s)}$ ou $X_t$, il faut prouver que 
+$i^\ast \sF \iso i^\ast \eR \bar j_\ast \sF$. Soit $\Delta$ le mapping cylinder 
+de cette application. Ses faisceaux de cohomologie sont \`a support dans $T_s$. 
+Pour prouver que $\Delta=0$, il suffit donc de prouver que 
+$\eR\Gamma(X_s,\Delta)=0$. C'est l\`a le mapping cylinder de 
+$(\eR f_\ast \sF)_s = \eR\Gamma(X_s,\sF) \to \eR\Gamma(X_s,i^\ast \eR\bar j_\ast \sF) = \eR\Gamma(X_{(s)},\eR\bar j_\ast \sF) = \eR\Gamma(X_t,\sF) = (\eR f_\ast \sF)_t$. 
+Ce morphisme de sp\'ecialisation est par hypoth\`ese un isomorphisme, et 
+$\Delta=0$. 
+
+
+
+
+
+\begin{corollary_}\label{VII:2-16}
+Pour $S$ le spectre d'un corps, tout $S$-sch\'ema $X$ est universellement 
+localement acyclique, rel. $K$, quel que soit $K\in\ob\eD^+(X,A)$. 
+\end{corollary_}
+
+Se d\'eduit de \ref{VII:2-13} par passage \`a la limite (possible, car $U$ de 
+\ref{VII:2-13} est toujours \'egal \`a $S$. 
+
+
+
+
+
+
+
+
+
+
+\section{Preuve de \texorpdfstring{\ref{VII:1-1}}{1.1} et constructibilit\'e des faisceaux de cycles \'evanescents}\label{VII:3}
+
+
+
+
+
+\subsection{}\label{VII:3-1}
+
+Soit $S$ un trait strictement local (le spectre d'un anneau de valuation 
+discr\`ete henselien \`a corps r\'esiduel s\'eparablement clos). On note $s$ et 
+$\eta$ ses points ferm\'e et g\'en\'erique, et $\bar\eta$ un point 
+g\'eom\'etrique localis\'e et $\eta$ (une cl\^oture s\'eparable de $k(\eta)$). 
+Soient $X$ sur $S$ et $\sF$ un faisceau sur $X_\eta$. Rappelons la 
+d\'efinition des faisceaux de cycles \'evanescents $\eR^i \Psi_\eta(\sF)$ (des 
+faisceaux sur $X_s$, muni d'une action de $\gal(\bar\eta/\eta)$). Soient 
+$i:X_s\hookrightarrow X$, $j:X_\eta \hookrightarrow X$, et $\bar j$ le 
+compos\'e $X_{\bar\eta}\to X_\eta \hookrightarrow X$; on a 
+\[
+  \eR^i \Psi_\eta(\sF) = i^\ast \eR^i \bar j_\ast (\bar j^\ast \sF) \text{.} 
+\]
+
+Voici le th\'eor\`eme principal de ce num\'ero. Il am\'eliore 
+\cite[XIII 2.3.1, 2.4.2]{sga7}. 
+
+
+
+
+
+\begin{theorem_}\label{VII:3-2}
+On suppose que $X$ de type fini sur $S$ et $\sF$ constructible. Alors, les 
+faisceaux de cycles \'evanescents $\eR^i \Psi_\eta(\sF)$ sont constructibles. 
+\end{theorem_}
+
+On proc\`ede par r\'ecurrence sur la dimension $n$ de $X_\eta$. On peut par 
+ailleurs supposer -- et on suppose -- $X_\eta$ dense dans $X$ (remplacer $X$ 
+par $\bar X_\eta$ ne change pas les $\eR^i \Psi$, qui sont \`a support dans 
+$\bar X_\eta$). 
+
+
+
+
+
+\begin{lemma_}\label{VII:3-3}
+Si \ref{VII:3-2} est vrai en dimension de $X_\eta<n$, et que $\dim X_\eta=n$, 
+il existe des sous-faisceaux constructibles $\sG_i$ des $\eR^i \Psi_\eta(\sF)$ 
+tels que les supports des sections locales de $\eR^i\Psi_\eta(\sF)/\sG$ soient 
+finis. 
+\end{lemma_}
+
+Soit $s'$ un point g\'en\'erique g\'eom\'etrique de la droite affine sur $s$, 
+et soit $S'$ le localis\'e strict en $s'$ de la droite affine $\dA_S^1$ sur 
+$S$. C'est encore un trait strictement local, et les uniformisants pour $S$ 
+sont des uniformisantes sur $S'$. 
+\[\xymatrix{
+  & \spec(k') \ar[rr] \ar[dd] \ar[dr] 
+    & & (S',\eta',s') \ar[dr] \ar[dd] \\
+  \bar\eta' \ar[ur] \ar[dr] 
+    & & \dA_{\bar S}^1 \ar[d]  
+    & & \dA_S^1 \ar[dl] \\
+  & \bar\eta\ar@{^{(}->}[r] 
+    & \bar S \ar[r] 
+    & (S,\eta,s) 
+}\]
+Soit $k'=k(\bar\eta)\otimes_{k(\eta)}k(\eta')$. Si $\bar S$ est le normalis\'e 
+de $S$ dans $\bar\eta$, $k'$ est le corps des fractions du localis\'e strict 
+de $\dA_{\bar S}^1$ en $s'$; c'est donc un corps, et 
+$\gal(\bar\eta/\eta)=\gal(k'/\eta')$. Soit $\bar\eta'$ le spectre d'une 
+cl\^oture alg\'ebrique de $k'$. Le groupe de Galois $P=\gal(\bar\eta'/k')$ est 
+un pro-$p$-groupe, pour $p$ l'exposant caract\'eristique de $k(s)$. 
+
+
+
+
+
+\begin{lemma_}\label{VII:3-4}
+Pour tout sch\'ema $X'$ sur $S'$, et tout faisceau $\sF$ sur 
+$X_\eta'=X_{\eta'}'$, on a entre les faisceaux de cycles \'evanescents pour 
+$X'/S'$ et pour $X'/S$ la relation 
+$\eR^i \Psi_\eta(\sF) =\eR^i\Psi_{\eta'}(\sF)^P$. 
+\end{lemma_}
+
+Le diagramme suivant compare les morphismes utilis\'es dans la d\'efinition de 
+$\eR\Psi$ pour $X'/S'$ et $X'/S$: 
+\[\xymatrix{
+  X_{\bar\eta'} \ar[rr] \ar[d] 
+    & & X_{\eta'}' \ar@{=}[dd] \ar@{^{(}->}[dr] 
+    & & S' \\ 
+  X_{\eta'}\times_{\eta'}\spec(k') \ar@{=}[d] \ar[urr] 
+    & & & X \ar[ur] \ar[dr] \\
+  X_\eta' \ar[rr] 
+    & & X_\eta' \ar@{^{(}->}[ur] 
+    & & S
+}\]
+et le lemme r\'esulte de la suite spectrale de Hochschild-Serre, compte tenu de 
+ce que $P$ est un pro-$p$-groupe, avec $p$ inversible dans $A$. 
+
+Prouvons \ref{VII:3-3}. La question est locale; ceci permet de supposer $X$ 
+affine, $X\subset \dA_S^n$. Soient $f$ l'une des projection 
+$X\subset \dA_S^n\to \dA_S^1$. $X'$ le ``localis\'e'' $X_{\dA_S^1} S'$ de $x$, 
+et $\sF'$ l'image inverse de $\sF$ sur $x'$ 
+\[\xymatrix{
+  \sF'\text{ sur }X' \ar[r] \ar[d]^-\lambda 
+    & S' \ar[d]^-\lambda \\
+  \sF \text{ sur }X \ar[r]^-f 
+    & \dA_S^1 \ar[r] 
+    & S \text{.} 
+}\]
+On a, sur $X_s'=X_{s'}'$, 
+\[
+  \lambda^\ast \eR^i\Psi_\eta(\sF) = \eR^i \Psi_\eta(\sF') = \eR^i\Psi_{\eta'}(\sF')^P \text{:} 
+\]
+ce faisceau est constructible, car l'hypoth\`ese de r\'ecurrence s'applique \`a 
+$X'/S'$, et on utilise le lemme suivant appliqu\'e \`a $X_s\subset \dA_S^n$ et 
+aux faisceaux de cycles \'evanescents. 
+
+
+
+
