@@ -1066,3 +1066,467 @@ n\'ecessairement commutatif ni noeth\'erien). Si $X$ est un $S$-sch\'ema, on
 
 
 
+
+
+\subsection{Propret\'e cohomologique}\label{VII:5-1}
+
+
+
+
+
+\begin{proposition}\label{VII:5-1-1}
+Soient $f:X\to Y$ un $S$-morphisme et $E\in\ob \eD^+(X)$. Les conditions 
+suivantes sont \'equivalentes: 
+\begin{enumerate}[\indent (i)]
+  \item La formation de $\eR f_\ast E$ commute \`a tout changement de base 
+    fini $S'\to S$.
+  \item La formation de $\eR f_\ast E$ commute \`a tout changement de base 
+    quasi-fini (ou limite projective de morphismes quasi-finis) $S'\to S$. 
+  \item Pour tout fl\`eche de sp\'ecialisation $i:t\to S(s)$ 
+    (\hyperlink{I}{Cohomologie \'etale}, \ref{I:5-1-2}), si l'on d\'esigne par 
+    $\widetilde S$ le normalis\'e dans $k(\bar t)$ du sch\'ema int\`egre 
+    adh\'erence de $i(t)$ dans $S(s)$ (d'apr\`es 
+    \cite[IV, 6.15.5, 18.6.11, 18.8.16]{ega}) $\bar S$ est donc local 
+    int\`egre, de point ferm\'e radiciel sur $s$), $\bar f:\bar X\to \bar Y$ 
+    le morphisme d\'eduit de $f$ par le changement de base $\bar S\to S$, 
+    $f_s:X_s\to Y_s$ la fibre de $f$ en $s$, alors la fl\`eche de changement 
+    de base 
+    \[
+      (\eR \bar f_\ast (E|\bar X))|Y_s \to \eR {f_s}_\ast(E|X_s) 
+    \]
+    est un isomorphisme. 
+\end{enumerate}
+\end{proposition}
+
+L'\'equivalence de (i) et (ii) r\'esulte du th\'eor\`eme principal de Zariski, 
+et il est clair que (ii) implique (iii). Prouvons que (iii) implique (ii). Pour 
+tout $S'\to S$, limite projective de morphismes quasi-finis, et tout point 
+g\'eom\'etrique $s$ de $S'$, notons $C(S',s)$ le c\^one de la fl\`eche de 
+changement de base 
+\[
+  (\eR f_\ast'(E|X'))|Y_s \to \eR{f_s}_\ast (E|X_s) \text{,} 
+\]
+o\`u $f':X'\to Y'$ est le morphisme d\'eduit de $f$ par le changement de base 
+$S'\to S$ et $f_s:X_s\to Y_s$ la fibre de $f$ en $s$. Il s'agit de prouver que, 
+pour tout $(S',s)$ comme ci-dessus, $C(S',s)$ est acyclique. On va montrer, par 
+r\'ecurrence sur $N$, que $\h^i C(S',s) = 0$ pour $i\leqslant N$. Par le Main 
+Theorem, passage \`a la limite, et nettoyage de morphismes radiciels, on peut 
+supposer que $S$ et $S'$ sont strictement locaux, $S'$ int\`egre, de point 
+ferm\'e $s$, $S'\to S$ fini. Soient $t$ un point g\'eom\'etrique g\'en\'erique 
+de $S'$, et $\bar S$ le normalis\'e de $S'$ dans $k(t)$. Soit $\bar S_\bullet$ 
+le sch\'ema simplicial cosquelette de $S'\to S'$ 
+($\bar S_0=\bar S$,\ldots $\bar S_n=(\bar S/S')^{n+1}$,\ldots), 
+$X_\bullet=X\times_S \bar S_\bullet$. $g_\bullet:\bar X_\bullet \to X'$ la 
+projection canonique. Posons $G|X'=G'$. Le bicomplexe 
+${g_\bullet}_\ast g_\bullet^\ast G'$, de colonnes les 
+${g_n}_\ast g_n^\ast G'$ est une r\'esolution de $G'$ \cite[VIII 8]{sga4}. On 
+peut donc repr\'esenter $C(S',s)$ par un bicomplexe dont les colonnes 
+s'identifient aux $C(\bar S_n,s)$. D'apr\`es (iii), $C(\bar S_0,s)=C(\bar S,s)$ 
+est acyclique. D'autre part, par $n>0$, on a $\h^i(\bar S_n,s)=0$ pour 
+$i\leqslant N$ par l'hypoth\`ese de r\'ecurrence. On en conclut que 
+$\h^i C(S',s)=0$ pour $i\leqslant N+1$, ce qui ach\`eve la d\'emonstration. 
+
+
+
+
+
+\subsubsection{Remarque}\label{VII:5-1-2}
+
+Soit $(f,E)$ v\'erifiant la condition (i) de \ref{VII:5-1-1}. 
+\begin{enumerate}[a)]
+  \item Si $E\in \ob \eD^b(X)$, et $f_\ast$ est de dimension cohomologique 
+    finie, alors, pour tout $F\in \ob\eD^-(S,A^\circ)$, la fl\`eche canonique 
+    \begin{equation*}\tag{$*$}\label{VII:eq:5-1-1-1}
+      \eR f_\ast(E)\lotimes_A q^\ast F \to \eR f_\ast(E\lotimes_A p^\ast F) \text{,} 
+    \end{equation*}
+    o\`u $p:X\to S$, $q:Y\to S$ sont les projections, est un isomorphisme. 
+    M\^eme conclusion avec $E\in\ob\eD^-(X)$. 
+\end{enumerate} 
+
+Par d\'evissage, il suffit en effet de v\'erifier l'assertion pour $F$ de la 
+forme $i_! A_{S'}$, avec $i:S'\to S$ quasi-fini. Par le Main Theorem, on se 
+ram\`ene \`a supposer $i$ fini, la conclusion \'equivaut alors \`a la 
+commutation de $\eR f_\ast(E)$ au changement de base par $i$. 
+\begin{enumerate}[a)]
+\setcounter{enumi}{1}
+  \item On suppose $A$ noeth\'erien, constructible. Alors, p our tout 
+    $F\in\ob\eD^b(S,A^\circ)$, constructible et de tor-dimension finie, la 
+    fl\`eche \eqref{VII:eq:5-1-1-1} ci-dessus est un isomorphisme. 
+\end{enumerate}
+
+On se ram\`ene en effet, par d\'evissage, au cas o\`u $F$ est de la forme 
+$i_! M$, avec $i:S'\to S$ localement ferm\'e, $A$ localement constant sur $S'$, 
+$M$ constructible, de tor-dimension finie, et \`a cohomologie localement 
+constante sur $S'$. Changeant de base de $S$ \`a $S'$, on est donc ramen\'e au 
+cas o\`u $F$ est parfait \cite[I]{sga6}, donc finalement, par localisation et 
+d\'evissage, au cas o\`u $F=A$, pour lequel la conclusion est triviale. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-1-3}
+
+Soient $f:X\to Y$ un $S$-morphisme, et $E\in\ob\eD^+(X)$. Nous dirons que 
+$(f,E)$ est \emph{cohomologiquement propre} rel.\ \`a $S$ si la formation de 
+$\eR f_\ast E$ commute \`a tout changement de base $S'\to S$. Il revient au 
+m\^eme de dire qu'apr\`es tout changement de base $S'\to S$, la formation de 
+$\eR f_\ast' E'$ (o\`u $f'=f\times_S S'$, $E'=$image inverse de $E$ sur 
+$X\times_S S'$) commute \`a tout changement de base fini $S'' \to S'$ (cf. 
+\cite[XII 6.1]{sga4}). Voici quelques exemples de propret\'e cohomologique 
+(pour une \'etude de la notion analogue pour les faisceaux d'ensembles ou de 
+groupes non commutatifs, le lecteur se reportera \`a \cite[XIII]{sga1}). 
+\begin{enumerate} % originally 1.3.1, 1.3.2, ...
+  \item On suppose $A$ de torsion et $f$ propre. Alors, pour tout 
+    $E\in\ob\eD^+(X)$, $(f,E)$ est cohomologiquement propre rel.\ \`a $S$ 
+    (th\'eor\`eme de changement de base propre, \cite[XII 5.1]{sga4}). 
+  \item On suppose $S$ fini, $X$ et $Y$ de type fini sur $S$, et $A$ annul\'e 
+    par un entier inversible sur $S$. Alors, pour tout $E\in\ob\eD^+(X)$, 
+    $(f,E)$ est cohomologiquement propre rel.\ \`a $S$ 
+    (\ref{VII:1-9}). 
+  \item On suppose $A$ constant, noeth\'erien, annul\'e par un entier $n$ 
+    inversible sur $S$, $f:X=Y\setminus D\to Y$ l'inclusion du compl\'ement 
+    d'un diviseur $D$ sur $Y$, \`a croisements normaux rel. \`a $S$ 
+    \cite[XIII 2.1]{sga1}. Soit $E$ un faisceau de $A$-modules sur $X$ 
+    v\'erifiant l'une des conditions suivantes: 
+    \begin{enumerate}[(i)]
+      \item $E$ est localement constant constructible et mod\'er\'ement 
+        ramifi\'e le long de $D$; 
+      \item $E$ est localement pour la topologie \'etale sur $Y$ et sur $S$ 
+        l'image inverse d'un faisceau de $A$-modules sur $S$. 
+    \end{enumerate}
+    Alors $(f,E)$ est cohomologiquement propre rel.\ \`a $S$, et $\eR f_\ast E$ 
+    constructible (comparer avec \cite[XIII 2.4]{sga1}). 
+\end{enumerate} 
+
+Esquissons la d\'emonstration dans le cas (i). La question est locale au 
+voisinage d'un point $y$ de $Y$. On peut supposer $D$ somme de diviseurs 
+lisses, $D=\sum_{i=1}^m D_i$. En vertu du lemme d'Abhyankar relatif 
+\cite[XIII 5.5]{sga1}, on peut, au voisinage de $y$, trivialiser $E$ par un 
+rev\^etement fini $\widetilde Y\to Y$ de la forme 
+$\widetilde Y=Y[T_1,\dots,T_r]/(T_1^{n_1}-t_1,\dots,T_r^{n_r}-t_r)$ o\`u les 
+$t_i$ sont des \'equations locales des diviseurs lisses passant par $y$, et les 
+$n_i$ des entiers premiers \`a la car.\ de $k(y)$. L'image inverse 
+$\widetilde D$ de $D$ dans $Y$ est encore \`a croisements normaux rel.\ \`a 
+$S$, et si $g:\widetilde X=\widetilde Y\setminus \widetilde D\to X$ est la 
+projection, $g^\ast E$ est constant. Comme $E$ s'injecte dans $g_\ast g^\ast E$ 
+et que le quotient est mod\'er\'ement ramifi\'e, un d\'evissage facile ram\`ene 
+au cas o\`u $E$ est constant. Notons $p:X\to S$, $q:Y\to S$ les 
+projections, et, pour $1\leqslant i\leqslant m$, $f_i:Y\setminus D_i \to D$ 
+l'inclusion canonique. Du th\'eor\`eme de puret\'e relatif \cite[XVI 3.7]{sga4} 
+on d\'eduit ais\'ement, par r\'ecurrence sur $m$, que, pour tout $A$-module 
+localement constant $M$ sur $S$, la fl\`eche canonique 
+\begin{equation*}\tag{5.1.3.1}\label{VII:eq:5-1-3-3-1} % originally 1.3.3.1
+  \eR f_\ast (\dZ/n)\lotimes q^\ast M\to \eR f_\ast (p^\ast M) 
+\end{equation*}
+est un isomorphisme, et que d'autre part on a: 
+\begin{align*}\tag{5.1.3.2}\label{VII:eq:5-1-3-3-2}
+  {f_i}_\ast(\dZ/n) &= \dZ/n \text{,} \\
+  \eR^1 {f_i}_\ast (\dZ/n) &= (\dZ/n)(-1)_{D_i} \text{,} 
+\end{align*}
+un isomorphisme canonique \'etant donn\'e par la classe fondamental $\cl(D_i)$ 
+(\hyperlink{IV}{Cycle} \ref{IV:2-1-4}), 
+\begin{align*}
+  \eR^q {f_i}_\ast(\dZ/n) &= 0\text{ pour $q>1$,} \\
+  \eR f_\ast (\dZ/n) &= \bigotimes_i^\eL \eR {f_i}_\ast (\dZ/n) \text{ , i.e.:} \\
+  \eR^1 f_\ast(\dZ/n) &= \bigoplus_{i=1}^m (\dZ/n)(-1)_{D_i} \text{,} \\
+  \textstyle\bigwedge^\bullet \eR^1 f_\ast(\dZ/n) &\iso \eR^\bullet f_\ast (\dZ/n) \text{.} 
+\end{align*}
+La conclusion de 3, dans le cas (i), r\'esulte donc de 
+\eqref{VII:eq:5-1-3-3-1} et \eqref{VII:eq:5-1-3-3-2}. Dans le cas (ii), on se 
+ram\`ene, par passage \`a la limite, au cas o\`u $E=p^\ast M$, avec $M$ 
+constructible, puis, par d\'evissage et changement de base (utilisant (i)), au 
+cas $M$ constant, d\'ej\`a trait\'e. 
+
+Il d\'ecoule de la d\'emonstration pr\'ec\'edente que \eqref{VII:eq:5-1-3-3-1} 
+est un isomorphisme pour tout $M\in\ob\eD^+(S)$. 
+
+On comparera les formules \eqref{VII:eq:5-1-3-3-2} aux formule analogues en 
+cohomologie enti\`ere dans le cas $S=\spec(\dC)$ (voir par exemple 
+\cite[3.1]{de71-2}), qui r\'esultent de ce que, localement pour la topologie 
+classique, le compl\'ement de $D$ a le type d'homotopie d'un tore. 
+
+Par passage \`a la limite, on d\'eduit de \eqref{VII:eq:5-1-3-3-2} des formules 
+similaires en cohomologie $\ell$-adique, i.e. avec $\dZ/n$ remplac\'e par 
+$\dZ_\ell$ ($\ell$ un nombre premier inversible sur $S$). Supposons 
+$q:Y\to S$ propre et lisse. Il d\'ecoule alors des conjectures de Weil 
+\cite{de74,de80} que la suite spectrale de Leray 
+\[
+  E_2^{i j} = \eR^i q_\ast \eR^j f_\ast \dZ_\ell \Rightarrow \eR^\bullet p_\ast \dZ_\ell 
+\]
+d\'eg\'en\`ere en $E_3$ modulo torsion \cite[\S 6]{de71-1}. Le m\^eme 
+ph\'enom\`ene se produit en cohomologie enti\`ere dans le cas 
+$S=\spec(\dC)$, voir (loc.\ cit.) et \cite[3.2.13]{de71-2}. 
+
+
+
+
+
+\subsection{Sp\'ecialisation et cosp\'ecialisation}\label{VII:5-2}
+
+Soient $f:X\to S$ et $E\in\ob\eD^+(X)$. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-1}
+
+Supposons que la formation de $\eR f_\ast E$ commute \`a tout changement de 
+base fini. Pour toute sp\'ecialisation $u:t\to S(s)$ de points g\'eom\'etriques 
+de $S$, on d\'efinit alors une fl\`eche, dite \emph{fl\`eche de 
+sp\'ecialisation}, 
+\begin{equation*}\tag{5.2.1.1}\label{VII:eq:5-2-1-1}
+  \spe(u):\eR\Gamma(X_s,E|X_s) \to \eR\Gamma(X_t,E|X_t) \text{,}
+\end{equation*}
+de la mani\`ere suivante. Soient, comme en \ref{VII:5-1-1}(iii), $\bar S$ le 
+normalis\'e dans $k(t)$ de l'adh\'erence de $u(t)$ dans $S(s)$, et 
+$\bar f:\bar X\to \bar S$ le morphisme d\'eduit de $f$ par le changement de 
+base $\bar S\to S$. D'apr\`es la partie triviale (i)$\Rightarrow$(iii) de 
+\ref{VII:5-1-1}, la fl\`eche de changement de base
+\begin{equation*}\tag{5.2.1.2}\label{VII:eq:5-2-1-2}
+  \eR\Gamma(\bar X,E|\bar X)=\eR\bar f_\ast (E|\bar X)_s \to \eR\Gamma(X_s,E|X_s) 
+\end{equation*}
+est un isomorphisme. On d\'efinit \eqref{VII:eq:5-2-1-1} comme compos\'ee de 
+l'inverse de \eqref{VII:eq:5-2-1-2} et de la fl\`eche de restriction 
+\begin{equation*}\tag{5.2.1.3}\label{VII:eq:5-2-1-3}
+  \eR\Gamma(\bar X,E|\bar X) \to \eR\Gamma(X_t,E|X_t) \text{.}
+\end{equation*}
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-2}
+
+Supposons que $f$ soit localement acyclique rel.\ \`a $E$ (\ref{VII:2-12}). 
+Pour toute sp\'ecialisation $u:t\to S(s)$ de points g\'eom\'etriques de $S$, on 
+d\'efinit alors une fl\`eche, dite \emph{fl\`eche de cosp\'ecialisation}, 
+\begin{equation*}\tag{5.2.2.1}\label{VII:eq:5-2-2-1}
+  \cosp(u):\eR\Gamma(X_t,E|X_t) \to \eR\Gamma(X_s,E|X_s) \text{,} 
+\end{equation*}
+d\'efinie de la mani\`ere suivante. Soient $g:X_t\to X$, $g':\bar X\to X$ les 
+fl\`eches canoniques. Il d\'ecoule de l'hypoth\`ese d'acyclicit\'e locale que 
+la fl\`che canonique 
+\begin{equation*}\tag{5.2.2.2}\label{VII:eq:5-2-2-2}
+  \eR g_\ast'(E|\bar X)\to \eR g_\ast(E|X_t) 
+\end{equation*}
+est un isomorphisme. En effet, on peut supposer $S$ strictement local, 
+int\`egre, de point ferm\'e $s$, $t$ \'etant un point g\'eom\'etrique 
+g\'en\'erique. Calculons la fibre de \eqref{VII:eq:5-2-2-2} en un point 
+g\'eom\'etrique $x$ en $X$, d'image $y$ dans $S$. Quitte \`a remplacer $S$ par 
+le localis\'e strict de $S$ en $y$, on peut supposer que $y=s$. Comme 
+$\bar S\to S$ est limite projective de morphismes finis, et radiciel en $s$, on 
+trouve que $\eR g_\ast'(E|\bar X)_x = E_x$ et que la fibre que 
+\eqref{VII:eq:5-2-2-2} en $x$ s'identifie \`a la restriction 
+$E_x=\eR\Gamma(X(x),E)\to \eR\Gamma(X(x)_t,E|X(x)_t)$, laquelle est un 
+isomorphisme par hypoth\`ese. Appliquant $\eR\Gamma(X,-)$ \`a 
+\eqref{VII:eq:5-2-2-2}, on en d\'eduit que la fl\`eche de restriction 
+\eqref{VII:eq:5-2-1-3} est un isomorphisme. On d\'efinit \eqref{VII:eq:5-2-2-1} 
+comme compos\'ee de l'inverse de \eqref{VII:eq:5-2-1-3} et de la fl\`eche de 
+changement de base \eqref{VII:eq:5-2-1-2}. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-3}
+
+Si $s'' \xrightarrow{u'} s' \xrightarrow u s$ sont les fl\`eches de 
+sp\'ecialisation de points g\'eom\'etriques de $S$, on v\'erifie que l'on a 
+\begin{align*}
+  \spe(u')\spe(u'') &= \spe(u u') \text{,} \\
+  \cosp(u) \cosp(u') &= \cosp(u u') \text{,} 
+\end{align*}
+chaque fois que les deux membres sont d\'efinis. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-4}
+
+Supposons que la formation de $\eR f_\ast E$ commute \`a tout changement de 
+base fini, et que $f$ soit localement acyclique rel.\ \`a $E$. Il d\'ecoule des 
+d\'efinitions que, pour tout sp\'ecialisation $u:t\to S(s)$ de points 
+g\'eom\'etriques de $S$; les fl\`eches $\spe(u)$ et $\cosp(u)$ sont des 
+isomorphismes, inverses l'un de l'autre. 
+
+Les hypoth\`eses pr\'ec\'edentes sont v\'erifi\'ees notamment lorsque $A$ est 
+noeth\'erien, annul\'e par un entier $n$ inversible sur $S$, $f$ propre et 
+lisse, et $E$ \`a cohomologie localement constante (propret\'e cohomologique 
+des morphismes propres (\ref{VII:5-1-3}), et locale acyclicit\'e des morphismes 
+lisses \cite[XV]{sga4}). On retrouve le ``th\'eor\`eme de sp\'ecialisation'' 
+\cite[XVI 2.1]{sga4}. 
+
+D'autre part, \ref{VII:5-1-1} a la cons\'equence suivante: 
+
+
+
+
+
+\begin{proposition}\label{VII:5-2-5}
+Supposons que $f$ soit localement acyclique relativement \`a $E$, et que, pour 
+toute sp\'ecialisation $u:t\to S(s)$, la fl\`eche de cosp\'ecialisation 
+$\cosp(u)$ soit un isomorphisme. Alors la formation de $\eR f_\ast E$ commute 
+\`a tout changement de base fini. 
+\end{proposition}
+
+Compte tenu de \ref{VII:5-2-4}, \ref{VII:5-2-5} g\'en\'eralise 
+(\hyperlink{I}{Cohomologie \'etale} \ref{I:5-1-7}). 
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-6}
+Supposons que $f$ soit localement acyclique rel.\ \`a $E$. Soit $x$ un point 
+g\'eom\'etrique de $X$, d'image $s$ dans $S$, notons $f_{(x)}:X(x)\to S(s)$ le 
+morphisme induit par $f$. Alors la formation de $\eR {f_{(x)}}_\ast(E|X(x))$ 
+commute \`a tout changement de base fini $S'\to S(s)$. 
+\end{corollary}
+
+Il suffit, d'apr\`es \ref{VII:5-2-5}, de v\'erifier que les fl\`eches de 
+cosp\'ecialisation pour $(f_{(x)},E|X(x))$ sont des isomorphismes. Par 
+transitivit\'e des fl\`eches de cosp\'ecialisation (\ref{VII:5-2-3}), il suffit 
+de montrer que, si $u:t\to S(s)$ est une sp\'ecialisation, alors 
+$\cosp(u):\eR\Gamma(X(x)_t,E|X(x)_t)\to \eR\Gamma(X(x)_s,E|X(x)_s)$ est un 
+isomorphisme. Mais, comme $s$ est ferm\'e dans $S(s)$, $X(x)_s$ est strictement 
+local de point ferm\'e $x$, $\eR\Gamma(X(x)_s,E|X(x)_s)=E_x$, et 
+$\cosp(u)$ est un isomorphisme, inverse de l'isomorphisme de restriction 
+$E_x\to \eR\Gamma(X(x)_t,E|X(x)_t)$. 
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-7}
+Soient $f:X\to Y$ un $S$-morphisme, $p:X\to S$, $q:Y\to S$ les projections, et 
+$E\in\ob\eD^+(X)$. On suppose $A$ localement constant, $f$ localement acyclique 
+rel.\ \`a $E$, et $q$ localement acyclique en tout point g\'eometrique $y$ de 
+$Y$ rel.\ \`a tout faisceau localement constant au voisinage de $y$. Alors $p$ 
+est localement acyclique rel. \`a $E$. 
+\end{corollary}
+
+Soient $x$ un point g\'eom\'etrique de $x$, d'images $y$ et $s$ dans $Y$ et 
+$S$, $t\to S(s)$ un sp\'ecialisation, $f_{(x)}:X(x)\to Y(y)$ le morphisme 
+induit par $f$. Il s'agit de montrer que la restriction 
+\begin{equation*}\tag{$*$}\label{VII:eq:5-2-7-1}
+  E_x \to \eR\Gamma(X(x)_t,E|X(x)_t) 
+\end{equation*}
+es un isomorphisme. On peut supposer $A$ constant. D'apr\`es \ref{VII:5-2-4} et 
+\ref{VII:6-2-5}, pour toute sp\'ecialisation $z\to Y(y)$, la fl\`eche de 
+sp\'ecialisation 
+\[
+  E_x = \eR {f_{(x)}}_\ast (E|X(x))_y \to \eR {f_{(x)}}_\ast (E|X(x)|_z = \eR\Gamma(X(x)_z,E|X(x)_z) 
+\]
+est un isomorphisme, autrement dit $\eR{f_{(x)}}_\ast(E|X(x))$ est constant de 
+valeur $E_x$. L'hypoth\`ese d'acyclicit\'e sur $q$ entra\^ine donc que la 
+restriction 
+\[
+  E_x \to \eR\Gamma(Y(y)_y,(E_x)|Y(y)_t) = \eR\Gamma\left(Y(y)_t,\eR {f_{(x)}}_\ast (E|X(x))|Y(y)_t\right)
+\]
+est un isomorphisme. Mais cette fl\`eche s'identifie \`a 
+\eqref{VII:eq:5-2-7-1}, d'o\`u la conclusion. 
+
+L'hypoth\`ese de \ref{VII:5-2-7} sur $q$ est v\'erifi\'ee notamment lorsque $q$ 
+est lisse, et que $A$ est annul\'e par un entier $n$ inversible sur $S$ 
+\cite[XV]{sga4}. D'autre part, si les hypoth\`eses de \ref{VII:5-2-7} sont 
+v\'erifi\'ees apr\`es tout changement de base $S'\to S$, on conclut alors que 
+$p$ est universellement localement acyclique rel.\ \`a $E$. De ces remarques 
+d\'ecoule en particulier l'\'enonc\'e \ref{VII:2-14}. 
+
+
+
+
+
+\begin{corollary}\label{VII:5-2-8}
+Soient $f:X\to S$ et $E\in \ob\eD^+(X)$. On suppose que $f$ est universellement 
+localement acyclique rel.\ \`a $E$, que la formation de $\eR f_\ast E$ commute 
+\`a tout changement de base fini, et que pour tout morphisme $s'\to s$, o\`u 
+$s$ est un point g\'eom\'etrique de $S$ et $s'$ le spectre d'un corps 
+s\'eparablement clos, la fl\`eche de changement de base 
+$\eR\Gamma(X_s,E|X_s)\to \eR\Gamma(X_{s'},E|X_{s'})$ est un isomorphisme. 
+Alors $(f,E)$ est cohomologiquement propre (\ref{VII:5-1-3}). 
+\end{corollary}
+
+Soit $f':X'\to S'$ le morphisme d\'eduit de $f$ par un changement de base 
+$S'\to S$, il s'agit de voir que la formation de $\eR f_\ast'(E|X')$ commute 
+\`a tout changement de base fini. D'apr\`es \ref{VII:5-2-5}, il suffit de 
+montrer que, pour toute sp\'ecialisation $u':t'\to S'(s')$, la fl\`eche de 
+cosp\'ecialisation $\cosp(u')$: 
+$\eR\Gamma(X_{t'}',E|X_{t'}') \to \eR\Gamma(X_{s'}',E|X_{s'}')$ est un 
+isomorphisme. Soient $s$ (resp.\ $t$) le point g\'eom\'etrique image de $s$ 
+(resp.\ $t$) dans $S$, $u:t\to S(s)$ la sp\'ecialisation d\'efinie par $u'$. 
+On voit ais\'ement qu'on a un carr\'e commutatif 
+\[\xymatrix{
+  \eR\Gamma(X_t,E|X_t) \ar[r]^-{\cosp(u)} \ar[d] 
+    & \eR\Gamma(X_s,E|X_s) \ar[d] \\
+  \eR\Gamma(X_{t'}',E|X_{t'}') \ar[r]^-{\cosp(u')} 
+    & \eR\Gamma(X_{s'}',E|X_{s'}') 
+}\]
+o\`u les fl\`eches verticales sont les fl\`eches de changement de base. Par 
+hypoth\`ese, celles-ci sont des isomorphismes. D'autre part (\ref{VII:5-2-4}) 
+$\cosp(u)$ est un isomorphisme, donc $\cosp(u')$ est un isomorphisme, ce qui 
+ach\`eve la d\'emonstration. 
+
+Voici un exemple d'application de \ref{VII:5-2-8}. Supposons $A$ annul\'e par 
+un entier $n$ inversible sur $S$, $f$ localement de type fini et 
+universellement localement acyclique. Soient $x$ un point g\'eom\'etrique de 
+$X$, d'image $s$ dans $S$, $f_{(x)}:X(x)\to S(s)$ le morphisme induit par $f$. 
+Il r\'esulte de \ref{VII:5-2-6} et \ref{VII:1-9} (par passage \`a la limite) 
+que les hypoth\`eses de \ref{VII:5-2-8} sont v\'erif\'ees par le couple 
+$(f_{(x)},E|X(x))$, qui est donc cohomologiquement propre. 
+
+
+
+
+
+\subsubsection{}\label{VII:5-2-9}
+
+Supposons $A$ constant. Soient $f:X\to S$, et $E\in\ob\eD^+(X)$ le complexe de 
+tor-dimension finie. Nous dirons que $f$ est \emph{fortement localement 
+acyclique} rel.\ \`a $E$ si, pour tout point g\'eom\'etrique $x$ de $X$, 
+d'image $s$ dans $S$, toute sp\'ecialisation $t\to S(s)$, et tout 
+$A^\circ$-module $M$, la fl\`eche de restriction 
+\[
+  E_x\lotimes_A M \to \eR\Gamma(X(x)_t,(E|X(x)_t)\lotimes_A M) 
+\]
+est un isomorphisme. J'ignore si ``localement acyclique'' implique 
+``fortement localement acyclique.'' 
+
+
+
+
+
+\begin{proposition}\label{VII:5-2-10}
+Sous les hypoth\`eses de \ref{VII:5-2-9}, supposons $A$ noeth\'erien de 
+torsion, $S$ noeth\'erien, et $f$ fortement localement acyclique rel.\ \`a $E$. 
+Alors, pour tout diagramme \`a carr\'es cart\'esiens 
+\[\xymatrix{
+  X \ar[d]^-f 
+    & \ar[l]_-j X' \ar[d]^-{f'} 
+    & \ar[l]_-{j'} X'' \ar[d]^-{f''} \\
+  S 
+    & \ar[l]_-i S' 
+    & \ar[l]_-{i'} S'' \text{,} 
+}\]
+avec $i$ quasi-fini et $i'$ immersion ouverte, et tout 
+$F\in\ob\eD^+(S'',A^\circ)$, la fl\`eche canonique 
+\begin{equation*}\tag{$*$}\label{VII:eq:5-2-10-1}
+  j^\ast E \lotimes {f'}^\ast \eR i_\ast' F \to \eR j_\ast' ((j j')^\ast E\lotimes {f''}^\ast F) 
+\end{equation*}
+est un isomorphisme. 
+\end{proposition}
+
+On comparera cet \'enonc\'e avec \cite[XV 1.17]{sga4}. 
+
+D\'emontrons \ref{VII:5-2-10}. On se ram\`ene facilement \`a$S=S'$, 
+strictement local, et $F$ constructible, concentr\'e en degr\'e $0$. On 
+r\'esout alors $F$ \`a droite par des sommes finies de faisceaux de la forme 
+$u_\ast M$, o\`u $u:t\to S$ est un point g\'eom\'etrique et $M$ un 
+$A^\circ$-module. L'hypoth\`se implique que \eqref{VII:eq:5-2-10-1} est un 
+isomorphisme pour $F=u_\ast M$, d'o\`u le r\'esultat. 
+
+
+
