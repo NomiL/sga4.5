@@ -35,14 +35,14 @@ La preuve sera donnée au paragraphe \ref{VII:2} et en \ref{VII:3-10}.
 
 
 
-\subsection{Remarque}\label{VIII:1-2}
+\subsection{Remarque}\label{VII:1-2}
 
 En caractéristique $0$, ce résultat est moins général que 
 \cite[XIX paragraphe 5]{sga4}, qui prouve la conclusion du théorème pour 
 tout morphisme de type fini de schémas excellents de caractéristique $0$. 
 La démonstration de \cite[XIX]{sga4} utilise d'une part la résolution des  
 singularités, d'autre part que les schémas soient d'égale 
-caractéristique (pour prouvoir déduire de la résolution le ``théorème 
+caractéristique (pour pouvoir déduire de la résolution le ``théorème 
 de pureté''). 
 
 
@@ -218,7 +218,7 @@ Soient $X$ et $Y$ deux schémas de type fini sur $k$ séparablement clos et
 $K\in \ob\eD^-(X,A^\circ)$, $L\in \ob\eD^-(Y,A)$ des complexes de faisceaux de 
 modules à droite et à gauche. La flèche de K\"unneth 
 \[
-  \eR \Gamma(X,K) \lotimes \eR \Gamma(Y,L) \to \eR\Gamma(X\times Y,\operatorname{pr}_1^\ast K \lotimes \operatorname{pr}_2^\ast L) 
+  \eR \Gamma(X,K) \lotimes \eR \Gamma(Y,L) \to \eR\Gamma(X\times Y,\pr_1^\ast K \lotimes \pr_2^\ast L) 
 \]
 est un isomorphisme. 
 \end{corollary_}
@@ -231,13 +231,13 @@ On procède comme en \cite[XVII 5.4.3]{sga4}:
     & \spec(k) 
 }\]
 changeant de base par $b$, on trouve que 
-$\eR\operatorname{pr}_{2,\ast}{} \operatorname{pr}_1^\ast K$ est 
+$\eR\pr_{2,\ast}{} \pr_1^\ast K$ est 
 $b^\ast \eR\Gamma(X,K)$. On a alors (cf. \cite[XVII 5.2.11]{sga4} et preuve) 
 
 \begin{align*}
-  \eR\Gamma(X\times Y,\operatorname{pr}_1^\ast K\lotimes \operatorname{pr}_2^\ast L) 
-    &= \eR\Gamma(Y,\eR \operatorname{pr}_{2,\ast}(\operatorname{pr}_1^\ast K\lotimes \operatorname{pr}_2^\ast L)) \\
-    &= \eR\Gamma(Y,(\eR\operatorname{pr}_{2,\ast}\operatorname{pr}_1^\ast K)\lotimes L) \\
+  \eR\Gamma(X\times Y,\pr_1^\ast K\lotimes \pr_2^\ast L) 
+    &= \eR\Gamma(Y,\eR \pr_{2,\ast}(\pr_1^\ast K\lotimes \pr_2^\ast L)) \\
+    &= \eR\Gamma(Y,(\eR\pr_{2,\ast}\pr_1^\ast K)\lotimes L) \\
     &= \eR\Gamma(Y,b^\ast \eR\Gamma(X,K)\lotimes L) \\
     &= \eR\Gamma(X,K)\lotimes \eR\Gamma(Y,L) 
 \end{align*}
@@ -394,7 +394,7 @@ constructible, de formation compatible à tout changement de base en $S$; on
 sait aussi que $\eR a_\ast \sF = \eR b_\ast \eR f_\ast \sF$ est constructible, 
 de formation compatible à tout changement de base. 
 
-Appliquons $\eR b_\ast$ au triangle défini par la suite exacate 
+Appliquons $\eR b_\ast$ au triangle défini par la suite exacte 
 \begin{equation*}\tag{1}\label{VII:eq:2-6-1}
 \xymatrix{
   0 \ar[r] 
@@ -452,7 +452,7 @@ Définissons $\Delta$ par le triangle
 }
 \end{equation*}
 Les faisceaux de cohomologie e $\Delta$ sont à support dans $X\setminus V$, 
-et $\dim(X\setminus V)_\eta < n$. L'hypothèse de récrrence permet donc de 
+et $\dim(X\setminus V)_\eta < n$. L'hypothèse de récurrence permet donc de 
 supposer que $\eR f_\ast \Delta$ est constructible. Appliquons $\eR f_\ast$ au 
 triangle \eqref{VII:eq:2-7-1}; on trouve un triangle 
 \[\xymatrix{
@@ -511,7 +511,7 @@ $S' \to U\subset S$.
 
 \subsection{}\label{VII:2-11}
 
-Si $x$ est un point géoémetrique d'un schéma $X$, nous noterons $X_x$ 
+Si $x$ est un point géométrique d'un schéma $X$, nous noterons $X_x$ 
 l'henselisé strict de $X$ en $x$. Pour $f:X\to S$ et $t$ un point 
 géométrique de $S$, nous noterons $X_t$ la fibre géométrique de $X$ en 
 $t$. Enfin, pour $x$ un point géométrique de $X$, et $t$ un point 
@@ -625,7 +625,7 @@ Se déduit de \ref{VII:2-13} par passage à la limite (possible, car $U$ de
 \subsection{}\label{VII:3-1}
 
 Soit $S$ un trait strictement local (le spectre d'un anneau de valuation 
-discrète henselien à corps résiduel séparablement clos). On note $s$ et 
+discrète hensélien à corps résiduel séparablement clos). On note $s$ et 
 $\eta$ ses points fermé et générique, et $\bar\eta$ un point 
 géométrique localisé et $\eta$ (une clôture séparable de $k(\eta)$). 
 Soient $X$ sur $S$ et $\sF$ un faisceau sur $X_\eta$. Rappelons la 
@@ -796,13 +796,13 @@ Des arguments parallèles fournissent le résultat suivant, qui améliore
 
 
 \begin{proposition_}\label{VII:3-7}
-La formation des faisceaux de cycles ]'evanescents est compatible aux 
+La formation des faisceaux de cycles évanescents est compatible aux 
 changements de traits. 
 \end{proposition_}
 
 Soient $g:(S',\eta',s') \to (S,\eta,s)$ un morphisme (surjectif) de traits 
 strictement locaux, $X/S$, $\sF$ sur $X_\eta$, de torsion premier à la 
-caractéristique résiduelle et $(X',\sF')$ leus images réciproques sur 
+caractéristique résiduelle et $(X',\sF')$ leurs images réciproques sur 
 $S'$. Notant encore $g$ les morphismes parallèles à $g$, tels 
 $X_{s'}' \to X_s$, il faut prouver que 
 \begin{equation*}\tag{3.7.1}\label{VII:eq:3-7-1}
@@ -1403,7 +1403,7 @@ $E_x\to \eR\Gamma(X(x)_t,E|X(x)_t)$.
 \begin{corollary}\label{VII:5-2-7}
 Soient $f:X\to Y$ un $S$-morphisme, $p:X\to S$, $q:Y\to S$ les projections, et 
 $E\in\ob\eD^+(X)$. On suppose $A$ localement constant, $f$ localement acyclique 
-rel.\ à $E$, et $q$ localement acyclique en tout point géometrique $y$ de 
+rel.\ à $E$, et $q$ localement acyclique en tout point géométrique $y$ de 
 $Y$ rel.\ à tout faisceau localement constant au voisinage de $y$. Alors $p$ 
 est localement acyclique rel. à $E$. 
 \end{corollary}
@@ -1415,7 +1415,7 @@ induit par $f$. Il s'agit de montrer que la restriction
   E_x \to \eR\Gamma(X(x)_t,E|X(x)_t) 
 \end{equation*}
 es un isomorphisme. On peut supposer $A$ constant. D'après \ref{VII:5-2-4} et 
-\ref{VII:6-2-5}, pour toute spécialisation $z\to Y(y)$, la flèche de 
+\ref{VII:5-2-5}, pour toute spécialisation $z\to Y(y)$, la flèche de 
 spécialisation 
 \[
   E_x = \eR {f_{(x)}}_\ast (E|X(x))_y \to \eR {f_{(x)}}_\ast (E|X(x)|_z = \eR\Gamma(X(x)_z,E|X(x)_z) 
@@ -1475,7 +1475,7 @@ un entier $n$ inversible sur $S$, $f$ localement de type fini et
 universellement localement acyclique. Soient $x$ un point géométrique de 
 $X$, d'image $s$ dans $S$, $f_{(x)}:X(x)\to S(s)$ le morphisme induit par $f$. 
 Il résulte de \ref{VII:5-2-6} et \ref{VII:1-9} (par passage à la limite) 
-que les hypothèses de \ref{VII:5-2-8} sont vérifées par le couple 
+que les hypothèses de \ref{VII:5-2-8} sont vérifiées par le couple 
 $(f_{(x)},E|X(x))$, qui est donc cohomologiquement propre. 
 
 
