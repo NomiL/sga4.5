@@ -4,18 +4,7 @@
 \usepackage{calligra}
 \usepackage[utf8]{inputenc} % allows French characters
 \usepackage[all]{xy}        % commutative diagrams
-\usepackage[stable,symbol]{footmisc}
 \usepackage[french]{babel}
-
-\ifdefined\sgaoption 
-  \ifnum\sgaoption=1 % tablet version
-    \usepackage[paperwidth=6.125in,paperheight=9.25in,text={5.5in,8in},centering]{geometry}
-  \else % tree saving version
-    \usepackage[margin=1in,centering]{geometry}
-  \fi
-\else % normal version
-  \usepackage[text={5.5in,8in},centering]{geometry}
-\fi
 
 
 \usepackage{
@@ -23,17 +12,14 @@
   amssymb,
   amsthm,
   bm,        % to get bold symbols to work with stmaryrd
- % calligra,  % for sheaf hom
   enumerate, % allows \begin{enumerate}[\indent a)]
   lmodern,
   mathrsfs,  % allows \mathscr
-%  microtype, % improves general appearance
   stmaryrd   % allows \llbracket, i.e. [[t]]
 }
-%\usepackage[T1]{fontenc} % with calligra, but causes everything to crash
 \usepackage[kerning=true]{microtype} % improves general appearance
+\usepackage[stable]{footmisc}
 \usepackage[backref=page,pdfpagelabels]{hyperref}
-%\setcounter{secnumdepth}{6}
 
 
 % operators
@@ -82,7 +68,7 @@
 % (otherwise, could do \alph instead of \Alph above)
   \def\mydeff#1{\expandafter\def\csname f#1\endcsname{\mathfrak{#1}}}
   \def\mydefallf#1{\ifx#1\mydefallf\else\mydeff#1\expandafter\mydefallf\fi}
-  \mydefallf abcdefghjklmnopqrstuvwxyz\mydefallf
+  \mydefallf abcdefhjklmnopqrstuvwxyz\mydefallf
 
 
 % miscellaneous operators
@@ -115,11 +101,6 @@
   \newtheorem*{theorem*}{Théorème}
 
 
-%\renewcommand*\thechapter{\Roman{chapter}}
-\renewcommand*\thesection{\arabic{section}}
-\renewcommand{\theequation}{\arabic{equation}}
-\setcounter{secnumdepth}{3}
-
 % allows for large external tensor product symbol
 \newcommand{\bigboxtimes}{\mathop{\vphantom{\sum}\mathchoice
   {\vcenter{\hbox{\huge $\boxtimes$}}}
@@ -130,11 +111,3 @@
 \let\oldbullet\bullet
 \renewcommand{\bullet}{\textnormal{\tiny$\oldbullet$}}
 
-
-% unmarked footnote
-\newcommand\blfootnote[1]{%
-  \begingroup
-  \renewcommand\thefootnote{}\footnote{#1}%
-  \addtocounter{footnote}{-1}%
-  \endgroup
-}
