@@ -1,0 +1,52 @@
+\documentclass[letterpaper]{smfbook} 
+
+% a hack to get hyperref and smfbook to get along together
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{*}{}{}{}
+\pretocmd\thebibliography{\csname c@secnumdepth\endcsname=-2 }{}{}
+
+\usepackage{sga-style}
+
+
+
+
+\author{P.\ Deligne, J.F. Boutot, A. Grothendieck, L. Illusie et J.L. Verdier}
+\title[Cohomologie étale]{Séminaire de Géométrie Algébrique du Bois-Marie -- Cohomologie Étale (SGA $4\frac 1 2$)}
+\date{1977}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+
+
+
+
+
+\mainmatter
+
+\input{sga4.5-note}
+\input{sga4.5-intro}
+
+\pagenumbering{arabic} % rest of pages are numbered the usual way
+\input{sga4.5-1}
+\input{sga4.5-2}
+\input{sga4.5-3}
+\input{sga4.5-4}
+\input{sga4.5-5}
+\input{sga4.5-6}
+\input{sga4.5-7}
+\input{sga4.5-8}
+
+
+\backmatter
+\input{sga4.5-erratum}
+
+\bibliographystyle{smfalpha}
+\bibliography{sga-sources}
+
+
+
+
+
+\end{document}
