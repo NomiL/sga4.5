@@ -426,7 +426,7 @@ admet une section.
 Soient $k$ un corps, $k'$ une extension galoisienne de $k$ et $G=\gal(k'/k)$. 
 Alors l'homo\~morphisme 
 \begin{align*}
-  k'\otimes_k k' &\to \oplus_{\sigma\in G} k' \\
+  k'\otimes_k k' &\to \bigoplus_{\sigma\in G} k' \\
   x\otimes y     &\mapsto \{x\cdot \sigma(y)\}_{\sigma\in G}
 \end{align*}
 est bijectif. 
@@ -1706,7 +1706,7 @@ $\varphi:\dP_S^n\to\dP_S^1$ qui envoie le point de coordonnées homogènes
 $(x_0,x_1,\dotsc,x_n)$ sur $(x_0,x_1)$. C'est une application rationnelle 
 définie en dehors du fermé $Y\simeq \dP_S^{n-2}$ de $\dP_S^n$ d'équations 
 homogènes $x_0=x_1=0$. Soit $u:P\to \dP_S^n$ l'éclatement à centre 
-$Y$; les fibres de $u$ soit de dimension $\leqslant 1$. De plus il existe un 
+$Y$; les fibres de $u$ sont de dimension $\leqslant 1$. De plus il existe un 
 morphisme naturel $v:P\to \dP_S^1$ qui prolonge l'application rationnelle 
 $\varphi$ et $v$ fait de $P$ un $\dP_S^1$-schéma localement isomorphe à 
 l'espace projectif type $\dP^{n-1}$ que l'on peut à son tour projeter sur un 
@@ -1854,6 +1854,13 @@ l'application canonique
 \[
   \operatorname{Idem} \Gamma(X,\sO_X) \to \operatorname{Idem}\Gamma(X,\sO_X)^\wedge
 \]
+est bijective. 
+
+D'aprè le théorème de comparaison pour les morphismes propres 
+\cite[III.4.1]{ega}, l'application canonique
+\[
+  \Gamma(X, \sO_X)^\wedge \to \varprojlim \Gamma(X_n, \sO_{X_n})
+\]
 est bijective. En particulier l'application canonique 
 \[
   \operatorname{Idem} \Gamma(X,\sO_X)^\wedge \to \varprojlim \operatorname{Idem}\Gamma(X_n,\sO_{X_n})
@@ -1898,7 +1905,7 @@ en un revêtement étale de $X$. On sait que les revêtements étales ne
 dépendent pas des éléments nilpotents \cite[ch.1]{sga1}, par conséquent 
 $X_0'$ se relève de manière unique en un revêtement étale $X_n'$ de 
 $X_n$ pour tout $n\geqslant 0$, autrement dit en un revêtement étale 
-$\fX'$ du schéma formel $\fX$ complété de $X$ de long de $X_0$. D'après 
+$\fX'$ du schéma formel $\fX$ complété de $X$ le long de $X_0$. D'après 
 le théorème d'algébrisation des faisceaux cohérents formels de 
 Grothendieck (théorème d'existence, \cite[III.5]{ega}), $\fX'$ est le 
 complété formel d'un revêtement étale $\bar X'$, de 
@@ -1974,7 +1981,7 @@ constructibles.
 
 En effet, si $j:U\to X$ est un schéma étale de type fini sur $X$, un 
 élément $\xi\in \sF(U)$ tel que $n\xi=0$ définit un homomorphisme de 
-faisceaux $j_! \const{\dZ/n}\to \sF$ dont l'image (le lus petit sous-faisceau de 
+faisceaux $j_! \const{\dZ/n}_U\to \sF$ dont l'image (le lus petit sous-faisceau de 
 $\sF$ dont $\xi$ soit section locale) est un sous-faisceau constructible de $\sF$. 
 Il est clair que $\sF$ est limite inductive de tels sous-faisceaux.
 
@@ -2006,7 +2013,7 @@ $\sG$ est un faisceau de $\dZ/n$-modules et $\h^q(X,\sG) = 0$ pour tout $q>0$.
 On peut par exemple prendre pour $\sG$ la résolution de Godement 
 $\prod_{x\in X} i_{x*} \sF_{\bar x}$, où $x$ parcourt les points de $X$ et 
 $i_x:\bar x\to X$ est un point géométrique centré en $X$. D'après 
-(\ref{I:4-3-3}) $\sG$ est limite inductive de faisceaux constructibles, d'o`u le 
+(\ref{I:4-3-3}) $\sG$ est limite inductive de faisceaux constructibles, d'où le 
 lemme, car les foncteurs $\h^q(X,-)$ commutent aux limites inductives. 
 
 
@@ -2085,7 +2092,7 @@ Les cas $q=0$ et $1$ ont été vus plus haut et on a $\h^q(X_0,\dZ/n) = 0$
 pour $q\geqslant 3$; il suffit donc de traiter le cas $q=2$. On peut 
 évidemment supposer que $n$ est une puissance d'un nombre premier. Si 
 $n=p^r$, où $p$ est la caractéristique du corps résiduel de $S$, la 
-théorie d'Artin-Schreier montre qu'un a $\h^2(X_0,\dZ/p^r) = 0$. Si 
+théorie d'Artin-Schreier montre qu'on a $\h^2(X_0,\dZ/p^r) = 0$. Si 
 $n=\ell^r$, $\ell\ne p$, on déduit de la théorie de Kummer un diagramme 
 commutatif 
 \[\xymatrix{
@@ -2173,7 +2180,7 @@ Soit $X$ un schéma séparé de type fini sur un corps $k$. D'après un
 théorème de Nagata, il existe un schéma $\bar X$ propre sur $k$ et une 
 immersion ouverte $j:X\to\bar X$. Pour tout faisceau de torsion $\sF$ sur $X$ on 
 note $j_! \sF$ le prolongement par $0$ de $\sF$ à $\bar X$ et on définit les 
-groupes de \emph{cohomologie à support propre} 
+groupes de \emph{cohomologie à support propre} $\h_c(X,\sF)$ en posant 
 \[
   \h_c^q(X,\sF)=\h^q(\bar X, j_! \sF) \text{.}
 \]
