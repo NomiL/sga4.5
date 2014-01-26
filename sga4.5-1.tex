@@ -868,7 +868,7 @@ $\dG_m$ est un épimorphisme de faisceaux. On a donc une suite exacte
 \begin{proof}
 Soient $U\to X$ un morphisme étale et $a\in \dG_m(U) =\Gamma(U,\sO_U^\times)$. 
 Puisque $n$ est inversible sur $U$, l'équation $T^n-a = 0$ est séparable; 
-autrement dit $U'=\spec\left(\sO_U[T]/(T^n-a)\right)$ est étale su-dessus de 
+autrement dit $U'=\spec\left(\sO_U[T]/(T^n-a)\right)$ est étale au-dessus de 
 $U$. Par ailleurs $U'\to U$ est surjectif et a admet une racine $n$-ième sur 
 $U'$, d'où résultat. 
 \end{proof}
@@ -2507,7 +2507,7 @@ $t\to \widetilde S^s$.
 \begin{definition}\label{I:5-1-3}
 Soit $f:X\to S$ un morphisme de schémas. Soient $s$ un point géométrique de 
 $S$, $t$ une générisation de $s$, $x$ un point géométrique de $X$ 
-su-dessus de $s$ et 
+au-dessus de $s$ et 
 $\widetilde X_t^x = \widetilde X^x\times_{\widetilde S^s} t$. Alors on dit que 
 $\widetilde X_t^x$ est une \emph{variété de cycles évanescents} de $f$ au 
 point $x$. 
@@ -2636,16 +2636,16 @@ bijectif pour tout $q\geqslant 0$.
 \end{theorem}
 
 Pour démontrer le théorème, il est clair qu'on peut supposer 
-$S=\widetilde S^s$. On va et fait montrer que, pour tout faisceau de 
+$S=\widetilde S^s$. On va en fait montrer que, pour tout faisceau de 
 $\dZ/n\dZ$-modules $\sF$ sur $S$, l'homomorphisme canonique 
 $\varphi^q(\sF):(\eR^q f_* f^* \sF)_s \to \h^q(X_s,f^*\sF)$ est bijectif. 
 
-Tout faisceau de $\dZ/n\dZ$ est limite inductive filtrante de faisceaux 
+Tout faisceau de $\dZ/n\dZ$-modules est limite inductive filtrante de faisceaux 
 constructibles de $\dZ/n\dZ$-modules (\ref{I:4-3-3}). De plus tout faisceau 
 constructible de $\dZ/n\dZ$-modules se plonge dans un faisceau de la forme 
 $\prod i_{\lambda *} C_\lambda$, où $i_\lambda:t_\lambda\to S$ est une 
 famille finie de générisations de $s$ et $C_\lambda$ un $\dZ/n\dZ$-module 
-libre de rang fini sur $t_\lambda$. D''après la définition des flèches de 
+libre de rang fini sur $t_\lambda$. D'après la définition des flèches de 
 cospécialisation, la condition b) signifie que les homomorphismes 
 $\varphi^q(\sF)$ sont bijectifs si $\sF$ est de cette forme. 
 
@@ -2700,7 +2700,7 @@ $q>0$.
 
 
 \begin{corollary}\label{I:5-1-10}
-Soient $f:X\to Y$ et $g:Y\to X$ des morphismes de schémas localement 
+Soient $f:X\to Y$ et $g:Y\to Z$ des morphismes de schémas localement 
 noethériens. Alors, si $f$ et $g$ sont localement acycliques, il en est de 
 même de $g\circ f$. 
 \end{corollary}
@@ -2747,12 +2747,12 @@ Soient $s$ un point géométrique de $S$ et $x$ un point géométrique de
 $X$ centré en un point fermé de $X_s$. Il s'agit de montrer que les fibres 
 géométriques du morphisme $\widetilde X^x\to \widetilde S^s$ sont 
 acycliques. On posera désormais $S=\widetilde S^s=\spec(A)$ et 
-$X=\widetilde X^x$. On a $X\simeq \spec A\{T\}$, où $A\{T\}$ est l'hensélise 
+$X=\widetilde X^x$. On a $X\simeq \spec A\{T\}$, où $A\{T\}$ est l'hensélisé 
 de $A[T]$ au point $T=0$ au-dessus de $s$. 
 
 Si $t$ est un point géométrique de $S$, la fibre $X_t$ est limite 
 projective de courbes affines et lisses sur $t$. On a donc $\h^q(X_t,\dZ/n) = 0$ 
-pour $q\geqslant 0$ et il suffit de montrer que $\h^0(X_t,\dZ/n) = \dZ/n$ et 
+pour $q\geqslant 2$ et il suffit de montrer que $\h^0(X_t,\dZ/n) = \dZ/n$ et 
 $\h^1(X_t,\dZ/n) = 0$ pour $n$ premier à la caractéristique résiduelle de 
 $S$. Cela résulte des deux propositions suivantes. 
 
@@ -2771,12 +2771,12 @@ strict d'une $\dZ$-algèbre de type fini.
 Soient $\bar t$ un point géométrique de $S$, localisé en $t$, et $k'$ une 
 extension finie séparable de $k(t)$ dans $k(\bar t)$. On pose $t'=\spec(k')$ 
 et $X_{t'} = X\times_S\spec(k')$. Il nous faut vérifier que, quelques soient 
-$\bar t$ et $t'$, $X_{t'}$ est connexe (par qui on entend connexe et non vide). 
+$\bar t$ et $t'$, $X_{t'}$ est connexe (par quoi on entend connexe et non vide). 
 Soit $A'$ le normalisé de $A$ dans $k'$, i.e. l'anneau des éléments de 
 $k'$ entiers sur l'image de $A$ dans $k(t)$. On a 
 $A\{t\}\otimes_A A'\iso A'\{T\}$: le membre de gauche est en effet hensélien 
 local (car $A'$ est fini sur $A$, et local) et limite d'algèbres locales 
-étales sur $A'\{T\}=A\{T\}\otimes_A A'$. Le schéma $X_{t'}$ est donc encore 
+étales sur $A'[T]=A[T]\otimes_A A'$. Le schéma $X_{t'}$ est donc encore 
 la fibre en $t'$ de $X=\spec\left(A'\{T\}\right)$ sur $S'=\spec(A')$. Le 
 schéma local $X'$ est normal, donc intègre; son localisé $X_{t'}$ est 
 encore intègre, a fortiori connexe. 
@@ -2822,7 +2822,7 @@ Notons par un indice $(-)_1$ le changement de base de $S$ à $S_1$. Alors,
 $\widetilde X_{1\eta}$ se prolonge en un revêtement étale de $X_1$. 
 \end{lemma}
 
-Soit $\widetilde X_1$ le normalisé de $X_1$ de $\widetilde X_{1\eta}$. Vu la 
+Soit $\widetilde X_1$ le normalisé de $X_1$ dans $\widetilde X_{1\eta}$. Vu la 
 structure des groupes d'inertie modérée des anneaux de valuation discrète 
 localisés de $X$ aux points génériques de la fibre spéciale $X_s$, 
 $\widetilde X_1$ est étale sur $X_1$ sur la fibre générale, et aux points 
@@ -2850,7 +2850,7 @@ la limite préliminaire, nous permettent de supposer que
     d'agrandir $k(t)$, par application de (\ref{I:5-2-5}) aux anneaux de 
     valuation discrète localisés de $S$ en les points de $S\setminus U$ de 
     codimension $1$ dans $S$; ces points sont en nombre fini). 
-  \item Le revêtement $\widetilde X_U$ est trivial su-dessus du sous-schéma 
+  \item Le revêtement $\widetilde X_U$ est trivial au-dessus du sous-schéma 
     $T=0$. (Ceci quitte à encore agrandir $k(t)$). 
 \end{enumerate}
 
@@ -2942,7 +2942,7 @@ caractéristiques résiduelles de $S$, on a
 \end{theorem}
 
 En prenant un recouvrement ouvert de $X$< on se ramène au cas où $X$ est 
-affine, puis par un passage à la limite au case \`i $X$ est de type fini sur 
+affine, puis par un passage à la limite au cas òu $X$ est de type fini sur 
 $S$. Alors $f$ se factorise en une immersion ouverte $j:X\to \bar X$ et un 
 morphisme propre $\bar f:\bar X\to S$. De la suite spectrale de Leray pour 
 $\bar f\circ j$ et du théorème de changement de base pour les morphismes 
@@ -2960,7 +2960,7 @@ corollaire de (\ref{I:5-1-5}). Le cas général en résulte par le lemme
 
 \begin{corollary}\label{I:5-3-3}
 Soient $K/k$ une extension de corps séparablement clos, $X$ un $k$-schéma 
-et $n$ un entier premier à la charactéristique de $k$. Alors l'application 
+et $n$ un entier premier à la caractéristique de $k$. Alors l'application 
 canonique $\h^q(X,\dZ/n) \to \h^q(X_K,\dZ/n)$ est bijective pour tout 
 $q\geqslant 0$. 
 \end{corollary}
@@ -2982,7 +2982,7 @@ Soit un diagramme commutatif
 }\end{equation*}
 avec $f$ lisse purement de dimension relative $N$, $h$ lisse purement de 
 dimension relative $N-1$, $i$ un plongement fermé et $U=X\setminus Y$. Pour 
-$n$ premier aux charactéristiques résiduelles de $S$, on a 
+$n$ premier aux caractéristiques résiduelles de $S$, on a 
 \begin{equation*}
 \begin{aligned}
   j_* \dZ/n     &= \dZ/n \\
@@ -2992,7 +2992,7 @@ $n$ premier aux charactéristiques résiduelles de $S$, on a
 \end{equation*}
 \end{theorem}
 
-Dans ces formules, $\dZ/n(-1)$ désigne le $\dZ/n$-duel de $\dmu_n$. Si $t$ 
+Dans ces formules, $\dZ/n(-1)$ désigne le $\dZ/n$-dual de $\dmu_n$. Si $t$ 
 est une équation locale pour $Y$, l'isomorphisme 
 $\eR^1j_*\dZ/n\simeq\dZ/n(-1)_Y$ est défini par l'application 
 $a:\dZ/n\to \eR^1j_*\dmu_n$ qui envoie $1$ sur la classe du $\dmu_n$-torseur des 
@@ -3007,7 +3007,7 @@ couple localement isomorphe, par exemple
   & T
 }\]
 avec $T=\dA_S^{n-1}$ et $i=$ section à l'infini. Le corollaire (\ref{I:5-1-9}) 
-s'applique à $g$, et fournit $\eR^q g_ \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
+s'applique à $g$, et fournit $\eR^q g_* \dZ/n=\dZ/n$ pour $q=0$, $0$ pour $q>0$. 
 Pour $f$, on a par ailleurs \eqref{I:eq:4-6-2-1}
 \[
   \eR^q f_* \dZ/n = \dZ/n,0,\dZ/n(-1),0 \text{ pour $q>2$.}
@@ -3021,7 +3021,7 @@ donc à
   i^* \eR^1 j_* \dZ/n \ar[drr]^-{d_2} & 0 & \cdots \\
   \dZ/n              & 0 & \dZ/n(-1) & 0 & \cdots
 }\]
-$\eR^q j_*\dZ/n=0$ pour $q\geqslant 0$, et $\eR^q j_*\dZ/n$ est le prolongement 
+$\eR^q j_*\dZ/n=0$ pour $q\geqslant 2$, et $\eR^1 j_*\dZ/n$ est le prolongement 
 par zéro d'un faisceau localement libre de rang un sur $T$ (isomorphe, via 
 $d_2$, à $\dZ/n(-1)$). L'application $a$, définie plus haut, étant 
 injective (ainsi qu'on le vérifie fibre par fibre), c'est un isomorphisme, et 
@@ -3056,13 +3056,13 @@ $\sF$ est constructible et non seulement de torsion).
 
 \begin{theorem}\label{I:5-3-7} % originally 5.3.5.2
 Soient $f:X\to S$ un morphisme de schémas de type fini sur un corps $k$ de 
-charactéristique $0$ et $\sF$ un faisceau constructible sur $X$. Alors, les 
+caractéristique $0$ et $\sF$ un faisceau constructible sur $X$. Alors, les 
 $\eR^q f_* \sF$ sont également constructibles.
 \end{theorem}
 
 La preuve utilise la résolution des singularités et (\ref{I:5-3-4}). Elle est 
 généralisée au cas d'un morphisme de type fini de schémas excellents de 
-charactéristique $0$ dans \cite[XIX.5]{sga4}. Une autre démonstration, 
+caractéristique $0$ dans \cite[XIX.5]{sga4}. Une autre démonstration, 
 indépendante de la résolution, est donnée dans ce volume 
 (\nameref{VII}, \ref{VII:1-1}) 
 % NOTE: originally (Th. finitude, 1.1),
@@ -3263,7 +3263,7 @@ $\eR^1 j_* \dZ/n \simeq {\dZ/n}_D(-1)$, $\eR^i j_*\dZ/n = 0$ ($i\geqslant 2$)
 (pour la cohomologie ordinaire) (\ref{I:5-3-4}). 
 
 Ce principe de spécialisation ramène (\ref{I:6-2-2}) au cas où $k$ est de 
-charactéristique $0$. Par (\ref{I:5-3-3}), ce cas se ramène à celui où 
+caractéristique $0$. Par (\ref{I:5-3-3}), ce cas se ramène à celui où 
 $k=\dC$. Enfin, pour $k=\dC$, les groupes $\h^\bullet(X,\dZ/n)$ et 
 $\h_c^\bullet(X,\dmu_n)$ coïncident avec les groupes de même nom, calculés 
 pour l'espace topologique classique $X_{\textnormal{cl}}$ et, via 
