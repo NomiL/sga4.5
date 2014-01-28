@@ -5,11 +5,11 @@
 Dans ce texte, j'ai tenté d'exposer de façon aussi directe que possible la 
 théorie cohomologique de Grothendieck des fonctions $L$. Je suis de très près 
 certains des exposés donnés par Grothendieck à l'IHES au printemps 1966. Dans 
-l'esprit de ce volume, il ne sera pas fait appel à SGA 5 -- saui deux 
-références à des passages de l'exposé XI, indépendant au reste de ce 
+l'esprit de ce volume, il ne sera pas fait appel à SGA 5 -- sauf deux 
+références à des passages de l'exposé XI, indépendant du reste de ce 
 séminaire. 
 
-Dans le \S 10 (p.81-90) de \cite{de73}, le lecteur trouvera un résume de la 
+Dans le \S 10 (p.81-90) de \cite{de73}, le lecteur trouvera un résumé de la 
 théorie, dans le cas crucial des courbes. 
 
 
@@ -277,7 +277,7 @@ De même, ci-dessous, pour les $\dQ_\ell$-faisceaux.
 Si $k$ est un corps séparablement clos, un faisceau de $\dZ/\ell^n$-modules 
 sur $\spec(k)$ s'identifie à un $\dZ/\ell^n$-module, et le foncteur 
 $\sF\mapsto \varprojlim \sF_n$ identifie les $\dZ_\ell$-faisceaux sur 
-$\spec(k)$ sux $\dZ_\ell$-modules de type fini. Ceci justifie le définition 
+$\spec(k)$ aux $\dZ_\ell$-modules de type fini. Ceci justifie la définition 
 suivante: la \emph{fibre} du $\dZ_\ell$-faisceau $\sF$ en le point 
 géométrique $x$ de $X$ est le $\dZ_\ell$-module $\varprojlim (\sF_n)_x$. 
 
@@ -315,7 +315,7 @@ une partition finie de $X$ en parties localement fermées $X_i$ telles que
 les $\sF|X_i$ soient lisses.
 \end{proposition_}
 
-Posons $\gr_\ell^n\sF=\ell^n\sF_m/\ell^{m+1}\sF_m$ pour $m\geqslant n$, et 
+Posons $\gr_\ell^n\sF=\ell^n\sF_m/\ell^{n+1}\sF_m$ pour $m\geqslant n$, et 
 $\gr_\ell\sF=\bigoplus \gr_\ell^n\sF$. C'est un faisceau de modules sur 
 l'anneau noethérien $\gr_\ell\dZ=\dZ/\ell[t]$, gradué de $\dZ$ pour la 
 filtration $\ell$-adique. C'est un quotient de 
@@ -333,7 +333,7 @@ qui en sont des extensions successives.
 \subsection{}\label{II:2-6}
 
 Si $\sF$ et $\sG$ sont deux $\dZ_\ell$-faisceaux sur $X$, on pose 
-$\hom(\sF,\sG) = \varprojlim(\sF_n,\sG_n)$; c'est un $\dZ_\ell$-module. 
+$\hom(\sF,\sG) = \varprojlim\hom(\sF_n,\sG_n)$; c'est un $\dZ_\ell$-module. 
 Puisque $\hom(\sF_n,\sG_n) = \hom(\sF_m,\sG_n)$ pour $m\geqslant n$, on a 
 encore 
 \[
@@ -362,7 +362,7 @@ noté $\sF\otimes\dZ/\ell^{n+1}$.
 
 \subsection{}\label{II:2-7}
 
-Dans la catégorie abélienne des pro-faisceaux, la sous-catégorie des 
+Dans la catégorie abélienne des pro-faisceaux, la sous-catégorie épaisse des 
 $\dZ_\ell$-faisceaux est stable par noyau, conoyau et extension. C'est claire 
 pour les conoyaux. Pour les noyaux, si $f:\sF\to\sG$ est un morphisme de 
 $\dZ_\ell$-faisceaux, on déduit aisément de (\ref{II:2-4}, \ref{II:2-5}) 
@@ -396,14 +396,14 @@ $\sF$ il existe un entier $n$ tel que $\sF/\ker(\ell^n)$ soit sans torsion.
 La catégorie abélienne des \emph{$\dQ_\ell$-faisceaux} sur $X$ est le 
 quotient de celle des $\dZ_\ell$-faisceaux par la sous-catégorie de 
 $\dZ_\ell$-faisceaux de torsion. En termes équivalents, ses objets sont les 
-$\dZ_\ell$-faisceaux et, notant $\sF\otimes\dZ_\ell$ le $\dZ_\ell$-faisceaux 
+$\dZ_\ell$-faisceaux et, notant $\sF\otimes\dQ_\ell$ le $\dZ_\ell$-faisceaux 
 $\sF$, vu comme objet de le catégorie des $\dQ_\ell$-faisceaux, on a 
 \[
   \hom(\sF\otimes\dQ_\ell,\sG\otimes\dQ_\ell) = \hom(\sF,\sG)\otimes_{\dZ_\ell}\dQ_\ell \text{.}
 \]
 
 La \emph{fibre} d'un $\dQ_\ell$-faisceau $\sF\otimes\dQ_\ell$ en un point 
-géométrique $x$ de $X$ est la $\dQ_\ell$-espace vectoriel de dimension 
+géométrique $x$ de $X$ est le $\dQ_\ell$-espace vectoriel de dimension 
 finie $\sF_x\otimes_{\dZ_\ell}\dQ_\ell$. 
 
 
@@ -680,8 +680,8 @@ gauche). Par exemple, $\lotimes$ indique le foncteur dérivé du produit
 tensoriel: pour $K$ dans $\eD^-(\Lambda^\circ)$ et $L$ dans $\eD^-(\Lambda)$ 
 ($\Lambda^\circ$ anneau opposé à $\Lambda$), $K\lotimes L$ se calcule 
 comme suit: on prend des quasi-isomorphismes $K'\to K$, $L'\to L$, avec 
-$K'$ et $L$ bornés supérieurement et l'un d'eux à composantes plates, et 
-le simple complexe $s(K'\otimes_\Lambda L)$ associé au complexe double 
+$K'$ et $L'$ bornés supérieurement et l'un d'eux à composantes plates, et 
+le simple complexe $s(K'\otimes_\Lambda L')$ associé au complexe double 
 $K'\otimes_\Lambda L'$. 
 
 
@@ -693,23 +693,23 @@ $K'\otimes_\Lambda L'$.
 Même pour traiter le seul cas de la $\dZ/\ell^n$-cohomologie, nous aurons 
 besoin de la théorie des traces d'endomorphismes de modules sur des anneaux 
 non nécessairement commutatifs (des algèbres de groupes finis 
-$\dZ/\ell^n[G]$). Ces traces ont été introduits par Stallings et Hattori 
+$\dZ/\ell^n[G]$). Ces traces ont été introduites par Stallings et Hattori 
 \cite{ba76}. 
 
 Soit $\Lambda$ un anneau (à unité, mais non nécessairement commutatif). 
-On par $\Lambda^\natural$ le quotient du groupe additif de $\Lambda$ par le 
+On désigne par $\Lambda^\natural$ le quotient du groupe additif de $\Lambda$ par le 
 sous-groupe engendré par les commutateurs $a b - b a$. Si $f$ est un 
 endomorphisme du $\Lambda$-module à gauche libre $\Lambda^n$, de matrice 
-$f_i^j$, on note $\tr(f)$ l'image de $\sum f_i^f$ dans $\Lambda^\natural$. 
+$f_i^j$, on note $\tr(f)$ l'image de $\sum f_i^i$ dans $\Lambda^\natural$. 
 Si $f$ et $g$ sont deux homomorphismes 
 $f:\Lambda^n \leftrightarrows \Lambda^m : g$, on vérifie aussitôt que 
 $\tr(f g) = \tr(g f)$. 
 
 Soit $f$ un endomorphisme d'un $\Lambda$-module projectif de type fini $P$. 
-Écrivons $P$ comme facteur direct d'une module libre $\Lambda^n$: cela signifie 
+Écrivons $P$ comme facteur direct d'un module libre $\Lambda^n$: cela signifie 
 choisir un module $P'$, et un isomorphisme $\alpha:P\oplus P'\iso \Lambda^n$, 
 soit encore choisir un homomorphisme $a:P\to \Lambda^n$, et une rétraction 
-$b:\Lambda^n\to P$ (prendre $P=\ker(b)$). Soit 
+$b:\Lambda^n\to P$ (prendre $P'=\ker(b)$). Soit 
 $f'=\alpha(f\oplus 0)\alpha^{-1} =af b$. On pose $\tr(f) = \tr(f')$. Cet 
 élément de $\Lambda^\natural$ ne dépend que de $f$: si un autre choix 
 $c:P\leftrightarrows \Lambda^m:d$ est fait, on a $a=a(dc)(ba)$, d'où 
@@ -753,7 +753,7 @@ borné de $\Lambda$-modules projectifs de type fini, on pose
 
 D'après \eqref{II:eq:4-2-1}, si $f$ est homotope à zéro, $\tr(f) = 0$: 
 \begin{equation*}\tag{4.3.2}\label{II:eq:4-3-2}
-  f = d H + h D \rightarrow \tr(f) = 0 \text{.}
+  f = d H + h D \Rightarrow \tr(f) = 0 \text{.}
 \end{equation*}
 
 Soit $\mathsf{K}_\text{parf}(\Lambda)$ la catégorie d'objets les complexes 
@@ -763,7 +763,7 @@ $\mathsf{K}_\text{parf}(\Lambda)\to\eD(\Lambda)$ est pleinement fidèle. On note
 $\mathsf{D}_\text{parf}(\Lambda)$ son image essentielle. Les formules 
 \eqref{II:eq:4-3-1} \eqref{II:eq:4-3-2} permettent de définir $\tr(f)$ pour $f$ 
 un endomorphisme de $K\in\ob \mathsf{D}_\text{parf}(\Lambda)$ (et cette trace ne 
-dépend que de la classe d'isomorphe de $(K,f)$). 
+dépend que de la classe d'isomorphie de $(K,f)$). 
 
 
 
